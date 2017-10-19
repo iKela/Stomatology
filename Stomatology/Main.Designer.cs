@@ -40,7 +40,8 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.listView1 = new System.Windows.Forms.ListView();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.EditAppoinment = new System.Windows.Forms.Button();
             this.AddNewAppoinment = new System.Windows.Forms.Button();
             this.EditPatient = new System.Windows.Forms.Button();
@@ -55,6 +56,7 @@
             this.tabPage3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -87,19 +89,6 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button1.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.button1.Location = new System.Drawing.Point(48, 942);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(141, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Додати нового паціента";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -198,19 +187,28 @@
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Window;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Controls.Add(this.comboBox1);
-            this.panel1.Location = new System.Drawing.Point(718, 21);
+            this.panel1.Controls.Add(this.panel3);
+            this.panel1.Location = new System.Drawing.Point(718, 52);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(716, 600);
+            this.panel1.Size = new System.Drawing.Size(716, 569);
             this.panel1.TabIndex = 13;
             // 
-            // comboBox1
+            // panel3
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(3, 3);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(128, 21);
-            this.comboBox1.TabIndex = 6;
+            this.panel3.Controls.Add(this.label1);
+            this.panel3.Location = new System.Drawing.Point(4, 4);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(705, 558);
+            this.panel3.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(231, 265);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "label1";
             // 
             // EditAppoinment
             // 
@@ -224,6 +222,7 @@
             this.EditAppoinment.TabIndex = 12;
             this.EditAppoinment.Text = "Редагувати прийом";
             this.EditAppoinment.UseVisualStyleBackColor = false;
+            this.EditAppoinment.MouseCaptureChanged += new System.EventHandler(this.EditAppoinment_Click);
             // 
             // AddNewAppoinment
             // 
@@ -236,6 +235,7 @@
             this.AddNewAppoinment.TabIndex = 11;
             this.AddNewAppoinment.Text = "Додати новий прийом";
             this.AddNewAppoinment.UseVisualStyleBackColor = false;
+            this.AddNewAppoinment.MouseCaptureChanged += new System.EventHandler(this.AddNewAppoinment_Click);
             // 
             // EditPatient
             // 
@@ -248,6 +248,7 @@
             this.EditPatient.TabIndex = 10;
             this.EditPatient.Text = "Редагувати";
             this.EditPatient.UseVisualStyleBackColor = false;
+            this.EditPatient.Click += new System.EventHandler(this.EditPatient_Click);
             // 
             // AddNewPatient
             // 
@@ -260,6 +261,7 @@
             this.AddNewPatient.TabIndex = 9;
             this.AddNewPatient.Text = "Додати нового паціента";
             this.AddNewPatient.UseVisualStyleBackColor = false;
+            this.AddNewPatient.Click += new System.EventHandler(this.AddNewPatient_Click);
             // 
             // tabPage4
             // 
@@ -328,6 +330,8 @@
             this.tabPage3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
             this.ResumeLayout(false);
@@ -348,7 +352,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button EditAppoinment;
         private System.Windows.Forms.Button AddNewAppoinment;
         private System.Windows.Forms.Button EditPatient;
@@ -358,6 +361,8 @@
         private System.Windows.Forms.Button StartTimerButton;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label TimerLabel;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label1;
     }
 }
 

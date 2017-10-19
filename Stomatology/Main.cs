@@ -17,23 +17,11 @@ namespace Stomatology
             InitializeComponent();
   
         }
-        //Timer Doesn't work!!!
 
-        bool timer = true;
-        private void button5_Click(object sender, EventArgs e)
-        {
-            timer = true;
-            
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-            timer = false;
-            TimerLabel.Text = "00:00:00";
-        }
-        ////////////////////////////////////////////////////////////////////
         private void Form1_Load(object sender, EventArgs e)
         {
+            panel3.Visible = false;
+
             listView1.View = View.Details;
             listView1.GridLines = true;
             listView1.FullRowSelect = true;
@@ -50,25 +38,7 @@ namespace Stomatology
             //Add items in the listview
             string[] arr = new string[6];
             ListViewItem itm;
-
-         
-            //Add first item
-            arr[0] = "Ковальчук";
-            arr[1] = "Назар";
-            arr[2] = "Миколайович";
-            arr[3] = "1997";
-            arr[4] = "+380688637470";
-            arr[5] = "м.Костопіль, Сидорова 28/10";
-            itm = new ListViewItem(arr);
-            listView1.Items.Add(itm);
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            NewPatient newForm = new NewPatient();
-            newForm.Show();
-        }
-
         private void EditAppoinment_Click(object sender, EventArgs e)
         {
             EditAppoinment newForm = new EditAppoinment();
@@ -86,12 +56,18 @@ namespace Stomatology
             EditPatient newForm = new EditPatient();
             newForm.Show();
         }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
+        private void AddNewPatient_Click(object sender, EventArgs e)
         {
-
+            NewPatient newForm = new NewPatient();
+            newForm.Show();
         }
 
-        
+        private void button5_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+        }
     }
 }
