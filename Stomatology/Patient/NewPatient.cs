@@ -46,13 +46,13 @@ namespace Stomatology
                     SqlCommand cmd = testCon.CreateCommand();
                     cmd.CommandType = CommandType.Text;
                     cmd.CommandText = $"INSERT INTO Pacient (Surname, Name, FatherName, Birthday, Number, Adress) " +
-                        $"values (N'{namebox.Text}', N'{surnamebox.Text}', N'{lastNamebox.Text}', N'{dataBirthbox.Text}', N'{passportbox.Text}', " +
-                        $"N'{contactbox.Text}', N'{posadaId}')";
+                        $"values (N'{TextboxLastName.Text}', N'{TextboxName.Text}', N'{TextboxFatherName.Text}', N'{textBoxDate.Text}', N'{textBoxNumber.Text}', " +
+                        $"N'{textBoxAdress.Text}')";
                     cmd.ExecuteNonQuery();
-                    namebox.Text = ""; surnamebox.Text = ""; lastNamebox.Text = "";
-                    passportbox.Text = ""; contactbox.Text = ""; dataBirthbox.Text = "";
+                    TextboxLastName.Text = ""; TextboxName.Text = ""; TextboxFatherName.Text = "";
+                    textBoxDate.Text = ""; textBoxNumber.Text = ""; textBoxAdress.Text = "";
                     testCon.Close();
-                    updateTable();
+                    //updateTable();
                 }
             }
             catch (Exception ex)
