@@ -183,6 +183,7 @@
             this.MinimumSize = new System.Drawing.Size(517, 327);
             this.Name = "NewPatient";
             this.Text = "Новий паціент";
+            this.Load += new System.EventHandler(this.NewPatient_Load_1);
             this.ResumeLayout(false);
             this.PerformLayout();
 
