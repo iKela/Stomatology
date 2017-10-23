@@ -7,34 +7,58 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Stomatology
 {
     public partial class NewAppoinment : Form
     {
+        SqlConnection testCon = new SqlConnection
+        (@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\GoogleDrive InSoP\Stomatology\Stomatology\DataStomatology.mdf;Integrated Security=True");
+
         public NewAppoinment()
         {
             InitializeComponent();
         }
-
-        private void textBox13_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void UAHLabel_Click(object sender, EventArgs e)
+        private void NewAppoinment_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void NewAppoinment_Load(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
+            try
+            {
+                if (cmbPatient.Text.Length == 0 || txtDescription.Text.Length == 0 || txtMoney.Text.Length == 0)
+                    throw new Exception("Не всі поля заповнені!");
+                else
+                {
 
+                    //testCon.Open();
+                    //SqlCommand cmd = testCon.CreateCommand();
+                    //cmd.CommandType = CommandType.Text;
+                    //cmd.CommandText = $"INSERT INTO Pacient (Date, Name, FatherName, Birthday, Namber, Adress) " +
+                    //    $"values (N'{TextboxLastName.Text}', N'{TextboxName.Text}', N'{TextboxFatherName.Text}', N'{textBoxDate.Text}', N'{textBoxNumber.Text}', " +
+                    //    $"N'{textBoxAdress.Text}')";
+                    //cmd.ExecuteNonQuery();
+
+                    //TextboxLastName.Text = ""; TextboxName.Text = ""; TextboxFatherName.Text = "";
+                    //textBoxDate.Text = ""; textBoxNumber.Text = ""; textBoxAdress.Text = "";
+                    //MessageBox.Show("Додано нового паціента.");
+                    //testCon.Close();
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Помилка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                testCon.Close();
+            }
         }
     }
 }

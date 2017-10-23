@@ -100,11 +100,15 @@ namespace Stomatology
 
         private void button6_Click(object sender, EventArgs e)
         {
+           
             timer.Stop();
             txtResult.Text = "00:00:00";
+            txtTotal.Text = string.Format("{0}:{1}:{2}", hours.ToString().PadLeft(2, '0'), minutes.ToString().PadLeft(2, '0'), seconds.ToString().PadLeft(2, '0'));
             hours = 0;
             minutes = 0;
             seconds = 0;
+            
+            
         }
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)

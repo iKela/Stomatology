@@ -143,7 +143,6 @@
             this.TextboxLastName.Name = "TextboxLastName";
             this.TextboxLastName.Size = new System.Drawing.Size(330, 20);
             this.TextboxLastName.TabIndex = 11;
-            this.TextboxLastName.TextChanged += new System.EventHandler(this.TextboxLastName_TextChanged);
             // 
             // label6
             // 

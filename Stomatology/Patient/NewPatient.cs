@@ -24,39 +24,36 @@ namespace Stomatology
 
         private void NewPatient_Load(object sender, EventArgs e)
         {
-            testCon.Open();
-            SqlCommand cmd = testCon.CreateCommand();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = $"INSERT INTO Client (Адрес) values('1')";
-            cmd.ExecuteNonQuery();
-            testCon.Close();
-            //updateTable();
-            testCon.Open();
-            //string uId = clientDataGridView.Rows[clientDataGridView.Rows.Count - 1].Cells[0].Value.ToString();
-           // string query = $"delete from Client where id = {uId}";
-           // SqlCommand cmd1 = new SqlCommand(query, testCon);
-            //cmd1.ExecuteNonQuery();
-            testCon.Close();
-            //updateTable();
+           // testCon.Open();
+           // SqlCommand cmd = testCon.CreateCommand();
+           // cmd.CommandType = CommandType.Text;
+           // cmd.CommandText = $"INSERT INTO Client (Адрес) values('1')";
+           // cmd.ExecuteNonQuery();
+           // testCon.Close();
+           // //updateTable();
+           // testCon.Open();
+           // //string uId = clientDataGridView.Rows[clientDataGridView.Rows.Count - 1].Cells[0].Value.ToString();
+           //// string query = $"delete from Client where id = {uId}";
+           //// SqlCommand cmd1 = new SqlCommand(query, testCon);
+           // //cmd1.ExecuteNonQuery();
+           // testCon.Close();
+           // //updateTable();
         }
 
-        private void textBox5_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e) //button to create new patient
         {
             try
             {
                 if (TextboxLastName.Text.Length == 0 || TextboxName.Text.Length == 0 || TextboxFatherName.Text.Length == 0 ||
                     textBoxDate.Text.Length == 0 || textBoxNumber.Text.Length == 0 || textBoxAdress.Text.Length == 0)
-                    throw new Exception("Незаповненні дані про працівника!");
+                    throw new Exception("Не всі поля заповнені!");
                 else
                 {
                     
@@ -67,10 +64,12 @@ namespace Stomatology
                         $"values (N'{TextboxLastName.Text}', N'{TextboxName.Text}', N'{TextboxFatherName.Text}', N'{textBoxDate.Text}', N'{textBoxNumber.Text}', " +
                         $"N'{textBoxAdress.Text}')";
                     cmd.ExecuteNonQuery();
+
                     TextboxLastName.Text = ""; TextboxName.Text = ""; TextboxFatherName.Text = "";
                     textBoxDate.Text = ""; textBoxNumber.Text = ""; textBoxAdress.Text = "";
+                    MessageBox.Show("Додано нового паціента.");
                     testCon.Close();
-                    //updateTable();
+                    
                 }
             }
             catch (Exception ex)
@@ -78,11 +77,6 @@ namespace Stomatology
                 MessageBox.Show(ex.Message, "Помилка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 testCon.Close();
             }
-        }
-
-        private void TextboxLastName_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

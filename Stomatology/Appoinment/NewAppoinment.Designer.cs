@@ -30,10 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NewAppoinment));
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbPatient = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtDescription = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -102,7 +102,7 @@
             this.BotLeftTextBox_3 = new System.Windows.Forms.TextBox();
             this.BotLeftTextBox_2 = new System.Windows.Forms.TextBox();
             this.BotLeftTextBox_1 = new System.Windows.Forms.TextBox();
-            this.textBox34 = new System.Windows.Forms.TextBox();
+            this.txtMoney = new System.Windows.Forms.TextBox();
             this.label36 = new System.Windows.Forms.Label();
             this.UAHLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -115,13 +115,13 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(137, 20);
             this.dateTimePicker1.TabIndex = 0;
             // 
-            // comboBox1
+            // cmbPatient
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(90, 10);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(402, 21);
-            this.comboBox1.TabIndex = 1;
+            this.cmbPatient.FormattingEnabled = true;
+            this.cmbPatient.Location = new System.Drawing.Point(90, 10);
+            this.cmbPatient.Name = "cmbPatient";
+            this.cmbPatient.Size = new System.Drawing.Size(402, 21);
+            this.cmbPatient.TabIndex = 1;
             // 
             // label1
             // 
@@ -143,13 +143,13 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Дата:";
             // 
-            // textBox1
+            // txtDescription
             // 
-            this.textBox1.Location = new System.Drawing.Point(90, 97);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(402, 131);
-            this.textBox1.TabIndex = 4;
+            this.txtDescription.Location = new System.Drawing.Point(90, 97);
+            this.txtDescription.Multiline = true;
+            this.txtDescription.Name = "txtDescription";
+            this.txtDescription.Size = new System.Drawing.Size(402, 131);
+            this.txtDescription.TabIndex = 4;
             // 
             // label3
             // 
@@ -170,6 +170,7 @@
             this.button1.TabIndex = 6;
             this.button1.Text = "Додати прийом";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -294,7 +295,6 @@
             this.TopRightTextBox_4.Name = "TopRightTextBox_4";
             this.TopRightTextBox_4.Size = new System.Drawing.Size(21, 20);
             this.TopRightTextBox_4.TabIndex = 22;
-            this.TopRightTextBox_4.TextChanged += new System.EventHandler(this.textBox13_TextChanged);
             // 
             // TopRightTextBox_5
             // 
@@ -736,12 +736,12 @@
             this.BotLeftTextBox_1.Size = new System.Drawing.Size(21, 20);
             this.BotLeftTextBox_1.TabIndex = 57;
             // 
-            // textBox34
+            // txtMoney
             // 
-            this.textBox34.Location = new System.Drawing.Point(90, 235);
-            this.textBox34.Name = "textBox34";
-            this.textBox34.Size = new System.Drawing.Size(100, 20);
-            this.textBox34.TabIndex = 73;
+            this.txtMoney.Location = new System.Drawing.Point(90, 235);
+            this.txtMoney.Name = "txtMoney";
+            this.txtMoney.Size = new System.Drawing.Size(100, 20);
+            this.txtMoney.TabIndex = 73;
             // 
             // label36
             // 
@@ -762,7 +762,6 @@
             this.UAHLabel.Size = new System.Drawing.Size(35, 18);
             this.UAHLabel.TabIndex = 76;
             this.UAHLabel.Text = "грн.";
-            this.UAHLabel.Click += new System.EventHandler(this.UAHLabel_Click);
             // 
             // NewAppoinment
             // 
@@ -771,7 +770,7 @@
             this.ClientSize = new System.Drawing.Size(572, 597);
             this.Controls.Add(this.UAHLabel);
             this.Controls.Add(this.label36);
-            this.Controls.Add(this.textBox34);
+            this.Controls.Add(this.txtMoney);
             this.Controls.Add(this.BotRightTextBox_8);
             this.Controls.Add(this.BotRightTextBox_7);
             this.Controls.Add(this.BotRightTextBox_6);
@@ -840,10 +839,10 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtDescription);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cmbPatient);
             this.Controls.Add(this.dateTimePicker1);
             this.MaximumSize = new System.Drawing.Size(588, 636);
             this.MinimumSize = new System.Drawing.Size(588, 636);
@@ -859,10 +858,10 @@
         #endregion
 
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbPatient;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtDescription;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
@@ -931,7 +930,7 @@
         private System.Windows.Forms.TextBox BotLeftTextBox_3;
         private System.Windows.Forms.TextBox BotLeftTextBox_2;
         private System.Windows.Forms.TextBox BotLeftTextBox_1;
-        private System.Windows.Forms.TextBox textBox34;
+        private System.Windows.Forms.TextBox txtMoney;
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Label UAHLabel;
     }
