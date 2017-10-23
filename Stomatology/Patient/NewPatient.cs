@@ -15,7 +15,7 @@ namespace Stomatology
     {
 
         SqlConnection testCon = new SqlConnection
-        (@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\StomatologyData.mdf;Integrated Security=True");
+        (@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\StomatologyData.mdf;Integrated Security=True;Asynchronous Processing=False;Connect Timeout=30;");
 
         public NewPatient()
         {
@@ -38,21 +38,22 @@ namespace Stomatology
             {
                 if (TextboxLastName.Text.Length == 0 || TextboxName.Text.Length == 0 || TextboxFatherName.Text.Length == 0 ||
                     textBoxDate.Text.Length == 0 || textBoxNumber.Text.Length == 0 || textBoxAdress.Text.Length == 0)
-                    throw new Exception("Незаповненні дані про працівника!");
+                    throw new Exception("Незаповненні дані про паціента!");
                 else
                 {
                     
                     testCon.Open();
                     SqlCommand cmd = testCon.CreateCommand();
                     cmd.CommandType = CommandType.Text;
-                    cmd.CommandText = $"INSERT INTO Pacient (Surname, Name, FatherName, Birthday, Number, Adress) " +
+                    cmd.CommandText = $"INSERT INTO Pacient (Surname, Name, FatherName, Birthday, Namber, Adress) " +
                         $"values (N'{TextboxLastName.Text}', N'{TextboxName.Text}', N'{TextboxFatherName.Text}', N'{textBoxDate.Text}', N'{textBoxNumber.Text}', " +
                         $"N'{textBoxAdress.Text}')";
                     cmd.ExecuteNonQuery();
-                    TextboxLastName.Text = ""; TextboxName.Text = ""; TextboxFatherName.Text = "";
-                    textBoxDate.Text = ""; textBoxNumber.Text = ""; textBoxAdress.Text = "";
+                    //TextboxLastName.Text = ""; TextboxName.Text = ""; TextboxFatherName.Text = "";
+                    //textBoxDate.Text = ""; textBoxNumber.Text = ""; textBoxAdress.Text = "";
                     testCon.Close();
                     //updateTable();
+                    
                 }
             }
             catch (Exception ex)
