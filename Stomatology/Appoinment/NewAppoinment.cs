@@ -34,23 +34,21 @@ namespace Stomatology
         {
             try
             {
-                if (cmbPatient.Text.Length == 0 || txtDescription.Text.Length == 0 || txtMoney.Text.Length == 0)
+                if (cmbPatient.Text.Length == 0 || txtDescription.Text.Length == 0)
                     throw new Exception("Не всі поля заповнені!");
                 else
                 {
 
-                    //testCon.Open();
-                    //SqlCommand cmd = testCon.CreateCommand();
-                    //cmd.CommandType = CommandType.Text;
-                    //cmd.CommandText = $"INSERT INTO Pacient (Date, Name, FatherName, Birthday, Namber, Adress) " +
-                    //    $"values (N'{TextboxLastName.Text}', N'{TextboxName.Text}', N'{TextboxFatherName.Text}', N'{textBoxDate.Text}', N'{textBoxNumber.Text}', " +
-                    //    $"N'{textBoxAdress.Text}')";
-                    //cmd.ExecuteNonQuery();
+                    testCon.Open();
+                    SqlCommand cmd = testCon.CreateCommand();
+                    cmd.CommandType = CommandType.Text;
+                    cmd.CommandText = $"INSERT INTO Reception (Date, Pacient_Id, Info) " +
+                        $"values (N'{dateTimePicker1.Value.ToString("yyyy-MM-dd")}', N'{cmbPatient.Text}', N'{txtDescription.Text}')";
+                    cmd.ExecuteNonQuery();
 
-                    //TextboxLastName.Text = ""; TextboxName.Text = ""; TextboxFatherName.Text = "";
-                    //textBoxDate.Text = ""; textBoxNumber.Text = ""; textBoxAdress.Text = "";
-                    //MessageBox.Show("Додано нового паціента.");
-                    //testCon.Close();
+                    dateTimePicker1.Text = ""; cmbPatient.Text = ""; txtDescription.Text = "";
+                    MessageBox.Show("Додано нового паціента.");
+                    testCon.Close();
 
                 }
             }
