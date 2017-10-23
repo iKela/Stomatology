@@ -107,6 +107,11 @@ namespace Stomatology
             seconds = 0;
         }
 
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
 

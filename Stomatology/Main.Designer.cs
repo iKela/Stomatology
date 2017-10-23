@@ -126,10 +126,10 @@
             this.EditPatient = new System.Windows.Forms.Button();
             this.AddNewPatient = new System.Windows.Forms.Button();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.txtResult = new System.Windows.Forms.TextBox();
             this.txtInterval = new System.Windows.Forms.TextBox();
             this.btnStop = new System.Windows.Forms.Button();
             this.btnStart = new System.Windows.Forms.Button();
-            this.txtResult = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.TabControl.SuspendLayout();
             this.tabPage3.SuspendLayout();
@@ -287,6 +287,7 @@
             this.listView1.Size = new System.Drawing.Size(700, 600);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
             // panel1
             // 
@@ -1117,6 +1118,18 @@
             this.tabPage4.Text = "Таймер";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
+            // txtResult
+            // 
+            this.txtResult.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtResult.Font = new System.Drawing.Font("Times New Roman", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txtResult.Location = new System.Drawing.Point(549, 280);
+            this.txtResult.Name = "txtResult";
+            this.txtResult.ReadOnly = true;
+            this.txtResult.Size = new System.Drawing.Size(347, 111);
+            this.txtResult.TabIndex = 4;
+            this.txtResult.Text = "00:00:00";
+            this.txtResult.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // txtInterval
             // 
             this.txtInterval.Location = new System.Drawing.Point(605, 236);
@@ -1143,18 +1156,6 @@
             this.btnStart.Text = "Старт";
             this.btnStart.UseVisualStyleBackColor = true;
             this.btnStart.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // txtResult
-            // 
-            this.txtResult.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtResult.Font = new System.Drawing.Font("Times New Roman", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.txtResult.Location = new System.Drawing.Point(549, 280);
-            this.txtResult.Name = "txtResult";
-            this.txtResult.ReadOnly = true;
-            this.txtResult.Size = new System.Drawing.Size(347, 111);
-            this.txtResult.TabIndex = 4;
-            this.txtResult.Text = "00:00:00";
-            this.txtResult.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Main
             // 

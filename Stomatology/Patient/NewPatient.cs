@@ -15,7 +15,7 @@ namespace Stomatology
     {
 
         SqlConnection testCon = new SqlConnection
-        (@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\StomatologyData.mdf;Integrated Security=True");
+        (@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\GoogleDrive InSoP\Stomatology\Stomatology\DataStomatology.mdf;Integrated Security=True");
 
         public NewPatient()
         {
