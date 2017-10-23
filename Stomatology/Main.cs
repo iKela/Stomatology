@@ -24,11 +24,10 @@ namespace Stomatology
 
         private void Form1_Load(object sender, EventArgs e)
         {
-           
-
+            
 
             //Defoult visible of second panel
-            panel3.Visible = false;
+            panel3.Visible = true;
 
             listView1.View = View.Details;
             listView1.GridLines = true;
@@ -116,6 +115,82 @@ namespace Stomatology
 
         }
 
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Bitmap image; //Bitmap для открываемого изображения
+
+            OpenFileDialog open_dialog = new OpenFileDialog(); //создание диалогового окна для выбора файла
+            open_dialog.Filter = "Image Files(*.BMP;*.JPG;*.GIF;*.PNG)|*.BMP;*.JPG;*.GIF;*.PNG|All files (*.*)|*.*"; //формат загружаемого файла
+            if (open_dialog.ShowDialog() == DialogResult.OK) //если в окне была нажата кнопка "ОК"
+            {
+                try
+                {
+                    image = new Bitmap(open_dialog.FileName);
+                    //вместо pictureBox1 укажите pictureBox, в который нужно загрузить изображение 
+                    picBox_1.SizeMode = PictureBoxSizeMode.StretchImage;
+                    picBox_1.Image = image;
+                    picBox_1.Invalidate();
+                }
+                catch
+                {
+                    DialogResult rezult = MessageBox.Show("Невозможно открыть выбранный файл",
+                    "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void TeethPanel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void picBox_2_Click(object sender, EventArgs e)
+        {
+            Bitmap image; //Bitmap для открываемого изображения
+
+            OpenFileDialog open_dialog = new OpenFileDialog(); //создание диалогового окна для выбора файла
+            open_dialog.Filter = "Image Files(*.BMP;*.JPG;*.GIF;*.PNG)|*.BMP;*.JPG;*.GIF;*.PNG|All files (*.*)|*.*"; //формат загружаемого файла
+            if (open_dialog.ShowDialog() == DialogResult.OK) //если в окне была нажата кнопка "ОК"
+            {
+                try
+                {
+                    image = new Bitmap(open_dialog.FileName);
+                    //вместо pictureBox1 укажите pictureBox, в который нужно загрузить изображение 
+                    picBox_2.SizeMode = PictureBoxSizeMode.StretchImage;
+                    picBox_2.Image = image;
+                    picBox_2.Invalidate();
+                }
+                catch
+                {
+                    DialogResult rezult = MessageBox.Show("Невозможно открыть выбранный файл",
+                    "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void picBox_3_Click(object sender, EventArgs e)
+        {
+            Bitmap image; //Bitmap для открываемого изображения
+
+            OpenFileDialog open_dialog = new OpenFileDialog(); //создание диалогового окна для выбора файла
+            open_dialog.Filter = "Image Files(*.BMP;*.JPG;*.GIF;*.PNG)|*.BMP;*.JPG;*.GIF;*.PNG|All files (*.*)|*.*"; //формат загружаемого файла
+            if (open_dialog.ShowDialog() == DialogResult.OK) //если в окне была нажата кнопка "ОК"
+            {
+                try
+                {
+                    image = new Bitmap(open_dialog.FileName);
+                    //вместо pictureBox1 укажите pictureBox, в который нужно загрузить изображение 
+                    picBox_3.SizeMode = PictureBoxSizeMode.StretchImage;
+                    picBox_3.Image = image;
+                    picBox_3.Invalidate();
+                }
+                catch
+                {
+                    DialogResult rezult = MessageBox.Show("Невозможно открыть выбранный файл",
+                    "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
 

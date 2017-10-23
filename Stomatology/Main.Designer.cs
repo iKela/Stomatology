@@ -37,14 +37,15 @@
             this.button4 = new System.Windows.Forms.Button();
             this.TabControl = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.listView1 = new System.Windows.Forms.ListView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.picBox_3 = new System.Windows.Forms.PictureBox();
+            this.picBox_2 = new System.Windows.Forms.PictureBox();
+            this.picBox_1 = new System.Windows.Forms.PictureBox();
             this.UAHLabel = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
             this.textBox34 = new System.Windows.Forms.TextBox();
@@ -112,7 +113,7 @@
             this.TopLeftTextBox_1 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.TeethPanel = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -126,17 +127,17 @@
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.btnStop = new System.Windows.Forms.Button();
             this.btnStart = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.tabControl1.SuspendLayout();
             this.TabControl.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBox_3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBox_2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBox_1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TeethPanel)).BeginInit();
             this.tabPage4.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -239,15 +240,6 @@
             this.tabPage3.Text = "Головна";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // comboBox1
-            // 
-            this.comboBox1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(81, 0);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 15;
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.Window;
@@ -286,9 +278,9 @@
             // 
             this.panel3.Controls.Add(this.comboBox1);
             this.panel3.Controls.Add(this.textBox2);
-            this.panel3.Controls.Add(this.pictureBox4);
-            this.panel3.Controls.Add(this.pictureBox3);
-            this.panel3.Controls.Add(this.pictureBox2);
+            this.panel3.Controls.Add(this.picBox_3);
+            this.panel3.Controls.Add(this.picBox_2);
+            this.panel3.Controls.Add(this.picBox_1);
             this.panel3.Controls.Add(this.UAHLabel);
             this.panel3.Controls.Add(this.label36);
             this.panel3.Controls.Add(this.textBox34);
@@ -356,7 +348,7 @@
             this.panel3.Controls.Add(this.TopLeftTextBox_1);
             this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.label4);
-            this.panel3.Controls.Add(this.pictureBox1);
+            this.panel3.Controls.Add(this.TeethPanel);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.textBox1);
             this.panel3.Controls.Add(this.label2);
@@ -367,32 +359,51 @@
             this.panel3.TabIndex = 0;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
-            // pictureBox4
+            // comboBox1
             // 
-            this.pictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox4.Location = new System.Drawing.Point(398, 498);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(153, 120);
-            this.pictureBox4.TabIndex = 229;
-            this.pictureBox4.TabStop = false;
+            this.comboBox1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(81, 0);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 15;
             // 
-            // pictureBox3
+            // textBox2
             // 
-            this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox3.Location = new System.Drawing.Point(204, 498);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(153, 120);
-            this.pictureBox3.TabIndex = 228;
-            this.pictureBox3.TabStop = false;
+            this.textBox2.Location = new System.Drawing.Point(81, 32);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(402, 20);
+            this.textBox2.TabIndex = 231;
             // 
-            // pictureBox2
+            // picBox_3
             // 
-            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox2.Location = new System.Drawing.Point(6, 498);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(153, 120);
-            this.pictureBox2.TabIndex = 227;
-            this.pictureBox2.TabStop = false;
+            this.picBox_3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.picBox_3.Location = new System.Drawing.Point(398, 498);
+            this.picBox_3.Name = "picBox_3";
+            this.picBox_3.Size = new System.Drawing.Size(153, 120);
+            this.picBox_3.TabIndex = 229;
+            this.picBox_3.TabStop = false;
+            this.picBox_3.Click += new System.EventHandler(this.picBox_3_Click);
+            // 
+            // picBox_2
+            // 
+            this.picBox_2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.picBox_2.Location = new System.Drawing.Point(204, 498);
+            this.picBox_2.Name = "picBox_2";
+            this.picBox_2.Size = new System.Drawing.Size(153, 120);
+            this.picBox_2.TabIndex = 228;
+            this.picBox_2.TabStop = false;
+            this.picBox_2.Click += new System.EventHandler(this.picBox_2_Click);
+            // 
+            // picBox_1
+            // 
+            this.picBox_1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.picBox_1.Location = new System.Drawing.Point(6, 498);
+            this.picBox_1.Name = "picBox_1";
+            this.picBox_1.Size = new System.Drawing.Size(153, 120);
+            this.picBox_1.TabIndex = 227;
+            this.picBox_1.TabStop = false;
+            this.picBox_1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // UAHLabel
             // 
@@ -965,14 +976,15 @@
             this.label4.TabIndex = 160;
             this.label4.Text = "1";
             // 
-            // pictureBox1
+            // TeethPanel
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(6, 221);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(545, 275);
-            this.pictureBox1.TabIndex = 159;
-            this.pictureBox1.TabStop = false;
+            this.TeethPanel.Image = ((System.Drawing.Image)(resources.GetObject("TeethPanel.Image")));
+            this.TeethPanel.Location = new System.Drawing.Point(6, 221);
+            this.TeethPanel.Name = "TeethPanel";
+            this.TeethPanel.Size = new System.Drawing.Size(545, 275);
+            this.TeethPanel.TabIndex = 159;
+            this.TeethPanel.TabStop = false;
+            this.TeethPanel.Click += new System.EventHandler(this.TeethPanel_Click);
             // 
             // label3
             // 
@@ -1121,12 +1133,9 @@
             this.btnStart.UseVisualStyleBackColor = true;
             this.btnStart.Click += new System.EventHandler(this.button5_Click);
             // 
-            // textBox2
+            // openFileDialog1
             // 
-            this.textBox2.Location = new System.Drawing.Point(81, 32);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(402, 20);
-            this.textBox2.TabIndex = 231;
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // Main
             // 
@@ -1147,10 +1156,10 @@
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBox_3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBox_2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBox_1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TeethPanel)).EndInit();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
             this.ResumeLayout(false);
@@ -1251,12 +1260,13 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox TeethPanel;
+        private System.Windows.Forms.PictureBox picBox_3;
+        private System.Windows.Forms.PictureBox picBox_2;
+        private System.Windows.Forms.PictureBox picBox_1;
         private System.Windows.Forms.TextBox txtResult;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
 

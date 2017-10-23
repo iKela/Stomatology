@@ -20,6 +20,9 @@ namespace Stomatology
         public NewPatient()
         {
             InitializeComponent();
+            this.KeyPreview = true;
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.button1_KeyUp);
+            this.button1.Click += new System.EventHandler(this.button1_Click);
         }
 
         private void NewPatient_Load(object sender, EventArgs e)
@@ -34,11 +37,11 @@ namespace Stomatology
         }
 
         private void button1_Click(object sender, EventArgs e) //button to create new patient
-        {
+        { 
             try
             {
                 if (TextboxLastName.Text.Length == 0 || TextboxName.Text.Length == 0 || TextboxFatherName.Text.Length == 0 ||
-                    textBoxDate.Text.Length == 0 || textBoxNumber.Text.Length == 0 || textBoxAdress.Text.Length == 0)
+                    dtpPatient.Text.Length == 0 || textBoxNumber.Text.Length == 0 || textBoxAdress.Text.Length == 0)
                     throw new Exception("Не всі поля заповнені!");
                 else
                 {
@@ -47,12 +50,12 @@ namespace Stomatology
                     SqlCommand cmd = testCon.CreateCommand();
                     cmd.CommandType = CommandType.Text;
                     cmd.CommandText = $"INSERT INTO Pacient (Surname, Name, FatherName, Birthday, Namber, Adress) " +
-                        $"values (N'{TextboxLastName.Text}', N'{TextboxName.Text}', N'{TextboxFatherName.Text}', N'{textBoxDate.Text}', N'{textBoxNumber.Text}', " +
+                        $"values (N'{TextboxLastName.Text}', N'{TextboxName.Text}', N'{TextboxFatherName.Text}', N'{dtpPatient.Value.ToString("yyyy-mm-dd")}', N'{textBoxNumber.Text}', " +
                         $"N'{textBoxAdress.Text}')";
                     cmd.ExecuteNonQuery();
 
                     TextboxLastName.Text = ""; TextboxName.Text = ""; TextboxFatherName.Text = "";
-                    textBoxDate.Text = ""; textBoxNumber.Text = ""; textBoxAdress.Text = "";
+                    dtpPatient.Text = ""; textBoxNumber.Text = ""; textBoxAdress.Text = "";
                     MessageBox.Show("Додано нового паціента.");
                     testCon.Close();
                     
@@ -62,6 +65,14 @@ namespace Stomatology
             {
                 MessageBox.Show(ex.Message, "Помилка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 testCon.Close();
+                
+            }
+        }
+        private void button1_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                button1.PerformClick();
             }
         }
     }
