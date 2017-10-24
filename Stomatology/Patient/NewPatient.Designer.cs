@@ -168,6 +168,7 @@
             // 
             // dtpPatient
             // 
+            this.dtpPatient.CustomFormat = "";
             this.dtpPatient.Location = new System.Drawing.Point(183, 146);
             this.dtpPatient.Name = "dtpPatient";
             this.dtpPatient.Size = new System.Drawing.Size(311, 20);
@@ -223,8 +224,10 @@
             // 
             // NewPatient
             // 
+            this.AcceptButton = this.button1;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.button2;
             this.ClientSize = new System.Drawing.Size(517, 327);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);

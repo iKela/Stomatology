@@ -190,7 +190,6 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tabPage1.BackgroundImage")));
             this.tabPage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tabPage1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tabPage1.Controls.Add(this.panel2);
@@ -217,9 +216,9 @@
             this.panel2.BackColor = System.Drawing.SystemColors.Window;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel2.Controls.Add(this.listView1);
-            this.panel2.Location = new System.Drawing.Point(12, 21);
+            this.panel2.Location = new System.Drawing.Point(52, 21);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(700, 654);
+            this.panel2.Size = new System.Drawing.Size(651, 654);
             this.panel2.TabIndex = 14;
             // 
             // listView1
@@ -228,10 +227,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.listView1.AutoArrange = false;
-            this.listView1.Location = new System.Drawing.Point(-2, -2);
+            this.listView1.Location = new System.Drawing.Point(-11, -4);
             this.listView1.MaximumSize = new System.Drawing.Size(700, 700);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(700, 654);
+            this.listView1.Size = new System.Drawing.Size(660, 654);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
@@ -243,7 +242,7 @@
             this.EditAppoinment.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("EditAppoinment.BackgroundImage")));
             this.EditAppoinment.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.EditAppoinment.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.EditAppoinment.Location = new System.Drawing.Point(801, 679);
+            this.EditAppoinment.Location = new System.Drawing.Point(721, 65);
             this.EditAppoinment.Name = "EditAppoinment";
             this.EditAppoinment.Size = new System.Drawing.Size(43, 38);
             this.EditAppoinment.TabIndex = 12;
@@ -258,7 +257,7 @@
             this.AddNewAppoinment.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AddNewAppoinment.BackgroundImage")));
             this.AddNewAppoinment.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.AddNewAppoinment.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.AddNewAppoinment.Location = new System.Drawing.Point(752, 679);
+            this.AddNewAppoinment.Location = new System.Drawing.Point(721, 19);
             this.AddNewAppoinment.Name = "AddNewAppoinment";
             this.AddNewAppoinment.Size = new System.Drawing.Size(43, 38);
             this.AddNewAppoinment.TabIndex = 11;
@@ -270,7 +269,7 @@
             this.panel1.BackColor = System.Drawing.SystemColors.Window;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.panel3);
-            this.panel1.Location = new System.Drawing.Point(752, 21);
+            this.panel1.Location = new System.Drawing.Point(780, 21);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(562, 654);
             this.panel1.TabIndex = 13;
@@ -1000,7 +999,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(81, 57);
+            this.textBox1.Location = new System.Drawing.Point(81, 58);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(402, 131);
@@ -1033,7 +1032,7 @@
             this.EditPatient.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("EditPatient.BackgroundImage")));
             this.EditPatient.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.EditPatient.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.EditPatient.Location = new System.Drawing.Point(61, 679);
+            this.EditPatient.Location = new System.Drawing.Point(3, 65);
             this.EditPatient.Name = "EditPatient";
             this.EditPatient.Size = new System.Drawing.Size(43, 38);
             this.EditPatient.TabIndex = 10;
@@ -1047,7 +1046,7 @@
             this.AddNewPatient.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AddNewPatient.BackgroundImage")));
             this.AddNewPatient.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.AddNewPatient.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.AddNewPatient.Location = new System.Drawing.Point(12, 679);
+            this.AddNewPatient.Location = new System.Drawing.Point(3, 19);
             this.AddNewPatient.Name = "AddNewPatient";
             this.AddNewPatient.Size = new System.Drawing.Size(43, 38);
             this.AddNewPatient.TabIndex = 9;
@@ -1129,11 +1128,10 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1366, 768);
+            this.ClientSize = new System.Drawing.Size(1366, 728);
             this.Controls.Add(this.TabControl);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(1366, 768);
-            this.MinimumSize = new System.Drawing.Size(1366, 768);
             this.Name = "Main";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Main_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
