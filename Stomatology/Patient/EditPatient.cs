@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-//using System.Data;
+using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -23,26 +23,7 @@ namespace Stomatology
 
         private void EditPatient_Load(object sender, EventArgs e)
         {
-            testCon.Open();
-            SqlDataReader sqlReader = null;
-            SqlCommand command = new SqlCommand("SELECT Surname FROM [Pacient]", testCon); 
-            try
-            {
-                sqlReader = command.ExecuteReader();
-                while (sqlReader.Read())
-                {
-                    comboBox1.Items.Add(Convert.ToString(sqlReader["Surname"]));                  
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message.ToString(), ex.Source.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                if (sqlReader != null) sqlReader.Close();
-            }
-            testCon.Close();
+            updateTable();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -50,49 +31,77 @@ namespace Stomatology
             this.Close();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (textBox4.Text.Length == 0 || textBox3.Text.Length == 0 || textBox2.Text.Length == 0 ||
-                    textBox1.Text.Length == 0 || textBox6.Text.Length == 0)
-                throw new Exception("Незаповненні дані про працівника!");
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                textBox5.Text = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
+                textBox4.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
+                textBox3.Text = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
+                textBox2.Text = dataGridView1.SelectedRows[0].Cells[4].Value.ToString();
+                textBox1.Text = dataGridView1.SelectedRows[0].Cells[5].Value.ToString();
+                textBox6.Text = dataGridView1.SelectedRows[0].Cells[6].Value.ToString();
+            }
             else
             {
-                if (string.IsNullOrEmpty(comboBox1.Text)) throw new Exception("Виберіть посаду працівника!");
-                testCon.Open();
-
-                string query = $"select * from [Posada] where Посада = N'{comboBox1.Text}'";
-                SqlCommand cmd1 = new SqlCommand(query, testCon);
-                SqlDataReader reader = cmd1.ExecuteReader();
-                string posadaId = "";
-                if (reader.Read())
-                {
-                    posadaId = reader["Id"].ToString();
-                }
-                else
-                {
-                    throw new Exception("Не вдалось знайти таку посаду, перевірте ще раз!");
-                }
-
-                testCon.Close();
-
-                //testCon.Open();
-                //SqlCommand cmd = testCon.CreateCommand();
-                //cmd.CommandType = CommandType.Text;
-                //cmd.CommandText = $"INSERT INTO People (Name, Прізвище, Побатькові, Дата_народження, Паспорт_серія, Контакт, id_Posada) " +
-                //    $"values (N'{namebox.Text}', N'{surnamebox.Text}', N'{lastNamebox.Text}', N'{dataBirthbox.Text}', N'{passportbox.Text}', " +
-                //    $"N'{contactbox.Text}', N'{posadaId}')";
-                //cmd.ExecuteNonQuery();
-                //namebox.Text = ""; surnamebox.Text = ""; lastNamebox.Text = "";
-                //passportbox.Text = ""; contactbox.Text = ""; dataBirthbox.Text = "";
-                //testCon.Close();
-                //updateTable();
+                textBox5.Clear();
+                textBox4.Clear();
+                textBox3.Clear();
+                textBox2.Clear();
+                textBox1.Clear();
+                textBox6.Clear();
             }
         }
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show(ex.Message, "Помилка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    testCon.Close();
-            //}
-}
+
+        private void updateTable()
+        {
+            dataGridView1.Rows.Clear();
+            testCon.Open();
+            string upqwery = "select * from Pacient";
+            SqlCommand sqlComm = new SqlCommand(upqwery, testCon);
+            SqlDataReader sqlDR;
+            sqlDR = sqlComm.ExecuteReader();
+            while (sqlDR.Read())
+            {
+                int index = dataGridView1.Rows.Add();
+                dataGridView1.Rows[index].Cells[0].Value = sqlDR[0];
+                dataGridView1.Rows[index].Cells[1].Value = sqlDR[1];
+                dataGridView1.Rows[index].Cells[2].Value = sqlDR[2];
+                dataGridView1.Rows[index].Cells[3].Value = sqlDR[3];
+                dataGridView1.Rows[index].Cells[4].Value = sqlDR[4];
+                dataGridView1.Rows[index].Cells[5].Value = sqlDR[5];
+                dataGridView1.Rows[index].Cells[6].Value = sqlDR[6];
+            }
+            testCon.Close();
+            dataGridView1.ClearSelection();
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                string uId = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
+                string query = "update Pacient " + $"set Surname = N'{textBox5.Text}', " + $"Name = N'{textBox4.Text}', " 
+            + $"FatherName = N'{textBox3.Text}', " + $"Birthday = N'{textBox2.Text}', " 
+            + $"Number = N'{textBox1.Text}', " + $"Adress = N'{textBox6.Text}' " 
+            + $"where Id = {uId}";
+
+
+                testCon.Open();
+                SqlCommand upbtn = new SqlCommand(query, testCon);
+                upbtn.ExecuteNonQuery();
+                testCon.Close();
+                updateTable();
+
+                textBox5.Clear();
+                textBox4.Clear();
+                textBox3.Clear();
+                textBox2.Clear();
+                textBox1.Clear();
+                textBox6.Clear();
+            }  
+        }
+
+       
     }
+}
 
