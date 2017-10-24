@@ -9,11 +9,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
 using System.Timers;
+using MetroFramework.Components;
+using MetroFramework.Forms;
 
 namespace Stomatology
 {
-    public partial class Main : Form
+    public partial class Main : MetroForm
     {
+        //Timer
         System.Timers.Timer timer;
         int hours, minutes, seconds;
 
@@ -24,7 +27,13 @@ namespace Stomatology
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+            //Текст при наведенні на кнопку
+            ToolTip t = new ToolTip();
+            t.SetToolTip(AddNewPatient, "Додади нового паціента");
+            t.SetToolTip(EditPatient, "Редагувати паціента");
+            t.SetToolTip(AddNewAppoinment, "Додати новий прийом");
+            t.SetToolTip(EditAppoinment, "Редагувати прийом");
+            t.SetToolTip(btnCalculator, "Калькулятор");
 
             //Defoult visible of second panel
             panel3.Visible = true;
@@ -45,6 +54,7 @@ namespace Stomatology
             //Add items in the listview
             string[] arr = new string[6];
 
+            //Function and interval of timer
             timer = new System.Timers.Timer();
             timer.Interval = 1000;
             timer.Elapsed += OnTimeEvent;
@@ -52,6 +62,7 @@ namespace Stomatology
 
         private void OnTimeEvent(object sender, ElapsedEventArgs e)
         {
+            // The proccess of timer work
             Invoke(new Action(() => 
             {
                 seconds += 1;
@@ -99,13 +110,14 @@ namespace Stomatology
 
         private void button6_Click(object sender, EventArgs e)
         {
-           
-            timer.Stop();
-            txtResult.Text = "00:00:00";
+            
+            timer.Stop(); // Зупинка таймера // Stop timer
+            txtResult.Text = "00:00:00"; // Скидання  таблиці таймера // Timer table reset
+            // Вивід результату в текст бокс // Get out of information to text box
             txtTotal.Text = string.Format("{0}:{1}:{2}", hours.ToString().PadLeft(2, '0'), minutes.ToString().PadLeft(2, '0'), seconds.ToString().PadLeft(2, '0'));
-            hours = 0;
-            minutes = 0;
-            seconds = 0;
+            hours = 0;//
+            minutes = 0;// Скидання таймера // Timer reset
+            seconds = 0;//
             
             
         }
@@ -126,7 +138,6 @@ namespace Stomatology
                 try
                 {
                     image = new Bitmap(open_dialog.FileName);
-                    //вместо pictureBox1 укажите pictureBox, в который нужно загрузить изображение 
                     picBox_1.SizeMode = PictureBoxSizeMode.StretchImage;
                     picBox_1.Image = image;
                     picBox_1.Invalidate();
@@ -155,7 +166,6 @@ namespace Stomatology
                 try
                 {
                     image = new Bitmap(open_dialog.FileName);
-                    //вместо pictureBox1 укажите pictureBox, в который нужно загрузить изображение 
                     picBox_2.SizeMode = PictureBoxSizeMode.StretchImage;
                     picBox_2.Image = image;
                     picBox_2.Invalidate();
@@ -179,7 +189,6 @@ namespace Stomatology
                 try
                 {
                     image = new Bitmap(open_dialog.FileName);
-                    //вместо pictureBox1 укажите pictureBox, в который нужно загрузить изображение 
                     picBox_3.SizeMode = PictureBoxSizeMode.StretchImage;
                     picBox_3.Image = image;
                     picBox_3.Invalidate();
@@ -191,6 +200,18 @@ namespace Stomatology
                 }
             }
         }
+
+        private void tabPage3_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void btnCalculator_Click(object sender, EventArgs e)
+        {
+            Calculator newForm = new Calculator();
+            newForm.Show();
+        }
+
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
 

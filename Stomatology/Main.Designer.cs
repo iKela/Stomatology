@@ -29,16 +29,15 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.TabControl = new System.Windows.Forms.TabControl();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
             this.listView1 = new System.Windows.Forms.ListView();
+            this.EditAppoinment = new System.Windows.Forms.Button();
+            this.AddNewAppoinment = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -118,8 +117,6 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.EditAppoinment = new System.Windows.Forms.Button();
-            this.AddNewAppoinment = new System.Windows.Forms.Button();
             this.EditPatient = new System.Windows.Forms.Button();
             this.AddNewPatient = new System.Windows.Forms.Button();
             this.tabPage4 = new System.Windows.Forms.TabPage();
@@ -128,9 +125,9 @@
             this.btnStop = new System.Windows.Forms.Button();
             this.btnStart = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.tabControl1.SuspendLayout();
+            this.btnCalculator = new System.Windows.Forms.Button();
             this.TabControl.SuspendLayout();
-            this.tabPage3.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -141,42 +138,12 @@
             this.tabPage4.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tabControl1
-            // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(12, 12);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(519, 407);
-            this.tabControl1.TabIndex = 9;
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(511, 381);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
-            this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(511, 381);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
             // button2
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.button2.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.button2.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.button2.Location = new System.Drawing.Point(195, 942);
+            this.button2.Location = new System.Drawing.Point(195, 994);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(141, 23);
             this.button2.TabIndex = 3;
@@ -189,7 +156,7 @@
             this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.button3.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.button3.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.button3.Location = new System.Drawing.Point(460, 942);
+            this.button3.Location = new System.Drawing.Point(460, 994);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(141, 23);
             this.button3.TabIndex = 4;
@@ -203,7 +170,7 @@
             this.button4.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button4.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.button4.Location = new System.Drawing.Point(607, 942);
+            this.button4.Location = new System.Drawing.Point(607, 994);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(141, 23);
             this.button4.TabIndex = 5;
@@ -213,32 +180,37 @@
             // 
             // TabControl
             // 
-            this.TabControl.Controls.Add(this.tabPage3);
+            this.TabControl.Controls.Add(this.tabPage1);
             this.TabControl.Controls.Add(this.tabPage4);
-            this.TabControl.Location = new System.Drawing.Point(-4, -1);
+            this.TabControl.Location = new System.Drawing.Point(-4, 21);
             this.TabControl.Name = "TabControl";
             this.TabControl.SelectedIndex = 0;
-            this.TabControl.Size = new System.Drawing.Size(1454, 697);
+            this.TabControl.Size = new System.Drawing.Size(1454, 751);
             this.TabControl.TabIndex = 9;
             // 
-            // tabPage3
+            // tabPage1
             // 
-            this.tabPage3.Controls.Add(this.panel2);
-            this.tabPage3.Controls.Add(this.panel1);
-            this.tabPage3.Controls.Add(this.EditAppoinment);
-            this.tabPage3.Controls.Add(this.AddNewAppoinment);
-            this.tabPage3.Controls.Add(this.EditPatient);
-            this.tabPage3.Controls.Add(this.AddNewPatient);
-            this.tabPage3.Controls.Add(this.button2);
-            this.tabPage3.Controls.Add(this.button3);
-            this.tabPage3.Controls.Add(this.button4);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1446, 671);
-            this.tabPage3.TabIndex = 0;
-            this.tabPage3.Text = "Головна";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            this.tabPage1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tabPage1.BackgroundImage")));
+            this.tabPage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tabPage1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tabPage1.Controls.Add(this.panel2);
+            this.tabPage1.Controls.Add(this.EditAppoinment);
+            this.tabPage1.Controls.Add(this.AddNewAppoinment);
+            this.tabPage1.Controls.Add(this.panel1);
+            this.tabPage1.Controls.Add(this.EditPatient);
+            this.tabPage1.Controls.Add(this.AddNewPatient);
+            this.tabPage1.Controls.Add(this.button2);
+            this.tabPage1.Controls.Add(this.button3);
+            this.tabPage1.Controls.Add(this.button4);
+            this.tabPage1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(1446, 725);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Головна";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabPage1.Click += new System.EventHandler(this.tabPage3_Click);
             // 
             // panel2
             // 
@@ -247,7 +219,7 @@
             this.panel2.Controls.Add(this.listView1);
             this.panel2.Location = new System.Drawing.Point(12, 21);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(700, 600);
+            this.panel2.Size = new System.Drawing.Size(700, 654);
             this.panel2.TabIndex = 14;
             // 
             // listView1
@@ -257,25 +229,55 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.listView1.AutoArrange = false;
             this.listView1.Location = new System.Drawing.Point(-2, -2);
-            this.listView1.MaximumSize = new System.Drawing.Size(700, 600);
+            this.listView1.MaximumSize = new System.Drawing.Size(700, 700);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(700, 600);
+            this.listView1.Size = new System.Drawing.Size(700, 654);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
+            // 
+            // EditAppoinment
+            // 
+            this.EditAppoinment.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.EditAppoinment.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.EditAppoinment.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("EditAppoinment.BackgroundImage")));
+            this.EditAppoinment.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.EditAppoinment.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.EditAppoinment.Location = new System.Drawing.Point(801, 679);
+            this.EditAppoinment.Name = "EditAppoinment";
+            this.EditAppoinment.Size = new System.Drawing.Size(43, 38);
+            this.EditAppoinment.TabIndex = 12;
+            this.EditAppoinment.UseVisualStyleBackColor = false;
+            this.EditAppoinment.Click += new System.EventHandler(this.EditAppoinment_Click);
+            this.EditAppoinment.MouseCaptureChanged += new System.EventHandler(this.EditAppoinment_Click);
+            // 
+            // AddNewAppoinment
+            // 
+            this.AddNewAppoinment.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.AddNewAppoinment.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.AddNewAppoinment.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AddNewAppoinment.BackgroundImage")));
+            this.AddNewAppoinment.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.AddNewAppoinment.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.AddNewAppoinment.Location = new System.Drawing.Point(752, 679);
+            this.AddNewAppoinment.Name = "AddNewAppoinment";
+            this.AddNewAppoinment.Size = new System.Drawing.Size(43, 38);
+            this.AddNewAppoinment.TabIndex = 11;
+            this.AddNewAppoinment.UseVisualStyleBackColor = false;
+            this.AddNewAppoinment.MouseCaptureChanged += new System.EventHandler(this.AddNewAppoinment_Click);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Window;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.panel3);
-            this.panel1.Location = new System.Drawing.Point(718, 21);
+            this.panel1.Location = new System.Drawing.Point(752, 21);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(562, 629);
+            this.panel1.Size = new System.Drawing.Size(562, 654);
             this.panel1.TabIndex = 13;
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.btnCalculator);
             this.panel3.Controls.Add(this.comboBox1);
             this.panel3.Controls.Add(this.textBox2);
             this.panel3.Controls.Add(this.picBox_3);
@@ -355,7 +357,7 @@
             this.panel3.Controls.Add(this.label1);
             this.panel3.Location = new System.Drawing.Point(4, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(554, 623);
+            this.panel3.Size = new System.Drawing.Size(554, 648);
             this.panel3.TabIndex = 0;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
@@ -365,22 +367,22 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(81, 0);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.Size = new System.Drawing.Size(121, 23);
             this.comboBox1.TabIndex = 15;
             // 
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(81, 32);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(402, 20);
+            this.textBox2.Size = new System.Drawing.Size(402, 21);
             this.textBox2.TabIndex = 231;
             // 
             // picBox_3
             // 
             this.picBox_3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.picBox_3.Location = new System.Drawing.Point(398, 498);
+            this.picBox_3.Location = new System.Drawing.Point(404, 498);
             this.picBox_3.Name = "picBox_3";
-            this.picBox_3.Size = new System.Drawing.Size(153, 120);
+            this.picBox_3.Size = new System.Drawing.Size(147, 138);
             this.picBox_3.TabIndex = 229;
             this.picBox_3.TabStop = false;
             this.picBox_3.Click += new System.EventHandler(this.picBox_3_Click);
@@ -388,9 +390,9 @@
             // picBox_2
             // 
             this.picBox_2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.picBox_2.Location = new System.Drawing.Point(204, 498);
+            this.picBox_2.Location = new System.Drawing.Point(197, 498);
             this.picBox_2.Name = "picBox_2";
-            this.picBox_2.Size = new System.Drawing.Size(153, 120);
+            this.picBox_2.Size = new System.Drawing.Size(157, 138);
             this.picBox_2.TabIndex = 228;
             this.picBox_2.TabStop = false;
             this.picBox_2.Click += new System.EventHandler(this.picBox_2_Click);
@@ -400,7 +402,7 @@
             this.picBox_1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.picBox_1.Location = new System.Drawing.Point(6, 498);
             this.picBox_1.Name = "picBox_1";
-            this.picBox_1.Size = new System.Drawing.Size(153, 120);
+            this.picBox_1.Size = new System.Drawing.Size(153, 138);
             this.picBox_1.TabIndex = 227;
             this.picBox_1.TabStop = false;
             this.picBox_1.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -429,119 +431,119 @@
             // 
             this.textBox34.Location = new System.Drawing.Point(81, 195);
             this.textBox34.Name = "textBox34";
-            this.textBox34.Size = new System.Drawing.Size(100, 20);
+            this.textBox34.Size = new System.Drawing.Size(100, 21);
             this.textBox34.TabIndex = 224;
             // 
             // BotRightTextBox_8
             // 
             this.BotRightTextBox_8.Location = new System.Drawing.Point(521, 382);
             this.BotRightTextBox_8.Name = "BotRightTextBox_8";
-            this.BotRightTextBox_8.Size = new System.Drawing.Size(21, 20);
+            this.BotRightTextBox_8.Size = new System.Drawing.Size(21, 21);
             this.BotRightTextBox_8.TabIndex = 223;
             // 
             // BotRightTextBox_7
             // 
             this.BotRightTextBox_7.Location = new System.Drawing.Point(483, 382);
             this.BotRightTextBox_7.Name = "BotRightTextBox_7";
-            this.BotRightTextBox_7.Size = new System.Drawing.Size(21, 20);
+            this.BotRightTextBox_7.Size = new System.Drawing.Size(21, 21);
             this.BotRightTextBox_7.TabIndex = 222;
             // 
             // BotRightTextBox_6
             // 
             this.BotRightTextBox_6.Location = new System.Drawing.Point(440, 382);
             this.BotRightTextBox_6.Name = "BotRightTextBox_6";
-            this.BotRightTextBox_6.Size = new System.Drawing.Size(21, 20);
+            this.BotRightTextBox_6.Size = new System.Drawing.Size(21, 21);
             this.BotRightTextBox_6.TabIndex = 221;
             // 
             // BotRightTextBox_5
             // 
             this.BotRightTextBox_5.Location = new System.Drawing.Point(404, 382);
             this.BotRightTextBox_5.Name = "BotRightTextBox_5";
-            this.BotRightTextBox_5.Size = new System.Drawing.Size(21, 20);
+            this.BotRightTextBox_5.Size = new System.Drawing.Size(21, 21);
             this.BotRightTextBox_5.TabIndex = 220;
             // 
             // BotRightTextBox_4
             // 
             this.BotRightTextBox_4.Location = new System.Drawing.Point(374, 382);
             this.BotRightTextBox_4.Name = "BotRightTextBox_4";
-            this.BotRightTextBox_4.Size = new System.Drawing.Size(21, 20);
+            this.BotRightTextBox_4.Size = new System.Drawing.Size(21, 21);
             this.BotRightTextBox_4.TabIndex = 219;
             // 
             // BotRightTextBox_3
             // 
             this.BotRightTextBox_3.Location = new System.Drawing.Point(346, 382);
             this.BotRightTextBox_3.Name = "BotRightTextBox_3";
-            this.BotRightTextBox_3.Size = new System.Drawing.Size(21, 20);
+            this.BotRightTextBox_3.Size = new System.Drawing.Size(21, 21);
             this.BotRightTextBox_3.TabIndex = 218;
             // 
             // BotRightTextBox_2
             // 
             this.BotRightTextBox_2.Location = new System.Drawing.Point(317, 382);
             this.BotRightTextBox_2.Name = "BotRightTextBox_2";
-            this.BotRightTextBox_2.Size = new System.Drawing.Size(21, 20);
+            this.BotRightTextBox_2.Size = new System.Drawing.Size(21, 21);
             this.BotRightTextBox_2.TabIndex = 217;
             // 
             // BotRightTextBox_1
             // 
             this.BotRightTextBox_1.Location = new System.Drawing.Point(290, 382);
             this.BotRightTextBox_1.Name = "BotRightTextBox_1";
-            this.BotRightTextBox_1.Size = new System.Drawing.Size(21, 20);
+            this.BotRightTextBox_1.Size = new System.Drawing.Size(21, 21);
             this.BotRightTextBox_1.TabIndex = 216;
             // 
             // BotLeftTextBox_8
             // 
             this.BotLeftTextBox_8.Location = new System.Drawing.Point(19, 382);
             this.BotLeftTextBox_8.Name = "BotLeftTextBox_8";
-            this.BotLeftTextBox_8.Size = new System.Drawing.Size(21, 20);
+            this.BotLeftTextBox_8.Size = new System.Drawing.Size(21, 21);
             this.BotLeftTextBox_8.TabIndex = 215;
             // 
             // BotLeftTextBox_7
             // 
             this.BotLeftTextBox_7.Location = new System.Drawing.Point(60, 382);
             this.BotLeftTextBox_7.Name = "BotLeftTextBox_7";
-            this.BotLeftTextBox_7.Size = new System.Drawing.Size(21, 20);
+            this.BotLeftTextBox_7.Size = new System.Drawing.Size(21, 21);
             this.BotLeftTextBox_7.TabIndex = 214;
             // 
             // BotLeftTextBox_6
             // 
             this.BotLeftTextBox_6.Location = new System.Drawing.Point(102, 382);
             this.BotLeftTextBox_6.Name = "BotLeftTextBox_6";
-            this.BotLeftTextBox_6.Size = new System.Drawing.Size(21, 20);
+            this.BotLeftTextBox_6.Size = new System.Drawing.Size(21, 21);
             this.BotLeftTextBox_6.TabIndex = 213;
             // 
             // BotLeftTextBox_5
             // 
             this.BotLeftTextBox_5.Location = new System.Drawing.Point(138, 382);
             this.BotLeftTextBox_5.Name = "BotLeftTextBox_5";
-            this.BotLeftTextBox_5.Size = new System.Drawing.Size(21, 20);
+            this.BotLeftTextBox_5.Size = new System.Drawing.Size(21, 21);
             this.BotLeftTextBox_5.TabIndex = 212;
             // 
             // BotLeftTextBox_4
             // 
             this.BotLeftTextBox_4.Location = new System.Drawing.Point(165, 382);
             this.BotLeftTextBox_4.Name = "BotLeftTextBox_4";
-            this.BotLeftTextBox_4.Size = new System.Drawing.Size(21, 20);
+            this.BotLeftTextBox_4.Size = new System.Drawing.Size(21, 21);
             this.BotLeftTextBox_4.TabIndex = 211;
             // 
             // BotLeftTextBox_3
             // 
             this.BotLeftTextBox_3.Location = new System.Drawing.Point(192, 382);
             this.BotLeftTextBox_3.Name = "BotLeftTextBox_3";
-            this.BotLeftTextBox_3.Size = new System.Drawing.Size(21, 20);
+            this.BotLeftTextBox_3.Size = new System.Drawing.Size(21, 21);
             this.BotLeftTextBox_3.TabIndex = 210;
             // 
             // BotLeftTextBox_2
             // 
             this.BotLeftTextBox_2.Location = new System.Drawing.Point(219, 382);
             this.BotLeftTextBox_2.Name = "BotLeftTextBox_2";
-            this.BotLeftTextBox_2.Size = new System.Drawing.Size(21, 20);
+            this.BotLeftTextBox_2.Size = new System.Drawing.Size(21, 21);
             this.BotLeftTextBox_2.TabIndex = 209;
             // 
             // BotLeftTextBox_1
             // 
             this.BotLeftTextBox_1.Location = new System.Drawing.Point(246, 382);
             this.BotLeftTextBox_1.Name = "BotLeftTextBox_1";
-            this.BotLeftTextBox_1.Size = new System.Drawing.Size(21, 20);
+            this.BotLeftTextBox_1.Size = new System.Drawing.Size(21, 21);
             this.BotLeftTextBox_1.TabIndex = 208;
             // 
             // label20
@@ -848,112 +850,112 @@
             // 
             this.TopRightTextBox_8.Location = new System.Drawing.Point(521, 321);
             this.TopRightTextBox_8.Name = "TopRightTextBox_8";
-            this.TopRightTextBox_8.Size = new System.Drawing.Size(21, 20);
+            this.TopRightTextBox_8.Size = new System.Drawing.Size(21, 21);
             this.TopRightTextBox_8.TabIndex = 177;
             // 
             // TopRightTextBox_7
             // 
             this.TopRightTextBox_7.Location = new System.Drawing.Point(483, 321);
             this.TopRightTextBox_7.Name = "TopRightTextBox_7";
-            this.TopRightTextBox_7.Size = new System.Drawing.Size(21, 20);
+            this.TopRightTextBox_7.Size = new System.Drawing.Size(21, 21);
             this.TopRightTextBox_7.TabIndex = 176;
             // 
             // TopRightTextBox_6
             // 
             this.TopRightTextBox_6.Location = new System.Drawing.Point(440, 321);
             this.TopRightTextBox_6.Name = "TopRightTextBox_6";
-            this.TopRightTextBox_6.Size = new System.Drawing.Size(21, 20);
+            this.TopRightTextBox_6.Size = new System.Drawing.Size(21, 21);
             this.TopRightTextBox_6.TabIndex = 175;
             // 
             // TopRightTextBox_5
             // 
             this.TopRightTextBox_5.Location = new System.Drawing.Point(404, 321);
             this.TopRightTextBox_5.Name = "TopRightTextBox_5";
-            this.TopRightTextBox_5.Size = new System.Drawing.Size(21, 20);
+            this.TopRightTextBox_5.Size = new System.Drawing.Size(21, 21);
             this.TopRightTextBox_5.TabIndex = 174;
             // 
             // TopRightTextBox_4
             // 
             this.TopRightTextBox_4.Location = new System.Drawing.Point(374, 321);
             this.TopRightTextBox_4.Name = "TopRightTextBox_4";
-            this.TopRightTextBox_4.Size = new System.Drawing.Size(21, 20);
+            this.TopRightTextBox_4.Size = new System.Drawing.Size(21, 21);
             this.TopRightTextBox_4.TabIndex = 173;
             // 
             // TopRightTextBox_3
             // 
             this.TopRightTextBox_3.Location = new System.Drawing.Point(346, 321);
             this.TopRightTextBox_3.Name = "TopRightTextBox_3";
-            this.TopRightTextBox_3.Size = new System.Drawing.Size(21, 20);
+            this.TopRightTextBox_3.Size = new System.Drawing.Size(21, 21);
             this.TopRightTextBox_3.TabIndex = 172;
             // 
             // TopRightTextBox_2
             // 
             this.TopRightTextBox_2.Location = new System.Drawing.Point(317, 321);
             this.TopRightTextBox_2.Name = "TopRightTextBox_2";
-            this.TopRightTextBox_2.Size = new System.Drawing.Size(21, 20);
+            this.TopRightTextBox_2.Size = new System.Drawing.Size(21, 21);
             this.TopRightTextBox_2.TabIndex = 171;
             // 
             // TopRightTextBox_1
             // 
             this.TopRightTextBox_1.Location = new System.Drawing.Point(290, 321);
             this.TopRightTextBox_1.Name = "TopRightTextBox_1";
-            this.TopRightTextBox_1.Size = new System.Drawing.Size(21, 20);
+            this.TopRightTextBox_1.Size = new System.Drawing.Size(21, 21);
             this.TopRightTextBox_1.TabIndex = 170;
             // 
             // TopLeftTextBox_8
             // 
             this.TopLeftTextBox_8.Location = new System.Drawing.Point(19, 321);
             this.TopLeftTextBox_8.Name = "TopLeftTextBox_8";
-            this.TopLeftTextBox_8.Size = new System.Drawing.Size(21, 20);
+            this.TopLeftTextBox_8.Size = new System.Drawing.Size(21, 21);
             this.TopLeftTextBox_8.TabIndex = 169;
             // 
             // TopLeftTextBox_7
             // 
             this.TopLeftTextBox_7.Location = new System.Drawing.Point(60, 321);
             this.TopLeftTextBox_7.Name = "TopLeftTextBox_7";
-            this.TopLeftTextBox_7.Size = new System.Drawing.Size(21, 20);
+            this.TopLeftTextBox_7.Size = new System.Drawing.Size(21, 21);
             this.TopLeftTextBox_7.TabIndex = 168;
             // 
             // TopLeftTextBox_6
             // 
             this.TopLeftTextBox_6.Location = new System.Drawing.Point(102, 321);
             this.TopLeftTextBox_6.Name = "TopLeftTextBox_6";
-            this.TopLeftTextBox_6.Size = new System.Drawing.Size(21, 20);
+            this.TopLeftTextBox_6.Size = new System.Drawing.Size(21, 21);
             this.TopLeftTextBox_6.TabIndex = 167;
             // 
             // TopLeftTextBox_5
             // 
             this.TopLeftTextBox_5.Location = new System.Drawing.Point(138, 321);
             this.TopLeftTextBox_5.Name = "TopLeftTextBox_5";
-            this.TopLeftTextBox_5.Size = new System.Drawing.Size(21, 20);
+            this.TopLeftTextBox_5.Size = new System.Drawing.Size(21, 21);
             this.TopLeftTextBox_5.TabIndex = 166;
             // 
             // TopLeftTextBox_4
             // 
             this.TopLeftTextBox_4.Location = new System.Drawing.Point(165, 321);
             this.TopLeftTextBox_4.Name = "TopLeftTextBox_4";
-            this.TopLeftTextBox_4.Size = new System.Drawing.Size(21, 20);
+            this.TopLeftTextBox_4.Size = new System.Drawing.Size(21, 21);
             this.TopLeftTextBox_4.TabIndex = 165;
             // 
             // TopLeftTextBox_3
             // 
             this.TopLeftTextBox_3.Location = new System.Drawing.Point(192, 321);
             this.TopLeftTextBox_3.Name = "TopLeftTextBox_3";
-            this.TopLeftTextBox_3.Size = new System.Drawing.Size(21, 20);
+            this.TopLeftTextBox_3.Size = new System.Drawing.Size(21, 21);
             this.TopLeftTextBox_3.TabIndex = 164;
             // 
             // TopLeftTextBox_2
             // 
             this.TopLeftTextBox_2.Location = new System.Drawing.Point(219, 321);
             this.TopLeftTextBox_2.Name = "TopLeftTextBox_2";
-            this.TopLeftTextBox_2.Size = new System.Drawing.Size(21, 20);
+            this.TopLeftTextBox_2.Size = new System.Drawing.Size(21, 21);
             this.TopLeftTextBox_2.TabIndex = 163;
             // 
             // TopLeftTextBox_1
             // 
             this.TopLeftTextBox_1.Location = new System.Drawing.Point(246, 321);
             this.TopLeftTextBox_1.Name = "TopLeftTextBox_1";
-            this.TopLeftTextBox_1.Size = new System.Drawing.Size(21, 20);
+            this.TopLeftTextBox_1.Size = new System.Drawing.Size(21, 21);
             this.TopLeftTextBox_1.TabIndex = 162;
             // 
             // label5
@@ -1024,62 +1026,37 @@
             this.label1.TabIndex = 155;
             this.label1.Text = "Паціент:";
             // 
-            // EditAppoinment
-            // 
-            this.EditAppoinment.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.EditAppoinment.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.EditAppoinment.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.EditAppoinment.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.EditAppoinment.Location = new System.Drawing.Point(571, 627);
-            this.EditAppoinment.Name = "EditAppoinment";
-            this.EditAppoinment.Size = new System.Drawing.Size(141, 23);
-            this.EditAppoinment.TabIndex = 12;
-            this.EditAppoinment.Text = "Редагувати прийом";
-            this.EditAppoinment.UseVisualStyleBackColor = false;
-            this.EditAppoinment.Click += new System.EventHandler(this.EditAppoinment_Click);
-            this.EditAppoinment.MouseCaptureChanged += new System.EventHandler(this.EditAppoinment_Click);
-            // 
-            // AddNewAppoinment
-            // 
-            this.AddNewAppoinment.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.AddNewAppoinment.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.AddNewAppoinment.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.AddNewAppoinment.Location = new System.Drawing.Point(424, 627);
-            this.AddNewAppoinment.Name = "AddNewAppoinment";
-            this.AddNewAppoinment.Size = new System.Drawing.Size(141, 23);
-            this.AddNewAppoinment.TabIndex = 11;
-            this.AddNewAppoinment.Text = "Додати новий прийом";
-            this.AddNewAppoinment.UseVisualStyleBackColor = false;
-            this.AddNewAppoinment.MouseCaptureChanged += new System.EventHandler(this.AddNewAppoinment_Click);
-            // 
             // EditPatient
             // 
             this.EditPatient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.EditPatient.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.EditPatient.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("EditPatient.BackgroundImage")));
+            this.EditPatient.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.EditPatient.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.EditPatient.Location = new System.Drawing.Point(159, 627);
+            this.EditPatient.Location = new System.Drawing.Point(61, 679);
             this.EditPatient.Name = "EditPatient";
-            this.EditPatient.Size = new System.Drawing.Size(141, 23);
+            this.EditPatient.Size = new System.Drawing.Size(43, 38);
             this.EditPatient.TabIndex = 10;
-            this.EditPatient.Text = "Редагувати";
             this.EditPatient.UseVisualStyleBackColor = false;
             this.EditPatient.Click += new System.EventHandler(this.EditPatient_Click);
             // 
             // AddNewPatient
             // 
             this.AddNewPatient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.AddNewPatient.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.AddNewPatient.BackColor = System.Drawing.Color.Transparent;
+            this.AddNewPatient.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AddNewPatient.BackgroundImage")));
+            this.AddNewPatient.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.AddNewPatient.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.AddNewPatient.Location = new System.Drawing.Point(12, 627);
+            this.AddNewPatient.Location = new System.Drawing.Point(12, 679);
             this.AddNewPatient.Name = "AddNewPatient";
-            this.AddNewPatient.Size = new System.Drawing.Size(141, 23);
+            this.AddNewPatient.Size = new System.Drawing.Size(43, 38);
             this.AddNewPatient.TabIndex = 9;
-            this.AddNewPatient.Text = "Додати нового паціента";
             this.AddNewPatient.UseVisualStyleBackColor = false;
             this.AddNewPatient.Click += new System.EventHandler(this.AddNewPatient_Click);
             // 
             // tabPage4
             // 
+            this.tabPage4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tabPage4.Controls.Add(this.txtResult);
             this.tabPage4.Controls.Add(this.txtTotal);
             this.tabPage4.Controls.Add(this.btnStop);
@@ -1087,7 +1064,7 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(1446, 671);
+            this.tabPage4.Size = new System.Drawing.Size(1446, 725);
             this.tabPage4.TabIndex = 1;
             this.tabPage4.Text = "Таймер";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -1137,21 +1114,31 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // btnCalculator
+            // 
+            this.btnCalculator.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCalculator.BackgroundImage")));
+            this.btnCalculator.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnCalculator.Location = new System.Drawing.Point(219, 195);
+            this.btnCalculator.Name = "btnCalculator";
+            this.btnCalculator.Size = new System.Drawing.Size(23, 23);
+            this.btnCalculator.TabIndex = 232;
+            this.btnCalculator.UseVisualStyleBackColor = true;
+            this.btnCalculator.Click += new System.EventHandler(this.btnCalculator_Click);
+            // 
             // Main
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(1280, 692);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1366, 768);
             this.Controls.Add(this.TabControl);
-            this.Controls.Add(this.tabControl1);
-            this.MaximumSize = new System.Drawing.Size(1296, 731);
-            this.MinimumSize = new System.Drawing.Size(1296, 731);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(1366, 768);
+            this.MinimumSize = new System.Drawing.Size(1366, 768);
             this.Name = "Main";
-            this.Text = "Стоматологія";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Main_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.tabControl1.ResumeLayout(false);
             this.TabControl.ResumeLayout(false);
-            this.tabPage3.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
@@ -1167,15 +1154,11 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.TabControl TabControl;
-        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.Panel panel1;
@@ -1267,6 +1250,7 @@
         private System.Windows.Forms.TextBox txtResult;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Button btnCalculator;
     }
 }
 

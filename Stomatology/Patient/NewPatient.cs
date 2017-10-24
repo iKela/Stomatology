@@ -8,10 +8,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using MetroFramework.Components;
+using MetroFramework.Forms;
 
 namespace Stomatology
 {
-    public partial class NewPatient : Form
+    public partial class NewPatient : MetroForm
     {
 
         SqlConnection testCon = new SqlConnection
