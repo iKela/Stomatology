@@ -8,13 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-using MetroFramework.Components;
-using MetroFramework.Forms;
 
 
 namespace Stomatology
 {
-    public partial class EditPatient : MetroForm
+    public partial class EditPatient : Form
     {
         SqlConnection testCon = new SqlConnection
        (@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\GoogleDrive InSoP\Stomatology\Stomatology\DataStomatology.mdf;Integrated Security=True");

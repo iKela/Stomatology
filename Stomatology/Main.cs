@@ -9,12 +9,10 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
 using System.Timers;
-using MetroFramework.Components;
-using MetroFramework.Forms;
 
 namespace Stomatology
 {
-    public partial class Main : MetroForm
+    public partial class Main : Form
     {
         //Timer
         System.Timers.Timer timer;
@@ -35,7 +33,7 @@ namespace Stomatology
             t.SetToolTip(btnCalculator, "Калькулятор");
 
             //Defoult visible of second panel
-            panel3.Visible = true;
+            panel3.Visible = false;
 
             listView1.View = View.Details;
             listView1.GridLines = true;
@@ -92,6 +90,7 @@ namespace Stomatology
 
         private void EditPatient_Click(object sender, EventArgs e)
         {
+
             EditPatient newForm = new EditPatient();
             newForm.Show();
         }
@@ -120,11 +119,6 @@ namespace Stomatology
             
         }
 
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             Bitmap image; //Bitmap для открываемого изображения
@@ -146,11 +140,6 @@ namespace Stomatology
                     "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-        }
-
-        private void TeethPanel_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void picBox_2_Click(object sender, EventArgs e)
@@ -199,20 +188,15 @@ namespace Stomatology
             }
         }
 
-        private void tabPage3_Click(object sender, EventArgs e)
+        private void tabPage4_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void btnCalculator_Click(object sender, EventArgs e)
         {
             Calculator newForm = new Calculator();
             newForm.Show();
-        }
-
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void Main_FormClosing(object sender, FormClosingEventArgs e)
