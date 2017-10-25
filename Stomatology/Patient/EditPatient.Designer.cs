@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditPatient));
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
@@ -44,6 +43,7 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
+            this.dtpBirthday = new System.Windows.Forms.DateTimePicker();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Surname1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Birthday1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -60,13 +60,6 @@
             this.label6.Size = new System.Drawing.Size(128, 20);
             this.label6.TabIndex = 26;
             this.label6.Text = "Адреса:";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(172, 110);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(211, 20);
-            this.textBox4.TabIndex = 2;
             // 
             // textBox3
             // 
@@ -214,6 +207,13 @@
             this.button6.TabIndex = 32;
             this.button6.UseVisualStyleBackColor = true;
             // 
+            // dtpBirthday
+            // 
+            this.dtpBirthday.Location = new System.Drawing.Point(172, 110);
+            this.dtpBirthday.Name = "dtpBirthday";
+            this.dtpBirthday.Size = new System.Drawing.Size(211, 20);
+            this.dtpBirthday.TabIndex = 33;
+            // 
             // Id
             // 
             this.Id.HeaderText = "ID";
@@ -234,6 +234,7 @@
             this.Birthday1.MaxInputLength = 8;
             this.Birthday1.Name = "Birthday1";
             this.Birthday1.ReadOnly = true;
+            this.Birthday1.Width = 75;
             // 
             // Number1
             // 
@@ -246,6 +247,7 @@
             this.Adress1.HeaderText = "Адреса";
             this.Adress1.Name = "Adress1";
             this.Adress1.ReadOnly = true;
+            this.Adress1.Width = 150;
             // 
             // EditPatient
             // 
@@ -253,6 +255,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1049, 395);
+            this.Controls.Add(this.dtpBirthday);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
@@ -260,7 +263,6 @@
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.button2);
@@ -280,7 +282,6 @@
 
         #endregion
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button button2;
@@ -294,6 +295,7 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.DateTimePicker dtpBirthday;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Surname1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Birthday1;

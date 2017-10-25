@@ -48,6 +48,7 @@ namespace Stomatology
             listView1.Columns.Add("Номер телефону", 150);
             listView1.Columns.Add("Адреса", 200);
 
+
             //Add items in the listview
             string[] arr = new string[1];
             //Function and interval of timer

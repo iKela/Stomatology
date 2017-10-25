@@ -118,7 +118,7 @@
             // 
             // dtpPatient
             // 
-            this.dtpPatient.CustomFormat = "";
+            this.dtpPatient.CustomFormat = "d/M/yyyy";
             this.dtpPatient.Location = new System.Drawing.Point(182, 45);
             this.dtpPatient.Name = "dtpPatient";
             this.dtpPatient.Size = new System.Drawing.Size(311, 20);

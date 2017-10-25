@@ -36,7 +36,7 @@ namespace Stomatology
             if (dataGridView1.SelectedRows.Count > 0)
             {
                 textBox5.Text = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
-                textBox4.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
+                dtpBirthday.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
                 textBox3.Text = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
                 textBox2.Text = dataGridView1.SelectedRows[0].Cells[4].Value.ToString();
                
@@ -44,7 +44,6 @@ namespace Stomatology
             else
             {
                 textBox5.Clear();
-                textBox4.Clear();
                 textBox3.Clear();
                 textBox2.Clear();
                 
@@ -76,7 +75,7 @@ namespace Stomatology
             if (dataGridView1.SelectedRows.Count > 0)
             {
                 string uId = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
-                string query = "update Pacient " + $"set Name = N'{textBox5.Text}', " + $"Birthday = N'{textBox4.Text}', " 
+                string query = "update Pacient " + $"set Name = N'{textBox5.Text}', " + $"Birthday = N'{dtpBirthday.Text}', " 
             + $"Number = N'{textBox3.Text}', " + $"Adress = N'{textBox2.Text}', " 
             + $"where Id = {uId}";
 
@@ -88,14 +87,11 @@ namespace Stomatology
                 updateTable();
 
                 textBox5.Clear();
-                textBox4.Clear();
                 textBox3.Clear();
                 textBox2.Clear();
                 
             }  
         }
-
-       
     }
 }
 
