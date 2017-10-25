@@ -197,7 +197,6 @@
             // tabPage1
             // 
             this.tabPage1.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.tabPage1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tabPage1.BackgroundImage")));
             this.tabPage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tabPage1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tabPage1.Controls.Add(this.panel2);

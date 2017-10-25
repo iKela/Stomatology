@@ -37,8 +37,7 @@ namespace Stomatology
         { 
             try
             {
-                if (TextboxLastName.Text.Length == 0 || TextboxName.Text.Length == 0 || TextboxFatherName.Text.Length == 0 ||
-                    dtpPatient.Text.Length == 0 || textBoxNumber.Text.Length == 0 || textBoxAdress.Text.Length == 0)
+                if (TextboxLastName.Text.Length == 0|| dtpPatient.Text.Length == 0 || textBoxNumber.Text.Length == 0 || textBoxAdress.Text.Length == 0)
                     throw new Exception("Не всі поля заповнені!");
                 else
                 {
@@ -46,13 +45,12 @@ namespace Stomatology
                     testCon.Open();
                     SqlCommand cmd = testCon.CreateCommand();
                     cmd.CommandType = CommandType.Text;
-                    cmd.CommandText = $"INSERT INTO Pacient (Surname, Name, FatherName, Birthday, Number, Adress) " +
-                        $"values (N'{TextboxLastName.Text}', N'{TextboxName.Text}', N'{TextboxFatherName.Text}', N'{dtpPatient.Value.ToString("M/d/yyyy")}', N'{textBoxNumber.Text}', " +
+                    cmd.CommandText = $"INSERT INTO Pacient (Name, Birthday, Number, Adress) " +
+                        $"values (N'{TextboxLastName.Text}', N'{dtpPatient.Value.ToString("M/d/yyyy")}', N'{textBoxNumber.Text}', " +
                         $"N'{textBoxAdress.Text}')";
                     cmd.ExecuteNonQuery();
 
-                    TextboxLastName.Text = ""; TextboxName.Text = ""; TextboxFatherName.Text = "";
-                    dtpPatient.Text = ""; textBoxNumber.Text = ""; textBoxAdress.Text = "";
+                    TextboxLastName.Text = ""; dtpPatient.Text = ""; textBoxNumber.Text = ""; textBoxAdress.Text = "";
                     MessageBox.Show("Додано нового паціента.");
                     testCon.Close();
                     
