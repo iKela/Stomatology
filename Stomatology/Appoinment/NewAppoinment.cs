@@ -8,10 +8,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using MetroFramework.Components;
+using MetroFramework.Forms;
 
 namespace Stomatology
 {
-    public partial class NewAppoinment : Form
+    public partial class NewAppoinment : MetroForm
     {
         SqlConnection testCon = new SqlConnection
         (@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\GoogleDrive InSoP\Stomatology\Stomatology\DataStomatology.mdf;Integrated Security=True");
@@ -57,6 +59,12 @@ namespace Stomatology
                 MessageBox.Show(ex.Message, "Помилка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 testCon.Close();
             }
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Calculator newForm = new Calculator();
+            newForm.Show();
         }
     }
 }

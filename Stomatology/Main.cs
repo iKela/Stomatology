@@ -32,7 +32,6 @@ namespace Stomatology
             t.SetToolTip(AddNewPatient, "Додади нового паціента");
             t.SetToolTip(EditPatient, "Редагувати паціента");
             t.SetToolTip(AddNewAppoinment, "Додати новий прийом");
-            t.SetToolTip(EditAppoinment, "Редагувати прийом");
             t.SetToolTip(btnCalculator, "Калькулятор");
 
             //Defoult visible of second panel
@@ -52,8 +51,7 @@ namespace Stomatology
             listView1.Columns.Add("Адреса", 200);
 
             //Add items in the listview
-            string[] arr = new string[6];
-
+            string[] arr = new string[1];
             //Function and interval of timer
             timer = new System.Timers.Timer();
             timer.Interval = 1000;

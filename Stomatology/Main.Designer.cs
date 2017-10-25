@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -36,10 +37,14 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
             this.listView1 = new System.Windows.Forms.ListView();
-            this.EditAppoinment = new System.Windows.Forms.Button();
             this.AddNewAppoinment = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnCalculator = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.picBox_3 = new System.Windows.Forms.PictureBox();
@@ -124,8 +129,8 @@
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.btnStop = new System.Windows.Forms.Button();
             this.btnStart = new System.Windows.Forms.Button();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.btnCalculator = new System.Windows.Forms.Button();
             this.TabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -143,7 +148,7 @@
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.button2.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.button2.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.button2.Location = new System.Drawing.Point(195, 994);
+            this.button2.Location = new System.Drawing.Point(195, 993);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(141, 23);
             this.button2.TabIndex = 3;
@@ -156,7 +161,7 @@
             this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.button3.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.button3.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.button3.Location = new System.Drawing.Point(460, 994);
+            this.button3.Location = new System.Drawing.Point(460, 993);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(141, 23);
             this.button3.TabIndex = 4;
@@ -170,7 +175,7 @@
             this.button4.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button4.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.button4.Location = new System.Drawing.Point(607, 994);
+            this.button4.Location = new System.Drawing.Point(607, 993);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(141, 23);
             this.button4.TabIndex = 5;
@@ -182,6 +187,7 @@
             // 
             this.TabControl.Controls.Add(this.tabPage1);
             this.TabControl.Controls.Add(this.tabPage4);
+            this.TabControl.ImageList = this.imageList1;
             this.TabControl.Location = new System.Drawing.Point(-4, 21);
             this.TabControl.Name = "TabControl";
             this.TabControl.SelectedIndex = 0;
@@ -193,7 +199,6 @@
             this.tabPage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tabPage1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tabPage1.Controls.Add(this.panel2);
-            this.tabPage1.Controls.Add(this.EditAppoinment);
             this.tabPage1.Controls.Add(this.AddNewAppoinment);
             this.tabPage1.Controls.Add(this.panel1);
             this.tabPage1.Controls.Add(this.EditPatient);
@@ -202,10 +207,11 @@
             this.tabPage1.Controls.Add(this.button3);
             this.tabPage1.Controls.Add(this.button4);
             this.tabPage1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.ImageIndex = 0;
+            this.tabPage1.Location = new System.Drawing.Point(4, 23);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1446, 725);
+            this.tabPage1.Size = new System.Drawing.Size(1446, 724);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Головна";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -218,7 +224,7 @@
             this.panel2.Controls.Add(this.listView1);
             this.panel2.Location = new System.Drawing.Point(52, 21);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(651, 654);
+            this.panel2.Size = new System.Drawing.Size(645, 654);
             this.panel2.TabIndex = 14;
             // 
             // listView1
@@ -227,28 +233,13 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.listView1.AutoArrange = false;
-            this.listView1.Location = new System.Drawing.Point(-11, -4);
+            this.listView1.Location = new System.Drawing.Point(-2, -4);
             this.listView1.MaximumSize = new System.Drawing.Size(700, 700);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(660, 654);
+            this.listView1.Size = new System.Drawing.Size(645, 654);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
-            // 
-            // EditAppoinment
-            // 
-            this.EditAppoinment.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.EditAppoinment.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.EditAppoinment.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("EditAppoinment.BackgroundImage")));
-            this.EditAppoinment.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.EditAppoinment.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.EditAppoinment.Location = new System.Drawing.Point(721, 65);
-            this.EditAppoinment.Name = "EditAppoinment";
-            this.EditAppoinment.Size = new System.Drawing.Size(43, 38);
-            this.EditAppoinment.TabIndex = 12;
-            this.EditAppoinment.UseVisualStyleBackColor = false;
-            this.EditAppoinment.Click += new System.EventHandler(this.EditAppoinment_Click);
-            this.EditAppoinment.MouseCaptureChanged += new System.EventHandler(this.EditAppoinment_Click);
             // 
             // AddNewAppoinment
             // 
@@ -257,7 +248,7 @@
             this.AddNewAppoinment.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AddNewAppoinment.BackgroundImage")));
             this.AddNewAppoinment.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.AddNewAppoinment.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.AddNewAppoinment.Location = new System.Drawing.Point(721, 19);
+            this.AddNewAppoinment.Location = new System.Drawing.Point(721, 18);
             this.AddNewAppoinment.Name = "AddNewAppoinment";
             this.AddNewAppoinment.Size = new System.Drawing.Size(43, 38);
             this.AddNewAppoinment.TabIndex = 11;
@@ -269,13 +260,17 @@
             this.panel1.BackColor = System.Drawing.SystemColors.Window;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.panel3);
-            this.panel1.Location = new System.Drawing.Point(780, 21);
+            this.panel1.Location = new System.Drawing.Point(780, 19);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(562, 654);
+            this.panel1.Size = new System.Drawing.Size(562, 656);
             this.panel1.TabIndex = 13;
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.button7);
+            this.panel3.Controls.Add(this.button6);
+            this.panel3.Controls.Add(this.button5);
+            this.panel3.Controls.Add(this.button1);
             this.panel3.Controls.Add(this.btnCalculator);
             this.panel3.Controls.Add(this.comboBox1);
             this.panel3.Controls.Add(this.textBox2);
@@ -360,18 +355,83 @@
             this.panel3.TabIndex = 0;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
+            // button7
+            // 
+            this.button7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button7.BackgroundImage")));
+            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button7.Enabled = false;
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Location = new System.Drawing.Point(7, 195);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(20, 20);
+            this.button7.TabIndex = 236;
+            this.button7.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            this.button6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button6.BackgroundImage")));
+            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button6.Enabled = false;
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Location = new System.Drawing.Point(7, 57);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(20, 20);
+            this.button6.TabIndex = 235;
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button5.BackgroundImage")));
+            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button5.Enabled = false;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Location = new System.Drawing.Point(6, 31);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(20, 20);
+            this.button5.TabIndex = 234;
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.Enabled = false;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(6, 2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(20, 20);
+            this.button1.TabIndex = 233;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // btnCalculator
+            // 
+            this.btnCalculator.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCalculator.BackgroundImage")));
+            this.btnCalculator.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnCalculator.FlatAppearance.BorderSize = 0;
+            this.btnCalculator.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCalculator.Location = new System.Drawing.Point(249, 198);
+            this.btnCalculator.Name = "btnCalculator";
+            this.btnCalculator.Size = new System.Drawing.Size(20, 20);
+            this.btnCalculator.TabIndex = 232;
+            this.btnCalculator.UseVisualStyleBackColor = true;
+            this.btnCalculator.Click += new System.EventHandler(this.btnCalculator_Click);
+            // 
             // comboBox1
             // 
             this.comboBox1.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(81, 0);
+            this.comboBox1.Location = new System.Drawing.Point(111, 3);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 23);
             this.comboBox1.TabIndex = 15;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(81, 32);
+            this.textBox2.Location = new System.Drawing.Point(111, 35);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(402, 21);
             this.textBox2.TabIndex = 231;
@@ -410,7 +470,7 @@
             // 
             this.UAHLabel.AutoSize = true;
             this.UAHLabel.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.UAHLabel.Location = new System.Drawing.Point(183, 197);
+            this.UAHLabel.Location = new System.Drawing.Point(213, 200);
             this.UAHLabel.Name = "UAHLabel";
             this.UAHLabel.Size = new System.Drawing.Size(35, 18);
             this.UAHLabel.TabIndex = 226;
@@ -420,7 +480,7 @@
             // 
             this.label36.AutoSize = true;
             this.label36.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label36.Location = new System.Drawing.Point(3, 195);
+            this.label36.Location = new System.Drawing.Point(33, 198);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(45, 18);
             this.label36.TabIndex = 225;
@@ -428,7 +488,7 @@
             // 
             // textBox34
             // 
-            this.textBox34.Location = new System.Drawing.Point(81, 195);
+            this.textBox34.Location = new System.Drawing.Point(111, 198);
             this.textBox34.Name = "textBox34";
             this.textBox34.Size = new System.Drawing.Size(100, 21);
             this.textBox34.TabIndex = 224;
@@ -991,7 +1051,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(3, 56);
+            this.label3.Location = new System.Drawing.Point(33, 59);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(48, 18);
             this.label3.TabIndex = 158;
@@ -999,7 +1059,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(81, 58);
+            this.textBox1.Location = new System.Drawing.Point(111, 61);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(402, 131);
@@ -1009,7 +1069,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(3, 0);
+            this.label2.Location = new System.Drawing.Point(33, 3);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(48, 18);
             this.label2.TabIndex = 156;
@@ -1019,7 +1079,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(3, 29);
+            this.label1.Location = new System.Drawing.Point(33, 32);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(69, 18);
             this.label1.TabIndex = 155;
@@ -1032,7 +1092,7 @@
             this.EditPatient.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("EditPatient.BackgroundImage")));
             this.EditPatient.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.EditPatient.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.EditPatient.Location = new System.Drawing.Point(3, 65);
+            this.EditPatient.Location = new System.Drawing.Point(3, 64);
             this.EditPatient.Name = "EditPatient";
             this.EditPatient.Size = new System.Drawing.Size(43, 38);
             this.EditPatient.TabIndex = 10;
@@ -1046,7 +1106,7 @@
             this.AddNewPatient.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AddNewPatient.BackgroundImage")));
             this.AddNewPatient.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.AddNewPatient.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.AddNewPatient.Location = new System.Drawing.Point(3, 19);
+            this.AddNewPatient.Location = new System.Drawing.Point(3, 18);
             this.AddNewPatient.Name = "AddNewPatient";
             this.AddNewPatient.Size = new System.Drawing.Size(43, 38);
             this.AddNewPatient.TabIndex = 9;
@@ -1060,10 +1120,11 @@
             this.tabPage4.Controls.Add(this.txtTotal);
             this.tabPage4.Controls.Add(this.btnStop);
             this.tabPage4.Controls.Add(this.btnStart);
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.ImageIndex = 2;
+            this.tabPage4.Location = new System.Drawing.Point(4, 23);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(1446, 725);
+            this.tabPage4.Size = new System.Drawing.Size(1446, 724);
             this.tabPage4.TabIndex = 1;
             this.tabPage4.Text = "Таймер";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -1109,20 +1170,17 @@
             this.btnStart.UseVisualStyleBackColor = true;
             this.btnStart.Click += new System.EventHandler(this.button5_Click);
             // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "home-512.png");
+            this.imageList1.Images.SetKeyName(1, "timer1600.png");
+            this.imageList1.Images.SetKeyName(2, "45265.png");
+            // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // btnCalculator
-            // 
-            this.btnCalculator.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCalculator.BackgroundImage")));
-            this.btnCalculator.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnCalculator.Location = new System.Drawing.Point(219, 195);
-            this.btnCalculator.Name = "btnCalculator";
-            this.btnCalculator.Size = new System.Drawing.Size(23, 23);
-            this.btnCalculator.TabIndex = 232;
-            this.btnCalculator.UseVisualStyleBackColor = true;
-            this.btnCalculator.Click += new System.EventHandler(this.btnCalculator_Click);
             // 
             // Main
             // 
@@ -1131,7 +1189,8 @@
             this.ClientSize = new System.Drawing.Size(1366, 728);
             this.Controls.Add(this.TabControl);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(1366, 768);
+            this.MaximumSize = new System.Drawing.Size(1366, 728);
+            this.MinimumSize = new System.Drawing.Size(1366, 728);
             this.Name = "Main";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Main_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -1160,7 +1219,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button EditAppoinment;
         private System.Windows.Forms.Button AddNewAppoinment;
         private System.Windows.Forms.Button EditPatient;
         private System.Windows.Forms.Button AddNewPatient;
@@ -1249,6 +1307,11 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Button btnCalculator;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ImageList imageList1;
     }
 }
 
