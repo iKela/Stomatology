@@ -39,8 +39,7 @@ namespace Stomatology
                 textBox4.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
                 textBox3.Text = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
                 textBox2.Text = dataGridView1.SelectedRows[0].Cells[4].Value.ToString();
-                textBox1.Text = dataGridView1.SelectedRows[0].Cells[5].Value.ToString();
-                textBox6.Text = dataGridView1.SelectedRows[0].Cells[6].Value.ToString();
+               
             }
             else
             {
@@ -48,8 +47,7 @@ namespace Stomatology
                 textBox4.Clear();
                 textBox3.Clear();
                 textBox2.Clear();
-                textBox1.Clear();
-                textBox6.Clear();
+                
             }
         }
 
@@ -69,8 +67,6 @@ namespace Stomatology
                 dataGridView1.Rows[index].Cells[2].Value = sqlDR[2];
                 dataGridView1.Rows[index].Cells[3].Value = sqlDR[3];
                 dataGridView1.Rows[index].Cells[4].Value = sqlDR[4];
-                dataGridView1.Rows[index].Cells[5].Value = sqlDR[5];
-                dataGridView1.Rows[index].Cells[6].Value = sqlDR[6];
             }
             testCon.Close();
             dataGridView1.ClearSelection();
@@ -80,9 +76,8 @@ namespace Stomatology
             if (dataGridView1.SelectedRows.Count > 0)
             {
                 string uId = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
-                string query = "update Pacient " + $"set Surname = N'{textBox5.Text}', " + $"Name = N'{textBox4.Text}', " 
-            + $"FatherName = N'{textBox3.Text}', " + $"Birthday = N'{textBox2.Text}', " 
-            + $"Number = N'{textBox1.Text}', " + $"Adress = N'{textBox6.Text}' " 
+                string query = "update Pacient " + $"set Name = N'{textBox5.Text}', " + $"Birthday = N'{textBox4.Text}', " 
+            + $"Number = N'{textBox3.Text}', " + $"Adress = N'{textBox2.Text}', " 
             + $"where Id = {uId}";
 
 
@@ -96,8 +91,7 @@ namespace Stomatology
                 textBox4.Clear();
                 textBox3.Clear();
                 textBox2.Clear();
-                textBox1.Clear();
-                textBox6.Clear();
+                
             }  
         }
 
