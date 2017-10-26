@@ -79,7 +79,7 @@ namespace Stomatology
                     testCon.Open();
                     SqlCommand cmd = testCon.CreateCommand();
                     cmd.CommandType = CommandType.Text;
-                    cmd.CommandText = $"INSERT INTO Reception (Date, Pacient_Id, Info, Teeth_Id) values (N'{dateTimePicker1.Text}', N'{cmbPatient.Text}', N'{txtDescription.Text}')";
+                    cmd.CommandText = $"INSERT INTO Reception (Date, Pacient_Id, Info, Teeth_Id) values (N'{dateTimePicker1.Text}', N'{PacientId}', N'{txtDescription.Text}')";
                     cmd.ExecuteNonQuery();
                     //numberBox.Text = "";
                     //markBox.Text = "";
