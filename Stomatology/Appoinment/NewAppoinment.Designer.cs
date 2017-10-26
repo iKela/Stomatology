@@ -839,7 +839,6 @@
             this.cmbPatient.Name = "cmbPatient";
             this.cmbPatient.Size = new System.Drawing.Size(402, 21);
             this.cmbPatient.TabIndex = 1;
-            this.cmbPatient.SelectedIndexChanged += new System.EventHandler(this.cmbPatient_SelectedIndexChanged);
             // 
             // NewAppoinment
             // 

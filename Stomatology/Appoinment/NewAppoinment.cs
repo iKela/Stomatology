@@ -16,6 +16,7 @@ namespace Stomatology
         SqlConnection testCon = new SqlConnection
         (@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\GoogleDrive InSoP\Stomatology\Stomatology\DataStomatology.mdf;Integrated Security=True");
 
+
         public void PassValue(string strValue)
         {
             txtMoney.Text = strValue;
@@ -80,46 +81,86 @@ namespace Stomatology
                     testCon.Open();
                     SqlCommand cmd = testCon.CreateCommand();
                     cmd.CommandType = CommandType.Text;
-                    cmd.CommandText = $"INSERT INTO Reception (Date, Pacient_Id, Info, Teeth_Id) values (N'{dateTimePicker1.Text}', N'{PacientId}', N'{txtDescription.Text}')";
-                    cmd.ExecuteNonQuery();
-                    //numberBox.Text = "";
-                    //markBox.Text = "";
-                    //modelBox.Text = "";
-                    //yearBox.Text = "";
-                    //peopleComboBox.Text = "";
-                    //testCon.Close();
-                    //updateTable();
-                }
-            }
+                    cmd.CommandText = $"INSERT INTO Reception (Date, Pacient_Id, Info, Money, tlt1, tlt2, tlt3, tlt4, tlt5, tlt6, tlt7, tlt8, " +
+                        $"trt1, trt2, trt3, trt4, trt5, trt6, trt7, trt8, " +
+                        $"brt1, brt2, brt3, brt4, brt5, brt6, brt7, brt8, " +
+                        $"blt1, blt2, blt3, blt4, blt5, blt6, blt7, blt8)" +
+                        $"values (N'{dateTimePicker1.Value.Date.ToString("M/d/yyyy")}', '{PacientId}', N'{txtDescription.Text}', N'{txtMoney.Text}', "+
 
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Помилка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                testCon.Close();
-            }
-        }
+                        $" '{TopLeftTextBox_1.Text}', '{TopLeftTextBox_2.Text}', '{TopLeftTextBox_3.Text}', '{TopLeftTextBox_4.Text}', '{TopLeftTextBox_5.Text}', '{TopLeftTextBox_6.Text}', '{TopLeftTextBox_7.Text}', '{TopLeftTextBox_8.Text}'," +
 
-        //cmd.CommandText = $"INSERT INTO Reception (Date, Pacient_Id, Info) " +
-        //    $"values (N'{dateTimePicker1.Value.ToString("yyyy-MM-dd")}', N'{cmbPatient.Text}', N'{txtDescription.Text}')";
-        //cmd.ExecuteNonQuery();
+                        $" '{TopRightTextBox_1.Text}', '{TopRightTextBox_2.Text}', '{TopRightTextBox_3.Text}', '{TopRightTextBox_4.Text}', '{TopRightTextBox_5.Text}', '{TopRightTextBox_6.Text}', '{TopRightTextBox_7.Text}', '{TopRightTextBox_8.Text}'," +
 
-        //dateTimePicker1.Text = ""; cmbPatient.Text = ""; txtDescription.Text = "";
-        //MessageBox.Show("Додано нового паціента.");
-        //testCon.Close();
+                        $" '{BotRightTextBox_8.Text}', '{BotRightTextBox_7.Text}', '{BotRightTextBox_6.Text}', '{BotRightTextBox_5.Text}', '{BotRightTextBox_4.Text}', '{BotRightTextBox_3.Text}', '{BotRightTextBox_2.Text}', '{BotRightTextBox_1.Text}'," +
 
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show(ex.Message, "Помилка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        //        testCon.Close();
-        //    }
-        //}
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-            Calculator newForm = new Calculator();
-            newForm.Show();
-        }
-    }
-}
+                        $" '{BotLeftTextBox_8.Text}', '{BotLeftTextBox_7.Text}', '{BotLeftTextBox_6.Text}', '{BotLeftTextBox_5.Text}', '{BotLeftTextBox_4.Text}', '{BotLeftTextBox_3.Text}', '{BotLeftTextBox_2.Text}', '{BotLeftTextBox_1.Text}')";
+                 
+                    cmd.ExecuteNonQuery();                                                                                                                                                                  
+                                                                                                                                                                               
+                    Buttonclear();
+                    MessageBox.Show("Додано новий прийом.");
+                    testCon.Close();                                                                                 
+                }                                                                                               
+            }                                                                                                   
+                                                                                                                
+            catch (Exception ex)                                                                                
+            {                                                                                                   
+                MessageBox.Show(ex.Message, "Помилка!", MessageBoxButtons.OK, MessageBoxIcon.Error);            
+                testCon.Close();                                                                                
+            }                                                                                                   
+        }                                                                                                       
+                                                                                                                
+        private void button7_Click(object sender, EventArgs e)                                                  
+        {                                                                                                       
+            Calculator newForm = new Calculator();                                                              
+            newForm.Show();                                                                                     
+        }                                                                                                       
+                                                                                                                
+        public void Buttonclear()                                                                               
+        {                                                                                                       
+            TopLeftTextBox_1.Text = "";                                                                         
+            TopLeftTextBox_2.Text = "";
+            TopLeftTextBox_3.Text = "";
+            TopLeftTextBox_4.Text = "";
+            TopLeftTextBox_5.Text = "";
+            TopLeftTextBox_6.Text = "";
+            TopLeftTextBox_7.Text = "";
+            TopLeftTextBox_8.Text = "";
+            BotLeftTextBox_8.Text = "";
+            BotLeftTextBox_7.Text = "";
+            BotLeftTextBox_6.Text = "";
+            BotLeftTextBox_5.Text = "";
+            BotLeftTextBox_4.Text = "";
+            BotLeftTextBox_3.Text = "";
+            BotLeftTextBox_2.Text = "";
+            BotLeftTextBox_1.Text = "";
+            TopRightTextBox_1.Text = "";
+            TopRightTextBox_2.Text = "";
+            TopRightTextBox_3.Text = "";
+            TopRightTextBox_4.Text = "";
+            TopRightTextBox_5.Text = "";
+            TopRightTextBox_6.Text = "";
+            TopRightTextBox_7.Text = "";
+            TopRightTextBox_8.Text = "";
+            BotRightTextBox_8.Text = "";
+            BotRightTextBox_7.Text = "";
+            BotRightTextBox_6.Text = "";
+            BotRightTextBox_5.Text = "";
+            BotRightTextBox_4.Text = "";
+            BotRightTextBox_3.Text = "";
+            BotRightTextBox_2.Text = "";
+            BotRightTextBox_1.Text = "";
+        }                                                         
+    }                                                                                        
+}                                                                                            
+                                                                                             
+                                                                                             
+                                                                                             
+                                                                                             
+                                                                                             
+                                                                                             
+                                                                                             
+                                                                                             
+                                                                                             
+                                                                                             
+                                                                                             
