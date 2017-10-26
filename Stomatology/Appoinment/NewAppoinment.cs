@@ -33,6 +33,9 @@ namespace Stomatology
 
         private void NewAppoinment_Load(object sender, EventArgs e)
         {
+            cmbPatient.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            cmbPatient.AutoCompleteSource = AutoCompleteSource.ListItems;
+
             testCon.Open();
             SqlDataReader sqlReader = null;
             SqlCommand command = new SqlCommand("SELECT Name FROM [Pacient]", testCon);

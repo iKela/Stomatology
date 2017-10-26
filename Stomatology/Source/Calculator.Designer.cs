@@ -272,7 +272,7 @@
             // txtTotal
             // 
             this.txtTotal.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.txtTotal.Location = new System.Drawing.Point(20, 19);
+            this.txtTotal.Location = new System.Drawing.Point(20, 32);
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.ReadOnly = true;
             this.txtTotal.Size = new System.Drawing.Size(288, 39);
@@ -284,7 +284,7 @@
             this.lblCurResult.AutoSize = true;
             this.lblCurResult.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lblCurResult.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.lblCurResult.Location = new System.Drawing.Point(19, 37);
+            this.lblCurResult.Location = new System.Drawing.Point(25, 6);
             this.lblCurResult.Name = "lblCurResult";
             this.lblCurResult.Size = new System.Drawing.Size(0, 24);
             this.lblCurResult.TabIndex = 40;
@@ -343,7 +343,6 @@
             this.Controls.Add(this.txtTotal);
             this.KeyPreview = true;
             this.Name = "Calculator";
-            this.Load += new System.EventHandler(this.Calculator_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Calculator_KeyDown);
             this.ResumeLayout(false);
             this.PerformLayout();

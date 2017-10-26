@@ -112,9 +112,6 @@
     <EmbeddedResource Include="AboutSoft.resx">
       <DependentUpon>AboutSoft.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Main\Main.uk-UA.resx">
-      <DependentUpon>Main.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Source\Calculator.resx">
       <DependentUpon>Calculator.cs</DependentUpon>
     </EmbeddedResource>
