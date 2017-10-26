@@ -16,6 +16,11 @@ namespace Stomatology
         SqlConnection testCon = new SqlConnection
         (@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\GoogleDrive InSoP\Stomatology\Stomatology\DataStomatology.mdf;Integrated Security=True");
 
+        public void PassValue(string strValue)
+        {
+            txtMoney.Text = strValue;
+        }
+
         public NewAppoinment()
         {
             InitializeComponent();
@@ -117,7 +122,7 @@ namespace Stomatology
 
         private void button7_Click(object sender, EventArgs e)
         {
-            Calculator newForm = new Calculator();
+            Calculator newForm = new Calculator(this);
             newForm.Show();
         }
     }

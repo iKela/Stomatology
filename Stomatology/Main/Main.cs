@@ -18,6 +18,11 @@ namespace Stomatology
         System.Timers.Timer timer;
         int hours, minutes, seconds;
 
+        public void PassValue(string strValue)
+        {
+            txtMoney.Text = strValue;
+        }
+
         public Main()
         {
             InitializeComponent();
@@ -33,7 +38,7 @@ namespace Stomatology
             t.SetToolTip(btnCalculator, "Калькулятор");
 
             //Defoult visible of second panel
-            panel3.Visible = false;
+            panel3.Visible = true;
 
             listView1.View = View.Details;
             listView1.GridLines = true;
@@ -188,15 +193,30 @@ namespace Stomatology
                 }
             }
         }
+        private void вихідToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DialogResult res = new DialogResult();
+            res = MessageBox.Show("Ви впевнені?", "Вихід з програми!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (res == DialogResult.Yes)
+            { Close(); }
+            else
+            { return; }
+        }
 
-        private void tabPage4_Click(object sender, EventArgs e)
+        private void проПрограммуToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AboutSoft newForm = new AboutSoft();
+            newForm.Show();
+        }
+
+        private void txtMoney_TextChanged(object sender, EventArgs e)
         {
 
         }
 
         private void btnCalculator_Click(object sender, EventArgs e)
         {
-            Calculator newForm = new Calculator();
+            Calculator newForm = new Calculator(this);
             newForm.Show();
         }
 

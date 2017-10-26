@@ -7,19 +7,40 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MetroFramework.Components;
-using MetroFramework.Forms;
+
 
 namespace Stomatology
 {
-    public partial class Calculator : MetroForm
+    public partial class Calculator : Form
     {
         float a, b;
         int count;
+        bool open = true;
+        bool allow = true;
 
-        public Calculator()
+        Main ownerForm = null;
+        NewAppoinment ownerForm2 = null;
+        
+        public Calculator(Main ownerForm)
         {
-            InitializeComponent();
+            if (open == true)
+            {
+                InitializeComponent();
+                this.ownerForm = ownerForm;
+                open = false;
+                allow = true;
+            }
+
+        }
+        public Calculator(NewAppoinment ownerForm2)
+        {
+            if (open == true)
+            {
+                InitializeComponent();
+                this.ownerForm2 = ownerForm2;
+                open = false;
+                allow = false;
+            }
         }
 
         public static bool flag = true;
@@ -176,6 +197,20 @@ namespace Stomatology
         private void Calculator_Load(object sender, EventArgs e)
         {        
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (allow == true)
+            {
+                this.ownerForm.PassValue(txtTotal.Text);
+                this.Close();
+            }
+            else if (allow == false)
+            {
+                this.ownerForm2.PassValue(txtTotal.Text);
+                this.Close();
+            }
         }
 
         private void btnPoint_Click(object sender, EventArgs e)
