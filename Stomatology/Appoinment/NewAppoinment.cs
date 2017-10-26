@@ -15,7 +15,7 @@ namespace Stomatology
     {
         SqlConnection testCon = new SqlConnection
         (@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\GoogleDrive InSoP\Stomatology\Stomatology\DataStomatology.mdf;Integrated Security=True");
-
+       
         public NewAppoinment()
         {
             InitializeComponent();
@@ -144,7 +144,14 @@ namespace Stomatology
             BotRightTextBox_3.Text = "";
             BotRightTextBox_2.Text = "";
             BotRightTextBox_1.Text = "";
-        }                                                         
+        }
+
+        private void cmbPatient_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cmbPatient.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            //cmbPatient.AutoCompleteSource = AutoCompleteSource.ListItems;
+
+        }
     }                                                                                        
 }                                                                                            
                                                                                              
