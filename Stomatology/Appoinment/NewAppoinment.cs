@@ -112,7 +112,7 @@ namespace Stomatology
                                                                                                                 
         private void button7_Click(object sender, EventArgs e)                                                  
         {                                                                                                       
-            Calculator newForm = new Calculator();                                                              
+            Calculator newForm = new Calculator(this);                                                              
             newForm.Show();                                                                                     
         }                                                                                                       
                                                                                                                 
