@@ -53,7 +53,7 @@ namespace Stomatology
             }
             testCon.Close();
         }
-// ----------------------------------------------------------------------------------------------------------------------------------------------------------
+        // ----------------------------------------------------------------------------------------------------------------------------------------------------------
         private void button1_Click(object sender, EventArgs e)
         {
             try
@@ -63,24 +63,20 @@ namespace Stomatology
                 else
                 {
                     if (string.IsNullOrEmpty(cmbPatient.Text)) throw new Exception("Виберіть  Паціента!");
-
                     testCon.Open();
-
-                    string query = $"select * from [Pacient] where [Name] = N'{cmbPatient.Text}'";
-                    SqlCommand cmd1 = new SqlCommand(query, testCon);
-                    SqlDataReader reader = cmd1.ExecuteReader();
                     string PacientId = "";
-
+                    string query = $"select * from [Pacient] where [Name] = N'{cmbPatient.Text}'";
+                    SqlCommand cmd1 = new SqlCommand(query, testCon); SqlDataReader reader = cmd1.ExecuteReader();
                     if (reader.Read())
                     {
                         PacientId = reader["Id"].ToString();
                     }
                     else
                     {
-                        throw new Exception("Не вибраний працівник, перевірте ще раз!");
+                        throw new Exception("Не вибраний паціент, перевірте ще раз!");
                     }
                     testCon.Close();
-
+// ----------------------------------------------------------------------------------------------------------------------------------------------------------
                     testCon.Open();
                     SqlCommand cmd = testCon.CreateCommand();
                     cmd.CommandType = CommandType.Text;
@@ -122,7 +118,7 @@ namespace Stomatology
 
         private void button7_Click(object sender, EventArgs e)
         {
-            Calculator newForm = new Calculator(this);
+            Calculator newForm = new Calculator();
             newForm.Show();
         }
     }
