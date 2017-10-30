@@ -16,7 +16,8 @@ namespace Stomatology
     {
         SqlConnection testCon = new SqlConnection
      (@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\GoogleDrive InSoP\Stomatology\Stomatology\DataStomatology.mdf;Integrated Security=True");
-        
+
+        int count;
 
         public void PassValue(string strValue)
         {
@@ -145,5 +146,24 @@ namespace Stomatology
         {
             Application.DoEvents();
         }
+
+        private void TopLeftTextBox_8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+        private void TopLeftTextBox_8_MouseHover(object sender, EventArgs e)
+        {
+            this.TopLeftTextBox_8.Size = new System.Drawing.Size(150, 150);
+            this.TopLeftTextBox_8.BringToFront();
+        }
+
+        private void TopLeftTextBox_8_MouseLeave(object sender, EventArgs e)
+        {
+            this.TopLeftTextBox_8.Size = new System.Drawing.Size(21, 21);
+
+        }
+       
     }
 }
