@@ -8,16 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
-using System.Timers;
 using System.Data.SqlClient;
 
 namespace Stomatology
 {
     public partial class Main : Form
     {
-        //Timer
-        System.Timers.Timer timer;
-        int hours, minutes, seconds;
+        SqlConnection testCon = new SqlConnection
+     (@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\GoogleDrive InSoP\Stomatology\Stomatology\DataStomatology.mdf;Integrated Security=True");
+        
 
         public void PassValue(string strValue)
         {
@@ -32,30 +31,29 @@ namespace Stomatology
         private void Form1_Load(object sender, EventArgs e)
         {
             updateTable();
-            testCon.Open();
-            SqlDataReader sqlReader = null;
-            SqlCommand command = new SqlCommand("SELECT Date FROM [Reception]", testCon);
-            try
-            {
-                sqlReader = command.ExecuteReader();
-                while (sqlReader.Read())
-                {
-                    comboBox1.Items.Add(Convert.ToString(sqlReader["Date"]));
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message.ToString(), ex.Source.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                if (sqlReader != null) sqlReader.Close();
-            }
-            testCon.Close();
+            //testCon.Open();
+            //SqlDataReader sqlReader = null;
+            //SqlCommand command = new SqlCommand("SELECT Date FROM [Reception]", testCon);
+            //try
+            //{
+            //    sqlReader = command.ExecuteReader();
+            //    while (sqlReader.Read())
+            //    {
+            //        comboBox1.Items.Add(Convert.ToString(sqlReader["Date"]));
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message.ToString(), ex.Source.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
+            //finally
+            //{
+            //    if (sqlReader != null) sqlReader.Close();
+            //}
+            //testCon.Close();
 
         }
-        SqlConnection testCon = new SqlConnection
-      (@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\GoogleDrive InSoP\Stomatology\Stomatology\DataStomatology.mdf;Integrated Security=True");
+       
 
         private void updateTable()
         {
@@ -77,41 +75,14 @@ namespace Stomatology
             testCon.Close();
             dataGridView1.ClearSelection();
         }
-        private void OnTimeEvent(object sender, ElapsedEventArgs e)
-        {
-            // The proccess of timer work
-            Invoke(new Action(() => 
-            {
-                seconds += 1;
-                if (seconds == 60)
-                {
-                    seconds = 0;
-                    minutes += 1;
-                }
-                if (minutes == 60)
-                {
-                    minutes = 0;
-                    hours += 1;
-                }
-                txtResult.Text = string.Format("{0}:{1}:{2}", hours.ToString().PadLeft(2, '0'), minutes.ToString().PadLeft(2, '0'), seconds.ToString().PadLeft(2, '0'));
-            }));
-           
-        }
-
-        private void EditAppoinment_Click(object sender, EventArgs e)
-        {
-            panel3.Visible = true;
-        }
-
+        
         private void AddNewAppoinment_Click(object sender, EventArgs e)
         {
             NewAppoinment newForm = new NewAppoinment();
             newForm.Show();
         }
-
         private void EditPatient_Click(object sender, EventArgs e)
         {
-
             EditPatient newForm = new EditPatient();
             newForm.Show();
         }
@@ -120,94 +91,7 @@ namespace Stomatology
             NewPatient newForm = new NewPatient();
             newForm.Show();
         }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            timer.Start();
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-            
-            timer.Stop(); // Зупинка таймера // Stop timer
-            txtResult.Text = "00:00:00"; // Скидання  таблиці таймера // Timer table reset
-            // Вивід результату в текст бокс // Get out of information to text box
-            txtTotal.Text = string.Format("{0}:{1}:{2}", hours.ToString().PadLeft(2, '0'), minutes.ToString().PadLeft(2, '0'), seconds.ToString().PadLeft(2, '0'));
-            hours = 0;//
-            minutes = 0;// Скидання таймера // Timer reset
-            seconds = 0;//
-            
-            
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            Bitmap image; //Bitmap для открываемого изображения
-
-            OpenFileDialog open_dialog = new OpenFileDialog(); //создание диалогового окна для выбора файла
-            open_dialog.Filter = "Image Files(*.BMP;*.JPG;*.GIF;*.PNG)|*.BMP;*.JPG;*.GIF;*.PNG|All files (*.*)|*.*"; //формат загружаемого файла
-            if (open_dialog.ShowDialog() == DialogResult.OK) //если в окне была нажата кнопка "ОК"
-            {
-                try
-                {
-                    image = new Bitmap(open_dialog.FileName);
-                    picBox_1.SizeMode = PictureBoxSizeMode.StretchImage;
-                    picBox_1.Image = image;
-                    picBox_1.Invalidate();
-                }
-                catch
-                {
-                    DialogResult rezult = MessageBox.Show("Невозможно открыть выбранный файл",
-                    "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-        }
-
-        private void picBox_2_Click(object sender, EventArgs e)
-        {
-            Bitmap image; //Bitmap для открываемого изображения
-
-            OpenFileDialog open_dialog = new OpenFileDialog(); //создание диалогового окна для выбора файла
-            open_dialog.Filter = "Image Files(*.BMP;*.JPG;*.GIF;*.PNG)|*.BMP;*.JPG;*.GIF;*.PNG|All files (*.*)|*.*"; //формат загружаемого файла
-            if (open_dialog.ShowDialog() == DialogResult.OK) //если в окне была нажата кнопка "ОК"
-            {
-                try
-                {
-                    image = new Bitmap(open_dialog.FileName);
-                    picBox_2.SizeMode = PictureBoxSizeMode.StretchImage;
-                    picBox_2.Image = image;
-                    picBox_2.Invalidate();
-                }
-                catch
-                {
-                    DialogResult rezult = MessageBox.Show("Невозможно открыть выбранный файл",
-                    "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-        }
-
-        private void picBox_3_Click(object sender, EventArgs e)
-        {
-            Bitmap image; //Bitmap для открываемого изображения
-
-            OpenFileDialog open_dialog = new OpenFileDialog(); //создание диалогового окна для выбора файла
-            open_dialog.Filter = "Image Files(*.BMP;*.JPG;*.GIF;*.PNG)|*.BMP;*.JPG;*.GIF;*.PNG|All files (*.*)|*.*"; //формат загружаемого файла
-            if (open_dialog.ShowDialog() == DialogResult.OK) //если в окне была нажата кнопка "ОК"
-            {
-                try
-                {
-                    image = new Bitmap(open_dialog.FileName);
-                    picBox_3.SizeMode = PictureBoxSizeMode.StretchImage;
-                    picBox_3.Image = image;
-                    picBox_3.Invalidate();
-                }
-                catch
-                {
-                    DialogResult rezult = MessageBox.Show("Невозможно открыть выбранный файл",
-                    "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-        }
+       
         private void вихідToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DialogResult res = new DialogResult();
@@ -217,18 +101,11 @@ namespace Stomatology
             else
             { return; }
         }
-
         private void проПрограммуToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AboutSoft newForm = new AboutSoft();
             newForm.Show();
         }
-
-        private void txtMoney_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (dataGridView1.SelectedRows.Count > 0)
@@ -239,7 +116,7 @@ namespace Stomatology
                string adress = dataGridView1.SelectedRows[0].Cells[4].Value.ToString();
             }
         }
-
+//-----------------------------------------------------------------------------------------------------------------------------------------------------
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(comboBox1.Text)) throw new Exception("Виберіть  Дату!");
@@ -273,9 +150,8 @@ namespace Stomatology
                 throw new Exception("Не вибраний паціент, перевірте ще раз!");
             }
             testCon.Close();
-            //-----------------------------------------------------------------
-            testCon.Open();
-           }
+            }
+ //-----------------------------------------------------------------------------------------------------------------------------------------------------
 
         private void btnCalculator_Click(object sender, EventArgs e)
         {
@@ -286,7 +162,6 @@ namespace Stomatology
         private void Main_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.DoEvents();
-            timer.Stop();
         }
     }
 }
