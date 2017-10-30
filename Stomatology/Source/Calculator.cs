@@ -97,36 +97,63 @@ namespace Stomatology
 
         private void btnPlus_Click(object sender, EventArgs e)
         {
-
-            a = float.Parse(txtTotal.Text);
-            txtTotal.Clear();
-            count = 1;
-            lblCurResult.Text = a.ToString() + "+";
+            if (txtTotal.Text == String.Empty)
+            {
+                MessageBox.Show("Невірний синтаксис!");
+            }
+            else
+            {
+                a = float.Parse(txtTotal.Text);
+                txtTotal.Clear();
+                count = 1;
+                lblCurResult.Text = a.ToString() + "+";
+            }
 
         }
 
         private void btnMinus_Click(object sender, EventArgs e)
         {
-            a = float.Parse(txtTotal.Text);
-            txtTotal.Clear();
-            count = 2;
-            lblCurResult.Text = a.ToString() + "-";
+            if (txtTotal.Text == String.Empty)
+            {
+                MessageBox.Show("Невірний синтаксис!");
+            }
+            else
+            {
+                a = float.Parse(txtTotal.Text);
+                txtTotal.Clear();
+                count = 2;
+                lblCurResult.Text = a.ToString() + "-";
+            }
         }
 
         private void btnMultiply_Click(object sender, EventArgs e)
         {
-            a = float.Parse(txtTotal.Text);
-            txtTotal.Clear();
-            count = 3;
-            lblCurResult.Text = a.ToString() + "*";
+            if (txtTotal.Text == String.Empty)
+            {
+                MessageBox.Show("Невірний синтаксис!");
+            }
+            else
+            {
+                a = float.Parse(txtTotal.Text);
+                txtTotal.Clear();
+                count = 3;
+                lblCurResult.Text = a.ToString() + "*";
+            }
         }
 
         private void btnDivision_Click(object sender, EventArgs e)
         {
-            a = float.Parse(txtTotal.Text);
-            txtTotal.Clear();
-            count = 4;
-            lblCurResult.Text = a.ToString() + "/";
+            if (txtTotal.Text == String.Empty)
+            {
+                MessageBox.Show("Невірний синтаксис!");
+            }
+            else
+            {
+                a = float.Parse(txtTotal.Text);
+                txtTotal.Clear();
+                count = 4;
+                lblCurResult.Text = a.ToString() + "/";
+            }
         }
 
         private void calculate()
@@ -157,8 +184,15 @@ namespace Stomatology
         }
         private void btnEquel_Click(object sender, EventArgs e)
         {
-            calculate();
-            lblCurResult.Text = "";
+            if (txtTotal.Text == String.Empty)
+            {
+                MessageBox.Show("Невірний синтаксис!");
+            }
+            else
+            {
+                calculate();
+                lblCurResult.Text = "";
+            }
         }
 
         private void btnC_Click(object sender, EventArgs e)
