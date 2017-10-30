@@ -31,27 +31,6 @@ namespace Stomatology
         private void Form1_Load(object sender, EventArgs e)
         {
             updateTable();
-            //testCon.Open();
-            //SqlDataReader sqlReader = null;
-            //SqlCommand command = new SqlCommand("SELECT Date FROM [Reception]", testCon);
-            //try
-            //{
-            //    sqlReader = command.ExecuteReader();
-            //    while (sqlReader.Read())
-            //    {
-            //        comboBox1.Items.Add(Convert.ToString(sqlReader["Date"]));
-            //    }
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show(ex.Message.ToString(), ex.Source.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
-            //finally
-            //{
-            //    if (sqlReader != null) sqlReader.Close();
-            //}
-            //testCon.Close();
-
         }
        
 
@@ -114,43 +93,46 @@ namespace Stomatology
                string birthday = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
                string number = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
                string adress = dataGridView1.SelectedRows[0].Cells[4].Value.ToString();
+
             }
         }
 //-----------------------------------------------------------------------------------------------------------------------------------------------------
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(comboBox1.Text)) throw new Exception("Виберіть  Дату!");
-            testCon.Open();
-            string ReceptionDate = "";
-            string query = $"select * from [Reception] where [Date] = N'{comboBox1.Text}'";
-            SqlCommand cmd1 = new SqlCommand(query, testCon); SqlDataReader reader = cmd1.ExecuteReader();
-            if (reader.Read())
-            {
-                ReceptionDate = reader["Date"].ToString();
-                testCon.Open();
-                SqlCommand cmd = testCon.CreateCommand();
-                cmd.CommandType = CommandType.Text;
-                cmd.CommandText = $" select ( Info, Money, tlt1, tlt2, tlt3, tlt4, tlt5, tlt6, tlt7, tlt8, " +
-                       $"trt1, trt2, trt3, trt4, trt5, trt6, trt7, trt8, " +
-                       $"brt1, brt2, brt3, brt4, brt5, brt6, brt7, brt8, " +
-                       $"blt1, blt2, blt3, blt4, blt5, blt6, blt7, blt8 ) " +
-                       $"values From Reception(N'{textBox1.Text}', N'{txtMoney.Text}', " +
+            //if (string.IsNullOrEmpty(comboBox1.Text)) throw new Exception("Виберіть  Дату!");
+            //testCon.Open();
+            //string ReceptionDate = "";
+            //string query = $"select * from [Reception] where [Date] = N'{comboBox1.Text}'";
+            //SqlCommand cmd1 = new SqlCommand(query, testCon); 
+            //SqlDataReader reader = cmd1.ExecuteReader();
 
-                       $" '{TopLeftTextBox_1.Text}', '{TopLeftTextBox_2.Text}', '{TopLeftTextBox_3.Text}', '{TopLeftTextBox_4.Text}', '{TopLeftTextBox_5.Text}', '{TopLeftTextBox_6.Text}', '{TopLeftTextBox_7.Text}', '{TopLeftTextBox_8.Text}'," +
+            //if (reader.Read())
+            //{
+            //    ReceptionDate = reader["Date"].ToString();
+            //    testCon.Open();
+            //    SqlCommand cmd = testCon.CreateCommand();
+            //    cmd.CommandType = CommandType.Text;
+            //    cmd.CommandText = $" select ( Info, Money, tlt1, tlt2, tlt3, tlt4, tlt5, tlt6, tlt7, tlt8, " +
+            //           $"trt1, trt2, trt3, trt4, trt5, trt6, trt7, trt8, " +
+            //           $"brt1, brt2, brt3, brt4, brt5, brt6, brt7, brt8, " +
+            //           $"blt1, blt2, blt3, blt4, blt5, blt6, blt7, blt8 ) " +
+            //           $"values From Reception(N'{textBox1.Text}', N'{txtMoney.Text}', " +
 
-                       $" '{TopRightTextBox_1.Text}', '{TopRightTextBox_2.Text}', '{TopRightTextBox_3.Text}', '{TopRightTextBox_4.Text}', '{TopRightTextBox_5.Text}', '{TopRightTextBox_6.Text}', '{TopRightTextBox_7.Text}', '{TopRightTextBox_8.Text}'," +
+            //           $" '{TopLeftTextBox_1.Text}', '{TopLeftTextBox_2.Text}', '{TopLeftTextBox_3.Text}', '{TopLeftTextBox_4.Text}', '{TopLeftTextBox_5.Text}', '{TopLeftTextBox_6.Text}', '{TopLeftTextBox_7.Text}', '{TopLeftTextBox_8.Text}'," +
 
-                       $" '{BotRightTextBox_8.Text}', '{BotRightTextBox_7.Text}', '{BotRightTextBox_6.Text}', '{BotRightTextBox_5.Text}', '{BotRightTextBox_4.Text}', '{BotRightTextBox_3.Text}', '{BotRightTextBox_2.Text}', '{BotRightTextBox_1.Text}'," +
+            //           $" '{TopRightTextBox_1.Text}', '{TopRightTextBox_2.Text}', '{TopRightTextBox_3.Text}', '{TopRightTextBox_4.Text}', '{TopRightTextBox_5.Text}', '{TopRightTextBox_6.Text}', '{TopRightTextBox_7.Text}', '{TopRightTextBox_8.Text}'," +
 
-                       $" '{BotLeftTextBox_8.Text}', '{BotLeftTextBox_7.Text}', '{BotLeftTextBox_6.Text}', '{BotLeftTextBox_5.Text}', '{BotLeftTextBox_4.Text}', '{BotLeftTextBox_3.Text}', '{BotLeftTextBox_2.Text}', '{BotLeftTextBox_1.Text}')";
-                cmd.ExecuteNonQuery();
-            }
-            else
-            {
-                throw new Exception("Не вибраний паціент, перевірте ще раз!");
-            }
-            testCon.Close();
-            }
+            //           $" '{BotRightTextBox_8.Text}', '{BotRightTextBox_7.Text}', '{BotRightTextBox_6.Text}', '{BotRightTextBox_5.Text}', '{BotRightTextBox_4.Text}', '{BotRightTextBox_3.Text}', '{BotRightTextBox_2.Text}', '{BotRightTextBox_1.Text}'," +
+
+            //           $" '{BotLeftTextBox_8.Text}', '{BotLeftTextBox_7.Text}', '{BotLeftTextBox_6.Text}', '{BotLeftTextBox_5.Text}', '{BotLeftTextBox_4.Text}', '{BotLeftTextBox_3.Text}', '{BotLeftTextBox_2.Text}', '{BotLeftTextBox_1.Text}')";
+            //    cmd.ExecuteNonQuery();
+            //}
+            //else
+            //{
+            //    throw new Exception("Не вибраний паціент, перевірте ще раз!");
+            //}
+            //testCon.Close();
+        }
  //-----------------------------------------------------------------------------------------------------------------------------------------------------
 
         private void btnCalculator_Click(object sender, EventArgs e)
