@@ -36,7 +36,6 @@
             this.TabControl = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.listView1 = new System.Windows.Forms.ListView();
             this.AddNewAppoinment = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -138,6 +137,12 @@
             this.справкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.посібникКористувачаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.проПрограммуToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.birthday = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.number = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.adress = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -149,6 +154,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.TeethPanel)).BeginInit();
             this.tabPage4.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // button2
@@ -190,8 +196,8 @@
             // 
             // tabPage1
             // 
-            resources.ApplyResources(this.tabPage1, "tabPage1");
             this.tabPage1.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            resources.ApplyResources(this.tabPage1, "tabPage1");
             this.tabPage1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tabPage1.Controls.Add(this.panel2);
             this.tabPage1.Controls.Add(this.AddNewAppoinment);
@@ -206,18 +212,11 @@
             // 
             // panel2
             // 
-            resources.ApplyResources(this.panel2, "panel2");
             this.panel2.BackColor = System.Drawing.SystemColors.Window;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel2.Controls.Add(this.listView1);
+            this.panel2.Controls.Add(this.dataGridView1);
+            resources.ApplyResources(this.panel2, "panel2");
             this.panel2.Name = "panel2";
-            // 
-            // listView1
-            // 
-            resources.ApplyResources(this.listView1, "listView1");
-            this.listView1.AutoArrange = false;
-            this.listView1.Name = "listView1";
-            this.listView1.UseCompatibleStateImageBehavior = false;
             // 
             // AddNewAppoinment
             // 
@@ -230,15 +229,14 @@
             // 
             // panel1
             // 
-            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.BackColor = System.Drawing.SystemColors.Window;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.panel3);
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
             // 
             // panel3
             // 
-            resources.ApplyResources(this.panel3, "panel3");
             this.panel3.Controls.Add(this.button7);
             this.panel3.Controls.Add(this.button6);
             this.panel3.Controls.Add(this.button5);
@@ -321,6 +319,7 @@
             this.panel3.Controls.Add(this.textBox1);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.label1);
+            resources.ApplyResources(this.panel3, "panel3");
             this.panel3.Name = "panel3";
             // 
             // button7
@@ -361,10 +360,11 @@
             // 
             // comboBox1
             // 
-            resources.ApplyResources(this.comboBox1, "comboBox1");
             this.comboBox1.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.comboBox1.FormattingEnabled = true;
+            resources.ApplyResources(this.comboBox1, "comboBox1");
             this.comboBox1.Name = "comboBox1";
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // textBox2
             // 
@@ -373,24 +373,24 @@
             // 
             // picBox_3
             // 
-            resources.ApplyResources(this.picBox_3, "picBox_3");
             this.picBox_3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.picBox_3, "picBox_3");
             this.picBox_3.Name = "picBox_3";
             this.picBox_3.TabStop = false;
             this.picBox_3.Click += new System.EventHandler(this.picBox_3_Click);
             // 
             // picBox_2
             // 
-            resources.ApplyResources(this.picBox_2, "picBox_2");
             this.picBox_2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.picBox_2, "picBox_2");
             this.picBox_2.Name = "picBox_2";
             this.picBox_2.TabStop = false;
             this.picBox_2.Click += new System.EventHandler(this.picBox_2_Click);
             // 
             // picBox_1
             // 
-            resources.ApplyResources(this.picBox_1, "picBox_1");
             this.picBox_1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.picBox_1, "picBox_1");
             this.picBox_1.Name = "picBox_1";
             this.picBox_1.TabStop = false;
             this.picBox_1.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -787,15 +787,15 @@
             // 
             // txtResult
             // 
-            resources.ApplyResources(this.txtResult, "txtResult");
             this.txtResult.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.txtResult, "txtResult");
             this.txtResult.Name = "txtResult";
             this.txtResult.ReadOnly = true;
             // 
             // txtTotal
             // 
-            resources.ApplyResources(this.txtTotal, "txtTotal");
             this.txtTotal.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.txtTotal, "txtTotal");
             this.txtTotal.Name = "txtTotal";
             // 
             // btnStop
@@ -827,22 +827,21 @@
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
-            resources.ApplyResources(this.openFileDialog1, "openFileDialog1");
             // 
             // menuStrip1
             // 
-            resources.ApplyResources(this.menuStrip1, "menuStrip1");
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.головнаToolStripMenuItem,
             this.справкаToolStripMenuItem});
+            resources.ApplyResources(this.menuStrip1, "menuStrip1");
             this.menuStrip1.Name = "menuStrip1";
             // 
             // головнаToolStripMenuItem
             // 
-            resources.ApplyResources(this.головнаToolStripMenuItem, "головнаToolStripMenuItem");
             this.головнаToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.настройкиToolStripMenuItem,
             this.вихідToolStripMenuItem});
+            resources.ApplyResources(this.головнаToolStripMenuItem, "головнаToolStripMenuItem");
             this.головнаToolStripMenuItem.Name = "головнаToolStripMenuItem";
             // 
             // настройкиToolStripMenuItem
@@ -858,10 +857,10 @@
             // 
             // справкаToolStripMenuItem
             // 
-            resources.ApplyResources(this.справкаToolStripMenuItem, "справкаToolStripMenuItem");
             this.справкаToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.посібникКористувачаToolStripMenuItem,
             this.проПрограммуToolStripMenuItem});
+            resources.ApplyResources(this.справкаToolStripMenuItem, "справкаToolStripMenuItem");
             this.справкаToolStripMenuItem.Name = "справкаToolStripMenuItem";
             // 
             // посібникКористувачаToolStripMenuItem
@@ -875,11 +874,57 @@
             this.проПрограммуToolStripMenuItem.Name = "проПрограммуToolStripMenuItem";
             this.проПрограммуToolStripMenuItem.Click += new System.EventHandler(this.проПрограммуToolStripMenuItem_Click);
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id,
+            this.name,
+            this.birthday,
+            this.number,
+            this.adress});
+            resources.ApplyResources(this.dataGridView1, "dataGridView1");
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            // 
+            // id
+            // 
+            resources.ApplyResources(this.id, "id");
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            // 
+            // name
+            // 
+            resources.ApplyResources(this.name, "name");
+            this.name.Name = "name";
+            this.name.ReadOnly = true;
+            // 
+            // birthday
+            // 
+            resources.ApplyResources(this.birthday, "birthday");
+            this.birthday.Name = "birthday";
+            this.birthday.ReadOnly = true;
+            // 
+            // number
+            // 
+            resources.ApplyResources(this.number, "number");
+            this.number.Name = "number";
+            this.number.ReadOnly = true;
+            // 
+            // adress
+            // 
+            resources.ApplyResources(this.adress, "adress");
+            this.adress.Name = "adress";
+            this.adress.ReadOnly = true;
+            // 
             // Main
             // 
-            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            resources.ApplyResources(this, "$this");
             this.Controls.Add(this.TabControl);
             this.Controls.Add(this.menuStrip1);
             this.HelpButton = true;
@@ -901,6 +946,7 @@
             this.tabPage4.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -913,7 +959,6 @@
         private System.Windows.Forms.TabControl TabControl;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button AddNewAppoinment;
         private System.Windows.Forms.Button EditPatient;
@@ -1015,6 +1060,12 @@
         private System.Windows.Forms.ToolStripMenuItem вихідToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem посібникКористувачаToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem проПрограммуToolStripMenuItem;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn birthday;
+        private System.Windows.Forms.DataGridViewTextBoxColumn number;
+        private System.Windows.Forms.DataGridViewTextBoxColumn adress;
     }
 }
 
