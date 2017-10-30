@@ -253,7 +253,7 @@
             this.btnPoint.Name = "btnPoint";
             this.btnPoint.Size = new System.Drawing.Size(60, 50);
             this.btnPoint.TabIndex = 23;
-            this.btnPoint.Text = ".";
+            this.btnPoint.Text = ",";
             this.btnPoint.UseVisualStyleBackColor = false;
             this.btnPoint.Click += new System.EventHandler(this.btnPoint_Click);
             // 
@@ -313,6 +313,7 @@
             this.button2.Size = new System.Drawing.Size(40, 40);
             this.button2.TabIndex = 42;
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Calculator
             // 

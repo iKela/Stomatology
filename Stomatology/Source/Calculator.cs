@@ -44,116 +44,202 @@ namespace Stomatology
         }
 
         public static bool flag = true;
+        bool signallow = true;
 
         private void btn0_Click(object sender, EventArgs e)
         {
-            txtTotal.Text = txtTotal.Text + 0;
+            if(signallow == true)
+               txtTotal.Text = txtTotal.Text + 0;
         }
 
         private void btn1_Click(object sender, EventArgs e)
         {
-            txtTotal.Text = txtTotal.Text + 1;
+            if (signallow == true)
+                txtTotal.Text = txtTotal.Text + 1;
+
         }
 
         private void btn2_Click(object sender, EventArgs e)
         {
-            txtTotal.Text = txtTotal.Text + 2;
+            if (signallow == true)
+                txtTotal.Text = txtTotal.Text + 2;
+
         }
 
         private void btn3_Click(object sender, EventArgs e)
         {
-            txtTotal.Text = txtTotal.Text + 3;
+            if (signallow == true)
+                txtTotal.Text = txtTotal.Text + 3;
+
         }
 
         private void btn4_Click(object sender, EventArgs e)
         {
-            txtTotal.Text = txtTotal.Text + 4;
+            if (signallow == true)
+                txtTotal.Text = txtTotal.Text + 4;
+
         }
 
         private void btn5_Click(object sender, EventArgs e)
         {
+            if (signallow == true)
                 txtTotal.Text = txtTotal.Text + 5;
+
         }
 
         private void btn6_Click(object sender, EventArgs e)
         {
-            txtTotal.Text = txtTotal.Text + 6;
+            if (signallow == true)
+                txtTotal.Text = txtTotal.Text + 6;
+
         }
 
         private void btn7_Click(object sender, EventArgs e)
         {
-            txtTotal.Text = txtTotal.Text + 7;
+            if (signallow == true)
+                txtTotal.Text = txtTotal.Text + 7;
+
         }
 
         private void btn8_Click(object sender, EventArgs e)
         {
-            txtTotal.Text = txtTotal.Text + 8;
+            if (signallow == true)
+                txtTotal.Text = txtTotal.Text + 8;
+
         }
 
         private void btn9_Click(object sender, EventArgs e)
         {
-            txtTotal.Text = txtTotal.Text + 9;
+            if (signallow == true)
+                txtTotal.Text = txtTotal.Text + 9;
+
         }
 
         private void btnPlus_Click(object sender, EventArgs e)
         {
+            Count();
+
             if (txtTotal.Text == String.Empty)
             {
                 MessageBox.Show("Невірний синтаксис!");
             }
-            else
+            else if(lblCurResult.Text == string.Empty)
             {
+                signallow = true;
+
                 a = float.Parse(txtTotal.Text);
                 txtTotal.Clear();
                 count = 1;
                 lblCurResult.Text = a.ToString() + "+";
+
+            }
+            else
+            {
+                signallow = true;
+
+
+                b = a + float.Parse(txtTotal.Text);
+                a = b;
+                txtTotal.Clear();
+                count = 1;
+                lblCurResult.Text = b.ToString() + "+";
+
             }
 
         }
 
         private void btnMinus_Click(object sender, EventArgs e)
         {
+            Count();
+
             if (txtTotal.Text == String.Empty)
             {
                 MessageBox.Show("Невірний синтаксис!");
             }
-            else
+            else if (lblCurResult.Text == string.Empty)
             {
+                signallow = true;
+
                 a = float.Parse(txtTotal.Text);
                 txtTotal.Clear();
                 count = 2;
                 lblCurResult.Text = a.ToString() + "-";
+
+
+            }
+            else
+            {
+                signallow = true;
+
+                b = a - float.Parse(txtTotal.Text);
+                a = b;
+                txtTotal.Clear();
+                count = 2;
+                lblCurResult.Text = b.ToString() + "-";
+
+
             }
         }
 
         private void btnMultiply_Click(object sender, EventArgs e)
         {
+            Count();
+
             if (txtTotal.Text == String.Empty)
             {
                 MessageBox.Show("Невірний синтаксис!");
             }
-            else
+            else if (lblCurResult.Text == string.Empty)
             {
+                signallow = true;
+
                 a = float.Parse(txtTotal.Text);
                 txtTotal.Clear();
                 count = 3;
                 lblCurResult.Text = a.ToString() + "*";
             }
+            else
+            {
+                signallow = true;
+
+
+                b = a * float.Parse(txtTotal.Text);
+                a = b;
+                txtTotal.Clear();
+                count = 3;
+                lblCurResult.Text = b.ToString() + "*";
+            }
         }
 
         private void btnDivision_Click(object sender, EventArgs e)
         {
+            Count();
+
             if (txtTotal.Text == String.Empty)
             {
                 MessageBox.Show("Невірний синтаксис!");
             }
-            else
+            else if (lblCurResult.Text == string.Empty)
             {
+                signallow = true;
+
                 a = float.Parse(txtTotal.Text);
                 txtTotal.Clear();
                 count = 4;
                 lblCurResult.Text = a.ToString() + "/";
             }
+            else
+            {
+                signallow = true;
+
+
+                b = a / float.Parse(txtTotal.Text);
+                a = b;
+                txtTotal.Clear();
+                count = 4;
+                lblCurResult.Text = b.ToString() + "/";
+            }
+
         }
 
         private void calculate()
@@ -182,7 +268,8 @@ namespace Stomatology
             }
 
         }
-        private void btnEquel_Click(object sender, EventArgs e)
+
+        private void Count()
         {
             if (txtTotal.Text == String.Empty)
             {
@@ -191,12 +278,20 @@ namespace Stomatology
             else
             {
                 calculate();
+                signallow = false;
                 lblCurResult.Text = "";
+
             }
+        }
+        private void btnEquel_Click(object sender, EventArgs e)
+        {
+            Count();
         }
 
         private void btnC_Click(object sender, EventArgs e)
         {
+            signallow = true;
+
             txtTotal.Text = "";
             lblCurResult.Text = "";
         }
@@ -247,8 +342,15 @@ namespace Stomatology
             }
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         private void btnPoint_Click(object sender, EventArgs e)
         {
+            signallow = true;
+
             txtTotal.Text = txtTotal.Text + ",";
         }
     }
