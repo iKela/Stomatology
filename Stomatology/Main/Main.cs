@@ -63,7 +63,41 @@ namespace Stomatology
             testCon.Close();
             dataGridView1.ClearSelection();
         }
-
+        public void Buttonclear()
+        {
+            TopLeftTextBox_1.Text = "";
+            TopLeftTextBox_2.Text = "";
+            TopLeftTextBox_3.Text = "";
+            TopLeftTextBox_4.Text = "";
+            TopLeftTextBox_5.Text = "";
+            TopLeftTextBox_6.Text = "";
+            TopLeftTextBox_7.Text = "";
+            TopLeftTextBox_8.Text = "";
+            BotLeftTextBox_8.Text = "";
+            BotLeftTextBox_7.Text = "";
+            BotLeftTextBox_6.Text = "";
+            BotLeftTextBox_5.Text = "";
+            BotLeftTextBox_4.Text = "";
+            BotLeftTextBox_3.Text = "";
+            BotLeftTextBox_2.Text = "";
+            BotLeftTextBox_1.Text = "";
+            TopRightTextBox_1.Text = "";
+            TopRightTextBox_2.Text = "";
+            TopRightTextBox_3.Text = "";
+            TopRightTextBox_4.Text = "";
+            TopRightTextBox_5.Text = "";
+            TopRightTextBox_6.Text = "";
+            TopRightTextBox_7.Text = "";
+            TopRightTextBox_8.Text = "";
+            BotRightTextBox_8.Text = "";
+            BotRightTextBox_7.Text = "";
+            BotRightTextBox_6.Text = "";
+            BotRightTextBox_5.Text = "";
+            BotRightTextBox_4.Text = "";
+            BotRightTextBox_3.Text = "";
+            BotRightTextBox_2.Text = "";
+            BotRightTextBox_1.Text = "";
+        }
         private void AddNewAppoinment_Click(object sender, EventArgs e)
         {
             NewAppoinment newForm = new NewAppoinment();
@@ -964,45 +998,6 @@ namespace Stomatology
             MHIndex = 32;
             txtBoxMouseHover();
         }
-        public void Buttonclear()
-        {
-            TopLeftTextBox_1.Text = "";
-            TopLeftTextBox_2.Text = "";
-            TopLeftTextBox_3.Text = "";
-            TopLeftTextBox_4.Text = "";
-            TopLeftTextBox_5.Text = "";
-            TopLeftTextBox_6.Text = "";
-            TopLeftTextBox_7.Text = "";
-            TopLeftTextBox_8.Text = "";
-            BotLeftTextBox_8.Text = "";
-            BotLeftTextBox_7.Text = "";
-            BotLeftTextBox_6.Text = "";
-            BotLeftTextBox_5.Text = "";
-            BotLeftTextBox_4.Text = "";
-            BotLeftTextBox_3.Text = "";
-            BotLeftTextBox_2.Text = "";
-            BotLeftTextBox_1.Text = "";
-            TopRightTextBox_1.Text = "";
-            TopRightTextBox_2.Text = "";
-            TopRightTextBox_3.Text = "";
-            TopRightTextBox_4.Text = "";
-            TopRightTextBox_5.Text = "";
-            TopRightTextBox_6.Text = "";
-            TopRightTextBox_7.Text = "";
-            TopRightTextBox_8.Text = "";
-            BotRightTextBox_8.Text = "";
-            BotRightTextBox_7.Text = "";
-            BotRightTextBox_6.Text = "";
-            BotRightTextBox_5.Text = "";
-            BotRightTextBox_4.Text = "";
-            BotRightTextBox_3.Text = "";
-            BotRightTextBox_2.Text = "";
-            BotRightTextBox_1.Text = "";
-        }
-
-    }
-}
-
         private void BotRightTextBox_8_MouseLeave(object sender, EventArgs e)
         {
             //Текстбокси рахуються з лівої сторони
@@ -1010,5 +1005,11 @@ namespace Stomatology
             txtBoxMouseLeave();
         }
         #endregion
-    } 
-} 
+
+    }
+}
+
+        
+
+     
+

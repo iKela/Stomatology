@@ -53,6 +53,8 @@
             this.AddNewAppoinment = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.txtBDate = new System.Windows.Forms.TextBox();
+            this.btnUpdate = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -138,8 +140,6 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.TabControl = new System.Windows.Forms.TabControl();
-            this.btnUpdate = new System.Windows.Forms.Button();
-            this.txtBDate = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -152,15 +152,9 @@
             // 
             // imageList1
             // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            resources.ApplyResources(this.imageList1, "imageList1");
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "home-512.png");
-            this.imageList1.Images.SetKeyName(1, "timer1600.png");
-            this.imageList1.Images.SetKeyName(2, "45265.png");
-            this.imageList1.Images.SetKeyName(3, "88084.png");
-            this.imageList1.Images.SetKeyName(4, "mechanical-gears-.png");
-            this.imageList1.Images.SetKeyName(5, "cashier-icon-png-7.png");
-            this.imageList1.Images.SetKeyName(6, "door-exit-with-arrow-to-the-right_318-40597.jpg");
             // 
             // openFileDialog1
             // 
@@ -409,6 +403,18 @@
             this.panel3.Controls.Add(this.label1);
             resources.ApplyResources(this.panel3, "panel3");
             this.panel3.Name = "panel3";
+            // 
+            // txtBDate
+            // 
+            resources.ApplyResources(this.txtBDate, "txtBDate");
+            this.txtBDate.Name = "txtBDate";
+            // 
+            // btnUpdate
+            // 
+            resources.ApplyResources(this.btnUpdate, "btnUpdate");
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // button7
             // 
@@ -936,18 +942,6 @@
             this.TabControl.Multiline = true;
             this.TabControl.Name = "TabControl";
             this.TabControl.SelectedIndex = 0;
-            // 
-            // btnUpdate
-            // 
-            resources.ApplyResources(this.btnUpdate, "btnUpdate");
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.UseVisualStyleBackColor = true;
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
-            // 
-            // txtBDate
-            // 
-            resources.ApplyResources(this.txtBDate, "txtBDate");
-            this.txtBDate.Name = "txtBDate";
             // 
             // Main
             // 
