@@ -34,11 +34,14 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.головнаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.настройкиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiSettings = new System.Windows.Forms.ToolStripMenuItem();
             this.вихідToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.справкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.посібникКористувачаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiUserInfo = new System.Windows.Forms.ToolStripMenuItem();
             this.проПрограммуToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.допомогаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiContacts = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiRemoteControl = new System.Windows.Forms.ToolStripMenuItem();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -165,22 +168,24 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.головнаToolStripMenuItem,
-            this.справкаToolStripMenuItem});
+            this.справкаToolStripMenuItem,
+            this.допомогаToolStripMenuItem});
             resources.ApplyResources(this.menuStrip1, "menuStrip1");
             this.menuStrip1.Name = "menuStrip1";
             // 
             // головнаToolStripMenuItem
             // 
             this.головнаToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.настройкиToolStripMenuItem,
+            this.tsmiSettings,
             this.вихідToolStripMenuItem});
             resources.ApplyResources(this.головнаToolStripMenuItem, "головнаToolStripMenuItem");
             this.головнаToolStripMenuItem.Name = "головнаToolStripMenuItem";
             // 
-            // настройкиToolStripMenuItem
+            // tsmiSettings
             // 
-            resources.ApplyResources(this.настройкиToolStripMenuItem, "настройкиToolStripMenuItem");
-            this.настройкиToolStripMenuItem.Name = "настройкиToolStripMenuItem";
+            resources.ApplyResources(this.tsmiSettings, "tsmiSettings");
+            this.tsmiSettings.Name = "tsmiSettings";
+            this.tsmiSettings.Click += new System.EventHandler(this.tsmiSettings_Click);
             // 
             // вихідToolStripMenuItem
             // 
@@ -191,21 +196,42 @@
             // справкаToolStripMenuItem
             // 
             this.справкаToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.посібникКористувачаToolStripMenuItem,
+            this.tsmiUserInfo,
             this.проПрограммуToolStripMenuItem});
             resources.ApplyResources(this.справкаToolStripMenuItem, "справкаToolStripMenuItem");
             this.справкаToolStripMenuItem.Name = "справкаToolStripMenuItem";
             // 
-            // посібникКористувачаToolStripMenuItem
+            // tsmiUserInfo
             // 
-            resources.ApplyResources(this.посібникКористувачаToolStripMenuItem, "посібникКористувачаToolStripMenuItem");
-            this.посібникКористувачаToolStripMenuItem.Name = "посібникКористувачаToolStripMenuItem";
+            resources.ApplyResources(this.tsmiUserInfo, "tsmiUserInfo");
+            this.tsmiUserInfo.Name = "tsmiUserInfo";
+            this.tsmiUserInfo.Click += new System.EventHandler(this.tsmiUserInfo_Click);
             // 
             // проПрограммуToolStripMenuItem
             // 
             resources.ApplyResources(this.проПрограммуToolStripMenuItem, "проПрограммуToolStripMenuItem");
             this.проПрограммуToolStripMenuItem.Name = "проПрограммуToolStripMenuItem";
             this.проПрограммуToolStripMenuItem.Click += new System.EventHandler(this.проПрограммуToolStripMenuItem_Click);
+            // 
+            // допомогаToolStripMenuItem
+            // 
+            this.допомогаToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiContacts,
+            this.tsmiRemoteControl});
+            resources.ApplyResources(this.допомогаToolStripMenuItem, "допомогаToolStripMenuItem");
+            this.допомогаToolStripMenuItem.Name = "допомогаToolStripMenuItem";
+            // 
+            // tsmiContacts
+            // 
+            resources.ApplyResources(this.tsmiContacts, "tsmiContacts");
+            this.tsmiContacts.Name = "tsmiContacts";
+            this.tsmiContacts.Click += new System.EventHandler(this.tsmiContacts_Click);
+            // 
+            // tsmiRemoteControl
+            // 
+            resources.ApplyResources(this.tsmiRemoteControl, "tsmiRemoteControl");
+            this.tsmiRemoteControl.Name = "tsmiRemoteControl";
+            this.tsmiRemoteControl.Click += new System.EventHandler(this.tsmiRemoteControl_Click);
             // 
             // tabPage1
             // 
@@ -235,6 +261,7 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
@@ -446,81 +473,113 @@
             // 
             resources.ApplyResources(this.BotRightTextBox_8, "BotRightTextBox_8");
             this.BotRightTextBox_8.Name = "BotRightTextBox_8";
+            this.BotRightTextBox_8.MouseLeave += new System.EventHandler(this.BotRightTextBox_8_MouseLeave);
+            this.BotRightTextBox_8.MouseHover += new System.EventHandler(this.BotRightTextBox_8_MouseHover);
             // 
             // BotRightTextBox_7
             // 
             resources.ApplyResources(this.BotRightTextBox_7, "BotRightTextBox_7");
             this.BotRightTextBox_7.Name = "BotRightTextBox_7";
+            this.BotRightTextBox_7.MouseLeave += new System.EventHandler(this.BotRightTextBox_7_MouseLeave);
+            this.BotRightTextBox_7.MouseHover += new System.EventHandler(this.BotRightTextBox_7_MouseHover);
             // 
             // BotRightTextBox_6
             // 
             resources.ApplyResources(this.BotRightTextBox_6, "BotRightTextBox_6");
             this.BotRightTextBox_6.Name = "BotRightTextBox_6";
+            this.BotRightTextBox_6.MouseLeave += new System.EventHandler(this.BotRightTextBox_6_MouseLeave);
+            this.BotRightTextBox_6.MouseHover += new System.EventHandler(this.BotRightTextBox_6_MouseHover);
             // 
             // BotRightTextBox_5
             // 
             resources.ApplyResources(this.BotRightTextBox_5, "BotRightTextBox_5");
             this.BotRightTextBox_5.Name = "BotRightTextBox_5";
+            this.BotRightTextBox_5.MouseLeave += new System.EventHandler(this.BotRightTextBox_5_MouseLeave);
+            this.BotRightTextBox_5.MouseHover += new System.EventHandler(this.BotRightTextBox_5_MouseHover);
             // 
             // BotRightTextBox_4
             // 
             resources.ApplyResources(this.BotRightTextBox_4, "BotRightTextBox_4");
             this.BotRightTextBox_4.Name = "BotRightTextBox_4";
+            this.BotRightTextBox_4.MouseLeave += new System.EventHandler(this.BotRightTextBox_4_MouseLeave);
+            this.BotRightTextBox_4.MouseHover += new System.EventHandler(this.BotRightTextBox_4_MouseHover);
             // 
             // BotRightTextBox_3
             // 
             resources.ApplyResources(this.BotRightTextBox_3, "BotRightTextBox_3");
             this.BotRightTextBox_3.Name = "BotRightTextBox_3";
+            this.BotRightTextBox_3.MouseLeave += new System.EventHandler(this.BotRightTextBox_3_MouseLeave);
+            this.BotRightTextBox_3.MouseHover += new System.EventHandler(this.BotRightTextBox_3_MouseHover);
             // 
             // BotRightTextBox_2
             // 
             resources.ApplyResources(this.BotRightTextBox_2, "BotRightTextBox_2");
             this.BotRightTextBox_2.Name = "BotRightTextBox_2";
+            this.BotRightTextBox_2.MouseLeave += new System.EventHandler(this.BotRightTextBox_2_MouseLeave);
+            this.BotRightTextBox_2.MouseHover += new System.EventHandler(this.BotRightTextBox_2_MouseHover);
             // 
             // BotRightTextBox_1
             // 
             resources.ApplyResources(this.BotRightTextBox_1, "BotRightTextBox_1");
             this.BotRightTextBox_1.Name = "BotRightTextBox_1";
+            this.BotRightTextBox_1.MouseLeave += new System.EventHandler(this.BotRightTextBox_1_MouseLeave);
+            this.BotRightTextBox_1.MouseHover += new System.EventHandler(this.BotRightTextBox_1_MouseHover);
             // 
             // BotLeftTextBox_8
             // 
             resources.ApplyResources(this.BotLeftTextBox_8, "BotLeftTextBox_8");
             this.BotLeftTextBox_8.Name = "BotLeftTextBox_8";
+            this.BotLeftTextBox_8.MouseLeave += new System.EventHandler(this.BotLeftTextBox_8_MouseLeave);
+            this.BotLeftTextBox_8.MouseHover += new System.EventHandler(this.BotLeftTextBox_8_MouseHover);
             // 
             // BotLeftTextBox_7
             // 
             resources.ApplyResources(this.BotLeftTextBox_7, "BotLeftTextBox_7");
             this.BotLeftTextBox_7.Name = "BotLeftTextBox_7";
+            this.BotLeftTextBox_7.MouseLeave += new System.EventHandler(this.BotLeftTextBox_7_MouseLeave);
+            this.BotLeftTextBox_7.MouseHover += new System.EventHandler(this.BotLeftTextBox_7_MouseHover);
             // 
             // BotLeftTextBox_6
             // 
             resources.ApplyResources(this.BotLeftTextBox_6, "BotLeftTextBox_6");
             this.BotLeftTextBox_6.Name = "BotLeftTextBox_6";
+            this.BotLeftTextBox_6.MouseLeave += new System.EventHandler(this.BotLeftTextBox_6_MouseLeave);
+            this.BotLeftTextBox_6.MouseHover += new System.EventHandler(this.BotLeftTextBox_6_MouseHover);
             // 
             // BotLeftTextBox_5
             // 
             resources.ApplyResources(this.BotLeftTextBox_5, "BotLeftTextBox_5");
             this.BotLeftTextBox_5.Name = "BotLeftTextBox_5";
+            this.BotLeftTextBox_5.MouseLeave += new System.EventHandler(this.BotLeftTextBox_5_MouseLeave);
+            this.BotLeftTextBox_5.MouseHover += new System.EventHandler(this.BotLeftTextBox_5_MouseHover);
             // 
             // BotLeftTextBox_4
             // 
             resources.ApplyResources(this.BotLeftTextBox_4, "BotLeftTextBox_4");
             this.BotLeftTextBox_4.Name = "BotLeftTextBox_4";
+            this.BotLeftTextBox_4.MouseLeave += new System.EventHandler(this.BotLeftTextBox_4_MouseLeave);
+            this.BotLeftTextBox_4.MouseHover += new System.EventHandler(this.BotLeftTextBox_4_MouseHover);
             // 
             // BotLeftTextBox_3
             // 
             resources.ApplyResources(this.BotLeftTextBox_3, "BotLeftTextBox_3");
             this.BotLeftTextBox_3.Name = "BotLeftTextBox_3";
+            this.BotLeftTextBox_3.MouseLeave += new System.EventHandler(this.BotLeftTextBox_3_MouseLeave);
+            this.BotLeftTextBox_3.MouseHover += new System.EventHandler(this.BotLeftTextBox_3_MouseHover);
             // 
             // BotLeftTextBox_2
             // 
             resources.ApplyResources(this.BotLeftTextBox_2, "BotLeftTextBox_2");
             this.BotLeftTextBox_2.Name = "BotLeftTextBox_2";
+            this.BotLeftTextBox_2.MouseLeave += new System.EventHandler(this.BotLeftTextBox_2_MouseLeave);
+            this.BotLeftTextBox_2.MouseHover += new System.EventHandler(this.BotLeftTextBox_2_MouseHover);
             // 
             // BotLeftTextBox_1
             // 
             resources.ApplyResources(this.BotLeftTextBox_1, "BotLeftTextBox_1");
             this.BotLeftTextBox_1.Name = "BotLeftTextBox_1";
+            this.BotLeftTextBox_1.MouseLeave += new System.EventHandler(this.BotLeftTextBox_1_MouseLeave);
+            this.BotLeftTextBox_1.MouseHover += new System.EventHandler(this.BotLeftTextBox_1_MouseHover);
             // 
             // label20
             // 
@@ -676,47 +735,62 @@
             // 
             resources.ApplyResources(this.TopRightTextBox_8, "TopRightTextBox_8");
             this.TopRightTextBox_8.Name = "TopRightTextBox_8";
+            this.TopRightTextBox_8.MouseLeave += new System.EventHandler(this.TopRightTextBox_8_MouseLeave);
+            this.TopRightTextBox_8.MouseHover += new System.EventHandler(this.TopRightTextBox_8_MouseHover);
             // 
             // TopRightTextBox_7
             // 
             resources.ApplyResources(this.TopRightTextBox_7, "TopRightTextBox_7");
             this.TopRightTextBox_7.Name = "TopRightTextBox_7";
+            this.TopRightTextBox_7.MouseLeave += new System.EventHandler(this.TopRightTextBox_7_MouseLeave);
+            this.TopRightTextBox_7.MouseHover += new System.EventHandler(this.TopRightTextBox_7_MouseHover);
             // 
             // TopRightTextBox_6
             // 
             resources.ApplyResources(this.TopRightTextBox_6, "TopRightTextBox_6");
             this.TopRightTextBox_6.Name = "TopRightTextBox_6";
+            this.TopRightTextBox_6.MouseLeave += new System.EventHandler(this.TopRightTextBox_6_MouseLeave);
+            this.TopRightTextBox_6.MouseHover += new System.EventHandler(this.TopRightTextBox_6_MouseHover);
             // 
             // TopRightTextBox_5
             // 
             resources.ApplyResources(this.TopRightTextBox_5, "TopRightTextBox_5");
             this.TopRightTextBox_5.Name = "TopRightTextBox_5";
+            this.TopRightTextBox_5.MouseLeave += new System.EventHandler(this.TopRightTextBox_5_MouseLeave);
+            this.TopRightTextBox_5.MouseHover += new System.EventHandler(this.TopRightTextBox_5_MouseHover);
             // 
             // TopRightTextBox_4
             // 
             resources.ApplyResources(this.TopRightTextBox_4, "TopRightTextBox_4");
             this.TopRightTextBox_4.Name = "TopRightTextBox_4";
+            this.TopRightTextBox_4.MouseLeave += new System.EventHandler(this.TopRightTextBox_4_MouseLeave);
+            this.TopRightTextBox_4.MouseHover += new System.EventHandler(this.TopRightTextBox_4_MouseHover);
             // 
             // TopRightTextBox_3
             // 
             resources.ApplyResources(this.TopRightTextBox_3, "TopRightTextBox_3");
             this.TopRightTextBox_3.Name = "TopRightTextBox_3";
+            this.TopRightTextBox_3.MouseLeave += new System.EventHandler(this.TopRightTextBox_3_MouseLeave);
+            this.TopRightTextBox_3.MouseHover += new System.EventHandler(this.TopRightTextBox_3_MouseHover);
             // 
             // TopRightTextBox_2
             // 
             resources.ApplyResources(this.TopRightTextBox_2, "TopRightTextBox_2");
             this.TopRightTextBox_2.Name = "TopRightTextBox_2";
+            this.TopRightTextBox_2.MouseLeave += new System.EventHandler(this.TopRightTextBox_2_MouseLeave);
+            this.TopRightTextBox_2.MouseHover += new System.EventHandler(this.TopRightTextBox_2_MouseHover);
             // 
             // TopRightTextBox_1
             // 
             resources.ApplyResources(this.TopRightTextBox_1, "TopRightTextBox_1");
             this.TopRightTextBox_1.Name = "TopRightTextBox_1";
+            this.TopRightTextBox_1.MouseLeave += new System.EventHandler(this.TopRightTextBox_1_MouseLeave);
+            this.TopRightTextBox_1.MouseHover += new System.EventHandler(this.TopRightTextBox_1_MouseHover);
             // 
             // TopLeftTextBox_8
             // 
             resources.ApplyResources(this.TopLeftTextBox_8, "TopLeftTextBox_8");
             this.TopLeftTextBox_8.Name = "TopLeftTextBox_8";
-            this.TopLeftTextBox_8.Click += new System.EventHandler(this.TopLeftTextBox_8_Click);
             this.TopLeftTextBox_8.MouseLeave += new System.EventHandler(this.TopLeftTextBox_8_MouseLeave);
             this.TopLeftTextBox_8.MouseHover += new System.EventHandler(this.TopLeftTextBox_8_MouseHover);
             // 
@@ -724,36 +798,50 @@
             // 
             resources.ApplyResources(this.TopLeftTextBox_7, "TopLeftTextBox_7");
             this.TopLeftTextBox_7.Name = "TopLeftTextBox_7";
+            this.TopLeftTextBox_7.MouseLeave += new System.EventHandler(this.TopLeftTextBox_7_MouseLeave);
+            this.TopLeftTextBox_7.MouseHover += new System.EventHandler(this.TopLeftTextBox_7_MouseHover);
             // 
             // TopLeftTextBox_6
             // 
             resources.ApplyResources(this.TopLeftTextBox_6, "TopLeftTextBox_6");
             this.TopLeftTextBox_6.Name = "TopLeftTextBox_6";
+            this.TopLeftTextBox_6.MouseLeave += new System.EventHandler(this.TopLeftTextBox_6_MouseLeave);
+            this.TopLeftTextBox_6.MouseHover += new System.EventHandler(this.TopLeftTextBox_6_MouseHover);
             // 
             // TopLeftTextBox_5
             // 
             resources.ApplyResources(this.TopLeftTextBox_5, "TopLeftTextBox_5");
             this.TopLeftTextBox_5.Name = "TopLeftTextBox_5";
+            this.TopLeftTextBox_5.MouseLeave += new System.EventHandler(this.TopLeftTextBox_5_MouseLeave);
+            this.TopLeftTextBox_5.MouseHover += new System.EventHandler(this.TopLeftTextBox_5_MouseHover);
             // 
             // TopLeftTextBox_4
             // 
             resources.ApplyResources(this.TopLeftTextBox_4, "TopLeftTextBox_4");
             this.TopLeftTextBox_4.Name = "TopLeftTextBox_4";
+            this.TopLeftTextBox_4.MouseLeave += new System.EventHandler(this.TopLeftTextBox_4_MouseLeave);
+            this.TopLeftTextBox_4.MouseHover += new System.EventHandler(this.TopLeftTextBox_4_MouseHover);
             // 
             // TopLeftTextBox_3
             // 
             resources.ApplyResources(this.TopLeftTextBox_3, "TopLeftTextBox_3");
             this.TopLeftTextBox_3.Name = "TopLeftTextBox_3";
+            this.TopLeftTextBox_3.MouseLeave += new System.EventHandler(this.TopLeftTextBox_3_MouseLeave);
+            this.TopLeftTextBox_3.MouseHover += new System.EventHandler(this.TopLeftTextBox_3_MouseHover);
             // 
             // TopLeftTextBox_2
             // 
             resources.ApplyResources(this.TopLeftTextBox_2, "TopLeftTextBox_2");
             this.TopLeftTextBox_2.Name = "TopLeftTextBox_2";
+            this.TopLeftTextBox_2.MouseLeave += new System.EventHandler(this.TopLeftTextBox_2_MouseLeave);
+            this.TopLeftTextBox_2.MouseHover += new System.EventHandler(this.TopLeftTextBox_2_MouseHover);
             // 
             // TopLeftTextBox_1
             // 
             resources.ApplyResources(this.TopLeftTextBox_1, "TopLeftTextBox_1");
             this.TopLeftTextBox_1.Name = "TopLeftTextBox_1";
+            this.TopLeftTextBox_1.MouseLeave += new System.EventHandler(this.TopLeftTextBox_1_MouseLeave);
+            this.TopLeftTextBox_1.MouseHover += new System.EventHandler(this.TopLeftTextBox_1_MouseHover);
             // 
             // label5
             // 
@@ -877,9 +965,9 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem головнаToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem справкаToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem настройкиToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tsmiSettings;
         private System.Windows.Forms.ToolStripMenuItem вихідToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem посібникКористувачаToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tsmiUserInfo;
         private System.Windows.Forms.ToolStripMenuItem проПрограммуToolStripMenuItem;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Panel panel2;
@@ -957,7 +1045,7 @@
         private System.Windows.Forms.TextBox TopRightTextBox_3;
         private System.Windows.Forms.TextBox TopRightTextBox_2;
         private System.Windows.Forms.TextBox TopRightTextBox_1;
-        private System.Windows.Forms.TextBox TopLeftTextBox_8;
+        public System.Windows.Forms.TextBox TopLeftTextBox_8;
         private System.Windows.Forms.TextBox TopLeftTextBox_7;
         private System.Windows.Forms.TextBox TopLeftTextBox_6;
         private System.Windows.Forms.TextBox TopLeftTextBox_5;
@@ -978,6 +1066,9 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.TabControl TabControl;
+        private System.Windows.Forms.ToolStripMenuItem допомогаToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tsmiContacts;
+        private System.Windows.Forms.ToolStripMenuItem tsmiRemoteControl;
     }
 }
 

@@ -130,7 +130,7 @@ namespace Stomatology
                 a = float.Parse(txtTotal.Text);
                 txtTotal.Clear();
                 count = 1;
-                lblCurResult.Text = a.ToString() + "+";
+                lblCurResult.Text = a.ToString() + " +";
 
             }
             else
@@ -142,7 +142,7 @@ namespace Stomatology
                 a = b;
                 txtTotal.Clear();
                 count = 1;
-                lblCurResult.Text = b.ToString() + "+";
+                lblCurResult.Text = b.ToString() + " +";
 
             }
 
@@ -163,7 +163,7 @@ namespace Stomatology
                 a = float.Parse(txtTotal.Text);
                 txtTotal.Clear();
                 count = 2;
-                lblCurResult.Text = a.ToString() + "-";
+                lblCurResult.Text = a.ToString() + " -";
 
 
             }
@@ -175,7 +175,7 @@ namespace Stomatology
                 a = b;
                 txtTotal.Clear();
                 count = 2;
-                lblCurResult.Text = b.ToString() + "-";
+                lblCurResult.Text = b.ToString() + " -";
 
 
             }
@@ -196,7 +196,7 @@ namespace Stomatology
                 a = float.Parse(txtTotal.Text);
                 txtTotal.Clear();
                 count = 3;
-                lblCurResult.Text = a.ToString() + "*";
+                lblCurResult.Text = a.ToString() + " *";
             }
             else
             {
@@ -207,7 +207,7 @@ namespace Stomatology
                 a = b;
                 txtTotal.Clear();
                 count = 3;
-                lblCurResult.Text = b.ToString() + "*";
+                lblCurResult.Text = b.ToString() + " *";
             }
         }
 
@@ -226,7 +226,7 @@ namespace Stomatology
                 a = float.Parse(txtTotal.Text);
                 txtTotal.Clear();
                 count = 4;
-                lblCurResult.Text = a.ToString() + "/";
+                lblCurResult.Text = a.ToString() + " /";
             }
             else
             {
@@ -237,7 +237,7 @@ namespace Stomatology
                 a = b;
                 txtTotal.Clear();
                 count = 4;
-                lblCurResult.Text = b.ToString() + "/";
+                lblCurResult.Text = b.ToString() + " /";
             }
 
         }

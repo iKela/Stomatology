@@ -33,5 +33,17 @@ namespace Stomatology.Properties {
                 return ((string)(this["StomatologyDataConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string TeamViewerDirection {
+            get {
+                return ((string)(this["TeamViewerDirection"]));
+            }
+            set {
+                this["TeamViewerDirection"] = value;
+            }
+        }
     }
 }
