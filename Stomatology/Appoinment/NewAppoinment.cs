@@ -69,11 +69,12 @@ namespace Stomatology
                     if (string.IsNullOrEmpty(cmbPatient.Text)) throw new Exception("Виберіть  Паціента!");
                     testCon.Open();
                     string PacientId = "";
-                    string query = $"select * from [Pacient] where [Name] = N'{cmbPatient.Text}'";
-                    SqlCommand cmd1 = new SqlCommand(query, testCon); SqlDataReader reader = cmd1.ExecuteReader();
+                    string query = $"select * from Pacient where [Name] = N'{cmbPatient.Text}'";
+                    SqlCommand cmd1 = new SqlCommand(query, testCon);
+                    SqlDataReader reader = cmd1.ExecuteReader();
                     if (reader.Read())
                     {
-                        PacientId = reader["Id"].ToString();
+                        PacientId = reader["Pacient_Id"].ToString();
                     }
                     else
                     {

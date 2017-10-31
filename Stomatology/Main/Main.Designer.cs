@@ -138,6 +138,8 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.TabControl = new System.Windows.Forms.TabControl();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.txtBDate = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -272,6 +274,7 @@
             resources.ApplyResources(this.dataGridView1, "dataGridView1");
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // id
@@ -323,6 +326,8 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.txtBDate);
+            this.panel3.Controls.Add(this.btnUpdate);
             this.panel3.Controls.Add(this.button7);
             this.panel3.Controls.Add(this.button6);
             this.panel3.Controls.Add(this.button5);
@@ -932,6 +937,18 @@
             this.TabControl.Name = "TabControl";
             this.TabControl.SelectedIndex = 0;
             // 
+            // btnUpdate
+            // 
+            resources.ApplyResources(this.btnUpdate, "btnUpdate");
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // txtBDate
+            // 
+            resources.ApplyResources(this.txtBDate, "txtBDate");
+            this.txtBDate.Name = "txtBDate";
+            // 
             // Main
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -1066,6 +1083,8 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.TabControl TabControl;
+        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.TextBox txtBDate;
         private System.Windows.Forms.ToolStripMenuItem допомогаToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tsmiContacts;
         private System.Windows.Forms.ToolStripMenuItem tsmiRemoteControl;
