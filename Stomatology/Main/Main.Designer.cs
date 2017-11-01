@@ -181,7 +181,6 @@
             // 
             resources.ApplyResources(this.tsmiSettings, "tsmiSettings");
             this.tsmiSettings.Name = "tsmiSettings";
-            this.tsmiSettings.Click += new System.EventHandler(this.tsmiSettings_Click);
             // 
             // вихідToolStripMenuItem
             // 
@@ -201,7 +200,6 @@
             // 
             resources.ApplyResources(this.tsmiUserInfo, "tsmiUserInfo");
             this.tsmiUserInfo.Name = "tsmiUserInfo";
-            this.tsmiUserInfo.Click += new System.EventHandler(this.tsmiUserInfo_Click);
             // 
             // проПрограммуToolStripMenuItem
             // 
@@ -221,7 +219,6 @@
             // 
             resources.ApplyResources(this.tsmiContacts, "tsmiContacts");
             this.tsmiContacts.Name = "tsmiContacts";
-            this.tsmiContacts.Click += new System.EventHandler(this.tsmiContacts_Click);
             // 
             // tsmiRemoteControl
             // 
@@ -458,7 +455,8 @@
             this.comboBox1.FormattingEnabled = true;
             resources.ApplyResources(this.comboBox1, "comboBox1");
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+           
+            this.comboBox1.SelectedValueChanged += new System.EventHandler(this.comboBox1_SelectedValueChanged);
             // 
             // textBox2
             // 

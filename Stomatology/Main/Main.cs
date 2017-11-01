@@ -14,13 +14,14 @@ namespace Stomatology
 {
     public partial class Main : Form
     {
-        private Settings settingsForm;
+        //private Settings settingsForm;
         SqlConnection testCon = new SqlConnection
      (@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\GoogleDrive InSoP\Stomatology\Stomatology\DataStomatology.mdf;Integrated Security=True");
 
         string direction;
         int MHIndex;
         int MLIndex;
+        string PacientId;
 
         public void PassValue(string strValue)
         {
@@ -65,6 +66,10 @@ namespace Stomatology
         }
         public void Buttonclear()
         {
+            txtBDate.Text = "";
+            textBox2.Text = "";
+            textBox1.Text = "";
+            txtMoney.Text = "";
             TopLeftTextBox_1.Text = "";
             TopLeftTextBox_2.Text = "";
             TopLeftTextBox_3.Text = "";
@@ -128,7 +133,7 @@ namespace Stomatology
             AboutSoft newForm = new AboutSoft();
             newForm.Show();
         }
-        string PacientId;
+        
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             comboBox1.Items.Clear();
@@ -148,7 +153,7 @@ namespace Stomatology
                     sqlReader = command.ExecuteReader();
                     while (sqlReader.Read())
                     {
-                        comboBox1.Items.Add(Convert.ToString(sqlReader["Date"]));
+                        comboBox1.Items.Add(sqlReader["Date"]);
                     }
                 
                 sqlReader.Close();
@@ -157,15 +162,111 @@ namespace Stomatology
         }
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-           
-        }
-        string ReceptionId = "";  //-----------------------------------------------------------------------------------------------------------------------------------------------------
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-           
-        }
-        //-----------------------------------------------------------------------------------------------------------------------------------------------------
+            try
+            {
+                if (comboBox1.Text.Length == 0 || dataGridView1.SelectedRows.Count == 0)
+                    throw new Exception("Не вибрана дата прийому, перевірте ще раз!");
+                else
+                {
+                    testCon.Open();
+                    string ReceptionId = "";
+                    string query = $"select Reception_Id from Reception where [Date] = N'{comboBox1.Text}'";
+                    SqlCommand cmd1 = new SqlCommand(query, testCon);
+                    SqlDataReader reader = cmd1.ExecuteReader();
+                    if (reader.Read())
+                    {
+                        ReceptionId = reader["Reception_Id"].ToString();
+                    }
+                    else
+                    {
+                        throw new Exception("Не вибрана дата прийому, перевірте ще раз!");
+                    }
+                    testCon.Close();
 
+
+                    if (dataGridView1.SelectedRows.Count > 0)
+                    {
+                        string uId = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
+                        string qwery = "update Reception " + $"set Date = N'{txtBDate.Text}', " + $"Info = N'{textBox1.Text}', " + $"Money = N'{txtMoney.Text}', " +
+                             $"tlt1 = N'{TopLeftTextBox_1.Text}', " + $"tlt2 = N'{TopLeftTextBox_2.Text}', " + $"tlt3 = N'{TopLeftTextBox_3.Text}',  " + $"tlt4 = N'{TopLeftTextBox_4.Text}',  " +
+                             $"tlt5 = N'{TopLeftTextBox_5.Text}', " + $"tlt6 = N'{TopLeftTextBox_6.Text}',  " + $"tlt7 = N'{TopLeftTextBox_7.Text}',  " + $"tlt8 = N'{TopLeftTextBox_8.Text}', " +
+                             $"trt1 = N'{TopRightTextBox_1.Text}', " + $"trt2 = N'{TopRightTextBox_2.Text}', " + $"trt3 = N'{TopRightTextBox_3.Text}', " + $"trt4 = N'{TopRightTextBox_4.Text}', " +
+                             $"trt5 = N'{TopRightTextBox_5.Text}', " + $"trt6 = N'{TopRightTextBox_6.Text}', " + $"trt7 = N'{TopRightTextBox_7.Text}', " + $"trt8 = N'{TopRightTextBox_8.Text}'," +
+                             $"brt1 = N'{BotRightTextBox_8.Text}', " + $"brt2 = N'{BotRightTextBox_7.Text}', " + $"brt3 = N'{BotRightTextBox_6.Text}', " + $"brt4 = N'{BotRightTextBox_5.Text}', " +
+                             $"brt5 = N'{BotRightTextBox_4.Text}', " + $"brt6 = N'{BotRightTextBox_3.Text}', " + $"brt7 = N'{BotRightTextBox_2.Text}', " + $"brt8 = N'{BotRightTextBox_1.Text}', " +
+                             $"blt1 = N'{BotLeftTextBox_8.Text}',  " + $"blt2 = N'{BotLeftTextBox_7.Text}',  " + $"blt3 = N'{BotLeftTextBox_6.Text}', " + $"blt4 = N'{BotLeftTextBox_5.Text}', " +
+                             $"blt5 = N'{BotLeftTextBox_4.Text}',  " + $"blt6 = N'{BotLeftTextBox_3.Text}', " + $"blt7 = N'{BotLeftTextBox_2.Text}',  " + $"blt8 = N'{BotLeftTextBox_1.Text}' " +
+                             $"where Reception_Id = {ReceptionId}";
+
+                        testCon.Open();
+                        SqlCommand upbtn = new SqlCommand(qwery, testCon);
+                        upbtn.ExecuteNonQuery();
+                        testCon.Close();
+                        updateTable();
+                        Buttonclear();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Помилка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                testCon.Close();
+            }
+        }
+        private void comboBox1_SelectedValueChanged(object sender, EventArgs e)
+        {
+            string query1 = $"SELECT * From Reception where  Date = '{comboBox1.Text}'  and Pacient_Id = '{PacientId}'";
+
+            testCon.Open();
+            SqlDataReader sqlReader = null;
+            SqlCommand command = new SqlCommand(query1, testCon);
+            sqlReader = command.ExecuteReader();
+            while (sqlReader.Read())
+            {
+                txtBDate.Text = sqlReader["Date"].ToString();
+                textBox1.Text = sqlReader["info"].ToString();
+                txtMoney.Text = sqlReader["Money"].ToString();
+
+                TopLeftTextBox_1.Text = sqlReader["tlt1"].ToString();
+                TopLeftTextBox_2.Text = sqlReader["tlt2"].ToString();
+                TopLeftTextBox_3.Text = sqlReader["tlt3"].ToString();
+                TopLeftTextBox_4.Text = sqlReader["tlt4"].ToString();
+                TopLeftTextBox_5.Text = sqlReader["tlt5"].ToString();
+                TopLeftTextBox_6.Text = sqlReader["tlt6"].ToString();
+                TopLeftTextBox_7.Text = sqlReader["tlt7"].ToString();
+                TopLeftTextBox_8.Text = sqlReader["tlt8"].ToString();
+
+                TopRightTextBox_1.Text = sqlReader["trt1"].ToString();
+                TopRightTextBox_2.Text = sqlReader["trt2"].ToString();
+                TopRightTextBox_3.Text = sqlReader["trt3"].ToString();
+                TopRightTextBox_4.Text = sqlReader["trt4"].ToString();
+                TopRightTextBox_5.Text = sqlReader["trt5"].ToString();
+                TopRightTextBox_6.Text = sqlReader["trt6"].ToString();
+                TopRightTextBox_7.Text = sqlReader["trt7"].ToString();
+                TopRightTextBox_8.Text = sqlReader["trt8"].ToString();
+
+                BotRightTextBox_8.Text = sqlReader["brt1"].ToString();
+                BotRightTextBox_7.Text = sqlReader["brt2"].ToString();
+                BotRightTextBox_6.Text = sqlReader["brt3"].ToString();
+                BotRightTextBox_5.Text = sqlReader["brt4"].ToString();
+                BotRightTextBox_4.Text = sqlReader["brt5"].ToString();
+                BotRightTextBox_3.Text = sqlReader["brt6"].ToString();
+                BotRightTextBox_2.Text = sqlReader["brt7"].ToString();
+                BotRightTextBox_1.Text = sqlReader["brt8"].ToString();
+
+                BotLeftTextBox_8.Text = sqlReader["blt1"].ToString();
+                BotLeftTextBox_7.Text = sqlReader["blt2"].ToString();
+                BotLeftTextBox_6.Text = sqlReader["blt3"].ToString();
+                BotLeftTextBox_5.Text = sqlReader["blt4"].ToString();
+                BotLeftTextBox_4.Text = sqlReader["blt5"].ToString();
+                BotLeftTextBox_3.Text = sqlReader["blt6"].ToString();
+                BotLeftTextBox_2.Text = sqlReader["blt7"].ToString();
+                BotLeftTextBox_1.Text = sqlReader["blt8"].ToString();
+            }
+            sqlReader.Close();
+            testCon.Close();
+        }
+       
         private void btnCalculator_Click(object sender, EventArgs e)
         {
             Calculator newForm = new Calculator(this);
@@ -173,27 +274,27 @@ namespace Stomatology
         }
 
 
-        private void tsmiSettings_Click(object sender, EventArgs e)
-        {
-            Settings newForm = new Settings(this);
-            newForm.Show();
-        }
-        private void tsmiContacts_Click(object sender, EventArgs e)
-        {
-            HelpContacts newForm = new HelpContacts();
-            newForm.Show();
-        }
+        //private void tsmiSettings_Click(object sender, EventArgs e)
+        //{
+        //    Settings newForm = new Settings(this);
+        //    newForm.Show();
+        //}
+        //private void tsmiContacts_Click(object sender, EventArgs e)
+        //{
+        //    HelpContacts newForm = new HelpContacts();
+        //    newForm.Show();
+        //}
 
-        private void tsmiUserInfo_Click(object sender, EventArgs e)
-        {
-            UserInfo newForm = new UserInfo();
-            newForm.Show();
-        }
+        //private void tsmiUserInfo_Click(object sender, EventArgs e)
+        //{
+        //    UserInfo newForm = new UserInfo();
+        //    newForm.Show();
+        //}
 
-        public Main(Settings otherForm)
-        {
-            settingsForm = otherForm;
-        }
+        //public Main(Settings otherForm)
+        //{
+        //    settingsForm = otherForm;
+        //}
 
         private void tsmiRemoteControl_Click(object sender, EventArgs e)
         {
@@ -1006,6 +1107,7 @@ namespace Stomatology
         }
         #endregion
 
+       
     }
 }
 

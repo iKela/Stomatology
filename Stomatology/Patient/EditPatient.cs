@@ -75,9 +75,9 @@ namespace Stomatology
             if (dataGridView1.SelectedRows.Count > 0)
                 {
                 string uId = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();   
-                string query = "update Pacient " + $"set Name = N'{textBox5.Text}', " + $"Birthday = N'{dtpBirthday.Value.Date.ToString("M/d/yyyy")}', "
+                string query = "update Pacient " + $"set Name = N'{textBox5.Text}', " + $"Birthday = N'{dtpBirthday.Value.Date.ToString("dd/mm/yyyy")}', "
                     + $"Number = N'{textBox3.Text}', " + $"Adress = N'{textBox2.Text}' "
-                    + $"where Id = {uId}";
+                    + $"where Pacient_Id = {uId}";
 
 
                 testCon.Open();
