@@ -110,12 +110,13 @@
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.cmbPatient = new System.Windows.Forms.ComboBox();
+            this.comboBoxDoctor = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(122, 52);
+            this.dateTimePicker1.Location = new System.Drawing.Point(122, 68);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(137, 20);
             this.dateTimePicker1.TabIndex = 0;
@@ -134,7 +135,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(44, 52);
+            this.label2.Location = new System.Drawing.Point(44, 68);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(48, 18);
             this.label2.TabIndex = 3;
@@ -787,7 +788,7 @@
             this.button4.Enabled = false;
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(18, 52);
+            this.button4.Location = new System.Drawing.Point(18, 68);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(20, 20);
             this.button4.TabIndex = 78;
@@ -840,12 +841,21 @@
             this.cmbPatient.Size = new System.Drawing.Size(402, 21);
             this.cmbPatient.TabIndex = 1;
             // 
+            // comboBoxDoctor
+            // 
+            this.comboBoxDoctor.FormattingEnabled = true;
+            this.comboBoxDoctor.Location = new System.Drawing.Point(122, 39);
+            this.comboBoxDoctor.Name = "comboBoxDoctor";
+            this.comboBoxDoctor.Size = new System.Drawing.Size(402, 21);
+            this.comboBoxDoctor.TabIndex = 82;
+            // 
             // NewAppoinment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(572, 645);
+            this.Controls.Add(this.comboBoxDoctor);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
@@ -1020,5 +1030,6 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.ComboBox cmbPatient;
+        private System.Windows.Forms.ComboBox comboBoxDoctor;
     }
 }

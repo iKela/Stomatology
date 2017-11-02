@@ -16,7 +16,7 @@ namespace Stomatology
         SqlConnection testCon = new SqlConnection
         (@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\GoogleDrive InSoP\Stomatology\Stomatology\DataStomatology.mdf;Integrated Security=True");
 
-
+        string[] Doctor = {"Кричильський Леонід ТОРИОТт", " Кричильський Тетяна вміваміТт" , "Кричильський Мапяна миапвиа" };
         public void PassValue(string strValue)
         {
             txtMoney.Text = strValue;
@@ -56,6 +56,7 @@ namespace Stomatology
                 if (sqlReader != null) sqlReader.Close();
             }
             testCon.Close();
+            comboBoxDoctor.Items.AddRange(Doctor);
         }
         // ----------------------------------------------------------------------------------------------------------------------------------------------------------
         private void button1_Click(object sender, EventArgs e)
@@ -88,13 +89,13 @@ namespace Stomatology
                     cmd.CommandText = $"INSERT INTO Reception (Date, Pacient_Id, Info, Money, tlt1, tlt2, tlt3, tlt4, tlt5, tlt6, tlt7, tlt8, " +
                         $"trt1, trt2, trt3, trt4, trt5, trt6, trt7, trt8, " +
                         $"brt1, brt2, brt3, brt4, brt5, brt6, brt7, brt8, " +
-                        $"blt1, blt2, blt3, blt4, blt5, blt6, blt7, blt8)" +
+                        $"blt1, blt2, blt3, blt4, blt5, blt6, blt7, blt8, Doctor)" +
                         $"values (N'{dateTimePicker1.Value.Date.ToString("dd/MM/yyyy")}', '{PacientId}', N'{txtDescription.Text}', N'{txtMoney.Text}', "+
 
                         $" N'{TopLeftTextBox_1.Text}', N'{TopLeftTextBox_2.Text}',   N'{TopLeftTextBox_3.Text}', N'{TopLeftTextBox_4.Text}', N'{TopLeftTextBox_5.Text}', N'{TopLeftTextBox_6.Text}', N'{TopLeftTextBox_7.Text}', N'{TopLeftTextBox_8.Text}'," +
                         $" N'{TopRightTextBox_1.Text}', N'{TopRightTextBox_2.Text}', N'{TopRightTextBox_3.Text}', N'{TopRightTextBox_4.Text}', N'{TopRightTextBox_5.Text}', N'{TopRightTextBox_6.Text}', N'{TopRightTextBox_7.Text}', N'{TopRightTextBox_8.Text}'," +  
                         $" N'{BotRightTextBox_8.Text}', N'{BotRightTextBox_7.Text}', N'{BotRightTextBox_6.Text}', N'{BotRightTextBox_5.Text}', N'{BotRightTextBox_4.Text}', N'{BotRightTextBox_3.Text}', N'{BotRightTextBox_2.Text}', N'{BotRightTextBox_1.Text}'," +                          
-                        $" N'{BotLeftTextBox_8.Text}',  N'{BotLeftTextBox_7.Text}',  N'{BotLeftTextBox_6.Text}', N'{BotLeftTextBox_5.Text}', N'{BotLeftTextBox_4.Text}', N'{BotLeftTextBox_3.Text}', N'{BotLeftTextBox_2.Text}', N'{BotLeftTextBox_1.Text}')";
+                        $" N'{BotLeftTextBox_8.Text}',  N'{BotLeftTextBox_7.Text}',  N'{BotLeftTextBox_6.Text}', N'{BotLeftTextBox_5.Text}', N'{BotLeftTextBox_4.Text}', N'{BotLeftTextBox_3.Text}', N'{BotLeftTextBox_2.Text}', N'{BotLeftTextBox_1.Text}', N'{comboBoxDoctor.SelectedItem}')";
                  
                     cmd.ExecuteNonQuery();                                                                                                                                                                  
                                                                                                                                                                                

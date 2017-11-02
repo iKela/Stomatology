@@ -162,7 +162,7 @@ namespace Stomatology
         }
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            try
+           try
             {
                 if (comboBox1.Text.Length == 0 || dataGridView1.SelectedRows.Count == 0)
                     throw new Exception("Не вибрана дата прийому, перевірте ще раз!");
@@ -187,7 +187,7 @@ namespace Stomatology
                     if (dataGridView1.SelectedRows.Count > 0)
                     {
                         string uId = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
-                        string qwery = "update Reception " + $"set Date = N'{txtBDate.Text}', " + $"Info = N'{textBox1.Text}', " + $"Money = N'{txtMoney.Text}', " +
+                        string qweryn = "update Reception " + $"set Date = N'{txtBDate.Text}', " + $"Info = N'{textBox1.Text}', " + $"Money = N'{txtMoney.Text}', " +
                              $"tlt1 = N'{TopLeftTextBox_1.Text}', " + $"tlt2 = N'{TopLeftTextBox_2.Text}', " + $"tlt3 = N'{TopLeftTextBox_3.Text}',  " + $"tlt4 = N'{TopLeftTextBox_4.Text}',  " +
                              $"tlt5 = N'{TopLeftTextBox_5.Text}', " + $"tlt6 = N'{TopLeftTextBox_6.Text}',  " + $"tlt7 = N'{TopLeftTextBox_7.Text}',  " + $"tlt8 = N'{TopLeftTextBox_8.Text}', " +
                              $"trt1 = N'{TopRightTextBox_1.Text}', " + $"trt2 = N'{TopRightTextBox_2.Text}', " + $"trt3 = N'{TopRightTextBox_3.Text}', " + $"trt4 = N'{TopRightTextBox_4.Text}', " +
@@ -199,7 +199,7 @@ namespace Stomatology
                              $"where Reception_Id = {ReceptionId}";
 
                         testCon.Open();
-                        SqlCommand upbtn = new SqlCommand(qwery, testCon);
+                        SqlCommand upbtn = new SqlCommand(qweryn, testCon);
                         upbtn.ExecuteNonQuery();
                         testCon.Close();
                         updateTable();
@@ -212,6 +212,8 @@ namespace Stomatology
                 MessageBox.Show(ex.Message, "Помилка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 testCon.Close();
             }
+           
+            
         }
         private void comboBox1_SelectedValueChanged(object sender, EventArgs e)
         {
