@@ -111,6 +111,8 @@
             this.button7 = new System.Windows.Forms.Button();
             this.cmbPatient = new System.Windows.Forms.ComboBox();
             this.comboBoxDoctor = new System.Windows.Forms.ComboBox();
+            this.button8 = new System.Windows.Forms.Button();
+            this.label37 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -125,7 +127,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(44, 11);
+            this.label1.Location = new System.Drawing.Point(44, 40);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(69, 18);
             this.label1.TabIndex = 2;
@@ -775,7 +777,7 @@
             this.button3.Enabled = false;
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(18, 11);
+            this.button3.Location = new System.Drawing.Point(18, 40);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(20, 20);
             this.button3.TabIndex = 77;
@@ -836,7 +838,7 @@
             // cmbPatient
             // 
             this.cmbPatient.FormattingEnabled = true;
-            this.cmbPatient.Location = new System.Drawing.Point(122, 12);
+            this.cmbPatient.Location = new System.Drawing.Point(122, 41);
             this.cmbPatient.Name = "cmbPatient";
             this.cmbPatient.Size = new System.Drawing.Size(402, 21);
             this.cmbPatient.TabIndex = 1;
@@ -844,10 +846,33 @@
             // comboBoxDoctor
             // 
             this.comboBoxDoctor.FormattingEnabled = true;
-            this.comboBoxDoctor.Location = new System.Drawing.Point(122, 39);
+            this.comboBoxDoctor.Location = new System.Drawing.Point(122, 12);
             this.comboBoxDoctor.Name = "comboBoxDoctor";
             this.comboBoxDoctor.Size = new System.Drawing.Size(402, 21);
             this.comboBoxDoctor.TabIndex = 82;
+            // 
+            // button8
+            // 
+            this.button8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button8.BackgroundImage")));
+            this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button8.Enabled = false;
+            this.button8.FlatAppearance.BorderSize = 0;
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.Location = new System.Drawing.Point(18, 11);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(20, 20);
+            this.button8.TabIndex = 84;
+            this.button8.UseVisualStyleBackColor = true;
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label37.Location = new System.Drawing.Point(44, 11);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(52, 18);
+            this.label37.TabIndex = 83;
+            this.label37.Text = "Лікар:";
             // 
             // NewAppoinment
             // 
@@ -855,6 +880,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(572, 645);
+            this.Controls.Add(this.button8);
+            this.Controls.Add(this.label37);
             this.Controls.Add(this.comboBoxDoctor);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
@@ -1031,5 +1058,7 @@
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.ComboBox cmbPatient;
         private System.Windows.Forms.ComboBox comboBoxDoctor;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Label label37;
     }
 }
