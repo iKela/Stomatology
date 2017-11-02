@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Diagnostics;
 using System.Data.SqlClient;
 
+
 namespace Stomatology
 {
     public partial class Main : Form
@@ -68,6 +69,7 @@ namespace Stomatology
         }
         public void Buttonclear()
         {
+            lblDoctor.Text = "";
             txtBDate.Text = "";
             textBox2.Text = "";
             textBox1.Text = "";
@@ -230,6 +232,7 @@ namespace Stomatology
             sqlReader = command.ExecuteReader();
             while (sqlReader.Read())
             {
+                lblDoctor.Text = sqlReader["Doctor"].ToString();
                 txtBDate.Text = sqlReader["Date"].ToString();
                 textBox1.Text = sqlReader["info"].ToString();
                 txtMoney.Text = sqlReader["Money"].ToString();
