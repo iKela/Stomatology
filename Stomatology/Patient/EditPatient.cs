@@ -33,10 +33,11 @@ namespace Stomatology
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            string dtpB;
             if (dataGridView1.SelectedRows.Count > 0)
             {
                 textBox5.Text = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
-                dtpBirthday.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
+                dtpB = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
                 textBox3.Text = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
                 textBox2.Text = dataGridView1.SelectedRows[0].Cells[4].Value.ToString();
                
