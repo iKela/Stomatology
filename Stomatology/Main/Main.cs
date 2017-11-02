@@ -14,13 +14,13 @@ namespace Stomatology
 {
     public partial class Main : Form
     {
-        //private Settings settingsForm;
+        private Settings settingsForm;
         SqlConnection testCon = new SqlConnection
-     (@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\GoogleDrive InSoP\Stomatology\Stomatology\DataStomatology.mdf;Integrated Security=True");
+        (@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\GoogleDrive InSoP\Stomatology\Stomatology\DataStomatology.mdf;Integrated Security=True");
 
-        string direction;
         int MHIndex;
         int MLIndex;
+        string direction;
         string PacientId;
 
         public void PassValue(string strValue)
@@ -39,8 +39,10 @@ namespace Stomatology
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            toolTip(); 
             updateTable();
             this.direction = Properties.Settings.Default.TeamViewerDirection;
+
         }
 
 
@@ -212,8 +214,11 @@ namespace Stomatology
                 MessageBox.Show(ex.Message, "Помилка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 testCon.Close();
             }
-           
-            
+            finally
+            {
+                comboBox1.Text = "";
+                comboBox1.Items.Clear();
+            }
         }
         private void comboBox1_SelectedValueChanged(object sender, EventArgs e)
         {
@@ -276,27 +281,27 @@ namespace Stomatology
         }
 
 
-        //private void tsmiSettings_Click(object sender, EventArgs e)
-        //{
-        //    Settings newForm = new Settings(this);
-        //    newForm.Show();
-        //}
-        //private void tsmiContacts_Click(object sender, EventArgs e)
-        //{
-        //    HelpContacts newForm = new HelpContacts();
-        //    newForm.Show();
-        //}
+        private void tsmiSettings_Click(object sender, EventArgs e)
+        {
+            Settings newForm = new Settings(this);
+            newForm.Show();
+        }
+        private void tsmiContacts_Click(object sender, EventArgs e)
+        {
+            HelpContacts newForm = new HelpContacts();
+            newForm.Show();
+        }
 
-        //private void tsmiUserInfo_Click(object sender, EventArgs e)
-        //{
-        //    UserInfo newForm = new UserInfo();
-        //    newForm.Show();
-        //}
+        private void tsmiUserInfo_Click(object sender, EventArgs e)
+        {
+            UserInfo newForm = new UserInfo();
+            newForm.Show();
+        }
 
-        //public Main(Settings otherForm)
-        //{
-        //    settingsForm = otherForm;
-        //}
+        public Main(Settings otherForm)
+        {
+            settingsForm = otherForm;
+        }
 
         private void tsmiRemoteControl_Click(object sender, EventArgs e)
         {
@@ -307,6 +312,34 @@ namespace Stomatology
         {
             Application.DoEvents();
         }
+        private void toolTip() // Підказки до кнопок та полів
+        {
+            toolTip1.IsBalloon = false;
+            toolTip1.SetToolTip(AddNewPatient, "Додати нового паціента.");
+            toolTip1.SetToolTip(EditPatient, "Редагувати дані паціента.");
+            toolTip1.SetToolTip(AddNewAppoinment, "Додати новий прийом.");
+            toolTip1.SetToolTip(txtBDate, "Відредагуйте, якщо бажаэте змінити дату прийому.");
+            if (lblDoctor.Text == string.Empty)
+            {
+                toolTip1.SetToolTip(lblDoctor, "Поле, де вказуэться лікар, який приймав паціента.");
+            }
+            else
+            {
+                toolTip1.SetToolTip(lblDoctor, "На полі вказано лікаря, який приймав паціента.");
+            }
+            if (textBox2.Text == string.Empty)
+            {
+                toolTip1.SetToolTip(textBox2, "Поле, де вказуэться паціент при перегляді або редагуванні прийому.");
+            }
+            else
+            {
+                toolTip1.SetToolTip(textBox2, "На полі вказано паціента який був на прийомі.\nВи маэте можливість редагувати це поле.");
+            }
+            toolTip1.SetToolTip(btnCalculator, "Калькулятор.\nСкористайтесь калькулятором, для точного підрахунку ціни наданих послуг.");
+            toolTip1.SetToolTip(textBox1, "Поле для додаткової інформації.");
+            toolTip1.SetToolTip(btnUpdate, "Оновити інформацію про паціента.");
+        }
+
         #region Mouse Hover & Leave на TextBox'и зубів
         //-----------TextBoxMouseHover------------------------------------------------------------------------------------------------------------------------------
         private void txtBoxMouseHover()
@@ -393,121 +426,121 @@ namespace Stomatology
                     }
                 case 14:
                     {
-                        this.TopRightTextBox_6.Location = new Point(404, 321);
+                        this.TopRightTextBox_6.Location = TopRightTextBox_5.Location;
                         this.TopRightTextBox_6.Size = new System.Drawing.Size(150, 150);
                         this.TopRightTextBox_6.BringToFront();
                         break;
                     }
                 case 15:
                     {
-                        this.TopRightTextBox_7.Location = new Point(404, 321);
+                        this.TopRightTextBox_7.Location = TopRightTextBox_5.Location;
                         this.TopRightTextBox_7.Size = new System.Drawing.Size(150, 150);
                         this.TopRightTextBox_7.BringToFront();
                         break;
                     }
                 case 16:
                     {
-                        this.TopRightTextBox_8.Location = new Point(404, 321);
+                        this.TopRightTextBox_8.Location = TopRightTextBox_5.Location;
                         this.TopRightTextBox_8.Size = new System.Drawing.Size(150, 150);
                         this.TopRightTextBox_8.BringToFront();
                         break;
                     }
                 case 17:
                     {
-                        this.BotLeftTextBox_8.Size = new System.Drawing.Size(150, 150);
+                        this.BotLeftTextBox_8.Size = new System.Drawing.Size(150, 115);
                         this.BotLeftTextBox_8.BringToFront();
                         break;
                     }
                 case 18:
                     {
-                        this.BotLeftTextBox_7.Size = new System.Drawing.Size(150, 150);
+                        this.BotLeftTextBox_7.Size = new System.Drawing.Size(150, 115);
                         this.BotLeftTextBox_7.BringToFront();
                         break;
                     }
                 case 19:
                     {
-                        this.BotLeftTextBox_6.Size = new System.Drawing.Size(150, 150);
+                        this.BotLeftTextBox_6.Size = new System.Drawing.Size(150, 115);
                         this.BotLeftTextBox_6.BringToFront();
                         break;
                     }
                 case 20:
                     {
-                        this.BotLeftTextBox_5.Size = new System.Drawing.Size(150, 150);
+                        this.BotLeftTextBox_5.Size = new System.Drawing.Size(150, 115);
                         this.BotLeftTextBox_5.BringToFront();
                         break;
                     }
                 case 21:
                     {
-                        this.BotLeftTextBox_4.Size = new System.Drawing.Size(150, 150);
+                        this.BotLeftTextBox_4.Size = new System.Drawing.Size(150, 115);
                         this.BotLeftTextBox_4.BringToFront();
                         break;
                     }
                 case 22:
                     {
-                        this.BotLeftTextBox_3.Size = new System.Drawing.Size(150, 150);
+                        this.BotLeftTextBox_3.Size = new System.Drawing.Size(150, 115);
                         this.BotLeftTextBox_3.BringToFront();
                         break;
                     }
                 case 23:
                     {
-                        this.BotLeftTextBox_2.Size = new System.Drawing.Size(150, 150);
+                        this.BotLeftTextBox_2.Size = new System.Drawing.Size(150, 115);
                         this.BotLeftTextBox_2.BringToFront();
                         break;
                     }
                 case 24:
                     {
-                        this.BotLeftTextBox_1.Size = new System.Drawing.Size(150, 150);
+                        this.BotLeftTextBox_1.Size = new System.Drawing.Size(150, 115);
                         this.BotLeftTextBox_1.BringToFront();
                         break;
                     }
                 case 25:
                     {
-                        this.BotRightTextBox_1.Size = new System.Drawing.Size(150, 150);
+                        this.BotRightTextBox_1.Size = new System.Drawing.Size(150, 115);
                         this.BotRightTextBox_1.BringToFront();
                         break;
                     }
                 case 26:
                     {
-                        this.BotRightTextBox_2.Size = new System.Drawing.Size(150, 150);
+                        this.BotRightTextBox_2.Size = new System.Drawing.Size(150, 115);
                         this.BotRightTextBox_2.BringToFront();
                         break;
                     }
                 case 27:
                     {
-                        this.BotRightTextBox_3.Size = new System.Drawing.Size(150, 150);
+                        this.BotRightTextBox_3.Size = new System.Drawing.Size(150, 115);
                         this.BotRightTextBox_3.BringToFront();
                         break;
                     }
                 case 28:
                     {
-                        this.BotRightTextBox_4.Size = new System.Drawing.Size(150, 150);
+                        this.BotRightTextBox_4.Size = new System.Drawing.Size(150, 115);
                         this.BotRightTextBox_4.BringToFront();
                         break;
                     }
                 case 29:
                     {
-                        this.BotRightTextBox_5.Size = new System.Drawing.Size(150, 150);
+                        this.BotRightTextBox_5.Size = new System.Drawing.Size(150, 115);
                         this.BotRightTextBox_5.BringToFront();
                         break;
                     }
                 case 30:
                     {
-                        this.BotRightTextBox_6.Location = new Point(404, 382);
-                        this.BotRightTextBox_6.Size = new System.Drawing.Size(150, 150);
+                        this.BotRightTextBox_6.Location = BotRightTextBox_5.Location;
+                        this.BotRightTextBox_6.Size = new System.Drawing.Size(150, 115);
                         this.BotRightTextBox_6.BringToFront();
                         break;
                     }
                 case 31:
                     {
-                        this.BotRightTextBox_7.Location = new Point(404, 382);
-                        this.BotRightTextBox_7.Size = new System.Drawing.Size(150, 150);
+                        this.BotRightTextBox_7.Location = BotRightTextBox_5.Location;
+                        this.BotRightTextBox_7.Size = new System.Drawing.Size(150, 115);
                         this.BotRightTextBox_7.BringToFront();
                         break;
                     }
                 case 32:
                     {
-                        this.BotRightTextBox_8.Location = new Point(404, 382);
-                        this.BotRightTextBox_8.Size = new System.Drawing.Size(150, 150);
+                        this.BotRightTextBox_8.Location = BotRightTextBox_5.Location;
+                        this.BotRightTextBox_8.Size = new System.Drawing.Size(150, 115);
                         this.BotRightTextBox_8.BringToFront();
                         break;
                     }
@@ -585,20 +618,20 @@ namespace Stomatology
                     }
                 case 14:
                     {
-                        this.TopRightTextBox_6.Location = new Point(440, 321);
+                        this.TopRightTextBox_6.Location = new Point(437, 440);
                         this.TopRightTextBox_6.Size = new System.Drawing.Size(21, 21);
                         break;
                     }
                 case 15:
                     {
-                        this.TopRightTextBox_7.Location = new Point(483, 321);
+                        this.TopRightTextBox_7.Location = new Point(480, 440);
                         this.TopRightTextBox_7.Size = new System.Drawing.Size(21, 21);
                         break;
                     }
                 case 16:
                     {
+                        this.TopRightTextBox_8.Location = new Point(518, 440);
                         this.TopRightTextBox_8.Size = new System.Drawing.Size(21, 21);
-                        this.TopRightTextBox_8.Location = new Point(521, 321);
                         break;
                     }
                 case 17:
@@ -668,19 +701,19 @@ namespace Stomatology
                     }
                 case 30:
                     {
-                        this.BotRightTextBox_6.Location = new Point(440, 382);
+                        this.BotRightTextBox_6.Location = new Point(437, 501);
                         this.BotRightTextBox_6.Size = new System.Drawing.Size(21, 21);
                         break;
                     }
                 case 31:
                     {
-                        this.BotRightTextBox_7.Location = new Point(483, 382);
+                        this.BotRightTextBox_7.Location = new Point(480, 501);
                         this.BotRightTextBox_7.Size = new System.Drawing.Size(21, 21);
                         break;
                     }
                 case 32:
                     {
-                        this.BotRightTextBox_8.Location = new Point(521, 382);
+                        this.BotRightTextBox_8.Location = new Point(518, 501);
                         this.BotRightTextBox_8.Size = new System.Drawing.Size(21, 21);
                         break;
                     }
@@ -1107,9 +1140,8 @@ namespace Stomatology
             MLIndex = 32;
             txtBoxMouseLeave();
         }
-        #endregion
 
-       
+        #endregion
     }
 }
 

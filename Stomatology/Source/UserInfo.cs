@@ -15,23 +15,11 @@ namespace Stomatology
         public UserInfo()
         {
             InitializeComponent();
+            toolTip();
         }
-
-        private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
+        public void toolTip()
         {
-
-        }
-
-        private void UserInfo_Load(object sender, EventArgs e)
-        {
-            //foreach (TreeNode tn in treeView1.Nodes)
-            //{
-            //    // get parent node here
-            //    foreach (TreeNode child in tn.Nodes)
-            //    {
-            //        //get child node here
-            //    }
-            //}
+           
         }
     }
 }

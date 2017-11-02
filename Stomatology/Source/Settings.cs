@@ -20,9 +20,15 @@ namespace Stomatology
             this.ownerForm = ownerForm;
         }
 
+        private void Settings_Load(object sender, EventArgs e)
+        {
+            toolTip();
+            this.txtTVWay.Text = Properties.Settings.Default.TeamViewerDirection;
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
-            this.ownerForm.PassDirValue(textBox2.Text);
+            this.ownerForm.PassDirValue(txtTVWay.Text);
             this.Close();
         }
 
@@ -41,7 +47,7 @@ namespace Stomatology
             {
                 string sFileName = openFileDialog1.FileName;
                 string[] arrAllFiles = openFileDialog1.FileNames;           
-                textBox1.Text = sFileName;
+                txtBDWay.Text = sFileName;
             }
         }
 
@@ -55,7 +61,7 @@ namespace Stomatology
             {
                 string sFileName = openFileDialog1.FileName;
                 //string[] arrAllFiles = openFileDialog1.FileNames; // Multiselect          
-                textBox2.Text = sFileName;
+                txtTVWay.Text = sFileName;
             }
         }
 
@@ -65,13 +71,29 @@ namespace Stomatology
         }
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            Properties.Settings.Default.TeamViewerDirection = textBox2.Text;
+            Properties.Settings.Default.TeamViewerDirection = txtTVWay.Text;
             Properties.Settings.Default.Save();
         }
 
-        private void Settings_Load(object sender, EventArgs e)
+        private void toolTip()
         {
-            this.textBox2.Text = Properties.Settings.Default.TeamViewerDirection;
+            toolTip1.IsBalloon = false;
+            if (txtBDWay.Text == string.Empty)
+            {
+                toolTip1.SetToolTip(txtBDWay, "Вкажіть шлях до бази даних.");
+            }
+            else
+            {
+                toolTip1.SetToolTip(txtBDWay, "Шлях до бази даних.");
+            }
+            if (txtTVWay.Text == string.Empty)
+            {
+                toolTip1.SetToolTip(txtTVWay, "Вкажіть шлях до TeamViewer.");
+            }
+            else
+            {
+                toolTip1.SetToolTip(txtTVWay, "Шлях до TeamViewer.");
+            }
         }
     }
 }

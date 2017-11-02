@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -45,11 +46,6 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.birthday = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.number = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.adress = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AddNewAppoinment = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -140,6 +136,16 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.TabControl = new System.Windows.Forms.TabControl();
+            this.button8 = new System.Windows.Forms.Button();
+            this.label37 = new System.Windows.Forms.Label();
+            this.lblDoctor = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.label38 = new System.Windows.Forms.Label();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.birthday = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.number = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.adress = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -162,11 +168,11 @@
             // 
             // menuStrip1
             // 
+            resources.ApplyResources(this.menuStrip1, "menuStrip1");
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.головнаToolStripMenuItem,
             this.справкаToolStripMenuItem,
             this.допомогаToolStripMenuItem});
-            resources.ApplyResources(this.menuStrip1, "menuStrip1");
             this.menuStrip1.Name = "menuStrip1";
             // 
             // головнаToolStripMenuItem
@@ -181,6 +187,7 @@
             // 
             resources.ApplyResources(this.tsmiSettings, "tsmiSettings");
             this.tsmiSettings.Name = "tsmiSettings";
+            this.tsmiSettings.Click += new System.EventHandler(this.tsmiSettings_Click);
             // 
             // вихідToolStripMenuItem
             // 
@@ -200,6 +207,7 @@
             // 
             resources.ApplyResources(this.tsmiUserInfo, "tsmiUserInfo");
             this.tsmiUserInfo.Name = "tsmiUserInfo";
+            this.tsmiUserInfo.Click += new System.EventHandler(this.tsmiUserInfo_Click);
             // 
             // проПрограммуToolStripMenuItem
             // 
@@ -219,6 +227,7 @@
             // 
             resources.ApplyResources(this.tsmiContacts, "tsmiContacts");
             this.tsmiContacts.Name = "tsmiContacts";
+            this.tsmiContacts.Click += new System.EventHandler(this.tsmiContacts_Click);
             // 
             // tsmiRemoteControl
             // 
@@ -232,6 +241,7 @@
             resources.ApplyResources(this.tabPage1, "tabPage1");
             this.tabPage1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tabPage1.Controls.Add(this.panel2);
+            this.tabPage1.Controls.Add(this.btnUpdate);
             this.tabPage1.Controls.Add(this.AddNewAppoinment);
             this.tabPage1.Controls.Add(this.panel1);
             this.tabPage1.Controls.Add(this.EditPatient);
@@ -255,6 +265,8 @@
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
+            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
@@ -262,41 +274,20 @@
             this.birthday,
             this.number,
             this.adress});
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 12F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.NullValue = null;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
             resources.ApplyResources(this.dataGridView1, "dataGridView1");
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
-            // 
-            // id
-            // 
-            resources.ApplyResources(this.id, "id");
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            // 
-            // name
-            // 
-            resources.ApplyResources(this.name, "name");
-            this.name.Name = "name";
-            this.name.ReadOnly = true;
-            // 
-            // birthday
-            // 
-            resources.ApplyResources(this.birthday, "birthday");
-            this.birthday.Name = "birthday";
-            this.birthday.ReadOnly = true;
-            // 
-            // number
-            // 
-            resources.ApplyResources(this.number, "number");
-            this.number.Name = "number";
-            this.number.ReadOnly = true;
-            // 
-            // adress
-            // 
-            resources.ApplyResources(this.adress, "adress");
-            this.adress.Name = "adress";
-            this.adress.ReadOnly = true;
             // 
             // AddNewAppoinment
             // 
@@ -317,8 +308,11 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.label38);
+            this.panel3.Controls.Add(this.lblDoctor);
+            this.panel3.Controls.Add(this.button8);
+            this.panel3.Controls.Add(this.label37);
             this.panel3.Controls.Add(this.txtBDate);
-            this.panel3.Controls.Add(this.btnUpdate);
             this.panel3.Controls.Add(this.button7);
             this.panel3.Controls.Add(this.button6);
             this.panel3.Controls.Add(this.button5);
@@ -408,9 +402,10 @@
             // 
             // btnUpdate
             // 
+            this.btnUpdate.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             resources.ApplyResources(this.btnUpdate, "btnUpdate");
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.UseVisualStyleBackColor = false;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // button7
@@ -451,11 +446,10 @@
             // 
             // comboBox1
             // 
-            this.comboBox1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             resources.ApplyResources(this.comboBox1, "comboBox1");
+            this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Name = "comboBox1";
-           
             this.comboBox1.SelectedValueChanged += new System.EventHandler(this.comboBox1_SelectedValueChanged);
             // 
             // textBox2
@@ -941,6 +935,59 @@
             this.TabControl.Name = "TabControl";
             this.TabControl.SelectedIndex = 0;
             // 
+            // button8
+            // 
+            resources.ApplyResources(this.button8, "button8");
+            this.button8.FlatAppearance.BorderSize = 0;
+            this.button8.Name = "button8";
+            this.button8.UseVisualStyleBackColor = true;
+            // 
+            // label37
+            // 
+            resources.ApplyResources(this.label37, "label37");
+            this.label37.Name = "label37";
+            // 
+            // lblDoctor
+            // 
+            this.lblDoctor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.lblDoctor, "lblDoctor");
+            this.lblDoctor.Name = "lblDoctor";
+            // 
+            // label38
+            // 
+            resources.ApplyResources(this.label38, "label38");
+            this.label38.Name = "label38";
+            // 
+            // id
+            // 
+            resources.ApplyResources(this.id, "id");
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            // 
+            // name
+            // 
+            resources.ApplyResources(this.name, "name");
+            this.name.Name = "name";
+            this.name.ReadOnly = true;
+            // 
+            // birthday
+            // 
+            resources.ApplyResources(this.birthday, "birthday");
+            this.birthday.Name = "birthday";
+            this.birthday.ReadOnly = true;
+            // 
+            // number
+            // 
+            resources.ApplyResources(this.number, "number");
+            this.number.Name = "number";
+            this.number.ReadOnly = true;
+            // 
+            // adress
+            // 
+            resources.ApplyResources(this.adress, "adress");
+            this.adress.Name = "adress";
+            this.adress.ReadOnly = true;
+            // 
             // Main
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -981,11 +1028,6 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn birthday;
-        private System.Windows.Forms.DataGridViewTextBoxColumn number;
-        private System.Windows.Forms.DataGridViewTextBoxColumn adress;
         private System.Windows.Forms.Button AddNewAppoinment;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel3;
@@ -994,7 +1036,6 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnCalculator;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.TextBox textBox2;
        
         private System.Windows.Forms.Label UAHLabel;
@@ -1080,6 +1121,17 @@
         private System.Windows.Forms.ToolStripMenuItem допомогаToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tsmiContacts;
         private System.Windows.Forms.ToolStripMenuItem tsmiRemoteControl;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label lblDoctor;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn birthday;
+        private System.Windows.Forms.DataGridViewTextBoxColumn number;
+        private System.Windows.Forms.DataGridViewTextBoxColumn adress;
+        private System.Windows.Forms.Label label38;
     }
 }
 
