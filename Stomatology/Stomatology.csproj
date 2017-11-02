@@ -71,10 +71,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AboutSoft.cs">
+    <Compile Include="Source\AboutSoft.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AboutSoft.Designer.cs">
+    <Compile Include="Source\AboutSoft.Designer.cs">
       <DependentUpon>AboutSoft.cs</DependentUpon>
     </Compile>
     <Compile Include="Source\HelpContacts.cs">
@@ -127,7 +127,7 @@
     <Compile Include="Source\UserInfo.Designer.cs">
       <DependentUpon>UserInfo.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AboutSoft.resx">
+    <EmbeddedResource Include="Source\AboutSoft.resx">
       <DependentUpon>AboutSoft.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Source\HelpContacts.resx">
