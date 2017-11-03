@@ -314,6 +314,8 @@ namespace Stomatology
         private void Main_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.DoEvents();
+            testCon.Close();
+           
         }
         private void toolTip() // Підказки до кнопок та полів
         {
