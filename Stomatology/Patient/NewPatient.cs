@@ -13,18 +13,20 @@ namespace Stomatology
 {
     public partial class NewPatient : Form
     {
-
         SqlConnection testCon = new SqlConnection
         (@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\GoogleDrive InSoP\Stomatology\Stomatology\DataStomatology.mdf;Integrated Security=True");
 
-        public NewPatient()
+        Main ownerform = null;
+
+        public NewPatient(Main ownerform)
         {
             InitializeComponent();
+            this.ownerform = ownerform;
         }
 
         private void NewPatient_Load(object sender, EventArgs e)
         {
-
+         String.Format("{0:(###) ###-####}", 8005551212);
         }
 
 
@@ -37,7 +39,7 @@ namespace Stomatology
         { 
             try
             {
-                if (TextboxLastName.Text.Length == 0|| dtpPatient.Text.Length == 0 || textBoxNumber.Text.Length == 0 || textBoxAdress.Text.Length == 0)
+                if (TextboxLastName.Text.Length == 0|| dtpPatient.Text.Length == 0 || txtNumber.Text.Length == 0 || textBoxAdress.Text.Length == 0)
                     throw new Exception("Не всі поля заповнені!");
                 else
                 {
@@ -46,15 +48,18 @@ namespace Stomatology
                     SqlCommand cmd = testCon.CreateCommand();
                     cmd.CommandType = CommandType.Text;
                     cmd.CommandText = $"INSERT INTO Pacient (Name, Birthday, Number, Adress) " +
-                        $"values (N'{TextboxLastName.Text}', N'{dtpPatient.Value.Date.ToString("M/d/yyyy")}', N'{textBoxNumber.Text}', " +
+                        $"values (N'{TextboxLastName.Text}', N'{dtpPatient.Value.Date.ToString("M/d/yyyy")}', N'{txtNumber.Text}', " +
                         $"N'{textBoxAdress.Text}')";
                     cmd.ExecuteNonQuery();
 
-                    TextboxLastName.Text = ""; dtpPatient.Text = ""; textBoxNumber.Text = ""; textBoxAdress.Text = "";
+                    TextboxLastName.Text = ""; dtpPatient.Text = ""; txtNumber.Text = ""; textBoxAdress.Text = "";
                     MessageBox.Show("Додано нового паціента.");
+
+                    ownerform.updateTable();
                     testCon.Close();
                     
                 }
+                this.Close();
             }
             catch (Exception ex)
             {
@@ -62,6 +67,7 @@ namespace Stomatology
                 testCon.Close();
                 
             }
+            
         }
         private void button1_KeyUp(object sender, KeyEventArgs e)
         {

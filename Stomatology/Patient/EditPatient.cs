@@ -41,17 +41,18 @@ namespace Stomatology
             {
                 
                 textBox5.Text = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
-                string dtp = dtpBirthday.Format.ToString(); dtp = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
-                textBox3.Text = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
+                txtBirthday.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
+                txtPhoneNumber.Text = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
                 textBox2.Text = dataGridView1.SelectedRows[0].Cells[4].Value.ToString();
                 
             }
             else
             {
+                txtBirthday.Clear();
                 textBox5.Clear();
-                textBox3.Clear();
+                txtPhoneNumber.Clear();
                 textBox2.Clear();
-                dtpBirthday.ResetText();
+                txtBirthday.ResetText();
                 
             }
         }
@@ -81,8 +82,8 @@ namespace Stomatology
             if (dataGridView1.SelectedRows.Count > 0)
                 {
                 string uId = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();   
-                string query = "update Pacient " + $"set Name = N'{textBox5.Text}', " + $"Birthday = N'{dtpBirthday.Value.Date.ToString("dd/MM/yyyy")}', "
-                    + $"Number = N'{textBox3.Text}', " + $"Adress = N'{textBox2.Text}' "
+                string query = "update Pacient " + $"set Name = N'{textBox5.Text}', " + $"Birthday = N'{txtBirthday.Text}', "
+                    + $"Number = N'{txtPhoneNumber.Text}', " + $"Adress = N'{textBox2.Text}' "
                     + $"where Pacient_Id = {uId}";
 
 
@@ -93,8 +94,9 @@ namespace Stomatology
                 updateTable();
                 ownerForm.updateTable();
 
+                txtBirthday.Clear();
                 textBox5.Clear();
-                textBox3.Clear();
+                txtPhoneNumber.Clear();
                 textBox2.Clear();   
             }  
         }

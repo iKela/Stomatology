@@ -1,11 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+//using System.Collections.Generic;
+//using System.ComponentModel;
+//using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+//using System.Linq;
+//using System.Text;
+//using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
 using System.Data.SqlClient;
@@ -15,8 +15,6 @@ namespace Stomatology
 {
     public partial class Main : Form
     {
-        private EditPatient editPatientForm;
-        private Settings settingsForm;
         SqlConnection testCon = new SqlConnection
         (@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\GoogleDrive InSoP\Stomatology\Stomatology\DataStomatology.mdf;Integrated Security=True");
 
@@ -120,7 +118,7 @@ namespace Stomatology
         }
         private void AddNewPatient_Click(object sender, EventArgs e)
         {
-            NewPatient newForm = new NewPatient();
+            NewPatient newForm = new NewPatient(this);
             newForm.Show();
         }
 
@@ -287,7 +285,7 @@ namespace Stomatology
 
         private void tsmiSettings_Click(object sender, EventArgs e)
         {
-            Settings newForm = new Settings(this);
+            Settings newForm = new Settings();
             newForm.Show();
         }
         private void tsmiContacts_Click(object sender, EventArgs e)
@@ -300,11 +298,6 @@ namespace Stomatology
         {
             UserInfo newForm = new UserInfo();
             newForm.Show();
-        }
-
-        public Main(Settings otherForm)
-        {
-            settingsForm = otherForm;
         }
 
         private void tsmiRemoteControl_Click(object sender, EventArgs e)

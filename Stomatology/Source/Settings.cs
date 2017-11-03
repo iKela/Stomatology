@@ -12,12 +12,12 @@ namespace Stomatology
 {
     public partial class Settings : Form
     {
-        Main ownerForm = null;
 
-        public Settings(Main ownerForm)
+
+        public Settings()
         {
             InitializeComponent();
-            this.ownerForm = ownerForm;
+
         }
 
         private void Settings_Load(object sender, EventArgs e)
@@ -28,7 +28,6 @@ namespace Stomatology
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.ownerForm.PassDirValue(txtTVWay.Text);
             this.Close();
         }
 

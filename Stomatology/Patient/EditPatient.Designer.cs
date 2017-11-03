@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditPatient));
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnAccept = new System.Windows.Forms.Button();
@@ -38,17 +37,18 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Surname1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Birthday1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Number1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Adress1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
-            this.dtpBirthday = new System.Windows.Forms.DateTimePicker();
+            this.txtPhoneNumber = new System.Windows.Forms.MaskedTextBox();
+            this.txtBirthday = new System.Windows.Forms.MaskedTextBox();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Surname1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Birthday1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Number1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Adress1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,13 +60,6 @@
             this.label6.Size = new System.Drawing.Size(128, 20);
             this.label6.TabIndex = 26;
             this.label6.Text = "Адреса:";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(172, 147);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(211, 20);
-            this.textBox3.TabIndex = 3;
             // 
             // textBox2
             // 
@@ -149,41 +142,6 @@
             this.dataGridView1.TabIndex = 27;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
-            // Id
-            // 
-            this.Id.HeaderText = "ID";
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
-            this.Id.Visible = false;
-            // 
-            // Surname1
-            // 
-            this.Surname1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Surname1.HeaderText = "ПІБ";
-            this.Surname1.Name = "Surname1";
-            this.Surname1.ReadOnly = true;
-            // 
-            // Birthday1
-            // 
-            this.Birthday1.HeaderText = "Рік народження";
-            this.Birthday1.MaxInputLength = 8;
-            this.Birthday1.Name = "Birthday1";
-            this.Birthday1.ReadOnly = true;
-            this.Birthday1.Width = 75;
-            // 
-            // Number1
-            // 
-            this.Number1.HeaderText = "Номер";
-            this.Number1.Name = "Number1";
-            this.Number1.ReadOnly = true;
-            // 
-            // Adress1
-            // 
-            this.Adress1.HeaderText = "Адреса";
-            this.Adress1.Name = "Adress1";
-            this.Adress1.ReadOnly = true;
-            this.Adress1.Width = 150;
-            // 
             // textBox5
             // 
             this.textBox5.Location = new System.Drawing.Point(172, 74);
@@ -243,12 +201,58 @@
             this.button6.TabIndex = 32;
             this.button6.UseVisualStyleBackColor = true;
             // 
-            // dtpBirthday
+            // txtPhoneNumber
             // 
-            this.dtpBirthday.Location = new System.Drawing.Point(172, 110);
-            this.dtpBirthday.Name = "dtpBirthday";
-            this.dtpBirthday.Size = new System.Drawing.Size(211, 20);
-            this.dtpBirthday.TabIndex = 33;
+            this.txtPhoneNumber.Location = new System.Drawing.Point(172, 146);
+            this.txtPhoneNumber.Mask = "моб +38 (999) 000-0000 дом 0-00-00";
+            this.txtPhoneNumber.Name = "txtPhoneNumber";
+            this.txtPhoneNumber.Size = new System.Drawing.Size(211, 20);
+            this.txtPhoneNumber.TabIndex = 34;
+            // 
+            // txtBirthday
+            // 
+            this.txtBirthday.Location = new System.Drawing.Point(172, 111);
+            this.txtBirthday.Mask = "00/00/0000";
+            this.txtBirthday.Name = "txtBirthday";
+            this.txtBirthday.Size = new System.Drawing.Size(211, 20);
+            this.txtBirthday.TabIndex = 35;
+            this.txtBirthday.ValidatingType = typeof(System.DateTime);
+            // 
+            // Id
+            // 
+            this.Id.HeaderText = "ID";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            this.Id.Visible = false;
+            // 
+            // Surname1
+            // 
+            this.Surname1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Surname1.HeaderText = "ПІБ";
+            this.Surname1.Name = "Surname1";
+            this.Surname1.ReadOnly = true;
+            // 
+            // Birthday1
+            // 
+            this.Birthday1.HeaderText = "Рік народження";
+            this.Birthday1.MaxInputLength = 8;
+            this.Birthday1.Name = "Birthday1";
+            this.Birthday1.ReadOnly = true;
+            this.Birthday1.Width = 75;
+            // 
+            // Number1
+            // 
+            this.Number1.HeaderText = "Номер";
+            this.Number1.Name = "Number1";
+            this.Number1.ReadOnly = true;
+            this.Number1.Width = 150;
+            // 
+            // Adress1
+            // 
+            this.Adress1.HeaderText = "Адреса";
+            this.Adress1.Name = "Adress1";
+            this.Adress1.ReadOnly = true;
+            this.Adress1.Width = 150;
             // 
             // EditPatient
             // 
@@ -258,7 +262,8 @@
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.CancelButton = this.btnExit;
             this.ClientSize = new System.Drawing.Size(1049, 395);
-            this.Controls.Add(this.dtpBirthday);
+            this.Controls.Add(this.txtBirthday);
+            this.Controls.Add(this.txtPhoneNumber);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
@@ -266,7 +271,6 @@
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnAccept);
@@ -285,7 +289,6 @@
 
         #endregion
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnAccept;
@@ -298,7 +301,8 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.DateTimePicker dtpBirthday;
+        private System.Windows.Forms.MaskedTextBox txtPhoneNumber;
+        private System.Windows.Forms.MaskedTextBox txtBirthday;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Surname1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Birthday1;

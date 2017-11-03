@@ -33,7 +33,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.btnExit = new System.Windows.Forms.Button();
-            this.textBoxNumber = new System.Windows.Forms.TextBox();
             this.TextboxLastName = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.textBoxAdress = new System.Windows.Forms.TextBox();
@@ -43,6 +42,7 @@
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.btnAccept = new System.Windows.Forms.Button();
+            this.txtNumber = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -85,13 +85,6 @@
             this.btnExit.TabIndex = 8;
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // textBoxNumber
-            // 
-            this.textBoxNumber.Location = new System.Drawing.Point(182, 79);
-            this.textBoxNumber.Name = "textBoxNumber";
-            this.textBoxNumber.Size = new System.Drawing.Size(311, 20);
-            this.textBoxNumber.TabIndex = 5;
             // 
             // TextboxLastName
             // 
@@ -199,6 +192,14 @@
             this.btnAccept.UseVisualStyleBackColor = true;
             this.btnAccept.Click += new System.EventHandler(this.button1_Click);
             // 
+            // txtNumber
+            // 
+            this.txtNumber.Location = new System.Drawing.Point(181, 81);
+            this.txtNumber.Mask = "моб +38 (999) 000-0000, дом 0-00-00";
+            this.txtNumber.Name = "txtNumber";
+            this.txtNumber.Size = new System.Drawing.Size(312, 20);
+            this.txtNumber.TabIndex = 3;
+            // 
             // NewPatient
             // 
             this.AcceptButton = this.btnAccept;
@@ -206,6 +207,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnExit;
             this.ClientSize = new System.Drawing.Size(501, 288);
+            this.Controls.Add(this.txtNumber);
             this.Controls.Add(this.btnAccept);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
@@ -215,7 +217,6 @@
             this.Controls.Add(this.textBoxAdress);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.TextboxLastName);
-            this.Controls.Add(this.textBoxNumber);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -235,7 +236,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnExit;
-        private System.Windows.Forms.TextBox textBoxNumber;
         private System.Windows.Forms.TextBox TextboxLastName;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBoxAdress;
@@ -245,6 +245,7 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button btnAccept;
+        private System.Windows.Forms.MaskedTextBox txtNumber;
     }
 
 }
