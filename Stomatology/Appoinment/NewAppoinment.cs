@@ -16,7 +16,9 @@ namespace Stomatology
         SqlConnection testCon = new SqlConnection
         (@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\GoogleDrive InSoP\Stomatology\Stomatology\DataStomatology.mdf;Integrated Security=True");
 
-        string[] Doctor = {"Кричильський Леонід ТОРИОТт", " Кричильський Тетяна вміваміТт" , "Кричильський Мапяна миапвиа" };
+        string[] Doctor = { "Кричильський Леонід Ростиславович", " Кричильська Тетяна Георгіївна", "Яскал Зоряна Миколаївна" }; 
+      
+        
         public void PassValue(string strValue)
         {
             txtMoney.Text = strValue;

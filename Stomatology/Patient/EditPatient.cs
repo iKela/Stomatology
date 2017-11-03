@@ -106,7 +106,7 @@ namespace Stomatology
             dataGridView1.Rows.Clear();
             testCon.Open();
            
-            string qweryn = $"select * from Pacient where Name like N'%"+textBox5.Text+"%'";
+            string qweryn = $"select * from Pacient where Name like N ' % " +textBox5.Text+ " % ' ";
 
             SqlCommand sqlComm = new SqlCommand(qweryn, testCon);
             SqlDataReader sqlDR;
