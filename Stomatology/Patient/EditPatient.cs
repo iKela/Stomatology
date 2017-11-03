@@ -100,6 +100,31 @@ namespace Stomatology
                 textBox2.Clear();   
             }  
         }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+            dataGridView1.Rows.Clear();
+            testCon.Open();
+           
+            string qweryn = $"select * from Pacient where Name like N'%"+textBox5.Text+"%'";
+
+            SqlCommand sqlComm = new SqlCommand(qweryn, testCon);
+            SqlDataReader sqlDR;
+            sqlDR = sqlComm.ExecuteReader();
+            while (sqlDR.Read())
+            {
+                int index = dataGridView1.Rows.Add();
+               dataGridView1.Rows[index].Cells[0].Value = sqlDR[0];
+               dataGridView1.Rows[index].Cells[1].Value = sqlDR[1];
+               dataGridView1.Rows[index].Cells[2].Value = sqlDR[2];
+               dataGridView1.Rows[index].Cells[3].Value = sqlDR[3];
+               dataGridView1.Rows[index].Cells[4].Value = sqlDR[4];
+           
+            }
+            testCon.Close();
+           dataGridView1.ClearSelection();
+
+        }
     }
 }
 

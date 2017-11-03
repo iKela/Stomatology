@@ -37,6 +37,11 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Surname1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Birthday1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Number1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Adress1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -44,11 +49,6 @@
             this.button6 = new System.Windows.Forms.Button();
             this.txtPhoneNumber = new System.Windows.Forms.MaskedTextBox();
             this.txtBirthday = new System.Windows.Forms.MaskedTextBox();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Surname1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Birthday1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Number1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Adress1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -142,12 +142,49 @@
             this.dataGridView1.TabIndex = 27;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
+            // Id
+            // 
+            this.Id.HeaderText = "ID";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            this.Id.Visible = false;
+            // 
+            // Surname1
+            // 
+            this.Surname1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Surname1.HeaderText = "ПІБ";
+            this.Surname1.Name = "Surname1";
+            this.Surname1.ReadOnly = true;
+            // 
+            // Birthday1
+            // 
+            this.Birthday1.HeaderText = "Рік народження";
+            this.Birthday1.MaxInputLength = 8;
+            this.Birthday1.Name = "Birthday1";
+            this.Birthday1.ReadOnly = true;
+            this.Birthday1.Width = 75;
+            // 
+            // Number1
+            // 
+            this.Number1.HeaderText = "Номер";
+            this.Number1.Name = "Number1";
+            this.Number1.ReadOnly = true;
+            this.Number1.Width = 150;
+            // 
+            // Adress1
+            // 
+            this.Adress1.HeaderText = "Адреса";
+            this.Adress1.Name = "Adress1";
+            this.Adress1.ReadOnly = true;
+            this.Adress1.Width = 150;
+            // 
             // textBox5
             // 
             this.textBox5.Location = new System.Drawing.Point(172, 74);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(211, 20);
             this.textBox5.TabIndex = 28;
+            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // button3
             // 
@@ -217,42 +254,6 @@
             this.txtBirthday.Size = new System.Drawing.Size(211, 20);
             this.txtBirthday.TabIndex = 35;
             this.txtBirthday.ValidatingType = typeof(System.DateTime);
-            // 
-            // Id
-            // 
-            this.Id.HeaderText = "ID";
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
-            this.Id.Visible = false;
-            // 
-            // Surname1
-            // 
-            this.Surname1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Surname1.HeaderText = "ПІБ";
-            this.Surname1.Name = "Surname1";
-            this.Surname1.ReadOnly = true;
-            // 
-            // Birthday1
-            // 
-            this.Birthday1.HeaderText = "Рік народження";
-            this.Birthday1.MaxInputLength = 8;
-            this.Birthday1.Name = "Birthday1";
-            this.Birthday1.ReadOnly = true;
-            this.Birthday1.Width = 75;
-            // 
-            // Number1
-            // 
-            this.Number1.HeaderText = "Номер";
-            this.Number1.Name = "Number1";
-            this.Number1.ReadOnly = true;
-            this.Number1.Width = 150;
-            // 
-            // Adress1
-            // 
-            this.Adress1.HeaderText = "Адреса";
-            this.Adress1.Name = "Adress1";
-            this.Adress1.ReadOnly = true;
-            this.Adress1.Width = 150;
             // 
             // EditPatient
             // 
