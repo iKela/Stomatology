@@ -15,6 +15,7 @@ namespace Stomatology
 {
     public partial class Main : Form
     {
+        private EditPatient editPatientForm;
         private Settings settingsForm;
         SqlConnection testCon = new SqlConnection
         (@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\GoogleDrive InSoP\Stomatology\Stomatology\DataStomatology.mdf;Integrated Security=True");
@@ -47,7 +48,7 @@ namespace Stomatology
         }
 
 
-        private void updateTable()
+        public void updateTable()
         {
             dataGridView1.Rows.Clear();
             testCon.Open();
@@ -114,7 +115,7 @@ namespace Stomatology
         }
         private void EditPatient_Click(object sender, EventArgs e)
         {
-            EditPatient newForm = new EditPatient();
+            EditPatient newForm = new EditPatient(this);
             newForm.Show();
         }
         private void AddNewPatient_Click(object sender, EventArgs e)

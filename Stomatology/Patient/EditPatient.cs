@@ -16,9 +16,12 @@ namespace Stomatology
     {
         SqlConnection testCon = new SqlConnection
        (@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\GoogleDrive InSoP\Stomatology\Stomatology\DataStomatology.mdf;Integrated Security=True");
-        public EditPatient()
+
+        Main ownerForm = null;
+        public EditPatient(Main ownerForm)
         {
             InitializeComponent();
+            this.ownerForm = ownerForm;
         }
 
         private void EditPatient_Load(object sender, EventArgs e)
@@ -88,6 +91,7 @@ namespace Stomatology
                 upbtn.ExecuteNonQuery();
                 testCon.Close();
                 updateTable();
+                ownerForm.updateTable();
 
                 textBox5.Clear();
                 textBox3.Clear();
