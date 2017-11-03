@@ -33,20 +33,22 @@ namespace Stomatology
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            string dtpB;
+            
             if (dataGridView1.SelectedRows.Count > 0)
             {
+                
                 textBox5.Text = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
-                dtpB = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
+                string dtp = dtpBirthday.Format.ToString(); dtp = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
                 textBox3.Text = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
                 textBox2.Text = dataGridView1.SelectedRows[0].Cells[4].Value.ToString();
-               
+                
             }
             else
             {
                 textBox5.Clear();
                 textBox3.Clear();
                 textBox2.Clear();
+                dtpBirthday.ResetText();
                 
             }
         }
@@ -76,7 +78,7 @@ namespace Stomatology
             if (dataGridView1.SelectedRows.Count > 0)
                 {
                 string uId = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();   
-                string query = "update Pacient " + $"set Name = N'{textBox5.Text}', " + $"Birthday = N'{dtpBirthday.Value.Date.ToString("dd/mm/yyyy")}', "
+                string query = "update Pacient " + $"set Name = N'{textBox5.Text}', " + $"Birthday = N'{dtpBirthday.Value.Date.ToString("dd/MM/yyyy")}', "
                     + $"Number = N'{textBox3.Text}', " + $"Adress = N'{textBox2.Text}' "
                     + $"where Pacient_Id = {uId}";
 
