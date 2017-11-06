@@ -37,13 +37,15 @@ namespace Stomatology
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            allow = false;
+            
             if (dataGridView1.SelectedRows.Count > 0)
             {
+                allow = false;
                 textBox5.Text = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
                 txtBirthday.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
                 txtPhoneNumber.Text = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
                 textBox2.Text = dataGridView1.SelectedRows[0].Cells[4].Value.ToString();
+                allow = true;
             }
             else
             {
@@ -124,6 +126,11 @@ namespace Stomatology
                 testCon.Close();
                 dataGridView1.ClearSelection();
             }
+        }
+
+        private void textBox5_Click(object sender, EventArgs e)
+        {
+            dataGridView1.ClearSelection();
         }
     }
 }
