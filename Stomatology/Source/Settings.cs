@@ -30,6 +30,14 @@ namespace Stomatology
             }
             else
             {
+                foreach (Form Main in Application.OpenForms)
+                {
+                    if (Main.Name == "Main")
+                    {
+                        this.Close();
+                        return;
+                    }
+                }
                 Main newForm = new Main();
                 newForm.Show();
                 this.Hide();
@@ -98,6 +106,28 @@ namespace Stomatology
             else
             {
                 toolTip1.SetToolTip(txtTVWay, "Шлях до TeamViewer.");
+            }
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            if (txtBDWay.Text == string.Empty)
+            {
+                MessageBox.Show("Задайте шлях до бази даних!");
+            }
+            else
+            {
+                foreach (Form Main in Application.OpenForms)
+                {
+                    if (Main.Name == "Main")
+                    {
+                        this.Close();
+                        return;
+                    }
+                }
+                Main newForm = new Main();
+                newForm.Show();
+                this.Hide();
             }
         }
     }

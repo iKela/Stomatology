@@ -38,6 +38,7 @@
             this.btnCancel = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -86,7 +87,7 @@
             this.btnAccept.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnAccept.FlatAppearance.BorderSize = 0;
             this.btnAccept.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAccept.Location = new System.Drawing.Point(12, 69);
+            this.btnAccept.Location = new System.Drawing.Point(12, 101);
             this.btnAccept.Name = "btnAccept";
             this.btnAccept.Size = new System.Drawing.Size(40, 40);
             this.btnAccept.TabIndex = 4;
@@ -100,7 +101,7 @@
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancel.FlatAppearance.BorderSize = 0;
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.Location = new System.Drawing.Point(331, 69);
+            this.btnCancel.Location = new System.Drawing.Point(331, 101);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(40, 40);
             this.btnCancel.TabIndex = 5;
@@ -111,13 +112,28 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.Location = new System.Drawing.Point(107, 69);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(265, 30);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Задати шлях до TeamViewer пізніше.";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // Settings
             // 
             this.AcceptButton = this.btnAccept;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancel;
-            this.ClientSize = new System.Drawing.Size(383, 119);
+            this.ClientSize = new System.Drawing.Size(390, 153);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnAccept);
             this.Controls.Add(this.txtTVWay);
@@ -143,5 +159,6 @@
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Button button1;
     }
 }
