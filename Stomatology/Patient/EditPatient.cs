@@ -17,6 +17,7 @@ namespace Stomatology
         SqlConnection testCon = new SqlConnection
        (@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + Properties.Settings.Default.DateBaseDirection);
 
+        bool allow = true;
         Main ownerForm = null;
         public EditPatient(Main ownerForm)
         {
@@ -36,15 +37,13 @@ namespace Stomatology
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+            allow = false;
             if (dataGridView1.SelectedRows.Count > 0)
             {
-                
                 textBox5.Text = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
                 txtBirthday.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
                 txtPhoneNumber.Text = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
                 textBox2.Text = dataGridView1.SelectedRows[0].Cells[4].Value.ToString();
-                
             }
             else
             {
@@ -52,7 +51,6 @@ namespace Stomatology
                 textBox5.Clear();
                 txtPhoneNumber.Clear();
                 textBox2.Clear();
-                txtBirthday.ResetText();
                 
             }
         }
@@ -99,6 +97,33 @@ namespace Stomatology
                 txtPhoneNumber.Clear();
                 textBox2.Clear();   
             }  
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+            if (allow == true)
+            {
+                dataGridView1.Rows.Clear();
+                testCon.Open();
+
+                string qweryn = $"select * from Pacient where Name  like N'%{textBox5.Text}%'";
+
+                SqlCommand sqlComm = new SqlCommand(qweryn, testCon);
+                SqlDataReader sqlDRv;
+                sqlDRv = sqlComm.ExecuteReader();
+                while (sqlDRv.Read())
+                {
+                    int index = dataGridView1.Rows.Add();
+                    dataGridView1.Rows[index].Cells[0].Value = sqlDRv[0];
+                    dataGridView1.Rows[index].Cells[1].Value = sqlDRv[1];
+                    dataGridView1.Rows[index].Cells[2].Value = sqlDRv[2];
+                    dataGridView1.Rows[index].Cells[3].Value = sqlDRv[3];
+                    dataGridView1.Rows[index].Cells[4].Value = sqlDRv[4];
+
+                }
+                testCon.Close();
+                dataGridView1.ClearSelection();
+            }
         }
     }
 }
