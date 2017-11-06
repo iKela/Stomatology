@@ -16,7 +16,15 @@ namespace Stomatology
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Settings());
+
+            if (Properties.Settings.Default.TeamViewerDirection == string.Empty && Properties.Settings.Default.TeamViewerDirection == string.Empty)
+            {
+                Application.Run(new Settings());
+            }
+            else
+            {
+                Application.Run(new Main());
+            }
         }
     }
 }

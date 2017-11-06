@@ -14,23 +14,16 @@ namespace Stomatology
     {
         public Settings()
         {
-            InitializeComponent();
+                InitializeComponent();
         }
 
         private void Settings_Load(object sender, EventArgs e)
         {
-            toolTip();
             this.txtTVWay.Text = Properties.Settings.Default.TeamViewerDirection;
             this.txtBDWay.Text = Properties.Settings.Default.DateBaseDirection;
-
-            //if (txtBDWay.Text == string.Empty == false || txtTVWay.Text == string.Empty == false)
-            //{
-            //    Main newForm = new Main();
-            //    newForm.Show();
-            //    Hide();
-            //}
+            toolTip();
         }
-        
+
         private void button1_Click(object sender, EventArgs e)
         {
             if (txtBDWay.Text == string.Empty)
