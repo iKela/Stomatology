@@ -88,9 +88,10 @@
             // 
             // TextboxLastName
             // 
-            this.TextboxLastName.Location = new System.Drawing.Point(182, 12);
+            this.TextboxLastName.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.TextboxLastName.Location = new System.Drawing.Point(182, 8);
             this.TextboxLastName.Name = "TextboxLastName";
-            this.TextboxLastName.Size = new System.Drawing.Size(311, 20);
+            this.TextboxLastName.Size = new System.Drawing.Size(311, 26);
             this.TextboxLastName.TabIndex = 1;
             // 
             // label6
@@ -104,17 +105,19 @@
             // 
             // textBoxAdress
             // 
-            this.textBoxAdress.Location = new System.Drawing.Point(182, 116);
+            this.textBoxAdress.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.textBoxAdress.Location = new System.Drawing.Point(182, 112);
             this.textBoxAdress.Name = "textBoxAdress";
-            this.textBoxAdress.Size = new System.Drawing.Size(311, 20);
+            this.textBoxAdress.Size = new System.Drawing.Size(311, 26);
             this.textBoxAdress.TabIndex = 6;
             // 
             // dtpPatient
             // 
             this.dtpPatient.CustomFormat = "d/M/yyyy";
-            this.dtpPatient.Location = new System.Drawing.Point(182, 45);
+            this.dtpPatient.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.dtpPatient.Location = new System.Drawing.Point(182, 40);
             this.dtpPatient.Name = "dtpPatient";
-            this.dtpPatient.Size = new System.Drawing.Size(311, 20);
+            this.dtpPatient.Size = new System.Drawing.Size(311, 26);
             this.dtpPatient.TabIndex = 4;
             // 
             // button3
@@ -194,10 +197,11 @@
             // 
             // txtNumber
             // 
-            this.txtNumber.Location = new System.Drawing.Point(181, 81);
+            this.txtNumber.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.txtNumber.Location = new System.Drawing.Point(182, 75);
             this.txtNumber.Mask = "моб +38 (999) 000-0000, дом 0-00-00";
             this.txtNumber.Name = "txtNumber";
-            this.txtNumber.Size = new System.Drawing.Size(312, 20);
+            this.txtNumber.Size = new System.Drawing.Size(312, 26);
             this.txtNumber.TabIndex = 3;
             // 
             // NewPatient

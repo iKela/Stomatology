@@ -48,7 +48,7 @@ namespace Stomatology
                     SqlCommand cmd = testCon.CreateCommand();
                     cmd.CommandType = CommandType.Text;
                     cmd.CommandText = $"INSERT INTO Pacient (Name, Birthday, Number, Adress) " +
-                        $"values (N'{TextboxLastName.Text}', N'{dtpPatient.Value.Date.ToString("M/d/yyyy")}', N'{txtNumber.Text}', " +
+                        $"values (N'{TextboxLastName.Text}', N'{dtpPatient.Value.Date.ToString("dd/MM/yyyy")}', N'{txtNumber.Text}', " +
                         $"N'{textBoxAdress.Text}')";
                     cmd.ExecuteNonQuery();
 
