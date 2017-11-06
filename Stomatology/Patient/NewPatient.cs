@@ -26,7 +26,7 @@ namespace Stomatology
 
         private void NewPatient_Load(object sender, EventArgs e)
         {
-         String.Format("{0:(###) ###-####}", 8005551212);
+
         }
 
 
