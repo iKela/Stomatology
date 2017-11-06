@@ -15,7 +15,7 @@ namespace Stomatology
     public partial class EditPatient : Form
     {
         SqlConnection testCon = new SqlConnection
-       (@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\GoogleDrive InSoP\Stomatology\Stomatology\DataStomatology.mdf;Integrated Security=True");
+       (@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + Properties.Settings.Default.DateBaseDirection);
 
         Main ownerForm = null;
         public EditPatient(Main ownerForm)

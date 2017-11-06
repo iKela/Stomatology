@@ -15,12 +15,14 @@ namespace Stomatology
 {
     public partial class Main : Form
     {
+
         SqlConnection testCon = new SqlConnection
-        (@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\GoogleDrive InSoP\Stomatology\Stomatology\DataStomatology.mdf;Integrated Security=True");
+        (@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + Properties.Settings.Default.DateBaseDirection);
 
         int MHIndex;
         int MLIndex;
-        string direction;
+        string BDDirection;
+        string TVdirection;
         string PacientId;
 
         public void PassValue(string strValue)
@@ -29,7 +31,7 @@ namespace Stomatology
         }
         public void PassDirValue(string dirValue)
         {
-            direction = @dirValue;
+            TVdirection = @dirValue;
         }
 
         public Main()
@@ -41,7 +43,8 @@ namespace Stomatology
         {
             toolTip(); 
             updateTable();
-            this.direction = Properties.Settings.Default.TeamViewerDirection;
+            this.TVdirection = Properties.Settings.Default.TeamViewerDirection;
+            this.BDDirection = Properties.Settings.Default.DateBaseDirection;
 
         }
 
@@ -302,7 +305,7 @@ namespace Stomatology
 
         private void tsmiRemoteControl_Click(object sender, EventArgs e)
         {
-            Process.Start(direction);
+            Process.Start(TVdirection);
         }
 
         private void Main_FormClosing(object sender, FormClosingEventArgs e)
@@ -1141,6 +1144,11 @@ namespace Stomatology
         }
 
         #endregion
+
+        private void Main_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
 

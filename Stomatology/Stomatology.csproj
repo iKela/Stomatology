@@ -198,7 +198,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>DataStomatology.mdf</DependentUpon>
     </Content>
-    <Content Include="Main\MetroFramework.txt" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

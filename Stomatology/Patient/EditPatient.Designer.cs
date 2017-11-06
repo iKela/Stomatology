@@ -37,6 +37,11 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Surname1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Birthday1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Number1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Adress1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -44,17 +49,12 @@
             this.button6 = new System.Windows.Forms.Button();
             this.txtPhoneNumber = new System.Windows.Forms.MaskedTextBox();
             this.txtBirthday = new System.Windows.Forms.MaskedTextBox();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Surname1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Birthday1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Number1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Adress1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label6
             // 
-            this.label6.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label6.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.label6.Location = new System.Drawing.Point(38, 180);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(128, 20);
@@ -63,9 +63,10 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(172, 180);
+            this.textBox2.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.textBox2.Location = new System.Drawing.Point(172, 177);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(211, 20);
+            this.textBox2.Size = new System.Drawing.Size(211, 26);
             this.textBox2.TabIndex = 4;
             // 
             // btnExit
@@ -97,7 +98,7 @@
             // 
             // label5
             // 
-            this.label5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.label5.Location = new System.Drawing.Point(38, 145);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(163, 20);
@@ -106,7 +107,7 @@
             // 
             // label4
             // 
-            this.label4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.label4.Location = new System.Drawing.Point(38, 110);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(155, 20);
@@ -115,7 +116,7 @@
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.label1.Location = new System.Drawing.Point(38, 72);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(115, 20);
@@ -142,11 +143,48 @@
             this.dataGridView1.TabIndex = 27;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
+            // Id
+            // 
+            this.Id.HeaderText = "ID";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            this.Id.Visible = false;
+            // 
+            // Surname1
+            // 
+            this.Surname1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Surname1.HeaderText = "ПІБ";
+            this.Surname1.Name = "Surname1";
+            this.Surname1.ReadOnly = true;
+            // 
+            // Birthday1
+            // 
+            this.Birthday1.HeaderText = "Рік народження";
+            this.Birthday1.MaxInputLength = 8;
+            this.Birthday1.Name = "Birthday1";
+            this.Birthday1.ReadOnly = true;
+            this.Birthday1.Width = 75;
+            // 
+            // Number1
+            // 
+            this.Number1.HeaderText = "Номер";
+            this.Number1.Name = "Number1";
+            this.Number1.ReadOnly = true;
+            this.Number1.Width = 150;
+            // 
+            // Adress1
+            // 
+            this.Adress1.HeaderText = "Адреса";
+            this.Adress1.Name = "Adress1";
+            this.Adress1.ReadOnly = true;
+            this.Adress1.Width = 150;
+            // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(172, 74);
+            this.textBox5.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.textBox5.Location = new System.Drawing.Point(172, 69);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(211, 20);
+            this.textBox5.Size = new System.Drawing.Size(211, 26);
             this.textBox5.TabIndex = 28;
             // 
             // button3
@@ -203,56 +241,22 @@
             // 
             // txtPhoneNumber
             // 
-            this.txtPhoneNumber.Location = new System.Drawing.Point(172, 146);
+            this.txtPhoneNumber.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.txtPhoneNumber.Location = new System.Drawing.Point(172, 142);
             this.txtPhoneNumber.Mask = "моб +38 (999) 000-0000 дом 0-00-00";
             this.txtPhoneNumber.Name = "txtPhoneNumber";
-            this.txtPhoneNumber.Size = new System.Drawing.Size(211, 20);
+            this.txtPhoneNumber.Size = new System.Drawing.Size(211, 26);
             this.txtPhoneNumber.TabIndex = 34;
             // 
             // txtBirthday
             // 
-            this.txtBirthday.Location = new System.Drawing.Point(172, 111);
+            this.txtBirthday.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.txtBirthday.Location = new System.Drawing.Point(172, 107);
             this.txtBirthday.Mask = "00/00/0000";
             this.txtBirthday.Name = "txtBirthday";
-            this.txtBirthday.Size = new System.Drawing.Size(211, 20);
+            this.txtBirthday.Size = new System.Drawing.Size(211, 26);
             this.txtBirthday.TabIndex = 35;
             this.txtBirthday.ValidatingType = typeof(System.DateTime);
-            // 
-            // Id
-            // 
-            this.Id.HeaderText = "ID";
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
-            this.Id.Visible = false;
-            // 
-            // Surname1
-            // 
-            this.Surname1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Surname1.HeaderText = "ПІБ";
-            this.Surname1.Name = "Surname1";
-            this.Surname1.ReadOnly = true;
-            // 
-            // Birthday1
-            // 
-            this.Birthday1.HeaderText = "Рік народження";
-            this.Birthday1.MaxInputLength = 8;
-            this.Birthday1.Name = "Birthday1";
-            this.Birthday1.ReadOnly = true;
-            this.Birthday1.Width = 75;
-            // 
-            // Number1
-            // 
-            this.Number1.HeaderText = "Номер";
-            this.Number1.Name = "Number1";
-            this.Number1.ReadOnly = true;
-            this.Number1.Width = 150;
-            // 
-            // Adress1
-            // 
-            this.Adress1.HeaderText = "Адреса";
-            this.Adress1.Name = "Adress1";
-            this.Adress1.ReadOnly = true;
-            this.Adress1.Width = 150;
             // 
             // EditPatient
             // 
@@ -277,6 +281,7 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(1065, 434);
             this.MinimumSize = new System.Drawing.Size(1065, 434);
             this.Name = "EditPatient";

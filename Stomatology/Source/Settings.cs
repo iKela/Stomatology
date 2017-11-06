@@ -12,23 +12,41 @@ namespace Stomatology
 {
     public partial class Settings : Form
     {
-
-
         public Settings()
         {
             InitializeComponent();
-
         }
 
         private void Settings_Load(object sender, EventArgs e)
         {
             toolTip();
             this.txtTVWay.Text = Properties.Settings.Default.TeamViewerDirection;
-        }
+            this.txtBDWay.Text = Properties.Settings.Default.DateBaseDirection;
 
+            //if (txtBDWay.Text == string.Empty == false || txtTVWay.Text == string.Empty == false)
+            //{
+            //    Main newForm = new Main();
+            //    newForm.Show();
+            //    Hide();
+            //}
+        }
+        
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if (txtBDWay.Text == string.Empty)
+            {
+                MessageBox.Show("Задайте шлях до бази даних!");
+            }
+            else if (txtTVWay.Text == string.Empty)
+            {
+                MessageBox.Show("Задайте шлях до TeamViewer!");
+            }
+            else
+            {
+                Main newForm = new Main();
+                newForm.Show();
+                this.Hide();
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -38,7 +56,7 @@ namespace Stomatology
 
         private void textBox1_DoubleClick(object sender, EventArgs e)
         {
-            openFileDialog1.Filter = "All Files (*.*)|*.*";
+            openFileDialog1.Filter = ".mdf file (*.mdf)|*.mdf";
             openFileDialog1.FilterIndex = 1;
             openFileDialog1.Multiselect = false;
 
@@ -52,7 +70,7 @@ namespace Stomatology
 
         private void textBox2_DoubleClick(object sender, EventArgs e)
         {
-            openFileDialog1.Filter = "All Files (*.*)|*.*";
+            openFileDialog1.Filter = "Team Viewer (*.exe)|*.exe";
             openFileDialog1.FilterIndex = 1;
             openFileDialog1.Multiselect = false; // Multiselect
 
@@ -66,7 +84,8 @@ namespace Stomatology
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
+            Properties.Settings.Default.DateBaseDirection = txtBDWay.Text;
+            Properties.Settings.Default.Save();
         }
         private void textBox2_TextChanged(object sender, EventArgs e)
         {

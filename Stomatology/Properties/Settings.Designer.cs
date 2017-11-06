@@ -45,5 +45,17 @@ namespace Stomatology.Properties {
                 this["TeamViewerDirection"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string DateBaseDirection {
+            get {
+                return ((string)(this["DateBaseDirection"]));
+            }
+            set {
+                this["DateBaseDirection"] = value;
+            }
+        }
     }
 }

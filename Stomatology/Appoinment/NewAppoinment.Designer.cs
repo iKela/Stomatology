@@ -118,34 +118,36 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(122, 68);
+            this.dateTimePicker1.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.dateTimePicker1.Location = new System.Drawing.Point(122, 78);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(137, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(137, 26);
             this.dateTimePicker1.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(44, 40);
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(44, 49);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 18);
+            this.label1.Size = new System.Drawing.Size(65, 19);
             this.label1.TabIndex = 2;
             this.label1.Text = "Паціент:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(44, 68);
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(44, 84);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(48, 18);
+            this.label2.Size = new System.Drawing.Size(44, 19);
             this.label2.TabIndex = 3;
             this.label2.Text = "Дата:";
             // 
             // txtDescription
             // 
-            this.txtDescription.Location = new System.Drawing.Point(122, 99);
+            this.txtDescription.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.txtDescription.Location = new System.Drawing.Point(122, 111);
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Size = new System.Drawing.Size(402, 131);
@@ -154,10 +156,10 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(44, 98);
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.Location = new System.Drawing.Point(44, 110);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(48, 18);
+            this.label3.Size = new System.Drawing.Size(49, 19);
             this.label3.TabIndex = 5;
             this.label3.Text = "Опис:";
             // 
@@ -222,114 +224,162 @@
             // TopLeftTextBox_1
             // 
             this.TopLeftTextBox_1.Location = new System.Drawing.Point(254, 382);
+            this.TopLeftTextBox_1.Multiline = true;
             this.TopLeftTextBox_1.Name = "TopLeftTextBox_1";
             this.TopLeftTextBox_1.Size = new System.Drawing.Size(21, 20);
             this.TopLeftTextBox_1.TabIndex = 11;
+            this.TopLeftTextBox_1.MouseLeave += new System.EventHandler(this.TopLeftTextBox_1_MouseLeave);
+            this.TopLeftTextBox_1.MouseHover += new System.EventHandler(this.TopLeftTextBox_1_MouseHover);
             // 
             // TopLeftTextBox_2
             // 
             this.TopLeftTextBox_2.Location = new System.Drawing.Point(227, 382);
+            this.TopLeftTextBox_2.Multiline = true;
             this.TopLeftTextBox_2.Name = "TopLeftTextBox_2";
             this.TopLeftTextBox_2.Size = new System.Drawing.Size(21, 20);
             this.TopLeftTextBox_2.TabIndex = 12;
+            this.TopLeftTextBox_2.MouseLeave += new System.EventHandler(this.TopLeftTextBox_2_MouseLeave);
+            this.TopLeftTextBox_2.MouseHover += new System.EventHandler(this.TopLeftTextBox_2_MouseHover);
             // 
             // TopLeftTextBox_3
             // 
             this.TopLeftTextBox_3.Location = new System.Drawing.Point(200, 382);
+            this.TopLeftTextBox_3.Multiline = true;
             this.TopLeftTextBox_3.Name = "TopLeftTextBox_3";
             this.TopLeftTextBox_3.Size = new System.Drawing.Size(21, 20);
             this.TopLeftTextBox_3.TabIndex = 13;
+            this.TopLeftTextBox_3.MouseLeave += new System.EventHandler(this.TopLeftTextBox_3_MouseLeave);
+            this.TopLeftTextBox_3.MouseHover += new System.EventHandler(this.TopLeftTextBox_3_MouseHover);
             // 
             // TopLeftTextBox_4
             // 
             this.TopLeftTextBox_4.Location = new System.Drawing.Point(173, 382);
+            this.TopLeftTextBox_4.Multiline = true;
             this.TopLeftTextBox_4.Name = "TopLeftTextBox_4";
             this.TopLeftTextBox_4.Size = new System.Drawing.Size(21, 20);
             this.TopLeftTextBox_4.TabIndex = 14;
+            this.TopLeftTextBox_4.MouseLeave += new System.EventHandler(this.TopLeftTextBox_4_MouseLeave);
+            this.TopLeftTextBox_4.MouseHover += new System.EventHandler(this.TopLeftTextBox_4_MouseHover);
             // 
             // TopLeftTextBox_5
             // 
             this.TopLeftTextBox_5.Location = new System.Drawing.Point(146, 382);
+            this.TopLeftTextBox_5.Multiline = true;
             this.TopLeftTextBox_5.Name = "TopLeftTextBox_5";
             this.TopLeftTextBox_5.Size = new System.Drawing.Size(21, 20);
             this.TopLeftTextBox_5.TabIndex = 15;
+            this.TopLeftTextBox_5.MouseLeave += new System.EventHandler(this.TopLeftTextBox_5_MouseLeave);
+            this.TopLeftTextBox_5.MouseHover += new System.EventHandler(this.TopLeftTextBox_5_MouseHover);
             // 
             // TopLeftTextBox_6
             // 
             this.TopLeftTextBox_6.Location = new System.Drawing.Point(110, 382);
+            this.TopLeftTextBox_6.Multiline = true;
             this.TopLeftTextBox_6.Name = "TopLeftTextBox_6";
             this.TopLeftTextBox_6.Size = new System.Drawing.Size(21, 20);
             this.TopLeftTextBox_6.TabIndex = 16;
+            this.TopLeftTextBox_6.MouseLeave += new System.EventHandler(this.TopLeftTextBox_6_MouseLeave);
+            this.TopLeftTextBox_6.MouseHover += new System.EventHandler(this.TopLeftTextBox_6_MouseHover);
             // 
             // TopLeftTextBox_7
             // 
             this.TopLeftTextBox_7.Location = new System.Drawing.Point(68, 382);
+            this.TopLeftTextBox_7.Multiline = true;
             this.TopLeftTextBox_7.Name = "TopLeftTextBox_7";
             this.TopLeftTextBox_7.Size = new System.Drawing.Size(21, 20);
             this.TopLeftTextBox_7.TabIndex = 17;
+            this.TopLeftTextBox_7.MouseLeave += new System.EventHandler(this.TopLeftTextBox_7_MouseLeave);
+            this.TopLeftTextBox_7.MouseHover += new System.EventHandler(this.TopLeftTextBox_7_MouseHover);
             // 
             // TopLeftTextBox_8
             // 
             this.TopLeftTextBox_8.Location = new System.Drawing.Point(27, 382);
+            this.TopLeftTextBox_8.Multiline = true;
             this.TopLeftTextBox_8.Name = "TopLeftTextBox_8";
             this.TopLeftTextBox_8.Size = new System.Drawing.Size(21, 20);
             this.TopLeftTextBox_8.TabIndex = 18;
+            this.TopLeftTextBox_8.MouseLeave += new System.EventHandler(this.TopLeftTextBox_8_MouseLeave);
+            this.TopLeftTextBox_8.MouseHover += new System.EventHandler(this.TopLeftTextBox_8_MouseHover);
             // 
             // TopRightTextBox_1
             // 
             this.TopRightTextBox_1.Location = new System.Drawing.Point(298, 382);
+            this.TopRightTextBox_1.Multiline = true;
             this.TopRightTextBox_1.Name = "TopRightTextBox_1";
             this.TopRightTextBox_1.Size = new System.Drawing.Size(21, 20);
             this.TopRightTextBox_1.TabIndex = 19;
+            this.TopRightTextBox_1.MouseLeave += new System.EventHandler(this.TopRightTextBox_1_MouseLeave);
+            this.TopRightTextBox_1.MouseHover += new System.EventHandler(this.TopRightTextBox_1_MouseHover);
             // 
             // TopRightTextBox_2
             // 
             this.TopRightTextBox_2.Location = new System.Drawing.Point(325, 382);
+            this.TopRightTextBox_2.Multiline = true;
             this.TopRightTextBox_2.Name = "TopRightTextBox_2";
             this.TopRightTextBox_2.Size = new System.Drawing.Size(21, 20);
             this.TopRightTextBox_2.TabIndex = 20;
+            this.TopRightTextBox_2.MouseLeave += new System.EventHandler(this.TopRightTextBox_2_MouseLeave);
+            this.TopRightTextBox_2.MouseHover += new System.EventHandler(this.TopRightTextBox_2_MouseHover);
             // 
             // TopRightTextBox_3
             // 
             this.TopRightTextBox_3.Location = new System.Drawing.Point(354, 382);
+            this.TopRightTextBox_3.Multiline = true;
             this.TopRightTextBox_3.Name = "TopRightTextBox_3";
             this.TopRightTextBox_3.Size = new System.Drawing.Size(21, 20);
             this.TopRightTextBox_3.TabIndex = 21;
+            this.TopRightTextBox_3.MouseLeave += new System.EventHandler(this.TopRightTextBox_3_MouseLeave);
+            this.TopRightTextBox_3.MouseHover += new System.EventHandler(this.TopRightTextBox_3_MouseHover);
             // 
             // TopRightTextBox_4
             // 
             this.TopRightTextBox_4.Location = new System.Drawing.Point(382, 382);
+            this.TopRightTextBox_4.Multiline = true;
             this.TopRightTextBox_4.Name = "TopRightTextBox_4";
             this.TopRightTextBox_4.Size = new System.Drawing.Size(21, 20);
             this.TopRightTextBox_4.TabIndex = 22;
+            this.TopRightTextBox_4.MouseLeave += new System.EventHandler(this.TopRightTextBox_4_MouseLeave);
+            this.TopRightTextBox_4.MouseHover += new System.EventHandler(this.TopRightTextBox_4_MouseHover);
             // 
             // TopRightTextBox_5
             // 
             this.TopRightTextBox_5.Location = new System.Drawing.Point(412, 382);
+            this.TopRightTextBox_5.Multiline = true;
             this.TopRightTextBox_5.Name = "TopRightTextBox_5";
             this.TopRightTextBox_5.Size = new System.Drawing.Size(21, 20);
             this.TopRightTextBox_5.TabIndex = 23;
+            this.TopRightTextBox_5.MouseLeave += new System.EventHandler(this.TopRightTextBox_5_MouseLeave);
+            this.TopRightTextBox_5.MouseHover += new System.EventHandler(this.TopRightTextBox_5_MouseHover);
             // 
             // TopRightTextBox_6
             // 
             this.TopRightTextBox_6.Location = new System.Drawing.Point(448, 382);
+            this.TopRightTextBox_6.Multiline = true;
             this.TopRightTextBox_6.Name = "TopRightTextBox_6";
             this.TopRightTextBox_6.Size = new System.Drawing.Size(21, 20);
             this.TopRightTextBox_6.TabIndex = 24;
+            this.TopRightTextBox_6.MouseLeave += new System.EventHandler(this.TopRightTextBox_6_MouseLeave);
+            this.TopRightTextBox_6.MouseHover += new System.EventHandler(this.TopRightTextBox_6_MouseHover);
             // 
             // TopRightTextBox_7
             // 
             this.TopRightTextBox_7.Location = new System.Drawing.Point(491, 382);
+            this.TopRightTextBox_7.Multiline = true;
             this.TopRightTextBox_7.Name = "TopRightTextBox_7";
             this.TopRightTextBox_7.Size = new System.Drawing.Size(21, 20);
             this.TopRightTextBox_7.TabIndex = 25;
+            this.TopRightTextBox_7.MouseLeave += new System.EventHandler(this.TopRightTextBox_7_MouseLeave);
+            this.TopRightTextBox_7.MouseHover += new System.EventHandler(this.TopRightTextBox_7_MouseHover);
             // 
             // TopRightTextBox_8
             // 
             this.TopRightTextBox_8.Location = new System.Drawing.Point(529, 382);
+            this.TopRightTextBox_8.Multiline = true;
             this.TopRightTextBox_8.Name = "TopRightTextBox_8";
             this.TopRightTextBox_8.Size = new System.Drawing.Size(21, 20);
             this.TopRightTextBox_8.TabIndex = 26;
+            this.TopRightTextBox_8.MouseLeave += new System.EventHandler(this.TopRightTextBox_8_MouseLeave);
+            this.TopRightTextBox_8.MouseHover += new System.EventHandler(this.TopRightTextBox_8_MouseHover);
             // 
             // label6
             // 
@@ -634,129 +684,178 @@
             // BotRightTextBox_8
             // 
             this.BotRightTextBox_8.Location = new System.Drawing.Point(529, 443);
+            this.BotRightTextBox_8.Multiline = true;
             this.BotRightTextBox_8.Name = "BotRightTextBox_8";
             this.BotRightTextBox_8.Size = new System.Drawing.Size(21, 20);
             this.BotRightTextBox_8.TabIndex = 72;
+            this.BotRightTextBox_8.MouseLeave += new System.EventHandler(this.BotRightTextBox_8_MouseLeave);
+            this.BotRightTextBox_8.MouseHover += new System.EventHandler(this.BotRightTextBox_8_MouseHover);
             // 
             // BotRightTextBox_7
             // 
             this.BotRightTextBox_7.Location = new System.Drawing.Point(491, 443);
+            this.BotRightTextBox_7.Multiline = true;
             this.BotRightTextBox_7.Name = "BotRightTextBox_7";
             this.BotRightTextBox_7.Size = new System.Drawing.Size(21, 20);
             this.BotRightTextBox_7.TabIndex = 71;
+            this.BotRightTextBox_7.MouseLeave += new System.EventHandler(this.BotRightTextBox_7_MouseLeave);
+            this.BotRightTextBox_7.MouseHover += new System.EventHandler(this.BotRightTextBox_7_MouseHover);
             // 
             // BotRightTextBox_6
             // 
             this.BotRightTextBox_6.Location = new System.Drawing.Point(448, 443);
+            this.BotRightTextBox_6.Multiline = true;
             this.BotRightTextBox_6.Name = "BotRightTextBox_6";
             this.BotRightTextBox_6.Size = new System.Drawing.Size(21, 20);
             this.BotRightTextBox_6.TabIndex = 70;
+            this.BotRightTextBox_6.MouseLeave += new System.EventHandler(this.BotRightTextBox_6_MouseLeave);
+            this.BotRightTextBox_6.MouseHover += new System.EventHandler(this.BotRightTextBox_6_MouseHover);
             // 
             // BotRightTextBox_5
             // 
             this.BotRightTextBox_5.Location = new System.Drawing.Point(412, 443);
+            this.BotRightTextBox_5.Multiline = true;
             this.BotRightTextBox_5.Name = "BotRightTextBox_5";
             this.BotRightTextBox_5.Size = new System.Drawing.Size(21, 20);
             this.BotRightTextBox_5.TabIndex = 69;
+            this.BotRightTextBox_5.MouseLeave += new System.EventHandler(this.BotRightTextBox_5_MouseLeave);
+            this.BotRightTextBox_5.MouseHover += new System.EventHandler(this.BotRightTextBox_5_MouseHover);
             // 
             // BotRightTextBox_4
             // 
             this.BotRightTextBox_4.Location = new System.Drawing.Point(382, 443);
+            this.BotRightTextBox_4.Multiline = true;
             this.BotRightTextBox_4.Name = "BotRightTextBox_4";
             this.BotRightTextBox_4.Size = new System.Drawing.Size(21, 20);
             this.BotRightTextBox_4.TabIndex = 68;
+            this.BotRightTextBox_4.MouseLeave += new System.EventHandler(this.BotRightTextBox_4_MouseLeave);
+            this.BotRightTextBox_4.MouseHover += new System.EventHandler(this.BotRightTextBox_4_MouseHover);
             // 
             // BotRightTextBox_3
             // 
             this.BotRightTextBox_3.Location = new System.Drawing.Point(354, 443);
+            this.BotRightTextBox_3.Multiline = true;
             this.BotRightTextBox_3.Name = "BotRightTextBox_3";
             this.BotRightTextBox_3.Size = new System.Drawing.Size(21, 20);
             this.BotRightTextBox_3.TabIndex = 67;
+            this.BotRightTextBox_3.MouseLeave += new System.EventHandler(this.BotRightTextBox_3_MouseLeave);
+            this.BotRightTextBox_3.MouseHover += new System.EventHandler(this.BotRightTextBox_3_MouseHover);
             // 
             // BotRightTextBox_2
             // 
             this.BotRightTextBox_2.Location = new System.Drawing.Point(325, 443);
+            this.BotRightTextBox_2.Multiline = true;
             this.BotRightTextBox_2.Name = "BotRightTextBox_2";
             this.BotRightTextBox_2.Size = new System.Drawing.Size(21, 20);
             this.BotRightTextBox_2.TabIndex = 66;
+            this.BotRightTextBox_2.MouseLeave += new System.EventHandler(this.BotRightTextBox_2_MouseLeave);
+            this.BotRightTextBox_2.MouseHover += new System.EventHandler(this.BotRightTextBox_2_MouseHover);
             // 
             // BotRightTextBox_1
             // 
             this.BotRightTextBox_1.Location = new System.Drawing.Point(298, 443);
+            this.BotRightTextBox_1.Multiline = true;
             this.BotRightTextBox_1.Name = "BotRightTextBox_1";
             this.BotRightTextBox_1.Size = new System.Drawing.Size(21, 20);
             this.BotRightTextBox_1.TabIndex = 65;
+            this.BotRightTextBox_1.MouseLeave += new System.EventHandler(this.BotRightTextBox_1_MouseLeave);
+            this.BotRightTextBox_1.MouseHover += new System.EventHandler(this.BotRightTextBox_1_MouseHover);
             // 
             // BotLeftTextBox_8
             // 
             this.BotLeftTextBox_8.Location = new System.Drawing.Point(27, 443);
+            this.BotLeftTextBox_8.Multiline = true;
             this.BotLeftTextBox_8.Name = "BotLeftTextBox_8";
             this.BotLeftTextBox_8.Size = new System.Drawing.Size(21, 20);
             this.BotLeftTextBox_8.TabIndex = 64;
+            this.BotLeftTextBox_8.MouseLeave += new System.EventHandler(this.BotLeftTextBox_8_MouseLeave);
+            this.BotLeftTextBox_8.MouseHover += new System.EventHandler(this.BotLeftTextBox_8_MouseHover);
             // 
             // BotLeftTextBox_7
             // 
             this.BotLeftTextBox_7.Location = new System.Drawing.Point(68, 443);
+            this.BotLeftTextBox_7.Multiline = true;
             this.BotLeftTextBox_7.Name = "BotLeftTextBox_7";
             this.BotLeftTextBox_7.Size = new System.Drawing.Size(21, 20);
             this.BotLeftTextBox_7.TabIndex = 63;
+            this.BotLeftTextBox_7.MouseLeave += new System.EventHandler(this.BotLeftTextBox_7_MouseLeave);
+            this.BotLeftTextBox_7.MouseHover += new System.EventHandler(this.BotLeftTextBox_7_MouseHover);
             // 
             // BotLeftTextBox_6
             // 
             this.BotLeftTextBox_6.Location = new System.Drawing.Point(110, 443);
+            this.BotLeftTextBox_6.Multiline = true;
             this.BotLeftTextBox_6.Name = "BotLeftTextBox_6";
             this.BotLeftTextBox_6.Size = new System.Drawing.Size(21, 20);
             this.BotLeftTextBox_6.TabIndex = 62;
+            this.BotLeftTextBox_6.MouseLeave += new System.EventHandler(this.BotLeftTextBox_6_MouseLeave);
+            this.BotLeftTextBox_6.MouseHover += new System.EventHandler(this.BotLeftTextBox_6_MouseHover);
             // 
             // BotLeftTextBox_5
             // 
             this.BotLeftTextBox_5.Location = new System.Drawing.Point(146, 443);
+            this.BotLeftTextBox_5.Multiline = true;
             this.BotLeftTextBox_5.Name = "BotLeftTextBox_5";
             this.BotLeftTextBox_5.Size = new System.Drawing.Size(21, 20);
             this.BotLeftTextBox_5.TabIndex = 61;
+            this.BotLeftTextBox_5.MouseLeave += new System.EventHandler(this.BotLeftTextBox_5_MouseLeave);
+            this.BotLeftTextBox_5.MouseHover += new System.EventHandler(this.BotLeftTextBox_5_MouseHover);
             // 
             // BotLeftTextBox_4
             // 
             this.BotLeftTextBox_4.Location = new System.Drawing.Point(173, 443);
+            this.BotLeftTextBox_4.Multiline = true;
             this.BotLeftTextBox_4.Name = "BotLeftTextBox_4";
             this.BotLeftTextBox_4.Size = new System.Drawing.Size(21, 20);
             this.BotLeftTextBox_4.TabIndex = 60;
+            this.BotLeftTextBox_4.MouseLeave += new System.EventHandler(this.BotLeftTextBox_4_MouseLeave);
+            this.BotLeftTextBox_4.MouseHover += new System.EventHandler(this.BotLeftTextBox_4_MouseHover);
             // 
             // BotLeftTextBox_3
             // 
             this.BotLeftTextBox_3.Location = new System.Drawing.Point(200, 443);
+            this.BotLeftTextBox_3.Multiline = true;
             this.BotLeftTextBox_3.Name = "BotLeftTextBox_3";
             this.BotLeftTextBox_3.Size = new System.Drawing.Size(21, 20);
             this.BotLeftTextBox_3.TabIndex = 59;
+            this.BotLeftTextBox_3.MouseLeave += new System.EventHandler(this.BotLeftTextBox_3_MouseLeave);
+            this.BotLeftTextBox_3.MouseHover += new System.EventHandler(this.BotLeftTextBox_3_MouseHover);
             // 
             // BotLeftTextBox_2
             // 
             this.BotLeftTextBox_2.Location = new System.Drawing.Point(227, 443);
+            this.BotLeftTextBox_2.Multiline = true;
             this.BotLeftTextBox_2.Name = "BotLeftTextBox_2";
             this.BotLeftTextBox_2.Size = new System.Drawing.Size(21, 20);
             this.BotLeftTextBox_2.TabIndex = 58;
+            this.BotLeftTextBox_2.MouseLeave += new System.EventHandler(this.BotLeftTextBox_2_MouseLeave);
+            this.BotLeftTextBox_2.MouseHover += new System.EventHandler(this.BotLeftTextBox_2_MouseHover);
             // 
             // BotLeftTextBox_1
             // 
             this.BotLeftTextBox_1.Location = new System.Drawing.Point(254, 443);
+            this.BotLeftTextBox_1.Multiline = true;
             this.BotLeftTextBox_1.Name = "BotLeftTextBox_1";
             this.BotLeftTextBox_1.Size = new System.Drawing.Size(21, 20);
             this.BotLeftTextBox_1.TabIndex = 57;
+            this.BotLeftTextBox_1.MouseLeave += new System.EventHandler(this.BotLeftTextBox_1_MouseLeave);
+            this.BotLeftTextBox_1.MouseHover += new System.EventHandler(this.BotLeftTextBox_1_MouseHover);
             // 
             // txtMoney
             // 
-            this.txtMoney.Location = new System.Drawing.Point(122, 237);
+            this.txtMoney.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.txtMoney.Location = new System.Drawing.Point(122, 247);
             this.txtMoney.Name = "txtMoney";
-            this.txtMoney.Size = new System.Drawing.Size(100, 20);
+            this.txtMoney.Size = new System.Drawing.Size(100, 26);
             this.txtMoney.TabIndex = 73;
             // 
             // label36
             // 
             this.label36.AutoSize = true;
-            this.label36.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label36.Location = new System.Drawing.Point(44, 237);
+            this.label36.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label36.Location = new System.Drawing.Point(44, 250);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(45, 18);
+            this.label36.Size = new System.Drawing.Size(42, 19);
             this.label36.TabIndex = 74;
             this.label36.Text = "Ціна:";
             // 
@@ -764,7 +863,7 @@
             // 
             this.UAHLabel.AutoSize = true;
             this.UAHLabel.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.UAHLabel.Location = new System.Drawing.Point(224, 239);
+            this.UAHLabel.Location = new System.Drawing.Point(224, 252);
             this.UAHLabel.Name = "UAHLabel";
             this.UAHLabel.Size = new System.Drawing.Size(35, 18);
             this.UAHLabel.TabIndex = 76;
@@ -777,7 +876,7 @@
             this.button3.Enabled = false;
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(18, 40);
+            this.button3.Location = new System.Drawing.Point(18, 49);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(20, 20);
             this.button3.TabIndex = 77;
@@ -790,7 +889,7 @@
             this.button4.Enabled = false;
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(18, 68);
+            this.button4.Location = new System.Drawing.Point(18, 84);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(20, 20);
             this.button4.TabIndex = 78;
@@ -803,7 +902,7 @@
             this.button5.Enabled = false;
             this.button5.FlatAppearance.BorderSize = 0;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Location = new System.Drawing.Point(18, 98);
+            this.button5.Location = new System.Drawing.Point(18, 110);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(20, 20);
             this.button5.TabIndex = 79;
@@ -816,7 +915,7 @@
             this.button6.Enabled = false;
             this.button6.FlatAppearance.BorderSize = 0;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Location = new System.Drawing.Point(18, 235);
+            this.button6.Location = new System.Drawing.Point(18, 248);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(20, 20);
             this.button6.TabIndex = 80;
@@ -828,7 +927,7 @@
             this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button7.FlatAppearance.BorderSize = 0;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Location = new System.Drawing.Point(260, 237);
+            this.button7.Location = new System.Drawing.Point(260, 250);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(20, 20);
             this.button7.TabIndex = 81;
@@ -837,18 +936,20 @@
             // 
             // cmbPatient
             // 
+            this.cmbPatient.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.cmbPatient.FormattingEnabled = true;
-            this.cmbPatient.Location = new System.Drawing.Point(122, 41);
+            this.cmbPatient.Location = new System.Drawing.Point(122, 46);
             this.cmbPatient.Name = "cmbPatient";
-            this.cmbPatient.Size = new System.Drawing.Size(402, 21);
+            this.cmbPatient.Size = new System.Drawing.Size(402, 27);
             this.cmbPatient.TabIndex = 1;
             // 
             // comboBoxDoctor
             // 
+            this.comboBoxDoctor.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.comboBoxDoctor.FormattingEnabled = true;
-            this.comboBoxDoctor.Location = new System.Drawing.Point(122, 12);
+            this.comboBoxDoctor.Location = new System.Drawing.Point(122, 9);
             this.comboBoxDoctor.Name = "comboBoxDoctor";
-            this.comboBoxDoctor.Size = new System.Drawing.Size(402, 21);
+            this.comboBoxDoctor.Size = new System.Drawing.Size(402, 27);
             this.comboBoxDoctor.TabIndex = 82;
             // 
             // button8
@@ -858,7 +959,7 @@
             this.button8.Enabled = false;
             this.button8.FlatAppearance.BorderSize = 0;
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Location = new System.Drawing.Point(18, 11);
+            this.button8.Location = new System.Drawing.Point(18, 12);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(20, 20);
             this.button8.TabIndex = 84;
@@ -867,10 +968,10 @@
             // label37
             // 
             this.label37.AutoSize = true;
-            this.label37.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label37.Location = new System.Drawing.Point(44, 11);
+            this.label37.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label37.Location = new System.Drawing.Point(44, 12);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(52, 18);
+            this.label37.Size = new System.Drawing.Size(48, 19);
             this.label37.TabIndex = 83;
             this.label37.Text = "Лікар:";
             // 

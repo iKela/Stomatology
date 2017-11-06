@@ -14,8 +14,10 @@ namespace Stomatology
     public partial class NewAppoinment : Form
     {
         SqlConnection testCon = new SqlConnection
-        (@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\GoogleDrive InSoP\Stomatology\Stomatology\DataStomatology.mdf;Integrated Security=True");
+        (@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + Properties.Settings.Default.DateBaseDirection);
 
+        int MHIndex;
+        int MLIndex;
         string[] Doctor = {"Кричильський Леонід ТОРИОТт", " Кричильський Тетяна вміваміТт" , "Кричильський Мапяна миапвиа" };
         public void PassValue(string strValue)
         {
@@ -154,8 +156,810 @@ namespace Stomatology
             BotRightTextBox_3.Text = "";
             BotRightTextBox_2.Text = "";
             BotRightTextBox_1.Text = "";
-        }                                                         
-    }                                                                                        
+        }
+        #region Mouse Hover & Leave на TextBox'и зубів
+        //-----------TextBoxMouseHover------------------------------------------------------------------------------------------------------------------------------
+        private void txtBoxMouseHover()
+        {
+            switch (MHIndex)
+            {
+                case 1:
+                    {
+                        this.TopLeftTextBox_8.Size = new System.Drawing.Size(150, 150);
+                        this.TopLeftTextBox_8.BringToFront();
+                        break;
+                    }
+                case 2:
+                    {
+                        this.TopLeftTextBox_7.Size = new System.Drawing.Size(150, 150);
+                        this.TopLeftTextBox_7.BringToFront();
+                        break;
+                    }
+                case 3:
+                    {
+                        this.TopLeftTextBox_6.Size = new System.Drawing.Size(150, 150);
+                        this.TopLeftTextBox_6.BringToFront();
+                        break;
+                    }
+                case 4:
+                    {
+                        this.TopLeftTextBox_5.Size = new System.Drawing.Size(150, 150);
+                        this.TopLeftTextBox_5.BringToFront();
+                        break;
+                    }
+                case 5:
+                    {
+                        this.TopLeftTextBox_4.Size = new System.Drawing.Size(150, 150);
+                        this.TopLeftTextBox_4.BringToFront();
+                        break;
+                    }
+                case 6:
+                    {
+                        this.TopLeftTextBox_3.Size = new System.Drawing.Size(150, 150);
+                        this.TopLeftTextBox_3.BringToFront();
+                        break;
+                    }
+                case 7:
+                    {
+                        this.TopLeftTextBox_2.Size = new System.Drawing.Size(150, 150);
+                        this.TopLeftTextBox_2.BringToFront();
+                        break;
+                    }
+                case 8:
+                    {
+                        this.TopLeftTextBox_1.Size = new System.Drawing.Size(150, 150);
+                        this.TopLeftTextBox_1.BringToFront();
+                        break;
+                    }
+                case 9:
+                    {
+                        this.TopRightTextBox_1.Size = new System.Drawing.Size(150, 150);
+                        this.TopRightTextBox_1.BringToFront();
+                        break;
+                    }
+                case 10:
+                    {
+                        this.TopRightTextBox_2.Size = new System.Drawing.Size(150, 150);
+                        this.TopRightTextBox_2.BringToFront();
+                        break;
+                    }
+                case 11:
+                    {
+                        this.TopRightTextBox_3.Size = new System.Drawing.Size(150, 150);
+                        this.TopRightTextBox_3.BringToFront();
+                        break;
+                    }
+                case 12:
+                    {
+                        this.TopRightTextBox_4.Size = new System.Drawing.Size(150, 150);
+                        this.TopRightTextBox_4.BringToFront();
+                        break;
+                    }
+                case 13:
+                    {
+                        this.TopRightTextBox_5.Size = new System.Drawing.Size(150, 150);
+                        this.TopRightTextBox_5.BringToFront();
+                        break;
+                    }
+                case 14:
+                    {
+                        this.TopRightTextBox_6.Location = TopRightTextBox_5.Location;
+                        this.TopRightTextBox_6.Size = new System.Drawing.Size(150, 150);
+                        this.TopRightTextBox_6.BringToFront();
+                        break;
+                    }
+                case 15:
+                    {
+                        this.TopRightTextBox_7.Location = TopRightTextBox_5.Location;
+                        this.TopRightTextBox_7.Size = new System.Drawing.Size(150, 150);
+                        this.TopRightTextBox_7.BringToFront();
+                        break;
+                    }
+                case 16:
+                    {
+                        this.TopRightTextBox_8.Location = TopRightTextBox_5.Location;
+                        this.TopRightTextBox_8.Size = new System.Drawing.Size(150, 150);
+                        this.TopRightTextBox_8.BringToFront();
+                        break;
+                    }
+                case 17:
+                    {
+                        this.BotLeftTextBox_8.Size = new System.Drawing.Size(150, 150);
+                        this.BotLeftTextBox_8.BringToFront();
+                        break;
+                    }
+                case 18:
+                    {
+                        this.BotLeftTextBox_7.Size = new System.Drawing.Size(150, 150);
+                        this.BotLeftTextBox_7.BringToFront();
+                        break;
+                    }
+                case 19:
+                    {
+                        this.BotLeftTextBox_6.Size = new System.Drawing.Size(150, 150);
+                        this.BotLeftTextBox_6.BringToFront();
+                        break;
+                    }
+                case 20:
+                    {
+                        this.BotLeftTextBox_5.Size = new System.Drawing.Size(150, 150);
+                        this.BotLeftTextBox_5.BringToFront();
+                        break;
+                    }
+                case 21:
+                    {
+                        this.BotLeftTextBox_4.Size = new System.Drawing.Size(150, 150);
+                        this.BotLeftTextBox_4.BringToFront();
+                        break;
+                    }
+                case 22:
+                    {
+                        this.BotLeftTextBox_3.Size = new System.Drawing.Size(150, 150);
+                        this.BotLeftTextBox_3.BringToFront();
+                        break;
+                    }
+                case 23:
+                    {
+                        this.BotLeftTextBox_2.Size = new System.Drawing.Size(150, 150);
+                        this.BotLeftTextBox_2.BringToFront();
+                        break;
+                    }
+                case 24:
+                    {
+                        this.BotLeftTextBox_1.Size = new System.Drawing.Size(150, 150);
+                        this.BotLeftTextBox_1.BringToFront();
+                        break;
+                    }
+                case 25:
+                    {
+                        this.BotRightTextBox_1.Size = new System.Drawing.Size(150, 150);
+                        this.BotRightTextBox_1.BringToFront();
+                        break;
+                    }
+                case 26:
+                    {
+                        this.BotRightTextBox_2.Size = new System.Drawing.Size(150, 150);
+                        this.BotRightTextBox_2.BringToFront();
+                        break;
+                    }
+                case 27:
+                    {
+                        this.BotRightTextBox_3.Size = new System.Drawing.Size(150, 150);
+                        this.BotRightTextBox_3.BringToFront();
+                        break;
+                    }
+                case 28:
+                    {
+                        this.BotRightTextBox_4.Size = new System.Drawing.Size(150, 150);
+                        this.BotRightTextBox_4.BringToFront();
+                        break;
+                    }
+                case 29:
+                    {
+                        this.BotRightTextBox_5.Size = new System.Drawing.Size(150, 150);
+                        this.BotRightTextBox_5.BringToFront();
+                        break;
+                    }
+                case 30:
+                    {
+                        this.BotRightTextBox_6.Location = BotRightTextBox_5.Location;
+                        this.BotRightTextBox_6.Size = new System.Drawing.Size(150, 150);
+                        this.BotRightTextBox_6.BringToFront();
+                        break;
+                    }
+                case 31:
+                    {
+                        this.BotRightTextBox_7.Location = BotRightTextBox_5.Location;
+                        this.BotRightTextBox_7.Size = new System.Drawing.Size(150, 150);
+                        this.BotRightTextBox_7.BringToFront();
+                        break;
+                    }
+                case 32:
+                    {
+                        this.BotRightTextBox_8.Location = BotRightTextBox_5.Location;
+                        this.BotRightTextBox_8.Size = new System.Drawing.Size(150, 150);
+                        this.BotRightTextBox_8.BringToFront();
+                        break;
+                    }
+            }
+        }
+        //-----------TextBoxMouseLeave------------------------------------------------------------------------------------------------------------------------------
+        private void txtBoxMouseLeave()
+        {
+            switch (MLIndex)
+            {
+                case 1:
+                    {
+                        this.TopLeftTextBox_8.Size = new System.Drawing.Size(21, 21);
+                        break;
+                    }
+                case 2:
+                    {
+                        this.TopLeftTextBox_7.Size = new System.Drawing.Size(21, 21);
+                        break;
+                    }
+                case 3:
+                    {
+                        this.TopLeftTextBox_6.Size = new System.Drawing.Size(21, 21);
+                        break;
+                    }
+                case 4:
+                    {
+                        this.TopLeftTextBox_5.Size = new System.Drawing.Size(21, 21);
+                        break;
+                    }
+                case 5:
+                    {
+                        this.TopLeftTextBox_4.Size = new System.Drawing.Size(21, 21);
+                        break;
+                    }
+                case 6:
+                    {
+                        this.TopLeftTextBox_3.Size = new System.Drawing.Size(21, 21);
+                        break;
+                    }
+                case 7:
+                    {
+                        this.TopLeftTextBox_2.Size = new System.Drawing.Size(21, 21);
+                        break;
+                    }
+                case 8:
+                    {
+                        this.TopLeftTextBox_1.Size = new System.Drawing.Size(21, 21);
+                        break;
+                    }
+                case 9:
+                    {
+                        this.TopRightTextBox_1.Size = new System.Drawing.Size(21, 21);
+                        break;
+                    }
+                case 10:
+                    {
+                        this.TopRightTextBox_2.Size = new System.Drawing.Size(21, 21);
+                        break;
+                    }
+                case 11:
+                    {
+                        this.TopRightTextBox_3.Size = new System.Drawing.Size(21, 21);
+                        break;
+                    }
+                case 12:
+                    {
+                        this.TopRightTextBox_4.Size = new System.Drawing.Size(21, 21);
+                        break;
+                    }
+                case 13:
+                    {
+                        this.TopRightTextBox_5.Size = new System.Drawing.Size(21, 21);
+                        break;
+                    }
+                case 14:
+                    {
+                        this.TopRightTextBox_6.Location = new Point(448, 382);
+                        this.TopRightTextBox_6.Size = new System.Drawing.Size(21, 21);
+                        break;
+                    }
+                case 15:
+                    {
+                        this.TopRightTextBox_7.Location = new Point(491, 382);
+                        this.TopRightTextBox_7.Size = new System.Drawing.Size(21, 21);
+                        break;
+                    }
+                case 16:
+                    {
+                        this.TopRightTextBox_8.Location = new Point(529, 382);
+                        this.TopRightTextBox_8.Size = new System.Drawing.Size(21, 21);
+                        break;
+                    }
+                case 17:
+                    {
+                        this.BotLeftTextBox_8.Size = new System.Drawing.Size(21, 21);
+                        break;
+                    }
+                case 18:
+                    {
+                        this.BotLeftTextBox_7.Size = new System.Drawing.Size(21, 21);
+                        break;
+                    }
+                case 19:
+                    {
+                        this.BotLeftTextBox_6.Size = new System.Drawing.Size(21, 21);
+                        break;
+                    }
+                case 20:
+                    {
+                        this.BotLeftTextBox_5.Size = new System.Drawing.Size(21, 21);
+                        break;
+                    }
+                case 21:
+                    {
+                        this.BotLeftTextBox_4.Size = new System.Drawing.Size(21, 21);
+                        break;
+                    }
+                case 22:
+                    {
+                        this.BotLeftTextBox_3.Size = new System.Drawing.Size(21, 21);
+                        break;
+                    }
+                case 23:
+                    {
+                        this.BotLeftTextBox_2.Size = new System.Drawing.Size(21, 21);
+                        break;
+                    }
+                case 24:
+                    {
+                        this.BotLeftTextBox_1.Size = new System.Drawing.Size(21, 21);
+                        break;
+                    }
+                case 25:
+                    {
+                        this.BotRightTextBox_1.Size = new System.Drawing.Size(21, 21);
+                        break;
+                    }
+                case 26:
+                    {
+                        this.BotRightTextBox_2.Size = new System.Drawing.Size(21, 21);
+                        break;
+                    }
+                case 27:
+                    {
+                        this.BotRightTextBox_3.Size = new System.Drawing.Size(21, 21);
+                        break;
+                    }
+                case 28:
+                    {
+                        this.BotRightTextBox_4.Size = new System.Drawing.Size(21, 21);
+                        break;
+                    }
+                case 29:
+                    {
+                        this.BotRightTextBox_5.Size = new System.Drawing.Size(21, 21);
+                        break;
+                    }
+                case 30:
+                    {
+                        this.BotRightTextBox_6.Location = new Point(448, 443);
+                        this.BotRightTextBox_6.Size = new System.Drawing.Size(21, 21);
+                        break;
+                    }
+                case 31:
+                    {
+                        this.BotRightTextBox_7.Location = new Point(491, 443);
+                        this.BotRightTextBox_7.Size = new System.Drawing.Size(21, 21);
+                        break;
+                    }
+                case 32:
+                    {
+                        this.BotRightTextBox_8.Location = new Point(529, 443);
+                        this.BotRightTextBox_8.Size = new System.Drawing.Size(21, 21);
+                        break;
+                    }
+            }
+
+        }
+        #endregion
+        #region TextBox'и зубів
+        public void TopLeftTextBox_8_MouseHover(object sender, EventArgs e)
+        {
+
+            // Текстбокси рахуються з лівої сторони
+            MHIndex = 1;
+            txtBoxMouseHover();
+        }
+
+        public void TopLeftTextBox_8_MouseLeave(object sender, EventArgs e)
+        {
+            //Текстбокси рахуються з лівої сторони
+            MLIndex = 1;
+            txtBoxMouseLeave();
+        }
+        public void TopLeftTextBox_7_MouseHover(object sender, EventArgs e)
+        {
+            // Текстбокси рахуються з лівої сторони
+            MHIndex = 2;
+            txtBoxMouseHover();
+        }
+
+        private void TopLeftTextBox_7_MouseLeave(object sender, EventArgs e)
+        {
+            //Текстбокси рахуються з лівої сторони
+            MLIndex = 2;
+            txtBoxMouseLeave();
+        }
+        private void TopLeftTextBox_6_MouseHover(object sender, EventArgs e)
+        {
+            // Текстбокси рахуються з лівої сторони
+            MHIndex = 3;
+            txtBoxMouseHover();
+        }
+
+        private void TopLeftTextBox_6_MouseLeave(object sender, EventArgs e)
+        {
+            //Текстбокси рахуються з лівої сторони
+            MLIndex = 3;
+            txtBoxMouseLeave();
+        }
+        private void TopLeftTextBox_5_MouseHover(object sender, EventArgs e)
+        {
+            // Текстбокси рахуються з лівої сторони
+            MHIndex = 4;
+            txtBoxMouseHover();
+        }
+
+        private void TopLeftTextBox_5_MouseLeave(object sender, EventArgs e)
+        {
+            //Текстбокси рахуються з лівої сторони
+            MLIndex = 4;
+            txtBoxMouseLeave();
+        }
+        private void TopLeftTextBox_4_MouseHover(object sender, EventArgs e)
+        {
+            // Текстбокси рахуються з лівої сторони
+            MHIndex = 5;
+            txtBoxMouseHover();
+        }
+
+        private void TopLeftTextBox_4_MouseLeave(object sender, EventArgs e)
+        {
+            //Текстбокси рахуються з лівої сторони
+            MLIndex = 5;
+            txtBoxMouseLeave();
+        }
+        private void TopLeftTextBox_3_MouseHover(object sender, EventArgs e)
+        {
+            // Текстбокси рахуються з лівої сторони
+            MHIndex = 6;
+            txtBoxMouseHover();
+        }
+
+        private void TopLeftTextBox_3_MouseLeave(object sender, EventArgs e)
+        {
+            //Текстбокси рахуються з лівої сторони
+            MLIndex = 6;
+            txtBoxMouseLeave();
+        }
+        private void TopLeftTextBox_2_MouseHover(object sender, EventArgs e)
+        {
+            // Текстбокси рахуються з лівої сторони
+            MHIndex = 7;
+            txtBoxMouseHover();
+        }
+
+        private void TopLeftTextBox_2_MouseLeave(object sender, EventArgs e)
+        {
+            //Текстбокси рахуються з лівої сторони
+            MLIndex = 7;
+            txtBoxMouseLeave();
+        }
+        private void TopLeftTextBox_1_MouseHover(object sender, EventArgs e)
+        {
+            // Текстбокси рахуються з лівої сторони
+            MHIndex = 8;
+            txtBoxMouseHover();
+        }
+
+        private void TopLeftTextBox_1_MouseLeave(object sender, EventArgs e)
+        {
+            //Текстбокси рахуються з лівої сторони
+            MLIndex = 8;
+            txtBoxMouseLeave();
+        }
+
+        private void TopRightTextBox_1_MouseHover(object sender, EventArgs e)
+        {
+            //Текстбокси рахуються з лівої сторони
+            MHIndex = 9;
+            txtBoxMouseHover();
+        }
+
+        private void TopRightTextBox_1_MouseLeave(object sender, EventArgs e)
+        {
+            //Текстбокси рахуються з лівої сторони
+            MLIndex = 9;
+            txtBoxMouseLeave();
+        }
+        private void TopRightTextBox_2_MouseHover(object sender, EventArgs e)
+        {
+            //Текстбокси рахуються з лівої сторони
+            MHIndex = 10;
+            txtBoxMouseHover();
+        }
+
+        private void TopRightTextBox_2_MouseLeave(object sender, EventArgs e)
+        {
+            //Текстбокси рахуються з лівої сторони
+            MLIndex = 10;
+            txtBoxMouseLeave();
+        }
+        private void TopRightTextBox_3_MouseHover(object sender, EventArgs e)
+        {
+            //Текстбокси рахуються з лівої сторони
+            MHIndex = 11;
+            txtBoxMouseHover();
+        }
+
+        private void TopRightTextBox_3_MouseLeave(object sender, EventArgs e)
+        {
+            //Текстбокси рахуються з лівої сторони
+            MLIndex = 11;
+            txtBoxMouseLeave();
+        }
+        private void TopRightTextBox_4_MouseHover(object sender, EventArgs e)
+        {
+            //Текстбокси рахуються з лівої сторони
+            MHIndex = 12;
+            txtBoxMouseHover();
+        }
+
+        private void TopRightTextBox_4_MouseLeave(object sender, EventArgs e)
+        {
+            //Текстбокси рахуються з лівої сторони
+            MLIndex = 12;
+            txtBoxMouseLeave();
+        }
+        private void TopRightTextBox_5_MouseHover(object sender, EventArgs e)
+        {
+            //Текстбокси рахуються з лівої сторони
+            MHIndex = 13;
+            txtBoxMouseHover();
+        }
+
+        private void TopRightTextBox_5_MouseLeave(object sender, EventArgs e)
+        {
+            //Текстбокси рахуються з лівої сторони
+            MLIndex = 13;
+            txtBoxMouseLeave();
+        }
+        private void TopRightTextBox_6_MouseHover(object sender, EventArgs e)
+        {
+            //Текстбокси рахуються з лівої сторони
+            MHIndex = 14;
+            txtBoxMouseHover();
+        }
+
+        private void TopRightTextBox_6_MouseLeave(object sender, EventArgs e)
+        {
+            //Текстбокси рахуються з лівої сторони
+            MLIndex = 14;
+            txtBoxMouseLeave();
+        }
+        private void TopRightTextBox_7_MouseHover(object sender, EventArgs e)
+        {
+            //Текстбокси рахуються з лівої сторони
+            MHIndex = 15;
+            txtBoxMouseHover();
+        }
+
+        private void TopRightTextBox_7_MouseLeave(object sender, EventArgs e)
+        {
+            //Текстбокси рахуються з лівої сторони
+            MLIndex = 15;
+            txtBoxMouseLeave();
+        }
+        private void TopRightTextBox_8_MouseHover(object sender, EventArgs e)
+        {
+            //Текстбокси рахуються з лівої сторони
+            MHIndex = 16;
+            txtBoxMouseHover();
+        }
+
+        private void TopRightTextBox_8_MouseLeave(object sender, EventArgs e)
+        {
+            //Текстбокси рахуються з лівої сторони
+            MLIndex = 16;
+            txtBoxMouseLeave();
+        }
+
+        private void BotLeftTextBox_8_MouseHover(object sender, EventArgs e)
+        {
+            //Текстбокси рахуються з лівої сторони
+            MHIndex = 17;
+            txtBoxMouseHover();
+        }
+
+        private void BotLeftTextBox_8_MouseLeave(object sender, EventArgs e)
+        {
+            //Текстбокси рахуються з лівої сторони
+            MLIndex = 17;
+            txtBoxMouseLeave();
+        }
+        private void BotLeftTextBox_7_MouseHover(object sender, EventArgs e)
+        {
+            //Текстбокси рахуються з лівої сторони
+            MHIndex = 18;
+            txtBoxMouseHover();
+        }
+
+        private void BotLeftTextBox_7_MouseLeave(object sender, EventArgs e)
+        {
+            //Текстбокси рахуються з лівої сторони
+            MLIndex = 18;
+            txtBoxMouseLeave();
+        }
+        private void BotLeftTextBox_6_MouseHover(object sender, EventArgs e)
+        {
+            //Текстбокси рахуються з лівої сторони
+            MHIndex = 19;
+            txtBoxMouseHover();
+        }
+
+        private void BotLeftTextBox_6_MouseLeave(object sender, EventArgs e)
+        {
+            //Текстбокси рахуються з лівої сторони
+            MLIndex = 19;
+            txtBoxMouseLeave();
+        }
+        private void BotLeftTextBox_5_MouseHover(object sender, EventArgs e)
+        {
+            //Текстбокси рахуються з лівої сторони
+            MHIndex = 20;
+            txtBoxMouseHover();
+        }
+
+        private void BotLeftTextBox_5_MouseLeave(object sender, EventArgs e)
+        {
+            //Текстбокси рахуються з лівої сторони
+            MLIndex = 20;
+            txtBoxMouseLeave();
+        }
+        private void BotLeftTextBox_4_MouseHover(object sender, EventArgs e)
+        {
+            //Текстбокси рахуються з лівої сторони
+            MHIndex = 21;
+            txtBoxMouseHover();
+        }
+
+        private void BotLeftTextBox_4_MouseLeave(object sender, EventArgs e)
+        {
+            //Текстбокси рахуються з лівої сторони
+            MLIndex = 21;
+            txtBoxMouseLeave();
+        }
+        private void BotLeftTextBox_3_MouseHover(object sender, EventArgs e)
+        {
+            //Текстбокси рахуються з лівої сторони
+            MHIndex = 22;
+            txtBoxMouseHover();
+        }
+
+        private void BotLeftTextBox_3_MouseLeave(object sender, EventArgs e)
+        {
+            //Текстбокси рахуються з лівої сторони
+            MLIndex = 22;
+            txtBoxMouseLeave();
+        }
+        private void BotLeftTextBox_2_MouseHover(object sender, EventArgs e)
+        {
+            //Текстбокси рахуються з лівої сторони
+            MHIndex = 23;
+            txtBoxMouseHover();
+        }
+
+        private void BotLeftTextBox_2_MouseLeave(object sender, EventArgs e)
+        {
+            //Текстбокси рахуються з лівої сторони
+            MLIndex = 23;
+            txtBoxMouseLeave();
+        }
+        private void BotLeftTextBox_1_MouseHover(object sender, EventArgs e)
+        {
+            //Текстбокси рахуються з лівої сторони
+            MHIndex = 24;
+            txtBoxMouseHover();
+        }
+
+        private void BotLeftTextBox_1_MouseLeave(object sender, EventArgs e)
+        {
+            //Текстбокси рахуються з лівої сторони
+            MLIndex = 24;
+            txtBoxMouseLeave();
+        }
+        private void BotRightTextBox_1_MouseHover(object sender, EventArgs e)
+        {
+            //Текстбокси рахуються з лівої сторони
+            MHIndex = 25;
+            txtBoxMouseHover();
+        }
+
+        private void BotRightTextBox_1_MouseLeave(object sender, EventArgs e)
+        {
+            //Текстбокси рахуються з лівої сторони
+            MLIndex = 25;
+            txtBoxMouseLeave();
+        }
+        private void BotRightTextBox_2_MouseHover(object sender, EventArgs e)
+        {
+            //Текстбокси рахуються з лівої сторони
+            MHIndex = 26;
+            txtBoxMouseHover();
+        }
+
+        private void BotRightTextBox_2_MouseLeave(object sender, EventArgs e)
+        {
+            //Текстбокси рахуються з лівої сторони
+            MLIndex = 26;
+            txtBoxMouseLeave();
+        }
+        private void BotRightTextBox_3_MouseHover(object sender, EventArgs e)
+        {
+            //Текстбокси рахуються з лівої сторони
+            MHIndex = 27;
+            txtBoxMouseHover();
+        }
+
+        private void BotRightTextBox_3_MouseLeave(object sender, EventArgs e)
+        {
+            //Текстбокси рахуються з лівої сторони
+            MLIndex = 27;
+            txtBoxMouseLeave();
+        }
+        private void BotRightTextBox_4_MouseHover(object sender, EventArgs e)
+        {
+            //Текстбокси рахуються з лівої сторони
+            MHIndex = 28;
+            txtBoxMouseHover();
+        }
+
+        private void BotRightTextBox_4_MouseLeave(object sender, EventArgs e)
+        {
+            //Текстбокси рахуються з лівої сторони
+            MLIndex = 28;
+            txtBoxMouseLeave();
+        }
+        private void BotRightTextBox_5_MouseHover(object sender, EventArgs e)
+        {
+            //Текстбокси рахуються з лівої сторони
+            MHIndex = 29;
+            txtBoxMouseHover();
+        }
+
+        private void BotRightTextBox_5_MouseLeave(object sender, EventArgs e)
+        {
+            //Текстбокси рахуються з лівої сторони
+            MLIndex = 29;
+            txtBoxMouseLeave();
+        }
+        private void BotRightTextBox_6_MouseHover(object sender, EventArgs e)
+        {
+            //Текстбокси рахуються з лівої сторони
+            MHIndex = 30;
+            txtBoxMouseHover();
+        }
+
+        private void BotRightTextBox_6_MouseLeave(object sender, EventArgs e)
+        {
+            //Текстбокси рахуються з лівої сторони
+            MLIndex = 30;
+            txtBoxMouseLeave();
+        }
+        private void BotRightTextBox_7_MouseHover(object sender, EventArgs e)
+        {
+            //Текстбокси рахуються з лівої сторони
+            MHIndex = 31;
+            txtBoxMouseHover();
+        }
+
+        private void BotRightTextBox_7_MouseLeave(object sender, EventArgs e)
+        {
+            //Текстбокси рахуються з лівої сторони
+            MLIndex = 31;
+            txtBoxMouseLeave();
+        }
+        private void BotRightTextBox_8_MouseHover(object sender, EventArgs e)
+        {
+            //Текстбокси рахуються з лівої сторони
+            MHIndex = 32;
+            txtBoxMouseHover();
+        }
+        private void BotRightTextBox_8_MouseLeave(object sender, EventArgs e)
+        {
+            //Текстбокси рахуються з лівої сторони
+            MLIndex = 32;
+            txtBoxMouseLeave();
+        }
+
+        #endregion
+    }
 }                                                                                            
                                                                                              
                                                                                              
