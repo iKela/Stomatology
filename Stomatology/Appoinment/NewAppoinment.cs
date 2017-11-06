@@ -18,7 +18,9 @@ namespace Stomatology
 
         int MHIndex;
         int MLIndex;
-        string[] Doctor = {"Кричильський Леонід ТОРИОТт", " Кричильський Тетяна вміваміТт" , "Кричильський Мапяна миапвиа" };
+
+        string[] Doctor = {"Кричильський Леонід Ростиславович", " Кричильський Тетяна Георгієвна" , "Яскал Зоряна Миколаївна" };
+
         public void PassValue(string strValue)
         {
             txtMoney.Text = strValue;
