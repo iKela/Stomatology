@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace Stomatology
@@ -16,12 +14,23 @@ namespace Stomatology
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-
-            if (Properties.Settings.Default.TeamViewerDirection == string.Empty && Properties.Settings.Default.TeamViewerDirection == string.Empty)
+            bool allow;
+            try
+            {
+                SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + Properties.Settings.Default.DateBaseDirection);
+                conn.Open();
+                conn.Close();
+                allow = true;
+            }
+            catch
+            {
+                allow = false;
+            }
+            if (Properties.Settings.Default.TeamViewerDirection == string.Empty && Properties.Settings.Default.TeamViewerDirection == string.Empty || allow == false)
             {
                 Application.Run(new Settings());
             }
-            else
+            else if (allow == true)
             {
                 Application.Run(new Main());
             }
