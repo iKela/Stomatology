@@ -30,49 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserInfo));
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Загальні відомості");
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Обмеження");
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Про программу", -2, -2, new System.Windows.Forms.TreeNode[] {
-            treeNode1,
-            treeNode2});
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Інформація по графічній та функціональній частині программи", 2, 2);
-            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Як витягти файли", 2, 2);
-            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Введення для новачків", -2, -2, new System.Windows.Forms.TreeNode[] {
-            treeNode4,
-            treeNode5});
-            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Знайомство з інтерфейсом \"Стоматологія\"");
-            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Режими");
-            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Вибір файлів");
-            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Теми");
-            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("Вступ", 2, 2, new System.Windows.Forms.TreeNode[] {
-            treeNode7,
-            treeNode8,
-            treeNode9,
-            treeNode10});
-            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("Інтерфейс", -2, -2, new System.Windows.Forms.TreeNode[] {
-            treeNode11});
-            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("Головна", 2, 2);
-            System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("Справка", 2, 2);
-            System.Windows.Forms.TreeNode treeNode15 = new System.Windows.Forms.TreeNode("Допомога", 2, 2);
-            System.Windows.Forms.TreeNode treeNode16 = new System.Windows.Forms.TreeNode("Меню \"Стоматологія\"", -2, -2, new System.Windows.Forms.TreeNode[] {
-            treeNode13,
-            treeNode14,
-            treeNode15});
-            System.Windows.Forms.TreeNode treeNode17 = new System.Windows.Forms.TreeNode("Шлях до БД", 2, 2);
-            System.Windows.Forms.TreeNode treeNode18 = new System.Windows.Forms.TreeNode("Шлях до TV", 2, 2);
-            System.Windows.Forms.TreeNode treeNode19 = new System.Windows.Forms.TreeNode("Настройки", -2, -2, new System.Windows.Forms.TreeNode[] {
-            treeNode17,
-            treeNode18});
-            System.Windows.Forms.TreeNode treeNode20 = new System.Windows.Forms.TreeNode("Поради", 2, 2);
-            System.Windows.Forms.TreeNode treeNode21 = new System.Windows.Forms.TreeNode("Типові питання", 2, 2);
-            System.Windows.Forms.TreeNode treeNode22 = new System.Windows.Forms.TreeNode("Поради та типові питання", -2, -2, new System.Windows.Forms.TreeNode[] {
-            treeNode20,
-            treeNode21});
-            System.Windows.Forms.TreeNode treeNode23 = new System.Windows.Forms.TreeNode("Ліцензійна згода", 2, 2);
-            System.Windows.Forms.TreeNode treeNode24 = new System.Windows.Forms.TreeNode("Про купівлю программи", 2, 2);
-            System.Windows.Forms.TreeNode treeNode25 = new System.Windows.Forms.TreeNode("Ліцензійна згода та купівля", -2, -2, new System.Windows.Forms.TreeNode[] {
-            treeNode23,
-            treeNode24});
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnLeftArrow = new System.Windows.Forms.ToolStripButton();
             this.btnRightArrow = new System.Windows.Forms.ToolStripButton();
@@ -81,15 +38,36 @@
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.treeView1 = new System.Windows.Forms.TreeView();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.rtxtAboutSoft = new System.Windows.Forms.RichTextBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.toolStrip2 = new System.Windows.Forms.ToolStrip();
+            this.toolStripSplitButton1 = new System.Windows.Forms.ToolStripSplitButton();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSplitButton2 = new System.Windows.Forms.ToolStripSplitButton();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSplitButton3 = new System.Windows.Forms.ToolStripSplitButton();
+            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSplitButton4 = new System.Windows.Forms.ToolStripSplitButton();
+            this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSplitButton5 = new System.Windows.Forms.ToolStripSplitButton();
+            this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSplitButton6 = new System.Windows.Forms.ToolStripSplitButton();
+            this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.toolStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -161,6 +139,7 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.splitContainer1.Panel2.Controls.Add(this.rtxtAboutSoft);
             this.splitContainer1.Size = new System.Drawing.Size(741, 502);
             this.splitContainer1.SplitterDistance = 247;
             this.splitContainer1.TabIndex = 2;
@@ -178,7 +157,7 @@
             // tabPage1
             // 
             this.tabPage1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.tabPage1.Controls.Add(this.treeView1);
+            this.tabPage1.Controls.Add(this.toolStrip2);
             this.tabPage1.Location = new System.Drawing.Point(4, 23);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -186,159 +165,6 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Вміст";
             this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // treeView1
-            // 
-            this.treeView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.treeView1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.treeView1.ImageKey = "32285.png";
-            this.treeView1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.treeView1.Location = new System.Drawing.Point(3, 3);
-            this.treeView1.Name = "treeView1";
-            treeNode1.ImageIndex = 2;
-            treeNode1.Name = "nodeGeneralInfo";
-            treeNode1.NodeFont = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            treeNode1.SelectedImageKey = "Information-icon.png";
-            treeNode1.Text = "Загальні відомості";
-            treeNode2.ImageIndex = 2;
-            treeNode2.Name = "nodeConstraints";
-            treeNode2.NodeFont = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            treeNode2.SelectedImageKey = "Information-icon.png";
-            treeNode2.Text = "Обмеження";
-            treeNode3.Checked = true;
-            treeNode3.ImageIndex = -2;
-            treeNode3.Name = "nodeAboutSoft";
-            treeNode3.NodeFont = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            treeNode3.SelectedImageIndex = -2;
-            treeNode3.StateImageIndex = 1;
-            treeNode3.Text = "Про программу";
-            treeNode4.ImageIndex = 2;
-            treeNode4.Name = "Node7";
-            treeNode4.NodeFont = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            treeNode4.SelectedImageIndex = 2;
-            treeNode4.Text = "Інформація по графічній та функціональній частині программи";
-            treeNode5.ImageIndex = 2;
-            treeNode5.Name = "nodeHowGetFiles";
-            treeNode5.NodeFont = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            treeNode5.SelectedImageIndex = 2;
-            treeNode5.Text = "Як витягти файли";
-            treeNode6.Checked = true;
-            treeNode6.ImageIndex = -2;
-            treeNode6.Name = "nodeIntroForBeg";
-            treeNode6.NodeFont = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            treeNode6.SelectedImageIndex = -2;
-            treeNode6.StateImageIndex = 1;
-            treeNode6.Text = "Введення для новачків";
-            treeNode7.Name = "nodeAcquaintance";
-            treeNode7.NodeFont = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            treeNode7.Text = "Знайомство з інтерфейсом \"Стоматологія\"";
-            treeNode8.Name = "nodeModes";
-            treeNode8.NodeFont = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            treeNode8.Text = "Режими";
-            treeNode9.Name = "nodeChooseFiles";
-            treeNode9.NodeFont = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            treeNode9.Text = "Вибір файлів";
-            treeNode10.Name = "nodeThemes";
-            treeNode10.Text = "Теми";
-            treeNode11.ImageIndex = 2;
-            treeNode11.Name = "nodeIntro";
-            treeNode11.NodeFont = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            treeNode11.SelectedImageIndex = 2;
-            treeNode11.Text = "Вступ";
-            treeNode12.Checked = true;
-            treeNode12.ImageIndex = -2;
-            treeNode12.Name = "nodeInterface";
-            treeNode12.NodeFont = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            treeNode12.SelectedImageIndex = -2;
-            treeNode12.StateImageIndex = 1;
-            treeNode12.Text = "Інтерфейс";
-            treeNode13.ImageIndex = 2;
-            treeNode13.Name = "nodeMain";
-            treeNode13.NodeFont = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            treeNode13.SelectedImageIndex = 2;
-            treeNode13.Text = "Головна";
-            treeNode14.ImageIndex = 2;
-            treeNode14.Name = "nodeInfo";
-            treeNode14.NodeFont = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            treeNode14.SelectedImageIndex = 2;
-            treeNode14.StateImageKey = "(none)";
-            treeNode14.Text = "Справка";
-            treeNode15.ImageIndex = 2;
-            treeNode15.Name = "nodeHelp";
-            treeNode15.NodeFont = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            treeNode15.SelectedImageIndex = 2;
-            treeNode15.Text = "Допомога";
-            treeNode16.Checked = true;
-            treeNode16.ImageIndex = -2;
-            treeNode16.Name = "nodeMenu";
-            treeNode16.NodeFont = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            treeNode16.SelectedImageIndex = -2;
-            treeNode16.StateImageIndex = 1;
-            treeNode16.Text = "Меню \"Стоматологія\"";
-            treeNode17.ImageIndex = 2;
-            treeNode17.Name = "nodeDBDirection";
-            treeNode17.NodeFont = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            treeNode17.SelectedImageIndex = 2;
-            treeNode17.Text = "Шлях до БД";
-            treeNode18.ImageIndex = 2;
-            treeNode18.Name = "nodeTVDirection";
-            treeNode18.NodeFont = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            treeNode18.SelectedImageIndex = 2;
-            treeNode18.Text = "Шлях до TV";
-            treeNode19.Checked = true;
-            treeNode19.ImageIndex = -2;
-            treeNode19.Name = "nodeSettings";
-            treeNode19.NodeFont = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            treeNode19.SelectedImageIndex = -2;
-            treeNode19.StateImageIndex = 1;
-            treeNode19.Text = "Настройки";
-            treeNode20.ImageIndex = 2;
-            treeNode20.Name = "nodeTips";
-            treeNode20.NodeFont = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            treeNode20.SelectedImageIndex = 2;
-            treeNode20.Text = "Поради";
-            treeNode21.ImageIndex = 2;
-            treeNode21.Name = "nodeTypQ";
-            treeNode21.NodeFont = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            treeNode21.SelectedImageIndex = 2;
-            treeNode21.Text = "Типові питання";
-            treeNode22.Checked = true;
-            treeNode22.ImageIndex = -2;
-            treeNode22.Name = "nodeTips";
-            treeNode22.NodeFont = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            treeNode22.SelectedImageIndex = -2;
-            treeNode22.StateImageIndex = 1;
-            treeNode22.Text = "Поради та типові питання";
-            treeNode23.ImageIndex = 2;
-            treeNode23.Name = "nodeLicenseAggreement";
-            treeNode23.NodeFont = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            treeNode23.SelectedImageIndex = 2;
-            treeNode23.Text = "Ліцензійна згода";
-            treeNode24.ImageIndex = 2;
-            treeNode24.Name = "nodeAboutPurchase";
-            treeNode24.NodeFont = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            treeNode24.SelectedImageIndex = 2;
-            treeNode24.Text = "Про купівлю программи";
-            treeNode25.Checked = true;
-            treeNode25.ImageIndex = -2;
-            treeNode25.Name = "nodeLicenseAndPurchase";
-            treeNode25.NodeFont = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            treeNode25.SelectedImageIndex = -2;
-            treeNode25.StateImageIndex = 1;
-            treeNode25.Text = "Ліцензійна згода та купівля";
-            this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode3,
-            treeNode6,
-            treeNode12,
-            treeNode16,
-            treeNode19,
-            treeNode22,
-            treeNode25});
-            this.treeView1.SelectedImageKey = "32285.png";
-            this.treeView1.ShowLines = false;
-            this.treeView1.Size = new System.Drawing.Size(230, 465);
-            this.treeView1.StateImageList = this.imageList1;
-            this.treeView1.TabIndex = 0;
             // 
             // imageList1
             // 
@@ -348,6 +174,181 @@
             this.imageList1.Images.SetKeyName(1, "32285.png");
             this.imageList1.Images.SetKeyName(2, "Information-icon.png");
             this.imageList1.Images.SetKeyName(3, "information_file-512.png");
+            // 
+            // rtxtAboutSoft
+            // 
+            this.rtxtAboutSoft.Location = new System.Drawing.Point(-3, -2);
+            this.rtxtAboutSoft.Name = "rtxtAboutSoft";
+            this.rtxtAboutSoft.Size = new System.Drawing.Size(491, 502);
+            this.rtxtAboutSoft.TabIndex = 0;
+            this.rtxtAboutSoft.Text = "faka makaka";
+            // 
+            // toolStrip2
+            // 
+            this.toolStrip2.AutoSize = false;
+            this.toolStrip2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripSplitButton1,
+            this.toolStripSeparator3,
+            this.toolStripSplitButton2,
+            this.toolStripSeparator4,
+            this.toolStripSplitButton3,
+            this.toolStripSeparator5,
+            this.toolStripSplitButton4,
+            this.toolStripSeparator6,
+            this.toolStripSplitButton5,
+            this.toolStripSeparator7,
+            this.toolStripSplitButton6,
+            this.toolStripSeparator1});
+            this.toolStrip2.Location = new System.Drawing.Point(3, 3);
+            this.toolStrip2.Name = "toolStrip2";
+            this.toolStrip2.Size = new System.Drawing.Size(235, 465);
+            this.toolStrip2.TabIndex = 0;
+            this.toolStrip2.Text = "toolStrip2";
+            // 
+            // toolStripSplitButton1
+            // 
+            this.toolStripSplitButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1});
+            this.toolStripSplitButton1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.toolStripSplitButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripSplitButton1.Image")));
+            this.toolStripSplitButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.toolStripSplitButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripSplitButton1.Name = "toolStripSplitButton1";
+            this.toolStripSplitButton1.Size = new System.Drawing.Size(233, 23);
+            this.toolStripSplitButton1.Text = "Про программу";
+            this.toolStripSplitButton1.Click += new System.EventHandler(this.toolStripSplitButton1_Click);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(199, 24);
+            this.toolStripMenuItem1.Text = "Загальні відомості";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
+            // 
+            // toolStripSplitButton2
+            // 
+            this.toolStripSplitButton2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem2});
+            this.toolStripSplitButton2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.toolStripSplitButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripSplitButton2.Image")));
+            this.toolStripSplitButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.toolStripSplitButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripSplitButton2.Name = "toolStripSplitButton2";
+            this.toolStripSplitButton2.Size = new System.Drawing.Size(233, 23);
+            this.toolStripSplitButton2.Text = "Інтерфейс";
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(199, 24);
+            this.toolStripMenuItem2.Text = "Загальні відомості";
+            // 
+            // toolStripSplitButton3
+            // 
+            this.toolStripSplitButton3.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem3});
+            this.toolStripSplitButton3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.toolStripSplitButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripSplitButton3.Image")));
+            this.toolStripSplitButton3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.toolStripSplitButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripSplitButton3.Name = "toolStripSplitButton3";
+            this.toolStripSplitButton3.Size = new System.Drawing.Size(233, 23);
+            this.toolStripSplitButton3.Text = "Меню \"Стоматологія\"";
+            this.toolStripSplitButton3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // toolStripMenuItem3
+            // 
+            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(199, 24);
+            this.toolStripMenuItem3.Text = "Загальні відомості";
+            // 
+            // toolStripSplitButton4
+            // 
+            this.toolStripSplitButton4.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem4});
+            this.toolStripSplitButton4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.toolStripSplitButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripSplitButton4.Image")));
+            this.toolStripSplitButton4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.toolStripSplitButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripSplitButton4.Name = "toolStripSplitButton4";
+            this.toolStripSplitButton4.Size = new System.Drawing.Size(233, 23);
+            this.toolStripSplitButton4.Text = "Настройки";
+            this.toolStripSplitButton4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // toolStripMenuItem4
+            // 
+            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(199, 24);
+            this.toolStripMenuItem4.Text = "Загальні відомості";
+            // 
+            // toolStripSplitButton5
+            // 
+            this.toolStripSplitButton5.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem5});
+            this.toolStripSplitButton5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.toolStripSplitButton5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripSplitButton5.Image")));
+            this.toolStripSplitButton5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.toolStripSplitButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripSplitButton5.Name = "toolStripSplitButton5";
+            this.toolStripSplitButton5.Size = new System.Drawing.Size(233, 23);
+            this.toolStripSplitButton5.Text = "Поради та типові питання";
+            this.toolStripSplitButton5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // toolStripMenuItem5
+            // 
+            this.toolStripMenuItem5.Name = "toolStripMenuItem5";
+            this.toolStripMenuItem5.Size = new System.Drawing.Size(199, 24);
+            this.toolStripMenuItem5.Text = "Загальні відомості";
+            // 
+            // toolStripSplitButton6
+            // 
+            this.toolStripSplitButton6.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem6});
+            this.toolStripSplitButton6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.toolStripSplitButton6.Image = ((System.Drawing.Image)(resources.GetObject("toolStripSplitButton6.Image")));
+            this.toolStripSplitButton6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.toolStripSplitButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripSplitButton6.Name = "toolStripSplitButton6";
+            this.toolStripSplitButton6.Size = new System.Drawing.Size(233, 23);
+            this.toolStripSplitButton6.Text = "Ліцензайна згода та купівля";
+            this.toolStripSplitButton6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // toolStripMenuItem6
+            // 
+            this.toolStripMenuItem6.Name = "toolStripMenuItem6";
+            this.toolStripMenuItem6.Size = new System.Drawing.Size(199, 24);
+            this.toolStripMenuItem6.Text = "Загальні відомості";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(233, 6);
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(233, 6);
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(233, 6);
+            // 
+            // toolStripSeparator5
+            // 
+            this.toolStripSeparator5.Name = "toolStripSeparator5";
+            this.toolStripSeparator5.Size = new System.Drawing.Size(233, 6);
+            // 
+            // toolStripSeparator6
+            // 
+            this.toolStripSeparator6.Name = "toolStripSeparator6";
+            this.toolStripSeparator6.Size = new System.Drawing.Size(233, 6);
+            // 
+            // toolStripSeparator7
+            // 
+            this.toolStripSeparator7.Name = "toolStripSeparator7";
+            this.toolStripSeparator7.Size = new System.Drawing.Size(233, 6);
             // 
             // UserInfo
             // 
@@ -359,13 +360,17 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "UserInfo";
             this.Text = "Посібник користувача";
+            this.Load += new System.EventHandler(this.UserInfo_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.toolStrip2.ResumeLayout(false);
+            this.toolStrip2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -380,8 +385,27 @@
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TreeView treeView1;
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.RichTextBox rtxtAboutSoft;
+        private System.Windows.Forms.ToolStrip toolStrip2;
+        private System.Windows.Forms.ToolStripSplitButton toolStripSplitButton1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ToolStripSplitButton toolStripSplitButton2;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
+        private System.Windows.Forms.ToolStripSplitButton toolStripSplitButton3;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
+        private System.Windows.Forms.ToolStripSplitButton toolStripSplitButton4;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
+        private System.Windows.Forms.ToolStripSplitButton toolStripSplitButton5;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem5;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
+        private System.Windows.Forms.ToolStripSplitButton toolStripSplitButton6;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem6;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
     }
 }
