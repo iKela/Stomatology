@@ -136,7 +136,7 @@ namespace Stomatology
         
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            comboBox1.Items.Clear();
+          
             if (dataGridView1.SelectedRows.Count > 0)
             {
                PacientId = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
@@ -144,7 +144,8 @@ namespace Stomatology
                string birthday = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
                string number = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
                string adress = dataGridView1.SelectedRows[0].Cells[4].Value.ToString();
-
+                comboBox1.Items.Clear();
+                Buttonclear();
                 testCon.Open();
                 SqlDataReader sqlReader = null;
                 string qwery = $"SELECT Date FROM [Reception] where Pacient_Id = N'{PacientId}'";
