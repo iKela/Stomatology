@@ -39,8 +39,11 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
+            this.toolStripSplitButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSplitButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSplitButton4 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.gBoxSettings = new System.Windows.Forms.GroupBox();
@@ -56,9 +59,6 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.rtxtInterface = new System.Windows.Forms.RichTextBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.toolStripSplitButton4 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSplitButton2 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSplitButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -121,6 +121,7 @@
             this.btnRightArrow.Name = "btnRightArrow";
             this.btnRightArrow.Size = new System.Drawing.Size(40, 40);
             this.btnRightArrow.Text = "Вперед";
+            this.btnRightArrow.Click += new System.EventHandler(this.btnRightArrow_Click);
             // 
             // toolStripSeparator2
             // 
@@ -154,9 +155,9 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.splitContainer1.Panel2.Controls.Add(this.gBoxSettings);
             this.splitContainer1.Panel2.Controls.Add(this.gBoxAboutSoft);
             this.splitContainer1.Panel2.Controls.Add(this.gBoxInterface);
-            this.splitContainer1.Panel2.Controls.Add(this.gBoxSettings);
             this.splitContainer1.Size = new System.Drawing.Size(741, 502);
             this.splitContainer1.SplitterDistance = 247;
             this.splitContainer1.TabIndex = 2;
@@ -200,15 +201,49 @@
             this.toolStrip2.TabIndex = 0;
             this.toolStrip2.Text = "toolStrip2";
             // 
+            // toolStripSplitButton1
+            // 
+            this.toolStripSplitButton1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.toolStripSplitButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripSplitButton1.Image")));
+            this.toolStripSplitButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.toolStripSplitButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripSplitButton1.Name = "toolStripSplitButton1";
+            this.toolStripSplitButton1.Size = new System.Drawing.Size(233, 23);
+            this.toolStripSplitButton1.Text = "Про программу";
+            this.toolStripSplitButton1.Click += new System.EventHandler(this.toolStripSplitButton1_ButtonClick);
+            // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
             this.toolStripSeparator3.Size = new System.Drawing.Size(233, 6);
             // 
+            // toolStripSplitButton2
+            // 
+            this.toolStripSplitButton2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.toolStripSplitButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripSplitButton2.Image")));
+            this.toolStripSplitButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.toolStripSplitButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripSplitButton2.Name = "toolStripSplitButton2";
+            this.toolStripSplitButton2.Size = new System.Drawing.Size(233, 23);
+            this.toolStripSplitButton2.Text = "Інтерфейс";
+            this.toolStripSplitButton2.Click += new System.EventHandler(this.toolStripSplitButton2_ButtonClick);
+            // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
             this.toolStripSeparator4.Size = new System.Drawing.Size(233, 6);
+            // 
+            // toolStripSplitButton4
+            // 
+            this.toolStripSplitButton4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.toolStripSplitButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripSplitButton4.Image")));
+            this.toolStripSplitButton4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.toolStripSplitButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripSplitButton4.Name = "toolStripSplitButton4";
+            this.toolStripSplitButton4.Size = new System.Drawing.Size(233, 23);
+            this.toolStripSplitButton4.Text = "Налаштування";
+            this.toolStripSplitButton4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.toolStripSplitButton4.Click += new System.EventHandler(this.toolStripSplitButton4_ButtonClick);
             // 
             // toolStripSeparator6
             // 
@@ -401,37 +436,6 @@
             this.rtxtInterface.Size = new System.Drawing.Size(467, 371);
             this.rtxtInterface.TabIndex = 0;
             this.rtxtInterface.Text = "";
-            // 
-            // toolStripSplitButton4
-            // 
-            this.toolStripSplitButton4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.toolStripSplitButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripSplitButton4.Image")));
-            this.toolStripSplitButton4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.toolStripSplitButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripSplitButton4.Name = "toolStripSplitButton4";
-            this.toolStripSplitButton4.Size = new System.Drawing.Size(233, 23);
-            this.toolStripSplitButton4.Text = "Налаштування";
-            this.toolStripSplitButton4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // toolStripSplitButton2
-            // 
-            this.toolStripSplitButton2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.toolStripSplitButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripSplitButton2.Image")));
-            this.toolStripSplitButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.toolStripSplitButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripSplitButton2.Name = "toolStripSplitButton2";
-            this.toolStripSplitButton2.Size = new System.Drawing.Size(233, 23);
-            this.toolStripSplitButton2.Text = "Інтерфейс";
-            // 
-            // toolStripSplitButton1
-            // 
-            this.toolStripSplitButton1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.toolStripSplitButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripSplitButton1.Image")));
-            this.toolStripSplitButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.toolStripSplitButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripSplitButton1.Name = "toolStripSplitButton1";
-            this.toolStripSplitButton1.Size = new System.Drawing.Size(233, 23);
-            this.toolStripSplitButton1.Text = "Про программу";
             // 
             // UserInfo
             // 

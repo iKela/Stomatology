@@ -12,10 +12,7 @@ namespace Stomatology
 {
     public partial class UserInfo : Form
     {
-        double number;
-        bool button1;
-        bool button2;
-        bool button3;
+        double number = 0;
         int setVisible;
         public UserInfo()
         {
@@ -82,7 +79,7 @@ namespace Stomatology
                     }
                 case 3:
                     {
-                        setVisible = 4;
+                        setVisible = 3;
                         setVisibility();
                         break;
                     }
@@ -116,29 +113,119 @@ namespace Stomatology
             }
         }
         #region Кнопки
+        int chooise;
         private void toolStripSplitButton1_ButtonClick(object sender, EventArgs e)
         {
-            number = 1;
-            selectBoxByButton();
+            switch (number)
+            {
+                case 0:
+                    {
+                        chooise = 1;
+                        number = 1;
+                        selectBoxByButton();
+                        break;
+                    }
+                case 2:
+                    {
+                        chooise = 2;
+                        number = 1;
+                        selectBoxByButton();
+                        break;
+                    }
+                case 3:
+                    {
+                        chooise = 3;
+                        number = 1;
+                        selectBoxByButton();
+                        break;
+                    }
+            }
         }
 
         private void toolStripSplitButton2_ButtonClick(object sender, EventArgs e)
         {
-      
-            number = 2;
-            selectBoxByButton();
+            switch(number)
+            {
+                case 0:
+                    {
+                    chooise = 2;
+                    number = 2;
+                    selectBoxByButton();
+                    break;
+                }
+                case 1:
+                    {
+                    chooise = 1;
+                    number = 2;
+                    selectBoxByButton();
+                    break;
+                }
+                case 3:
+                    {
+                    chooise = 3;
+                    number = 2;
+                    selectBoxByButton();
+                    break;
+                }
+            }
         }
         private void toolStripSplitButton4_ButtonClick(object sender, EventArgs e)
         {
-
-            number = 3;
-            selectBoxByButton();
+            switch (number)
+            {
+                case 0:
+                    {
+                        chooise = 3;
+                        number = 3;
+                        selectBoxByButton();
+                        break;
+                    }
+                case 1:
+                    {
+                        chooise = 1;
+                        number = 3;
+                        selectBoxByButton();
+                        break;
+                    }
+                case 2:
+                    {
+                        chooise = 2;
+                        number = 3;
+                        selectBoxByButton();
+                        break;
+                    }
+            }
         }
         
         #endregion
         private void btnLeftArrow_Click(object sender, EventArgs e)
         {
-            //if(button2 == false)
+            switch(chooise)
+            {
+                case 1:
+                    {
+                        number = 1;
+                        selectBoxByButton();
+                        break;
+                    }
+                case 2:
+                    {
+                        number = 2;
+                        selectBoxByButton();
+                        break;
+                    }
+                case 3:
+                    {
+                        number = 3;
+                        selectBoxByButton();
+                        break;
+                    }
+            }
+        }
+
+        private void btnRightArrow_Click(object sender, EventArgs e)
+        {
+
         }
     } 
     
