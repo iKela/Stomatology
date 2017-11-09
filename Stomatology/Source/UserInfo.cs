@@ -13,6 +13,8 @@ namespace Stomatology
     public partial class UserInfo : Form
     {
         double number = 0;
+        int leftArrow;
+        int rightArrow;
         int setVisible;
         public UserInfo()
         {
@@ -113,28 +115,27 @@ namespace Stomatology
             }
         }
         #region Кнопки
-        int chooise;
         private void toolStripSplitButton1_ButtonClick(object sender, EventArgs e)
         {
             switch (number)
             {
                 case 0:
                     {
-                        chooise = 1;
+                        leftArrow = 1;
                         number = 1;
                         selectBoxByButton();
                         break;
                     }
                 case 2:
                     {
-                        chooise = 2;
+                        leftArrow = 2;
                         number = 1;
                         selectBoxByButton();
                         break;
                     }
                 case 3:
                     {
-                        chooise = 3;
+                        leftArrow = 3;
                         number = 1;
                         selectBoxByButton();
                         break;
@@ -148,25 +149,25 @@ namespace Stomatology
             {
                 case 0:
                     {
-                    chooise = 2;
-                    number = 2;
-                    selectBoxByButton();
-                    break;
-                }
+                        leftArrow = 2;
+                        number = 2;
+                        selectBoxByButton();
+                        break;
+                    }
                 case 1:
                     {
-                    chooise = 1;
-                    number = 2;
-                    selectBoxByButton();
-                    break;
-                }
+                        leftArrow = 1;
+                        number = 2;
+                        selectBoxByButton();
+                        break;
+                    }
                 case 3:
                     {
-                    chooise = 3;
-                    number = 2;
-                    selectBoxByButton();
-                    break;
-                }
+                        leftArrow = 3;
+                        number = 2;
+                        selectBoxByButton();
+                        break;
+                    }
             }
         }
         private void toolStripSplitButton4_ButtonClick(object sender, EventArgs e)
@@ -175,32 +176,110 @@ namespace Stomatology
             {
                 case 0:
                     {
-                        chooise = 3;
+                        leftArrow = 3;
                         number = 3;
                         selectBoxByButton();
                         break;
                     }
                 case 1:
                     {
-                        chooise = 1;
+                        leftArrow = 1;
                         number = 3;
                         selectBoxByButton();
                         break;
                     }
                 case 2:
                     {
-                        chooise = 2;
+                        leftArrow = 2;
                         number = 3;
                         selectBoxByButton();
                         break;
                     }
             }
         }
-        
         #endregion
         private void btnLeftArrow_Click(object sender, EventArgs e)
         {
-            switch(chooise)
+            switch(leftArrow)
+            {
+                case 1:
+                    {
+                        switch (number)
+                        {
+                            case 1:
+                                {
+                                    rightArrow = 1;
+                                    break;
+                                }
+                            case 2:
+                                {
+                                    rightArrow = 2;
+                                    break;
+                                }
+                            case 3:
+                                {
+                                    rightArrow = 3;
+                                    break;
+                                }
+                        }
+                        number = 1;
+                        selectBoxByButton();
+                        break;
+                    }
+                case 2:
+                    {
+                        switch (number)
+                        {
+                            case 1:
+                                {
+                                    rightArrow = 1;
+                                    break;
+                                }
+                            case 2:
+                                {
+                                    rightArrow = 2;
+                                    break;
+                                }
+                            case 3:
+                                {
+                                    rightArrow = 3;
+                                    break;
+                                }
+                        }
+                        number = 2;
+                        selectBoxByButton();
+                        break;
+                    }
+                case 3:
+                    {
+                        switch(number)
+                        {
+                            case 1:
+                                {
+                                    rightArrow = 1;
+                                    break;
+                                }
+                            case 2:
+                                {
+                                    rightArrow = 2;
+                                    break;
+                                }
+                            case 3:
+                                {
+                                    rightArrow = 3;
+                                    break;
+                                }
+                        }
+                        number = 3;
+                        selectBoxByButton();
+                        break;
+                    }
+            }
+        }
+
+        private void btnRightArrow_Click(object sender, EventArgs e)
+        {
+            switch(rightArrow)
             {
                 case 1:
                     {
@@ -221,11 +300,6 @@ namespace Stomatology
                         break;
                     }
             }
-        }
-
-        private void btnRightArrow_Click(object sender, EventArgs e)
-        {
-
         }
     } 
     
