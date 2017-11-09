@@ -38,28 +38,29 @@
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.rtxtAboutSoft = new System.Windows.Forms.RichTextBox();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.toolStripSplitButton1 = new System.Windows.Forms.ToolStripSplitButton();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSplitButton2 = new System.Windows.Forms.ToolStripSplitButton();
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSplitButton3 = new System.Windows.Forms.ToolStripSplitButton();
-            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSplitButton4 = new System.Windows.Forms.ToolStripSplitButton();
             this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSplitButton5 = new System.Windows.Forms.ToolStripSplitButton();
-            this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSplitButton6 = new System.Windows.Forms.ToolStripSplitButton();
-            this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.шляхДоTVToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.gBoxSettings = new System.Windows.Forms.GroupBox();
+            this.splitContainer4 = new System.Windows.Forms.SplitContainer();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.rtxtSettings = new System.Windows.Forms.RichTextBox();
+            this.gBoxAboutSoft = new System.Windows.Forms.GroupBox();
+            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.rtxtAboutSoft = new System.Windows.Forms.RichTextBox();
+            this.gBoxInterface = new System.Windows.Forms.GroupBox();
+            this.splitContainer3 = new System.Windows.Forms.SplitContainer();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.rtxtInterface = new System.Windows.Forms.RichTextBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -68,6 +69,21 @@
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.toolStrip2.SuspendLayout();
+            this.gBoxSettings.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).BeginInit();
+            this.splitContainer4.Panel1.SuspendLayout();
+            this.splitContainer4.Panel2.SuspendLayout();
+            this.splitContainer4.SuspendLayout();
+            this.gBoxAboutSoft.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
+            this.splitContainer2.Panel1.SuspendLayout();
+            this.splitContainer2.Panel2.SuspendLayout();
+            this.splitContainer2.SuspendLayout();
+            this.gBoxInterface.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
+            this.splitContainer3.Panel1.SuspendLayout();
+            this.splitContainer3.Panel2.SuspendLayout();
+            this.splitContainer3.SuspendLayout();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -139,7 +155,9 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.splitContainer1.Panel2.Controls.Add(this.rtxtAboutSoft);
+            this.splitContainer1.Panel2.Controls.Add(this.gBoxAboutSoft);
+            this.splitContainer1.Panel2.Controls.Add(this.gBoxInterface);
+            this.splitContainer1.Panel2.Controls.Add(this.gBoxSettings);
             this.splitContainer1.Size = new System.Drawing.Size(741, 502);
             this.splitContainer1.SplitterDistance = 247;
             this.splitContainer1.TabIndex = 2;
@@ -166,23 +184,6 @@
             this.tabPage1.Text = "Вміст";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // imageList1
-            // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "13653-200.png");
-            this.imageList1.Images.SetKeyName(1, "32285.png");
-            this.imageList1.Images.SetKeyName(2, "Information-icon.png");
-            this.imageList1.Images.SetKeyName(3, "information_file-512.png");
-            // 
-            // rtxtAboutSoft
-            // 
-            this.rtxtAboutSoft.Location = new System.Drawing.Point(-3, -2);
-            this.rtxtAboutSoft.Name = "rtxtAboutSoft";
-            this.rtxtAboutSoft.Size = new System.Drawing.Size(491, 502);
-            this.rtxtAboutSoft.TabIndex = 0;
-            this.rtxtAboutSoft.Text = "faka makaka";
-            // 
             // toolStrip2
             // 
             this.toolStrip2.AutoSize = false;
@@ -192,14 +193,8 @@
             this.toolStripSeparator3,
             this.toolStripSplitButton2,
             this.toolStripSeparator4,
-            this.toolStripSplitButton3,
-            this.toolStripSeparator5,
             this.toolStripSplitButton4,
-            this.toolStripSeparator6,
-            this.toolStripSplitButton5,
-            this.toolStripSeparator7,
-            this.toolStripSplitButton6,
-            this.toolStripSeparator1});
+            this.toolStripSeparator6});
             this.toolStrip2.Location = new System.Drawing.Point(3, 3);
             this.toolStrip2.Name = "toolStrip2";
             this.toolStrip2.Size = new System.Drawing.Size(235, 465);
@@ -208,8 +203,6 @@
             // 
             // toolStripSplitButton1
             // 
-            this.toolStripSplitButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem1});
             this.toolStripSplitButton1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.toolStripSplitButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripSplitButton1.Image")));
             this.toolStripSplitButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -217,19 +210,15 @@
             this.toolStripSplitButton1.Name = "toolStripSplitButton1";
             this.toolStripSplitButton1.Size = new System.Drawing.Size(233, 23);
             this.toolStripSplitButton1.Text = "Про программу";
-            this.toolStripSplitButton1.Click += new System.EventHandler(this.toolStripSplitButton1_Click);
+            this.toolStripSplitButton1.ButtonClick += new System.EventHandler(this.toolStripSplitButton1_ButtonClick);
             // 
-            // toolStripMenuItem1
+            // toolStripSeparator3
             // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(199, 24);
-            this.toolStripMenuItem1.Text = "Загальні відомості";
-            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(233, 6);
             // 
             // toolStripSplitButton2
             // 
-            this.toolStripSplitButton2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem2});
             this.toolStripSplitButton2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.toolStripSplitButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripSplitButton2.Image")));
             this.toolStripSplitButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -237,118 +226,233 @@
             this.toolStripSplitButton2.Name = "toolStripSplitButton2";
             this.toolStripSplitButton2.Size = new System.Drawing.Size(233, 23);
             this.toolStripSplitButton2.Text = "Інтерфейс";
-            // 
-            // toolStripMenuItem2
-            // 
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(199, 24);
-            this.toolStripMenuItem2.Text = "Загальні відомості";
-            // 
-            // toolStripSplitButton3
-            // 
-            this.toolStripSplitButton3.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem3});
-            this.toolStripSplitButton3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.toolStripSplitButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripSplitButton3.Image")));
-            this.toolStripSplitButton3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.toolStripSplitButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripSplitButton3.Name = "toolStripSplitButton3";
-            this.toolStripSplitButton3.Size = new System.Drawing.Size(233, 23);
-            this.toolStripSplitButton3.Text = "Меню \"Стоматологія\"";
-            this.toolStripSplitButton3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // toolStripMenuItem3
-            // 
-            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(199, 24);
-            this.toolStripMenuItem3.Text = "Загальні відомості";
-            // 
-            // toolStripSplitButton4
-            // 
-            this.toolStripSplitButton4.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem4});
-            this.toolStripSplitButton4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.toolStripSplitButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripSplitButton4.Image")));
-            this.toolStripSplitButton4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.toolStripSplitButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripSplitButton4.Name = "toolStripSplitButton4";
-            this.toolStripSplitButton4.Size = new System.Drawing.Size(233, 23);
-            this.toolStripSplitButton4.Text = "Настройки";
-            this.toolStripSplitButton4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // toolStripMenuItem4
-            // 
-            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(199, 24);
-            this.toolStripMenuItem4.Text = "Загальні відомості";
-            // 
-            // toolStripSplitButton5
-            // 
-            this.toolStripSplitButton5.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem5});
-            this.toolStripSplitButton5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.toolStripSplitButton5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripSplitButton5.Image")));
-            this.toolStripSplitButton5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.toolStripSplitButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripSplitButton5.Name = "toolStripSplitButton5";
-            this.toolStripSplitButton5.Size = new System.Drawing.Size(233, 23);
-            this.toolStripSplitButton5.Text = "Поради та типові питання";
-            this.toolStripSplitButton5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // toolStripMenuItem5
-            // 
-            this.toolStripMenuItem5.Name = "toolStripMenuItem5";
-            this.toolStripMenuItem5.Size = new System.Drawing.Size(199, 24);
-            this.toolStripMenuItem5.Text = "Загальні відомості";
-            // 
-            // toolStripSplitButton6
-            // 
-            this.toolStripSplitButton6.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem6});
-            this.toolStripSplitButton6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.toolStripSplitButton6.Image = ((System.Drawing.Image)(resources.GetObject("toolStripSplitButton6.Image")));
-            this.toolStripSplitButton6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.toolStripSplitButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripSplitButton6.Name = "toolStripSplitButton6";
-            this.toolStripSplitButton6.Size = new System.Drawing.Size(233, 23);
-            this.toolStripSplitButton6.Text = "Ліцензайна згода та купівля";
-            this.toolStripSplitButton6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // toolStripMenuItem6
-            // 
-            this.toolStripMenuItem6.Name = "toolStripMenuItem6";
-            this.toolStripMenuItem6.Size = new System.Drawing.Size(199, 24);
-            this.toolStripMenuItem6.Text = "Загальні відомості";
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(233, 6);
-            // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(233, 6);
+            this.toolStripSplitButton2.ButtonClick += new System.EventHandler(this.toolStripSplitButton2_ButtonClick);
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
             this.toolStripSeparator4.Size = new System.Drawing.Size(233, 6);
             // 
-            // toolStripSeparator5
+            // toolStripSplitButton4
             // 
-            this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(233, 6);
+            this.toolStripSplitButton4.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem4,
+            this.шляхДоTVToolStripMenuItem});
+            this.toolStripSplitButton4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.toolStripSplitButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripSplitButton4.Image")));
+            this.toolStripSplitButton4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.toolStripSplitButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripSplitButton4.Name = "toolStripSplitButton4";
+            this.toolStripSplitButton4.Size = new System.Drawing.Size(233, 23);
+            this.toolStripSplitButton4.Text = "Налаштування";
+            this.toolStripSplitButton4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.toolStripSplitButton4.ButtonClick += new System.EventHandler(this.toolStripSplitButton4_ButtonClick);
+            // 
+            // toolStripMenuItem4
+            // 
+            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(159, 24);
+            this.toolStripMenuItem4.Text = "Шлях до БД";
+            this.toolStripMenuItem4.Click += new System.EventHandler(this.toolStripMenuItem4_Click);
+            // 
+            // шляхДоTVToolStripMenuItem
+            // 
+            this.шляхДоTVToolStripMenuItem.Name = "шляхДоTVToolStripMenuItem";
+            this.шляхДоTVToolStripMenuItem.Size = new System.Drawing.Size(159, 24);
+            this.шляхДоTVToolStripMenuItem.Text = "Шлях до TV";
+            this.шляхДоTVToolStripMenuItem.Click += new System.EventHandler(this.шляхДоTVToolStripMenuItem_Click);
             // 
             // toolStripSeparator6
             // 
             this.toolStripSeparator6.Name = "toolStripSeparator6";
             this.toolStripSeparator6.Size = new System.Drawing.Size(233, 6);
             // 
-            // toolStripSeparator7
+            // imageList1
             // 
-            this.toolStripSeparator7.Name = "toolStripSeparator7";
-            this.toolStripSeparator7.Size = new System.Drawing.Size(233, 6);
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "13653-200.png");
+            this.imageList1.Images.SetKeyName(1, "32285.png");
+            this.imageList1.Images.SetKeyName(2, "Information-icon.png");
+            this.imageList1.Images.SetKeyName(3, "information_file-512.png");
+            // 
+            // gBoxSettings
+            // 
+            this.gBoxSettings.Controls.Add(this.splitContainer4);
+            this.gBoxSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.gBoxSettings.Location = new System.Drawing.Point(0, 0);
+            this.gBoxSettings.Name = "gBoxSettings";
+            this.gBoxSettings.Size = new System.Drawing.Size(480, 494);
+            this.gBoxSettings.TabIndex = 4;
+            this.gBoxSettings.TabStop = false;
+            this.gBoxSettings.Text = "Налаштування";
+            this.gBoxSettings.Visible = false;
+            // 
+            // splitContainer4
+            // 
+            this.splitContainer4.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.splitContainer4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer4.Location = new System.Drawing.Point(3, 22);
+            this.splitContainer4.Name = "splitContainer4";
+            this.splitContainer4.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer4.Panel1
+            // 
+            this.splitContainer4.Panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.splitContainer4.Panel1.Controls.Add(this.textBox3);
+            // 
+            // splitContainer4.Panel2
+            // 
+            this.splitContainer4.Panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.splitContainer4.Panel2.Controls.Add(this.rtxtSettings);
+            this.splitContainer4.Size = new System.Drawing.Size(474, 469);
+            this.splitContainer4.SplitterDistance = 81;
+            this.splitContainer4.TabIndex = 0;
+            // 
+            // textBox3
+            // 
+            this.textBox3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox3.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox3.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.textBox3.Location = new System.Drawing.Point(4, 22);
+            this.textBox3.Multiline = true;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.ReadOnly = true;
+            this.textBox3.Size = new System.Drawing.Size(467, 42);
+            this.textBox3.TabIndex = 0;
+            this.textBox3.Text = "Вікно налаштування шляхів";
+            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // rtxtSettings
+            // 
+            this.rtxtSettings.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.rtxtSettings.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rtxtSettings.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.rtxtSettings.Location = new System.Drawing.Point(3, 3);
+            this.rtxtSettings.Name = "rtxtSettings";
+            this.rtxtSettings.ReadOnly = true;
+            this.rtxtSettings.Size = new System.Drawing.Size(468, 377);
+            this.rtxtSettings.TabIndex = 0;
+            this.rtxtSettings.Text = "";
+            // 
+            // gBoxAboutSoft
+            // 
+            this.gBoxAboutSoft.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.gBoxAboutSoft.Controls.Add(this.splitContainer2);
+            this.gBoxAboutSoft.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.gBoxAboutSoft.Location = new System.Drawing.Point(1, 2);
+            this.gBoxAboutSoft.Name = "gBoxAboutSoft";
+            this.gBoxAboutSoft.Size = new System.Drawing.Size(480, 494);
+            this.gBoxAboutSoft.TabIndex = 0;
+            this.gBoxAboutSoft.TabStop = false;
+            this.gBoxAboutSoft.Text = "Про программу";
+            // 
+            // splitContainer2
+            // 
+            this.splitContainer2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer2.Location = new System.Drawing.Point(3, 22);
+            this.splitContainer2.Name = "splitContainer2";
+            this.splitContainer2.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer2.Panel1
+            // 
+            this.splitContainer2.Panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.splitContainer2.Panel1.Controls.Add(this.textBox1);
+            // 
+            // splitContainer2.Panel2
+            // 
+            this.splitContainer2.Panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.splitContainer2.Panel2.Controls.Add(this.rtxtAboutSoft);
+            this.splitContainer2.Size = new System.Drawing.Size(474, 469);
+            this.splitContainer2.SplitterDistance = 78;
+            this.splitContainer2.TabIndex = 0;
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox1.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.textBox1.Location = new System.Drawing.Point(2, 20);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(467, 42);
+            this.textBox1.TabIndex = 0;
+            this.textBox1.Text = "Загальні відомостві про Dentistry";
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // rtxtAboutSoft
+            // 
+            this.rtxtAboutSoft.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.rtxtAboutSoft.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rtxtAboutSoft.Location = new System.Drawing.Point(3, 3);
+            this.rtxtAboutSoft.Name = "rtxtAboutSoft";
+            this.rtxtAboutSoft.ReadOnly = true;
+            this.rtxtAboutSoft.Size = new System.Drawing.Size(467, 350);
+            this.rtxtAboutSoft.TabIndex = 0;
+            this.rtxtAboutSoft.Text = "";
+            // 
+            // gBoxInterface
+            // 
+            this.gBoxInterface.Controls.Add(this.splitContainer3);
+            this.gBoxInterface.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.gBoxInterface.Location = new System.Drawing.Point(0, 0);
+            this.gBoxInterface.Name = "gBoxInterface";
+            this.gBoxInterface.Size = new System.Drawing.Size(480, 494);
+            this.gBoxInterface.TabIndex = 1;
+            this.gBoxInterface.TabStop = false;
+            this.gBoxInterface.Text = "Інтерфейс";
+            this.gBoxInterface.Visible = false;
+            // 
+            // splitContainer3
+            // 
+            this.splitContainer3.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.splitContainer3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer3.Location = new System.Drawing.Point(3, 22);
+            this.splitContainer3.Name = "splitContainer3";
+            this.splitContainer3.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer3.Panel1
+            // 
+            this.splitContainer3.Panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.splitContainer3.Panel1.Controls.Add(this.textBox2);
+            // 
+            // splitContainer3.Panel2
+            // 
+            this.splitContainer3.Panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.splitContainer3.Panel2.Controls.Add(this.rtxtInterface);
+            this.splitContainer3.Size = new System.Drawing.Size(474, 469);
+            this.splitContainer3.SplitterDistance = 80;
+            this.splitContainer3.TabIndex = 0;
+            // 
+            // textBox2
+            // 
+            this.textBox2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox2.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox2.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.textBox2.Location = new System.Drawing.Point(4, 22);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
+            this.textBox2.Size = new System.Drawing.Size(468, 42);
+            this.textBox2.TabIndex = 0;
+            this.textBox2.Text = "Знайомство з Інтерфейсом Dentistry";
+            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // rtxtInterface
+            // 
+            this.rtxtInterface.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.rtxtInterface.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rtxtInterface.Location = new System.Drawing.Point(4, 3);
+            this.rtxtInterface.Name = "rtxtInterface";
+            this.rtxtInterface.ReadOnly = true;
+            this.rtxtInterface.Size = new System.Drawing.Size(467, 371);
+            this.rtxtInterface.TabIndex = 0;
+            this.rtxtInterface.Text = "";
             // 
             // UserInfo
             // 
@@ -371,6 +475,24 @@
             this.tabPage1.ResumeLayout(false);
             this.toolStrip2.ResumeLayout(false);
             this.toolStrip2.PerformLayout();
+            this.gBoxSettings.ResumeLayout(false);
+            this.splitContainer4.Panel1.ResumeLayout(false);
+            this.splitContainer4.Panel1.PerformLayout();
+            this.splitContainer4.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).EndInit();
+            this.splitContainer4.ResumeLayout(false);
+            this.gBoxAboutSoft.ResumeLayout(false);
+            this.splitContainer2.Panel1.ResumeLayout(false);
+            this.splitContainer2.Panel1.PerformLayout();
+            this.splitContainer2.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
+            this.splitContainer2.ResumeLayout(false);
+            this.gBoxInterface.ResumeLayout(false);
+            this.splitContainer3.Panel1.ResumeLayout(false);
+            this.splitContainer3.Panel1.PerformLayout();
+            this.splitContainer3.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
+            this.splitContainer3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -387,25 +509,26 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.ToolTip toolTip1;
-        private System.Windows.Forms.RichTextBox rtxtAboutSoft;
         private System.Windows.Forms.ToolStrip toolStrip2;
         private System.Windows.Forms.ToolStripSplitButton toolStripSplitButton1;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripSplitButton toolStripSplitButton2;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
-        private System.Windows.Forms.ToolStripSplitButton toolStripSplitButton3;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private System.Windows.Forms.ToolStripSplitButton toolStripSplitButton4;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
-        private System.Windows.Forms.ToolStripSplitButton toolStripSplitButton5;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem5;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
-        private System.Windows.Forms.ToolStripSplitButton toolStripSplitButton6;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem6;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem шляхДоTVToolStripMenuItem;
+        private System.Windows.Forms.GroupBox gBoxAboutSoft;
+        private System.Windows.Forms.GroupBox gBoxInterface;
+        private System.Windows.Forms.GroupBox gBoxSettings;
+        private System.Windows.Forms.SplitContainer splitContainer2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.RichTextBox rtxtAboutSoft;
+        private System.Windows.Forms.SplitContainer splitContainer3;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.RichTextBox rtxtInterface;
+        private System.Windows.Forms.SplitContainer splitContainer4;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.RichTextBox rtxtSettings;
     }
 }
