@@ -13,6 +13,9 @@ namespace Stomatology
     public partial class UserInfo : Form
     {
         double number;
+        bool button1;
+        bool button2;
+        bool button3;
         int setVisible;
         public UserInfo()
         {
@@ -49,7 +52,7 @@ namespace Stomatology
                 "перейдіть до папки у якій у вас знаходить " + s + ".mdf" + s + " файл, виберіть його та нажміть кнопку " + s + "ОК" + s + " для того щоб підтвердити ваш вибір. Шлях до БД обов'язково потрібно " +
                 "вказати для того щоб у вас був доступ до башої бази даних та ви могли з нею працювати!" +
                 "\n\nШлях до TV (TeamViewer) - для того щоб вказати шлях до TeamViewer зробіть подвійне натискання на ЛКМ (Ліва Кнопка Мишки), після того як відкриється вікно вибору шляху," +
-                "перейдіть до папки у якій у вас знаходить " + s + ".mdf" + s + " файл, виберіть його та нажміть кнопку " + s + "ОК" + s + " для того щоб підтвердити ваш вибір. Шлях до TV не обов'язковий для" +
+                "перейдіть до папки у якій у вас знаходить " + s + "TeamViewer.exe" + s + " , виберіть його та нажміть кнопку " + s + "ОК" + s + " для того щоб підтвердити ваш вибір. Шлях до TV не обов'язковий для" +
                 " вказення, його також можна ввести після запуску програми в пункті " + s + "Головна" + s + " -> " + s + "Налаштування" + s + ". Але ми рекомендуємо вам встановити шлях відпразу,щоб программа" +
                 "запускалася віздразу з головного меню а не з Налаштувань, та для того щоб в майбутьньому " +
                 "у вас була можливість зв'язатися з нами.";
@@ -79,79 +82,7 @@ namespace Stomatology
                     }
                 case 3:
                     {
-                        setVisible = 3;
-                        setVisibility();
-                        break;
-                    }
-                case 3.1:
-                    {
-                        setVisible = 3;
-                        setVisibility();
-                        break;
-                    }
-                case 3.2:
-                    {
-                        setVisible = 3;
-                        setVisibility();
-                        break;
-                    }
-                case 3.3:
-                    {
-                        setVisible = 3;
-                        setVisibility();
-                        break;
-                    }
-                case 4:
-                    {
                         setVisible = 4;
-                        setVisibility();
-                        break;
-                    }
-                case 4.1:
-                    {
-                        setVisible = 4;
-                        setVisibility();
-                        break;
-                    }
-                case 4.2:
-                    {
-                        setVisible = 4;
-                        setVisibility();
-                        break;
-                    }
-                case 5:
-                    {
-                        setVisible = 5;
-                        setVisibility();
-                        break;
-                    }
-                case 5.1:
-                    {
-                        setVisible = 5;
-                        setVisibility();
-                        break;
-                    }
-                case 5.2:
-                    {
-                        setVisible = 5;
-                        setVisibility();
-                        break;
-                    }
-                case 6:
-                    {
-                        setVisible = 6;
-                        setVisibility();
-                        break;
-                    }
-                case 6.1:
-                    {
-                        setVisible = 6;
-                        setVisibility();
-                        break;
-                    }
-                case 6.2:
-                    {
-                        setVisible = 6;
                         setVisibility();
                         break;
                     }
@@ -179,21 +110,7 @@ namespace Stomatology
                     {
                         gBoxAboutSoft.Visible = false;
                         gBoxInterface.Visible = false;
-                        gBoxSettings.Visible = false;
-                        break;
-                    }
-                case 4:
-                    {
-                        gBoxAboutSoft.Visible = false;
-                        gBoxInterface.Visible = false;
                         gBoxSettings.Visible = true;
-                        break;
-                    }
-                case 5:
-                    {
-                        gBoxAboutSoft.Visible = false;
-                        gBoxInterface.Visible = false;
-                        gBoxSettings.Visible = false;
                         break;
                     }
             }
@@ -207,70 +124,22 @@ namespace Stomatology
 
         private void toolStripSplitButton2_ButtonClick(object sender, EventArgs e)
         {
+      
             number = 2;
             selectBoxByButton();
         }
-
-        private void toolStripSplitButton3_ButtonClick(object sender, EventArgs e)
+        private void toolStripSplitButton4_ButtonClick(object sender, EventArgs e)
         {
+
             number = 3;
             selectBoxByButton();
         }
-
-        private void toolStripMenuItem3_Click(object sender, EventArgs e)
+        
+        #endregion
+        private void btnLeftArrow_Click(object sender, EventArgs e)
         {
-            number = 3.1;
-            selectBoxByButton();
+            //if(button2 == false)
         }
-
-        private void справкаToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            number = 3.2;
-            selectBoxByButton();
-        }
-
-        private void допомогаToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            number = 3.3;
-            selectBoxByButton();
-        }
-
-        private void toolStripSplitButton4_ButtonClick(object sender, EventArgs e)
-        {
-            number = 4;
-            selectBoxByButton();
-        }
-
-        private void toolStripMenuItem4_Click(object sender, EventArgs e)
-        {
-            number = 4.1;
-            selectBoxByButton();
-        }
-
-        private void шляхДоTVToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            number = 4.2;
-            selectBoxByButton();
-        }
-
-        private void toolStripSplitButton5_ButtonClick(object sender, EventArgs e)
-        {
-            number = 5;
-            selectBoxByButton();
-        }
-
-        private void toolStripMenuItem5_Click(object sender, EventArgs e)
-        {
-            number = 5.1;
-            selectBoxByButton();
-        }
-
-        private void типовіПитанняToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            number = 5.2;
-            selectBoxByButton();
-        }
-
     } 
-    #endregion
+    
 }
