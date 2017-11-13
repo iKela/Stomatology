@@ -5707,7 +5707,7 @@
     <value>NoControl</value>
   </data>
   <data name="AddNewAppoinment.Location" type="System.Drawing.Point, System.Drawing">
-    <value>703, 4</value>
+    <value>703, 2</value>
   </data>
   <data name="AddNewAppoinment.Size" type="System.Drawing.Size, System.Drawing">
     <value>43, 38</value>
@@ -12446,7 +12446,7 @@
     <value>NoControl</value>
   </data>
   <data name="EditPatient.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 48</value>
+    <value>3, 46</value>
   </data>
   <data name="EditPatient.Size" type="System.Drawing.Size, System.Drawing">
     <value>43, 38</value>
@@ -13004,7 +13004,7 @@
     <value>NoControl</value>
   </data>
   <data name="AddNewPatient.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 4</value>
+    <value>3, 2</value>
   </data>
   <data name="AddNewPatient.Size" type="System.Drawing.Size, System.Drawing">
     <value>43, 38</value>
@@ -13031,7 +13031,7 @@
     <value>NoControl</value>
   </data>
   <data name="button2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>195, 911</value>
+    <value>195, 909</value>
   </data>
   <data name="button2.Size" type="System.Drawing.Size, System.Drawing">
     <value>141, 23</value>
@@ -13061,7 +13061,7 @@
     <value>NoControl</value>
   </data>
   <data name="button3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>460, 899</value>
+    <value>460, 897</value>
   </data>
   <data name="button3.Size" type="System.Drawing.Size, System.Drawing">
     <value>141, 23</value>
@@ -13094,7 +13094,7 @@
     <value>NoControl</value>
   </data>
   <data name="button4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>607, 911</value>
+    <value>607, 909</value>
   </data>
   <data name="button4.Size" type="System.Drawing.Size, System.Drawing">
     <value>141, 23</value>
@@ -13149,6 +13149,162 @@
   </data>
   <data name="TabControl.Alignment" type="System.Windows.Forms.TabAlignment, System.Windows.Forms">
     <value>Left</value>
+  </data>
+  <data name="button9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1216, 7</value>
+  </data>
+  <data name="button9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 27</value>
+  </data>
+  <data name="button9.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="button9.Text" xml:space="preserve">
+    <value>Оновити</value>
+  </data>
+  <data name="&gt;&gt;button9.Name" xml:space="preserve">
+    <value>button9</value>
+  </data>
+  <data name="&gt;&gt;button9.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button9.Parent" xml:space="preserve">
+    <value>tabFinance</value>
+  </data>
+  <data name="&gt;&gt;button9.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="cmbDateTo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>785, 7</value>
+  </data>
+  <data name="cmbDateTo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>211, 27</value>
+  </data>
+  <data name="cmbDateTo.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;cmbDateTo.Name" xml:space="preserve">
+    <value>cmbDateTo</value>
+  </data>
+  <data name="&gt;&gt;cmbDateTo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cmbDateTo.Parent" xml:space="preserve">
+    <value>tabFinance</value>
+  </data>
+  <data name="&gt;&gt;cmbDateTo.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="cmbDateFrom.Location" type="System.Drawing.Point, System.Drawing">
+    <value>528, 7</value>
+  </data>
+  <data name="cmbDateFrom.Size" type="System.Drawing.Size, System.Drawing">
+    <value>211, 27</value>
+  </data>
+  <data name="cmbDateFrom.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;cmbDateFrom.Name" xml:space="preserve">
+    <value>cmbDateFrom</value>
+  </data>
+  <data name="&gt;&gt;cmbDateFrom.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cmbDateFrom.Parent" xml:space="preserve">
+    <value>tabFinance</value>
+  </data>
+  <data name="&gt;&gt;cmbDateFrom.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="cmbDoctor.Location" type="System.Drawing.Point, System.Drawing">
+    <value>266, 7</value>
+  </data>
+  <data name="cmbDoctor.Size" type="System.Drawing.Size, System.Drawing">
+    <value>211, 27</value>
+  </data>
+  <data name="cmbDoctor.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;cmbDoctor.Name" xml:space="preserve">
+    <value>cmbDoctor</value>
+  </data>
+  <data name="&gt;&gt;cmbDoctor.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cmbDoctor.Parent" xml:space="preserve">
+    <value>tabFinance</value>
+  </data>
+  <data name="&gt;&gt;cmbDoctor.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="cmbPIB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 7</value>
+  </data>
+  <data name="cmbPIB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>211, 27</value>
+  </data>
+  <data name="cmbPIB.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;cmbPIB.Name" xml:space="preserve">
+    <value>cmbPIB</value>
+  </data>
+  <data name="&gt;&gt;cmbPIB.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cmbPIB.Parent" xml:space="preserve">
+    <value>tabFinance</value>
+  </data>
+  <data name="&gt;&gt;cmbPIB.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="dataGridView2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 61</value>
+  </data>
+  <data name="dataGridView2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1302, 585</value>
+  </data>
+  <data name="dataGridView2.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;dataGridView2.Name" xml:space="preserve">
+    <value>dataGridView2</value>
+  </data>
+  <data name="&gt;&gt;dataGridView2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridView2.Parent" xml:space="preserve">
+    <value>tabFinance</value>
+  </data>
+  <data name="&gt;&gt;dataGridView2.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="tabFinance.Location" type="System.Drawing.Point, System.Drawing">
+    <value>28, 4</value>
+  </data>
+  <data name="tabFinance.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tabFinance.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1318, 656</value>
+  </data>
+  <data name="tabFinance.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="tabFinance.Text" xml:space="preserve">
+    <value>Звітність</value>
+  </data>
+  <data name="&gt;&gt;tabFinance.Name" xml:space="preserve">
+    <value>tabFinance</value>
+  </data>
+  <data name="&gt;&gt;tabFinance.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabFinance.Parent" xml:space="preserve">
+    <value>TabControl</value>
+  </data>
+  <data name="&gt;&gt;tabFinance.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="TabControl.Font" type="System.Drawing.Font, System.Drawing">
     <value>Times New Roman, 12pt</value>

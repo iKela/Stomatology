@@ -146,6 +146,13 @@
             this.button4 = new System.Windows.Forms.Button();
             this.TabControl = new System.Windows.Forms.TabControl();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.tabFinance = new System.Windows.Forms.TabPage();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.cmbPIB = new System.Windows.Forms.ComboBox();
+            this.cmbDoctor = new System.Windows.Forms.ComboBox();
+            this.cmbDateFrom = new System.Windows.Forms.ComboBox();
+            this.cmbDateTo = new System.Windows.Forms.ComboBox();
+            this.button9 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -154,6 +161,8 @@
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TeethPanel)).BeginInit();
             this.TabControl.SuspendLayout();
+            this.tabFinance.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // imageList1
@@ -983,10 +992,61 @@
             // 
             resources.ApplyResources(this.TabControl, "TabControl");
             this.TabControl.Controls.Add(this.tabPage1);
+            this.TabControl.Controls.Add(this.tabFinance);
             this.TabControl.ImageList = this.imageList1;
             this.TabControl.Multiline = true;
             this.TabControl.Name = "TabControl";
             this.TabControl.SelectedIndex = 0;
+            this.TabControl.Selected += new System.Windows.Forms.TabControlEventHandler(this.TabControl_Selected);
+            // 
+            // tabFinance
+            // 
+            this.tabFinance.Controls.Add(this.button9);
+            this.tabFinance.Controls.Add(this.cmbDateTo);
+            this.tabFinance.Controls.Add(this.cmbDateFrom);
+            this.tabFinance.Controls.Add(this.cmbDoctor);
+            this.tabFinance.Controls.Add(this.cmbPIB);
+            this.tabFinance.Controls.Add(this.dataGridView2);
+            resources.ApplyResources(this.tabFinance, "tabFinance");
+            this.tabFinance.Name = "tabFinance";
+            this.tabFinance.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            resources.ApplyResources(this.dataGridView2, "dataGridView2");
+            this.dataGridView2.Name = "dataGridView2";
+            // 
+            // cmbPIB
+            // 
+            this.cmbPIB.FormattingEnabled = true;
+            resources.ApplyResources(this.cmbPIB, "cmbPIB");
+            this.cmbPIB.Name = "cmbPIB";
+            // 
+            // cmbDoctor
+            // 
+            this.cmbDoctor.FormattingEnabled = true;
+            resources.ApplyResources(this.cmbDoctor, "cmbDoctor");
+            this.cmbDoctor.Name = "cmbDoctor";
+            // 
+            // cmbDateFrom
+            // 
+            this.cmbDateFrom.FormattingEnabled = true;
+            resources.ApplyResources(this.cmbDateFrom, "cmbDateFrom");
+            this.cmbDateFrom.Name = "cmbDateFrom";
+            // 
+            // cmbDateTo
+            // 
+            this.cmbDateTo.FormattingEnabled = true;
+            resources.ApplyResources(this.cmbDateTo, "cmbDateTo");
+            this.cmbDateTo.Name = "cmbDateTo";
+            // 
+            // button9
+            // 
+            resources.ApplyResources(this.button9, "button9");
+            this.button9.Name = "button9";
+            this.button9.UseVisualStyleBackColor = true;
             // 
             // Main
             // 
@@ -1011,6 +1071,8 @@
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TeethPanel)).EndInit();
             this.TabControl.ResumeLayout(false);
+            this.tabFinance.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1133,6 +1195,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn number;
         private System.Windows.Forms.DataGridViewTextBoxColumn adress;
         private System.Windows.Forms.Label label38;
+        public System.Windows.Forms.TabPage tabFinance;
+        public System.Windows.Forms.ComboBox cmbDateTo;
+        public System.Windows.Forms.ComboBox cmbDateFrom;
+        public System.Windows.Forms.ComboBox cmbDoctor;
+        public System.Windows.Forms.ComboBox cmbPIB;
+        public System.Windows.Forms.DataGridView dataGridView2;
+        public System.Windows.Forms.Button button9;
     }
 }
 

@@ -71,6 +71,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Reporting.cs" />
     <Compile Include="Source\AboutSoft.cs">
       <SubType>Form</SubType>
     </Compile>

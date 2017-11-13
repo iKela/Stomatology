@@ -19,7 +19,7 @@ namespace Stomatology
         string TVdirection;
         string PacientId;
 
-        public void PassValue(string strValue)
+        public void PassValue(string strValue)//Calculator
         {
             txtMoney.Text = strValue;
         }
@@ -1143,6 +1143,14 @@ namespace Stomatology
         private void Main_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void TabControl_Selected(object sender, TabControlEventArgs e)
+        {
+            if (TabControl.SelectedTab == tabFinance)
+            {
+                Reporting InfoForm = new Reporting();
+            }
         }
     }
 }
