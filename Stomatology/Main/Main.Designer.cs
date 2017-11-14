@@ -145,14 +145,18 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.TabControl = new System.Windows.Forms.TabControl();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.DataGridView2 = new System.Windows.Forms.DataGridView();
-            this.Updatebtn = new System.Windows.Forms.Button();
             this.tabFinance = new System.Windows.Forms.TabPage();
-            this.PIBTextBox = new System.Windows.Forms.TextBox();
-            this.DoctortextBox = new System.Windows.Forms.TextBox();
-            this.DatetextBoxFrom = new System.Windows.Forms.TextBox();
+            this.button9 = new System.Windows.Forms.Button();
+            this.label42 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
             this.DatetextboxTo = new System.Windows.Forms.TextBox();
+            this.DatetextBoxFrom = new System.Windows.Forms.TextBox();
+            this.DoctortextBox = new System.Windows.Forms.TextBox();
+            this.PIBTextBox = new System.Windows.Forms.TextBox();
+            this.Updatebtn = new System.Windows.Forms.Button();
+            this.DataGridView2 = new System.Windows.Forms.DataGridView();
             this.Id_reception = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PIB = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pacientbrth = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -160,10 +164,7 @@
             this.Doctor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateApp = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.price = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label39 = new System.Windows.Forms.Label();
-            this.label40 = new System.Windows.Forms.Label();
-            this.label41 = new System.Windows.Forms.Label();
-            this.label42 = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.menuStrip1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -172,8 +173,8 @@
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TeethPanel)).BeginInit();
             this.TabControl.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DataGridView2)).BeginInit();
             this.tabFinance.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // imageList1
@@ -1010,6 +1011,77 @@
             this.TabControl.SelectedIndex = 0;
             this.TabControl.Selected += new System.Windows.Forms.TabControlEventHandler(this.TabControl_Selected);
             // 
+            // tabFinance
+            // 
+            this.tabFinance.Controls.Add(this.button9);
+            this.tabFinance.Controls.Add(this.label42);
+            this.tabFinance.Controls.Add(this.label41);
+            this.tabFinance.Controls.Add(this.label40);
+            this.tabFinance.Controls.Add(this.label39);
+            this.tabFinance.Controls.Add(this.DatetextboxTo);
+            this.tabFinance.Controls.Add(this.DatetextBoxFrom);
+            this.tabFinance.Controls.Add(this.DoctortextBox);
+            this.tabFinance.Controls.Add(this.PIBTextBox);
+            this.tabFinance.Controls.Add(this.Updatebtn);
+            this.tabFinance.Controls.Add(this.DataGridView2);
+            resources.ApplyResources(this.tabFinance, "tabFinance");
+            this.tabFinance.Name = "tabFinance";
+            this.tabFinance.UseVisualStyleBackColor = true;
+            // 
+            // button9
+            // 
+            resources.ApplyResources(this.button9, "button9");
+            this.button9.Name = "button9";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // label42
+            // 
+            resources.ApplyResources(this.label42, "label42");
+            this.label42.Name = "label42";
+            // 
+            // label41
+            // 
+            resources.ApplyResources(this.label41, "label41");
+            this.label41.Name = "label41";
+            // 
+            // label40
+            // 
+            resources.ApplyResources(this.label40, "label40");
+            this.label40.Name = "label40";
+            // 
+            // label39
+            // 
+            resources.ApplyResources(this.label39, "label39");
+            this.label39.Name = "label39";
+            // 
+            // DatetextboxTo
+            // 
+            resources.ApplyResources(this.DatetextboxTo, "DatetextboxTo");
+            this.DatetextboxTo.Name = "DatetextboxTo";
+            // 
+            // DatetextBoxFrom
+            // 
+            resources.ApplyResources(this.DatetextBoxFrom, "DatetextBoxFrom");
+            this.DatetextBoxFrom.Name = "DatetextBoxFrom";
+            // 
+            // DoctortextBox
+            // 
+            resources.ApplyResources(this.DoctortextBox, "DoctortextBox");
+            this.DoctortextBox.Name = "DoctortextBox";
+            // 
+            // PIBTextBox
+            // 
+            resources.ApplyResources(this.PIBTextBox, "PIBTextBox");
+            this.PIBTextBox.Name = "PIBTextBox";
+            // 
+            // Updatebtn
+            // 
+            resources.ApplyResources(this.Updatebtn, "Updatebtn");
+            this.Updatebtn.Name = "Updatebtn";
+            this.Updatebtn.UseVisualStyleBackColor = true;
+            this.Updatebtn.Click += new System.EventHandler(this.Updatebtn_Click);
+            // 
             // DataGridView2
             // 
             this.DataGridView2.AllowUserToAddRows = false;
@@ -1027,49 +1099,6 @@
             resources.ApplyResources(this.DataGridView2, "DataGridView2");
             this.DataGridView2.Name = "DataGridView2";
             this.DataGridView2.ReadOnly = true;
-            // 
-            // Updatebtn
-            // 
-            resources.ApplyResources(this.Updatebtn, "Updatebtn");
-            this.Updatebtn.Name = "Updatebtn";
-            this.Updatebtn.UseVisualStyleBackColor = true;
-            this.Updatebtn.Click += new System.EventHandler(this.Updatebtn_Click);
-            // 
-            // tabFinance
-            // 
-            this.tabFinance.Controls.Add(this.label42);
-            this.tabFinance.Controls.Add(this.label41);
-            this.tabFinance.Controls.Add(this.label40);
-            this.tabFinance.Controls.Add(this.label39);
-            this.tabFinance.Controls.Add(this.DatetextboxTo);
-            this.tabFinance.Controls.Add(this.DatetextBoxFrom);
-            this.tabFinance.Controls.Add(this.DoctortextBox);
-            this.tabFinance.Controls.Add(this.PIBTextBox);
-            this.tabFinance.Controls.Add(this.Updatebtn);
-            this.tabFinance.Controls.Add(this.DataGridView2);
-            resources.ApplyResources(this.tabFinance, "tabFinance");
-            this.tabFinance.Name = "tabFinance";
-            this.tabFinance.UseVisualStyleBackColor = true;
-            // 
-            // PIBTextBox
-            // 
-            resources.ApplyResources(this.PIBTextBox, "PIBTextBox");
-            this.PIBTextBox.Name = "PIBTextBox";
-            // 
-            // DoctortextBox
-            // 
-            resources.ApplyResources(this.DoctortextBox, "DoctortextBox");
-            this.DoctortextBox.Name = "DoctortextBox";
-            // 
-            // DatetextBoxFrom
-            // 
-            resources.ApplyResources(this.DatetextBoxFrom, "DatetextBoxFrom");
-            this.DatetextBoxFrom.Name = "DatetextBoxFrom";
-            // 
-            // DatetextboxTo
-            // 
-            resources.ApplyResources(this.DatetextboxTo, "DatetextboxTo");
-            this.DatetextboxTo.Name = "DatetextboxTo";
             // 
             // Id_reception
             // 
@@ -1118,26 +1147,6 @@
             this.price.Name = "price";
             this.price.ReadOnly = true;
             // 
-            // label39
-            // 
-            resources.ApplyResources(this.label39, "label39");
-            this.label39.Name = "label39";
-            // 
-            // label40
-            // 
-            resources.ApplyResources(this.label40, "label40");
-            this.label40.Name = "label40";
-            // 
-            // label41
-            // 
-            resources.ApplyResources(this.label41, "label41");
-            this.label41.Name = "label41";
-            // 
-            // label42
-            // 
-            resources.ApplyResources(this.label42, "label42");
-            this.label42.Name = "label42";
-            // 
             // Main
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -1161,9 +1170,9 @@
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TeethPanel)).EndInit();
             this.TabControl.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.DataGridView2)).EndInit();
             this.tabFinance.ResumeLayout(false);
             this.tabFinance.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1304,6 +1313,7 @@
         private System.Windows.Forms.Label label41;
         private System.Windows.Forms.Label label40;
         private System.Windows.Forms.Label label39;
+        public System.Windows.Forms.Button button9;
     }
 }
 

@@ -17,7 +17,6 @@ namespace Stomatology
         SqlConnection testCon = new SqlConnection
        (@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + Properties.Settings.Default.DateBaseDirection);
 
-        bool allow = true;
         Main ownerForm = null;
         public EditPatient(Main ownerForm)
         {
@@ -37,10 +36,9 @@ namespace Stomatology
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+
             if (dataGridView1.SelectedRows.Count > 0)
             {
-                allow = false;
                 textBox5.Text = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
                 txtBirthday.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
                 txtPhoneNumber.Text = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
