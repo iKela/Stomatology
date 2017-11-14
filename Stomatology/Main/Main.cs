@@ -15,17 +15,11 @@ namespace Stomatology
 
         int MHIndex;
         int MLIndex;
-        string BDDirection;
-        string TVdirection;
         string PacientId;
 
         public void PassValue(string strValue)//Calculator
         {
             txtMoney.Text = strValue;
-        }
-        public void PassDirValue(string dirValue)
-        {
-            TVdirection = @dirValue;
         }
 
         public Main()
@@ -37,11 +31,7 @@ namespace Stomatology
         {
             toolTip(); 
             updateTable();
-            this.TVdirection = Properties.Settings.Default.TeamViewerDirection;
-            this.BDDirection = Properties.Settings.Default.DateBaseDirection;
-
         }
-
 
         public void updateTable()
         {
@@ -51,6 +41,7 @@ namespace Stomatology
             SqlCommand sqlComm = new SqlCommand(upqwery, testCon);
             SqlDataReader sqlDR;
             sqlDR = sqlComm.ExecuteReader();
+            
             while (sqlDR.Read())
             {
                 int index = dataGridView1.Rows.Add();
@@ -300,7 +291,7 @@ namespace Stomatology
 
         private void tsmiRemoteControl_Click(object sender, EventArgs e)
         {
-            Process.Start(TVdirection);
+            Process.Start(Properties.Settings.Default.TeamViewerDirection);
         }
 
         private void Main_FormClosing(object sender, FormClosingEventArgs e)
@@ -722,9 +713,9 @@ namespace Stomatology
         public void TopLeftTextBox_8_MouseHover(object sender, EventArgs e)
         {
 
-            // Текстбокси рахуються з лівої сторони
             MHIndex = 1;
             txtBoxMouseHover();
+
         }
 
         public void TopLeftTextBox_8_MouseLeave(object sender, EventArgs e)
@@ -1213,9 +1204,14 @@ namespace Stomatology
 
            
         }
+      
+        private void button9_Click(object sender, EventArgs e)
+        {
+            ExportToExcel();
+        }
         private void ExportToExcel()
         {
-            // Creating a Excel object. // Створення Excel обєкта
+            // Creating a Excel object. // Створення Excel об`єкта
             Microsoft.Office.Interop.Excel._Application excel = new Microsoft.Office.Interop.Excel.Application();
             Microsoft.Office.Interop.Excel._Workbook workbook = excel.Workbooks.Add(Type.Missing);
             Microsoft.Office.Interop.Excel._Worksheet worksheet = null;
@@ -1272,11 +1268,6 @@ namespace Stomatology
                 excel = null;
             }
 
-        }
-
-        private void button9_Click(object sender, EventArgs e)
-        {
-            ExportToExcel();
         }
     }
 }
