@@ -146,13 +146,24 @@
             this.button4 = new System.Windows.Forms.Button();
             this.TabControl = new System.Windows.Forms.TabControl();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.DataGridView2 = new System.Windows.Forms.DataGridView();
+            this.Updatebtn = new System.Windows.Forms.Button();
             this.tabFinance = new System.Windows.Forms.TabPage();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.cmbPIB = new System.Windows.Forms.ComboBox();
-            this.cmbDoctor = new System.Windows.Forms.ComboBox();
-            this.cmbDateFrom = new System.Windows.Forms.ComboBox();
-            this.cmbDateTo = new System.Windows.Forms.ComboBox();
-            this.button9 = new System.Windows.Forms.Button();
+            this.PIBTextBox = new System.Windows.Forms.TextBox();
+            this.DoctortextBox = new System.Windows.Forms.TextBox();
+            this.DatetextBoxFrom = new System.Windows.Forms.TextBox();
+            this.DatetextboxTo = new System.Windows.Forms.TextBox();
+            this.Id_reception = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PIB = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pacientbrth = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pacientnmb = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Doctor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateApp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label39 = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
+            this.label42 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -161,8 +172,8 @@
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TeethPanel)).BeginInit();
             this.TabControl.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridView2)).BeginInit();
             this.tabFinance.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // imageList1
@@ -999,54 +1010,133 @@
             this.TabControl.SelectedIndex = 0;
             this.TabControl.Selected += new System.Windows.Forms.TabControlEventHandler(this.TabControl_Selected);
             // 
+            // DataGridView2
+            // 
+            this.DataGridView2.AllowUserToAddRows = false;
+            this.DataGridView2.AllowUserToDeleteRows = false;
+            this.DataGridView2.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Id_reception,
+            this.PIB,
+            this.pacientbrth,
+            this.pacientnmb,
+            this.Doctor,
+            this.dateApp,
+            this.price});
+            resources.ApplyResources(this.DataGridView2, "DataGridView2");
+            this.DataGridView2.Name = "DataGridView2";
+            this.DataGridView2.ReadOnly = true;
+            // 
+            // Updatebtn
+            // 
+            resources.ApplyResources(this.Updatebtn, "Updatebtn");
+            this.Updatebtn.Name = "Updatebtn";
+            this.Updatebtn.UseVisualStyleBackColor = true;
+            this.Updatebtn.Click += new System.EventHandler(this.Updatebtn_Click);
+            // 
             // tabFinance
             // 
-            this.tabFinance.Controls.Add(this.button9);
-            this.tabFinance.Controls.Add(this.cmbDateTo);
-            this.tabFinance.Controls.Add(this.cmbDateFrom);
-            this.tabFinance.Controls.Add(this.cmbDoctor);
-            this.tabFinance.Controls.Add(this.cmbPIB);
-            this.tabFinance.Controls.Add(this.dataGridView2);
+            this.tabFinance.Controls.Add(this.label42);
+            this.tabFinance.Controls.Add(this.label41);
+            this.tabFinance.Controls.Add(this.label40);
+            this.tabFinance.Controls.Add(this.label39);
+            this.tabFinance.Controls.Add(this.DatetextboxTo);
+            this.tabFinance.Controls.Add(this.DatetextBoxFrom);
+            this.tabFinance.Controls.Add(this.DoctortextBox);
+            this.tabFinance.Controls.Add(this.PIBTextBox);
+            this.tabFinance.Controls.Add(this.Updatebtn);
+            this.tabFinance.Controls.Add(this.DataGridView2);
             resources.ApplyResources(this.tabFinance, "tabFinance");
             this.tabFinance.Name = "tabFinance";
             this.tabFinance.UseVisualStyleBackColor = true;
             // 
-            // dataGridView2
+            // PIBTextBox
             // 
-            this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            resources.ApplyResources(this.dataGridView2, "dataGridView2");
-            this.dataGridView2.Name = "dataGridView2";
+            resources.ApplyResources(this.PIBTextBox, "PIBTextBox");
+            this.PIBTextBox.Name = "PIBTextBox";
             // 
-            // cmbPIB
+            // DoctortextBox
             // 
-            this.cmbPIB.FormattingEnabled = true;
-            resources.ApplyResources(this.cmbPIB, "cmbPIB");
-            this.cmbPIB.Name = "cmbPIB";
+            resources.ApplyResources(this.DoctortextBox, "DoctortextBox");
+            this.DoctortextBox.Name = "DoctortextBox";
             // 
-            // cmbDoctor
+            // DatetextBoxFrom
             // 
-            this.cmbDoctor.FormattingEnabled = true;
-            resources.ApplyResources(this.cmbDoctor, "cmbDoctor");
-            this.cmbDoctor.Name = "cmbDoctor";
+            resources.ApplyResources(this.DatetextBoxFrom, "DatetextBoxFrom");
+            this.DatetextBoxFrom.Name = "DatetextBoxFrom";
             // 
-            // cmbDateFrom
+            // DatetextboxTo
             // 
-            this.cmbDateFrom.FormattingEnabled = true;
-            resources.ApplyResources(this.cmbDateFrom, "cmbDateFrom");
-            this.cmbDateFrom.Name = "cmbDateFrom";
+            resources.ApplyResources(this.DatetextboxTo, "DatetextboxTo");
+            this.DatetextboxTo.Name = "DatetextboxTo";
             // 
-            // cmbDateTo
+            // Id_reception
             // 
-            this.cmbDateTo.FormattingEnabled = true;
-            resources.ApplyResources(this.cmbDateTo, "cmbDateTo");
-            this.cmbDateTo.Name = "cmbDateTo";
+            resources.ApplyResources(this.Id_reception, "Id_reception");
+            this.Id_reception.Name = "Id_reception";
+            this.Id_reception.ReadOnly = true;
             // 
-            // button9
+            // PIB
             // 
-            resources.ApplyResources(this.button9, "button9");
-            this.button9.Name = "button9";
-            this.button9.UseVisualStyleBackColor = true;
+            this.PIB.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            resources.ApplyResources(this.PIB, "PIB");
+            this.PIB.Name = "PIB";
+            this.PIB.ReadOnly = true;
+            // 
+            // pacientbrth
+            // 
+            this.pacientbrth.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            resources.ApplyResources(this.pacientbrth, "pacientbrth");
+            this.pacientbrth.Name = "pacientbrth";
+            this.pacientbrth.ReadOnly = true;
+            // 
+            // pacientnmb
+            // 
+            resources.ApplyResources(this.pacientnmb, "pacientnmb");
+            this.pacientnmb.Name = "pacientnmb";
+            this.pacientnmb.ReadOnly = true;
+            // 
+            // Doctor
+            // 
+            this.Doctor.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            resources.ApplyResources(this.Doctor, "Doctor");
+            this.Doctor.Name = "Doctor";
+            this.Doctor.ReadOnly = true;
+            // 
+            // dateApp
+            // 
+            this.dateApp.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            resources.ApplyResources(this.dateApp, "dateApp");
+            this.dateApp.Name = "dateApp";
+            this.dateApp.ReadOnly = true;
+            // 
+            // price
+            // 
+            this.price.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            resources.ApplyResources(this.price, "price");
+            this.price.Name = "price";
+            this.price.ReadOnly = true;
+            // 
+            // label39
+            // 
+            resources.ApplyResources(this.label39, "label39");
+            this.label39.Name = "label39";
+            // 
+            // label40
+            // 
+            resources.ApplyResources(this.label40, "label40");
+            this.label40.Name = "label40";
+            // 
+            // label41
+            // 
+            resources.ApplyResources(this.label41, "label41");
+            this.label41.Name = "label41";
+            // 
+            // label42
+            // 
+            resources.ApplyResources(this.label42, "label42");
+            this.label42.Name = "label42";
             // 
             // Main
             // 
@@ -1071,8 +1161,9 @@
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TeethPanel)).EndInit();
             this.TabControl.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridView2)).EndInit();
             this.tabFinance.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            this.tabFinance.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1196,12 +1287,23 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn adress;
         private System.Windows.Forms.Label label38;
         public System.Windows.Forms.TabPage tabFinance;
-        public System.Windows.Forms.ComboBox cmbDateTo;
-        public System.Windows.Forms.ComboBox cmbDateFrom;
-        public System.Windows.Forms.ComboBox cmbDoctor;
-        public System.Windows.Forms.ComboBox cmbPIB;
-        public System.Windows.Forms.DataGridView dataGridView2;
-        public System.Windows.Forms.Button button9;
+        private System.Windows.Forms.TextBox DatetextboxTo;
+        private System.Windows.Forms.TextBox DatetextBoxFrom;
+        private System.Windows.Forms.TextBox DoctortextBox;
+        private System.Windows.Forms.TextBox PIBTextBox;
+        public System.Windows.Forms.Button Updatebtn;
+        public System.Windows.Forms.DataGridView DataGridView2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id_reception;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PIB;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pacientbrth;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pacientnmb;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Doctor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dateApp;
+        private System.Windows.Forms.DataGridViewTextBoxColumn price;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.Label label39;
     }
 }
 

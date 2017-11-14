@@ -1149,9 +1149,72 @@ namespace Stomatology
         {
             if (TabControl.SelectedTab == tabFinance)
             {
-                Reporting InfoForm = new Reporting();
+               // Reporting InfoForm = new Reporting();
             }
         }
+        private void Datetextbox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 44 || e.KeyChar == 47 || e.KeyChar == 45 || e.KeyChar == 42)
+                e.KeyChar = (char)46;
+        }
+        private void Updatebtn_Click(object sender, EventArgs e)
+        {
+            DataGridView2.Rows.Clear();
+            testCon.Open();
+            string qwery = "select r.Reception_Id,  p.Name, p.Birthday, p.Number, r.Doctor, r.Date, r.Money  from Reception r " +
+                "right join Pacient p on p.Pacient_Id = r.Pacient_Id\n";
+
+            bool isAdd = false;
+
+            if (!string.IsNullOrEmpty(PIBTextBox.Text))
+            {
+                isAdd = true;
+                qwery += $"where p.Name like N'%{PIBTextBox.Text}%'";
+            }
+
+            if (!string.IsNullOrEmpty(DoctortextBox.Text))
+            {
+                if (isAdd)
+                    qwery += $" and r.Doctor like N'%{DoctortextBox.Text}%'";
+                else
+                {
+                    isAdd = true;
+                    qwery += $"where r.Doctor like N'%{DoctortextBox.Text}%'";
+                }
+            }
+
+            if (!string.IsNullOrEmpty(DatetextBoxFrom.Text))
+            {
+                if (isAdd)
+                    qwery += $" and r.Date Between '{DatetextBoxFrom.Text}' And '{DatetextboxTo.Text}'";
+                else
+                {
+                    isAdd = true;
+                    qwery += $"where r.Date Between '{DatetextBoxFrom.Text}' And  '{ DatetextboxTo.Text}'";
+                }
+            }
+
+            SqlCommand sqlComm = new SqlCommand(qwery, testCon);
+            SqlDataReader sqlDR;
+            sqlDR = sqlComm.ExecuteReader();
+            while (sqlDR.Read())
+            {
+                int index = DataGridView2.Rows.Add();
+                DataGridView2.Rows[index].Cells[0].Value = sqlDR[0];
+                DataGridView2.Rows[index].Cells[1].Value = sqlDR[1];
+                DataGridView2.Rows[index].Cells[2].Value = sqlDR[2];
+                DataGridView2.Rows[index].Cells[3].Value = sqlDR[3];
+                DataGridView2.Rows[index].Cells[4].Value = sqlDR[4];
+                DataGridView2.Rows[index].Cells[5].Value = sqlDR[5];
+                DataGridView2.Rows[index].Cells[6].Value = sqlDR[6];
+            }
+            testCon.Close();
+            DataGridView2.ClearSelection();
+
+           
+        }
+
+       
     }
 }
 
