@@ -1181,7 +1181,7 @@
         private System.Windows.Forms.ToolStripMenuItem проПрограммуToolStripMenuItem;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        public System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button AddNewAppoinment;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel3;
