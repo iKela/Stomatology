@@ -1280,7 +1280,7 @@ namespace Stomatology
             }
             else
             {
-                arrears = "Не заборгованість";
+                arrears = " ";
             }
         }
     }
