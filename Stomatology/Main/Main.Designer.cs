@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -55,6 +55,8 @@
             this.AddNewAppoinment = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.lbChanels = new System.Windows.Forms.ListBox();
+            this.cbArrears = new System.Windows.Forms.CheckBox();
             this.label38 = new System.Windows.Forms.Label();
             this.lblDoctor = new System.Windows.Forms.Label();
             this.button8 = new System.Windows.Forms.Button();
@@ -136,7 +138,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.TeethPanel = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtDescription = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.EditPatient = new System.Windows.Forms.Button();
@@ -165,7 +167,6 @@
             this.dateApp = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.cbArrears = new System.Windows.Forms.CheckBox();
             this.menuStrip1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -296,15 +297,15 @@
             this.birthday,
             this.number,
             this.adress});
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 12F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.NullValue = null;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Times New Roman", 12F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.NullValue = null;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle5;
             resources.ApplyResources(this.dataGridView1, "dataGridView1");
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -368,6 +369,7 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.lbChanels);
             this.panel3.Controls.Add(this.cbArrears);
             this.panel3.Controls.Add(this.label38);
             this.panel3.Controls.Add(this.lblDoctor);
@@ -450,11 +452,29 @@
             this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.TeethPanel);
             this.panel3.Controls.Add(this.label3);
-            this.panel3.Controls.Add(this.textBox1);
+            this.panel3.Controls.Add(this.txtDescription);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.label1);
             resources.ApplyResources(this.panel3, "panel3");
             this.panel3.Name = "panel3";
+            // 
+            // lbChanels
+            // 
+            this.lbChanels.FormattingEnabled = true;
+            resources.ApplyResources(this.lbChanels, "lbChanels");
+            this.lbChanels.Items.AddRange(new object[] {
+            resources.GetString("lbChanels.Items"),
+            resources.GetString("lbChanels.Items1"),
+            resources.GetString("lbChanels.Items2")});
+            this.lbChanels.Name = "lbChanels";
+            this.lbChanels.SelectedIndexChanged += new System.EventHandler(this.lbChanels_SelectedIndexChanged);
+            this.lbChanels.KeyDown += new System.Windows.Forms.KeyEventHandler(this.lbChanels_KeyPress);
+            // 
+            // cbArrears
+            // 
+            resources.ApplyResources(this.cbArrears, "cbArrears");
+            this.cbArrears.Name = "cbArrears";
+            this.cbArrears.UseVisualStyleBackColor = true;
             // 
             // label38
             // 
@@ -943,10 +963,12 @@
             resources.ApplyResources(this.label3, "label3");
             this.label3.Name = "label3";
             // 
-            // textBox1
+            // txtDescription
             // 
-            resources.ApplyResources(this.textBox1, "textBox1");
-            this.textBox1.Name = "textBox1";
+            resources.ApplyResources(this.txtDescription, "txtDescription");
+            this.txtDescription.Name = "txtDescription";
+            this.txtDescription.TextChanged += new System.EventHandler(this.txtDescription_TextChanged);
+            this.txtDescription.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtDescription_KeyDown);
             // 
             // label2
             // 
@@ -1149,12 +1171,6 @@
             this.price.Name = "price";
             this.price.ReadOnly = true;
             // 
-            // cbArrears
-            // 
-            resources.ApplyResources(this.cbArrears, "cbArrears");
-            this.cbArrears.Name = "cbArrears";
-            this.cbArrears.UseVisualStyleBackColor = true;
-            // 
             // Main
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -1278,7 +1294,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox TeethPanel;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button EditPatient;
@@ -1323,6 +1338,8 @@
         private System.Windows.Forms.Label label39;
         public System.Windows.Forms.Button button9;
         private System.Windows.Forms.CheckBox cbArrears;
+        private System.Windows.Forms.ListBox lbChanels;
+        private System.Windows.Forms.TextBox txtDescription;
     }
 }
 

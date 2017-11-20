@@ -61,7 +61,7 @@ namespace Stomatology
             lblDoctor.Text = "";
             txtBDate.Text = "";
             textBox2.Text = "";
-            textBox1.Text = "";
+            txtDescription.Text = "";
             txtMoney.Text = "";
             TopLeftTextBox_1.Text = "";
             TopLeftTextBox_2.Text = "";
@@ -181,7 +181,7 @@ namespace Stomatology
                     if (dataGridView1.SelectedRows.Count > 0)
                     {
                         string uId = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
-                        string qweryn = "update Reception " + $"set Date = N'{txtBDate.Text}', " + $"Info = N'{textBox1.Text}', " + $"Money = N'{txtMoney.Text}', " +
+                        string qweryn = "update Reception " + $"set Date = N'{txtBDate.Text}', " + $"Info = N'{txtDescription.Text}', " + $"Money = N'{txtMoney.Text}', " +
                              $"tlt1 = N'{TopLeftTextBox_1.Text}', " + $"tlt2 = N'{TopLeftTextBox_2.Text}', " + $"tlt3 = N'{TopLeftTextBox_3.Text}',  " + $"tlt4 = N'{TopLeftTextBox_4.Text}',  " +
                              $"tlt5 = N'{TopLeftTextBox_5.Text}', " + $"tlt6 = N'{TopLeftTextBox_6.Text}',  " + $"tlt7 = N'{TopLeftTextBox_7.Text}',  " + $"tlt8 = N'{TopLeftTextBox_8.Text}', " +
                              $"trt1 = N'{TopRightTextBox_1.Text}', " + $"trt2 = N'{TopRightTextBox_2.Text}', " + $"trt3 = N'{TopRightTextBox_3.Text}', " + $"trt4 = N'{TopRightTextBox_4.Text}', " +
@@ -224,7 +224,7 @@ namespace Stomatology
             {
                 lblDoctor.Text = sqlReader["Doctor"].ToString();
                 txtBDate.Text = sqlReader["Date"].ToString();
-                textBox1.Text = sqlReader["info"].ToString();
+                txtDescription.Text = sqlReader["info"].ToString();
                 txtMoney.Text = sqlReader["Money"].ToString();
 
                 TopLeftTextBox_1.Text = sqlReader["tlt1"].ToString();
@@ -326,7 +326,7 @@ namespace Stomatology
                 toolTip1.SetToolTip(textBox2, "На полі вказано паціента який був на прийомі.\nВи маэте можливість редагувати це поле.");
             }
             toolTip1.SetToolTip(btnCalculator, "Калькулятор.\nСкористайтесь калькулятором, для точного підрахунку ціни наданих послуг.");
-            toolTip1.SetToolTip(textBox1, "Поле для додаткової інформації.");
+            toolTip1.SetToolTip(txtDescription, "Поле для додаткової інформації.");
             toolTip1.SetToolTip(btnUpdate, "Оновити інформацію про паціента.");
         }
 
@@ -1282,6 +1282,49 @@ namespace Stomatology
             {
                 arrears = " ";
             }
+        }
+
+        private void txtDescription_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        string text;
+        private void lbChanels_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            text = lbChanels.GetItemText(lbChanels.SelectedItem);
+        }
+
+        private void lbChanels_KeyPress(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtDescription.Text += " " + text + " ";
+                lbChanels.Visible = false;
+                lbChanels.ClearSelected();
+                txtDescription.Focus();
+                txtDescription.SelectedText += " ";
+            }
+        }
+        
+        private void txtDescription_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.P)
+            {
+                lbChanels.Visible = true;
+            }
+            else if (e.KeyCode == Keys.T)
+            {
+                lbChanels.Visible = true;
+            }
+            else if (e.KeyCode == Keys.Space && lbChanels.Visible == true)
+            {
+                lbChanels.Focus();
+            }
+            else
+            {
+                lbChanels.Visible = false;
+            }
+
         }
     }
 }
