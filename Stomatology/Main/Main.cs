@@ -16,6 +16,7 @@ namespace Stomatology
         int MHIndex;
         int MLIndex;
         string PacientId;
+        string arrears = "Не заборгованість";
 
         public void PassValue(string strValue)//Calculator
         {
@@ -29,6 +30,7 @@ namespace Stomatology
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            
             toolTip(); 
             updateTable();
         }
@@ -1268,6 +1270,18 @@ namespace Stomatology
                 excel = null;
             }
 
+        }
+
+        private void сbArrears_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbArrears.Checked == true)
+            {
+                arrears = "Заборгованість";
+            }
+            else
+            {
+                arrears = "Не заборгованість";
+            }
         }
     }
 }
