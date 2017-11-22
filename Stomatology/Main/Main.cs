@@ -3,6 +3,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using System.Diagnostics;
 using System.Data.SqlClient;
+using System.Text.RegularExpressions;
 
 
 namespace Stomatology
@@ -1305,10 +1306,11 @@ namespace Stomatology
                 txtDescription.SelectedText += " ";
             }
         }
-        
+        bool numberisthere = false;
         private void txtDescription_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.P)
+
+            if (e.KeyCode == (Keys.P))
             {
                 lbChanels.Visible = true;
             }
@@ -1322,9 +1324,24 @@ namespace Stomatology
             }
             else
             {
-                lbChanels.Visible = false;
+                string[] partNumbers = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "0" };
+                Regex number = new Regex(@"^[a-zA-Z0-9]\d{2}[a-zA-Z0-9](-\d{3}){2}[A-Za-z0-9]$");
+                foreach (string partNumber in partNumbers)
+                {
+                    numberisthere = true;
+                }
+                if (numberisthere == false)
+                {
+                    lbChanels.Visible = false;
+                }
             }
+          
+        }
 
+        private void button10_Click(object sender, EventArgs e)
+        {
+            Test newform = new Test();
+            newform.Show();
         }
     }
 }
