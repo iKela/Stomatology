@@ -113,7 +113,14 @@
             this.comboBoxDoctor = new System.Windows.Forms.ComboBox();
             this.button8 = new System.Windows.Forms.Button();
             this.label37 = new System.Windows.Forms.Label();
+            this.dataGridViewNA = new System.Windows.Forms.DataGridView();
+            this.Idpacient = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Pname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DateOfBirth = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nmb = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Adr = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNA)).BeginInit();
             this.SuspendLayout();
             // 
             // dateTimePicker1
@@ -121,7 +128,7 @@
             this.dateTimePicker1.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.dateTimePicker1.Location = new System.Drawing.Point(122, 78);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(137, 26);
+            this.dateTimePicker1.Size = new System.Drawing.Size(173, 26);
             this.dateTimePicker1.TabIndex = 0;
             // 
             // label1
@@ -942,6 +949,8 @@
             this.cmbPatient.Name = "cmbPatient";
             this.cmbPatient.Size = new System.Drawing.Size(402, 27);
             this.cmbPatient.TabIndex = 1;
+            this.cmbPatient.SelectedValueChanged += new System.EventHandler(this.cmbPatient_SelectedValueChanged);
+            this.cmbPatient.TextChanged += new System.EventHandler(this.cmbPatient_TextChanged);
             // 
             // comboBoxDoctor
             // 
@@ -975,12 +984,65 @@
             this.label37.TabIndex = 83;
             this.label37.Text = "Лікар:";
             // 
+            // dataGridViewNA
+            // 
+            this.dataGridViewNA.AllowUserToAddRows = false;
+            this.dataGridViewNA.AllowUserToDeleteRows = false;
+            this.dataGridViewNA.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewNA.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Idpacient,
+            this.Pname,
+            this.DateOfBirth,
+            this.Nmb,
+            this.Adr});
+            this.dataGridViewNA.Location = new System.Drawing.Point(567, 9);
+            this.dataGridViewNA.Name = "dataGridViewNA";
+            this.dataGridViewNA.ReadOnly = true;
+            this.dataGridViewNA.Size = new System.Drawing.Size(723, 624);
+            this.dataGridViewNA.TabIndex = 85;
+            // 
+            // Idpacient
+            // 
+            this.Idpacient.HeaderText = "id";
+            this.Idpacient.Name = "Idpacient";
+            this.Idpacient.ReadOnly = true;
+            this.Idpacient.Visible = false;
+            // 
+            // Pname
+            // 
+            this.Pname.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Pname.HeaderText = "П.І.Б.";
+            this.Pname.Name = "Pname";
+            this.Pname.ReadOnly = true;
+            // 
+            // DateOfBirth
+            // 
+            this.DateOfBirth.HeaderText = "Рік народження";
+            this.DateOfBirth.Name = "DateOfBirth";
+            this.DateOfBirth.ReadOnly = true;
+            this.DateOfBirth.Width = 75;
+            // 
+            // Nmb
+            // 
+            this.Nmb.HeaderText = "Номер";
+            this.Nmb.Name = "Nmb";
+            this.Nmb.ReadOnly = true;
+            this.Nmb.Width = 150;
+            // 
+            // Adr
+            // 
+            this.Adr.HeaderText = "Адреса";
+            this.Adr.Name = "Adr";
+            this.Adr.ReadOnly = true;
+            this.Adr.Width = 150;
+            // 
             // NewAppoinment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(572, 645);
+            this.ClientSize = new System.Drawing.Size(1302, 645);
+            this.Controls.Add(this.dataGridViewNA);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.label37);
             this.Controls.Add(this.comboBoxDoctor);
@@ -1065,11 +1127,12 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cmbPatient);
             this.Controls.Add(this.dateTimePicker1);
-            this.MaximumSize = new System.Drawing.Size(588, 684);
-            this.MinimumSize = new System.Drawing.Size(588, 684);
+            this.MaximumSize = new System.Drawing.Size(1318, 684);
+            this.MinimumSize = new System.Drawing.Size(1318, 684);
             this.Name = "NewAppoinment";
             this.Load += new System.EventHandler(this.NewAppoinment_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNA)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1161,5 +1224,11 @@
         private System.Windows.Forms.ComboBox comboBoxDoctor;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.DataGridView dataGridViewNA;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Idpacient;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Pname;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DateOfBirth;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nmb;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Adr;
     }
 }

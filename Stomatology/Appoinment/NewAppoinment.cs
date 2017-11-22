@@ -37,6 +37,8 @@ namespace Stomatology
 
         private void NewAppoinment_Load(object sender, EventArgs e)
         {
+            updateTable();
+
             cmbPatient.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
             cmbPatient.AutoCompleteSource = AutoCompleteSource.ListItems;
 
@@ -62,7 +64,28 @@ namespace Stomatology
             testCon.Close();
             comboBoxDoctor.Items.AddRange(Doctor);
         }
-        // ----------------------------------------------------------------------------------------------------------------------------------------------------------
+// ----------------------------------------------------------------------------------------------------------------------------------------------------------
+        private void updateTable()
+        {
+            dataGridViewNA.Rows.Clear();
+            testCon.Open();
+            string upqwery = "select * from Pacient ORDER BY Name";
+            SqlCommand sqlComm = new SqlCommand(upqwery, testCon);
+            SqlDataReader sqlDR;
+            sqlDR = sqlComm.ExecuteReader();
+            while (sqlDR.Read())
+            {
+                int index = dataGridViewNA.Rows.Add();
+                dataGridViewNA.Rows[index].Cells[0].Value = sqlDR[0];
+                dataGridViewNA.Rows[index].Cells[1].Value = sqlDR[1];
+                dataGridViewNA.Rows[index].Cells[2].Value = sqlDR[2];
+                dataGridViewNA.Rows[index].Cells[3].Value = sqlDR[3];
+                dataGridViewNA.Rows[index].Cells[4].Value = sqlDR[4];
+            }
+            testCon.Close();
+            dataGridViewNA.ClearSelection();
+        }// Дороблена виборка по алфавіту 
+
         private void button1_Click(object sender, EventArgs e)
         {
             try
@@ -961,6 +984,40 @@ namespace Stomatology
         }
 
         #endregion
+
+        private void cmbPatient_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if (cmbPatient.SelectedItem != null)
+            {
+                dataGridViewNA.Rows.Clear();
+                testCon.Open();
+
+                string qweryn = $"select * from Pacient where Name  like N'%{cmbPatient.Text}%'";
+
+                SqlCommand sqlComm = new SqlCommand(qweryn, testCon);
+                SqlDataReader sqlDRv;
+                sqlDRv = sqlComm.ExecuteReader();
+                while (sqlDRv.Read())
+                {
+                    int index = dataGridViewNA.Rows.Add();
+                    dataGridViewNA.Rows[index].Cells[0].Value = sqlDRv[0];
+                    dataGridViewNA.Rows[index].Cells[1].Value = sqlDRv[1];
+                    dataGridViewNA.Rows[index].Cells[2].Value = sqlDRv[2];
+                    dataGridViewNA.Rows[index].Cells[3].Value = sqlDRv[3];
+                    dataGridViewNA.Rows[index].Cells[4].Value = sqlDRv[4];
+                }
+                testCon.Close();
+                dataGridViewNA.ClearSelection();      
+            }  
+        }
+
+        private void cmbPatient_TextChanged(object sender, EventArgs e)
+        {
+            if (cmbPatient.SelectedItem == null)
+            {
+                updateTable();
+            }
+        }
     }
 }                                                                                            
                                                                                              
