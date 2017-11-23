@@ -90,7 +90,7 @@ namespace Stomatology
         {
             try
             {
-                if (cmbPatient.Text.Length == 0 || txtDescription.Text.Length == 0)
+                if (cmbPatient.Text.Length == 0 || txtDiagnosis.Text.Length == 0)
                     throw new Exception("Не всі поля заповнені!");
                 else
                 {
@@ -117,7 +117,7 @@ namespace Stomatology
                         $"trt1, trt2, trt3, trt4, trt5, trt6, trt7, trt8, " +
                         $"brt1, brt2, brt3, brt4, brt5, brt6, brt7, brt8, " +
                         $"blt1, blt2, blt3, blt4, blt5, blt6, blt7, blt8, Doctor)" +
-                        $"values (N'{dateTimePicker1.Value.Date.ToString("dd/MM/yyyy")}', '{PacientId}', N'{txtDescription.Text}', N'{txtMoney.Text}', "+
+                        $"values (N'{dateTimePicker1.Value.Date.ToString("dd/MM/yyyy")}', '{PacientId}', N'{txtDiagnosis.Text}', N'{txtMoney.Text}', "+
 
                         $" N'{TopLeftTextBox_1.Text}', N'{TopLeftTextBox_2.Text}',   N'{TopLeftTextBox_3.Text}', N'{TopLeftTextBox_4.Text}', N'{TopLeftTextBox_5.Text}', N'{TopLeftTextBox_6.Text}', N'{TopLeftTextBox_7.Text}', N'{TopLeftTextBox_8.Text}'," +
                         $" N'{TopRightTextBox_1.Text}', N'{TopRightTextBox_2.Text}', N'{TopRightTextBox_3.Text}', N'{TopRightTextBox_4.Text}', N'{TopRightTextBox_5.Text}', N'{TopRightTextBox_6.Text}', N'{TopRightTextBox_7.Text}', N'{TopRightTextBox_8.Text}'," +  
@@ -148,7 +148,7 @@ namespace Stomatology
         public void Buttonclear()                                                                               
         {
             txtMoney.Text = "";
-            txtDescription.Text = "";
+            txtDiagnosis.Text = "";
             TopLeftTextBox_1.Text = "";                                                                         
             TopLeftTextBox_2.Text = "";
             TopLeftTextBox_3.Text = "";
