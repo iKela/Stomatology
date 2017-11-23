@@ -1056,7 +1056,13 @@ namespace Stomatology
                 ReplaceWordStub("{doneDiseas}", doneDiseas, wordDocument);
 
                 wordDocument.SaveAs(@"D:\result.docx");
-                wordApp.Visible = true;
+                
+                MessageBox.Show("Verify connection to internet", "Error connecting to site server.", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (this.DialogResult == DialogResult.Yes)
+                    wordApp.Visible = true;
+               
+                wordApp.ActiveDocument.Close();
+                wordApp.Quit();
             }
             catch
             {
