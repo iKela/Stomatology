@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using Word = Microsoft.Office.Interop.Word;
 
 namespace Stomatology
 {
@@ -1018,6 +1019,57 @@ namespace Stomatology
                 updateTable();
             }
         }
+        #region SaveToWordFileAsOldPatient
+
+        private readonly string TemplateFileName = @"D:\GoogleDrive InSoP\MOSUkraineEditedEx.docx";
+        private void btnSaveAsForOldPatient_Click(object sender, EventArgs e)
+        {
+
+            var doctor = comboBoxDoctor.Text;
+            var name = cmbPatient.Text;
+            var diagnosis = txtDiagnosis.Text;
+            var complaint = txtComplaints.Text;
+            var doneDiseas = txtDoneDiseases.Text;
+            var currentDiseas = txtCurrentDisease.Text;
+            var survayData = txtSurvayData.Text;
+            var bite = txtBite.Text;
+            var mouthState = txtMouthState.Text;
+            var xRayData = txtXReyData.Text;
+            var colorVita = txtColorVita.Text;
+            var dateOfLessons = txtDateOfLessons.Text;
+            var controlDate = txtControlDate.Text;
+            var epicrisis = txtEpicrisis.Text;
+            var survayPlan = txtSurvayPlan.Text;
+            var treatmentPlan = txtTreatmentPlan.Text;
+
+            var wordApp = new Word.Application();
+            wordApp.Visible = false;
+
+            try
+            {
+                var wordDocument = wordApp.Documents.Open(TemplateFileName);
+
+                ReplaceWordStub("{name}", name, wordDocument);
+                ReplaceWordStub("{doctor}", doctor, wordDocument);
+                ReplaceWordStub("{diagnosis}", diagnosis, wordDocument);
+                ReplaceWordStub("{complaint}", complaint, wordDocument);
+                ReplaceWordStub("{doneDiseas}", doneDiseas, wordDocument);
+
+                wordDocument.SaveAs(@"D:\result.docx");
+                wordApp.Visible = true;
+            }
+            catch
+            {
+                MessageBox.Show("Error");
+            }
+        }
+        private void ReplaceWordStub(string stubToReplace, string text, Word.Document wordDocument)
+        {
+            var range = wordDocument.Content;
+            range.Find.ClearFormatting();
+            range.Find.Execute(FindText: stubToReplace, ReplaceWith: text);
+        }
+#endregion
     }
 }                                                                                            
                                                                                              

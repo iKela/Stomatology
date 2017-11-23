@@ -151,8 +151,9 @@
             this.сохранитьЯкToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnSaveToBasa = new System.Windows.Forms.ToolStripMenuItem();
             this.зерегтиВWordФайлДляПостійнихКлієнтівToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.зберегтиВWordФайлДляНовихКлієнтівToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnExit = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnSaveAsForOldPatient = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnSaveAsForNewPatient = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNA)).BeginInit();
             this.panel1.SuspendLayout();
@@ -994,7 +995,7 @@
             this.DateOfBirth,
             this.Nmb,
             this.Adr});
-            this.dataGridViewNA.Location = new System.Drawing.Point(662, 29);
+            this.dataGridViewNA.Location = new System.Drawing.Point(567, 31);
             this.dataGridViewNA.Name = "dataGridViewNA";
             this.dataGridViewNA.ReadOnly = true;
             this.dataGridViewNA.Size = new System.Drawing.Size(723, 624);
@@ -1446,8 +1447,7 @@
             // 
             this.сохранитьЯкToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnSaveToBasa,
-            this.зерегтиВWordФайлДляПостійнихКлієнтівToolStripMenuItem,
-            this.зберегтиВWordФайлДляНовихКлієнтівToolStripMenuItem});
+            this.зерегтиВWordФайлДляПостійнихКлієнтівToolStripMenuItem});
             this.сохранитьЯкToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("сохранитьЯкToolStripMenuItem.Image")));
             this.сохранитьЯкToolStripMenuItem.Name = "сохранитьЯкToolStripMenuItem";
             this.сохранитьЯкToolStripMenuItem.Size = new System.Drawing.Size(168, 24);
@@ -1456,20 +1456,17 @@
             // btnSaveToBasa
             // 
             this.btnSaveToBasa.Name = "btnSaveToBasa";
-            this.btnSaveToBasa.Size = new System.Drawing.Size(381, 24);
-            this.btnSaveToBasa.Text = "Зберегти в базу дани";
+            this.btnSaveToBasa.Size = new System.Drawing.Size(152, 24);
+            this.btnSaveToBasa.Text = "База даних";
             // 
             // зерегтиВWordФайлДляПостійнихКлієнтівToolStripMenuItem
             // 
+            this.зерегтиВWordФайлДляПостійнихКлієнтівToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnSaveAsForOldPatient,
+            this.btnSaveAsForNewPatient});
             this.зерегтиВWordФайлДляПостійнихКлієнтівToolStripMenuItem.Name = "зерегтиВWordФайлДляПостійнихКлієнтівToolStripMenuItem";
-            this.зерегтиВWordФайлДляПостійнихКлієнтівToolStripMenuItem.Size = new System.Drawing.Size(381, 24);
-            this.зерегтиВWordФайлДляПостійнихКлієнтівToolStripMenuItem.Text = "Зберегти в Word файл для постійних клієнтів";
-            // 
-            // зберегтиВWordФайлДляНовихКлієнтівToolStripMenuItem
-            // 
-            this.зберегтиВWordФайлДляНовихКлієнтівToolStripMenuItem.Name = "зберегтиВWordФайлДляНовихКлієнтівToolStripMenuItem";
-            this.зберегтиВWordФайлДляНовихКлієнтівToolStripMenuItem.Size = new System.Drawing.Size(381, 24);
-            this.зберегтиВWordФайлДляНовихКлієнтівToolStripMenuItem.Text = "Зберегти в Word файл для нових клієнтів";
+            this.зерегтиВWordФайлДляПостійнихКлієнтівToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
+            this.зерегтиВWordФайлДляПостійнихКлієнтівToolStripMenuItem.Text = "Word файл";
             // 
             // btnExit
             // 
@@ -1477,6 +1474,19 @@
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(168, 24);
             this.btnExit.Text = "Вихід";
+            // 
+            // btnSaveAsForOldPatient
+            // 
+            this.btnSaveAsForOldPatient.Name = "btnSaveAsForOldPatient";
+            this.btnSaveAsForOldPatient.Size = new System.Drawing.Size(238, 24);
+            this.btnSaveAsForOldPatient.Text = "Для постійного клієнтів";
+            this.btnSaveAsForOldPatient.Click += new System.EventHandler(this.btnSaveAsForOldPatient_Click);
+            // 
+            // btnSaveAsForNewPatient
+            // 
+            this.btnSaveAsForNewPatient.Name = "btnSaveAsForNewPatient";
+            this.btnSaveAsForNewPatient.Size = new System.Drawing.Size(238, 24);
+            this.btnSaveAsForNewPatient.Text = "Для нового клієнта";
             // 
             // NewAppoinment
             // 
@@ -1650,7 +1660,8 @@
         private System.Windows.Forms.ToolStripMenuItem сохранитьЯкToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem btnSaveToBasa;
         private System.Windows.Forms.ToolStripMenuItem зерегтиВWordФайлДляПостійнихКлієнтівToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem зберегтиВWordФайлДляНовихКлієнтівToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem btnExit;
+        private System.Windows.Forms.ToolStripMenuItem btnSaveAsForOldPatient;
+        private System.Windows.Forms.ToolStripMenuItem btnSaveAsForNewPatient;
     }
 }
