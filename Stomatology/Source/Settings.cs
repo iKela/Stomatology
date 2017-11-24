@@ -58,7 +58,7 @@ namespace Stomatology
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 string sFileName = openFileDialog1.FileName;
-                string[] arrAllFiles = openFileDialog1.FileNames;           
+                //string[] arrAllFiles = openFileDialog1.FileNames;           
                 txtBDWay.Text = sFileName;
             }
         }

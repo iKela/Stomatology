@@ -1021,10 +1021,9 @@ namespace Stomatology
         }
         #region SaveToWordFileAsOldPatient
 
-        private readonly string TemplateFileName = @"D:\GoogleDrive InSoP\MOSUkraineEditedEx.docx";
+        private readonly string TemplateFileName = @"D:\GoogleDrive InSoP\MOSUkraine4.docx";
         private void btnSaveAsForOldPatient_Click(object sender, EventArgs e)
         {
-
             var doctor = comboBoxDoctor.Text;
             var name = cmbPatient.Text;
             var diagnosis = txtDiagnosis.Text;
@@ -1055,23 +1054,19 @@ namespace Stomatology
                 ReplaceWordStub("{complaint}", complaint, wordDocument);
                 ReplaceWordStub("{doneDiseas}", doneDiseas, wordDocument);
 
+                wordDocument.SaveAs(@"D:\"+name+".docx");
 
-                    //Getting the location and file name of the excel to save from user. // Вказати локацію та ім'я Excel файла  для зберігання.
-                    SaveFileDialog saveDialog = new SaveFileDialog();
-                    saveDialog.Filter = "Excel files (*.xlsx)|*.xlsx|All files (*.*)|*.*";
-                    saveDialog.FilterIndex = 2;
+                // MessageBox.Show(" ", "Бажаэте пареглянути інформацію?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                // if (this.DialogResult == DialogResult.Yes)
+                //     wordApp.Visible = true;
 
-                    //wordDocument.SaveAs(@"D:\result.docx");
-
-                    // MessageBox.Show(" ", "Бажаэте пареглянути інформацію?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                    // if (this.DialogResult == DialogResult.Yes)
-                    //     wordApp.Visible = true;
-
-                    wordApp.ActiveDocument.Close();
+                wordApp.ActiveDocument.Close();
                 wordApp.Quit();
             }
             catch
             {
+                wordApp.ActiveDocument.Close();
+                wordApp.Quit();
                 MessageBox.Show("Error");
             }
         }

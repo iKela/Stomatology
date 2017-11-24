@@ -32,7 +32,6 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtDiagnosis = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -151,9 +150,11 @@
             this.сохранитьЯкToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnSaveToBasa = new System.Windows.Forms.ToolStripMenuItem();
             this.зерегтиВWordФайлДляПостійнихКлієнтівToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnExit = new System.Windows.Forms.ToolStripMenuItem();
             this.btnSaveAsForOldPatient = new System.Windows.Forms.ToolStripMenuItem();
             this.btnSaveAsForNewPatient = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnExit = new System.Windows.Forms.ToolStripMenuItem();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.txtDiagnosis = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNA)).BeginInit();
             this.panel1.SuspendLayout();
@@ -192,15 +193,6 @@
             this.label2.Size = new System.Drawing.Size(44, 19);
             this.label2.TabIndex = 3;
             this.label2.Text = "Дата:";
-            // 
-            // txtDiagnosis
-            // 
-            this.txtDiagnosis.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.txtDiagnosis.Location = new System.Drawing.Point(83, 3);
-            this.txtDiagnosis.Multiline = true;
-            this.txtDiagnosis.Name = "txtDiagnosis";
-            this.txtDiagnosis.Size = new System.Drawing.Size(433, 94);
-            this.txtDiagnosis.TabIndex = 4;
             // 
             // label3
             // 
@@ -1040,6 +1032,7 @@
             // 
             this.panel1.AutoScroll = true;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.txtDiagnosis);
             this.panel1.Controls.Add(this.txtEpicrisis);
             this.panel1.Controls.Add(this.label47);
             this.panel1.Controls.Add(this.txtControlDate);
@@ -1062,7 +1055,6 @@
             this.panel1.Controls.Add(this.label39);
             this.panel1.Controls.Add(this.txtComplaints);
             this.panel1.Controls.Add(this.label38);
-            this.panel1.Controls.Add(this.txtDiagnosis);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -1456,7 +1448,7 @@
             // btnSaveToBasa
             // 
             this.btnSaveToBasa.Name = "btnSaveToBasa";
-            this.btnSaveToBasa.Size = new System.Drawing.Size(152, 24);
+            this.btnSaveToBasa.Size = new System.Drawing.Size(151, 24);
             this.btnSaveToBasa.Text = "База даних";
             // 
             // зерегтиВWordФайлДляПостійнихКлієнтівToolStripMenuItem
@@ -1465,15 +1457,8 @@
             this.btnSaveAsForOldPatient,
             this.btnSaveAsForNewPatient});
             this.зерегтиВWordФайлДляПостійнихКлієнтівToolStripMenuItem.Name = "зерегтиВWordФайлДляПостійнихКлієнтівToolStripMenuItem";
-            this.зерегтиВWordФайлДляПостійнихКлієнтівToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
+            this.зерегтиВWordФайлДляПостійнихКлієнтівToolStripMenuItem.Size = new System.Drawing.Size(151, 24);
             this.зерегтиВWordФайлДляПостійнихКлієнтівToolStripMenuItem.Text = "Word файл";
-            // 
-            // btnExit
-            // 
-            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(168, 24);
-            this.btnExit.Text = "Вихід";
             // 
             // btnSaveAsForOldPatient
             // 
@@ -1487,6 +1472,25 @@
             this.btnSaveAsForNewPatient.Name = "btnSaveAsForNewPatient";
             this.btnSaveAsForNewPatient.Size = new System.Drawing.Size(238, 24);
             this.btnSaveAsForNewPatient.Text = "Для нового клієнта";
+            // 
+            // btnExit
+            // 
+            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(168, 24);
+            this.btnExit.Text = "Вихід";
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // txtDiagnosis
+            // 
+            this.txtDiagnosis.Location = new System.Drawing.Point(83, 5);
+            this.txtDiagnosis.Name = "txtDiagnosis";
+            this.txtDiagnosis.Size = new System.Drawing.Size(433, 96);
+            this.txtDiagnosis.TabIndex = 103;
+            this.txtDiagnosis.Text = "";
             // 
             // NewAppoinment
             // 
@@ -1541,7 +1545,6 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtDiagnosis;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label4;
@@ -1663,5 +1666,7 @@
         private System.Windows.Forms.ToolStripMenuItem btnExit;
         private System.Windows.Forms.ToolStripMenuItem btnSaveAsForOldPatient;
         private System.Windows.Forms.ToolStripMenuItem btnSaveAsForNewPatient;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.RichTextBox txtDiagnosis;
     }
 }
