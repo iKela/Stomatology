@@ -1055,13 +1055,19 @@ namespace Stomatology
                 ReplaceWordStub("{complaint}", complaint, wordDocument);
                 ReplaceWordStub("{doneDiseas}", doneDiseas, wordDocument);
 
-                wordDocument.SaveAs(@"D:\result.docx");
-                
-                MessageBox.Show("Verify connection to internet", "Error connecting to site server.", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (this.DialogResult == DialogResult.Yes)
-                    wordApp.Visible = true;
-               
-                wordApp.ActiveDocument.Close();
+
+                    //Getting the location and file name of the excel to save from user. // Вказати локацію та ім'я Excel файла  для зберігання.
+                    SaveFileDialog saveDialog = new SaveFileDialog();
+                    saveDialog.Filter = "Excel files (*.xlsx)|*.xlsx|All files (*.*)|*.*";
+                    saveDialog.FilterIndex = 2;
+
+                    //wordDocument.SaveAs(@"D:\result.docx");
+
+                    // MessageBox.Show(" ", "Бажаэте пареглянути інформацію?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    // if (this.DialogResult == DialogResult.Yes)
+                    //     wordApp.Visible = true;
+
+                    wordApp.ActiveDocument.Close();
                 wordApp.Quit();
             }
             catch
