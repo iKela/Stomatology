@@ -167,7 +167,6 @@
             this.dateApp = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.button10 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -198,6 +197,7 @@
             this.справкаToolStripMenuItem,
             this.допомогаToolStripMenuItem});
             this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // головнаToolStripMenuItem
             // 
@@ -264,7 +264,6 @@
             this.tabPage1.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             resources.ApplyResources(this.tabPage1, "tabPage1");
             this.tabPage1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tabPage1.Controls.Add(this.button10);
             this.tabPage1.Controls.Add(this.panel2);
             this.tabPage1.Controls.Add(this.btnUpdate);
             this.tabPage1.Controls.Add(this.AddNewAppoinment);
@@ -477,6 +476,7 @@
             resources.ApplyResources(this.cbArrears, "cbArrears");
             this.cbArrears.Name = "cbArrears";
             this.cbArrears.UseVisualStyleBackColor = true;
+            this.cbArrears.CheckedChanged += new System.EventHandler(this.сbArrears_CheckedChanged);
             // 
             // label38
             // 
@@ -1173,13 +1173,6 @@
             this.price.Name = "price";
             this.price.ReadOnly = true;
             // 
-            // button10
-            // 
-            resources.ApplyResources(this.button10, "button10");
-            this.button10.Name = "button10";
-            this.button10.UseVisualStyleBackColor = true;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
-            // 
             // Main
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -1349,7 +1342,6 @@
         private System.Windows.Forms.CheckBox cbArrears;
         private System.Windows.Forms.ListBox lbChanels;
         private System.Windows.Forms.TextBox txtDescription;
-        private System.Windows.Forms.Button button10;
     }
 }
 

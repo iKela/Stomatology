@@ -31,32 +31,31 @@ namespace Stomatology
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
             toolTip(); 
-            updateTable();
+            //updateTable();
         }
 
-        public void updateTable()
-        {
-            dataGridView1.Rows.Clear();
-            testCon.Open();
-            string upqwery = "select * from Pacient";
-            SqlCommand sqlComm = new SqlCommand(upqwery, testCon);
-            SqlDataReader sqlDR;
-            sqlDR = sqlComm.ExecuteReader();
+        //public void updateTable()
+        //{
+        //    dataGridView1.Rows.Clear();
+        //    testCon.Open();
+        //    string upqwery = "select * from Pacient";
+        //    SqlCommand sqlComm = new SqlCommand(upqwery, testCon);
+        //    SqlDataReader sqlDR;
+        //    sqlDR = sqlComm.ExecuteReader();
             
-            while (sqlDR.Read())
-            {
-                int index = dataGridView1.Rows.Add();
-                dataGridView1.Rows[index].Cells[0].Value = sqlDR[0];
-                dataGridView1.Rows[index].Cells[1].Value = sqlDR[1];
-                dataGridView1.Rows[index].Cells[2].Value = sqlDR[2];
-                dataGridView1.Rows[index].Cells[3].Value = sqlDR[3];
-                dataGridView1.Rows[index].Cells[4].Value = sqlDR[4];
-            }
-            testCon.Close();
-            dataGridView1.ClearSelection();
-        }
+        //    while (sqlDR.Read())
+        //    {
+        //        int index = dataGridView1.Rows.Add();
+        //        dataGridView1.Rows[index].Cells[0].Value = sqlDR[0];
+        //        dataGridView1.Rows[index].Cells[1].Value = sqlDR[1];
+        //        dataGridView1.Rows[index].Cells[2].Value = sqlDR[2];
+        //        dataGridView1.Rows[index].Cells[3].Value = sqlDR[3];
+        //        dataGridView1.Rows[index].Cells[4].Value = sqlDR[4];
+        //    }
+        //    testCon.Close();
+        //    dataGridView1.ClearSelection();
+        //}
         public void Buttonclear()
         {
             lblDoctor.Text = "";
@@ -104,12 +103,12 @@ namespace Stomatology
         }
         private void EditPatient_Click(object sender, EventArgs e)
         {
-            EditPatient newForm = new EditPatient(this);
+            EditMedCard newForm = new EditMedCard(this);
             newForm.Show();
         }
         private void AddNewPatient_Click(object sender, EventArgs e)
         {
-            NewPatient newForm = new NewPatient(this);
+            NewMedCard newForm = new NewMedCard(this);
             newForm.Show();
         }
 
@@ -197,7 +196,7 @@ namespace Stomatology
                         SqlCommand upbtn = new SqlCommand(qweryn, testCon);
                         upbtn.ExecuteNonQuery();
                         testCon.Close();
-                        updateTable();
+                        //updateTable();
                         Buttonclear();
                     }
                 }
@@ -1338,10 +1337,9 @@ namespace Stomatology
           
         }
 
-        private void button10_Click(object sender, EventArgs e)
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
-            Test newform = new Test();
-            newform.Show();
+
         }
     }
 }

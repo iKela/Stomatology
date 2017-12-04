@@ -4973,30 +4973,6 @@
   <data name="tabPage1.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Stretch</value>
   </data>
-  <data name="button10.Location" type="System.Drawing.Point, System.Drawing">
-    <value>692, 99</value>
-  </data>
-  <data name="button10.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="button10.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="button10.Text" xml:space="preserve">
-    <value>button10</value>
-  </data>
-  <data name="&gt;&gt;button10.Name" xml:space="preserve">
-    <value>button10</value>
-  </data>
-  <data name="&gt;&gt;button10.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;button10.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;button10.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <metadata name="id.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -5079,7 +5055,7 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>0</value>
   </data>
   <data name="btnUpdate.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -5136,7 +5112,7 @@
     <value>Zoom</value>
   </data>
   <data name="btnUpdate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>706, 592</value>
+    <value>3, 142</value>
   </data>
   <data name="btnUpdate.Size" type="System.Drawing.Size, System.Drawing">
     <value>40, 40</value>
@@ -5154,7 +5130,7 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;btnUpdate.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>1</value>
   </data>
   <data name="AddNewAppoinment.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left</value>
@@ -5731,7 +5707,7 @@
     <value>NoControl</value>
   </data>
   <data name="AddNewAppoinment.Location" type="System.Drawing.Point, System.Drawing">
-    <value>703, 0</value>
+    <value>3, 95</value>
   </data>
   <data name="AddNewAppoinment.Size" type="System.Drawing.Size, System.Drawing">
     <value>43, 38</value>
@@ -5749,7 +5725,7 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;AddNewAppoinment.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>2</value>
   </data>
   <data name="lbChanels.ItemHeight" type="System.Int32, mscorlib">
     <value>19</value>
@@ -12283,7 +12259,7 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>3</value>
   </data>
   <data name="EditPatient.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left</value>
@@ -12539,7 +12515,7 @@
     <value>NoControl</value>
   </data>
   <data name="EditPatient.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 44</value>
+    <value>3, 50</value>
   </data>
   <data name="EditPatient.Size" type="System.Drawing.Size, System.Drawing">
     <value>43, 38</value>
@@ -12557,7 +12533,7 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;EditPatient.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>4</value>
   </data>
   <data name="AddNewPatient.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left</value>
@@ -13097,7 +13073,7 @@
     <value>NoControl</value>
   </data>
   <data name="AddNewPatient.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 0</value>
+    <value>3, 6</value>
   </data>
   <data name="AddNewPatient.Size" type="System.Drawing.Size, System.Drawing">
     <value>43, 38</value>
@@ -13115,7 +13091,7 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;AddNewPatient.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>5</value>
   </data>
   <data name="button2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left</value>
@@ -13124,7 +13100,7 @@
     <value>NoControl</value>
   </data>
   <data name="button2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>195, 889</value>
+    <value>195, 877</value>
   </data>
   <data name="button2.Size" type="System.Drawing.Size, System.Drawing">
     <value>141, 23</value>
@@ -13145,7 +13121,7 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;button2.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>6</value>
   </data>
   <data name="button3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left</value>
@@ -13154,7 +13130,7 @@
     <value>NoControl</value>
   </data>
   <data name="button3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>460, 877</value>
+    <value>460, 865</value>
   </data>
   <data name="button3.Size" type="System.Drawing.Size, System.Drawing">
     <value>141, 23</value>
@@ -13175,7 +13151,7 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;button3.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>7</value>
   </data>
   <data name="button4.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left</value>
@@ -13187,7 +13163,7 @@
     <value>NoControl</value>
   </data>
   <data name="button4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>607, 889</value>
+    <value>607, 877</value>
   </data>
   <data name="button4.Size" type="System.Drawing.Size, System.Drawing">
     <value>141, 23</value>
@@ -13208,7 +13184,7 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;button4.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>8</value>
   </data>
   <data name="tabPage1.Font" type="System.Drawing.Font, System.Drawing">
     <value>Times New Roman, 12pt</value>
@@ -19816,9 +19792,6 @@
   </data>
   <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
     <value>1364, 726</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>InSoP Dentistry</value>
   </data>
   <data name="&gt;&gt;imageList1.Name" xml:space="preserve">
     <value>imageList1</value>

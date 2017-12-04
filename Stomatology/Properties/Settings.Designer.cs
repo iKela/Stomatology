@@ -57,5 +57,41 @@ namespace Stomatology.Properties {
                 this["DateBaseDirection"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string WordFileDirection {
+            get {
+                return ((string)(this["WordFileDirection"]));
+            }
+            set {
+                this["WordFileDirection"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string NewMedCardFile {
+            get {
+                return ((string)(this["NewMedCardFile"]));
+            }
+            set {
+                this["NewMedCardFile"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Name {
+            get {
+                return ((string)(this["Name"]));
+            }
+            set {
+                this["Name"] = value;
+            }
+        }
     }
 }

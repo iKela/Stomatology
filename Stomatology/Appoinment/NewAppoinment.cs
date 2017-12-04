@@ -19,9 +19,10 @@ namespace Stomatology
 
         int MHIndex;
         int MLIndex;
+        int Arrears; 
 
-        string[] Doctor = {"Кричильський Леонід Ростиславович", " Кричильський Тетяна Георгієвна" , "Яскал Зоряна Миколаївна" };
-
+        string[] Doctor = { "Кричильський Леонід Ростиславович", " Кричильський Тетяна Георгієвна", "Яскал Зоряна Миколаївна" };
+        string TemplateFileName = @"D:\GoogleDrive InSoP\" + Properties.Settings.Default.WordFileDirection + ".docx";
         public void PassValue(string strValue)
         {
             txtMoney.Text = strValue;
@@ -43,7 +44,7 @@ namespace Stomatology
 
             testCon.Open();
             SqlDataReader sqlReader = null;
-            SqlCommand command = new SqlCommand("SELECT Name FROM [Pacient]", testCon);
+            SqlCommand command = new SqlCommand("SELECT Name FROM [MedCard]", testCon);
             try
             {
                 sqlReader = command.ExecuteReader();
@@ -61,26 +62,26 @@ namespace Stomatology
                 if (sqlReader != null) sqlReader.Close();
             }
             testCon.Close();
-            comboBoxDoctor.Items.AddRange(Doctor);
+            cmbDoctor.Items.AddRange(Doctor);
         }
-        // ----------------------------------------------------------------------------------------------------------------------------------------------------------
+        
         private void button1_Click(object sender, EventArgs e)
         {
             try
             {
-                if (cmbPatient.Text.Length == 0 || txtDiagnosis.Text.Length == 0)
+                if (cmbPatient.Text.Length == 0 || txtDescription.Text.Length == 0)
                     throw new Exception("Не всі поля заповнені!");
                 else
                 {
                     if (string.IsNullOrEmpty(cmbPatient.Text)) throw new Exception("Виберіть  Паціента!");
                     testCon.Open();
-                    string PacientId = "";
-                    string query = $"select * from Pacient where [Name] = N'{cmbPatient.Text}'";
+                    string MedCardId = "";
+                    string query = $"select MedCard_Id from MedCard where [Name] = N'{cmbPatient.Text}'";
                     SqlCommand cmd1 = new SqlCommand(query, testCon);
                     SqlDataReader reader = cmd1.ExecuteReader();
                     if (reader.Read())
                     {
-                        PacientId = reader["Pacient_Id"].ToString();
+                        MedCardId = reader["MedCard_Id"].ToString();
                     }
                     else
                     {
@@ -91,43 +92,43 @@ namespace Stomatology
                     testCon.Open();
                     SqlCommand cmd = testCon.CreateCommand();
                     cmd.CommandType = CommandType.Text;
-                    cmd.CommandText = $"INSERT INTO Reception (Date, Pacient_Id, Info, Money, tlt1, tlt2, tlt3, tlt4, tlt5, tlt6, tlt7, tlt8, " +
+                    cmd.CommandText = $"INSERT INTO Reception (Date, Doctor, MedCard_Id, Info, Money, Arrears, tlt1, tlt2, tlt3, tlt4, tlt5, tlt6, tlt7, tlt8, " +
                         $"trt1, trt2, trt3, trt4, trt5, trt6, trt7, trt8, " +
                         $"brt1, brt2, brt3, brt4, brt5, brt6, brt7, brt8, " +
-                        $"blt1, blt2, blt3, blt4, blt5, blt6, blt7, blt8, Doctor)" +
-                        $"values (N'{dateTimePicker1.Value.Date.ToString("dd/MM/yyyy")}', '{PacientId}', N'{txtDiagnosis.Text}', N'{txtMoney.Text}', "+
+                        $"blt1, blt2, blt3, blt4, blt5, blt6, blt7, blt8)" +
+                        $"values (N'{dtpDate.Value.Date.ToString("dd/MM/yyyy")}', N'{cmbDoctor.SelectedItem}', '{MedCardId}', N'{txtDescription.Text}', N'{txtMoney.Text}', '{Arrears}', " +
 
                         $" N'{TopLeftTextBox_1.Text}', N'{TopLeftTextBox_2.Text}',   N'{TopLeftTextBox_3.Text}', N'{TopLeftTextBox_4.Text}', N'{TopLeftTextBox_5.Text}', N'{TopLeftTextBox_6.Text}', N'{TopLeftTextBox_7.Text}', N'{TopLeftTextBox_8.Text}'," +
-                        $" N'{TopRightTextBox_1.Text}', N'{TopRightTextBox_2.Text}', N'{TopRightTextBox_3.Text}', N'{TopRightTextBox_4.Text}', N'{TopRightTextBox_5.Text}', N'{TopRightTextBox_6.Text}', N'{TopRightTextBox_7.Text}', N'{TopRightTextBox_8.Text}'," +  
-                        $" N'{BotRightTextBox_8.Text}', N'{BotRightTextBox_7.Text}', N'{BotRightTextBox_6.Text}', N'{BotRightTextBox_5.Text}', N'{BotRightTextBox_4.Text}', N'{BotRightTextBox_3.Text}', N'{BotRightTextBox_2.Text}', N'{BotRightTextBox_1.Text}'," +                          
-                        $" N'{BotLeftTextBox_8.Text}',  N'{BotLeftTextBox_7.Text}',  N'{BotLeftTextBox_6.Text}', N'{BotLeftTextBox_5.Text}', N'{BotLeftTextBox_4.Text}', N'{BotLeftTextBox_3.Text}', N'{BotLeftTextBox_2.Text}', N'{BotLeftTextBox_1.Text}', N'{comboBoxDoctor.SelectedItem}')";
-                 
-                    cmd.ExecuteNonQuery();                                                                                                                                                                  
-                                                                                                                                                                               
+                        $" N'{TopRightTextBox_1.Text}', N'{TopRightTextBox_2.Text}', N'{TopRightTextBox_3.Text}', N'{TopRightTextBox_4.Text}', N'{TopRightTextBox_5.Text}', N'{TopRightTextBox_6.Text}', N'{TopRightTextBox_7.Text}', N'{TopRightTextBox_8.Text}'," +
+                        $" N'{BotRightTextBox_8.Text}', N'{BotRightTextBox_7.Text}', N'{BotRightTextBox_6.Text}', N'{BotRightTextBox_5.Text}', N'{BotRightTextBox_4.Text}', N'{BotRightTextBox_3.Text}', N'{BotRightTextBox_2.Text}', N'{BotRightTextBox_1.Text}'," +
+                        $" N'{BotLeftTextBox_8.Text}',  N'{BotLeftTextBox_7.Text}',  N'{BotLeftTextBox_6.Text}', N'{BotLeftTextBox_5.Text}', N'{BotLeftTextBox_4.Text}', N'{BotLeftTextBox_3.Text}', N'{BotLeftTextBox_2.Text}', N'{BotLeftTextBox_1.Text}')";
+
+                    cmd.ExecuteNonQuery();
+
                     Buttonclear();
                     MessageBox.Show("Додано новий прийом.");
-                    testCon.Close();                                                                                 
-                }                                                                                               
-            }                                                                                                   
-                                                                                                                
-            catch (Exception ex)                                                                                
-            {                                                                                                   
-                MessageBox.Show(ex.Message, "Помилка!", MessageBoxButtons.OK, MessageBoxIcon.Error);            
-                testCon.Close();                                                                                
-            }                                                                                                   
-        }                                                                                                       
-                                                                                                                
-        private void button7_Click(object sender, EventArgs e)                                                  
-        {                                                                                                       
-            Calculator newForm = new Calculator(this);                                                              
-            newForm.Show();                                                                                     
-        }                                                                                                       
-                                                                                                                
-        public void Buttonclear()                                                                               
+                    testCon.Close();
+                }
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Помилка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                testCon.Close();
+            }
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Calculator newForm = new Calculator(this);
+            newForm.Show();
+        }
+
+        public void Buttonclear()
         {
             txtMoney.Text = "";
-            txtDiagnosis.Text = "";
-            TopLeftTextBox_1.Text = "";                                                                         
+            txtDescription.Text = "";
+            TopLeftTextBox_1.Text = "";
             TopLeftTextBox_2.Text = "";
             TopLeftTextBox_3.Text = "";
             TopLeftTextBox_4.Text = "";
@@ -962,7 +963,97 @@ namespace Stomatology
         }
 
         #endregion
-    }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        #region Заповнення Word файла  
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            var date = dtpDate.Text;
+            var doctor = cmbDoctor.Text;
+            var desctription = txtDescription.Text;
+
+            var wordApp = new Word.Application();
+            wordApp.Visible = false;
+
+            try
+            {
+                var wordDocument = wordApp.Documents.Open(@Properties.Settings.Default.WordFileDirection);
+
+                ReplaceWordStub("date1", date, wordDocument);
+                ReplaceWordStub("description1", desctription, wordDocument);
+                int i = 1;
+                int j = 2;
+                do
+                {
+                    replaceDateWord("{date" + i + "}", "{date" + j + "}", wordDocument);
+                    replaceDateWord("{description" + i + "}", "{description" + j + "}", wordDocument);
+                    i++;
+                    j++;
+                
+                } while (i <= 22 && j <= 23);
+
+                wordDocument.SaveAs(@Properties.Settings.Default.WordFileDirection);
+
+                wordApp.ActiveDocument.Close();
+                wordApp.Quit();
+            }
+            catch
+            {
+                wordApp.ActiveDocument.Close();
+                wordApp.Quit();
+                MessageBox.Show("Error");
+            }
+        }
+
+        private void ReplaceWordStub(string stubToReplace, string text, Word.Document wordDocument)
+        {
+            var range = wordDocument.Content;
+            range.Find.ClearFormatting();
+            range.Find.Execute(FindText: stubToReplace, ReplaceWith: text);
+            //range.Font.ColorIndex = Word.WdColorIndex.wdBlack; Color
+        }
+        private void replaceDateWord(string stubToReplace, string replaceDate,Word.Document wordDocument)
+        {
+            var range = wordDocument.Content;
+            range.Find.ClearFormatting();
+            range.Find.Execute(FindText: replaceDate, ReplaceWith: stubToReplace);
+        }
+        #endregion
+        private void новийToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void existPatient_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.Filter = ".docx file (*.docx)|*.docx";
+            openFileDialog1.FilterIndex = 1;
+            openFileDialog1.Multiselect = false;
+
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                string sFileName = openFileDialog1.FileName;
+                //string[] arrAllFiles = openFileDialog1.FileNames;
+                Properties.Settings.Default.WordFileDirection = sFileName;
+                Properties.Settings.Default.Save();
+            }
+        }
+
+        private void chbArrears_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chbArrears.Checked == true)
+            {
+                Arrears = 1;
+            }
+            else
+            {
+                Arrears = 0;
+            }
+        }
+    }      
 }                                                                                            
                                                                                              
                                                                                              

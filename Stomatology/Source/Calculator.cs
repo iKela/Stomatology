@@ -118,7 +118,6 @@ namespace Stomatology
         private void btnPlus_Click(object sender, EventArgs e)
         {
             Count();
-
             if (txtTotal.Text == String.Empty)
             {
                 MessageBox.Show("Невірний синтаксис!");
@@ -126,7 +125,6 @@ namespace Stomatology
             else if(lblCurResult.Text == string.Empty)
             {
                 signallow = true;
-
                 a = float.Parse(txtTotal.Text);
                 txtTotal.Clear();
                 count = 1;
@@ -136,8 +134,6 @@ namespace Stomatology
             else
             {
                 signallow = true;
-
-
                 b = a + float.Parse(txtTotal.Text);
                 a = b;
                 txtTotal.Clear();
@@ -294,6 +290,8 @@ namespace Stomatology
 
             txtTotal.Text = "";
             lblCurResult.Text = "";
+            a = 0;
+            b = 0;
         }
 
         private void btnCE_Click(object sender, EventArgs e)
