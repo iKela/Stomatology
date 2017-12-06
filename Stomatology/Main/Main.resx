@@ -18803,6 +18803,9 @@
   <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
     <value>1364, 726</value>
   </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
   <data name="&gt;&gt;imageList1.Name" xml:space="preserve">
     <value>imageList1</value>
   </data>
