@@ -30,7 +30,7 @@ namespace Stomatology
                 {
                     timer1.Stop();
                     this.Hide();
-                    if (Properties.Settings.Default.TeamViewerDirection == string.Empty && Properties.Settings.Default.TeamViewerDirection == string.Empty)
+                    if (Properties.Settings.Default.TeamViewerDirection == string.Empty || Properties.Settings.Default.DateBaseDirection == string.Empty)
                     {
                         Settings newForsm = new Settings();
                         newForsm.Show();

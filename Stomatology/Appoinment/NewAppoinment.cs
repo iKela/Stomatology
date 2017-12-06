@@ -67,55 +67,7 @@ namespace Stomatology
         
         private void button1_Click(object sender, EventArgs e)
         {
-            try
-            {
-                if (cmbPatient.Text.Length == 0 || txtDescription.Text.Length == 0)
-                    throw new Exception("Не всі поля заповнені!");
-                else
-                {
-                    if (string.IsNullOrEmpty(cmbPatient.Text)) throw new Exception("Виберіть  Паціента!");
-                    testCon.Open();
-                    string MedCardId = "";
-                    string query = $"select MedCard_Id from MedCard where [Name] = N'{cmbPatient.Text}'";
-                    SqlCommand cmd1 = new SqlCommand(query, testCon);
-                    SqlDataReader reader = cmd1.ExecuteReader();
-                    if (reader.Read())
-                    {
-                        MedCardId = reader["MedCard_Id"].ToString();
-                    }
-                    else
-                    {
-                        throw new Exception("Не вибраний паціент, перевірте ще раз!");
-                    }
-                    testCon.Close();
-// ----------------------------------------------------------------------------------------------------------------------------------------------------------
-                    testCon.Open();
-                    SqlCommand cmd = testCon.CreateCommand();
-                    cmd.CommandType = CommandType.Text;
-                    cmd.CommandText = $"INSERT INTO Reception (Date, Doctor, MedCard_Id, Info, Money, Arrears, tlt1, tlt2, tlt3, tlt4, tlt5, tlt6, tlt7, tlt8, " +
-                        $"trt1, trt2, trt3, trt4, trt5, trt6, trt7, trt8, " +
-                        $"brt1, brt2, brt3, brt4, brt5, brt6, brt7, brt8, " +
-                        $"blt1, blt2, blt3, blt4, blt5, blt6, blt7, blt8)" +
-                        $"values (N'{dtpDate.Value.Date.ToString("dd/MM/yyyy")}', N'{cmbDoctor.SelectedItem}', '{MedCardId}', N'{txtDescription.Text}', N'{txtMoney.Text}', '{Arrears}', " +
-
-                        $" N'{TopLeftTextBox_1.Text}', N'{TopLeftTextBox_2.Text}',   N'{TopLeftTextBox_3.Text}', N'{TopLeftTextBox_4.Text}', N'{TopLeftTextBox_5.Text}', N'{TopLeftTextBox_6.Text}', N'{TopLeftTextBox_7.Text}', N'{TopLeftTextBox_8.Text}'," +
-                        $" N'{TopRightTextBox_1.Text}', N'{TopRightTextBox_2.Text}', N'{TopRightTextBox_3.Text}', N'{TopRightTextBox_4.Text}', N'{TopRightTextBox_5.Text}', N'{TopRightTextBox_6.Text}', N'{TopRightTextBox_7.Text}', N'{TopRightTextBox_8.Text}'," +
-                        $" N'{BotRightTextBox_8.Text}', N'{BotRightTextBox_7.Text}', N'{BotRightTextBox_6.Text}', N'{BotRightTextBox_5.Text}', N'{BotRightTextBox_4.Text}', N'{BotRightTextBox_3.Text}', N'{BotRightTextBox_2.Text}', N'{BotRightTextBox_1.Text}'," +
-                        $" N'{BotLeftTextBox_8.Text}',  N'{BotLeftTextBox_7.Text}',  N'{BotLeftTextBox_6.Text}', N'{BotLeftTextBox_5.Text}', N'{BotLeftTextBox_4.Text}', N'{BotLeftTextBox_3.Text}', N'{BotLeftTextBox_2.Text}', N'{BotLeftTextBox_1.Text}')";
-
-                    cmd.ExecuteNonQuery();
-
-                    Buttonclear();
-                    MessageBox.Show("Додано новий прийом.");
-                    testCon.Close();
-                }
-            }
-
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Помилка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                testCon.Close();
-            }
+           
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -971,40 +923,98 @@ namespace Stomatology
         #region Заповнення Word файла  
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            var date = dtpDate.Text;
-            var doctor = cmbDoctor.Text;
-            var desctription = txtDescription.Text;
+            saveToWordFile();
+            saveToBD();
+        }
+        private void saveToBD()
+        {
+            try
+            {
+                if (cmbPatient.Text.Length == 0 || txtDescription.Text.Length == 0)
+                    throw new Exception("Не всі поля заповнені!");
+                else
+                {
+                    if (string.IsNullOrEmpty(cmbPatient.Text)) throw new Exception("Виберіть  Паціента!");
+                    testCon.Open();
+                    string MedCardId = "";
+                    string query = $"select MedCard_Id from MedCard where [Name] = N'{cmbPatient.Text}'";
+                    SqlCommand cmd1 = new SqlCommand(query, testCon);
+                    SqlDataReader reader = cmd1.ExecuteReader();
+                    if (reader.Read())
+                    {
+                        MedCardId = reader["MedCard_Id"].ToString();
+                    }
+                    else
+                    {
+                        throw new Exception("Не вибраний паціент, перевірте ще раз!");
+                    }
+                    testCon.Close();
+                    // ----------------------------------------------------------------------------------------------------------------------------------------------------------
+                    testCon.Open();
+                    SqlCommand cmd = testCon.CreateCommand();
+                    cmd.CommandType = CommandType.Text;
+                    cmd.CommandText = $"INSERT INTO Reception (Date, Doctor, MedCard_Id, Info, Money, Arrears, tlt1, tlt2, tlt3, tlt4, tlt5, tlt6, tlt7, tlt8, " +
+                        $"trt1, trt2, trt3, trt4, trt5, trt6, trt7, trt8, " +
+                        $"brt1, brt2, brt3, brt4, brt5, brt6, brt7, brt8, " +
+                        $"blt1, blt2, blt3, blt4, blt5, blt6, blt7, blt8)" +
+                        $"values (N'{dtpDate.Value.Date.ToString("dd/MM/yyyy")}', N'{cmbDoctor.SelectedItem}', '{MedCardId}', N'{txtDescription.Text}', N'{txtMoney.Text}', '{Arrears}', " +
 
-            var wordApp = new Word.Application();
-            wordApp.Visible = false;
+                        $" N'{TopLeftTextBox_1.Text}', N'{TopLeftTextBox_2.Text}',   N'{TopLeftTextBox_3.Text}', N'{TopLeftTextBox_4.Text}', N'{TopLeftTextBox_5.Text}', N'{TopLeftTextBox_6.Text}', N'{TopLeftTextBox_7.Text}', N'{TopLeftTextBox_8.Text}'," +
+                        $" N'{TopRightTextBox_1.Text}', N'{TopRightTextBox_2.Text}', N'{TopRightTextBox_3.Text}', N'{TopRightTextBox_4.Text}', N'{TopRightTextBox_5.Text}', N'{TopRightTextBox_6.Text}', N'{TopRightTextBox_7.Text}', N'{TopRightTextBox_8.Text}'," +
+                        $" N'{BotRightTextBox_8.Text}', N'{BotRightTextBox_7.Text}', N'{BotRightTextBox_6.Text}', N'{BotRightTextBox_5.Text}', N'{BotRightTextBox_4.Text}', N'{BotRightTextBox_3.Text}', N'{BotRightTextBox_2.Text}', N'{BotRightTextBox_1.Text}'," +
+                        $" N'{BotLeftTextBox_8.Text}',  N'{BotLeftTextBox_7.Text}',  N'{BotLeftTextBox_6.Text}', N'{BotLeftTextBox_5.Text}', N'{BotLeftTextBox_4.Text}', N'{BotLeftTextBox_3.Text}', N'{BotLeftTextBox_2.Text}', N'{BotLeftTextBox_1.Text}')";
+
+                    cmd.ExecuteNonQuery();
+
+                    Buttonclear();
+                    MessageBox.Show("Додано новий прийом.");
+                    testCon.Close();
+                }
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Помилка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                testCon.Close();
+            }
+        }
+
+        private void saveToWordFile()
+        {
+            var name = cmbPatient.Text;
 
             try
             {
-                var wordDocument = wordApp.Documents.Open(@Properties.Settings.Default.WordFileDirection);
+                addAppoinment(@Properties.Settings.Default.Name + "\\" + name + ".docx", name);
 
-                ReplaceWordStub("date1", date, wordDocument);
-                ReplaceWordStub("description1", desctription, wordDocument);
-                int i = 1;
-                int j = 2;
-                do
-                {
-                    replaceDateWord("{date" + i + "}", "{date" + j + "}", wordDocument);
-                    replaceDateWord("{description" + i + "}", "{description" + j + "}", wordDocument);
-                    i++;
-                    j++;
-                
-                } while (i <= 22 && j <= 23);
-
-                wordDocument.SaveAs(@Properties.Settings.Default.WordFileDirection);
-
-                wordApp.ActiveDocument.Close();
-                wordApp.Quit();
             }
             catch
             {
-                wordApp.ActiveDocument.Close();
-                wordApp.Quit();
-                MessageBox.Show("Error");
+                string message = "Виникли проблеми при спробі додати прийом, вкажіть шлях до екземпляру. Бажаєте вказати шлях?";
+                string caption = "Проблема при редагуванні.";
+                MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                DialogResult result;
+
+                result = MessageBox.Show(message, caption, buttons);
+
+                if (result == DialogResult.Yes)
+                {
+
+                    openFileDialog1.Filter = ".docx file (*.docx)|*.docx";
+                    openFileDialog1.FilterIndex = 1;
+                    openFileDialog1.Multiselect = false;
+
+                    if (openFileDialog1.ShowDialog() == DialogResult.OK)
+                    {
+                        string sFileName = openFileDialog1.FileName;
+                        Properties.Settings.Default.ExistMedCardFile = sFileName;
+                        if (Properties.Settings.Default.ExistMedCardFile != null)
+                        {
+
+                            addAppoinment(@Properties.Settings.Default.ExistMedCardFile, name);
+                        }
+                    }
+                }
             }
         }
 
@@ -1015,11 +1025,43 @@ namespace Stomatology
             range.Find.Execute(FindText: stubToReplace, ReplaceWith: text);
             //range.Font.ColorIndex = Word.WdColorIndex.wdBlack; Color
         }
+
         private void replaceDateWord(string stubToReplace, string replaceDate,Word.Document wordDocument)
         {
             var range = wordDocument.Content;
             range.Find.ClearFormatting();
             range.Find.Execute(FindText: replaceDate, ReplaceWith: stubToReplace);
+        }
+
+        private void addAppoinment(string way, string name)
+        {
+            var date = dtpDate.Text;
+            var doctor = cmbDoctor.Text;
+            var desctription = txtDescription.Text;
+
+            var wordApp = new Word.Application();
+            wordApp.Visible = false;
+
+            var wordDocument = wordApp.Documents.Open(way);
+
+            ReplaceWordStub("date1", date, wordDocument);
+            ReplaceWordStub("description1", desctription, wordDocument);
+            int i = 1;
+            int j = 2;
+            do
+            {
+                replaceDateWord("{date" + i + "}", "{date" + j + "}", wordDocument);
+                replaceDateWord("{description" + i + "}", "{description" + j + "}", wordDocument);
+                i++;
+                j++;
+
+            } while (i <= 22 && j <= 23);
+
+            wordDocument.SaveAs(@Properties.Settings.Default.Name + "\\" + name + ".docx");
+            MessageBox.Show("Успішно збережно в: " + @Properties.Settings.Default.Name + " як " +name + ".docx");
+
+            wordApp.ActiveDocument.Close();
+            wordApp.Quit();
         }
         #endregion
         private void новийToolStripMenuItem_Click(object sender, EventArgs e)
