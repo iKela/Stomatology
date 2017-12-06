@@ -148,7 +148,7 @@
             this.label36 = new System.Windows.Forms.Label();
             this.SaveAs = new System.Windows.Forms.Button();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.button7 = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.tpTreatmentPlan.SuspendLayout();
             this.tbInfo.SuspendLayout();
@@ -1353,6 +1353,10 @@
             // 
             // SaveAs
             // 
+            this.SaveAs.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("SaveAs.BackgroundImage")));
+            this.SaveAs.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.SaveAs.FlatAppearance.BorderSize = 0;
+            this.SaveAs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SaveAs.Location = new System.Drawing.Point(12, 668);
             this.SaveAs.Name = "SaveAs";
             this.SaveAs.Size = new System.Drawing.Size(75, 23);
@@ -1361,22 +1365,27 @@
             this.SaveAs.UseVisualStyleBackColor = true;
             this.SaveAs.Click += new System.EventHandler(this.SaveAs_Click);
             // 
-            // button7
+            // btnExit
             // 
-            this.button7.Location = new System.Drawing.Point(479, 668);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(75, 23);
-            this.button7.TabIndex = 137;
-            this.button7.Text = "Вихід";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.btnExit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnExit.BackgroundImage")));
+            this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnExit.FlatAppearance.BorderSize = 0;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Location = new System.Drawing.Point(483, 668);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(75, 23);
+            this.btnExit.TabIndex = 137;
+            this.btnExit.Text = "Вихід";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.button7_Click);
             // 
             // NewMedCard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(570, 703);
-            this.Controls.Add(this.button7);
+            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.SaveAs);
             this.Controls.Add(this.label36);
             this.Controls.Add(this.button6);
@@ -1541,7 +1550,7 @@
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Button SaveAs;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button btnExit;
     }
 
 }

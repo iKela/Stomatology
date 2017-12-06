@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditMedCard));
-            this.SaveAs = new System.Windows.Forms.Button();
             this.label36 = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
             this.txtGender = new System.Windows.Forms.MaskedTextBox();
@@ -147,7 +146,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.dtpDateOfCreating = new System.Windows.Forms.DateTimePicker();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.button7 = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.btnSaveAs = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tbInfo.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -156,16 +156,6 @@
             this.tpSurvayPlan.SuspendLayout();
             this.tpTreatmentPlan.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // SaveAs
-            // 
-            this.SaveAs.Location = new System.Drawing.Point(12, 664);
-            this.SaveAs.Name = "SaveAs";
-            this.SaveAs.Size = new System.Drawing.Size(75, 23);
-            this.SaveAs.TabIndex = 160;
-            this.SaveAs.Text = "Зберегти";
-            this.SaveAs.UseVisualStyleBackColor = true;
-            this.SaveAs.Click += new System.EventHandler(this.SaveAs_Click);
             // 
             // label36
             // 
@@ -1361,15 +1351,33 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // button7
+            // btnExit
             // 
-            this.button7.Location = new System.Drawing.Point(483, 664);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(75, 23);
-            this.button7.TabIndex = 161;
-            this.button7.Text = "Вихід";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.btnExit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnExit.BackgroundImage")));
+            this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnExit.FlatAppearance.BorderSize = 0;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Location = new System.Drawing.Point(483, 664);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(75, 23);
+            this.btnExit.TabIndex = 162;
+            this.btnExit.Text = "Вихід";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // btnSaveAs
+            // 
+            this.btnSaveAs.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSaveAs.BackgroundImage")));
+            this.btnSaveAs.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSaveAs.FlatAppearance.BorderSize = 0;
+            this.btnSaveAs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSaveAs.Location = new System.Drawing.Point(12, 664);
+            this.btnSaveAs.Name = "btnSaveAs";
+            this.btnSaveAs.Size = new System.Drawing.Size(75, 23);
+            this.btnSaveAs.TabIndex = 163;
+            this.btnSaveAs.Text = "Зберегти";
+            this.btnSaveAs.UseVisualStyleBackColor = true;
+            this.btnSaveAs.Click += new System.EventHandler(this.SaveAs_Click);
             // 
             // EditMedCard
             // 
@@ -1377,8 +1385,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(573, 695);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.SaveAs);
+            this.Controls.Add(this.btnSaveAs);
+            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.label36);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.txtGender);
@@ -1423,8 +1431,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button SaveAs;
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.MaskedTextBox txtGender;
@@ -1542,6 +1548,7 @@
         private System.Windows.Forms.DateTimePicker dtpDateOfCreating;
         private System.Windows.Forms.TextBox txtDiagnosis;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button btnSaveAs;
     }
 }
