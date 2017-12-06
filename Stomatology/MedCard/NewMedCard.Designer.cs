@@ -1412,6 +1412,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(517, 327);
             this.Name = "NewMedCard";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Створення нової медичної картки";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.NewMedCard_FormClosing);
             this.panel1.ResumeLayout(false);

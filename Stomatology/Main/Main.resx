@@ -5707,7 +5707,7 @@
     <value>NoControl</value>
   </data>
   <data name="AddNewAppoinment.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 95</value>
+    <value>3, 93</value>
   </data>
   <data name="AddNewAppoinment.Size" type="System.Drawing.Size, System.Drawing">
     <value>43, 38</value>
@@ -12515,7 +12515,7 @@
     <value>NoControl</value>
   </data>
   <data name="EditPatient.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 50</value>
+    <value>3, 48</value>
   </data>
   <data name="EditPatient.Size" type="System.Drawing.Size, System.Drawing">
     <value>43, 38</value>
@@ -13073,7 +13073,7 @@
     <value>NoControl</value>
   </data>
   <data name="AddNewPatient.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 6</value>
+    <value>3, 4</value>
   </data>
   <data name="AddNewPatient.Size" type="System.Drawing.Size, System.Drawing">
     <value>43, 38</value>
@@ -13100,7 +13100,7 @@
     <value>NoControl</value>
   </data>
   <data name="button2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>195, 877</value>
+    <value>195, 875</value>
   </data>
   <data name="button2.Size" type="System.Drawing.Size, System.Drawing">
     <value>141, 23</value>
@@ -13130,7 +13130,7 @@
     <value>NoControl</value>
   </data>
   <data name="button3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>460, 865</value>
+    <value>460, 863</value>
   </data>
   <data name="button3.Size" type="System.Drawing.Size, System.Drawing">
     <value>141, 23</value>
@@ -13163,7 +13163,7 @@
     <value>NoControl</value>
   </data>
   <data name="button4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>607, 877</value>
+    <value>607, 875</value>
   </data>
   <data name="button4.Size" type="System.Drawing.Size, System.Drawing">
     <value>141, 23</value>
@@ -19792,6 +19792,9 @@
   </data>
   <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
     <value>1364, 726</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
   </data>
   <data name="&gt;&gt;imageList1.Name" xml:space="preserve">
     <value>imageList1</value>

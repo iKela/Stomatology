@@ -1846,6 +1846,7 @@
             this.MaximumSize = new System.Drawing.Size(588, 684);
             this.MinimumSize = new System.Drawing.Size(588, 684);
             this.Name = "NewAppoinment";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Новий прийом";
             this.Load += new System.EventHandler(this.NewAppoinment_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

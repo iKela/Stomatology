@@ -344,6 +344,7 @@
             this.Controls.Add(this.txtTotal);
             this.KeyPreview = true;
             this.Name = "Calculator";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Calculator_KeyDown);
             this.ResumeLayout(false);
             this.PerformLayout();

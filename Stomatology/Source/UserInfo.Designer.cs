@@ -446,6 +446,7 @@
             this.Controls.Add(this.toolStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "UserInfo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Посібник користувача";
             this.Load += new System.EventHandler(this.UserInfo_Load);
             this.toolStrip1.ResumeLayout(false);

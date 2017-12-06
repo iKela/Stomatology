@@ -1412,6 +1412,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(589, 772);
             this.Name = "EditMedCard";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Редагування медичної картки";
             this.Load += new System.EventHandler(this.EditPatient_Load);
             this.tabControl1.ResumeLayout(false);
