@@ -93,5 +93,17 @@ namespace Stomatology.Properties {
                 this["Name"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string ExistMedCardFile {
+            get {
+                return ((string)(this["ExistMedCardFile"]));
+            }
+            set {
+                this["ExistMedCardFile"] = value;
+            }
+        }
     }
 }

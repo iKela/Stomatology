@@ -81,6 +81,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MedCard\NewMedCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MedCard\NewMedCard.Designer.cs">
+      <DependentUpon>NewMedCard.cs</DependentUpon>
+    </Compile>
     <Compile Include="Source\AboutSoft.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,10 +111,10 @@
     <Compile Include="Source\Calculator.Designer.cs">
       <DependentUpon>Calculator.cs</DependentUpon>
     </Compile>
-    <Compile Include="Patient\EditMedCard.cs">
+    <Compile Include="MedCard\EditMedCard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Patient\EditMedCard.Designer.cs">
+    <Compile Include="MedCard\EditMedCard.Designer.cs">
       <DependentUpon>EditMedCard.cs</DependentUpon>
     </Compile>
     <Compile Include="Main\Main.cs">
@@ -122,12 +128,6 @@
     </Compile>
     <Compile Include="Appoinment\NewAppoinment.Designer.cs">
       <DependentUpon>NewAppoinment.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Patient\NewMedCard.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Patient\NewMedCard.Designer.cs">
-      <DependentUpon>NewMedCard.cs</DependentUpon>
     </Compile>
     <Compile Include="Main\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -143,6 +143,9 @@
     <Compile Include="StartingForm.Designer.cs">
       <DependentUpon>StartingForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="MedCard\NewMedCard.resx">
+      <DependentUpon>NewMedCard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Source\AboutSoft.resx">
       <DependentUpon>AboutSoft.cs</DependentUpon>
     </EmbeddedResource>
@@ -155,7 +158,7 @@
     <EmbeddedResource Include="Source\Calculator.resx">
       <DependentUpon>Calculator.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Patient\EditMedCard.resx">
+    <EmbeddedResource Include="MedCard\EditMedCard.resx">
       <DependentUpon>EditMedCard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main\Main.resx">
@@ -163,9 +166,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Appoinment\NewAppoinment.resx">
       <DependentUpon>NewAppoinment.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Patient\NewMedCard.resx">
-      <DependentUpon>NewMedCard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
