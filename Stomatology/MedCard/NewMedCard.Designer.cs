@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NewMedCard));
-            this.txtDiagnosis = new System.Windows.Forms.RichTextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtControlDate = new System.Windows.Forms.TextBox();
             this.label46 = new System.Windows.Forms.Label();
@@ -149,6 +148,7 @@
             this.SaveAs = new System.Windows.Forms.Button();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.btnExit = new System.Windows.Forms.Button();
+            this.txtDiagnosis = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.tpTreatmentPlan.SuspendLayout();
             this.tbInfo.SuspendLayout();
@@ -157,14 +157,6 @@
             this.tpSurvayPlan.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // txtDiagnosis
-            // 
-            this.txtDiagnosis.Location = new System.Drawing.Point(83, 5);
-            this.txtDiagnosis.Name = "txtDiagnosis";
-            this.txtDiagnosis.Size = new System.Drawing.Size(433, 96);
-            this.txtDiagnosis.TabIndex = 103;
-            this.txtDiagnosis.Text = "";
             // 
             // panel1
             // 
@@ -1379,6 +1371,14 @@
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.button7_Click);
             // 
+            // txtDiagnosis
+            // 
+            this.txtDiagnosis.Location = new System.Drawing.Point(83, 6);
+            this.txtDiagnosis.Multiline = true;
+            this.txtDiagnosis.Name = "txtDiagnosis";
+            this.txtDiagnosis.Size = new System.Drawing.Size(433, 91);
+            this.txtDiagnosis.TabIndex = 101;
+            // 
             // NewMedCard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1431,7 +1431,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.RichTextBox txtDiagnosis;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox txtControlDate;
         private System.Windows.Forms.Label label46;
@@ -1551,6 +1550,7 @@
         private System.Windows.Forms.Button SaveAs;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.TextBox txtDiagnosis;
     }
 
 }

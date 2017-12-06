@@ -1142,7 +1142,7 @@ namespace Stomatology
         {
             if (TabControl.SelectedTab == tabFinance)
             {
-               // Reporting InfoForm = new Reporting();
+               //Reporting InfoForm = new Reporting();
             }
         }
         private void Datetextbox_KeyPress(object sender, KeyPressEventArgs e)
