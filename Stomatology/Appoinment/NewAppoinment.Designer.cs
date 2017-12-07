@@ -110,22 +110,22 @@
             this.button8 = new System.Windows.Forms.Button();
             this.label37 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.BotRightTextBox8 = new System.Windows.Forms.TextBox();
+            this.BotRightTextBox7 = new System.Windows.Forms.TextBox();
+            this.BotRightTextBox6 = new System.Windows.Forms.TextBox();
+            this.BotRightTextBox5 = new System.Windows.Forms.TextBox();
+            this.BotRightTextBox4 = new System.Windows.Forms.TextBox();
+            this.BotRightTextBox3 = new System.Windows.Forms.TextBox();
+            this.BotRightTextBox2 = new System.Windows.Forms.TextBox();
+            this.BotRightTextBox1 = new System.Windows.Forms.TextBox();
+            this.BotLeftTextBox8 = new System.Windows.Forms.TextBox();
+            this.BotLeftTextBox7 = new System.Windows.Forms.TextBox();
+            this.BotLeftTextBox6 = new System.Windows.Forms.TextBox();
+            this.BotLeftTextBox5 = new System.Windows.Forms.TextBox();
+            this.BotLeftTextBox4 = new System.Windows.Forms.TextBox();
+            this.BotLeftTextBox3 = new System.Windows.Forms.TextBox();
+            this.BotLeftTextBox2 = new System.Windows.Forms.TextBox();
+            this.BotLeftTextBox1 = new System.Windows.Forms.TextBox();
             this.label38 = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
             this.label40 = new System.Windows.Forms.Label();
@@ -156,22 +156,22 @@
             this.label65 = new System.Windows.Forms.Label();
             this.label66 = new System.Windows.Forms.Label();
             this.label67 = new System.Windows.Forms.Label();
-            this.textBox17 = new System.Windows.Forms.TextBox();
-            this.textBox18 = new System.Windows.Forms.TextBox();
-            this.textBox19 = new System.Windows.Forms.TextBox();
-            this.textBox20 = new System.Windows.Forms.TextBox();
-            this.textBox21 = new System.Windows.Forms.TextBox();
-            this.textBox22 = new System.Windows.Forms.TextBox();
-            this.textBox23 = new System.Windows.Forms.TextBox();
-            this.textBox24 = new System.Windows.Forms.TextBox();
-            this.textBox25 = new System.Windows.Forms.TextBox();
-            this.textBox26 = new System.Windows.Forms.TextBox();
-            this.textBox27 = new System.Windows.Forms.TextBox();
-            this.textBox28 = new System.Windows.Forms.TextBox();
-            this.textBox29 = new System.Windows.Forms.TextBox();
-            this.textBox30 = new System.Windows.Forms.TextBox();
-            this.textBox31 = new System.Windows.Forms.TextBox();
-            this.textBox32 = new System.Windows.Forms.TextBox();
+            this.TopRightTextBox8 = new System.Windows.Forms.TextBox();
+            this.TopRightTextBox7 = new System.Windows.Forms.TextBox();
+            this.TopRightTextBox6 = new System.Windows.Forms.TextBox();
+            this.TopRightTextBox5 = new System.Windows.Forms.TextBox();
+            this.TopRightTextBox4 = new System.Windows.Forms.TextBox();
+            this.TopRightTextBox3 = new System.Windows.Forms.TextBox();
+            this.TopRightTextBox2 = new System.Windows.Forms.TextBox();
+            this.TopRightTextBox1 = new System.Windows.Forms.TextBox();
+            this.TopLeftTextBox8 = new System.Windows.Forms.TextBox();
+            this.TopLeftTextBox7 = new System.Windows.Forms.TextBox();
+            this.TopLeftTextBox6 = new System.Windows.Forms.TextBox();
+            this.TopLeftTextBox5 = new System.Windows.Forms.TextBox();
+            this.TopLeftTextBox4 = new System.Windows.Forms.TextBox();
+            this.TopLeftTextBox3 = new System.Windows.Forms.TextBox();
+            this.TopLeftTextBox2 = new System.Windows.Forms.TextBox();
+            this.TopLeftTextBox1 = new System.Windows.Forms.TextBox();
             this.label68 = new System.Windows.Forms.Label();
             this.label69 = new System.Windows.Forms.Label();
             this.TeethPanel = new System.Windows.Forms.PictureBox();
@@ -1008,133 +1008,161 @@
             this.button1.TabIndex = 312;
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // BotRightTextBox8
             // 
-            this.textBox1.Location = new System.Drawing.Point(527, 450);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(21, 21);
-            this.textBox1.TabIndex = 311;
+            this.BotRightTextBox8.Location = new System.Drawing.Point(527, 450);
+            this.BotRightTextBox8.Multiline = true;
+            this.BotRightTextBox8.Name = "BotRightTextBox8";
+            this.BotRightTextBox8.Size = new System.Drawing.Size(21, 21);
+            this.BotRightTextBox8.TabIndex = 311;
+            this.BotRightTextBox8.MouseLeave += new System.EventHandler(this.BotRightTextBox_8_MouseLeave);
+            this.BotRightTextBox8.MouseHover += new System.EventHandler(this.BotRightTextBox_8_MouseHover);
             // 
-            // textBox2
+            // BotRightTextBox7
             // 
-            this.textBox2.Location = new System.Drawing.Point(489, 450);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(21, 21);
-            this.textBox2.TabIndex = 310;
+            this.BotRightTextBox7.Location = new System.Drawing.Point(489, 450);
+            this.BotRightTextBox7.Multiline = true;
+            this.BotRightTextBox7.Name = "BotRightTextBox7";
+            this.BotRightTextBox7.Size = new System.Drawing.Size(21, 21);
+            this.BotRightTextBox7.TabIndex = 310;
+            this.BotRightTextBox7.MouseLeave += new System.EventHandler(this.BotRightTextBox_7_MouseLeave);
+            this.BotRightTextBox7.MouseHover += new System.EventHandler(this.BotRightTextBox_7_MouseHover);
             // 
-            // textBox3
+            // BotRightTextBox6
             // 
-            this.textBox3.Location = new System.Drawing.Point(446, 450);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(21, 21);
-            this.textBox3.TabIndex = 309;
+            this.BotRightTextBox6.Location = new System.Drawing.Point(446, 450);
+            this.BotRightTextBox6.Multiline = true;
+            this.BotRightTextBox6.Name = "BotRightTextBox6";
+            this.BotRightTextBox6.Size = new System.Drawing.Size(21, 21);
+            this.BotRightTextBox6.TabIndex = 309;
+            this.BotRightTextBox6.MouseLeave += new System.EventHandler(this.BotRightTextBox_6_MouseLeave);
+            this.BotRightTextBox6.MouseHover += new System.EventHandler(this.BotRightTextBox_6_MouseHover);
             // 
-            // textBox4
+            // BotRightTextBox5
             // 
-            this.textBox4.Location = new System.Drawing.Point(410, 450);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(21, 21);
-            this.textBox4.TabIndex = 308;
+            this.BotRightTextBox5.Location = new System.Drawing.Point(410, 450);
+            this.BotRightTextBox5.Multiline = true;
+            this.BotRightTextBox5.Name = "BotRightTextBox5";
+            this.BotRightTextBox5.Size = new System.Drawing.Size(21, 21);
+            this.BotRightTextBox5.TabIndex = 308;
+            this.BotRightTextBox5.MouseLeave += new System.EventHandler(this.BotRightTextBox_5_MouseLeave);
+            this.BotRightTextBox5.MouseHover += new System.EventHandler(this.BotRightTextBox_5_MouseHover);
             // 
-            // textBox5
+            // BotRightTextBox4
             // 
-            this.textBox5.Location = new System.Drawing.Point(380, 450);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(21, 21);
-            this.textBox5.TabIndex = 307;
+            this.BotRightTextBox4.Location = new System.Drawing.Point(380, 450);
+            this.BotRightTextBox4.Multiline = true;
+            this.BotRightTextBox4.Name = "BotRightTextBox4";
+            this.BotRightTextBox4.Size = new System.Drawing.Size(21, 21);
+            this.BotRightTextBox4.TabIndex = 307;
+            this.BotRightTextBox4.MouseLeave += new System.EventHandler(this.BotRightTextBox_4_MouseLeave);
+            this.BotRightTextBox4.MouseHover += new System.EventHandler(this.BotRightTextBox_4_MouseHover);
             // 
-            // textBox6
+            // BotRightTextBox3
             // 
-            this.textBox6.Location = new System.Drawing.Point(352, 450);
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(21, 21);
-            this.textBox6.TabIndex = 306;
+            this.BotRightTextBox3.Location = new System.Drawing.Point(352, 450);
+            this.BotRightTextBox3.Multiline = true;
+            this.BotRightTextBox3.Name = "BotRightTextBox3";
+            this.BotRightTextBox3.Size = new System.Drawing.Size(21, 21);
+            this.BotRightTextBox3.TabIndex = 306;
+            this.BotRightTextBox3.MouseLeave += new System.EventHandler(this.BotRightTextBox_3_MouseLeave);
+            this.BotRightTextBox3.MouseHover += new System.EventHandler(this.BotRightTextBox_3_MouseHover);
             // 
-            // textBox7
+            // BotRightTextBox2
             // 
-            this.textBox7.Location = new System.Drawing.Point(323, 450);
-            this.textBox7.Multiline = true;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(21, 21);
-            this.textBox7.TabIndex = 305;
+            this.BotRightTextBox2.Location = new System.Drawing.Point(323, 450);
+            this.BotRightTextBox2.Multiline = true;
+            this.BotRightTextBox2.Name = "BotRightTextBox2";
+            this.BotRightTextBox2.Size = new System.Drawing.Size(21, 21);
+            this.BotRightTextBox2.TabIndex = 305;
+            this.BotRightTextBox2.MouseLeave += new System.EventHandler(this.BotRightTextBox_2_MouseLeave);
+            this.BotRightTextBox2.MouseHover += new System.EventHandler(this.BotRightTextBox_2_MouseHover);
             // 
-            // textBox8
+            // BotRightTextBox1
             // 
-            this.textBox8.Location = new System.Drawing.Point(296, 450);
-            this.textBox8.Multiline = true;
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(21, 21);
-            this.textBox8.TabIndex = 304;
+            this.BotRightTextBox1.Location = new System.Drawing.Point(296, 450);
+            this.BotRightTextBox1.Multiline = true;
+            this.BotRightTextBox1.Name = "BotRightTextBox1";
+            this.BotRightTextBox1.Size = new System.Drawing.Size(21, 21);
+            this.BotRightTextBox1.TabIndex = 304;
+            this.BotRightTextBox1.MouseLeave += new System.EventHandler(this.BotRightTextBox_1_MouseLeave);
+            this.BotRightTextBox1.MouseHover += new System.EventHandler(this.BotRightTextBox_1_MouseHover);
             // 
-            // textBox9
+            // BotLeftTextBox8
             // 
-            this.textBox9.Location = new System.Drawing.Point(25, 450);
-            this.textBox9.Multiline = true;
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(21, 21);
-            this.textBox9.TabIndex = 303;
+            this.BotLeftTextBox8.Location = new System.Drawing.Point(25, 450);
+            this.BotLeftTextBox8.Multiline = true;
+            this.BotLeftTextBox8.Name = "BotLeftTextBox8";
+            this.BotLeftTextBox8.Size = new System.Drawing.Size(21, 21);
+            this.BotLeftTextBox8.TabIndex = 303;
+            this.BotLeftTextBox8.MouseLeave += new System.EventHandler(this.BotLeftTextBox_8_MouseLeave);
+            this.BotLeftTextBox8.MouseHover += new System.EventHandler(this.BotLeftTextBox_8_MouseHover);
             // 
-            // textBox10
+            // BotLeftTextBox7
             // 
-            this.textBox10.Location = new System.Drawing.Point(66, 450);
-            this.textBox10.Multiline = true;
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(21, 21);
-            this.textBox10.TabIndex = 302;
+            this.BotLeftTextBox7.Location = new System.Drawing.Point(66, 450);
+            this.BotLeftTextBox7.Multiline = true;
+            this.BotLeftTextBox7.Name = "BotLeftTextBox7";
+            this.BotLeftTextBox7.Size = new System.Drawing.Size(21, 21);
+            this.BotLeftTextBox7.TabIndex = 302;
+            this.BotLeftTextBox7.MouseLeave += new System.EventHandler(this.BotLeftTextBox_7_MouseLeave);
+            this.BotLeftTextBox7.MouseHover += new System.EventHandler(this.BotLeftTextBox_7_MouseHover);
             // 
-            // textBox11
+            // BotLeftTextBox6
             // 
-            this.textBox11.Location = new System.Drawing.Point(108, 450);
-            this.textBox11.Multiline = true;
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(21, 21);
-            this.textBox11.TabIndex = 301;
+            this.BotLeftTextBox6.Location = new System.Drawing.Point(108, 450);
+            this.BotLeftTextBox6.Multiline = true;
+            this.BotLeftTextBox6.Name = "BotLeftTextBox6";
+            this.BotLeftTextBox6.Size = new System.Drawing.Size(21, 21);
+            this.BotLeftTextBox6.TabIndex = 301;
+            this.BotLeftTextBox6.MouseLeave += new System.EventHandler(this.BotLeftTextBox_6_MouseLeave);
+            this.BotLeftTextBox6.MouseHover += new System.EventHandler(this.BotLeftTextBox_6_MouseHover);
             // 
-            // textBox12
+            // BotLeftTextBox5
             // 
-            this.textBox12.Location = new System.Drawing.Point(144, 450);
-            this.textBox12.Multiline = true;
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(21, 21);
-            this.textBox12.TabIndex = 300;
+            this.BotLeftTextBox5.Location = new System.Drawing.Point(144, 450);
+            this.BotLeftTextBox5.Multiline = true;
+            this.BotLeftTextBox5.Name = "BotLeftTextBox5";
+            this.BotLeftTextBox5.Size = new System.Drawing.Size(21, 21);
+            this.BotLeftTextBox5.TabIndex = 300;
+            this.BotLeftTextBox5.MouseLeave += new System.EventHandler(this.BotLeftTextBox_5_MouseLeave);
+            this.BotLeftTextBox5.MouseHover += new System.EventHandler(this.BotLeftTextBox_5_MouseHover);
             // 
-            // textBox13
+            // BotLeftTextBox4
             // 
-            this.textBox13.Location = new System.Drawing.Point(171, 450);
-            this.textBox13.Multiline = true;
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(21, 21);
-            this.textBox13.TabIndex = 299;
+            this.BotLeftTextBox4.Location = new System.Drawing.Point(171, 450);
+            this.BotLeftTextBox4.Multiline = true;
+            this.BotLeftTextBox4.Name = "BotLeftTextBox4";
+            this.BotLeftTextBox4.Size = new System.Drawing.Size(21, 21);
+            this.BotLeftTextBox4.TabIndex = 299;
+            this.BotLeftTextBox4.MouseLeave += new System.EventHandler(this.BotLeftTextBox_4_MouseLeave);
             // 
-            // textBox14
+            // BotLeftTextBox3
             // 
-            this.textBox14.Location = new System.Drawing.Point(198, 450);
-            this.textBox14.Multiline = true;
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(21, 21);
-            this.textBox14.TabIndex = 298;
+            this.BotLeftTextBox3.Location = new System.Drawing.Point(198, 450);
+            this.BotLeftTextBox3.Multiline = true;
+            this.BotLeftTextBox3.Name = "BotLeftTextBox3";
+            this.BotLeftTextBox3.Size = new System.Drawing.Size(21, 21);
+            this.BotLeftTextBox3.TabIndex = 298;
+            this.BotLeftTextBox3.MouseLeave += new System.EventHandler(this.BotLeftTextBox_3_MouseLeave);
             // 
-            // textBox15
+            // BotLeftTextBox2
             // 
-            this.textBox15.Location = new System.Drawing.Point(225, 450);
-            this.textBox15.Multiline = true;
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(21, 21);
-            this.textBox15.TabIndex = 297;
+            this.BotLeftTextBox2.Location = new System.Drawing.Point(225, 450);
+            this.BotLeftTextBox2.Multiline = true;
+            this.BotLeftTextBox2.Name = "BotLeftTextBox2";
+            this.BotLeftTextBox2.Size = new System.Drawing.Size(21, 21);
+            this.BotLeftTextBox2.TabIndex = 297;
+            this.BotLeftTextBox2.MouseLeave += new System.EventHandler(this.BotLeftTextBox_2_MouseLeave);
             // 
-            // textBox16
+            // BotLeftTextBox1
             // 
-            this.textBox16.Location = new System.Drawing.Point(252, 450);
-            this.textBox16.Multiline = true;
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(21, 21);
-            this.textBox16.TabIndex = 296;
+            this.BotLeftTextBox1.Location = new System.Drawing.Point(252, 450);
+            this.BotLeftTextBox1.Multiline = true;
+            this.BotLeftTextBox1.Name = "BotLeftTextBox1";
+            this.BotLeftTextBox1.Size = new System.Drawing.Size(21, 21);
+            this.BotLeftTextBox1.TabIndex = 296;
+            this.BotLeftTextBox1.MouseLeave += new System.EventHandler(this.BotLeftTextBox_1_MouseLeave);
             // 
             // label38
             // 
@@ -1466,135 +1494,167 @@
             this.label67.TabIndex = 266;
             this.label67.Text = "12";
             // 
-            // textBox17
+            // TopRightTextBox8
             // 
-            this.textBox17.Location = new System.Drawing.Point(527, 389);
-            this.textBox17.Multiline = true;
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(21, 21);
-            this.textBox17.TabIndex = 265;
+            this.TopRightTextBox8.Location = new System.Drawing.Point(527, 389);
+            this.TopRightTextBox8.Multiline = true;
+            this.TopRightTextBox8.Name = "TopRightTextBox8";
+            this.TopRightTextBox8.Size = new System.Drawing.Size(21, 21);
+            this.TopRightTextBox8.TabIndex = 265;
+            this.TopRightTextBox8.MouseLeave += new System.EventHandler(this.TopRightTextBox_8_MouseLeave);
+            this.TopRightTextBox8.MouseHover += new System.EventHandler(this.TopRightTextBox_8_MouseHover);
             // 
-            // textBox18
+            // TopRightTextBox7
             // 
-            this.textBox18.Location = new System.Drawing.Point(489, 389);
-            this.textBox18.Multiline = true;
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(21, 21);
-            this.textBox18.TabIndex = 264;
+            this.TopRightTextBox7.Location = new System.Drawing.Point(489, 389);
+            this.TopRightTextBox7.Multiline = true;
+            this.TopRightTextBox7.Name = "TopRightTextBox7";
+            this.TopRightTextBox7.Size = new System.Drawing.Size(21, 21);
+            this.TopRightTextBox7.TabIndex = 264;
+            this.TopRightTextBox7.MouseLeave += new System.EventHandler(this.TopRightTextBox_7_MouseLeave);
+            this.TopRightTextBox7.MouseHover += new System.EventHandler(this.TopRightTextBox_7_MouseHover);
             // 
-            // textBox19
+            // TopRightTextBox6
             // 
-            this.textBox19.Location = new System.Drawing.Point(446, 389);
-            this.textBox19.Multiline = true;
-            this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(21, 21);
-            this.textBox19.TabIndex = 263;
+            this.TopRightTextBox6.Location = new System.Drawing.Point(446, 389);
+            this.TopRightTextBox6.Multiline = true;
+            this.TopRightTextBox6.Name = "TopRightTextBox6";
+            this.TopRightTextBox6.Size = new System.Drawing.Size(21, 21);
+            this.TopRightTextBox6.TabIndex = 263;
+            this.TopRightTextBox6.MouseLeave += new System.EventHandler(this.TopRightTextBox_6_MouseLeave);
+            this.TopRightTextBox6.MouseHover += new System.EventHandler(this.TopRightTextBox_6_MouseHover);
             // 
-            // textBox20
+            // TopRightTextBox5
             // 
-            this.textBox20.Location = new System.Drawing.Point(410, 389);
-            this.textBox20.Multiline = true;
-            this.textBox20.Name = "textBox20";
-            this.textBox20.Size = new System.Drawing.Size(21, 21);
-            this.textBox20.TabIndex = 262;
+            this.TopRightTextBox5.Location = new System.Drawing.Point(410, 389);
+            this.TopRightTextBox5.Multiline = true;
+            this.TopRightTextBox5.Name = "TopRightTextBox5";
+            this.TopRightTextBox5.Size = new System.Drawing.Size(21, 21);
+            this.TopRightTextBox5.TabIndex = 262;
+            this.TopRightTextBox5.MouseLeave += new System.EventHandler(this.TopRightTextBox_5_MouseLeave);
+            this.TopRightTextBox5.MouseHover += new System.EventHandler(this.TopRightTextBox_5_MouseHover);
             // 
-            // textBox21
+            // TopRightTextBox4
             // 
-            this.textBox21.Location = new System.Drawing.Point(380, 389);
-            this.textBox21.Multiline = true;
-            this.textBox21.Name = "textBox21";
-            this.textBox21.Size = new System.Drawing.Size(21, 21);
-            this.textBox21.TabIndex = 261;
+            this.TopRightTextBox4.Location = new System.Drawing.Point(380, 389);
+            this.TopRightTextBox4.Multiline = true;
+            this.TopRightTextBox4.Name = "TopRightTextBox4";
+            this.TopRightTextBox4.Size = new System.Drawing.Size(21, 21);
+            this.TopRightTextBox4.TabIndex = 261;
+            this.TopRightTextBox4.MouseLeave += new System.EventHandler(this.TopRightTextBox_4_MouseLeave);
+            this.TopRightTextBox4.MouseHover += new System.EventHandler(this.TopRightTextBox_4_MouseHover);
             // 
-            // textBox22
+            // TopRightTextBox3
             // 
-            this.textBox22.Location = new System.Drawing.Point(352, 389);
-            this.textBox22.Multiline = true;
-            this.textBox22.Name = "textBox22";
-            this.textBox22.Size = new System.Drawing.Size(21, 21);
-            this.textBox22.TabIndex = 260;
+            this.TopRightTextBox3.Location = new System.Drawing.Point(352, 389);
+            this.TopRightTextBox3.Multiline = true;
+            this.TopRightTextBox3.Name = "TopRightTextBox3";
+            this.TopRightTextBox3.Size = new System.Drawing.Size(21, 21);
+            this.TopRightTextBox3.TabIndex = 260;
+            this.TopRightTextBox3.MouseLeave += new System.EventHandler(this.TopRightTextBox_3_MouseLeave);
+            this.TopRightTextBox3.MouseHover += new System.EventHandler(this.TopRightTextBox_3_MouseHover);
             // 
-            // textBox23
+            // TopRightTextBox2
             // 
-            this.textBox23.Location = new System.Drawing.Point(323, 389);
-            this.textBox23.Multiline = true;
-            this.textBox23.Name = "textBox23";
-            this.textBox23.Size = new System.Drawing.Size(21, 21);
-            this.textBox23.TabIndex = 259;
+            this.TopRightTextBox2.Location = new System.Drawing.Point(323, 389);
+            this.TopRightTextBox2.Multiline = true;
+            this.TopRightTextBox2.Name = "TopRightTextBox2";
+            this.TopRightTextBox2.Size = new System.Drawing.Size(21, 21);
+            this.TopRightTextBox2.TabIndex = 259;
+            this.TopRightTextBox2.MouseLeave += new System.EventHandler(this.TopRightTextBox_2_MouseLeave);
+            this.TopRightTextBox2.MouseHover += new System.EventHandler(this.TopRightTextBox_2_MouseHover);
             // 
-            // textBox24
+            // TopRightTextBox1
             // 
-            this.textBox24.Location = new System.Drawing.Point(296, 389);
-            this.textBox24.Multiline = true;
-            this.textBox24.Name = "textBox24";
-            this.textBox24.Size = new System.Drawing.Size(21, 21);
-            this.textBox24.TabIndex = 258;
+            this.TopRightTextBox1.Location = new System.Drawing.Point(296, 389);
+            this.TopRightTextBox1.Multiline = true;
+            this.TopRightTextBox1.Name = "TopRightTextBox1";
+            this.TopRightTextBox1.Size = new System.Drawing.Size(21, 21);
+            this.TopRightTextBox1.TabIndex = 258;
+            this.TopRightTextBox1.MouseLeave += new System.EventHandler(this.TopRightTextBox_1_MouseLeave);
+            this.TopRightTextBox1.MouseHover += new System.EventHandler(this.TopLeftTextBox_1_MouseHover);
             // 
-            // textBox25
+            // TopLeftTextBox8
             // 
-            this.textBox25.AccessibleName = "";
-            this.textBox25.Location = new System.Drawing.Point(25, 389);
-            this.textBox25.Multiline = true;
-            this.textBox25.Name = "textBox25";
-            this.textBox25.Size = new System.Drawing.Size(21, 21);
-            this.textBox25.TabIndex = 245;
+            this.TopLeftTextBox8.AccessibleName = "";
+            this.TopLeftTextBox8.Location = new System.Drawing.Point(25, 389);
+            this.TopLeftTextBox8.Multiline = true;
+            this.TopLeftTextBox8.Name = "TopLeftTextBox8";
+            this.TopLeftTextBox8.Size = new System.Drawing.Size(21, 21);
+            this.TopLeftTextBox8.TabIndex = 245;
+            this.TopLeftTextBox8.MouseLeave += new System.EventHandler(this.TopLeftTextBox_8_MouseLeave);
+            this.TopLeftTextBox8.MouseHover += new System.EventHandler(this.TopLeftTextBox_8_MouseHover);
             // 
-            // textBox26
+            // TopLeftTextBox7
             // 
-            this.textBox26.Location = new System.Drawing.Point(66, 389);
-            this.textBox26.Multiline = true;
-            this.textBox26.Name = "textBox26";
-            this.textBox26.Size = new System.Drawing.Size(21, 21);
-            this.textBox26.TabIndex = 257;
+            this.TopLeftTextBox7.Location = new System.Drawing.Point(66, 389);
+            this.TopLeftTextBox7.Multiline = true;
+            this.TopLeftTextBox7.Name = "TopLeftTextBox7";
+            this.TopLeftTextBox7.Size = new System.Drawing.Size(21, 21);
+            this.TopLeftTextBox7.TabIndex = 257;
+            this.TopLeftTextBox7.MouseLeave += new System.EventHandler(this.TopLeftTextBox_8_MouseLeave);
+            this.TopLeftTextBox7.MouseHover += new System.EventHandler(this.TopLeftTextBox_8_MouseHover);
             // 
-            // textBox27
+            // TopLeftTextBox6
             // 
-            this.textBox27.Location = new System.Drawing.Point(108, 389);
-            this.textBox27.Multiline = true;
-            this.textBox27.Name = "textBox27";
-            this.textBox27.Size = new System.Drawing.Size(21, 21);
-            this.textBox27.TabIndex = 256;
+            this.TopLeftTextBox6.Location = new System.Drawing.Point(108, 389);
+            this.TopLeftTextBox6.Multiline = true;
+            this.TopLeftTextBox6.Name = "TopLeftTextBox6";
+            this.TopLeftTextBox6.Size = new System.Drawing.Size(21, 21);
+            this.TopLeftTextBox6.TabIndex = 256;
+            this.TopLeftTextBox6.MouseLeave += new System.EventHandler(this.TopLeftTextBox_6_MouseLeave);
+            this.TopLeftTextBox6.MouseHover += new System.EventHandler(this.TopLeftTextBox_6_MouseHover);
             // 
-            // textBox28
+            // TopLeftTextBox5
             // 
-            this.textBox28.Location = new System.Drawing.Point(144, 389);
-            this.textBox28.Multiline = true;
-            this.textBox28.Name = "textBox28";
-            this.textBox28.Size = new System.Drawing.Size(21, 21);
-            this.textBox28.TabIndex = 255;
+            this.TopLeftTextBox5.Location = new System.Drawing.Point(144, 389);
+            this.TopLeftTextBox5.Multiline = true;
+            this.TopLeftTextBox5.Name = "TopLeftTextBox5";
+            this.TopLeftTextBox5.Size = new System.Drawing.Size(21, 21);
+            this.TopLeftTextBox5.TabIndex = 255;
+            this.TopLeftTextBox5.MouseLeave += new System.EventHandler(this.TopLeftTextBox_5_MouseLeave);
+            this.TopLeftTextBox5.MouseHover += new System.EventHandler(this.TopLeftTextBox_5_MouseHover);
             // 
-            // textBox29
+            // TopLeftTextBox4
             // 
-            this.textBox29.AccessibleName = "";
-            this.textBox29.Location = new System.Drawing.Point(171, 389);
-            this.textBox29.Multiline = true;
-            this.textBox29.Name = "textBox29";
-            this.textBox29.Size = new System.Drawing.Size(21, 21);
-            this.textBox29.TabIndex = 254;
+            this.TopLeftTextBox4.AccessibleName = "";
+            this.TopLeftTextBox4.Location = new System.Drawing.Point(171, 389);
+            this.TopLeftTextBox4.Multiline = true;
+            this.TopLeftTextBox4.Name = "TopLeftTextBox4";
+            this.TopLeftTextBox4.Size = new System.Drawing.Size(21, 21);
+            this.TopLeftTextBox4.TabIndex = 254;
+            this.TopLeftTextBox4.MouseLeave += new System.EventHandler(this.TopLeftTextBox_4_MouseLeave);
+            this.TopLeftTextBox4.MouseHover += new System.EventHandler(this.TopLeftTextBox_4_MouseHover);
             // 
-            // textBox30
+            // TopLeftTextBox3
             // 
-            this.textBox30.Location = new System.Drawing.Point(198, 389);
-            this.textBox30.Multiline = true;
-            this.textBox30.Name = "textBox30";
-            this.textBox30.Size = new System.Drawing.Size(21, 21);
-            this.textBox30.TabIndex = 253;
+            this.TopLeftTextBox3.Location = new System.Drawing.Point(198, 389);
+            this.TopLeftTextBox3.Multiline = true;
+            this.TopLeftTextBox3.Name = "TopLeftTextBox3";
+            this.TopLeftTextBox3.Size = new System.Drawing.Size(21, 21);
+            this.TopLeftTextBox3.TabIndex = 253;
+            this.TopLeftTextBox3.MouseLeave += new System.EventHandler(this.TopLeftTextBox_3_MouseLeave);
+            this.TopLeftTextBox3.MouseHover += new System.EventHandler(this.TopLeftTextBox_3_MouseHover);
             // 
-            // textBox31
+            // TopLeftTextBox2
             // 
-            this.textBox31.Location = new System.Drawing.Point(225, 389);
-            this.textBox31.Multiline = true;
-            this.textBox31.Name = "textBox31";
-            this.textBox31.Size = new System.Drawing.Size(21, 21);
-            this.textBox31.TabIndex = 252;
+            this.TopLeftTextBox2.Location = new System.Drawing.Point(225, 389);
+            this.TopLeftTextBox2.Multiline = true;
+            this.TopLeftTextBox2.Name = "TopLeftTextBox2";
+            this.TopLeftTextBox2.Size = new System.Drawing.Size(21, 21);
+            this.TopLeftTextBox2.TabIndex = 252;
+            this.TopLeftTextBox2.MouseLeave += new System.EventHandler(this.TopLeftTextBox_2_MouseLeave);
+            this.TopLeftTextBox2.MouseHover += new System.EventHandler(this.TopLeftTextBox_2_MouseHover);
             // 
-            // textBox32
+            // TopLeftTextBox1
             // 
-            this.textBox32.Location = new System.Drawing.Point(252, 389);
-            this.textBox32.Multiline = true;
-            this.textBox32.Name = "textBox32";
-            this.textBox32.Size = new System.Drawing.Size(21, 21);
-            this.textBox32.TabIndex = 251;
+            this.TopLeftTextBox1.Location = new System.Drawing.Point(252, 389);
+            this.TopLeftTextBox1.Multiline = true;
+            this.TopLeftTextBox1.Name = "TopLeftTextBox1";
+            this.TopLeftTextBox1.Size = new System.Drawing.Size(21, 21);
+            this.TopLeftTextBox1.TabIndex = 251;
+            this.TopLeftTextBox1.MouseLeave += new System.EventHandler(this.TopLeftTextBox_1_MouseLeave);
+            this.TopLeftTextBox1.MouseHover += new System.EventHandler(this.TopLeftTextBox_1_MouseHover);
             // 
             // label68
             // 
@@ -1702,22 +1762,22 @@
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.chbArrears);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox10);
-            this.Controls.Add(this.textBox11);
-            this.Controls.Add(this.textBox12);
-            this.Controls.Add(this.textBox13);
-            this.Controls.Add(this.textBox14);
-            this.Controls.Add(this.textBox15);
-            this.Controls.Add(this.textBox16);
+            this.Controls.Add(this.BotRightTextBox8);
+            this.Controls.Add(this.BotRightTextBox7);
+            this.Controls.Add(this.BotRightTextBox6);
+            this.Controls.Add(this.BotRightTextBox5);
+            this.Controls.Add(this.BotRightTextBox4);
+            this.Controls.Add(this.BotRightTextBox3);
+            this.Controls.Add(this.BotRightTextBox2);
+            this.Controls.Add(this.BotRightTextBox1);
+            this.Controls.Add(this.BotLeftTextBox8);
+            this.Controls.Add(this.BotLeftTextBox7);
+            this.Controls.Add(this.BotLeftTextBox6);
+            this.Controls.Add(this.BotLeftTextBox5);
+            this.Controls.Add(this.BotLeftTextBox4);
+            this.Controls.Add(this.BotLeftTextBox3);
+            this.Controls.Add(this.BotLeftTextBox2);
+            this.Controls.Add(this.BotLeftTextBox1);
             this.Controls.Add(this.label38);
             this.Controls.Add(this.label39);
             this.Controls.Add(this.label40);
@@ -1748,22 +1808,22 @@
             this.Controls.Add(this.label65);
             this.Controls.Add(this.label66);
             this.Controls.Add(this.label67);
-            this.Controls.Add(this.textBox17);
-            this.Controls.Add(this.textBox18);
-            this.Controls.Add(this.textBox19);
-            this.Controls.Add(this.textBox20);
-            this.Controls.Add(this.textBox21);
-            this.Controls.Add(this.textBox22);
-            this.Controls.Add(this.textBox23);
-            this.Controls.Add(this.textBox24);
-            this.Controls.Add(this.textBox25);
-            this.Controls.Add(this.textBox26);
-            this.Controls.Add(this.textBox27);
-            this.Controls.Add(this.textBox28);
-            this.Controls.Add(this.textBox29);
-            this.Controls.Add(this.textBox30);
-            this.Controls.Add(this.textBox31);
-            this.Controls.Add(this.textBox32);
+            this.Controls.Add(this.TopRightTextBox8);
+            this.Controls.Add(this.TopRightTextBox7);
+            this.Controls.Add(this.TopRightTextBox6);
+            this.Controls.Add(this.TopRightTextBox5);
+            this.Controls.Add(this.TopRightTextBox4);
+            this.Controls.Add(this.TopRightTextBox3);
+            this.Controls.Add(this.TopRightTextBox2);
+            this.Controls.Add(this.TopRightTextBox1);
+            this.Controls.Add(this.TopLeftTextBox8);
+            this.Controls.Add(this.TopLeftTextBox7);
+            this.Controls.Add(this.TopLeftTextBox6);
+            this.Controls.Add(this.TopLeftTextBox5);
+            this.Controls.Add(this.TopLeftTextBox4);
+            this.Controls.Add(this.TopLeftTextBox3);
+            this.Controls.Add(this.TopLeftTextBox2);
+            this.Controls.Add(this.TopLeftTextBox1);
             this.Controls.Add(this.label68);
             this.Controls.Add(this.label69);
             this.Controls.Add(this.TeethPanel);
@@ -1880,22 +1940,22 @@
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.TextBox textBox15;
-        private System.Windows.Forms.TextBox textBox16;
+        private System.Windows.Forms.TextBox BotRightTextBox8;
+        private System.Windows.Forms.TextBox BotRightTextBox7;
+        private System.Windows.Forms.TextBox BotRightTextBox6;
+        private System.Windows.Forms.TextBox BotRightTextBox5;
+        private System.Windows.Forms.TextBox BotRightTextBox4;
+        private System.Windows.Forms.TextBox BotRightTextBox3;
+        private System.Windows.Forms.TextBox BotRightTextBox2;
+        private System.Windows.Forms.TextBox BotRightTextBox1;
+        private System.Windows.Forms.TextBox BotLeftTextBox8;
+        private System.Windows.Forms.TextBox BotLeftTextBox7;
+        private System.Windows.Forms.TextBox BotLeftTextBox6;
+        private System.Windows.Forms.TextBox BotLeftTextBox5;
+        private System.Windows.Forms.TextBox BotLeftTextBox4;
+        private System.Windows.Forms.TextBox BotLeftTextBox3;
+        private System.Windows.Forms.TextBox BotLeftTextBox2;
+        private System.Windows.Forms.TextBox BotLeftTextBox1;
         private System.Windows.Forms.Label label38;
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.Label label40;
@@ -1926,22 +1986,22 @@
         private System.Windows.Forms.Label label65;
         private System.Windows.Forms.Label label66;
         private System.Windows.Forms.Label label67;
-        private System.Windows.Forms.TextBox textBox17;
-        private System.Windows.Forms.TextBox textBox18;
-        private System.Windows.Forms.TextBox textBox19;
-        private System.Windows.Forms.TextBox textBox20;
-        private System.Windows.Forms.TextBox textBox21;
-        private System.Windows.Forms.TextBox textBox22;
-        private System.Windows.Forms.TextBox textBox23;
-        private System.Windows.Forms.TextBox textBox24;
-        public System.Windows.Forms.TextBox textBox25;
-        private System.Windows.Forms.TextBox textBox26;
-        private System.Windows.Forms.TextBox textBox27;
-        private System.Windows.Forms.TextBox textBox28;
-        private System.Windows.Forms.TextBox textBox29;
-        private System.Windows.Forms.TextBox textBox30;
-        private System.Windows.Forms.TextBox textBox31;
-        private System.Windows.Forms.TextBox textBox32;
+        private System.Windows.Forms.TextBox TopRightTextBox8;
+        private System.Windows.Forms.TextBox TopRightTextBox7;
+        private System.Windows.Forms.TextBox TopRightTextBox6;
+        private System.Windows.Forms.TextBox TopRightTextBox5;
+        private System.Windows.Forms.TextBox TopRightTextBox4;
+        private System.Windows.Forms.TextBox TopRightTextBox3;
+        private System.Windows.Forms.TextBox TopRightTextBox2;
+        private System.Windows.Forms.TextBox TopRightTextBox1;
+        public System.Windows.Forms.TextBox TopLeftTextBox8;
+        private System.Windows.Forms.TextBox TopLeftTextBox7;
+        private System.Windows.Forms.TextBox TopLeftTextBox6;
+        private System.Windows.Forms.TextBox TopLeftTextBox5;
+        private System.Windows.Forms.TextBox TopLeftTextBox4;
+        private System.Windows.Forms.TextBox TopLeftTextBox3;
+        private System.Windows.Forms.TextBox TopLeftTextBox2;
+        private System.Windows.Forms.TextBox TopLeftTextBox1;
         private System.Windows.Forms.Label label68;
         private System.Windows.Forms.Label label69;
         private System.Windows.Forms.PictureBox TeethPanel;
