@@ -66,7 +66,7 @@ namespace Stomatology
             BotRightTextBox_3.Text = "";
             BotRightTextBox_2.Text = "";
             BotRightTextBox_1.Text = "";
-            NumberMC.Text = "";
+   
             txtDateOfBirthday.Text = "";
             txtGender.Text = "";
             txtName.Text = "";
@@ -193,15 +193,7 @@ namespace Stomatology
             var range = wordDocument.Content;
             range.Find.ClearFormatting();
             range.Find.Execute(FindText: stubToReplace, ReplaceWith: text);
-            //range.Font.ColorIndex = Word.WdColorIndex.wdBlack; Color
         }
-       // private void replaceDateWord(string stubToReplace, string replaceDate, Word.Document wordDocument)
-       // {
-       //     var range = wordDocument.Content;
-       //     range.Find.ClearFormatting();
-       //     range.Find.Execute(FindText: replaceDate, ReplaceWith: stubToReplace);
-       //
-       // }
         private void btnSave_Click(object sender, EventArgs e)
         {
             saveToDataBase();
@@ -211,7 +203,7 @@ namespace Stomatology
         {
             try
             {
-                if (txtName.Text.Length == 0 || NumberMC.Text.Length == 0 || txtNumber.Text.Length == 0 || txtAddress.Text.Length == 0 || txtDateOfBirthday.Text.Length == 0)
+                if (txtName.Text.Length == 0  || txtNumber.Text.Length == 0 || txtAddress.Text.Length == 0 || txtDateOfBirthday.Text.Length == 0)
                     throw new Exception("Не всі поля заповнені!");
                 else
                 {
@@ -219,10 +211,10 @@ namespace Stomatology
                     testCon.Open();
                     SqlCommand cmd = testCon.CreateCommand();
                     cmd.CommandType = CommandType.Text;
-                    cmd.CommandText = $"INSERT INTO MedCard (NumberMedCard, DateMC, Name, State, Birthday, Number, Adress, Diagnos, Scarg, PereneseniTaSuputniZahvor, " +
+                    cmd.CommandText = $"INSERT INTO MedCard ( DateMC, Name, State, Birthday, Number, Adress, Diagnos, Scarg, PereneseniTaSuputniZahvor, " +
                         $"RozvutokTeperishnogoZahvor, DaniObjektDoslidjennya, Prikus, StanGigiyenuRota, xRayData, ColorVita, DateOfLessons, ControlDate, " +
                         $"SurvayPlan, TreatmentPlan) " +
-                        $"values ('{NumberMC.Text}',  N'{dtpDateOfCreating.Value.Date.ToString("dd/MM/yyyy")}', N'{txtName.Text}',  N'{txtGender.Text}', N'{txtDateOfBirthday.Text}', " +
+                        $"values ( N'{dtpDateOfCreating.Value.Date.ToString("dd/MM/yyyy")}', N'{txtName.Text}',  N'{txtGender.Text}', N'{txtDateOfBirthday.Text}', " +
                         $" N'{txtNumber.Text}', N'{txtAddress.Text}', N'{txtDiagnosis.Text}', N'{txtComplaints.Text}', N'{txtDoneDiseases.Text}', N'{txtCurrentDisease.Text}', " +
                         $" N'{txtSurvayData.Text}', N'{txtBite.Text}', N'{txtMouthState.Text}', N'{txtXReyData.Text}', N'{txtDateOfLessons.Text}', N'{txtControlDate.Text}', " +
                         $" N'{txtSurvayData.Text}', N'{txtSurvayPlan.Text}', N'{txtTreatmentPlan.Text}')";
@@ -247,8 +239,8 @@ namespace Stomatology
 
         private void SaveAs_Click(object sender, EventArgs e)
         {
+            saveToDataBase();
             saveToWordFile();
-           // saveToDataBase();
         }
 
         private void NewMedCard_FormClosing(object sender, FormClosingEventArgs e)

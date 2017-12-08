@@ -33,7 +33,6 @@
             this.button6 = new System.Windows.Forms.Button();
             this.txtGender = new System.Windows.Forms.MaskedTextBox();
             this.label52 = new System.Windows.Forms.Label();
-            this.NumberMC = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
             this.label51 = new System.Windows.Forms.Label();
             this.txtDateOfBirthday = new System.Windows.Forms.TextBox();
@@ -44,7 +43,6 @@
             this.button3 = new System.Windows.Forms.Button();
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtName = new System.Windows.Forms.TextBox();
             this.label48 = new System.Windows.Forms.Label();
             this.label49 = new System.Windows.Forms.Label();
             this.label50 = new System.Windows.Forms.Label();
@@ -148,6 +146,8 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnSaveAs = new System.Windows.Forms.Button();
+            this.lblNumberCard = new System.Windows.Forms.Label();
+            this.cmbPacient = new System.Windows.Forms.ComboBox();
             this.tabControl1.SuspendLayout();
             this.tbInfo.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -197,15 +197,6 @@
             this.label52.Size = new System.Drawing.Size(185, 20);
             this.label52.TabIndex = 156;
             this.label52.Text = "чоловіча – 1; жіноча – 2";
-            // 
-            // NumberMC
-            // 
-            this.NumberMC.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.NumberMC.Location = new System.Drawing.Point(67, 8);
-            this.NumberMC.Name = "NumberMC";
-            this.NumberMC.Size = new System.Drawing.Size(59, 26);
-            this.NumberMC.TabIndex = 155;
-            this.NumberMC.Visible = false;
             // 
             // button4
             // 
@@ -324,14 +315,6 @@
             this.label1.Size = new System.Drawing.Size(137, 20);
             this.label1.TabIndex = 148;
             this.label1.Text = "Адреса:";
-            // 
-            // txtName
-            // 
-            this.txtName.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.txtName.Location = new System.Drawing.Point(182, 8);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(311, 26);
-            this.txtName.TabIndex = 143;
             // 
             // label48
             // 
@@ -1379,19 +1362,39 @@
             this.btnSaveAs.UseVisualStyleBackColor = true;
             this.btnSaveAs.Click += new System.EventHandler(this.SaveAs_Click);
             // 
+            // lblNumberCard
+            // 
+            this.lblNumberCard.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblNumberCard.Location = new System.Drawing.Point(67, 11);
+            this.lblNumberCard.Name = "lblNumberCard";
+            this.lblNumberCard.Size = new System.Drawing.Size(67, 20);
+            this.lblNumberCard.TabIndex = 164;
+            this.lblNumberCard.Text = "№";
+            this.lblNumberCard.Visible = false;
+            // 
+            // cmbPacient
+            // 
+            this.cmbPacient.FormattingEnabled = true;
+            this.cmbPacient.Location = new System.Drawing.Point(182, 10);
+            this.cmbPacient.Name = "cmbPacient";
+            this.cmbPacient.Size = new System.Drawing.Size(310, 21);
+            this.cmbPacient.TabIndex = 165;
+            this.cmbPacient.SelectedValueChanged += new System.EventHandler(this.cmbPacient_SelectedValueChanged);
+            // 
             // EditMedCard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(573, 695);
+            this.Controls.Add(this.cmbPacient);
+            this.Controls.Add(this.lblNumberCard);
             this.Controls.Add(this.btnSaveAs);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.label36);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.txtGender);
             this.Controls.Add(this.label52);
-            this.Controls.Add(this.NumberMC);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.label51);
             this.Controls.Add(this.txtDateOfBirthday);
@@ -1402,7 +1405,6 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.txtAddress);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtName);
             this.Controls.Add(this.label48);
             this.Controls.Add(this.label49);
             this.Controls.Add(this.label50);
@@ -1436,7 +1438,6 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.MaskedTextBox txtGender;
         private System.Windows.Forms.Label label52;
-        private System.Windows.Forms.TextBox NumberMC;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label51;
         private System.Windows.Forms.TextBox txtDateOfBirthday;
@@ -1447,7 +1448,6 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label label48;
         private System.Windows.Forms.Label label49;
         private System.Windows.Forms.Label label50;
@@ -1551,5 +1551,7 @@
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnSaveAs;
+        private System.Windows.Forms.Label lblNumberCard;
+        private System.Windows.Forms.ComboBox cmbPacient;
     }
 }

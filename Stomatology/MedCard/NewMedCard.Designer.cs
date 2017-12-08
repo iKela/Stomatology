@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NewMedCard));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtDiagnosis = new System.Windows.Forms.TextBox();
             this.txtControlDate = new System.Windows.Forms.TextBox();
             this.label46 = new System.Windows.Forms.Label();
             this.txtDateOfLessons = new System.Windows.Forms.TextBox();
@@ -140,15 +141,12 @@
             this.dtpDateOfCreating = new System.Windows.Forms.DateTimePicker();
             this.label52 = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
-            this.label51 = new System.Windows.Forms.Label();
-            this.NumberMC = new System.Windows.Forms.TextBox();
             this.txtGender = new System.Windows.Forms.MaskedTextBox();
             this.button6 = new System.Windows.Forms.Button();
             this.label36 = new System.Windows.Forms.Label();
             this.SaveAs = new System.Windows.Forms.Button();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.btnExit = new System.Windows.Forms.Button();
-            this.txtDiagnosis = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.tpTreatmentPlan.SuspendLayout();
             this.tbInfo.SuspendLayout();
@@ -188,6 +186,14 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(538, 422);
             this.panel1.TabIndex = 86;
+            // 
+            // txtDiagnosis
+            // 
+            this.txtDiagnosis.Location = new System.Drawing.Point(83, 6);
+            this.txtDiagnosis.Multiline = true;
+            this.txtDiagnosis.Name = "txtDiagnosis";
+            this.txtDiagnosis.Size = new System.Drawing.Size(433, 91);
+            this.txtDiagnosis.TabIndex = 101;
             // 
             // txtControlDate
             // 
@@ -522,7 +528,7 @@
             // label50
             // 
             this.label50.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label50.Location = new System.Drawing.Point(129, 12);
+            this.label50.Location = new System.Drawing.Point(40, 15);
             this.label50.Name = "label50";
             this.label50.Size = new System.Drawing.Size(47, 20);
             this.label50.TabIndex = 118;
@@ -1292,25 +1298,6 @@
             this.txtName.Size = new System.Drawing.Size(311, 26);
             this.txtName.TabIndex = 119;
             // 
-            // label51
-            // 
-            this.label51.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label51.Location = new System.Drawing.Point(38, 12);
-            this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(22, 20);
-            this.label51.TabIndex = 130;
-            this.label51.Text = "№";
-            this.label51.Visible = false;
-            // 
-            // NumberMC
-            // 
-            this.NumberMC.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.NumberMC.Location = new System.Drawing.Point(65, 9);
-            this.NumberMC.Name = "NumberMC";
-            this.NumberMC.Size = new System.Drawing.Size(59, 26);
-            this.NumberMC.TabIndex = 131;
-            this.NumberMC.Visible = false;
-            // 
             // txtGender
             // 
             this.txtGender.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -1371,14 +1358,6 @@
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.button7_Click);
             // 
-            // txtDiagnosis
-            // 
-            this.txtDiagnosis.Location = new System.Drawing.Point(83, 6);
-            this.txtDiagnosis.Multiline = true;
-            this.txtDiagnosis.Name = "txtDiagnosis";
-            this.txtDiagnosis.Size = new System.Drawing.Size(433, 91);
-            this.txtDiagnosis.TabIndex = 101;
-            // 
             // NewMedCard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1391,9 +1370,7 @@
             this.Controls.Add(this.button6);
             this.Controls.Add(this.txtGender);
             this.Controls.Add(this.label52);
-            this.Controls.Add(this.NumberMC);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.label51);
             this.Controls.Add(this.txtDateOfBirthday);
             this.Controls.Add(this.txtNumber);
             this.Controls.Add(this.button1);
@@ -1543,8 +1520,6 @@
         private System.Windows.Forms.DateTimePicker dtpDateOfCreating;
         private System.Windows.Forms.Label label52;
         private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.Label label51;
-        private System.Windows.Forms.TextBox NumberMC;
         private System.Windows.Forms.MaskedTextBox txtGender;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Label label36;
