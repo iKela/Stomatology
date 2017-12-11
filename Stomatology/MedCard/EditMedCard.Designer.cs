@@ -214,12 +214,11 @@
             // label51
             // 
             this.label51.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label51.Location = new System.Drawing.Point(38, 11);
+            this.label51.Location = new System.Drawing.Point(38, 12);
             this.label51.Name = "label51";
             this.label51.Size = new System.Drawing.Size(23, 20);
             this.label51.TabIndex = 154;
             this.label51.Text = "№";
-            this.label51.Visible = false;
             // 
             // txtDateOfBirthday
             // 
@@ -1365,12 +1364,11 @@
             // lblNumberCard
             // 
             this.lblNumberCard.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblNumberCard.Location = new System.Drawing.Point(67, 11);
+            this.lblNumberCard.Location = new System.Drawing.Point(59, 12);
             this.lblNumberCard.Name = "lblNumberCard";
             this.lblNumberCard.Size = new System.Drawing.Size(67, 20);
             this.lblNumberCard.TabIndex = 164;
-            this.lblNumberCard.Text = "№";
-            this.lblNumberCard.Visible = false;
+            this.lblNumberCard.Text = "MedCard";
             // 
             // cmbPacient
             // 
