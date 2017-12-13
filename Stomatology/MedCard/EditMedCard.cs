@@ -56,7 +56,7 @@ namespace Stomatology
         {
             try
             {
-                rewriteInfo(@Properties.Settings.Default.NewMedCardFile);    
+                rewriteInfo(@Properties.Settings.Default.NewMedCardFile);
             }
             catch
             {
@@ -91,12 +91,7 @@ namespace Stomatology
                 }
             }
         }
-        private void ReplaceWordStub(string stubToReplace, string text, Word.Document wordDocument)
-        {
-            var range = wordDocument.Content;
-            range.Find.ClearFormatting();
-            range.Find.Execute(FindText: stubToReplace, ReplaceWith: text);
-        }
+       
         private void rewriteInfo(string way)
         {
             var name = cmbPacient.Text;
@@ -151,6 +146,14 @@ namespace Stomatology
             wordApp.ActiveDocument.Close();
             wordApp.Quit();
         }
+
+        private void ReplaceWordStub(string stubToReplace, string text, Word.Document wordDocument)
+        {
+            var range = wordDocument.Content;
+            range.Find.ClearFormatting();
+            range.Find.Execute(FindText: stubToReplace, ReplaceWith: text);
+        }
+
         private void SaveAs_Click(object sender, EventArgs e)
         {
             DateUpdate();
@@ -319,11 +322,89 @@ namespace Stomatology
                brt6    = sqlReader["brt6"].ToString();
                brt7    = sqlReader["brt7"].ToString();
                brt8    = sqlReader["brt8"].ToString();
-                         
+                replaceDateToWordFile(Date, Info);
+
+
             }            
             sqlReader.Close();
             testCon.Close();
-        }                
+        }
+        #region Заповнення Word файла  
+        private void replaceDateToWordFile(string dateFrom, string descriptionFrom)
+        {
+            var name = cmbPacient.Text;
+
+            try
+            {
+                addAppoinment(@Properties.Settings.Default.Name + "\\" + name + ".docx", name, dateFrom, descriptionFrom);
+            }
+            catch
+            {
+                string message = "Виникли проблеми при спробі додати прийом, вкажіть шлях до екземпляру. Бажаєте вказати шлях?";
+                string caption = "Проблема при редагуванні.";
+                MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                DialogResult result;
+
+                result = MessageBox.Show(message, caption, buttons);
+
+                if (result == DialogResult.Yes)
+                {
+
+                    openFileDialog1.Filter = ".docx file (*.docx)|*.docx";
+                    openFileDialog1.FilterIndex = 1;
+                    openFileDialog1.Multiselect = false;
+
+                    if (openFileDialog1.ShowDialog() == DialogResult.OK)
+                    {
+                        string sFileName = openFileDialog1.FileName;
+                        Properties.Settings.Default.ExistMedCardFile = sFileName;
+                        if (Properties.Settings.Default.ExistMedCardFile != null)
+                        {
+
+                            addAppoinment(@Properties.Settings.Default.ExistMedCardFile, name, dateFrom, descriptionFrom);
+                        }
+                    }
+                }
+            }
+        }
+        private void replaceDateWord(string stubToReplace, string replaceDate, Word.Document wordDocument)
+        {
+            var range = wordDocument.Content;
+            range.Find.ClearFormatting();
+            range.Find.Execute(FindText: replaceDate, ReplaceWith: stubToReplace);
+        }
+
+        private void addAppoinment(string way, string name,string dateFrom, string descrptionFrom)
+        {
+            var date = dateFrom;
+            var desctription = descrptionFrom;
+
+            var wordApp = new Word.Application();
+            wordApp.Visible = false;
+
+            var wordDocument = wordApp.Documents.Open(way);
+
+            ReplaceWordStub("{date1}", date, wordDocument);
+            ReplaceWordStub("{description1}", desctription, wordDocument);
+            int i = 1;
+            int j = 2;
+            do
+            {
+                replaceDateWord("{date" + i + "}", "{date" + j + "}", wordDocument);
+                replaceDateWord("{description" + i + "}", "{description" + j + "}", wordDocument);
+                i++;
+                j++;
+
+            } while (i <= 22 && j <= 23);
+
+            wordDocument.SaveAs(@Properties.Settings.Default.Name + "\\" + name + ".docx");
+            MessageBox.Show("Успішно збережно в: " + @Properties.Settings.Default.Name + " як " + name + ".docx");
+
+            wordApp.ActiveDocument.Close();
+            wordApp.Quit();
+        }
+        #endregion
+
         private void DateUpdate()
         {                
             try          
