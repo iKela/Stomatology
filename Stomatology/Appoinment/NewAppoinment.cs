@@ -40,7 +40,7 @@ namespace Stomatology
             cmbPatient.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
             cmbPatient.AutoCompleteSource = AutoCompleteSource.ListItems;
 
-            //testCon.Open();
+            testCon.Open();
             SqlDataReader sqlReader = null;
             SqlCommand command = new SqlCommand("SELECT Name FROM [MedCard]", testCon);
             try
@@ -891,12 +891,12 @@ namespace Stomatology
                         $"trt1, trt2, trt3, trt4, trt5, trt6, trt7, trt8, " +
                         $"brt1, brt2, brt3, brt4, brt5, brt6, brt7, brt8, " +
                         $"blt1, blt2, blt3, blt4, blt5, blt6, blt7, blt8)" +
-                        $"values (N'{dtpDate.Value.Date.ToString("dd/MM/yyyy")}', N'{cmbDoctor.SelectedItem}', '{MedCardId}', N'{txtDescription.Text}', N'{txtMoney.Text}', '{Arrears}', " +
+                        $"values (N'{dtpDate.Value.Date.ToString("yyyy/MM/dd")}', N'{cmbDoctor.SelectedItem}', '{MedCardId}', N'{txtDescription.Text}', N'{txtMoney.Text}', '{Arrears}', " +
 
-                        $" N'{TopLeftTextBox_1.Text}', N'{TopLeftTextBox_2.Text}',   N'{TopLeftTextBox_3.Text}', N'{TopLeftTextBox_4.Text}', N'{TopLeftTextBox_5.Text}', N'{TopLeftTextBox_6.Text}', N'{TopLeftTextBox_7.Text}', N'{TopLeftTextBox_8.Text}'," +
+                        $" N'{TopLeftTextBox_1.Text}',  N'{TopLeftTextBox_2.Text}',  N'{TopLeftTextBox_3.Text}',  N'{TopLeftTextBox_4.Text}',  N'{TopLeftTextBox_5.Text}',  N'{TopLeftTextBox_6.Text}',  N'{TopLeftTextBox_7.Text}',  N'{TopLeftTextBox_8.Text}'," +
                         $" N'{TopRightTextBox_1.Text}', N'{TopRightTextBox_2.Text}', N'{TopRightTextBox_3.Text}', N'{TopRightTextBox_4.Text}', N'{TopRightTextBox_5.Text}', N'{TopRightTextBox_6.Text}', N'{TopRightTextBox_7.Text}', N'{TopRightTextBox_8.Text}'," +
                         $" N'{BotRightTextBox_8.Text}', N'{BotRightTextBox_7.Text}', N'{BotRightTextBox_6.Text}', N'{BotRightTextBox_5.Text}', N'{BotRightTextBox_4.Text}', N'{BotRightTextBox_3.Text}', N'{BotRightTextBox_2.Text}', N'{BotRightTextBox_1.Text}'," +
-                        $" N'{BotLeftTextBox_8.Text}',  N'{BotLeftTextBox_7.Text}',  N'{BotLeftTextBox_6.Text}', N'{BotLeftTextBox_5.Text}', N'{BotLeftTextBox_4.Text}', N'{BotLeftTextBox_3.Text}', N'{BotLeftTextBox_2.Text}', N'{BotLeftTextBox_1.Text}')";
+                        $" N'{BotLeftTextBox_8.Text}',  N'{BotLeftTextBox_7.Text}',  N'{BotLeftTextBox_6.Text}',  N'{BotLeftTextBox_5.Text}',  N'{BotLeftTextBox_4.Text}',  N'{BotLeftTextBox_3.Text}',  N'{BotLeftTextBox_2.Text}',  N'{BotLeftTextBox_1.Text}')";
 
                     cmd.ExecuteNonQuery();
 
@@ -905,7 +905,6 @@ namespace Stomatology
                     testCon.Close();
                 }
             }
-
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Помилка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -920,7 +919,6 @@ namespace Stomatology
             try
             {
                 addAppoinment(@Properties.Settings.Default.Name + "\\" + name + ".docx", name);
-
             }
             catch
             {
@@ -1012,7 +1010,7 @@ namespace Stomatology
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 string sFileName = openFileDialog1.FileName;
-                //string[] arrAllFiles = openFileDialog1.FileNames;
+                string[] arrAllFiles = openFileDialog1.FileNames;
                 Properties.Settings.Default.WordFileDirection = sFileName;
                 Properties.Settings.Default.Save();
             }
