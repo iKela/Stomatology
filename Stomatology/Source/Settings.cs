@@ -46,7 +46,7 @@ namespace Stomatology
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Close();
+                this.Close();
         }
 
         private void textBox1_DoubleClick(object sender, EventArgs e)
