@@ -18,6 +18,7 @@ namespace Stomatology
         string MedCardId;
         int arrears;
         string text;
+        bool numberisthere = false;
 
         public void PassValue(string strValue)//Calculator
         {
@@ -35,102 +36,18 @@ namespace Stomatology
             updateTable();
         }
 
-        #region UpTable/BtnClear/CellClick
-        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-            if (dataGridView1.SelectedRows.Count > 0)
-            {
-                MedCardId = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
-                comboBox1.Items.Clear();
-                Buttonclear();
-                testCon.Open();
-                SqlDataReader sqlReader = null;
-                string qwery = $"SELECT Date FROM [Reception] where MedCard_Id = N'{MedCardId}'";
-                SqlCommand command = new SqlCommand(qwery, testCon);
-
-                sqlReader = command.ExecuteReader();
-                while (sqlReader.Read())
-                {
-                    comboBox1.Items.Add(sqlReader["Date"]);
-                }
-
-                sqlReader.Close();
-                testCon.Close();
-            }
-        }
-        public void updateTable()
-        {
-            dataGridView1.Rows.Clear();
-            testCon.Open();
-            string upqwery = "select MedCard_Id, Name, Birthday, Number from MedCard";
-            SqlCommand sqlComm = new SqlCommand(upqwery, testCon);
-            SqlDataReader sqlDR;
-            sqlDR = sqlComm.ExecuteReader();
-
-            while (sqlDR.Read())
-            {
-                int index = dataGridView1.Rows.Add();
-                dataGridView1.Rows[index].Cells[0].Value = sqlDR[0];
-                dataGridView1.Rows[index].Cells[1].Value = sqlDR[1];
-                dataGridView1.Rows[index].Cells[2].Value = sqlDR[2];
-                dataGridView1.Rows[index].Cells[3].Value = sqlDR[3];
-            }
-            testCon.Close();
-            dataGridView1.ClearSelection();
-        }
-        public void Buttonclear()
-        {
-            lblDoctor.Text = "";
-            txtBDate.Text = "";
-            // textBox2.Text = "";
-            txtDescription.Text = "";
-            txtMoney.Text = "";
-            TopLeftTextBox_1.Text = "";
-            TopLeftTextBox_2.Text = "";
-            TopLeftTextBox_3.Text = "";
-            TopLeftTextBox_4.Text = "";
-            TopLeftTextBox_5.Text = "";
-            TopLeftTextBox_6.Text = "";
-            TopLeftTextBox_7.Text = "";
-            TopLeftTextBox_8.Text = "";
-            BotLeftTextBox_8.Text = "";
-            BotLeftTextBox_7.Text = "";
-            BotLeftTextBox_6.Text = "";
-            BotLeftTextBox_5.Text = "";
-            BotLeftTextBox_4.Text = "";
-            BotLeftTextBox_3.Text = "";
-            BotLeftTextBox_2.Text = "";
-            BotLeftTextBox_1.Text = "";
-            TopRightTextBox_1.Text = "";
-            TopRightTextBox_2.Text = "";
-            TopRightTextBox_3.Text = "";
-            TopRightTextBox_4.Text = "";
-            TopRightTextBox_5.Text = "";
-            TopRightTextBox_6.Text = "";
-            TopRightTextBox_7.Text = "";
-            TopRightTextBox_8.Text = "";
-            BotRightTextBox_8.Text = "";
-            BotRightTextBox_7.Text = "";
-            BotRightTextBox_6.Text = "";
-            BotRightTextBox_5.Text = "";
-            BotRightTextBox_4.Text = "";
-            BotRightTextBox_3.Text = "";
-            BotRightTextBox_2.Text = "";
-            BotRightTextBox_1.Text = "";
-        }
-        #endregion
-
         private void AddNewAppoinment_Click(object sender, EventArgs e)
         {
             NewAppoinment newForm = new NewAppoinment();
             newForm.Show();
         }
+
         private void EditPatient_Click(object sender, EventArgs e)
         {
             EditMedCard newForm = new EditMedCard(this);
             newForm.Show();
         }
+
         private void AddNewPatient_Click(object sender, EventArgs e)
         {
             NewMedCard newForm = new NewMedCard(this);
@@ -146,72 +63,174 @@ namespace Stomatology
             else
             { return; }
         }
+
         private void проПрограммуToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AboutSoft newForm = new AboutSoft();
             newForm.Show();
         }
 
-
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            try
+            functionForbtnUpdate();
+        }    
+
+        private void comboBox1_SelectedValueChanged(object sender, EventArgs e)
+        {
+            Data_function();
+        }
+
+        private void btnCalculator_Click(object sender, EventArgs e)
+        {
+            Calculator newForm = new Calculator(this);
+            newForm.Show();
+        }
+
+        private void tsmiSettings_Click(object sender, EventArgs e)
+        {
+            Settings newForm = new Settings();
+            newForm.Show();
+        }
+
+        private void tsmiContacts_Click(object sender, EventArgs e)
+        {
+            HelpContacts newForm = new HelpContacts();
+            newForm.Show();
+        }
+
+        private void tsmiUserInfo_Click(object sender, EventArgs e)
+        {
+            UserInfo newForm = new UserInfo();
+            newForm.Show();
+        }
+
+        private void tsmiRemoteControl_Click(object sender, EventArgs e)
+        {
+            Process.Start(Properties.Settings.Default.TeamViewerDirection);
+        }
+
+        private void Main_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.DoEvents();
+            testCon.Close();
+           
+        }
+
+        private void toolTip() // Підказки до кнопок та полів
+        {
+            toolTip1.IsBalloon = false;
+            toolTip1.SetToolTip(AddNewPatient, "Додати нового паціента.");
+            toolTip1.SetToolTip(EditPatient, "Редагувати дані паціента.");
+            toolTip1.SetToolTip(AddNewAppoinment, "Додати новий прийом.");
+            toolTip1.SetToolTip(txtBDate, "Відредагуйте, якщо бажаэте змінити дату прийому.");
+            if (lblDoctor.Text == string.Empty)
             {
-                if (comboBox1.Text.Length == 0 || dataGridView1.SelectedRows.Count == 0)
-                    throw new Exception("Не вибрана дата прийому, перевірте ще раз!");
-                else
-                {
-                    testCon.Open();
-                    string ReceptionId = "";
-                    string query = $"select Reception_Id from Reception where [Date] = N'{comboBox1.Text}'";
-                    SqlCommand cmd1 = new SqlCommand(query, testCon);
-                    SqlDataReader reader = cmd1.ExecuteReader();
-                    if (reader.Read())
-                    {
-                        ReceptionId = reader["Reception_Id"].ToString();
-                    }
-                    else
-                    {
-                        throw new Exception("Не вибрана дата прийому, перевірте ще раз!");
-                    }
-                    testCon.Close();
-
-
-                    if (dataGridView1.SelectedRows.Count > 0)
-                    {
-                        string uId = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
-                        string qweryn = "update Reception " + $"set Date = N'{txtBDate.Text}', " + $"Info = N'{txtDescription.Text}', " + $"Money = N'{txtMoney.Text}', " + $"Arrears = N'{arrears}', " +
-                             $"tlt1 = N'{TopLeftTextBox_1.Text}', " + $"tlt2 = N'{TopLeftTextBox_2.Text}', " + $"tlt3 = N'{TopLeftTextBox_3.Text}',  " + $"tlt4 = N'{TopLeftTextBox_4.Text}',  " +
-                             $"tlt5 = N'{TopLeftTextBox_5.Text}', " + $"tlt6 = N'{TopLeftTextBox_6.Text}',  " + $"tlt7 = N'{TopLeftTextBox_7.Text}',  " + $"tlt8 = N'{TopLeftTextBox_8.Text}', " +
-                             $"trt1 = N'{TopRightTextBox_1.Text}', " + $"trt2 = N'{TopRightTextBox_2.Text}', " + $"trt3 = N'{TopRightTextBox_3.Text}', " + $"trt4 = N'{TopRightTextBox_4.Text}', " +
-                             $"trt5 = N'{TopRightTextBox_5.Text}', " + $"trt6 = N'{TopRightTextBox_6.Text}', " + $"trt7 = N'{TopRightTextBox_7.Text}', " + $"trt8 = N'{TopRightTextBox_8.Text}'," +
-                             $"brt1 = N'{BotRightTextBox_8.Text}', " + $"brt2 = N'{BotRightTextBox_7.Text}', " + $"brt3 = N'{BotRightTextBox_6.Text}', " + $"brt4 = N'{BotRightTextBox_5.Text}', " +
-                             $"brt5 = N'{BotRightTextBox_4.Text}', " + $"brt6 = N'{BotRightTextBox_3.Text}', " + $"brt7 = N'{BotRightTextBox_2.Text}', " + $"brt8 = N'{BotRightTextBox_1.Text}', " +
-                             $"blt1 = N'{BotLeftTextBox_8.Text}',  " + $"blt2 = N'{BotLeftTextBox_7.Text}',  " + $"blt3 = N'{BotLeftTextBox_6.Text}', " + $"blt4 = N'{BotLeftTextBox_5.Text}', " +
-                             $"blt5 = N'{BotLeftTextBox_4.Text}',  " + $"blt6 = N'{BotLeftTextBox_3.Text}', " + $"blt7 = N'{BotLeftTextBox_2.Text}',  " + $"blt8 = N'{BotLeftTextBox_1.Text}' " +
-                             $"where Reception_Id = {ReceptionId}";
-
-                        testCon.Open();
-                        SqlCommand upbtn = new SqlCommand(qweryn, testCon);
-                        upbtn.ExecuteNonQuery();
-                        testCon.Close();
-                        updateTable();
-                        Buttonclear();
-                    }
-                }
+                toolTip1.SetToolTip(lblDoctor, "Поле, де вказуэться лікар, який приймав паціента.");
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show(ex.Message, "Помилка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                testCon.Close();
+                toolTip1.SetToolTip(lblDoctor, "На полі вказано лікаря, який приймав паціента.");
             }
-            finally
+            //if (textBox2.Text == string.Empty)
+            //{
+            //    toolTip1.SetToolTip(textBox2, "Поле, де вказуэться паціент при перегляді або редагуванні прийому.");
+            //}
+            //else
+            //{
+               // toolTip1.SetToolTip(textBox2, "На полі вказано паціента який був на прийомі.\nВи маэте можливість редагувати це поле.");
+           // }
+            toolTip1.SetToolTip(btnCalculator, "Калькулятор.\nСкористайтесь калькулятором, для точного підрахунку ціни наданих послуг.");
+            toolTip1.SetToolTip(txtDescription, "Поле для додаткової інформації.");
+            toolTip1.SetToolTip(btnUpdate, "Оновити інформацію про паціента.");
+        }
+
+        private void Main_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void Datetextbox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 44 || e.KeyChar == 47 || e.KeyChar == 45 || e.KeyChar == 42)
+                e.KeyChar = (char)46;
+        }
+
+        private void Updatebtn_Click(object sender, EventArgs e)
+        {
+            report_function();
+        } 
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            ExportToExcel();
+        }
+        
+        private void сbArrears_CheckedChanged(object sender, EventArgs e)
+        {
+            Arrears();
+        }
+
+        private void txtDescription_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbChanels_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            text = lbChanels.GetItemText(lbChanels.SelectedItem);
+        }
+
+        private void lbChanels_KeyPress(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
             {
-                comboBox1.Text = "";
-                comboBox1.Items.Clear();
+                txtDescription.Text += " " + text + " ";
+                lbChanels.Visible = false;
+                lbChanels.ClearSelected();
+                txtDescription.Focus();
+                txtDescription.SelectedText += " ";
             }
         }
-        private void comboBox1_SelectedValueChanged(object sender, EventArgs e)
+
+        private void txtDescription_KeyDown(object sender, KeyEventArgs e)
+        {
+
+            if (e.KeyCode == (Keys.P))
+            {
+                lbChanels.Visible = true;
+            }
+            else if (e.KeyCode == Keys.T)
+            {
+                lbChanels.Visible = true;
+            }
+            else if (e.KeyCode == Keys.Space && lbChanels.Visible == true)
+            {
+                lbChanels.Focus();
+            }
+            else
+            {
+                string[] partNumbers = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "0" };
+                Regex number = new Regex(@"^[a-zA-Z0-9]\d{2}[a-zA-Z0-9](-\d{3}){2}[A-Za-z0-9]$");
+                foreach (string partNumber in partNumbers)
+                {
+                    numberisthere = true;
+                }
+                if (numberisthere == false)
+                {
+                    lbChanels.Visible = false;
+                }
+            }
+          
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+
+        #region Main----function
+        private void Data_function()
         {
             string query1 = $"SELECT * From Reception where  Date = '{comboBox1.Text}'  and MedCard_Id = '{MedCardId}'";
 
@@ -270,68 +289,283 @@ namespace Stomatology
             else { cbArrears.Checked = false; }
         }
 
-        private void btnCalculator_Click(object sender, EventArgs e)
+        private void Arrears()
         {
-            Calculator newForm = new Calculator(this);
-            newForm.Show();
-        }
-
-
-        private void tsmiSettings_Click(object sender, EventArgs e)
-        {
-            Settings newForm = new Settings();
-            newForm.Show();
-        }
-        private void tsmiContacts_Click(object sender, EventArgs e)
-        {
-            HelpContacts newForm = new HelpContacts();
-            newForm.Show();
-        }
-
-        private void tsmiUserInfo_Click(object sender, EventArgs e)
-        {
-            UserInfo newForm = new UserInfo();
-            newForm.Show();
-        }
-
-        private void tsmiRemoteControl_Click(object sender, EventArgs e)
-        {
-            Process.Start(Properties.Settings.Default.TeamViewerDirection);
-        }
-
-        private void Main_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            Application.DoEvents();
-            testCon.Close();
-           
-        }
-        private void toolTip() // Підказки до кнопок та полів
-        {
-            toolTip1.IsBalloon = false;
-            toolTip1.SetToolTip(AddNewPatient, "Додати нового паціента.");
-            toolTip1.SetToolTip(EditPatient, "Редагувати дані паціента.");
-            toolTip1.SetToolTip(AddNewAppoinment, "Додати новий прийом.");
-            toolTip1.SetToolTip(txtBDate, "Відредагуйте, якщо бажаэте змінити дату прийому.");
-            if (lblDoctor.Text == string.Empty)
+            if (cbArrears.Checked == true)
             {
-                toolTip1.SetToolTip(lblDoctor, "Поле, де вказуэться лікар, який приймав паціента.");
+                arrears = 1;
             }
             else
             {
-                toolTip1.SetToolTip(lblDoctor, "На полі вказано лікаря, який приймав паціента.");
+                arrears = 0;
             }
-            //if (textBox2.Text == string.Empty)
-            //{
-            //    toolTip1.SetToolTip(textBox2, "Поле, де вказуэться паціент при перегляді або редагуванні прийому.");
-            //}
-            //else
-            //{
-               // toolTip1.SetToolTip(textBox2, "На полі вказано паціента який був на прийомі.\nВи маэте можливість редагувати це поле.");
-           // }
-            toolTip1.SetToolTip(btnCalculator, "Калькулятор.\nСкористайтесь калькулятором, для точного підрахунку ціни наданих послуг.");
-            toolTip1.SetToolTip(txtDescription, "Поле для додаткової інформації.");
-            toolTip1.SetToolTip(btnUpdate, "Оновити інформацію про паціента.");
         }
+
+        private void functionForbtnUpdate()
+        {
+            try
+            {
+                if (comboBox1.Text.Length == 0 || dataGridView1.SelectedRows.Count == 0)
+                    throw new Exception("Не вибрана дата прийому, перевірте ще раз!");
+                else
+                {
+                    testCon.Open();
+                    string ReceptionId = "";
+                    string query = $"select Reception_Id from Reception where [Date] = N'{comboBox1.Text}'";
+                    SqlCommand cmd1 = new SqlCommand(query, testCon);
+                    SqlDataReader reader = cmd1.ExecuteReader();
+                    if (reader.Read())
+                    {
+                        ReceptionId = reader["Reception_Id"].ToString();
+                    }
+                    else
+                    {
+                        throw new Exception("Не вибрана дата прийому, перевірте ще раз!");
+                    }
+                    testCon.Close();
+
+
+                    if (dataGridView1.SelectedRows.Count > 0)
+                    {
+                        string uId = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
+                        string qweryn = "update Reception " + $"set Date = N'{txtBDate.Text}', " + $"Info = N'{txtDescription.Text}', " + $"Money = N'{txtMoney.Text}', " + $"Arrears = N'{arrears}', " +
+                             $"tlt1 = N'{TopLeftTextBox_1.Text}', " + $"tlt2 = N'{TopLeftTextBox_2.Text}', " + $"tlt3 = N'{TopLeftTextBox_3.Text}',  " + $"tlt4 = N'{TopLeftTextBox_4.Text}',  " +
+                             $"tlt5 = N'{TopLeftTextBox_5.Text}', " + $"tlt6 = N'{TopLeftTextBox_6.Text}',  " + $"tlt7 = N'{TopLeftTextBox_7.Text}',  " + $"tlt8 = N'{TopLeftTextBox_8.Text}', " +
+                             $"trt1 = N'{TopRightTextBox_1.Text}', " + $"trt2 = N'{TopRightTextBox_2.Text}', " + $"trt3 = N'{TopRightTextBox_3.Text}', " + $"trt4 = N'{TopRightTextBox_4.Text}', " +
+                             $"trt5 = N'{TopRightTextBox_5.Text}', " + $"trt6 = N'{TopRightTextBox_6.Text}', " + $"trt7 = N'{TopRightTextBox_7.Text}', " + $"trt8 = N'{TopRightTextBox_8.Text}'," +
+                             $"brt1 = N'{BotRightTextBox_8.Text}', " + $"brt2 = N'{BotRightTextBox_7.Text}', " + $"brt3 = N'{BotRightTextBox_6.Text}', " + $"brt4 = N'{BotRightTextBox_5.Text}', " +
+                             $"brt5 = N'{BotRightTextBox_4.Text}', " + $"brt6 = N'{BotRightTextBox_3.Text}', " + $"brt7 = N'{BotRightTextBox_2.Text}', " + $"brt8 = N'{BotRightTextBox_1.Text}', " +
+                             $"blt1 = N'{BotLeftTextBox_8.Text}',  " + $"blt2 = N'{BotLeftTextBox_7.Text}',  " + $"blt3 = N'{BotLeftTextBox_6.Text}', " + $"blt4 = N'{BotLeftTextBox_5.Text}', " +
+                             $"blt5 = N'{BotLeftTextBox_4.Text}',  " + $"blt6 = N'{BotLeftTextBox_3.Text}', " + $"blt7 = N'{BotLeftTextBox_2.Text}',  " + $"blt8 = N'{BotLeftTextBox_1.Text}' " +
+                             $"where Reception_Id = {ReceptionId}";
+
+                        testCon.Open();
+                        SqlCommand upbtn = new SqlCommand(qweryn, testCon);
+                        upbtn.ExecuteNonQuery();
+                        testCon.Close();
+                        updateTable();
+                        Buttonclear();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Помилка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                testCon.Close();
+            }
+            finally
+            {
+                comboBox1.Text = "";
+                comboBox1.Items.Clear();
+            }
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                MedCardId = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
+                comboBox1.Items.Clear();
+                Buttonclear();
+                testCon.Open();
+                SqlDataReader sqlReader = null;
+                string qwery = $"SELECT Date FROM [Reception] where MedCard_Id = N'{MedCardId}'";
+                SqlCommand command = new SqlCommand(qwery, testCon);
+
+                sqlReader = command.ExecuteReader();
+                while (sqlReader.Read())
+                {
+                    comboBox1.Items.Add(sqlReader["Date"]);
+                }
+
+                sqlReader.Close();
+                testCon.Close();
+            }
+        }
+
+        public void updateTable()
+        {
+            dataGridView1.Rows.Clear();
+            testCon.Open();
+            string upqwery = "select MedCard_Id, Name, Birthday, Number from MedCard";
+            SqlCommand sqlComm = new SqlCommand(upqwery, testCon);
+            SqlDataReader sqlDR;
+            sqlDR = sqlComm.ExecuteReader();
+
+            while (sqlDR.Read())
+            {
+                int index = dataGridView1.Rows.Add();
+                dataGridView1.Rows[index].Cells[0].Value = sqlDR[0];
+                dataGridView1.Rows[index].Cells[1].Value = sqlDR[1];
+                dataGridView1.Rows[index].Cells[2].Value = sqlDR[2];
+                dataGridView1.Rows[index].Cells[3].Value = sqlDR[3];
+            }
+            testCon.Close();
+            dataGridView1.ClearSelection();
+        }
+
+        public void Buttonclear()
+        {
+            lblDoctor.Text = "";
+            txtBDate.Text = "";
+            // textBox2.Text = "";
+            txtDescription.Text = "";
+            txtMoney.Text = "";
+            TopLeftTextBox_1.Text = "";
+            TopLeftTextBox_2.Text = "";
+            TopLeftTextBox_3.Text = "";
+            TopLeftTextBox_4.Text = "";
+            TopLeftTextBox_5.Text = "";
+            TopLeftTextBox_6.Text = "";
+            TopLeftTextBox_7.Text = "";
+            TopLeftTextBox_8.Text = "";
+            BotLeftTextBox_8.Text = "";
+            BotLeftTextBox_7.Text = "";
+            BotLeftTextBox_6.Text = "";
+            BotLeftTextBox_5.Text = "";
+            BotLeftTextBox_4.Text = "";
+            BotLeftTextBox_3.Text = "";
+            BotLeftTextBox_2.Text = "";
+            BotLeftTextBox_1.Text = "";
+            TopRightTextBox_1.Text = "";
+            TopRightTextBox_2.Text = "";
+            TopRightTextBox_3.Text = "";
+            TopRightTextBox_4.Text = "";
+            TopRightTextBox_5.Text = "";
+            TopRightTextBox_6.Text = "";
+            TopRightTextBox_7.Text = "";
+            TopRightTextBox_8.Text = "";
+            BotRightTextBox_8.Text = "";
+            BotRightTextBox_7.Text = "";
+            BotRightTextBox_6.Text = "";
+            BotRightTextBox_5.Text = "";
+            BotRightTextBox_4.Text = "";
+            BotRightTextBox_3.Text = "";
+            BotRightTextBox_2.Text = "";
+            BotRightTextBox_1.Text = "";
+        }
+
+        #endregion
+
+
+        #region Reporting---------Reporting
+        private void report_function()
+        {
+            DataGridView2.Rows.Clear();
+            testCon.Open();
+            string qwery = "select r.Reception_Id,  m.Name, m.Birthday, m.Number, r.Doctor, r.Date, r.Money  from Reception r " +
+                "right join MedCard m on m.MedCard_Id = r.MedCard_Id\n";
+
+            bool isAdd = false;
+
+            if (!string.IsNullOrEmpty(PIBTextBox.Text))
+            {
+                isAdd = true;
+                qwery += $"where m.Name like N'%{PIBTextBox.Text}%'";
+            }
+
+
+            else if (!string.IsNullOrEmpty(DoctortextBox.Text))
+            {
+                if (isAdd)
+                    qwery += $" and r.Doctor like N'%{DoctortextBox.Text}%'";
+                else
+                {
+                    isAdd = true;
+                    qwery += $"where r.Doctor like N'%{DoctortextBox.Text}%'";
+                }
+            }
+
+            else  if (!string.IsNullOrEmpty(DatetextBoxFrom.Text))
+            {
+                if (isAdd)
+                    qwery += $" and r.Date Between like N'%{DatetextBoxFrom.Text}' And like N'%{DatetextboxTo.Text}'";
+                else
+                {
+                    isAdd = true;
+                    qwery += $"where r.Date Between '{DatetextBoxFrom.Text}' And  '{ DatetextboxTo.Text}'";
+                }
+            }
+
+            SqlCommand sqlComm = new SqlCommand(qwery, testCon);
+            SqlDataReader sqlDR;
+            sqlDR = sqlComm.ExecuteReader();
+            while (sqlDR.Read())
+            {
+                int index = DataGridView2.Rows.Add();
+                DataGridView2.Rows[index].Cells[0].Value = sqlDR[0];
+                DataGridView2.Rows[index].Cells[1].Value = sqlDR[1];
+                DataGridView2.Rows[index].Cells[2].Value = sqlDR[2];
+                DataGridView2.Rows[index].Cells[3].Value = sqlDR[3];
+                DataGridView2.Rows[index].Cells[4].Value = sqlDR[4];
+                DataGridView2.Rows[index].Cells[5].Value = sqlDR[5];
+                DataGridView2.Rows[index].Cells[6].Value = sqlDR[6];
+            }
+            testCon.Close();
+            DataGridView2.ClearSelection();
+        }
+        private void ExportToExcel()
+        {
+            // Creating a Excel object. // Створення Excel об`єкта
+            Microsoft.Office.Interop.Excel._Application excel = new Microsoft.Office.Interop.Excel.Application();
+            Microsoft.Office.Interop.Excel._Workbook workbook = excel.Workbooks.Add(Type.Missing);
+            Microsoft.Office.Interop.Excel._Worksheet worksheet = null;
+
+            try
+            {
+
+                worksheet = workbook.ActiveSheet;
+
+                worksheet.Name = "ExportedFromDatGrid";
+
+                int cellRowIndex = 1;
+                int cellColumnIndex = 1;
+
+                //Loop through each row and read value from each column. // Цикл - пробіг через всі та читання всіх колонок
+                for (int i = 0; i < DataGridView2.Rows.Count - 1; i++)
+                {
+                    for (int j = 0; j < DataGridView2.Columns.Count; j++)
+                    {
+                        // Excel index starts from 1,1. As first Row would have the Column headers, adding a condition check.  
+                        if (cellRowIndex == 1)
+                        {
+                            worksheet.Cells[cellRowIndex, cellColumnIndex] = DataGridView2.Columns[j].HeaderText;
+                        }
+                        else
+                        {
+                            worksheet.Cells[cellRowIndex, cellColumnIndex] = DataGridView2.Rows[i].Cells[j].Value.ToString();
+                        }
+                        cellColumnIndex++;
+                    }
+                    cellColumnIndex = 1;
+                    cellRowIndex++;
+                }
+
+                //Getting the location and file name of the excel to save from user. // Вказати локацію та ім'я Excel файла  для зберігання.
+                SaveFileDialog saveDialog = new SaveFileDialog();
+                saveDialog.Filter = "Excel files (*.xlsx)|*.xlsx|All files (*.*)|*.*";
+                saveDialog.FilterIndex = 2;
+
+                if (saveDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    workbook.SaveAs(saveDialog.FileName);
+                    MessageBox.Show("Успішно експортовано!!!");
+                }
+            }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                excel.Quit();
+                workbook = null;
+                excel = null;
+            }
+
+        }
+        #endregion
 
         #region Mouse Hover & Leave на TextBox'и зубів
         //-----------TextBoxMouseHover------------------------------------------------------------------------------------------------------------------------------
@@ -711,9 +945,10 @@ namespace Stomatology
                         break;
                     }
             }
-           
+
         }
-#endregion
+        #endregion
+
         #region TextBox'и зубів
         public void TopLeftTextBox_8_MouseHover(object sender, EventArgs e)
         {
@@ -1135,211 +1370,6 @@ namespace Stomatology
         }
 
         #endregion
-
-        private void Main_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void Datetextbox_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar == 44 || e.KeyChar == 47 || e.KeyChar == 45 || e.KeyChar == 42)
-                e.KeyChar = (char)46;
-        }
-        private void Updatebtn_Click(object sender, EventArgs e)
-        {
-            DataGridView2.Rows.Clear();
-            testCon.Open();
-            string qwery = "select r.Reception_Id,  p.Name, p.Birthday, p.Number, r.Doctor, r.Date, r.Money  from Reception r " +
-                "right join Pacient p on p.Pacient_Id = r.Pacient_Id\n";
-
-            bool isAdd = false;
-
-            if (!string.IsNullOrEmpty(PIBTextBox.Text))
-            {
-                isAdd = true;
-                qwery += $"where p.Name like N'%{PIBTextBox.Text}%'";
-            }
-
-            if (!string.IsNullOrEmpty(DoctortextBox.Text))
-            {
-                if (isAdd)
-                    qwery += $" and r.Doctor like N'%{DoctortextBox.Text}%'";
-                else
-                {
-                    isAdd = true;
-                    qwery += $"where r.Doctor like N'%{DoctortextBox.Text}%'";
-                }
-            }
-
-            if (!string.IsNullOrEmpty(DatetextBoxFrom.Text))
-            {
-                if (isAdd)
-                    qwery += $" and r.Date Between '{DatetextBoxFrom.Text}' And '{DatetextboxTo.Text}'";
-                else
-                {
-                    isAdd = true;
-                    qwery += $"where r.Date Between '{DatetextBoxFrom.Text}' And  '{ DatetextboxTo.Text}'";
-                }
-            }
-
-            SqlCommand sqlComm = new SqlCommand(qwery, testCon);
-            SqlDataReader sqlDR;
-            sqlDR = sqlComm.ExecuteReader();
-            while (sqlDR.Read())
-            {
-                int index = DataGridView2.Rows.Add();
-                DataGridView2.Rows[index].Cells[0].Value = sqlDR[0];
-                DataGridView2.Rows[index].Cells[1].Value = sqlDR[1];
-                DataGridView2.Rows[index].Cells[2].Value = sqlDR[2];
-                DataGridView2.Rows[index].Cells[3].Value = sqlDR[3];
-                DataGridView2.Rows[index].Cells[4].Value = sqlDR[4];
-                DataGridView2.Rows[index].Cells[5].Value = sqlDR[5];
-                DataGridView2.Rows[index].Cells[6].Value = sqlDR[6];
-            }
-            testCon.Close();
-            DataGridView2.ClearSelection();
-
-           
-        }
-      
-        private void button9_Click(object sender, EventArgs e)
-        {
-            ExportToExcel();
-        }
-        private void ExportToExcel()
-        {
-            // Creating a Excel object. // Створення Excel об`єкта
-            Microsoft.Office.Interop.Excel._Application excel = new Microsoft.Office.Interop.Excel.Application();
-            Microsoft.Office.Interop.Excel._Workbook workbook = excel.Workbooks.Add(Type.Missing);
-            Microsoft.Office.Interop.Excel._Worksheet worksheet = null;
-
-            try
-            {
-
-                worksheet = workbook.ActiveSheet;
-
-                worksheet.Name = "ExportedFromDatGrid";
-
-                int cellRowIndex = 1;
-                int cellColumnIndex = 1;
-
-                //Loop through each row and read value from each column. // Цикл - пробіг через всі та читання всіх колонок
-                for (int i = 0; i < DataGridView2.Rows.Count - 1; i++)
-                {
-                    for (int j = 0; j < DataGridView2.Columns.Count; j++)
-                    {
-                        // Excel index starts from 1,1. As first Row would have the Column headers, adding a condition check.  
-                        if (cellRowIndex == 1)
-                        {
-                            worksheet.Cells[cellRowIndex, cellColumnIndex] = DataGridView2.Columns[j].HeaderText;
-                        }
-                        else
-                        {
-                            worksheet.Cells[cellRowIndex, cellColumnIndex] = DataGridView2.Rows[i].Cells[j].Value.ToString();
-                        }
-                        cellColumnIndex++;
-                    }
-                    cellColumnIndex = 1;
-                    cellRowIndex++;
-                }
-
-                //Getting the location and file name of the excel to save from user. // Вказати локацію та ім'я Excel файла  для зберігання.
-                SaveFileDialog saveDialog = new SaveFileDialog();
-                saveDialog.Filter = "Excel files (*.xlsx)|*.xlsx|All files (*.*)|*.*";
-                saveDialog.FilterIndex = 2;
-
-                if (saveDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-                {
-                    workbook.SaveAs(saveDialog.FileName);
-                    MessageBox.Show("Успішно експортовано!!!");
-                }
-            }
-            catch (System.Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                excel.Quit();
-                workbook = null;
-                excel = null;
-            }
-
-        }
-
-        private void Arrears()
-        {
-            if (cbArrears.Checked == true)
-            {
-                arrears = 1;
-            }
-            else
-            {
-                arrears = 0;
-            }
-        }
-        private void сbArrears_CheckedChanged(object sender, EventArgs e)
-        {
-            Arrears();
-        }
-
-        private void txtDescription_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-        private void lbChanels_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            text = lbChanels.GetItemText(lbChanels.SelectedItem);
-        }
-
-        private void lbChanels_KeyPress(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                txtDescription.Text += " " + text + " ";
-                lbChanels.Visible = false;
-                lbChanels.ClearSelected();
-                txtDescription.Focus();
-                txtDescription.SelectedText += " ";
-            }
-        }
-        bool numberisthere = false;
-        private void txtDescription_KeyDown(object sender, KeyEventArgs e)
-        {
-
-            if (e.KeyCode == (Keys.P))
-            {
-                lbChanels.Visible = true;
-            }
-            else if (e.KeyCode == Keys.T)
-            {
-                lbChanels.Visible = true;
-            }
-            else if (e.KeyCode == Keys.Space && lbChanels.Visible == true)
-            {
-                lbChanels.Focus();
-            }
-            else
-            {
-                string[] partNumbers = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "0" };
-                Regex number = new Regex(@"^[a-zA-Z0-9]\d{2}[a-zA-Z0-9](-\d{3}){2}[A-Za-z0-9]$");
-                foreach (string partNumber in partNumbers)
-                {
-                    numberisthere = true;
-                }
-                if (numberisthere == false)
-                {
-                    lbChanels.Visible = false;
-                }
-            }
-          
-        }
-
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
     }
 }
 

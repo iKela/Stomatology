@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -46,6 +46,10 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.idMed = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.birthday = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.number = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.AddNewAppoinment = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -159,10 +163,6 @@
             this.dateApp = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.idMed = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.birthday = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.number = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -292,20 +292,44 @@
             this.name,
             this.birthday,
             this.number});
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 12F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.NullValue = null;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 12F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.NullValue = null;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             resources.ApplyResources(this.dataGridView1, "dataGridView1");
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            // 
+            // idMed
+            // 
+            resources.ApplyResources(this.idMed, "idMed");
+            this.idMed.Name = "idMed";
+            this.idMed.ReadOnly = true;
+            // 
+            // name
+            // 
+            resources.ApplyResources(this.name, "name");
+            this.name.Name = "name";
+            this.name.ReadOnly = true;
+            // 
+            // birthday
+            // 
+            resources.ApplyResources(this.birthday, "birthday");
+            this.birthday.Name = "birthday";
+            this.birthday.ReadOnly = true;
+            // 
+            // number
+            // 
+            resources.ApplyResources(this.number, "number");
+            this.number.Name = "number";
+            this.number.ReadOnly = true;
             // 
             // btnUpdate
             // 
@@ -978,7 +1002,6 @@
             this.TabControl.Multiline = true;
             this.TabControl.Name = "TabControl";
             this.TabControl.SelectedIndex = 0;
-            //this.TabControl.Selected += new System.Windows.Forms.TabControlEventHandler(this.TabControl_Selected);
             // 
             // tabFinance
             // 
@@ -1115,30 +1138,6 @@
             resources.ApplyResources(this.price, "price");
             this.price.Name = "price";
             this.price.ReadOnly = true;
-            // 
-            // idMed
-            // 
-            resources.ApplyResources(this.idMed, "idMed");
-            this.idMed.Name = "idMed";
-            this.idMed.ReadOnly = true;
-            // 
-            // name
-            // 
-            resources.ApplyResources(this.name, "name");
-            this.name.Name = "name";
-            this.name.ReadOnly = true;
-            // 
-            // birthday
-            // 
-            resources.ApplyResources(this.birthday, "birthday");
-            this.birthday.Name = "birthday";
-            this.birthday.ReadOnly = true;
-            // 
-            // number
-            // 
-            resources.ApplyResources(this.number, "number");
-            this.number.Name = "number";
-            this.number.ReadOnly = true;
             // 
             // Main
             // 
