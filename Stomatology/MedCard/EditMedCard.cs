@@ -247,11 +247,87 @@ namespace Stomatology
             }
             sqlReader.Close();
             testCon.Close();
+            loadNewAppoiment();
         }
-        private void DateUpdate()
+        private void loadNewAppoiment()
         {
-            try
+            string query1 = $"SELECT * From Reception where MedCard_Id = N'{lblNumberCard.Text}'";
+            var Date    = "";
+            var Doctor  = "";
+            var Info    = "";
+            var Money   = "";
+            var Arrears = "";
+            var tlt1    = "";
+            var tlt2    = "";
+            var tlt3    = "";
+            var tlt4    = "";
+            var tlt5    = "";
+            var tlt6    = "";
+            var tlt7    = "";
+            var tlt8    = "";
+            var trt1    = "";
+            var trt2    = "";
+            var trt3    = "";
+            var trt4    = "";
+            var trt5    = "";
+            var trt6    = "";
+            var trt7    = "";
+            var trt8    = "";
+            var brt1    = "";
+            var brt2    = "";
+            var brt3    = "";
+            var brt4    = "";
+            var brt5    = "";
+            var brt6    = "";
+            var brt7    = "";
+            var brt8    = "";
+                    
+                    
+            testCon.Open();
+            SqlDataReader sqlReader = null;
+            SqlCommand command = new SqlCommand(query1, testCon);
+            sqlReader = command.ExecuteReader();
+
+            while (sqlReader.Read())
             {
+               Date =    sqlReader["Date"].ToString();
+               Doctor  = sqlReader["Doctor"].ToString();
+               Info    = sqlReader["Info"].ToString();
+               Money   = sqlReader["Money"].ToString();
+               Arrears = sqlReader["Arrears"].ToString();
+               tlt1    = sqlReader["tlt1"].ToString();
+               tlt2    = sqlReader["tlt2"].ToString();
+               tlt3    = sqlReader["tlt3"].ToString();
+               tlt4    = sqlReader["tlt4"].ToString();
+               tlt5    = sqlReader["tlt5"].ToString();
+               tlt6    = sqlReader["tlt6"].ToString();
+               tlt7    = sqlReader["tlt7"].ToString();
+               tlt8    = sqlReader["tlt8"].ToString();
+               trt1    = sqlReader["trt1"].ToString();
+               trt2    = sqlReader["trt2"].ToString();
+               trt3    = sqlReader["trt3"].ToString();
+               trt4    = sqlReader["trt4"].ToString();
+               trt5    = sqlReader["trt5"].ToString();
+               trt6    = sqlReader["trt6"].ToString();
+               trt7    = sqlReader["trt7"].ToString();
+               trt8    = sqlReader["trt8"].ToString();
+               brt1    = sqlReader["brt1"].ToString();
+               brt2    = sqlReader["brt2"].ToString();
+               brt3    = sqlReader["brt3"].ToString();
+               brt4    = sqlReader["brt4"].ToString();
+               brt5    = sqlReader["brt5"].ToString();
+               brt6    = sqlReader["brt6"].ToString();
+               brt7    = sqlReader["brt7"].ToString();
+               brt8    = sqlReader["brt8"].ToString();
+                         
+            }            
+            sqlReader.Close();
+            testCon.Close();
+        }                
+        private void DateUpdate()
+        {                
+            try          
+            {            
                 if (cmbPacient.Text.Length == 0)
                     throw new Exception("Не вибрана Мед карта, перевірте ще раз!");
                 else
