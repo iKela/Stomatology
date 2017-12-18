@@ -227,7 +227,6 @@ namespace Stomatology
                     testCon.Close();
 
                 }
-                this.Close();
             }
             catch (Exception ex)
             {

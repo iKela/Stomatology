@@ -17,7 +17,7 @@ namespace Stomatology
         SqlConnection testCon = new SqlConnection
         (@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + Properties.Settings.Default.DateBaseDirection);
 
-        int Arrears; 
+        int Arrears;
 
         string[] Doctor = { "Кричильський Леонід Ростиславович", " Кричильський Тетяна Георгієвна", "Яскал Зоряна Миколаївна" };
 
@@ -62,10 +62,10 @@ namespace Stomatology
             testCon.Close();
             cmbDoctor.Items.AddRange(Doctor);
         }
-        
+
         private void button1_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -853,13 +853,13 @@ namespace Stomatology
         {
             this.Close();
         }
-
-        #region Заповнення Word файла  
         private void btnAdd_Click(object sender, EventArgs e)
         {
             saveToWordFile();
             saveToBD();
         }
+
+        #region Save to BD
         private void saveToBD()
         {
             try
@@ -911,7 +911,8 @@ namespace Stomatology
                 testCon.Close();
             }
         }
-
+        #endregion
+        #region Заповнення Word файла  
         private void saveToWordFile()
         {
             var name = cmbPatient.Text;
