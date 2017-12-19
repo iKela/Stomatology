@@ -251,5 +251,23 @@ namespace Stomatology
         {
             this.Close();
         }
+
+        private void txtName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            onlyCyrillic(sender, e);
+        }
+        private void onlyCyrillic(object sender, KeyPressEventArgs e)
+        {
+            char letter = e.KeyChar;
+            if ((letter< 'А' || letter> 'я') && letter != '\b' && letter != '.')
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtAddress_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            onlyCyrillic(sender, e);
+        }
     }
 }

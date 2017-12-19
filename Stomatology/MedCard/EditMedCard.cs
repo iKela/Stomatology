@@ -108,7 +108,7 @@ namespace Stomatology
             var phoneNumber = txtNumber.Text;
             var address = txtAddress.Text;
             var dateOfCreating = dtpDateOfCreating.Text;
-            var gender = txtGender.Text;
+            var gender = textBox1.Text;
             var diagnosis = txtDiagnosis.Text;
             var complaints = txtComplaints.Text;
             var doneDiseas = txtDoneDiseases.Text;
@@ -231,7 +231,7 @@ namespace Stomatology
             BotRightTextBox_1.Text = "";
 
             txtDateOfBirthday.Text = "";
-            txtGender.Text = "";
+            textBox1.Text = "";
             txtAddress.Text = "";
             txtNumber.Text = "";
             txtDiagnosis.Text = "";
@@ -263,7 +263,7 @@ namespace Stomatology
                 txtNumber.Text =         sqlReader["Number"].ToString();
                 txtAddress.Text =        sqlReader["Adress"].ToString();
                 dtpDateOfCreating.Text = sqlReader["DateMC"].ToString();
-                txtGender.Text =         sqlReader["State"].ToString();
+                textBox1.Text =         sqlReader["State"].ToString();
                 txtDiagnosis.Text =      sqlReader["Diagnos"].ToString();
                 txtComplaints.Text =     sqlReader["Scarg"].ToString();
                 txtDoneDiseases.Text =   sqlReader["PereneseniTaSuputniZahvor"].ToString();
@@ -388,7 +388,7 @@ namespace Stomatology
                     string qweryn = 
                         " UPDATE MedCard " + 
                         $" set DateMC = N'{dtpDateOfCreating.Value.Date.ToString("dd/MM/yyyy")}', " +
-                    $" Name = N'{cmbPacient.Text}', " + $"State = N'{txtGender.Text}', " + $"Birthday = N'{txtDateOfBirthday.Text}', " +
+                    $" Name = N'{cmbPacient.Text}', " + $"State = N'{textBox1.Text}', " + $"Birthday = N'{txtDateOfBirthday.Text}', " +
                     $"Number = N'{txtNumber.Text}', " + $"Adress = N'{txtAddress.Text}', " + $"Diagnos = N'{txtDiagnosis.Text}', " +
                     $"Scarg = N'{txtComplaints.Text}', " + $"PereneseniTaSuputniZahvor =  N'{txtDoneDiseases.Text}', " +
                     $"RozvutokTeperishnogoZahvor = N'{txtCurrentDisease.Text}', " + $"DaniObjektDoslidjennya = N'{txtSurvayData.Text}', " +
@@ -414,6 +414,29 @@ namespace Stomatology
                 //cmbPacient.Text = "";
                // cmbPacient.Items.Clear();
             }
+        }
+        private void onlyCyrillic(object sender, KeyPressEventArgs e)
+        {
+            char letter = e.KeyChar;
+            if ((letter < 'А' || letter > 'я') && letter != '\b' && letter != '.')
+            {
+                e.Handled = true;
+            }
+            
+        }
+
+        private void cmbPacient_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            onlyCyrillic(sender, e);
+        }
+
+        private void txtAddress_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            onlyCyrillic(sender, e);
+        }
+
+        private void txtGender_KeyPress(object sender, KeyPressEventArgs e)
+        {
         }
     }
 }

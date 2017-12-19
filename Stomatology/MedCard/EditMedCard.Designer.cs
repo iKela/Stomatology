@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditMedCard));
             this.label36 = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
-            this.txtGender = new System.Windows.Forms.MaskedTextBox();
             this.label52 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.label51 = new System.Windows.Forms.Label();
@@ -148,6 +147,7 @@
             this.btnSaveAs = new System.Windows.Forms.Button();
             this.lblNumberCard = new System.Windows.Forms.Label();
             this.cmbPacient = new System.Windows.Forms.ComboBox();
+            this.txtGender = new System.Windows.Forms.MaskedTextBox();
             this.tabControl1.SuspendLayout();
             this.tbInfo.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -178,16 +178,6 @@
             this.button6.Size = new System.Drawing.Size(20, 20);
             this.button6.TabIndex = 158;
             this.button6.UseVisualStyleBackColor = true;
-            // 
-            // txtGender
-            // 
-            this.txtGender.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.txtGender.Location = new System.Drawing.Point(466, 173);
-            this.txtGender.Mask = "(0)";
-            this.txtGender.Name = "txtGender";
-            this.txtGender.Size = new System.Drawing.Size(28, 26);
-            this.txtGender.TabIndex = 157;
-            this.txtGender.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label52
             // 
@@ -226,7 +216,7 @@
             this.txtDateOfBirthday.Location = new System.Drawing.Point(182, 42);
             this.txtDateOfBirthday.Name = "txtDateOfBirthday";
             this.txtDateOfBirthday.Size = new System.Drawing.Size(311, 26);
-            this.txtDateOfBirthday.TabIndex = 153;
+            this.txtDateOfBirthday.TabIndex = 2;
             // 
             // txtNumber
             // 
@@ -235,7 +225,7 @@
             this.txtNumber.Mask = "моб +38 (999) 000-0000, дом 0-00-00";
             this.txtNumber.Name = "txtNumber";
             this.txtNumber.Size = new System.Drawing.Size(312, 26);
-            this.txtNumber.TabIndex = 144;
+            this.txtNumber.TabIndex = 3;
             // 
             // button1
             // 
@@ -304,7 +294,8 @@
             this.txtAddress.Location = new System.Drawing.Point(182, 112);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(311, 26);
-            this.txtAddress.TabIndex = 147;
+            this.txtAddress.TabIndex = 4;
+            this.txtAddress.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAddress_KeyPress);
             // 
             // label1
             // 
@@ -404,7 +395,7 @@
             this.txtDiagnosis.Multiline = true;
             this.txtDiagnosis.Name = "txtDiagnosis";
             this.txtDiagnosis.Size = new System.Drawing.Size(433, 94);
-            this.txtDiagnosis.TabIndex = 101;
+            this.txtDiagnosis.TabIndex = 7;
             // 
             // txtControlDate
             // 
@@ -413,7 +404,7 @@
             this.txtControlDate.Multiline = true;
             this.txtControlDate.Name = "txtControlDate";
             this.txtControlDate.Size = new System.Drawing.Size(433, 94);
-            this.txtControlDate.TabIndex = 99;
+            this.txtControlDate.TabIndex = 17;
             // 
             // label46
             // 
@@ -432,7 +423,7 @@
             this.txtDateOfLessons.Multiline = true;
             this.txtDateOfLessons.Name = "txtDateOfLessons";
             this.txtDateOfLessons.Size = new System.Drawing.Size(433, 43);
-            this.txtDateOfLessons.TabIndex = 97;
+            this.txtDateOfLessons.TabIndex = 16;
             // 
             // label45
             // 
@@ -451,7 +442,7 @@
             this.txtColorVita.Multiline = true;
             this.txtColorVita.Name = "txtColorVita";
             this.txtColorVita.Size = new System.Drawing.Size(433, 43);
-            this.txtColorVita.TabIndex = 95;
+            this.txtColorVita.TabIndex = 15;
             // 
             // label44
             // 
@@ -470,7 +461,7 @@
             this.txtXReyData.Multiline = true;
             this.txtXReyData.Name = "txtXReyData";
             this.txtXReyData.Size = new System.Drawing.Size(433, 94);
-            this.txtXReyData.TabIndex = 93;
+            this.txtXReyData.TabIndex = 14;
             // 
             // label43
             // 
@@ -503,7 +494,7 @@
             this.txtMouthState.Multiline = true;
             this.txtMouthState.Name = "txtMouthState";
             this.txtMouthState.Size = new System.Drawing.Size(433, 94);
-            this.txtMouthState.TabIndex = 90;
+            this.txtMouthState.TabIndex = 13;
             // 
             // txtBite
             // 
@@ -512,7 +503,7 @@
             this.txtBite.Multiline = true;
             this.txtBite.Name = "txtBite";
             this.txtBite.Size = new System.Drawing.Size(433, 94);
-            this.txtBite.TabIndex = 88;
+            this.txtBite.TabIndex = 12;
             // 
             // label42
             // 
@@ -531,7 +522,7 @@
             this.txtSurvayData.Multiline = true;
             this.txtSurvayData.Name = "txtSurvayData";
             this.txtSurvayData.Size = new System.Drawing.Size(433, 94);
-            this.txtSurvayData.TabIndex = 86;
+            this.txtSurvayData.TabIndex = 11;
             // 
             // label41
             // 
@@ -550,7 +541,7 @@
             this.txtCurrentDisease.Multiline = true;
             this.txtCurrentDisease.Name = "txtCurrentDisease";
             this.txtCurrentDisease.Size = new System.Drawing.Size(433, 94);
-            this.txtCurrentDisease.TabIndex = 84;
+            this.txtCurrentDisease.TabIndex = 10;
             // 
             // label40
             // 
@@ -569,7 +560,7 @@
             this.txtDoneDiseases.Multiline = true;
             this.txtDoneDiseases.Name = "txtDoneDiseases";
             this.txtDoneDiseases.Size = new System.Drawing.Size(433, 94);
-            this.txtDoneDiseases.TabIndex = 82;
+            this.txtDoneDiseases.TabIndex = 9;
             // 
             // label39
             // 
@@ -588,7 +579,7 @@
             this.txtComplaints.Multiline = true;
             this.txtComplaints.Name = "txtComplaints";
             this.txtComplaints.Size = new System.Drawing.Size(433, 94);
-            this.txtComplaints.TabIndex = 80;
+            this.txtComplaints.TabIndex = 8;
             // 
             // label38
             // 
@@ -1327,7 +1318,7 @@
             this.dtpDateOfCreating.Location = new System.Drawing.Point(182, 144);
             this.dtpDateOfCreating.Name = "dtpDateOfCreating";
             this.dtpDateOfCreating.Size = new System.Drawing.Size(173, 26);
-            this.dtpDateOfCreating.TabIndex = 137;
+            this.dtpDateOfCreating.TabIndex = 5;
             // 
             // openFileDialog1
             // 
@@ -1376,8 +1367,19 @@
             this.cmbPacient.Location = new System.Drawing.Point(182, 10);
             this.cmbPacient.Name = "cmbPacient";
             this.cmbPacient.Size = new System.Drawing.Size(310, 21);
-            this.cmbPacient.TabIndex = 165;
+            this.cmbPacient.TabIndex = 1;
             this.cmbPacient.SelectedValueChanged += new System.EventHandler(this.cmbPacient_SelectedValueChanged);
+            this.cmbPacient.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbPacient_KeyPress);
+            // 
+            // txtGender
+            // 
+            this.txtGender.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txtGender.Location = new System.Drawing.Point(466, 173);
+            this.txtGender.Mask = "(0)";
+            this.txtGender.Name = "txtGender";
+            this.txtGender.Size = new System.Drawing.Size(28, 26);
+            this.txtGender.TabIndex = 6;
+            this.txtGender.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // EditMedCard
             // 
@@ -1434,7 +1436,6 @@
         #endregion
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.MaskedTextBox txtGender;
         private System.Windows.Forms.Label label52;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label51;
@@ -1551,5 +1552,6 @@
         private System.Windows.Forms.Button btnSaveAs;
         private System.Windows.Forms.Label lblNumberCard;
         private System.Windows.Forms.ComboBox cmbPacient;
+        private System.Windows.Forms.MaskedTextBox txtGender;
     }
 }

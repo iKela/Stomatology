@@ -193,7 +193,7 @@
             this.txtDiagnosis.Multiline = true;
             this.txtDiagnosis.Name = "txtDiagnosis";
             this.txtDiagnosis.Size = new System.Drawing.Size(433, 91);
-            this.txtDiagnosis.TabIndex = 101;
+            this.txtDiagnosis.TabIndex = 7;
             // 
             // txtControlDate
             // 
@@ -202,7 +202,7 @@
             this.txtControlDate.Multiline = true;
             this.txtControlDate.Name = "txtControlDate";
             this.txtControlDate.Size = new System.Drawing.Size(433, 94);
-            this.txtControlDate.TabIndex = 99;
+            this.txtControlDate.TabIndex = 17;
             // 
             // label46
             // 
@@ -221,7 +221,7 @@
             this.txtDateOfLessons.Multiline = true;
             this.txtDateOfLessons.Name = "txtDateOfLessons";
             this.txtDateOfLessons.Size = new System.Drawing.Size(433, 43);
-            this.txtDateOfLessons.TabIndex = 97;
+            this.txtDateOfLessons.TabIndex = 16;
             // 
             // label45
             // 
@@ -240,7 +240,7 @@
             this.txtColorVita.Multiline = true;
             this.txtColorVita.Name = "txtColorVita";
             this.txtColorVita.Size = new System.Drawing.Size(433, 43);
-            this.txtColorVita.TabIndex = 95;
+            this.txtColorVita.TabIndex = 15;
             // 
             // label44
             // 
@@ -259,7 +259,7 @@
             this.txtXReyData.Multiline = true;
             this.txtXReyData.Name = "txtXReyData";
             this.txtXReyData.Size = new System.Drawing.Size(433, 94);
-            this.txtXReyData.TabIndex = 93;
+            this.txtXReyData.TabIndex = 14;
             // 
             // label43
             // 
@@ -292,7 +292,7 @@
             this.txtMouthState.Multiline = true;
             this.txtMouthState.Name = "txtMouthState";
             this.txtMouthState.Size = new System.Drawing.Size(433, 94);
-            this.txtMouthState.TabIndex = 90;
+            this.txtMouthState.TabIndex = 13;
             // 
             // txtBite
             // 
@@ -301,7 +301,7 @@
             this.txtBite.Multiline = true;
             this.txtBite.Name = "txtBite";
             this.txtBite.Size = new System.Drawing.Size(433, 94);
-            this.txtBite.TabIndex = 88;
+            this.txtBite.TabIndex = 12;
             // 
             // label42
             // 
@@ -320,7 +320,7 @@
             this.txtSurvayData.Multiline = true;
             this.txtSurvayData.Name = "txtSurvayData";
             this.txtSurvayData.Size = new System.Drawing.Size(433, 94);
-            this.txtSurvayData.TabIndex = 86;
+            this.txtSurvayData.TabIndex = 11;
             // 
             // label41
             // 
@@ -339,7 +339,7 @@
             this.txtCurrentDisease.Multiline = true;
             this.txtCurrentDisease.Name = "txtCurrentDisease";
             this.txtCurrentDisease.Size = new System.Drawing.Size(433, 94);
-            this.txtCurrentDisease.TabIndex = 84;
+            this.txtCurrentDisease.TabIndex = 10;
             // 
             // label40
             // 
@@ -358,7 +358,7 @@
             this.txtDoneDiseases.Multiline = true;
             this.txtDoneDiseases.Name = "txtDoneDiseases";
             this.txtDoneDiseases.Size = new System.Drawing.Size(433, 94);
-            this.txtDoneDiseases.TabIndex = 82;
+            this.txtDoneDiseases.TabIndex = 9;
             // 
             // label39
             // 
@@ -377,7 +377,7 @@
             this.txtComplaints.Multiline = true;
             this.txtComplaints.Name = "txtComplaints";
             this.txtComplaints.Size = new System.Drawing.Size(433, 94);
-            this.txtComplaints.TabIndex = 80;
+            this.txtComplaints.TabIndex = 8;
             // 
             // label38
             // 
@@ -418,7 +418,7 @@
             this.txtDateOfBirthday.Location = new System.Drawing.Point(182, 43);
             this.txtDateOfBirthday.Name = "txtDateOfBirthday";
             this.txtDateOfBirthday.Size = new System.Drawing.Size(311, 26);
-            this.txtDateOfBirthday.TabIndex = 129;
+            this.txtDateOfBirthday.TabIndex = 2;
             // 
             // txtNumber
             // 
@@ -427,7 +427,7 @@
             this.txtNumber.Mask = "моб +38 (999) 000-0000, дом 0-00-00";
             this.txtNumber.Name = "txtNumber";
             this.txtNumber.Size = new System.Drawing.Size(312, 26);
-            this.txtNumber.TabIndex = 120;
+            this.txtNumber.TabIndex = 3;
             // 
             // button1
             // 
@@ -496,7 +496,8 @@
             this.txtAddress.Location = new System.Drawing.Point(182, 113);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(311, 26);
-            this.txtAddress.TabIndex = 123;
+            this.txtAddress.TabIndex = 4;
+            this.txtAddress.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAddress_KeyPress);
             // 
             // label1
             // 
@@ -1279,7 +1280,7 @@
             this.dtpDateOfCreating.Location = new System.Drawing.Point(182, 145);
             this.dtpDateOfCreating.Name = "dtpDateOfCreating";
             this.dtpDateOfCreating.Size = new System.Drawing.Size(173, 26);
-            this.dtpDateOfCreating.TabIndex = 104;
+            this.dtpDateOfCreating.TabIndex = 5;
             // 
             // label52
             // 
@@ -1296,7 +1297,8 @@
             this.txtName.Location = new System.Drawing.Point(182, 9);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(311, 26);
-            this.txtName.TabIndex = 119;
+            this.txtName.TabIndex = 1;
+            this.txtName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtName_KeyPress);
             // 
             // txtGender
             // 
@@ -1305,7 +1307,7 @@
             this.txtGender.Mask = "(0)";
             this.txtGender.Name = "txtGender";
             this.txtGender.Size = new System.Drawing.Size(28, 26);
-            this.txtGender.TabIndex = 133;
+            this.txtGender.TabIndex = 6;
             this.txtGender.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // button6
@@ -1339,7 +1341,7 @@
             this.SaveAs.Location = new System.Drawing.Point(12, 668);
             this.SaveAs.Name = "SaveAs";
             this.SaveAs.Size = new System.Drawing.Size(75, 23);
-            this.SaveAs.TabIndex = 136;
+            this.SaveAs.TabIndex = 18;
             this.SaveAs.Text = "Створити";
             this.SaveAs.UseVisualStyleBackColor = true;
             this.SaveAs.Click += new System.EventHandler(this.SaveAs_Click);
@@ -1353,7 +1355,7 @@
             this.btnExit.Location = new System.Drawing.Point(483, 668);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 23);
-            this.btnExit.TabIndex = 137;
+            this.btnExit.TabIndex = 19;
             this.btnExit.Text = "Вихід";
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.button7_Click);
@@ -1363,7 +1365,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(570, 703);
+            this.ClientSize = new System.Drawing.Size(569, 703);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.SaveAs);
             this.Controls.Add(this.label36);
@@ -1387,7 +1389,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dtpDateOfCreating);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MinimumSize = new System.Drawing.Size(517, 327);
+            this.MaximumSize = new System.Drawing.Size(585, 742);
+            this.MinimumSize = new System.Drawing.Size(585, 742);
             this.Name = "NewMedCard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Створення нової медичної картки";
