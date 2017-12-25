@@ -33,6 +33,7 @@
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.lblVersion = new System.Windows.Forms.Label();
+            this.BGW = new System.ComponentModel.BackgroundWorker();
             this.SuspendLayout();
             // 
             // progressBar1
@@ -44,7 +45,6 @@
             this.progressBar1.Step = 1;
             this.progressBar1.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.progressBar1.TabIndex = 0;
-            this.progressBar1.Click += new System.EventHandler(this.progressBar1_Click);
             // 
             // timer1
             // 
@@ -76,6 +76,7 @@
             this.Name = "StartingForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "StartingForm";
+            this.Load += new System.EventHandler(this.StartingForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -86,5 +87,6 @@
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label lblVersion;
+        private System.ComponentModel.BackgroundWorker BGW;
     }
 }
