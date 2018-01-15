@@ -5097,7 +5097,7 @@
     <value>Zoom</value>
   </data>
   <data name="btnUpdate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 142</value>
+    <value>3, 155</value>
   </data>
   <data name="btnUpdate.Size" type="System.Drawing.Size, System.Drawing">
     <value>40, 40</value>
@@ -5118,7 +5118,7 @@
     <value>1</value>
   </data>
   <data name="AddNewAppoinment.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Left</value>
+    <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="AddNewAppoinment.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -5692,7 +5692,7 @@
     <value>NoControl</value>
   </data>
   <data name="AddNewAppoinment.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 87</value>
+    <value>3, 98</value>
   </data>
   <data name="AddNewAppoinment.Size" type="System.Drawing.Size, System.Drawing">
     <value>43, 38</value>
@@ -11271,7 +11271,7 @@
     <value>3</value>
   </data>
   <data name="EditPatient.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Left</value>
+    <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="EditPatient.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -11524,7 +11524,7 @@
     <value>NoControl</value>
   </data>
   <data name="EditPatient.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 42</value>
+    <value>3, 53</value>
   </data>
   <data name="EditPatient.Size" type="System.Drawing.Size, System.Drawing">
     <value>43, 38</value>
@@ -11545,7 +11545,7 @@
     <value>4</value>
   </data>
   <data name="AddNewPatient.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Left</value>
+    <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="AddNewPatient.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -12082,7 +12082,7 @@
     <value>NoControl</value>
   </data>
   <data name="AddNewPatient.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, -2</value>
+    <value>3, 9</value>
   </data>
   <data name="AddNewPatient.Size" type="System.Drawing.Size, System.Drawing">
     <value>43, 38</value>
@@ -12112,7 +12112,7 @@
     <value>NoControl</value>
   </data>
   <data name="button2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>195, 869</value>
+    <value>195, 867</value>
   </data>
   <data name="button2.Size" type="System.Drawing.Size, System.Drawing">
     <value>141, 23</value>
@@ -12142,7 +12142,7 @@
     <value>NoControl</value>
   </data>
   <data name="button3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>460, 857</value>
+    <value>460, 855</value>
   </data>
   <data name="button3.Size" type="System.Drawing.Size, System.Drawing">
     <value>141, 23</value>
@@ -12175,7 +12175,7 @@
     <value>NoControl</value>
   </data>
   <data name="button4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>607, 869</value>
+    <value>607, 867</value>
   </data>
   <data name="button4.Size" type="System.Drawing.Size, System.Drawing">
     <value>141, 23</value>
