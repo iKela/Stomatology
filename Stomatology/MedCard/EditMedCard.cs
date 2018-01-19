@@ -101,7 +101,7 @@ namespace Stomatology
             var phoneNumber = txtNumber.Text;
             var address = txtAddress.Text;
             var dateOfCreating = dtpDateOfCreating.Text;
-            var gender = textBox1.Text;
+            var gender = txtGender.Text;
             var diagnosis = txtDiagnosis.Text;
             var complaints = txtComplaints.Text;
             var doneDiseas = txtDoneDiseases.Text;
@@ -199,30 +199,8 @@ namespace Stomatology
             TopLeftTextBox_7.Text = "";  BotLeftTextBox_2.Text = ""; TopRightTextBox_7.Text = ""; BotRightTextBox_2.Text = "";
             TopLeftTextBox_8.Text = "";  BotLeftTextBox_1.Text = ""; TopRightTextBox_8.Text = ""; BotRightTextBox_1.Text = "";
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-            
-            
-            
-            
-            
-            
-            
-            
-
+            txtGender.Text = "";
             txtDateOfBirthday.Text = "";
-            textBox1.Text = "";
             txtAddress.Text = "";
             txtNumber.Text = "";
             txtDiagnosis.Text = "";
@@ -254,7 +232,7 @@ namespace Stomatology
                 txtNumber.Text =         sqlReader["Number"].ToString();
                 txtAddress.Text =        sqlReader["Adress"].ToString();
                 dtpDateOfCreating.Text = sqlReader["DateMC"].ToString();
-                textBox1.Text =         sqlReader["State"].ToString();
+                txtGender.Text =         sqlReader["State"].ToString();
                 txtDiagnosis.Text =      sqlReader["Diagnos"].ToString();
                 txtComplaints.Text =     sqlReader["Scarg"].ToString();
                 txtDoneDiseases.Text =   sqlReader["PereneseniTaSuputniZahvor"].ToString();
@@ -376,7 +354,7 @@ namespace Stomatology
                     string qweryn = 
                         " UPDATE MedCard " + 
                         $" set DateMC = N'{dtpDateOfCreating.Value.Date.ToString("dd/MM/yyyy")}', " +
-                    $" Name = N'{cmbPacient.Text}', " + $"State = N'{textBox1.Text}', " + $"Birthday = N'{txtDateOfBirthday.Text}', " +
+                    $" Name = N'{cmbPacient.Text}', " + $"State = N'{txtGender.Text}', " + $"Birthday = N'{txtDateOfBirthday.Text}', " +
                     $"Number = N'{txtNumber.Text}', " + $"Adress = N'{txtAddress.Text}', " + $"Diagnos = N'{txtDiagnosis.Text}', " +
                     $"Scarg = N'{txtComplaints.Text}', " + $"PereneseniTaSuputniZahvor =  N'{txtDoneDiseases.Text}', " +
                     $"RozvutokTeperishnogoZahvor = N'{txtCurrentDisease.Text}', " + $"DaniObjektDoslidjennya = N'{txtSurvayData.Text}', " +
