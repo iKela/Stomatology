@@ -83,11 +83,6 @@ namespace Stomatology
                 return;
             }
         }
-
-        private void StartingForm_Load(object sender, EventArgs e)
-        {
-            
-        }
         #region Background Tasks :
         private void BGW_ProgressChanged(object sender, ProgressChangedEventArgs e)
         {
