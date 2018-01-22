@@ -9,40 +9,40 @@ namespace Stomatology
 {
     public partial class StartingForm : Form
     {
-        #region Trial Section :
+        //#region Trial Section :
 
-        [DllImport("InSoPDentistry.dll", EntryPoint = "ReadSettingsStr", CharSet = CharSet.Ansi)]
-        static extern uint InitTrial(String aKeyCode, IntPtr aHWnd);
+        //[DllImport("InSoPDentistry.dll", EntryPoint = "ReadSettingsStr", CharSet = CharSet.Ansi)]
+        //static extern uint InitTrial(String aKeyCode, IntPtr aHWnd);
 
 
-        [DllImport("InSoPDentistry.dll", EntryPoint = "DisplayRegistrationStr", CharSet = CharSet.Ansi)]
-        static extern uint DisplayRegistration(String aKeyCode, IntPtr aHWnd);
+        //[DllImport("InSoPDentistry.dll", EntryPoint = "DisplayRegistrationStr", CharSet = CharSet.Ansi)]
+        //static extern uint DisplayRegistration(String aKeyCode, IntPtr aHWnd);
 
-        private const string kLibraryKey = "5D15358D11B719CDF20636D26047383D49F0AF61677D36DB0C933A7E7CDB7B424C521971C68A";
+        //private const string kLibraryKey = "5D15358D11B719CDF20636D26047383D49F0AF61677D36DB0C933A7E7CDB7B424C521971C68A";
 
-        private static void OnInit()
-        {
-            try
-            {
-                Process process = Process.GetCurrentProcess();
-                InitTrial(kLibraryKey, process.MainWindowHandle);
-            }
-            catch (DllNotFoundException ex)
-            {
-                MessageBox.Show(ex.ToString());
-                Process.GetCurrentProcess().Kill();
-            }
-            catch (Exception ex1)
-            {
-                MessageBox.Show(ex1.ToString());
-            }
-        }
-        #endregion
+        //private static void OnInit()
+        //{
+        //    try
+        //    {
+        //        Process process = Process.GetCurrentProcess();
+        //        InitTrial(kLibraryKey, process.MainWindowHandle);
+        //    }
+        //    catch (DllNotFoundException ex)
+        //    {
+        //        MessageBox.Show(ex.ToString());
+        //        Process.GetCurrentProcess().Kill();
+        //    }
+        //    catch (Exception ex1)
+        //    {
+        //        MessageBox.Show(ex1.ToString());
+        //    }
+        //}
+        //#endregion
         public StartingForm()
         {
-            OnInit();
-            if (!BGW.IsBusy)
-                BGW.RunWorkerAsync();
+           // OnInit();
+            //if (!BGW.IsBusy)
+              //  BGW.RunWorkerAsync();
             InitializeComponent();
             this.lblVersion.Text = String.Format("v. {0}", AssemblyVersion);
             timer1.Start();
