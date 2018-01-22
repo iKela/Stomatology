@@ -1028,6 +1028,11 @@ namespace Stomatology
                 Arrears = 0;
             }
         }
+
+        private void buttonZ1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }      
 }                                                                                            
                                                                                              

@@ -179,16 +179,20 @@
             this.txtDescription = new System.Windows.Forms.TextBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.chbArrears = new System.Windows.Forms.CheckBox();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.btnClose = new System.Windows.Forms.Button();
+            this.panelZ1 = new PanelZ.PanelZ();
+            this.panelZ2 = new PanelZ.PanelZ();
+            this.buttonZ1 = new Custom_Controls_in_CS.ButtonZ();
+            this.btnAdd = new Custom_Controls_in_CS.ButtonZ();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TeethPanel)).BeginInit();
+            this.panelZ1.SuspendLayout();
+            this.panelZ2.SuspendLayout();
             this.SuspendLayout();
             // 
             // dtpDate
             // 
             this.dtpDate.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.dtpDate.Location = new System.Drawing.Point(116, 78);
+            this.dtpDate.Location = new System.Drawing.Point(116, 116);
             this.dtpDate.Name = "dtpDate";
             this.dtpDate.Size = new System.Drawing.Size(137, 26);
             this.dtpDate.TabIndex = 0;
@@ -197,8 +201,9 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(38, 49);
+            this.label1.Location = new System.Drawing.Point(38, 86);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(65, 19);
             this.label1.TabIndex = 2;
@@ -207,8 +212,9 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(38, 84);
+            this.label2.Location = new System.Drawing.Point(38, 121);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(44, 19);
             this.label2.TabIndex = 3;
@@ -876,7 +882,7 @@
             // txtMoney
             // 
             this.txtMoney.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.txtMoney.Location = new System.Drawing.Point(116, 107);
+            this.txtMoney.Location = new System.Drawing.Point(116, 145);
             this.txtMoney.Name = "txtMoney";
             this.txtMoney.Size = new System.Drawing.Size(137, 26);
             this.txtMoney.TabIndex = 73;
@@ -884,8 +890,9 @@
             // label36
             // 
             this.label36.AutoSize = true;
+            this.label36.BackColor = System.Drawing.Color.Transparent;
             this.label36.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label36.Location = new System.Drawing.Point(38, 112);
+            this.label36.Location = new System.Drawing.Point(38, 149);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(42, 19);
             this.label36.TabIndex = 74;
@@ -894,8 +901,9 @@
             // UAHLabel
             // 
             this.UAHLabel.AutoSize = true;
+            this.UAHLabel.BackColor = System.Drawing.Color.Transparent;
             this.UAHLabel.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.UAHLabel.Location = new System.Drawing.Point(259, 110);
+            this.UAHLabel.Location = new System.Drawing.Point(259, 147);
             this.UAHLabel.Name = "UAHLabel";
             this.UAHLabel.Size = new System.Drawing.Size(35, 18);
             this.UAHLabel.TabIndex = 76;
@@ -903,42 +911,45 @@
             // 
             // button3
             // 
+            this.button3.BackColor = System.Drawing.Color.Transparent;
             this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button3.Enabled = false;
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(12, 49);
+            this.button3.Location = new System.Drawing.Point(12, 86);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(20, 20);
             this.button3.TabIndex = 77;
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             // 
             // button4
             // 
+            this.button4.BackColor = System.Drawing.Color.Transparent;
             this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
             this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button4.Enabled = false;
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(12, 84);
+            this.button4.Location = new System.Drawing.Point(12, 121);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(20, 20);
             this.button4.TabIndex = 78;
-            this.button4.UseVisualStyleBackColor = true;
+            this.button4.UseVisualStyleBackColor = false;
             // 
             // button6
             // 
+            this.button6.BackColor = System.Drawing.Color.Transparent;
             this.button6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button6.BackgroundImage")));
             this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button6.Enabled = false;
             this.button6.FlatAppearance.BorderSize = 0;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Location = new System.Drawing.Point(12, 110);
+            this.button6.Location = new System.Drawing.Point(12, 147);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(20, 20);
             this.button6.TabIndex = 80;
-            this.button6.UseVisualStyleBackColor = true;
+            this.button6.UseVisualStyleBackColor = false;
             // 
             // button7
             // 
@@ -946,7 +957,7 @@
             this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button7.FlatAppearance.BorderSize = 0;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Location = new System.Drawing.Point(295, 108);
+            this.button7.Location = new System.Drawing.Point(295, 146);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(20, 20);
             this.button7.TabIndex = 81;
@@ -957,7 +968,7 @@
             // 
             this.cmbPatient.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.cmbPatient.FormattingEnabled = true;
-            this.cmbPatient.Location = new System.Drawing.Point(116, 41);
+            this.cmbPatient.Location = new System.Drawing.Point(116, 79);
             this.cmbPatient.Name = "cmbPatient";
             this.cmbPatient.Size = new System.Drawing.Size(402, 27);
             this.cmbPatient.TabIndex = 1;
@@ -966,29 +977,31 @@
             // 
             this.cmbDoctor.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.cmbDoctor.FormattingEnabled = true;
-            this.cmbDoctor.Location = new System.Drawing.Point(116, 9);
+            this.cmbDoctor.Location = new System.Drawing.Point(116, 47);
             this.cmbDoctor.Name = "cmbDoctor";
             this.cmbDoctor.Size = new System.Drawing.Size(402, 27);
             this.cmbDoctor.TabIndex = 82;
             // 
             // button8
             // 
+            this.button8.BackColor = System.Drawing.Color.Transparent;
             this.button8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button8.BackgroundImage")));
             this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button8.Enabled = false;
             this.button8.FlatAppearance.BorderSize = 0;
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Location = new System.Drawing.Point(12, 12);
+            this.button8.Location = new System.Drawing.Point(12, 49);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(20, 20);
             this.button8.TabIndex = 84;
-            this.button8.UseVisualStyleBackColor = true;
+            this.button8.UseVisualStyleBackColor = false;
             // 
             // label37
             // 
             this.label37.AutoSize = true;
+            this.label37.BackColor = System.Drawing.Color.Transparent;
             this.label37.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label37.Location = new System.Drawing.Point(38, 12);
+            this.label37.Location = new System.Drawing.Point(38, 49);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(48, 19);
             this.label37.TabIndex = 83;
@@ -996,21 +1009,22 @@
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
             this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button1.Enabled = false;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button1.Location = new System.Drawing.Point(12, 140);
+            this.button1.Location = new System.Drawing.Point(12, 177);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(20, 23);
             this.button1.TabIndex = 312;
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // BotRightTextBox8
             // 
-            this.BotRightTextBox8.Location = new System.Drawing.Point(527, 450);
+            this.BotRightTextBox8.Location = new System.Drawing.Point(527, 488);
             this.BotRightTextBox8.Multiline = true;
             this.BotRightTextBox8.Name = "BotRightTextBox8";
             this.BotRightTextBox8.Size = new System.Drawing.Size(21, 21);
@@ -1020,7 +1034,7 @@
             // 
             // BotRightTextBox7
             // 
-            this.BotRightTextBox7.Location = new System.Drawing.Point(489, 450);
+            this.BotRightTextBox7.Location = new System.Drawing.Point(489, 488);
             this.BotRightTextBox7.Multiline = true;
             this.BotRightTextBox7.Name = "BotRightTextBox7";
             this.BotRightTextBox7.Size = new System.Drawing.Size(21, 21);
@@ -1030,7 +1044,7 @@
             // 
             // BotRightTextBox6
             // 
-            this.BotRightTextBox6.Location = new System.Drawing.Point(446, 450);
+            this.BotRightTextBox6.Location = new System.Drawing.Point(446, 488);
             this.BotRightTextBox6.Multiline = true;
             this.BotRightTextBox6.Name = "BotRightTextBox6";
             this.BotRightTextBox6.Size = new System.Drawing.Size(21, 21);
@@ -1040,7 +1054,7 @@
             // 
             // BotRightTextBox5
             // 
-            this.BotRightTextBox5.Location = new System.Drawing.Point(410, 450);
+            this.BotRightTextBox5.Location = new System.Drawing.Point(410, 488);
             this.BotRightTextBox5.Multiline = true;
             this.BotRightTextBox5.Name = "BotRightTextBox5";
             this.BotRightTextBox5.Size = new System.Drawing.Size(21, 21);
@@ -1050,7 +1064,7 @@
             // 
             // BotRightTextBox4
             // 
-            this.BotRightTextBox4.Location = new System.Drawing.Point(380, 450);
+            this.BotRightTextBox4.Location = new System.Drawing.Point(380, 488);
             this.BotRightTextBox4.Multiline = true;
             this.BotRightTextBox4.Name = "BotRightTextBox4";
             this.BotRightTextBox4.Size = new System.Drawing.Size(21, 21);
@@ -1060,7 +1074,7 @@
             // 
             // BotRightTextBox3
             // 
-            this.BotRightTextBox3.Location = new System.Drawing.Point(352, 450);
+            this.BotRightTextBox3.Location = new System.Drawing.Point(352, 488);
             this.BotRightTextBox3.Multiline = true;
             this.BotRightTextBox3.Name = "BotRightTextBox3";
             this.BotRightTextBox3.Size = new System.Drawing.Size(21, 21);
@@ -1070,7 +1084,7 @@
             // 
             // BotRightTextBox2
             // 
-            this.BotRightTextBox2.Location = new System.Drawing.Point(323, 450);
+            this.BotRightTextBox2.Location = new System.Drawing.Point(323, 488);
             this.BotRightTextBox2.Multiline = true;
             this.BotRightTextBox2.Name = "BotRightTextBox2";
             this.BotRightTextBox2.Size = new System.Drawing.Size(21, 21);
@@ -1080,7 +1094,7 @@
             // 
             // BotRightTextBox1
             // 
-            this.BotRightTextBox1.Location = new System.Drawing.Point(296, 450);
+            this.BotRightTextBox1.Location = new System.Drawing.Point(296, 488);
             this.BotRightTextBox1.Multiline = true;
             this.BotRightTextBox1.Name = "BotRightTextBox1";
             this.BotRightTextBox1.Size = new System.Drawing.Size(21, 21);
@@ -1090,7 +1104,7 @@
             // 
             // BotLeftTextBox8
             // 
-            this.BotLeftTextBox8.Location = new System.Drawing.Point(25, 450);
+            this.BotLeftTextBox8.Location = new System.Drawing.Point(25, 488);
             this.BotLeftTextBox8.Multiline = true;
             this.BotLeftTextBox8.Name = "BotLeftTextBox8";
             this.BotLeftTextBox8.Size = new System.Drawing.Size(21, 21);
@@ -1100,7 +1114,7 @@
             // 
             // BotLeftTextBox7
             // 
-            this.BotLeftTextBox7.Location = new System.Drawing.Point(66, 450);
+            this.BotLeftTextBox7.Location = new System.Drawing.Point(66, 488);
             this.BotLeftTextBox7.Multiline = true;
             this.BotLeftTextBox7.Name = "BotLeftTextBox7";
             this.BotLeftTextBox7.Size = new System.Drawing.Size(21, 21);
@@ -1110,7 +1124,7 @@
             // 
             // BotLeftTextBox6
             // 
-            this.BotLeftTextBox6.Location = new System.Drawing.Point(108, 450);
+            this.BotLeftTextBox6.Location = new System.Drawing.Point(108, 488);
             this.BotLeftTextBox6.Multiline = true;
             this.BotLeftTextBox6.Name = "BotLeftTextBox6";
             this.BotLeftTextBox6.Size = new System.Drawing.Size(21, 21);
@@ -1120,7 +1134,7 @@
             // 
             // BotLeftTextBox5
             // 
-            this.BotLeftTextBox5.Location = new System.Drawing.Point(144, 450);
+            this.BotLeftTextBox5.Location = new System.Drawing.Point(144, 488);
             this.BotLeftTextBox5.Multiline = true;
             this.BotLeftTextBox5.Name = "BotLeftTextBox5";
             this.BotLeftTextBox5.Size = new System.Drawing.Size(21, 21);
@@ -1130,7 +1144,7 @@
             // 
             // BotLeftTextBox4
             // 
-            this.BotLeftTextBox4.Location = new System.Drawing.Point(171, 450);
+            this.BotLeftTextBox4.Location = new System.Drawing.Point(171, 488);
             this.BotLeftTextBox4.Multiline = true;
             this.BotLeftTextBox4.Name = "BotLeftTextBox4";
             this.BotLeftTextBox4.Size = new System.Drawing.Size(21, 21);
@@ -1139,7 +1153,7 @@
             // 
             // BotLeftTextBox3
             // 
-            this.BotLeftTextBox3.Location = new System.Drawing.Point(198, 450);
+            this.BotLeftTextBox3.Location = new System.Drawing.Point(198, 488);
             this.BotLeftTextBox3.Multiline = true;
             this.BotLeftTextBox3.Name = "BotLeftTextBox3";
             this.BotLeftTextBox3.Size = new System.Drawing.Size(21, 21);
@@ -1148,7 +1162,7 @@
             // 
             // BotLeftTextBox2
             // 
-            this.BotLeftTextBox2.Location = new System.Drawing.Point(225, 450);
+            this.BotLeftTextBox2.Location = new System.Drawing.Point(225, 488);
             this.BotLeftTextBox2.Multiline = true;
             this.BotLeftTextBox2.Name = "BotLeftTextBox2";
             this.BotLeftTextBox2.Size = new System.Drawing.Size(21, 21);
@@ -1157,7 +1171,7 @@
             // 
             // BotLeftTextBox1
             // 
-            this.BotLeftTextBox1.Location = new System.Drawing.Point(252, 450);
+            this.BotLeftTextBox1.Location = new System.Drawing.Point(252, 488);
             this.BotLeftTextBox1.Multiline = true;
             this.BotLeftTextBox1.Name = "BotLeftTextBox1";
             this.BotLeftTextBox1.Size = new System.Drawing.Size(21, 21);
@@ -1169,7 +1183,7 @@
             this.label38.AutoSize = true;
             this.label38.Font = new System.Drawing.Font("Arial", 12F);
             this.label38.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label38.Location = new System.Drawing.Point(524, 432);
+            this.label38.Location = new System.Drawing.Point(524, 470);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(26, 18);
             this.label38.TabIndex = 295;
@@ -1180,7 +1194,7 @@
             this.label39.AutoSize = true;
             this.label39.Font = new System.Drawing.Font("Arial", 12F);
             this.label39.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label39.Location = new System.Drawing.Point(486, 432);
+            this.label39.Location = new System.Drawing.Point(486, 470);
             this.label39.Name = "label39";
             this.label39.Size = new System.Drawing.Size(26, 18);
             this.label39.TabIndex = 294;
@@ -1191,7 +1205,7 @@
             this.label40.AutoSize = true;
             this.label40.Font = new System.Drawing.Font("Arial", 12F);
             this.label40.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label40.Location = new System.Drawing.Point(443, 432);
+            this.label40.Location = new System.Drawing.Point(443, 470);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(26, 18);
             this.label40.TabIndex = 293;
@@ -1202,7 +1216,7 @@
             this.label41.AutoSize = true;
             this.label41.Font = new System.Drawing.Font("Arial", 12F);
             this.label41.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label41.Location = new System.Drawing.Point(407, 432);
+            this.label41.Location = new System.Drawing.Point(407, 470);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(26, 18);
             this.label41.TabIndex = 292;
@@ -1213,7 +1227,7 @@
             this.label42.AutoSize = true;
             this.label42.Font = new System.Drawing.Font("Arial", 12F);
             this.label42.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label42.Location = new System.Drawing.Point(377, 432);
+            this.label42.Location = new System.Drawing.Point(377, 470);
             this.label42.Name = "label42";
             this.label42.Size = new System.Drawing.Size(26, 18);
             this.label42.TabIndex = 291;
@@ -1224,7 +1238,7 @@
             this.label43.AutoSize = true;
             this.label43.Font = new System.Drawing.Font("Arial", 12F);
             this.label43.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label43.Location = new System.Drawing.Point(349, 432);
+            this.label43.Location = new System.Drawing.Point(349, 470);
             this.label43.Name = "label43";
             this.label43.Size = new System.Drawing.Size(26, 18);
             this.label43.TabIndex = 290;
@@ -1235,7 +1249,7 @@
             this.label44.AutoSize = true;
             this.label44.Font = new System.Drawing.Font("Arial", 12F);
             this.label44.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label44.Location = new System.Drawing.Point(320, 432);
+            this.label44.Location = new System.Drawing.Point(320, 470);
             this.label44.Name = "label44";
             this.label44.Size = new System.Drawing.Size(26, 18);
             this.label44.TabIndex = 289;
@@ -1246,7 +1260,7 @@
             this.label45.AutoSize = true;
             this.label45.Font = new System.Drawing.Font("Arial", 12F);
             this.label45.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label45.Location = new System.Drawing.Point(22, 432);
+            this.label45.Location = new System.Drawing.Point(22, 470);
             this.label45.Name = "label45";
             this.label45.Size = new System.Drawing.Size(26, 18);
             this.label45.TabIndex = 288;
@@ -1257,7 +1271,7 @@
             this.label46.AutoSize = true;
             this.label46.Font = new System.Drawing.Font("Arial", 12F);
             this.label46.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label46.Location = new System.Drawing.Point(63, 432);
+            this.label46.Location = new System.Drawing.Point(63, 470);
             this.label46.Name = "label46";
             this.label46.Size = new System.Drawing.Size(26, 18);
             this.label46.TabIndex = 287;
@@ -1268,7 +1282,7 @@
             this.label47.AutoSize = true;
             this.label47.Font = new System.Drawing.Font("Arial", 12F);
             this.label47.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label47.Location = new System.Drawing.Point(105, 432);
+            this.label47.Location = new System.Drawing.Point(105, 470);
             this.label47.Name = "label47";
             this.label47.Size = new System.Drawing.Size(26, 18);
             this.label47.TabIndex = 286;
@@ -1279,7 +1293,7 @@
             this.label48.AutoSize = true;
             this.label48.Font = new System.Drawing.Font("Arial", 12F);
             this.label48.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label48.Location = new System.Drawing.Point(141, 432);
+            this.label48.Location = new System.Drawing.Point(141, 470);
             this.label48.Name = "label48";
             this.label48.Size = new System.Drawing.Size(26, 18);
             this.label48.TabIndex = 285;
@@ -1290,7 +1304,7 @@
             this.label49.AutoSize = true;
             this.label49.Font = new System.Drawing.Font("Arial", 12F);
             this.label49.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label49.Location = new System.Drawing.Point(168, 432);
+            this.label49.Location = new System.Drawing.Point(168, 470);
             this.label49.Name = "label49";
             this.label49.Size = new System.Drawing.Size(26, 18);
             this.label49.TabIndex = 284;
@@ -1301,7 +1315,7 @@
             this.label50.AutoSize = true;
             this.label50.Font = new System.Drawing.Font("Arial", 12F);
             this.label50.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label50.Location = new System.Drawing.Point(195, 432);
+            this.label50.Location = new System.Drawing.Point(195, 470);
             this.label50.Name = "label50";
             this.label50.Size = new System.Drawing.Size(26, 18);
             this.label50.TabIndex = 283;
@@ -1312,7 +1326,7 @@
             this.label51.AutoSize = true;
             this.label51.Font = new System.Drawing.Font("Arial", 12F);
             this.label51.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label51.Location = new System.Drawing.Point(222, 432);
+            this.label51.Location = new System.Drawing.Point(222, 470);
             this.label51.Name = "label51";
             this.label51.Size = new System.Drawing.Size(26, 18);
             this.label51.TabIndex = 282;
@@ -1323,7 +1337,7 @@
             this.label52.AutoSize = true;
             this.label52.Font = new System.Drawing.Font("Arial", 12F);
             this.label52.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label52.Location = new System.Drawing.Point(293, 432);
+            this.label52.Location = new System.Drawing.Point(293, 470);
             this.label52.Name = "label52";
             this.label52.Size = new System.Drawing.Size(26, 18);
             this.label52.TabIndex = 281;
@@ -1334,7 +1348,7 @@
             this.label53.AutoSize = true;
             this.label53.Font = new System.Drawing.Font("Arial", 12F);
             this.label53.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label53.Location = new System.Drawing.Point(249, 432);
+            this.label53.Location = new System.Drawing.Point(249, 470);
             this.label53.Name = "label53";
             this.label53.Size = new System.Drawing.Size(26, 18);
             this.label53.TabIndex = 280;
@@ -1345,7 +1359,7 @@
             this.label54.AutoSize = true;
             this.label54.Font = new System.Drawing.Font("Arial", 12F);
             this.label54.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label54.Location = new System.Drawing.Point(524, 410);
+            this.label54.Location = new System.Drawing.Point(524, 448);
             this.label54.Name = "label54";
             this.label54.Size = new System.Drawing.Size(26, 18);
             this.label54.TabIndex = 279;
@@ -1356,7 +1370,7 @@
             this.label55.AutoSize = true;
             this.label55.Font = new System.Drawing.Font("Arial", 12F);
             this.label55.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label55.Location = new System.Drawing.Point(486, 410);
+            this.label55.Location = new System.Drawing.Point(486, 448);
             this.label55.Name = "label55";
             this.label55.Size = new System.Drawing.Size(26, 18);
             this.label55.TabIndex = 278;
@@ -1367,7 +1381,7 @@
             this.label56.AutoSize = true;
             this.label56.Font = new System.Drawing.Font("Arial", 12F);
             this.label56.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label56.Location = new System.Drawing.Point(443, 410);
+            this.label56.Location = new System.Drawing.Point(443, 448);
             this.label56.Name = "label56";
             this.label56.Size = new System.Drawing.Size(26, 18);
             this.label56.TabIndex = 277;
@@ -1378,7 +1392,7 @@
             this.label57.AutoSize = true;
             this.label57.Font = new System.Drawing.Font("Arial", 12F);
             this.label57.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label57.Location = new System.Drawing.Point(407, 410);
+            this.label57.Location = new System.Drawing.Point(407, 448);
             this.label57.Name = "label57";
             this.label57.Size = new System.Drawing.Size(26, 18);
             this.label57.TabIndex = 276;
@@ -1389,7 +1403,7 @@
             this.label58.AutoSize = true;
             this.label58.Font = new System.Drawing.Font("Arial", 12F);
             this.label58.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label58.Location = new System.Drawing.Point(377, 410);
+            this.label58.Location = new System.Drawing.Point(377, 448);
             this.label58.Name = "label58";
             this.label58.Size = new System.Drawing.Size(26, 18);
             this.label58.TabIndex = 275;
@@ -1400,7 +1414,7 @@
             this.label59.AutoSize = true;
             this.label59.Font = new System.Drawing.Font("Arial", 12F);
             this.label59.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label59.Location = new System.Drawing.Point(349, 410);
+            this.label59.Location = new System.Drawing.Point(349, 448);
             this.label59.Name = "label59";
             this.label59.Size = new System.Drawing.Size(26, 18);
             this.label59.TabIndex = 274;
@@ -1411,7 +1425,7 @@
             this.label60.AutoSize = true;
             this.label60.Font = new System.Drawing.Font("Arial", 12F);
             this.label60.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label60.Location = new System.Drawing.Point(320, 410);
+            this.label60.Location = new System.Drawing.Point(320, 448);
             this.label60.Name = "label60";
             this.label60.Size = new System.Drawing.Size(26, 18);
             this.label60.TabIndex = 273;
@@ -1422,7 +1436,7 @@
             this.label61.AutoSize = true;
             this.label61.Font = new System.Drawing.Font("Arial", 12F);
             this.label61.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label61.Location = new System.Drawing.Point(22, 410);
+            this.label61.Location = new System.Drawing.Point(22, 448);
             this.label61.Name = "label61";
             this.label61.Size = new System.Drawing.Size(26, 18);
             this.label61.TabIndex = 272;
@@ -1433,7 +1447,7 @@
             this.label62.AutoSize = true;
             this.label62.Font = new System.Drawing.Font("Arial", 12F);
             this.label62.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label62.Location = new System.Drawing.Point(63, 410);
+            this.label62.Location = new System.Drawing.Point(63, 448);
             this.label62.Name = "label62";
             this.label62.Size = new System.Drawing.Size(26, 18);
             this.label62.TabIndex = 271;
@@ -1444,7 +1458,7 @@
             this.label63.AutoSize = true;
             this.label63.Font = new System.Drawing.Font("Arial", 12F);
             this.label63.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label63.Location = new System.Drawing.Point(105, 410);
+            this.label63.Location = new System.Drawing.Point(105, 448);
             this.label63.Name = "label63";
             this.label63.Size = new System.Drawing.Size(26, 18);
             this.label63.TabIndex = 270;
@@ -1455,7 +1469,7 @@
             this.label64.AutoSize = true;
             this.label64.Font = new System.Drawing.Font("Arial", 12F);
             this.label64.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label64.Location = new System.Drawing.Point(141, 410);
+            this.label64.Location = new System.Drawing.Point(141, 448);
             this.label64.Name = "label64";
             this.label64.Size = new System.Drawing.Size(26, 18);
             this.label64.TabIndex = 269;
@@ -1466,7 +1480,7 @@
             this.label65.AutoSize = true;
             this.label65.Font = new System.Drawing.Font("Arial", 12F);
             this.label65.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label65.Location = new System.Drawing.Point(168, 410);
+            this.label65.Location = new System.Drawing.Point(168, 448);
             this.label65.Name = "label65";
             this.label65.Size = new System.Drawing.Size(26, 18);
             this.label65.TabIndex = 268;
@@ -1477,7 +1491,7 @@
             this.label66.AutoSize = true;
             this.label66.Font = new System.Drawing.Font("Arial", 12F);
             this.label66.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label66.Location = new System.Drawing.Point(195, 410);
+            this.label66.Location = new System.Drawing.Point(195, 448);
             this.label66.Name = "label66";
             this.label66.Size = new System.Drawing.Size(26, 18);
             this.label66.TabIndex = 267;
@@ -1488,7 +1502,7 @@
             this.label67.AutoSize = true;
             this.label67.Font = new System.Drawing.Font("Arial", 12F);
             this.label67.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label67.Location = new System.Drawing.Point(222, 410);
+            this.label67.Location = new System.Drawing.Point(222, 448);
             this.label67.Name = "label67";
             this.label67.Size = new System.Drawing.Size(26, 18);
             this.label67.TabIndex = 266;
@@ -1496,7 +1510,7 @@
             // 
             // TopRightTextBox8
             // 
-            this.TopRightTextBox8.Location = new System.Drawing.Point(527, 389);
+            this.TopRightTextBox8.Location = new System.Drawing.Point(527, 427);
             this.TopRightTextBox8.Multiline = true;
             this.TopRightTextBox8.Name = "TopRightTextBox8";
             this.TopRightTextBox8.Size = new System.Drawing.Size(21, 21);
@@ -1506,7 +1520,7 @@
             // 
             // TopRightTextBox7
             // 
-            this.TopRightTextBox7.Location = new System.Drawing.Point(489, 389);
+            this.TopRightTextBox7.Location = new System.Drawing.Point(489, 427);
             this.TopRightTextBox7.Multiline = true;
             this.TopRightTextBox7.Name = "TopRightTextBox7";
             this.TopRightTextBox7.Size = new System.Drawing.Size(21, 21);
@@ -1516,7 +1530,7 @@
             // 
             // TopRightTextBox6
             // 
-            this.TopRightTextBox6.Location = new System.Drawing.Point(446, 389);
+            this.TopRightTextBox6.Location = new System.Drawing.Point(446, 427);
             this.TopRightTextBox6.Multiline = true;
             this.TopRightTextBox6.Name = "TopRightTextBox6";
             this.TopRightTextBox6.Size = new System.Drawing.Size(21, 21);
@@ -1526,7 +1540,7 @@
             // 
             // TopRightTextBox5
             // 
-            this.TopRightTextBox5.Location = new System.Drawing.Point(410, 389);
+            this.TopRightTextBox5.Location = new System.Drawing.Point(410, 427);
             this.TopRightTextBox5.Multiline = true;
             this.TopRightTextBox5.Name = "TopRightTextBox5";
             this.TopRightTextBox5.Size = new System.Drawing.Size(21, 21);
@@ -1536,7 +1550,7 @@
             // 
             // TopRightTextBox4
             // 
-            this.TopRightTextBox4.Location = new System.Drawing.Point(380, 389);
+            this.TopRightTextBox4.Location = new System.Drawing.Point(380, 427);
             this.TopRightTextBox4.Multiline = true;
             this.TopRightTextBox4.Name = "TopRightTextBox4";
             this.TopRightTextBox4.Size = new System.Drawing.Size(21, 21);
@@ -1546,7 +1560,7 @@
             // 
             // TopRightTextBox3
             // 
-            this.TopRightTextBox3.Location = new System.Drawing.Point(352, 389);
+            this.TopRightTextBox3.Location = new System.Drawing.Point(352, 427);
             this.TopRightTextBox3.Multiline = true;
             this.TopRightTextBox3.Name = "TopRightTextBox3";
             this.TopRightTextBox3.Size = new System.Drawing.Size(21, 21);
@@ -1556,7 +1570,7 @@
             // 
             // TopRightTextBox2
             // 
-            this.TopRightTextBox2.Location = new System.Drawing.Point(323, 389);
+            this.TopRightTextBox2.Location = new System.Drawing.Point(323, 427);
             this.TopRightTextBox2.Multiline = true;
             this.TopRightTextBox2.Name = "TopRightTextBox2";
             this.TopRightTextBox2.Size = new System.Drawing.Size(21, 21);
@@ -1566,7 +1580,7 @@
             // 
             // TopRightTextBox1
             // 
-            this.TopRightTextBox1.Location = new System.Drawing.Point(296, 389);
+            this.TopRightTextBox1.Location = new System.Drawing.Point(296, 427);
             this.TopRightTextBox1.Multiline = true;
             this.TopRightTextBox1.Name = "TopRightTextBox1";
             this.TopRightTextBox1.Size = new System.Drawing.Size(21, 21);
@@ -1577,7 +1591,7 @@
             // TopLeftTextBox8
             // 
             this.TopLeftTextBox8.AccessibleName = "";
-            this.TopLeftTextBox8.Location = new System.Drawing.Point(25, 389);
+            this.TopLeftTextBox8.Location = new System.Drawing.Point(25, 427);
             this.TopLeftTextBox8.Multiline = true;
             this.TopLeftTextBox8.Name = "TopLeftTextBox8";
             this.TopLeftTextBox8.Size = new System.Drawing.Size(21, 21);
@@ -1587,7 +1601,7 @@
             // 
             // TopLeftTextBox7
             // 
-            this.TopLeftTextBox7.Location = new System.Drawing.Point(66, 389);
+            this.TopLeftTextBox7.Location = new System.Drawing.Point(66, 427);
             this.TopLeftTextBox7.Multiline = true;
             this.TopLeftTextBox7.Name = "TopLeftTextBox7";
             this.TopLeftTextBox7.Size = new System.Drawing.Size(21, 21);
@@ -1597,7 +1611,7 @@
             // 
             // TopLeftTextBox6
             // 
-            this.TopLeftTextBox6.Location = new System.Drawing.Point(108, 389);
+            this.TopLeftTextBox6.Location = new System.Drawing.Point(108, 427);
             this.TopLeftTextBox6.Multiline = true;
             this.TopLeftTextBox6.Name = "TopLeftTextBox6";
             this.TopLeftTextBox6.Size = new System.Drawing.Size(21, 21);
@@ -1607,7 +1621,7 @@
             // 
             // TopLeftTextBox5
             // 
-            this.TopLeftTextBox5.Location = new System.Drawing.Point(144, 389);
+            this.TopLeftTextBox5.Location = new System.Drawing.Point(144, 427);
             this.TopLeftTextBox5.Multiline = true;
             this.TopLeftTextBox5.Name = "TopLeftTextBox5";
             this.TopLeftTextBox5.Size = new System.Drawing.Size(21, 21);
@@ -1618,7 +1632,7 @@
             // TopLeftTextBox4
             // 
             this.TopLeftTextBox4.AccessibleName = "";
-            this.TopLeftTextBox4.Location = new System.Drawing.Point(171, 389);
+            this.TopLeftTextBox4.Location = new System.Drawing.Point(171, 427);
             this.TopLeftTextBox4.Multiline = true;
             this.TopLeftTextBox4.Name = "TopLeftTextBox4";
             this.TopLeftTextBox4.Size = new System.Drawing.Size(21, 21);
@@ -1628,7 +1642,7 @@
             // 
             // TopLeftTextBox3
             // 
-            this.TopLeftTextBox3.Location = new System.Drawing.Point(198, 389);
+            this.TopLeftTextBox3.Location = new System.Drawing.Point(198, 427);
             this.TopLeftTextBox3.Multiline = true;
             this.TopLeftTextBox3.Name = "TopLeftTextBox3";
             this.TopLeftTextBox3.Size = new System.Drawing.Size(21, 21);
@@ -1638,7 +1652,7 @@
             // 
             // TopLeftTextBox2
             // 
-            this.TopLeftTextBox2.Location = new System.Drawing.Point(225, 389);
+            this.TopLeftTextBox2.Location = new System.Drawing.Point(225, 427);
             this.TopLeftTextBox2.Multiline = true;
             this.TopLeftTextBox2.Name = "TopLeftTextBox2";
             this.TopLeftTextBox2.Size = new System.Drawing.Size(21, 21);
@@ -1648,7 +1662,7 @@
             // 
             // TopLeftTextBox1
             // 
-            this.TopLeftTextBox1.Location = new System.Drawing.Point(252, 389);
+            this.TopLeftTextBox1.Location = new System.Drawing.Point(252, 427);
             this.TopLeftTextBox1.Multiline = true;
             this.TopLeftTextBox1.Name = "TopLeftTextBox1";
             this.TopLeftTextBox1.Size = new System.Drawing.Size(21, 21);
@@ -1661,7 +1675,7 @@
             this.label68.AutoSize = true;
             this.label68.Font = new System.Drawing.Font("Arial", 12F);
             this.label68.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label68.Location = new System.Drawing.Point(293, 410);
+            this.label68.Location = new System.Drawing.Point(293, 448);
             this.label68.Name = "label68";
             this.label68.Size = new System.Drawing.Size(26, 18);
             this.label68.TabIndex = 250;
@@ -1672,7 +1686,7 @@
             this.label69.AutoSize = true;
             this.label69.Font = new System.Drawing.Font("Arial", 12F);
             this.label69.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label69.Location = new System.Drawing.Point(249, 410);
+            this.label69.Location = new System.Drawing.Point(249, 448);
             this.label69.Name = "label69";
             this.label69.Size = new System.Drawing.Size(25, 18);
             this.label69.TabIndex = 249;
@@ -1680,9 +1694,10 @@
             // 
             // TeethPanel
             // 
+            this.TeethPanel.BackColor = System.Drawing.Color.Transparent;
             this.TeethPanel.Image = ((System.Drawing.Image)(resources.GetObject("TeethPanel.Image")));
             this.TeethPanel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.TeethPanel.Location = new System.Drawing.Point(12, 289);
+            this.TeethPanel.Location = new System.Drawing.Point(12, 327);
             this.TeethPanel.Name = "TeethPanel";
             this.TeethPanel.Size = new System.Drawing.Size(545, 275);
             this.TeethPanel.TabIndex = 248;
@@ -1691,9 +1706,10 @@
             // label70
             // 
             this.label70.AutoSize = true;
+            this.label70.BackColor = System.Drawing.Color.Transparent;
             this.label70.Font = new System.Drawing.Font("Arial", 12F);
             this.label70.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label70.Location = new System.Drawing.Point(39, 141);
+            this.label70.Location = new System.Drawing.Point(39, 178);
             this.label70.Name = "label70";
             this.label70.Size = new System.Drawing.Size(48, 18);
             this.label70.TabIndex = 247;
@@ -1702,7 +1718,7 @@
             // txtDescription
             // 
             this.txtDescription.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.txtDescription.Location = new System.Drawing.Point(116, 140);
+            this.txtDescription.Location = new System.Drawing.Point(116, 178);
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Size = new System.Drawing.Size(402, 122);
@@ -1715,53 +1731,127 @@
             // chbArrears
             // 
             this.chbArrears.AutoSize = true;
+            this.chbArrears.BackColor = System.Drawing.Color.Transparent;
             this.chbArrears.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.chbArrears.Location = new System.Drawing.Point(321, 108);
+            this.chbArrears.Location = new System.Drawing.Point(321, 145);
             this.chbArrears.Name = "chbArrears";
             this.chbArrears.Size = new System.Drawing.Size(59, 23);
             this.chbArrears.TabIndex = 319;
             this.chbArrears.Text = "Борг";
-            this.chbArrears.UseVisualStyleBackColor = true;
+            this.chbArrears.UseVisualStyleBackColor = false;
             this.chbArrears.CheckedChanged += new System.EventHandler(this.chbArrears_CheckedChanged);
+            // 
+            // panelZ1
+            // 
+            this.panelZ1.Controls.Add(this.btnAdd);
+            this.panelZ1.Controls.Add(this.panelZ2);
+            this.panelZ1.Controls.Add(this.chbArrears);
+            this.panelZ1.Controls.Add(this.TeethPanel);
+            this.panelZ1.Controls.Add(this.button1);
+            this.panelZ1.Controls.Add(this.label70);
+            this.panelZ1.Controls.Add(this.label1);
+            this.panelZ1.Controls.Add(this.label2);
+            this.panelZ1.Controls.Add(this.label36);
+            this.panelZ1.Controls.Add(this.UAHLabel);
+            this.panelZ1.Controls.Add(this.button3);
+            this.panelZ1.Controls.Add(this.button4);
+            this.panelZ1.Controls.Add(this.button6);
+            this.panelZ1.Controls.Add(this.label37);
+            this.panelZ1.Controls.Add(this.button8);
+            this.panelZ1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelZ1.EndColor = System.Drawing.Color.Black;
+            this.panelZ1.GradientAngle = 90;
+            this.panelZ1.Location = new System.Drawing.Point(0, 0);
+            this.panelZ1.Name = "panelZ1";
+            this.panelZ1.Size = new System.Drawing.Size(572, 644);
+            this.panelZ1.StartColor = System.Drawing.Color.White;
+            this.panelZ1.TabIndex = 323;
+            this.panelZ1.Transparent1 = 150;
+            this.panelZ1.Transparent2 = 150;
+            // 
+            // panelZ2
+            // 
+            this.panelZ2.Controls.Add(this.buttonZ1);
+            this.panelZ2.EndColor = System.Drawing.Color.White;
+            this.panelZ2.GradientAngle = 90;
+            this.panelZ2.Location = new System.Drawing.Point(0, 0);
+            this.panelZ2.Name = "panelZ2";
+            this.panelZ2.Size = new System.Drawing.Size(572, 41);
+            this.panelZ2.StartColor = System.Drawing.Color.Black;
+            this.panelZ2.TabIndex = 0;
+            this.panelZ2.Transparent1 = 255;
+            this.panelZ2.Transparent2 = 50;
+            // 
+            // buttonZ1
+            // 
+            this.buttonZ1.BackColor = System.Drawing.Color.Transparent;
+            this.buttonZ1.BorderColor = System.Drawing.Color.Transparent;
+            this.buttonZ1.BorderWidth = 1;
+            this.buttonZ1.ButtonShape = Custom_Controls_in_CS.ButtonZ.ButtonsShapes.Rect;
+            this.buttonZ1.ButtonText = "X";
+            this.buttonZ1.EndColor = System.Drawing.Color.Black;
+            this.buttonZ1.FlatAppearance.BorderSize = 0;
+            this.buttonZ1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.buttonZ1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.buttonZ1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonZ1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonZ1.ForeColor = System.Drawing.Color.White;
+            this.buttonZ1.GradientAngle = 90;
+            this.buttonZ1.Location = new System.Drawing.Point(527, 3);
+            this.buttonZ1.MouseClickColor1 = System.Drawing.Color.Red;
+            this.buttonZ1.MouseClickColor2 = System.Drawing.Color.Red;
+            this.buttonZ1.MouseHoverColor1 = System.Drawing.Color.Black;
+            this.buttonZ1.MouseHoverColor2 = System.Drawing.Color.Black;
+            this.buttonZ1.Name = "buttonZ1";
+            this.buttonZ1.ShowButtontext = true;
+            this.buttonZ1.Size = new System.Drawing.Size(35, 25);
+            this.buttonZ1.StartColor = System.Drawing.Color.Black;
+            this.buttonZ1.TabIndex = 0;
+            this.buttonZ1.Text = "X";
+            this.buttonZ1.TextLocation_X = 10;
+            this.buttonZ1.TextLocation_Y = 4;
+            this.buttonZ1.Transparent1 = 250;
+            this.buttonZ1.Transparent2 = 250;
+            this.buttonZ1.UseVisualStyleBackColor = false;
+            this.buttonZ1.Click += new System.EventHandler(this.buttonZ1_Click);
             // 
             // btnAdd
             // 
-            this.btnAdd.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAdd.BackgroundImage")));
-            this.btnAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAdd.BackColor = System.Drawing.Color.Transparent;
+            this.btnAdd.BorderColor = System.Drawing.Color.Transparent;
+            this.btnAdd.BorderWidth = 2;
+            this.btnAdd.ButtonShape = Custom_Controls_in_CS.ButtonZ.ButtonsShapes.RoundRect;
+            this.btnAdd.ButtonText = "Додати";
+            this.btnAdd.EndColor = System.Drawing.Color.White;
             this.btnAdd.FlatAppearance.BorderSize = 0;
+            this.btnAdd.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnAdd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.Location = new System.Drawing.Point(12, 570);
+            this.btnAdd.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnAdd.GradientAngle = 90;
+            this.btnAdd.Location = new System.Drawing.Point(235, 601);
+            this.btnAdd.MouseClickColor1 = System.Drawing.Color.Yellow;
+            this.btnAdd.MouseClickColor2 = System.Drawing.Color.Red;
+            this.btnAdd.MouseHoverColor1 = System.Drawing.Color.Turquoise;
+            this.btnAdd.MouseHoverColor2 = System.Drawing.Color.DarkSlateGray;
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(75, 23);
-            this.btnAdd.TabIndex = 321;
-            this.btnAdd.Text = "Додати";
-            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.ShowButtontext = true;
+            this.btnAdd.Size = new System.Drawing.Size(100, 40);
+            this.btnAdd.StartColor = System.Drawing.Color.Black;
+            this.btnAdd.TabIndex = 320;
+            this.btnAdd.TextLocation_X = 22;
+            this.btnAdd.TextLocation_Y = 10;
+            this.btnAdd.Transparent1 = 50;
+            this.btnAdd.Transparent2 = 250;
+            this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // btnClose
-            // 
-            this.btnClose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClose.BackgroundImage")));
-            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnClose.FlatAppearance.BorderSize = 0;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Location = new System.Drawing.Point(482, 570);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(75, 23);
-            this.btnClose.TabIndex = 322;
-            this.btnClose.Text = "Вихід";
-            this.btnClose.UseVisualStyleBackColor = true;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // NewAppoinment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(572, 605);
-            this.Controls.Add(this.btnClose);
-            this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.chbArrears);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(572, 644);
             this.Controls.Add(this.BotRightTextBox8);
             this.Controls.Add(this.BotRightTextBox7);
             this.Controls.Add(this.BotRightTextBox6);
@@ -1826,32 +1916,24 @@
             this.Controls.Add(this.TopLeftTextBox1);
             this.Controls.Add(this.label68);
             this.Controls.Add(this.label69);
-            this.Controls.Add(this.TeethPanel);
-            this.Controls.Add(this.label70);
             this.Controls.Add(this.txtDescription);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.label37);
             this.Controls.Add(this.cmbDoctor);
             this.Controls.Add(this.button7);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.UAHLabel);
-            this.Controls.Add(this.label36);
             this.Controls.Add(this.txtMoney);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.cmbPatient);
             this.Controls.Add(this.dtpDate);
+            this.Controls.Add(this.panelZ1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(588, 644);
-            this.MinimumSize = new System.Drawing.Size(588, 644);
             this.Name = "NewAppoinment";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Новий прийом";
             this.Load += new System.EventHandler(this.NewAppoinment_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TeethPanel)).EndInit();
+            this.panelZ1.ResumeLayout(false);
+            this.panelZ1.PerformLayout();
+            this.panelZ2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2009,7 +2091,9 @@
         private System.Windows.Forms.TextBox txtDescription;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.CheckBox chbArrears;
-        private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.Button btnClose;
+        private PanelZ.PanelZ panelZ1;
+        private PanelZ.PanelZ panelZ2;
+        private Custom_Controls_in_CS.ButtonZ buttonZ1;
+        private Custom_Controls_in_CS.ButtonZ btnAdd;
     }
 }

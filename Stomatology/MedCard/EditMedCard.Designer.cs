@@ -143,11 +143,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.dtpDateOfCreating = new System.Windows.Forms.DateTimePicker();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.btnExit = new System.Windows.Forms.Button();
-            this.btnSaveAs = new System.Windows.Forms.Button();
             this.lblNumberCard = new System.Windows.Forms.Label();
             this.cmbPacient = new System.Windows.Forms.ComboBox();
             this.txtGender = new System.Windows.Forms.MaskedTextBox();
+            this.panelZ1 = new PanelZ.PanelZ();
+            this.panelZ2 = new PanelZ.PanelZ();
+            this.btnSaveAs = new Custom_Controls_in_CS.ButtonZ();
+            this.buttonZ1 = new Custom_Controls_in_CS.ButtonZ();
             this.tabControl1.SuspendLayout();
             this.tbInfo.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -155,12 +157,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tpSurvayPlan.SuspendLayout();
             this.tpTreatmentPlan.SuspendLayout();
+            this.panelZ1.SuspendLayout();
+            this.panelZ2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label36
             // 
+            this.label36.BackColor = System.Drawing.Color.Transparent;
             this.label36.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label36.Location = new System.Drawing.Point(38, 176);
+            this.label36.Location = new System.Drawing.Point(42, 214);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(58, 20);
             this.label36.TabIndex = 159;
@@ -168,21 +173,23 @@
             // 
             // button6
             // 
+            this.button6.BackColor = System.Drawing.Color.Transparent;
             this.button6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button6.BackgroundImage")));
             this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button6.Enabled = false;
             this.button6.FlatAppearance.BorderSize = 0;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Location = new System.Drawing.Point(12, 173);
+            this.button6.Location = new System.Drawing.Point(16, 211);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(20, 20);
             this.button6.TabIndex = 158;
-            this.button6.UseVisualStyleBackColor = true;
+            this.button6.UseVisualStyleBackColor = false;
             // 
             // label52
             // 
+            this.label52.BackColor = System.Drawing.Color.Transparent;
             this.label52.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label52.Location = new System.Drawing.Point(179, 176);
+            this.label52.Location = new System.Drawing.Point(183, 214);
             this.label52.Name = "label52";
             this.label52.Size = new System.Drawing.Size(185, 20);
             this.label52.TabIndex = 156;
@@ -190,21 +197,22 @@
             // 
             // button4
             // 
+            this.button4.BackColor = System.Drawing.Color.Transparent;
             this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
             this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button4.Enabled = false;
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(12, 150);
+            this.button4.Location = new System.Drawing.Point(16, 188);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(20, 20);
             this.button4.TabIndex = 139;
-            this.button4.UseVisualStyleBackColor = true;
+            this.button4.UseVisualStyleBackColor = false;
             // 
             // label51
             // 
             this.label51.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label51.Location = new System.Drawing.Point(38, 12);
+            this.label51.Location = new System.Drawing.Point(42, 52);
             this.label51.Name = "label51";
             this.label51.Size = new System.Drawing.Size(23, 20);
             this.label51.TabIndex = 154;
@@ -213,7 +221,7 @@
             // txtDateOfBirthday
             // 
             this.txtDateOfBirthday.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.txtDateOfBirthday.Location = new System.Drawing.Point(182, 42);
+            this.txtDateOfBirthday.Location = new System.Drawing.Point(186, 82);
             this.txtDateOfBirthday.Name = "txtDateOfBirthday";
             this.txtDateOfBirthday.Size = new System.Drawing.Size(311, 26);
             this.txtDateOfBirthday.TabIndex = 2;
@@ -221,7 +229,7 @@
             // txtNumber
             // 
             this.txtNumber.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.txtNumber.Location = new System.Drawing.Point(182, 75);
+            this.txtNumber.Location = new System.Drawing.Point(186, 115);
             this.txtNumber.Mask = "моб +38 (999) 000-0000, дом 0-00-00";
             this.txtNumber.Name = "txtNumber";
             this.txtNumber.Size = new System.Drawing.Size(312, 26);
@@ -230,28 +238,30 @@
             // button1
             // 
             this.button1.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.button1.BackColor = System.Drawing.Color.Transparent;
             this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button1.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.button1.Enabled = false;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(12, 45);
+            this.button1.Location = new System.Drawing.Point(16, 83);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(20, 20);
             this.button1.TabIndex = 152;
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // button5
             // 
             this.button5.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.button5.BackColor = System.Drawing.Color.Transparent;
             this.button5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button5.BackgroundImage")));
             this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button5.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.button5.Enabled = false;
             this.button5.FlatAppearance.BorderSize = 0;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Location = new System.Drawing.Point(12, 115);
+            this.button5.Location = new System.Drawing.Point(16, 153);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(20, 20);
             this.button5.TabIndex = 151;
@@ -260,6 +270,7 @@
             // button2
             // 
             this.button2.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.button2.BackColor = System.Drawing.Color.Transparent;
             this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button2.Cursor = System.Windows.Forms.Cursors.Arrow;
@@ -267,31 +278,32 @@
             this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Red;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(12, 12);
+            this.button2.Location = new System.Drawing.Point(16, 50);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(20, 20);
             this.button2.TabIndex = 150;
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             // 
             // button3
             // 
             this.button3.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.button3.BackColor = System.Drawing.Color.Transparent;
             this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button3.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.button3.Enabled = false;
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(12, 78);
+            this.button3.Location = new System.Drawing.Point(16, 116);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(20, 20);
             this.button3.TabIndex = 149;
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             // 
             // txtAddress
             // 
             this.txtAddress.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.txtAddress.Location = new System.Drawing.Point(182, 112);
+            this.txtAddress.Location = new System.Drawing.Point(186, 152);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(311, 26);
             this.txtAddress.TabIndex = 4;
@@ -299,8 +311,9 @@
             // 
             // label1
             // 
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(38, 115);
+            this.label1.Location = new System.Drawing.Point(42, 153);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(137, 20);
             this.label1.TabIndex = 148;
@@ -308,8 +321,9 @@
             // 
             // label48
             // 
+            this.label48.BackColor = System.Drawing.Color.Transparent;
             this.label48.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label48.Location = new System.Drawing.Point(38, 80);
+            this.label48.Location = new System.Drawing.Point(42, 118);
             this.label48.Name = "label48";
             this.label48.Size = new System.Drawing.Size(137, 20);
             this.label48.TabIndex = 146;
@@ -317,8 +331,9 @@
             // 
             // label49
             // 
+            this.label49.BackColor = System.Drawing.Color.Transparent;
             this.label49.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label49.Location = new System.Drawing.Point(38, 45);
+            this.label49.Location = new System.Drawing.Point(42, 83);
             this.label49.Name = "label49";
             this.label49.Size = new System.Drawing.Size(129, 20);
             this.label49.TabIndex = 145;
@@ -327,7 +342,7 @@
             // label50
             // 
             this.label50.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label50.Location = new System.Drawing.Point(132, 11);
+            this.label50.Location = new System.Drawing.Point(136, 49);
             this.label50.Name = "label50";
             this.label50.Size = new System.Drawing.Size(44, 20);
             this.label50.TabIndex = 142;
@@ -340,10 +355,10 @@
             this.tabControl1.Controls.Add(this.tpSurvayPlan);
             this.tabControl1.Controls.Add(this.tpTreatmentPlan);
             this.tabControl1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tabControl1.Location = new System.Drawing.Point(12, 208);
+            this.tabControl1.Location = new System.Drawing.Point(12, 251);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(546, 450);
+            this.tabControl1.Size = new System.Drawing.Size(546, 398);
             this.tabControl1.TabIndex = 140;
             // 
             // tbInfo
@@ -352,7 +367,7 @@
             this.tbInfo.Location = new System.Drawing.Point(4, 28);
             this.tbInfo.Name = "tbInfo";
             this.tbInfo.Padding = new System.Windows.Forms.Padding(3);
-            this.tbInfo.Size = new System.Drawing.Size(538, 418);
+            this.tbInfo.Size = new System.Drawing.Size(538, 366);
             this.tbInfo.TabIndex = 0;
             this.tbInfo.Text = "Інформація";
             this.tbInfo.UseVisualStyleBackColor = true;
@@ -671,7 +686,7 @@
             this.tbTeeth.Location = new System.Drawing.Point(4, 28);
             this.tbTeeth.Name = "tbTeeth";
             this.tbTeeth.Padding = new System.Windows.Forms.Padding(3);
-            this.tbTeeth.Size = new System.Drawing.Size(538, 418);
+            this.tbTeeth.Size = new System.Drawing.Size(538, 375);
             this.tbTeeth.TabIndex = 1;
             this.tbTeeth.Text = "Зуби";
             this.tbTeeth.UseVisualStyleBackColor = true;
@@ -1267,7 +1282,7 @@
             this.tpSurvayPlan.Location = new System.Drawing.Point(4, 28);
             this.tpSurvayPlan.Name = "tpSurvayPlan";
             this.tpSurvayPlan.Padding = new System.Windows.Forms.Padding(3);
-            this.tpSurvayPlan.Size = new System.Drawing.Size(538, 418);
+            this.tpSurvayPlan.Size = new System.Drawing.Size(538, 375);
             this.tpSurvayPlan.TabIndex = 2;
             this.tpSurvayPlan.Text = "План обстеження";
             this.tpSurvayPlan.UseVisualStyleBackColor = true;
@@ -1288,7 +1303,7 @@
             this.tpTreatmentPlan.Location = new System.Drawing.Point(4, 28);
             this.tpTreatmentPlan.Name = "tpTreatmentPlan";
             this.tpTreatmentPlan.Padding = new System.Windows.Forms.Padding(3);
-            this.tpTreatmentPlan.Size = new System.Drawing.Size(538, 418);
+            this.tpTreatmentPlan.Size = new System.Drawing.Size(538, 375);
             this.tpTreatmentPlan.TabIndex = 3;
             this.tpTreatmentPlan.Text = "План лікування";
             this.tpTreatmentPlan.UseVisualStyleBackColor = true;
@@ -1305,8 +1320,9 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(38, 150);
+            this.label2.Location = new System.Drawing.Point(42, 188);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(44, 19);
             this.label2.TabIndex = 138;
@@ -1315,7 +1331,7 @@
             // dtpDateOfCreating
             // 
             this.dtpDateOfCreating.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.dtpDateOfCreating.Location = new System.Drawing.Point(182, 144);
+            this.dtpDateOfCreating.Location = new System.Drawing.Point(186, 184);
             this.dtpDateOfCreating.Name = "dtpDateOfCreating";
             this.dtpDateOfCreating.Size = new System.Drawing.Size(173, 26);
             this.dtpDateOfCreating.TabIndex = 5;
@@ -1324,38 +1340,11 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // btnExit
-            // 
-            this.btnExit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnExit.BackgroundImage")));
-            this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnExit.FlatAppearance.BorderSize = 0;
-            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExit.Location = new System.Drawing.Point(483, 664);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(75, 23);
-            this.btnExit.TabIndex = 162;
-            this.btnExit.Text = "Вихід";
-            this.btnExit.UseVisualStyleBackColor = true;
-            this.btnExit.Click += new System.EventHandler(this.button7_Click);
-            // 
-            // btnSaveAs
-            // 
-            this.btnSaveAs.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSaveAs.BackgroundImage")));
-            this.btnSaveAs.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnSaveAs.FlatAppearance.BorderSize = 0;
-            this.btnSaveAs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSaveAs.Location = new System.Drawing.Point(12, 664);
-            this.btnSaveAs.Name = "btnSaveAs";
-            this.btnSaveAs.Size = new System.Drawing.Size(75, 23);
-            this.btnSaveAs.TabIndex = 163;
-            this.btnSaveAs.Text = "Зберегти";
-            this.btnSaveAs.UseVisualStyleBackColor = true;
-            this.btnSaveAs.Click += new System.EventHandler(this.SaveAs_Click);
-            // 
             // lblNumberCard
             // 
+            this.lblNumberCard.BackColor = System.Drawing.Color.Transparent;
             this.lblNumberCard.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblNumberCard.Location = new System.Drawing.Point(59, 12);
+            this.lblNumberCard.Location = new System.Drawing.Point(63, 50);
             this.lblNumberCard.Name = "lblNumberCard";
             this.lblNumberCard.Size = new System.Drawing.Size(67, 20);
             this.lblNumberCard.TabIndex = 164;
@@ -1364,7 +1353,7 @@
             // cmbPacient
             // 
             this.cmbPacient.FormattingEnabled = true;
-            this.cmbPacient.Location = new System.Drawing.Point(182, 10);
+            this.cmbPacient.Location = new System.Drawing.Point(186, 50);
             this.cmbPacient.Name = "cmbPacient";
             this.cmbPacient.Size = new System.Drawing.Size(310, 21);
             this.cmbPacient.TabIndex = 1;
@@ -1374,12 +1363,121 @@
             // txtGender
             // 
             this.txtGender.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.txtGender.Location = new System.Drawing.Point(466, 173);
+            this.txtGender.Location = new System.Drawing.Point(470, 213);
             this.txtGender.Mask = "(0)";
             this.txtGender.Name = "txtGender";
             this.txtGender.Size = new System.Drawing.Size(28, 26);
             this.txtGender.TabIndex = 6;
             this.txtGender.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // panelZ1
+            // 
+            this.panelZ1.BackColor = System.Drawing.Color.Transparent;
+            this.panelZ1.Controls.Add(this.btnSaveAs);
+            this.panelZ1.Controls.Add(this.panelZ2);
+            this.panelZ1.Controls.Add(this.lblNumberCard);
+            this.panelZ1.Controls.Add(this.label48);
+            this.panelZ1.Controls.Add(this.label2);
+            this.panelZ1.Controls.Add(this.label36);
+            this.panelZ1.Controls.Add(this.label50);
+            this.panelZ1.Controls.Add(this.button6);
+            this.panelZ1.Controls.Add(this.tabControl1);
+            this.panelZ1.Controls.Add(this.label49);
+            this.panelZ1.Controls.Add(this.label1);
+            this.panelZ1.Controls.Add(this.label52);
+            this.panelZ1.Controls.Add(this.button3);
+            this.panelZ1.Controls.Add(this.button4);
+            this.panelZ1.Controls.Add(this.button2);
+            this.panelZ1.Controls.Add(this.button5);
+            this.panelZ1.Controls.Add(this.button1);
+            this.panelZ1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelZ1.EndColor = System.Drawing.Color.Black;
+            this.panelZ1.GradientAngle = 90;
+            this.panelZ1.Location = new System.Drawing.Point(0, 0);
+            this.panelZ1.Name = "panelZ1";
+            this.panelZ1.Size = new System.Drawing.Size(573, 695);
+            this.panelZ1.StartColor = System.Drawing.Color.White;
+            this.panelZ1.TabIndex = 101;
+            this.panelZ1.Transparent1 = 150;
+            this.panelZ1.Transparent2 = 150;
+            // 
+            // panelZ2
+            // 
+            this.panelZ2.Controls.Add(this.buttonZ1);
+            this.panelZ2.EndColor = System.Drawing.Color.White;
+            this.panelZ2.GradientAngle = 90;
+            this.panelZ2.Location = new System.Drawing.Point(0, 0);
+            this.panelZ2.Name = "panelZ2";
+            this.panelZ2.Size = new System.Drawing.Size(573, 35);
+            this.panelZ2.StartColor = System.Drawing.Color.Black;
+            this.panelZ2.TabIndex = 0;
+            this.panelZ2.Transparent1 = 255;
+            this.panelZ2.Transparent2 = 50;
+            // 
+            // btnSaveAs
+            // 
+            this.btnSaveAs.BackColor = System.Drawing.Color.Transparent;
+            this.btnSaveAs.BorderColor = System.Drawing.Color.Transparent;
+            this.btnSaveAs.BorderWidth = 2;
+            this.btnSaveAs.ButtonShape = Custom_Controls_in_CS.ButtonZ.ButtonsShapes.RoundRect;
+            this.btnSaveAs.ButtonText = "Зберегти";
+            this.btnSaveAs.EndColor = System.Drawing.Color.White;
+            this.btnSaveAs.FlatAppearance.BorderSize = 0;
+            this.btnSaveAs.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnSaveAs.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnSaveAs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSaveAs.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnSaveAs.ForeColor = System.Drawing.Color.Black;
+            this.btnSaveAs.GradientAngle = 90;
+            this.btnSaveAs.Location = new System.Drawing.Point(226, 651);
+            this.btnSaveAs.MouseClickColor1 = System.Drawing.Color.Yellow;
+            this.btnSaveAs.MouseClickColor2 = System.Drawing.Color.Red;
+            this.btnSaveAs.MouseHoverColor1 = System.Drawing.Color.Turquoise;
+            this.btnSaveAs.MouseHoverColor2 = System.Drawing.Color.DarkSlateGray;
+            this.btnSaveAs.Name = "btnSaveAs";
+            this.btnSaveAs.ShowButtontext = true;
+            this.btnSaveAs.Size = new System.Drawing.Size(100, 40);
+            this.btnSaveAs.StartColor = System.Drawing.Color.Black;
+            this.btnSaveAs.TabIndex = 321;
+            this.btnSaveAs.TextLocation_X = 18;
+            this.btnSaveAs.TextLocation_Y = 10;
+            this.btnSaveAs.Transparent1 = 50;
+            this.btnSaveAs.Transparent2 = 250;
+            this.btnSaveAs.UseVisualStyleBackColor = false;
+            this.btnSaveAs.Click += new System.EventHandler(this.SaveAs_Click);
+            // 
+            // buttonZ1
+            // 
+            this.buttonZ1.BackColor = System.Drawing.Color.Transparent;
+            this.buttonZ1.BorderColor = System.Drawing.Color.Transparent;
+            this.buttonZ1.BorderWidth = 1;
+            this.buttonZ1.ButtonShape = Custom_Controls_in_CS.ButtonZ.ButtonsShapes.Rect;
+            this.buttonZ1.ButtonText = "X";
+            this.buttonZ1.EndColor = System.Drawing.Color.Black;
+            this.buttonZ1.FlatAppearance.BorderSize = 0;
+            this.buttonZ1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.buttonZ1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.buttonZ1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonZ1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonZ1.ForeColor = System.Drawing.Color.White;
+            this.buttonZ1.GradientAngle = 90;
+            this.buttonZ1.Location = new System.Drawing.Point(535, 3);
+            this.buttonZ1.MouseClickColor1 = System.Drawing.Color.Red;
+            this.buttonZ1.MouseClickColor2 = System.Drawing.Color.Red;
+            this.buttonZ1.MouseHoverColor1 = System.Drawing.Color.Black;
+            this.buttonZ1.MouseHoverColor2 = System.Drawing.Color.Black;
+            this.buttonZ1.Name = "buttonZ1";
+            this.buttonZ1.ShowButtontext = true;
+            this.buttonZ1.Size = new System.Drawing.Size(35, 25);
+            this.buttonZ1.StartColor = System.Drawing.Color.Black;
+            this.buttonZ1.TabIndex = 1;
+            this.buttonZ1.Text = "X";
+            this.buttonZ1.TextLocation_X = 10;
+            this.buttonZ1.TextLocation_Y = 4;
+            this.buttonZ1.Transparent1 = 250;
+            this.buttonZ1.Transparent2 = 250;
+            this.buttonZ1.UseVisualStyleBackColor = false;
+            this.buttonZ1.Click += new System.EventHandler(this.buttonZ1_Click);
             // 
             // EditMedCard
             // 
@@ -1388,29 +1486,14 @@
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(573, 695);
             this.Controls.Add(this.cmbPacient);
-            this.Controls.Add(this.lblNumberCard);
-            this.Controls.Add(this.btnSaveAs);
-            this.Controls.Add(this.btnExit);
-            this.Controls.Add(this.label36);
-            this.Controls.Add(this.button6);
             this.Controls.Add(this.txtGender);
-            this.Controls.Add(this.label52);
-            this.Controls.Add(this.button4);
             this.Controls.Add(this.label51);
             this.Controls.Add(this.txtDateOfBirthday);
             this.Controls.Add(this.txtNumber);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button3);
             this.Controls.Add(this.txtAddress);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.label48);
-            this.Controls.Add(this.label49);
-            this.Controls.Add(this.label50);
-            this.Controls.Add(this.tabControl1);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.dtpDateOfCreating);
+            this.Controls.Add(this.panelZ1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(589, 772);
             this.Name = "EditMedCard";
@@ -1428,6 +1511,9 @@
             this.tpSurvayPlan.PerformLayout();
             this.tpTreatmentPlan.ResumeLayout(false);
             this.tpTreatmentPlan.PerformLayout();
+            this.panelZ1.ResumeLayout(false);
+            this.panelZ1.PerformLayout();
+            this.panelZ2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1548,10 +1634,13 @@
         private System.Windows.Forms.DateTimePicker dtpDateOfCreating;
         private System.Windows.Forms.TextBox txtDiagnosis;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.Button btnExit;
-        private System.Windows.Forms.Button btnSaveAs;
         private System.Windows.Forms.Label lblNumberCard;
         private System.Windows.Forms.ComboBox cmbPacient;
         private System.Windows.Forms.MaskedTextBox txtGender;
+        private PanelZ.PanelZ panelZ1;
+        private PanelZ.PanelZ panelZ2;
+        private Custom_Controls_in_CS.ButtonZ btnSaveAs;
+        private Custom_Controls_in_CS.ButtonZ buttonZ1;
+        //private CustomWindowsForm.ButtonZ _CloseButton;
     }
 }

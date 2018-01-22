@@ -19,10 +19,9 @@ namespace Stomatology
 
 
 
-        public NewMedCard(Main ownerform)
+        public NewMedCard()
         {
             InitializeComponent();
-
         }
 
         private void NewPatient_Load(object sender, EventArgs e)
@@ -196,7 +195,6 @@ namespace Stomatology
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
-            saveToDataBase();
         }
 
         private void saveToDataBase()
@@ -247,11 +245,6 @@ namespace Stomatology
 
         }
 
-        private void button7_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void txtName_KeyPress(object sender, KeyPressEventArgs e)
         {
             onlyCyrillic(sender, e);
@@ -268,6 +261,11 @@ namespace Stomatology
         private void txtAddress_KeyPress(object sender, KeyPressEventArgs e)
         {
             onlyCyrillic(sender, e);
+        }
+
+        private void buttonZ1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

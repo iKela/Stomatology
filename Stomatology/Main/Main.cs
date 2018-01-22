@@ -44,13 +44,13 @@ namespace Stomatology
 
         private void EditPatient_Click(object sender, EventArgs e)
         {
-            EditMedCard newForm = new EditMedCard(this);
+            EditMedCard newForm = new EditMedCard();
             newForm.Show();
         }
 
         private void AddNewPatient_Click(object sender, EventArgs e)
         {
-            NewMedCard newForm = new NewMedCard(this);
+            NewMedCard newForm = new NewMedCard();
             newForm.Show();
         }
 
@@ -1370,6 +1370,33 @@ namespace Stomatology
         }
 
         #endregion
+
+        private void buttonZ1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            MainMenu newForm = new MainMenu();
+            newForm.Show();
+            this.Close();
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            showAccount();
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            showAccount();
+        }
+        private void showAccount()
+        {
+            Account newForm = new Account();
+            newForm.Show();
+        }
     }
 }
 

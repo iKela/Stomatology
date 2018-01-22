@@ -51,6 +51,8 @@
             this.lblCurResult = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.panelZ1 = new PanelZ.PanelZ();
+            this.panelZ1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnCE
@@ -291,6 +293,7 @@
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
             this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button1.FlatAppearance.BorderSize = 0;
@@ -299,11 +302,12 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(40, 40);
             this.button1.TabIndex = 41;
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
+            this.button2.BackColor = System.Drawing.Color.Transparent;
             this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button2.FlatAppearance.BorderSize = 0;
@@ -312,16 +316,29 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(40, 40);
             this.button2.TabIndex = 42;
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // panelZ1
+            // 
+            this.panelZ1.Controls.Add(this.button1);
+            this.panelZ1.Controls.Add(this.button2);
+            this.panelZ1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelZ1.EndColor = System.Drawing.Color.Black;
+            this.panelZ1.GradientAngle = 90;
+            this.panelZ1.Location = new System.Drawing.Point(0, 0);
+            this.panelZ1.Name = "panelZ1";
+            this.panelZ1.Size = new System.Drawing.Size(331, 397);
+            this.panelZ1.StartColor = System.Drawing.Color.White;
+            this.panelZ1.TabIndex = 43;
+            this.panelZ1.Transparent1 = 150;
+            this.panelZ1.Transparent2 = 150;
             // 
             // Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(331, 397);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.lblCurResult);
             this.Controls.Add(this.btnCE);
             this.Controls.Add(this.btnDivision);
@@ -342,12 +359,15 @@
             this.Controls.Add(this.btnPoint);
             this.Controls.Add(this.btn0);
             this.Controls.Add(this.txtTotal);
+            this.Controls.Add(this.panelZ1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.Name = "Calculator";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Калькулятор";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Calculator_KeyDown);
+            this.panelZ1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -377,5 +397,6 @@
         private System.Windows.Forms.Label lblCurResult;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private PanelZ.PanelZ panelZ1;
     }
 }

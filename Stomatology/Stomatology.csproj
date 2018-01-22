@@ -87,9 +87,13 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
       <HintPath>C:\Windows\assembly\GAC_MSIL\Microsoft.Office.Interop.Word\15.0.0.0__71e9bce111e9429c\Microsoft.Office.Interop.Word.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.ServiceProcess" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -101,11 +105,45 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Account.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Account.Designer.cs">
+      <DependentUpon>Account.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Graphic\ButtonZ.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Graphic\MenuStripZ.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Graphic\PanelZ.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Graphic\TabControlZ.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="IpInfo.cs" />
+    <Compile Include="Main\MainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\MainMenu.Designer.cs">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Other\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Other\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
     <Compile Include="MedCard\NewMedCard.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MedCard\NewMedCard.Designer.cs">
       <DependentUpon>NewMedCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Graphic\MinMaxButton.cs">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Source\AboutSoft.cs">
       <SubType>Form</SubType>
@@ -157,12 +195,21 @@
     <Compile Include="Source\UserInfo.Designer.cs">
       <DependentUpon>UserInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="StartingForm.cs">
+    <Compile Include="Other\StartingForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="StartingForm.Designer.cs">
+    <Compile Include="Other\StartingForm.Designer.cs">
       <DependentUpon>StartingForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Account.resx">
+      <DependentUpon>Account.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\MainMenu.resx">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Other\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MedCard\NewMedCard.resx">
       <DependentUpon>NewMedCard.cs</DependentUpon>
     </EmbeddedResource>
@@ -199,11 +246,12 @@
     <EmbeddedResource Include="Source\UserInfo.resx">
       <DependentUpon>UserInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="StartingForm.resx">
+    <EmbeddedResource Include="Other\StartingForm.resx">
       <DependentUpon>StartingForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
     <None Include="Main\packages.config" />
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

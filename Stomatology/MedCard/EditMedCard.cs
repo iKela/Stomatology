@@ -16,10 +16,9 @@ namespace Stomatology
         ArrayList DateList = new ArrayList();
         ArrayList InfoList = new ArrayList();
 
-        public EditMedCard(Main ownerForm)
+        public EditMedCard()
         {
             InitializeComponent();
-            this.ownerForm = ownerForm;
         }
 
         private void EditPatient_Load(object sender, EventArgs e)
@@ -403,6 +402,11 @@ namespace Stomatology
 
         private void txtGender_KeyPress(object sender, KeyPressEventArgs e)
         {
+        }
+
+        private void buttonZ1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

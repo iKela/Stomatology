@@ -163,7 +163,7 @@
             this.ClientSize = new System.Drawing.Size(652, 414);
             this.Controls.Add(this.tableLayoutPanel);
             this.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
