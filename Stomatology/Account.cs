@@ -57,16 +57,19 @@ namespace Stomatology
         private void btnGeneral_Click(object sender, EventArgs e)
         {
             number = 1;
+            setVisible();
         }
 
         private void btnSecurity_Click(object sender, EventArgs e)
         {
             number = 2;
+            setVisible();
         }
 
         private void btnPolicy_Click(object sender, EventArgs e)
         {
             number = 3;
+            setVisible();
         }
 
         private void picPhoto_Click(object sender, EventArgs e)
@@ -94,31 +97,27 @@ namespace Stomatology
 
         private void Account_Load(object sender, EventArgs e)
         {
-            //GetUserCountryByIp("");
-           // listBoxLoginLocation.Items.Add(GetUserCountryByIp(""));
+            btnAccountExit.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            btnMainMenu.FlatAppearance.MouseOverBackColor = Color.Transparent;          
         }
 
-        #region GetLocation
-        public static string GetUserCountryByIp(string ip)
+        private void btnAccountExit_MouseHover(object sender, EventArgs e)
         {
-            IpInfo ipInfo = new IpInfo();
-            try
-            {
-                string info = new WebClient().DownloadString("http://ipinfo.io/" + ip);
-                ipInfo = JsonConvert.DeserializeObject<IpInfo>(info);
-                RegionInfo myRI1 = new RegionInfo(ipInfo.Country);
-                ipInfo.Country = myRI1.NativeName;
-            }
-            catch (Exception)
-            {
-                ipInfo.Country = null;
-            }
-
-            return ipInfo.Country;
+            btnAccountExit.Font = new Font("Times New Roman", 12, FontStyle.Underline);
+        }
+        private void btnAccountExit_MouseLeave(object sender, EventArgs e)
+        {
+            btnAccountExit.Font = new Font("Times New Roman", 10, FontStyle.Underline);
         }
 
-        #endregion
+        private void btnMainMenu_MouseHover(object sender, EventArgs e)
+        {
+            btnMainMenu.Size = new Size(37, 37);
+        }
 
-
+        private void btnMainMenu_MouseLeave(object sender, EventArgs e)
+        {
+            btnMainMenu.Size = new Size(35, 35);
+        }
     }
 }

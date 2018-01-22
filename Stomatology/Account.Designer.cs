@@ -34,6 +34,19 @@
             this.btnMainMenu = new System.Windows.Forms.Button();
             this.panelZ3 = new PanelZ.PanelZ();
             this.panelZ2 = new PanelZ.PanelZ();
+            this.pnlSecuritySettings = new System.Windows.Forms.Panel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.pnlAuthorization = new System.Windows.Forms.Panel();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btnEditUsername = new System.Windows.Forms.Button();
+            this.btnEditPassword = new System.Windows.Forms.Button();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pnlLoginLocation = new System.Windows.Forms.Panel();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.listBoxLoginLocation = new System.Windows.Forms.ListBox();
             this.pnlGeneralSettings = new System.Windows.Forms.Panel();
             this.gboxGeneral = new System.Windows.Forms.GroupBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
@@ -51,19 +64,6 @@
             this.txtName = new System.Windows.Forms.TextBox();
             this.txtFatherName = new System.Windows.Forms.TextBox();
             this.pnlPolicySettings = new System.Windows.Forms.Panel();
-            this.pnlSecuritySettings = new System.Windows.Forms.Panel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.pnlAuthorization = new System.Windows.Forms.Panel();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.btnEditUsername = new System.Windows.Forms.Button();
-            this.btnEditPassword = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pnlLoginLocation = new System.Windows.Forms.Panel();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.listBoxLoginLocation = new System.Windows.Forms.ListBox();
             this.panelZ1 = new PanelZ.PanelZ();
             this.panelZ5 = new PanelZ.PanelZ();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
@@ -77,16 +77,16 @@
             this.picPhoto = new System.Windows.Forms.PictureBox();
             this.panelZ4.SuspendLayout();
             this.panelZ2.SuspendLayout();
-            this.pnlGeneralSettings.SuspendLayout();
-            this.gboxGeneral.SuspendLayout();
-            this.groupBox5.SuspendLayout();
-            this.groupBox4.SuspendLayout();
             this.pnlSecuritySettings.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.pnlAuthorization.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.pnlLoginLocation.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.pnlGeneralSettings.SuspendLayout();
+            this.gboxGeneral.SuspendLayout();
+            this.groupBox5.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.panelZ1.SuspendLayout();
             this.panelZ5.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -112,14 +112,16 @@
             this.btnAccountExit.BackColor = System.Drawing.Color.Transparent;
             this.btnAccountExit.FlatAppearance.BorderSize = 0;
             this.btnAccountExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAccountExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnAccountExit.Location = new System.Drawing.Point(559, 8);
+            this.btnAccountExit.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnAccountExit.Location = new System.Drawing.Point(520, 0);
             this.btnAccountExit.Name = "btnAccountExit";
-            this.btnAccountExit.Size = new System.Drawing.Size(171, 23);
+            this.btnAccountExit.Size = new System.Drawing.Size(222, 37);
             this.btnAccountExit.TabIndex = 2;
             this.btnAccountExit.Text = "Вийти з облікового запису";
             this.btnAccountExit.UseVisualStyleBackColor = false;
             this.btnAccountExit.Click += new System.EventHandler(this.button1_Click);
+            this.btnAccountExit.MouseLeave += new System.EventHandler(this.btnAccountExit_MouseLeave);
+            this.btnAccountExit.MouseHover += new System.EventHandler(this.btnAccountExit_MouseHover);
             // 
             // btnMainMenu
             // 
@@ -134,6 +136,8 @@
             this.btnMainMenu.Size = new System.Drawing.Size(35, 35);
             this.btnMainMenu.TabIndex = 1;
             this.btnMainMenu.UseVisualStyleBackColor = false;
+            this.btnMainMenu.MouseLeave += new System.EventHandler(this.btnMainMenu_MouseLeave);
+            this.btnMainMenu.MouseHover += new System.EventHandler(this.btnMainMenu_MouseHover);
             // 
             // panelZ3
             // 
@@ -150,9 +154,9 @@
             // panelZ2
             // 
             this.panelZ2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelZ2.Controls.Add(this.pnlPolicySettings);
             this.panelZ2.Controls.Add(this.pnlSecuritySettings);
             this.panelZ2.Controls.Add(this.pnlGeneralSettings);
-            this.panelZ2.Controls.Add(this.pnlPolicySettings);
             this.panelZ2.EndColor = System.Drawing.Color.White;
             this.panelZ2.GradientAngle = 90;
             this.panelZ2.Location = new System.Drawing.Point(228, 46);
@@ -162,6 +166,144 @@
             this.panelZ2.TabIndex = 1;
             this.panelZ2.Transparent1 = 150;
             this.panelZ2.Transparent2 = 150;
+            // 
+            // pnlSecuritySettings
+            // 
+            this.pnlSecuritySettings.BackColor = System.Drawing.Color.White;
+            this.pnlSecuritySettings.Controls.Add(this.groupBox1);
+            this.pnlSecuritySettings.Location = new System.Drawing.Point(3, 3);
+            this.pnlSecuritySettings.Name = "pnlSecuritySettings";
+            this.pnlSecuritySettings.Size = new System.Drawing.Size(506, 443);
+            this.pnlSecuritySettings.TabIndex = 1;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.pnlAuthorization);
+            this.groupBox1.Controls.Add(this.pnlLoginLocation);
+            this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.groupBox1.Location = new System.Drawing.Point(3, 3);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(500, 437);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Безпека й авторизація";
+            // 
+            // pnlAuthorization
+            // 
+            this.pnlAuthorization.Controls.Add(this.groupBox3);
+            this.pnlAuthorization.Location = new System.Drawing.Point(6, 28);
+            this.pnlAuthorization.Name = "pnlAuthorization";
+            this.pnlAuthorization.Size = new System.Drawing.Size(489, 109);
+            this.pnlAuthorization.TabIndex = 1;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.BackColor = System.Drawing.Color.White;
+            this.groupBox3.Controls.Add(this.btnEditUsername);
+            this.groupBox3.Controls.Add(this.btnEditPassword);
+            this.groupBox3.Controls.Add(this.textBox2);
+            this.groupBox3.Controls.Add(this.textBox1);
+            this.groupBox3.Controls.Add(this.label2);
+            this.groupBox3.Controls.Add(this.label1);
+            this.groupBox3.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.groupBox3.Location = new System.Drawing.Point(0, 0);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(489, 109);
+            this.groupBox3.TabIndex = 0;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Авторизація";
+            // 
+            // btnEditUsername
+            // 
+            this.btnEditUsername.BackColor = System.Drawing.Color.Transparent;
+            this.btnEditUsername.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEditUsername.BackgroundImage")));
+            this.btnEditUsername.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnEditUsername.Enabled = false;
+            this.btnEditUsername.FlatAppearance.BorderSize = 0;
+            this.btnEditUsername.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditUsername.Location = new System.Drawing.Point(454, 31);
+            this.btnEditUsername.Name = "btnEditUsername";
+            this.btnEditUsername.Size = new System.Drawing.Size(25, 25);
+            this.btnEditUsername.TabIndex = 5;
+            this.btnEditUsername.UseVisualStyleBackColor = false;
+            // 
+            // btnEditPassword
+            // 
+            this.btnEditPassword.BackColor = System.Drawing.Color.Transparent;
+            this.btnEditPassword.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEditPassword.BackgroundImage")));
+            this.btnEditPassword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnEditPassword.Enabled = false;
+            this.btnEditPassword.FlatAppearance.BorderSize = 0;
+            this.btnEditPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditPassword.Location = new System.Drawing.Point(454, 67);
+            this.btnEditPassword.Name = "btnEditPassword";
+            this.btnEditPassword.Size = new System.Drawing.Size(25, 25);
+            this.btnEditPassword.TabIndex = 4;
+            this.btnEditPassword.UseVisualStyleBackColor = false;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(184, 67);
+            this.textBox2.MaxLength = 14;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.PasswordChar = '*';
+            this.textBox2.Size = new System.Drawing.Size(202, 25);
+            this.textBox2.TabIndex = 3;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(184, 31);
+            this.textBox1.MaxLength = 14;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(202, 25);
+            this.textBox1.TabIndex = 2;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 70);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(57, 17);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Пароль:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 34);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(44, 17);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Логін:";
+            // 
+            // pnlLoginLocation
+            // 
+            this.pnlLoginLocation.Controls.Add(this.groupBox2);
+            this.pnlLoginLocation.Location = new System.Drawing.Point(6, 157);
+            this.pnlLoginLocation.Name = "pnlLoginLocation";
+            this.pnlLoginLocation.Size = new System.Drawing.Size(489, 109);
+            this.pnlLoginLocation.TabIndex = 0;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.listBoxLoginLocation);
+            this.groupBox2.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.groupBox2.Location = new System.Drawing.Point(0, 0);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(489, 109);
+            this.groupBox2.TabIndex = 0;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Місця останньої авторизації";
+            // 
+            // listBoxLoginLocation
+            // 
+            this.listBoxLoginLocation.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listBoxLoginLocation.FormattingEnabled = true;
+            this.listBoxLoginLocation.ItemHeight = 17;
+            this.listBoxLoginLocation.Location = new System.Drawing.Point(2, 20);
+            this.listBoxLoginLocation.Name = "listBoxLoginLocation";
+            this.listBoxLoginLocation.Size = new System.Drawing.Size(485, 85);
+            this.listBoxLoginLocation.TabIndex = 0;
             // 
             // pnlGeneralSettings
             // 
@@ -340,142 +482,6 @@
             this.pnlPolicySettings.TabIndex = 1;
             this.pnlPolicySettings.Visible = false;
             // 
-            // pnlSecuritySettings
-            // 
-            this.pnlSecuritySettings.BackColor = System.Drawing.Color.White;
-            this.pnlSecuritySettings.Controls.Add(this.groupBox1);
-            this.pnlSecuritySettings.Location = new System.Drawing.Point(3, 3);
-            this.pnlSecuritySettings.Name = "pnlSecuritySettings";
-            this.pnlSecuritySettings.Size = new System.Drawing.Size(506, 443);
-            this.pnlSecuritySettings.TabIndex = 1;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.pnlAuthorization);
-            this.groupBox1.Controls.Add(this.pnlLoginLocation);
-            this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.groupBox1.Location = new System.Drawing.Point(3, 3);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(500, 437);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Безпека й авторизація";
-            // 
-            // pnlAuthorization
-            // 
-            this.pnlAuthorization.Controls.Add(this.groupBox3);
-            this.pnlAuthorization.Location = new System.Drawing.Point(6, 28);
-            this.pnlAuthorization.Name = "pnlAuthorization";
-            this.pnlAuthorization.Size = new System.Drawing.Size(489, 109);
-            this.pnlAuthorization.TabIndex = 1;
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.BackColor = System.Drawing.Color.White;
-            this.groupBox3.Controls.Add(this.btnEditUsername);
-            this.groupBox3.Controls.Add(this.btnEditPassword);
-            this.groupBox3.Controls.Add(this.textBox2);
-            this.groupBox3.Controls.Add(this.textBox1);
-            this.groupBox3.Controls.Add(this.label2);
-            this.groupBox3.Controls.Add(this.label1);
-            this.groupBox3.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.groupBox3.Location = new System.Drawing.Point(0, 0);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(489, 109);
-            this.groupBox3.TabIndex = 0;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Авторизація";
-            // 
-            // btnEditUsername
-            // 
-            this.btnEditUsername.BackColor = System.Drawing.Color.Transparent;
-            this.btnEditUsername.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEditUsername.BackgroundImage")));
-            this.btnEditUsername.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnEditUsername.FlatAppearance.BorderSize = 0;
-            this.btnEditUsername.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditUsername.Location = new System.Drawing.Point(454, 31);
-            this.btnEditUsername.Name = "btnEditUsername";
-            this.btnEditUsername.Size = new System.Drawing.Size(25, 25);
-            this.btnEditUsername.TabIndex = 5;
-            this.btnEditUsername.UseVisualStyleBackColor = false;
-            // 
-            // btnEditPassword
-            // 
-            this.btnEditPassword.BackColor = System.Drawing.Color.Transparent;
-            this.btnEditPassword.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEditPassword.BackgroundImage")));
-            this.btnEditPassword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnEditPassword.FlatAppearance.BorderSize = 0;
-            this.btnEditPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditPassword.Location = new System.Drawing.Point(454, 67);
-            this.btnEditPassword.Name = "btnEditPassword";
-            this.btnEditPassword.Size = new System.Drawing.Size(25, 25);
-            this.btnEditPassword.TabIndex = 4;
-            this.btnEditPassword.UseVisualStyleBackColor = false;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(184, 67);
-            this.textBox2.MaxLength = 14;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PasswordChar = '*';
-            this.textBox2.Size = new System.Drawing.Size(202, 25);
-            this.textBox2.TabIndex = 3;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(184, 31);
-            this.textBox1.MaxLength = 14;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(202, 25);
-            this.textBox1.TabIndex = 2;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 70);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 17);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Пароль:";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 34);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 17);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Логін:";
-            // 
-            // pnlLoginLocation
-            // 
-            this.pnlLoginLocation.Controls.Add(this.groupBox2);
-            this.pnlLoginLocation.Location = new System.Drawing.Point(6, 157);
-            this.pnlLoginLocation.Name = "pnlLoginLocation";
-            this.pnlLoginLocation.Size = new System.Drawing.Size(489, 109);
-            this.pnlLoginLocation.TabIndex = 0;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.listBoxLoginLocation);
-            this.groupBox2.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.groupBox2.Location = new System.Drawing.Point(0, 0);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(489, 109);
-            this.groupBox2.TabIndex = 0;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Місця останньої авторизації";
-            // 
-            // listBoxLoginLocation
-            // 
-            this.listBoxLoginLocation.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listBoxLoginLocation.FormattingEnabled = true;
-            this.listBoxLoginLocation.ItemHeight = 17;
-            this.listBoxLoginLocation.Location = new System.Drawing.Point(2, 20);
-            this.listBoxLoginLocation.Name = "listBoxLoginLocation";
-            this.listBoxLoginLocation.Size = new System.Drawing.Size(485, 85);
-            this.listBoxLoginLocation.TabIndex = 0;
-            // 
             // panelZ1
             // 
             this.panelZ1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -603,12 +609,6 @@
             this.Load += new System.EventHandler(this.Account_Load);
             this.panelZ4.ResumeLayout(false);
             this.panelZ2.ResumeLayout(false);
-            this.pnlGeneralSettings.ResumeLayout(false);
-            this.gboxGeneral.ResumeLayout(false);
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
             this.pnlSecuritySettings.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.pnlAuthorization.ResumeLayout(false);
@@ -616,6 +616,12 @@
             this.groupBox3.PerformLayout();
             this.pnlLoginLocation.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
+            this.pnlGeneralSettings.ResumeLayout(false);
+            this.gboxGeneral.ResumeLayout(false);
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.panelZ1.ResumeLayout(false);
             this.panelZ5.ResumeLayout(false);
             this.toolStrip1.ResumeLayout(false);

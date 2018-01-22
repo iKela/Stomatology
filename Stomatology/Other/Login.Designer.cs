@@ -52,6 +52,8 @@
             this.btnExit.Text = "Вихід";
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            this.btnExit.MouseLeave += new System.EventHandler(this.btnExit_MouseLeave);
+            this.btnExit.MouseHover += new System.EventHandler(this.btnExit_MouseHover);
             // 
             // btnEntrance
             // 
@@ -65,6 +67,8 @@
             this.btnEntrance.Text = "Вхід";
             this.btnEntrance.UseVisualStyleBackColor = true;
             this.btnEntrance.Click += new System.EventHandler(this.btnEntrance_Click);
+            this.btnEntrance.MouseLeave += new System.EventHandler(this.btnEntrance_MouseLeave);
+            this.btnEntrance.MouseHover += new System.EventHandler(this.btnEntrance_MouseHover);
             // 
             // txtPassword
             // 
