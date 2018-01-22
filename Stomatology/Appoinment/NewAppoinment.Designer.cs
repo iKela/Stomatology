@@ -194,7 +194,7 @@
             this.dtpDate.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.dtpDate.Location = new System.Drawing.Point(116, 116);
             this.dtpDate.Name = "dtpDate";
-            this.dtpDate.Size = new System.Drawing.Size(137, 26);
+            this.dtpDate.Size = new System.Drawing.Size(145, 26);
             this.dtpDate.TabIndex = 0;
             this.dtpDate.Value = new System.DateTime(2017, 11, 29, 0, 0, 0, 0);
             // 
