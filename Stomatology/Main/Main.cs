@@ -34,6 +34,9 @@ namespace Stomatology
         {
             toolTip(); 
             updateTable();
+            btnAccount.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            btnAccountPhoto.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            btnExit.FlatAppearance.MouseOverBackColor = Color.Transparent;
         }
 
         private void AddNewAppoinment_Click(object sender, EventArgs e)

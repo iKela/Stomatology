@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -135,16 +135,16 @@
             this.AddNewAppoinment = new System.Windows.Forms.Button();
             this.TabControl = new System.Windows.Forms.TabControl();
             this.tabFinance = new System.Windows.Forms.TabPage();
-            this.button9 = new System.Windows.Forms.Button();
-            this.label42 = new System.Windows.Forms.Label();
-            this.label41 = new System.Windows.Forms.Label();
-            this.label40 = new System.Windows.Forms.Label();
-            this.label39 = new System.Windows.Forms.Label();
-            this.DatetextboxTo = new System.Windows.Forms.TextBox();
-            this.DatetextBoxFrom = new System.Windows.Forms.TextBox();
-            this.DoctortextBox = new System.Windows.Forms.TextBox();
-            this.PIBTextBox = new System.Windows.Forms.TextBox();
-            this.Updatebtn = new System.Windows.Forms.Button();
+            this.panelZ4 = new PanelZ.PanelZ();
+            this.buttonZ7 = new Custom_Controls_in_CS.ButtonZ();
+            this.buttonZ8 = new Custom_Controls_in_CS.ButtonZ();
+            this.buttonZ5 = new Custom_Controls_in_CS.ButtonZ();
+            this.buttonZ6 = new Custom_Controls_in_CS.ButtonZ();
+            this.buttonZ3 = new Custom_Controls_in_CS.ButtonZ();
+            this.buttonZ4 = new Custom_Controls_in_CS.ButtonZ();
+            this.buttonZ2 = new Custom_Controls_in_CS.ButtonZ();
+            this.buttonZ1 = new Custom_Controls_in_CS.ButtonZ();
+            this.panelZ3 = new PanelZ.PanelZ();
             this.DataGridView2 = new System.Windows.Forms.DataGridView();
             this.Id_reception = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PIB = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -153,11 +153,21 @@
             this.Doctor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateApp = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label42 = new System.Windows.Forms.Label();
+            this.button9 = new System.Windows.Forms.Button();
+            this.label41 = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
+            this.Updatebtn = new System.Windows.Forms.Button();
+            this.label39 = new System.Windows.Forms.Label();
+            this.PIBTextBox = new System.Windows.Forms.TextBox();
+            this.DatetextboxTo = new System.Windows.Forms.TextBox();
+            this.DoctortextBox = new System.Windows.Forms.TextBox();
+            this.DatetextBoxFrom = new System.Windows.Forms.TextBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.pnlTop = new PanelZ.PanelZ();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
+            this.btnAccount = new System.Windows.Forms.Button();
+            this.btnAccountPhoto = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.справкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiUserInfo = new System.Windows.Forms.ToolStripMenuItem();
@@ -179,6 +189,8 @@
             this.panelZ2.SuspendLayout();
             this.TabControl.SuspendLayout();
             this.tabFinance.SuspendLayout();
+            this.panelZ4.SuspendLayout();
+            this.panelZ3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView2)).BeginInit();
             this.pnlTop.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -232,15 +244,15 @@
             this.name,
             this.birthday,
             this.number});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 12F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.NullValue = null;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 12F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.NullValue = null;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
             resources.ApplyResources(this.dataGridView1, "dataGridView1");
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -958,74 +970,260 @@
             // 
             // tabFinance
             // 
-            this.tabFinance.Controls.Add(this.button9);
-            this.tabFinance.Controls.Add(this.label42);
-            this.tabFinance.Controls.Add(this.label41);
-            this.tabFinance.Controls.Add(this.label40);
-            this.tabFinance.Controls.Add(this.label39);
-            this.tabFinance.Controls.Add(this.DatetextboxTo);
-            this.tabFinance.Controls.Add(this.DatetextBoxFrom);
-            this.tabFinance.Controls.Add(this.DoctortextBox);
-            this.tabFinance.Controls.Add(this.PIBTextBox);
-            this.tabFinance.Controls.Add(this.Updatebtn);
-            this.tabFinance.Controls.Add(this.DataGridView2);
+            this.tabFinance.Controls.Add(this.panelZ4);
+            this.tabFinance.Controls.Add(this.panelZ3);
             resources.ApplyResources(this.tabFinance, "tabFinance");
             this.tabFinance.Name = "tabFinance";
             this.tabFinance.UseVisualStyleBackColor = true;
             // 
-            // button9
+            // panelZ4
             // 
-            resources.ApplyResources(this.button9, "button9");
-            this.button9.Name = "button9";
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
+            this.panelZ4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panelZ4.Controls.Add(this.buttonZ7);
+            this.panelZ4.Controls.Add(this.buttonZ8);
+            this.panelZ4.Controls.Add(this.buttonZ5);
+            this.panelZ4.Controls.Add(this.buttonZ6);
+            this.panelZ4.Controls.Add(this.buttonZ3);
+            this.panelZ4.Controls.Add(this.buttonZ4);
+            this.panelZ4.Controls.Add(this.buttonZ2);
+            this.panelZ4.Controls.Add(this.buttonZ1);
+            this.panelZ4.EndColor = System.Drawing.Color.DarkBlue;
+            this.panelZ4.GradientAngle = 90;
+            resources.ApplyResources(this.panelZ4, "panelZ4");
+            this.panelZ4.Name = "panelZ4";
+            this.panelZ4.StartColor = System.Drawing.Color.SteelBlue;
+            this.panelZ4.Transparent1 = 150;
+            this.panelZ4.Transparent2 = 150;
             // 
-            // label42
+            // buttonZ7
             // 
-            resources.ApplyResources(this.label42, "label42");
-            this.label42.Name = "label42";
+            this.buttonZ7.BackColor = System.Drawing.Color.Transparent;
+            this.buttonZ7.BorderColor = System.Drawing.Color.Transparent;
+            this.buttonZ7.BorderWidth = 2;
+            this.buttonZ7.ButtonShape = Custom_Controls_in_CS.ButtonZ.ButtonsShapes.Rect;
+            this.buttonZ7.ButtonText = "";
+            this.buttonZ7.EndColor = System.Drawing.Color.MidnightBlue;
+            this.buttonZ7.FlatAppearance.BorderSize = 0;
+            this.buttonZ7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.buttonZ7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.buttonZ7, "buttonZ7");
+            this.buttonZ7.GradientAngle = 90;
+            this.buttonZ7.MouseClickColor1 = System.Drawing.Color.Yellow;
+            this.buttonZ7.MouseClickColor2 = System.Drawing.Color.Red;
+            this.buttonZ7.MouseHoverColor1 = System.Drawing.Color.Turquoise;
+            this.buttonZ7.MouseHoverColor2 = System.Drawing.Color.DarkSlateGray;
+            this.buttonZ7.Name = "buttonZ7";
+            this.buttonZ7.ShowButtontext = true;
+            this.buttonZ7.StartColor = System.Drawing.Color.DodgerBlue;
+            this.buttonZ7.TextLocation_X = 81;
+            this.buttonZ7.TextLocation_Y = 19;
+            this.buttonZ7.Transparent1 = 250;
+            this.buttonZ7.Transparent2 = 250;
+            this.buttonZ7.UseVisualStyleBackColor = false;
             // 
-            // label41
+            // buttonZ8
             // 
-            resources.ApplyResources(this.label41, "label41");
-            this.label41.Name = "label41";
+            this.buttonZ8.BackColor = System.Drawing.Color.Transparent;
+            this.buttonZ8.BorderColor = System.Drawing.Color.Transparent;
+            this.buttonZ8.BorderWidth = 2;
+            this.buttonZ8.ButtonShape = Custom_Controls_in_CS.ButtonZ.ButtonsShapes.Rect;
+            this.buttonZ8.ButtonText = "";
+            this.buttonZ8.EndColor = System.Drawing.Color.MidnightBlue;
+            this.buttonZ8.FlatAppearance.BorderSize = 0;
+            this.buttonZ8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.buttonZ8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.buttonZ8, "buttonZ8");
+            this.buttonZ8.GradientAngle = 90;
+            this.buttonZ8.MouseClickColor1 = System.Drawing.Color.Yellow;
+            this.buttonZ8.MouseClickColor2 = System.Drawing.Color.Red;
+            this.buttonZ8.MouseHoverColor1 = System.Drawing.Color.Turquoise;
+            this.buttonZ8.MouseHoverColor2 = System.Drawing.Color.DarkSlateGray;
+            this.buttonZ8.Name = "buttonZ8";
+            this.buttonZ8.ShowButtontext = true;
+            this.buttonZ8.StartColor = System.Drawing.Color.DodgerBlue;
+            this.buttonZ8.TextLocation_X = 81;
+            this.buttonZ8.TextLocation_Y = 19;
+            this.buttonZ8.Transparent1 = 250;
+            this.buttonZ8.Transparent2 = 250;
+            this.buttonZ8.UseVisualStyleBackColor = false;
             // 
-            // label40
+            // buttonZ5
             // 
-            resources.ApplyResources(this.label40, "label40");
-            this.label40.Name = "label40";
+            this.buttonZ5.BackColor = System.Drawing.Color.Transparent;
+            this.buttonZ5.BorderColor = System.Drawing.Color.Transparent;
+            this.buttonZ5.BorderWidth = 2;
+            this.buttonZ5.ButtonShape = Custom_Controls_in_CS.ButtonZ.ButtonsShapes.Rect;
+            this.buttonZ5.ButtonText = "";
+            this.buttonZ5.EndColor = System.Drawing.Color.MidnightBlue;
+            this.buttonZ5.FlatAppearance.BorderSize = 0;
+            this.buttonZ5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.buttonZ5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.buttonZ5, "buttonZ5");
+            this.buttonZ5.GradientAngle = 90;
+            this.buttonZ5.MouseClickColor1 = System.Drawing.Color.Yellow;
+            this.buttonZ5.MouseClickColor2 = System.Drawing.Color.Red;
+            this.buttonZ5.MouseHoverColor1 = System.Drawing.Color.Turquoise;
+            this.buttonZ5.MouseHoverColor2 = System.Drawing.Color.DarkSlateGray;
+            this.buttonZ5.Name = "buttonZ5";
+            this.buttonZ5.ShowButtontext = true;
+            this.buttonZ5.StartColor = System.Drawing.Color.DodgerBlue;
+            this.buttonZ5.TextLocation_X = 81;
+            this.buttonZ5.TextLocation_Y = 19;
+            this.buttonZ5.Transparent1 = 250;
+            this.buttonZ5.Transparent2 = 250;
+            this.buttonZ5.UseVisualStyleBackColor = false;
             // 
-            // label39
+            // buttonZ6
             // 
-            resources.ApplyResources(this.label39, "label39");
-            this.label39.Name = "label39";
+            this.buttonZ6.BackColor = System.Drawing.Color.Transparent;
+            this.buttonZ6.BorderColor = System.Drawing.Color.Transparent;
+            this.buttonZ6.BorderWidth = 2;
+            this.buttonZ6.ButtonShape = Custom_Controls_in_CS.ButtonZ.ButtonsShapes.Rect;
+            this.buttonZ6.ButtonText = "";
+            this.buttonZ6.EndColor = System.Drawing.Color.MidnightBlue;
+            this.buttonZ6.FlatAppearance.BorderSize = 0;
+            this.buttonZ6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.buttonZ6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.buttonZ6, "buttonZ6");
+            this.buttonZ6.GradientAngle = 90;
+            this.buttonZ6.MouseClickColor1 = System.Drawing.Color.Yellow;
+            this.buttonZ6.MouseClickColor2 = System.Drawing.Color.Red;
+            this.buttonZ6.MouseHoverColor1 = System.Drawing.Color.Turquoise;
+            this.buttonZ6.MouseHoverColor2 = System.Drawing.Color.DarkSlateGray;
+            this.buttonZ6.Name = "buttonZ6";
+            this.buttonZ6.ShowButtontext = true;
+            this.buttonZ6.StartColor = System.Drawing.Color.DodgerBlue;
+            this.buttonZ6.TextLocation_X = 81;
+            this.buttonZ6.TextLocation_Y = 19;
+            this.buttonZ6.Transparent1 = 250;
+            this.buttonZ6.Transparent2 = 250;
+            this.buttonZ6.UseVisualStyleBackColor = false;
             // 
-            // DatetextboxTo
+            // buttonZ3
             // 
-            resources.ApplyResources(this.DatetextboxTo, "DatetextboxTo");
-            this.DatetextboxTo.Name = "DatetextboxTo";
+            this.buttonZ3.BackColor = System.Drawing.Color.Transparent;
+            this.buttonZ3.BorderColor = System.Drawing.Color.Transparent;
+            this.buttonZ3.BorderWidth = 2;
+            this.buttonZ3.ButtonShape = Custom_Controls_in_CS.ButtonZ.ButtonsShapes.Rect;
+            this.buttonZ3.ButtonText = "";
+            this.buttonZ3.EndColor = System.Drawing.Color.MidnightBlue;
+            this.buttonZ3.FlatAppearance.BorderSize = 0;
+            this.buttonZ3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.buttonZ3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.buttonZ3, "buttonZ3");
+            this.buttonZ3.GradientAngle = 90;
+            this.buttonZ3.MouseClickColor1 = System.Drawing.Color.Yellow;
+            this.buttonZ3.MouseClickColor2 = System.Drawing.Color.Red;
+            this.buttonZ3.MouseHoverColor1 = System.Drawing.Color.Turquoise;
+            this.buttonZ3.MouseHoverColor2 = System.Drawing.Color.DarkSlateGray;
+            this.buttonZ3.Name = "buttonZ3";
+            this.buttonZ3.ShowButtontext = true;
+            this.buttonZ3.StartColor = System.Drawing.Color.DodgerBlue;
+            this.buttonZ3.TextLocation_X = 81;
+            this.buttonZ3.TextLocation_Y = 19;
+            this.buttonZ3.Transparent1 = 250;
+            this.buttonZ3.Transparent2 = 250;
+            this.buttonZ3.UseVisualStyleBackColor = false;
             // 
-            // DatetextBoxFrom
+            // buttonZ4
             // 
-            resources.ApplyResources(this.DatetextBoxFrom, "DatetextBoxFrom");
-            this.DatetextBoxFrom.Name = "DatetextBoxFrom";
+            this.buttonZ4.BackColor = System.Drawing.Color.Transparent;
+            this.buttonZ4.BorderColor = System.Drawing.Color.Transparent;
+            this.buttonZ4.BorderWidth = 2;
+            this.buttonZ4.ButtonShape = Custom_Controls_in_CS.ButtonZ.ButtonsShapes.Rect;
+            this.buttonZ4.ButtonText = "";
+            this.buttonZ4.EndColor = System.Drawing.Color.MidnightBlue;
+            this.buttonZ4.FlatAppearance.BorderSize = 0;
+            this.buttonZ4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.buttonZ4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.buttonZ4, "buttonZ4");
+            this.buttonZ4.GradientAngle = 90;
+            this.buttonZ4.MouseClickColor1 = System.Drawing.Color.Yellow;
+            this.buttonZ4.MouseClickColor2 = System.Drawing.Color.Red;
+            this.buttonZ4.MouseHoverColor1 = System.Drawing.Color.Turquoise;
+            this.buttonZ4.MouseHoverColor2 = System.Drawing.Color.DarkSlateGray;
+            this.buttonZ4.Name = "buttonZ4";
+            this.buttonZ4.ShowButtontext = true;
+            this.buttonZ4.StartColor = System.Drawing.Color.DodgerBlue;
+            this.buttonZ4.TextLocation_X = 81;
+            this.buttonZ4.TextLocation_Y = 19;
+            this.buttonZ4.Transparent1 = 250;
+            this.buttonZ4.Transparent2 = 250;
+            this.buttonZ4.UseVisualStyleBackColor = false;
             // 
-            // DoctortextBox
+            // buttonZ2
             // 
-            resources.ApplyResources(this.DoctortextBox, "DoctortextBox");
-            this.DoctortextBox.Name = "DoctortextBox";
+            this.buttonZ2.BackColor = System.Drawing.Color.Transparent;
+            this.buttonZ2.BorderColor = System.Drawing.Color.Transparent;
+            this.buttonZ2.BorderWidth = 2;
+            this.buttonZ2.ButtonShape = Custom_Controls_in_CS.ButtonZ.ButtonsShapes.Rect;
+            this.buttonZ2.ButtonText = "";
+            this.buttonZ2.EndColor = System.Drawing.Color.MidnightBlue;
+            this.buttonZ2.FlatAppearance.BorderSize = 0;
+            this.buttonZ2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.buttonZ2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.buttonZ2, "buttonZ2");
+            this.buttonZ2.GradientAngle = 90;
+            this.buttonZ2.MouseClickColor1 = System.Drawing.Color.Yellow;
+            this.buttonZ2.MouseClickColor2 = System.Drawing.Color.Red;
+            this.buttonZ2.MouseHoverColor1 = System.Drawing.Color.Turquoise;
+            this.buttonZ2.MouseHoverColor2 = System.Drawing.Color.DarkSlateGray;
+            this.buttonZ2.Name = "buttonZ2";
+            this.buttonZ2.ShowButtontext = true;
+            this.buttonZ2.StartColor = System.Drawing.Color.DodgerBlue;
+            this.buttonZ2.TextLocation_X = 81;
+            this.buttonZ2.TextLocation_Y = 19;
+            this.buttonZ2.Transparent1 = 250;
+            this.buttonZ2.Transparent2 = 250;
+            this.buttonZ2.UseVisualStyleBackColor = false;
             // 
-            // PIBTextBox
+            // buttonZ1
             // 
-            resources.ApplyResources(this.PIBTextBox, "PIBTextBox");
-            this.PIBTextBox.Name = "PIBTextBox";
+            this.buttonZ1.BackColor = System.Drawing.Color.Transparent;
+            this.buttonZ1.BorderColor = System.Drawing.Color.Transparent;
+            this.buttonZ1.BorderWidth = 2;
+            this.buttonZ1.ButtonShape = Custom_Controls_in_CS.ButtonZ.ButtonsShapes.Rect;
+            this.buttonZ1.ButtonText = "";
+            this.buttonZ1.EndColor = System.Drawing.Color.MidnightBlue;
+            this.buttonZ1.FlatAppearance.BorderSize = 0;
+            this.buttonZ1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.buttonZ1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.buttonZ1, "buttonZ1");
+            this.buttonZ1.GradientAngle = 90;
+            this.buttonZ1.MouseClickColor1 = System.Drawing.Color.Yellow;
+            this.buttonZ1.MouseClickColor2 = System.Drawing.Color.Red;
+            this.buttonZ1.MouseHoverColor1 = System.Drawing.Color.Turquoise;
+            this.buttonZ1.MouseHoverColor2 = System.Drawing.Color.DarkSlateGray;
+            this.buttonZ1.Name = "buttonZ1";
+            this.buttonZ1.ShowButtontext = true;
+            this.buttonZ1.StartColor = System.Drawing.Color.DodgerBlue;
+            this.buttonZ1.TextLocation_X = 81;
+            this.buttonZ1.TextLocation_Y = 19;
+            this.buttonZ1.Transparent1 = 250;
+            this.buttonZ1.Transparent2 = 250;
+            this.buttonZ1.UseVisualStyleBackColor = false;
             // 
-            // Updatebtn
+            // panelZ3
             // 
-            resources.ApplyResources(this.Updatebtn, "Updatebtn");
-            this.Updatebtn.Name = "Updatebtn";
-            this.Updatebtn.UseVisualStyleBackColor = true;
-            this.Updatebtn.Click += new System.EventHandler(this.Updatebtn_Click);
+            this.panelZ3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panelZ3.Controls.Add(this.DataGridView2);
+            this.panelZ3.Controls.Add(this.label42);
+            this.panelZ3.Controls.Add(this.button9);
+            this.panelZ3.Controls.Add(this.label41);
+            this.panelZ3.Controls.Add(this.label40);
+            this.panelZ3.Controls.Add(this.Updatebtn);
+            this.panelZ3.Controls.Add(this.label39);
+            this.panelZ3.Controls.Add(this.PIBTextBox);
+            this.panelZ3.Controls.Add(this.DatetextboxTo);
+            this.panelZ3.Controls.Add(this.DoctortextBox);
+            this.panelZ3.Controls.Add(this.DatetextBoxFrom);
+            this.panelZ3.EndColor = System.Drawing.Color.DarkBlue;
+            this.panelZ3.GradientAngle = 90;
+            resources.ApplyResources(this.panelZ3, "panelZ3");
+            this.panelZ3.Name = "panelZ3";
+            this.panelZ3.StartColor = System.Drawing.Color.SteelBlue;
+            this.panelZ3.Transparent1 = 150;
+            this.panelZ3.Transparent2 = 150;
             // 
             // DataGridView2
             // 
@@ -1092,6 +1290,60 @@
             this.price.Name = "price";
             this.price.ReadOnly = true;
             // 
+            // label42
+            // 
+            resources.ApplyResources(this.label42, "label42");
+            this.label42.Name = "label42";
+            // 
+            // button9
+            // 
+            resources.ApplyResources(this.button9, "button9");
+            this.button9.Name = "button9";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // label41
+            // 
+            resources.ApplyResources(this.label41, "label41");
+            this.label41.Name = "label41";
+            // 
+            // label40
+            // 
+            resources.ApplyResources(this.label40, "label40");
+            this.label40.Name = "label40";
+            // 
+            // Updatebtn
+            // 
+            resources.ApplyResources(this.Updatebtn, "Updatebtn");
+            this.Updatebtn.Name = "Updatebtn";
+            this.Updatebtn.UseVisualStyleBackColor = true;
+            this.Updatebtn.Click += new System.EventHandler(this.Updatebtn_Click);
+            // 
+            // label39
+            // 
+            resources.ApplyResources(this.label39, "label39");
+            this.label39.Name = "label39";
+            // 
+            // PIBTextBox
+            // 
+            resources.ApplyResources(this.PIBTextBox, "PIBTextBox");
+            this.PIBTextBox.Name = "PIBTextBox";
+            // 
+            // DatetextboxTo
+            // 
+            resources.ApplyResources(this.DatetextboxTo, "DatetextboxTo");
+            this.DatetextboxTo.Name = "DatetextboxTo";
+            // 
+            // DoctortextBox
+            // 
+            resources.ApplyResources(this.DoctortextBox, "DoctortextBox");
+            this.DoctortextBox.Name = "DoctortextBox";
+            // 
+            // DatetextBoxFrom
+            // 
+            resources.ApplyResources(this.DatetextBoxFrom, "DatetextBoxFrom");
+            this.DatetextBoxFrom.Name = "DatetextBoxFrom";
+            // 
             // tabPage2
             // 
             this.tabPage2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -1102,8 +1354,8 @@
             // 
             // pnlTop
             // 
-            this.pnlTop.Controls.Add(this.button10);
-            this.pnlTop.Controls.Add(this.button11);
+            this.pnlTop.Controls.Add(this.btnAccount);
+            this.pnlTop.Controls.Add(this.btnAccountPhoto);
             this.pnlTop.Controls.Add(this.menuStrip1);
             this.pnlTop.Controls.Add(this.btnMainMenu);
             resources.ApplyResources(this.pnlTop, "pnlTop");
@@ -1114,23 +1366,23 @@
             this.pnlTop.Transparent1 = 50;
             this.pnlTop.Transparent2 = 250;
             // 
-            // button10
+            // btnAccount
             // 
-            resources.ApplyResources(this.button10, "button10");
-            this.button10.BackColor = System.Drawing.Color.Transparent;
-            this.button10.FlatAppearance.BorderSize = 0;
-            this.button10.Name = "button10";
-            this.button10.UseVisualStyleBackColor = false;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
+            resources.ApplyResources(this.btnAccount, "btnAccount");
+            this.btnAccount.BackColor = System.Drawing.Color.Transparent;
+            this.btnAccount.FlatAppearance.BorderSize = 0;
+            this.btnAccount.Name = "btnAccount";
+            this.btnAccount.UseVisualStyleBackColor = false;
+            this.btnAccount.Click += new System.EventHandler(this.button10_Click);
             // 
-            // button11
+            // btnAccountPhoto
             // 
-            resources.ApplyResources(this.button11, "button11");
-            this.button11.BackColor = System.Drawing.Color.Transparent;
-            this.button11.FlatAppearance.BorderSize = 0;
-            this.button11.Name = "button11";
-            this.button11.UseVisualStyleBackColor = false;
-            this.button11.Click += new System.EventHandler(this.button11_Click);
+            resources.ApplyResources(this.btnAccountPhoto, "btnAccountPhoto");
+            this.btnAccountPhoto.BackColor = System.Drawing.Color.Transparent;
+            this.btnAccountPhoto.FlatAppearance.BorderSize = 0;
+            this.btnAccountPhoto.Name = "btnAccountPhoto";
+            this.btnAccountPhoto.UseVisualStyleBackColor = false;
+            this.btnAccountPhoto.Click += new System.EventHandler(this.button11_Click);
             // 
             // menuStrip1
             // 
@@ -1254,7 +1506,9 @@
             this.panelZ2.ResumeLayout(false);
             this.TabControl.ResumeLayout(false);
             this.tabFinance.ResumeLayout(false);
-            this.tabFinance.PerformLayout();
+            this.panelZ4.ResumeLayout(false);
+            this.panelZ3.ResumeLayout(false);
+            this.panelZ3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView2)).EndInit();
             this.pnlTop.ResumeLayout(false);
             this.pnlTop.PerformLayout();
@@ -1406,8 +1660,18 @@
         private PanelZ.PanelZ pnlBot;
         private System.Windows.Forms.Button btnExit;
         private PanelZ.PanelZ panelZ1;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button btnAccount;
+        private System.Windows.Forms.Button btnAccountPhoto;
+        private PanelZ.PanelZ panelZ4;
+        private Custom_Controls_in_CS.ButtonZ buttonZ7;
+        private Custom_Controls_in_CS.ButtonZ buttonZ8;
+        private Custom_Controls_in_CS.ButtonZ buttonZ5;
+        private Custom_Controls_in_CS.ButtonZ buttonZ6;
+        private Custom_Controls_in_CS.ButtonZ buttonZ3;
+        private Custom_Controls_in_CS.ButtonZ buttonZ4;
+        private Custom_Controls_in_CS.ButtonZ buttonZ2;
+        private Custom_Controls_in_CS.ButtonZ buttonZ1;
+        private PanelZ.PanelZ panelZ3;
     }
 }
 

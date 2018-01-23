@@ -35,14 +35,14 @@
             this.btnNewPatient = new System.Windows.Forms.Button();
             this.btnEditPatient = new System.Windows.Forms.Button();
             this.btnSettings = new System.Windows.Forms.Button();
-            this.panelZ2 = new PanelZ.PanelZ();
+            this.pnlTop = new PanelZ.PanelZ();
             this.btnUsername = new System.Windows.Forms.Button();
             this.btnUsernameLogo = new System.Windows.Forms.Button();
-            this.panelZ1 = new PanelZ.PanelZ();
+            this.pnlBot = new PanelZ.PanelZ();
             this.btnInfo = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
-            this.panelZ2.SuspendLayout();
-            this.panelZ1.SuspendLayout();
+            this.pnlTop.SuspendLayout();
+            this.pnlBot.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnRegistry
@@ -153,21 +153,21 @@
             this.btnSettings.MouseLeave += new System.EventHandler(this.btnSettings_MouseLeave);
             this.btnSettings.MouseHover += new System.EventHandler(this.btnSettings_MouseHover);
             // 
-            // panelZ2
+            // pnlTop
             // 
-            this.panelZ2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.pnlTop.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelZ2.Controls.Add(this.btnUsername);
-            this.panelZ2.Controls.Add(this.btnUsernameLogo);
-            this.panelZ2.EndColor = System.Drawing.Color.White;
-            this.panelZ2.GradientAngle = 90;
-            this.panelZ2.Location = new System.Drawing.Point(-2, 1);
-            this.panelZ2.Name = "panelZ2";
-            this.panelZ2.Size = new System.Drawing.Size(750, 40);
-            this.panelZ2.StartColor = System.Drawing.Color.Black;
-            this.panelZ2.TabIndex = 1;
-            this.panelZ2.Transparent1 = 150;
-            this.panelZ2.Transparent2 = 150;
+            this.pnlTop.Controls.Add(this.btnUsername);
+            this.pnlTop.Controls.Add(this.btnUsernameLogo);
+            this.pnlTop.EndColor = System.Drawing.Color.White;
+            this.pnlTop.GradientAngle = 90;
+            this.pnlTop.Location = new System.Drawing.Point(-2, 1);
+            this.pnlTop.Name = "pnlTop";
+            this.pnlTop.Size = new System.Drawing.Size(750, 40);
+            this.pnlTop.StartColor = System.Drawing.Color.Black;
+            this.pnlTop.TabIndex = 1;
+            this.pnlTop.Transparent1 = 150;
+            this.pnlTop.Transparent2 = 150;
             // 
             // btnUsername
             // 
@@ -203,21 +203,21 @@
             this.btnUsernameLogo.UseVisualStyleBackColor = false;
             this.btnUsernameLogo.Click += new System.EventHandler(this.btnUsernameLogo_Click);
             // 
-            // panelZ1
+            // pnlBot
             // 
-            this.panelZ1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.pnlBot.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelZ1.Controls.Add(this.btnInfo);
-            this.panelZ1.Controls.Add(this.btnExit);
-            this.panelZ1.EndColor = System.Drawing.Color.Black;
-            this.panelZ1.GradientAngle = 90;
-            this.panelZ1.Location = new System.Drawing.Point(-2, 383);
-            this.panelZ1.Name = "panelZ1";
-            this.panelZ1.Size = new System.Drawing.Size(750, 40);
-            this.panelZ1.StartColor = System.Drawing.Color.White;
-            this.panelZ1.TabIndex = 0;
-            this.panelZ1.Transparent1 = 150;
-            this.panelZ1.Transparent2 = 150;
+            this.pnlBot.Controls.Add(this.btnInfo);
+            this.pnlBot.Controls.Add(this.btnExit);
+            this.pnlBot.EndColor = System.Drawing.Color.Black;
+            this.pnlBot.GradientAngle = 90;
+            this.pnlBot.Location = new System.Drawing.Point(-2, 383);
+            this.pnlBot.Name = "pnlBot";
+            this.pnlBot.Size = new System.Drawing.Size(750, 40);
+            this.pnlBot.StartColor = System.Drawing.Color.White;
+            this.pnlBot.TabIndex = 0;
+            this.pnlBot.Transparent1 = 150;
+            this.pnlBot.Transparent2 = 150;
             // 
             // btnInfo
             // 
@@ -255,7 +255,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Black;
+            this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(747, 423);
             this.Controls.Add(this.btnSettings);
             this.Controls.Add(this.btnEditPatient);
@@ -263,23 +263,23 @@
             this.Controls.Add(this.btnNewAppoinment);
             this.Controls.Add(this.btnReporting);
             this.Controls.Add(this.btnRegistry);
-            this.Controls.Add(this.panelZ2);
-            this.Controls.Add(this.panelZ1);
+            this.Controls.Add(this.pnlTop);
+            this.Controls.Add(this.pnlBot);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MainMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainMenu";
             this.Load += new System.EventHandler(this.MainMenu_Load);
-            this.panelZ2.ResumeLayout(false);
-            this.panelZ1.ResumeLayout(false);
+            this.pnlTop.ResumeLayout(false);
+            this.pnlBot.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private PanelZ.PanelZ panelZ1;
-        private PanelZ.PanelZ panelZ2;
+        private PanelZ.PanelZ pnlBot;
+        private PanelZ.PanelZ pnlTop;
         private System.Windows.Forms.Button btnUsername;
         private System.Windows.Forms.Button btnUsernameLogo;
         private System.Windows.Forms.Button btnRegistry;

@@ -32,6 +32,7 @@ namespace Stomatology
            // {
                 MainMenu newForm = new MainMenu();
                 newForm.Show();
+            this.Close();
            // }
         }
 

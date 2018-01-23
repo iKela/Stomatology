@@ -1,11 +1,15 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace Stomatology
 {
     public partial class Settings : Form
     {
-        
+        string[] colorsNames = { "Чорно-біла", "Синя", "Біла" };
+
+        int selectedTheme;
+
         public Settings()
         {
                 InitializeComponent();
@@ -13,35 +17,75 @@ namespace Stomatology
 
         private void Settings_Load(object sender, EventArgs e)
         {
-            this.txtTVWay.Text = Properties.Settings.Default.TeamViewerDirection;
-            this.txtBDWay.Text = Properties.Settings.Default.DateBaseDirection;
+            setTheme();
+            cmbThemes.Items.AddRange(colorsNames);
+
+            cmbThemes.SelectedIndex = Properties.Settings.Default.Theme;
+            
+            //Шляхи до БД та TeamViewer
+            //this.txtTVWay.Text = Properties.Settings.Default.TeamViewerDirection;
+            //this.txtBDWay.Text = Properties.Settings.Default.DateBaseDirection;
             toolTip();
+        }
+
+        private void setTheme()
+        {
+            switch (Properties.Settings.Default.Theme)
+            {
+                case 0:
+                    {
+                        if (Properties.Settings.Default.Theme != 0)
+                        {
+                            this.BackColor = Color.Black;
+                        }
+                        break;
+                    }
+                case 1:
+                    {
+                        if (Properties.Settings.Default.Theme != 1)
+                        {
+                            this.BackColor = Color.RoyalBlue;
+                        }
+                        break;
+                    }
+                case 2:
+                    {
+                        if (Properties.Settings.Default.Theme != 2)
+                        {
+                            this.BackColor = Color.LightGray;
+                        }
+                        break;
+                    }
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (txtBDWay.Text == string.Empty)
-            {
-                MessageBox.Show("Задайте шлях до бази даних!");
-            }
-            else if (txtTVWay.Text == string.Empty)
-            {
-                MessageBox.Show("Задайте шлях до TeamViewer!");
-            }
-            else
-            {
-                foreach (Form Main in Application.OpenForms)
-                {
-                    if (Main.Name == "Main")
-                    {
-                        this.Close();
-                        return;
-                    }
-                }
-                Main newForm = new Main();
-                newForm.Show();
-                this.Hide();
-            }
+            this.Close();
+            //Шлях до БД та TeamViewer-------------------------------------------------------------------
+            //__________________________________________________________________________________________
+           // if (txtBDWay.Text == string.Empty)
+           // {
+           //     MessageBox.Show("Задайте шлях до бази даних!");
+           // }
+           // else if (txtTVWay.Text == string.Empty)
+           // {
+           //     MessageBox.Show("Задайте шлях до TeamViewer!");
+           // }
+           // else
+           // {
+           //     foreach (Form Main in Application.OpenForms)
+           //     {
+           //         if (Main.Name == "Main")
+           //         {
+           //             this.Close();
+           //             return;
+           //         }
+           //     }
+           //     Main newForm = new Main();
+           //     newForm.Show();
+           //     this.Hide();
+           // }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -109,26 +153,70 @@ namespace Stomatology
             }
         }
 
+        private void cmbTheme_DrawItem(object sender, DrawItemEventArgs e)
+        {
+          
+        }
+
         private void button1_Click_1(object sender, EventArgs e)
         {
-            if (txtBDWay.Text == string.Empty)
+            if (selectedTheme != Properties.Settings.Default.Theme)
             {
-                MessageBox.Show("Задайте шлях до бази даних!");
-            }
-            else
-            {
-                foreach (Form Main in Application.OpenForms)
+
+                Properties.Settings.Default.Theme = selectedTheme;
+                Properties.Settings.Default.Save();
+
+                string message = "Для того щоб зберегти зміни, потрібен перезапуск додатку. Ви згідні?";
+                string caption = "Увага!.";
+                MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                DialogResult result;
+
+                result = MessageBox.Show(message, caption, buttons);
+
+                if (result == DialogResult.Yes)
                 {
-                    if (Main.Name == "Main")
-                    {
-                        this.Close();
-                        return;
-                    }
+                    Application.Restart();
                 }
-                Main newForm = new Main();
-                newForm.Show();
-                this.Hide();
             }
+        }
+
+        private void cmbThemes_SelectedIndexChanged(object sender, EventArgs e)
+        {     
+            selectedTheme = cmbThemes.SelectedIndex;
+        }
+
+        private void setVisibility(int number)
+        {
+            switch(number)
+            {
+                case 1:
+                    {
+                        pnlGeneral.Visible = true;
+                        pnlPaths.Visible = false;
+                        break;
+                    }
+                case 2:
+                    {
+                        pnlGeneral.Visible = false;
+                        pnlPaths.Visible = true;
+                        break;
+                    }
+                default:
+                    {
+                        pnlGeneral.Visible = true;
+                        pnlPaths.Visible = false;
+                        break;
+                    }
+            }
+        }
+        private void btnPaths_Click(object sender, EventArgs e)
+        {
+            setVisibility(2);
+        }
+
+        private void btnGeneral_Click(object sender, EventArgs e)
+        {
+            setVisibility(1);
         }
     }
 }

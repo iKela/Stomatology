@@ -17,16 +17,56 @@ namespace Stomatology
             InitializeComponent();
         }
 
+        private void MainMenu_Load(object sender, EventArgs e)
+        {
+            btnUsername.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            btnUsernameLogo.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            btnInfo.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            btnExit.FlatAppearance.MouseOverBackColor = Color.Transparent;
+
+            setTheme();
+        }
+
+        private void setTheme()
+        {
+            switch(Properties.Settings.Default.Theme)
+            {
+                case 0:
+                    {
+                        if (Properties.Settings.Default.Theme != 0)
+                        {
+                            this.BackColor = Color.Black;
+                        }
+                        break;
+                    }
+                case 1:
+                    {
+                        if (Properties.Settings.Default.Theme != 1)
+                        {
+                            this.BackColor = Color.RoyalBlue;
+                        }
+                        break;
+                    }
+                case 2:
+                    {
+                        if (Properties.Settings.Default.Theme != 2)
+                        {
+                            this.BackColor = Color.LightGray;
+                        }
+                            break;
+                    }
+            }
+        }
         private void button9_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
         private void btnRegistry_Click(object sender, EventArgs e)
-        {
+        {          
             Main newForm = new Main();
             newForm.Show();
-            this.Close();
+            this.Close();      
         }
 
         private void btnNewAppoinment_Click(object sender, EventArgs e)
@@ -78,15 +118,6 @@ namespace Stomatology
         private void btnUsernameLogo_Click(object sender, EventArgs e)
         {
             showAccount();
-        }
-
-        private void MainMenu_Load(object sender, EventArgs e)
-        {
-            btnUsername.FlatAppearance.MouseOverBackColor = Color.Transparent;
-            btnUsernameLogo.FlatAppearance.MouseOverBackColor = Color.Transparent;
-            btnInfo.FlatAppearance.MouseOverBackColor = Color.Transparent;
-            btnExit.FlatAppearance.MouseOverBackColor = Color.Transparent;
-
         }
 
         #region MouseHover & Leave
