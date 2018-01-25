@@ -72,6 +72,7 @@
             // 
             // btnAccept
             // 
+            this.btnAccept.BackColor = System.Drawing.Color.Transparent;
             this.btnAccept.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnAccept.FlatAppearance.BorderSize = 0;
             this.btnAccept.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -80,11 +81,12 @@
             this.btnAccept.Size = new System.Drawing.Size(70, 25);
             this.btnAccept.TabIndex = 4;
             this.btnAccept.Text = "OK";
-            this.btnAccept.UseVisualStyleBackColor = true;
+            this.btnAccept.UseVisualStyleBackColor = false;
             this.btnAccept.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnCancel
             // 
+            this.btnCancel.BackColor = System.Drawing.Color.Transparent;
             this.btnCancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancel.FlatAppearance.BorderColor = System.Drawing.Color.Black;
@@ -96,7 +98,7 @@
             this.btnCancel.Size = new System.Drawing.Size(25, 25);
             this.btnCancel.TabIndex = 5;
             this.btnCancel.Text = "X";
-            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.button2_Click);
             // 
             // panelZ4
@@ -374,6 +376,7 @@
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -382,7 +385,7 @@
             this.button1.Size = new System.Drawing.Size(90, 25);
             this.button1.TabIndex = 5;
             this.button1.Text = "Застосувати";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // panelZ1
@@ -535,6 +538,7 @@
             this.AcceptButton = this.btnAccept;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Black;
             this.CancelButton = this.btnCancel;
             this.ClientSize = new System.Drawing.Size(426, 515);
             this.Controls.Add(this.panelZ4);

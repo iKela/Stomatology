@@ -19,12 +19,11 @@ namespace Stomatology
 
         private void MainMenu_Load(object sender, EventArgs e)
         {
+            setTheme();
             btnUsername.FlatAppearance.MouseOverBackColor = Color.Transparent;
             btnUsernameLogo.FlatAppearance.MouseOverBackColor = Color.Transparent;
             btnInfo.FlatAppearance.MouseOverBackColor = Color.Transparent;
             btnExit.FlatAppearance.MouseOverBackColor = Color.Transparent;
-
-            setTheme();
         }
 
         private void setTheme()
@@ -33,7 +32,7 @@ namespace Stomatology
             {
                 case 0:
                     {
-                        if (Properties.Settings.Default.Theme != 0)
+                        if (BackColor != Color.Black)
                         {
                             this.BackColor = Color.Black;
                         }
@@ -41,19 +40,20 @@ namespace Stomatology
                     }
                 case 1:
                     {
-                        if (Properties.Settings.Default.Theme != 1)
+                        if (BackColor != Color.RoyalBlue)
                         {
                             this.BackColor = Color.RoyalBlue;
                         }
+                        
                         break;
                     }
                 case 2:
                     {
-                        if (Properties.Settings.Default.Theme != 2)
+                        if (BackColor != Color.LightGray)
                         {
                             this.BackColor = Color.LightGray;
                         }
-                            break;
+                        break;
                     }
             }
         }
