@@ -19,7 +19,7 @@ namespace Stomatology
 
         int Arrears;
 
-        string[] Doctor = { "Кричильський Леонід Ростиславович", " Кричильський Тетяна Георгієвна", "Яскал Зоряна Миколаївна" };
+        string[] Doctor = { "Кричильський Леонід Ростиславович", " Кричильська Тетяна Георгієвна", "Яскал Зоряна Миколаївна" };
 
         public void PassValue(string strValue)
         {
@@ -29,6 +29,83 @@ namespace Stomatology
         public NewAppoinment()
         {
             InitializeComponent();
+            setTheme();
+        }
+
+        private void setTheme()
+        {
+            switch (Properties.Settings.Default.Theme)
+            {
+                case 0:
+                    {
+                        if (this.BackColor != Color.Black)
+                        {
+                            this.BackColor = Color.Black;
+
+                            button1.BackColor = Color.White;
+                            button2.BackColor = Color.White;
+                            button3.BackColor = Color.White;
+                            button4.BackColor = Color.White;
+                            button5.BackColor = Color.White;
+                            button6.BackColor = Color.White;
+                            lbl1.ForeColor = Color.White;
+                            lbl2.ForeColor = Color.White;
+                            lbl3.ForeColor = Color.White;
+                            lbl4.ForeColor = Color.White;
+                            lbl5.ForeColor = Color.White;
+                            lbl6.ForeColor = Color.White;
+                            lbl6.ForeColor = Color.White;
+                            chbArrears.ForeColor = Color.White;
+                        }
+
+                        break;
+                    }
+                case 1:
+                    {
+                        if (this.BackColor != Color.RoyalBlue)
+                        {
+                            this.BackColor = Color.RoyalBlue;
+
+                            button1.BackColor = Color.Transparent;
+                            button2.BackColor = Color.Transparent;
+                            button3.BackColor = Color.Transparent;
+                            button4.BackColor = Color.Transparent;
+                            button5.BackColor = Color.Transparent;
+                            button6.BackColor = Color.Transparent;
+                            lbl1.ForeColor = Color.Black;
+                            lbl2.ForeColor = Color.Black;
+                            lbl3.ForeColor = Color.Black;
+                            lbl4.ForeColor = Color.Black;
+                            lbl5.ForeColor = Color.Black;
+                            lbl6.ForeColor = Color.Black;
+                            chbArrears.ForeColor = Color.Black;
+                        }
+                        break;
+                    }
+                case 2:
+                    {
+                        if (this.BackColor != Color.LightGray)
+                        {
+                            this.BackColor = Color.LightGray;
+
+                            button1.BackColor = Color.Transparent;
+                            button2.BackColor = Color.Transparent;
+                            button3.BackColor = Color.Transparent;
+                            button4.BackColor = Color.Transparent;
+                            button5.BackColor = Color.Transparent;
+                            button6.BackColor = Color.Transparent;
+                            lbl1.ForeColor = Color.Black;
+                            lbl2.ForeColor = Color.Black;
+                            lbl3.ForeColor = Color.Black;
+                            lbl4.ForeColor = Color.Black;
+                            lbl5.ForeColor = Color.Black;
+                            lbl6.ForeColor = Color.Black;
+                            chbArrears.ForeColor = Color.Black;
+                        }
+
+                        break;
+                    }
+            }
         }
         private void button2_Click(object sender, EventArgs e)
         {

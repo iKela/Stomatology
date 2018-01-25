@@ -29,6 +29,27 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NewMedCard));
+            this.txtDateOfBirthday = new System.Windows.Forms.TextBox();
+            this.txtNumber = new System.Windows.Forms.MaskedTextBox();
+            this.txtAddress = new System.Windows.Forms.TextBox();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.dtpDateOfCreating = new System.Windows.Forms.DateTimePicker();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.pnlBot = new PanelZ.PanelZ();
+            this.SaveAs = new Custom_Controls_in_CS.ButtonZ();
+            this.txtGender = new System.Windows.Forms.MaskedTextBox();
+            this.lblName = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.lblGender = new System.Windows.Forms.Label();
+            this.lblGenderType = new System.Windows.Forms.Label();
+            this.lblBirthday = new System.Windows.Forms.Label();
+            this.button6 = new System.Windows.Forms.Button();
+            this.lblDate = new System.Windows.Forms.Label();
+            this.lblPhoneNumber = new System.Windows.Forms.Label();
+            this.lblAddress = new System.Windows.Forms.Label();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tbInfo = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtDiagnosis = new System.Windows.Forms.TextBox();
             this.txtControlDate = new System.Windows.Forms.TextBox();
@@ -52,23 +73,6 @@
             this.txtComplaints = new System.Windows.Forms.TextBox();
             this.label38 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
-            this.txtDateOfBirthday = new System.Windows.Forms.TextBox();
-            this.txtNumber = new System.Windows.Forms.MaskedTextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.txtAddress = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label48 = new System.Windows.Forms.Label();
-            this.label49 = new System.Windows.Forms.Label();
-            this.label50 = new System.Windows.Forms.Label();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.txtTreatmentPlan = new System.Windows.Forms.TextBox();
-            this.tpTreatmentPlan = new System.Windows.Forms.TabPage();
-            this.txtSurvayPlan = new System.Windows.Forms.TextBox();
-            this.tbInfo = new System.Windows.Forms.TabPage();
             this.tbTeeth = new System.Windows.Forms.TabPage();
             this.TopLeftTextBox_7 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -136,29 +140,252 @@
             this.label30 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tpSurvayPlan = new System.Windows.Forms.TabPage();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.label2 = new System.Windows.Forms.Label();
-            this.dtpDateOfCreating = new System.Windows.Forms.DateTimePicker();
-            this.label52 = new System.Windows.Forms.Label();
-            this.txtName = new System.Windows.Forms.TextBox();
-            this.txtGender = new System.Windows.Forms.MaskedTextBox();
-            this.button6 = new System.Windows.Forms.Button();
-            this.label36 = new System.Windows.Forms.Label();
-            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.panelZ1 = new PanelZ.PanelZ();
+            this.txtSurvayPlan = new System.Windows.Forms.TextBox();
+            this.tpTreatmentPlan = new System.Windows.Forms.TabPage();
+            this.txtTreatmentPlan = new System.Windows.Forms.TextBox();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.panelZ2 = new PanelZ.PanelZ();
-            this.SaveAs = new Custom_Controls_in_CS.ButtonZ();
-            this.buttonZ1 = new Custom_Controls_in_CS.ButtonZ();
-            this.panel1.SuspendLayout();
-            this.tpTreatmentPlan.SuspendLayout();
+            this.btnExit = new Custom_Controls_in_CS.ButtonZ();
+            this.pnlBot.SuspendLayout();
+            this.tabControl1.SuspendLayout();
             this.tbInfo.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.tbTeeth.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tpSurvayPlan.SuspendLayout();
-            this.tabControl1.SuspendLayout();
-            this.panelZ1.SuspendLayout();
+            this.tpTreatmentPlan.SuspendLayout();
             this.panelZ2.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // txtDateOfBirthday
+            // 
+            this.txtDateOfBirthday.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.txtDateOfBirthday.Location = new System.Drawing.Point(182, 75);
+            this.txtDateOfBirthday.Name = "txtDateOfBirthday";
+            this.txtDateOfBirthday.Size = new System.Drawing.Size(311, 26);
+            this.txtDateOfBirthday.TabIndex = 2;
+            // 
+            // txtNumber
+            // 
+            this.txtNumber.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.txtNumber.Location = new System.Drawing.Point(182, 108);
+            this.txtNumber.Mask = "моб +38 (999) 000-0000, дом 0-00-00";
+            this.txtNumber.Name = "txtNumber";
+            this.txtNumber.Size = new System.Drawing.Size(312, 26);
+            this.txtNumber.TabIndex = 3;
+            // 
+            // txtAddress
+            // 
+            this.txtAddress.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.txtAddress.Location = new System.Drawing.Point(182, 145);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(311, 26);
+            this.txtAddress.TabIndex = 4;
+            this.txtAddress.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAddress_KeyPress);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // dtpDateOfCreating
+            // 
+            this.dtpDateOfCreating.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.dtpDateOfCreating.Location = new System.Drawing.Point(182, 177);
+            this.dtpDateOfCreating.Name = "dtpDateOfCreating";
+            this.dtpDateOfCreating.Size = new System.Drawing.Size(173, 26);
+            this.dtpDateOfCreating.TabIndex = 5;
+            // 
+            // txtName
+            // 
+            this.txtName.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.txtName.Location = new System.Drawing.Point(182, 41);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(311, 26);
+            this.txtName.TabIndex = 1;
+            this.txtName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtName_KeyPress);
+            // 
+            // pnlBot
+            // 
+            this.pnlBot.Controls.Add(this.SaveAs);
+            this.pnlBot.EndColor = System.Drawing.Color.Black;
+            this.pnlBot.GradientAngle = 90;
+            this.pnlBot.Location = new System.Drawing.Point(-1, 703);
+            this.pnlBot.Name = "pnlBot";
+            this.pnlBot.Size = new System.Drawing.Size(581, 40);
+            this.pnlBot.StartColor = System.Drawing.Color.White;
+            this.pnlBot.TabIndex = 339;
+            this.pnlBot.Transparent1 = 150;
+            this.pnlBot.Transparent2 = 150;
+            // 
+            // SaveAs
+            // 
+            this.SaveAs.BackColor = System.Drawing.Color.Transparent;
+            this.SaveAs.BorderColor = System.Drawing.Color.Transparent;
+            this.SaveAs.BorderWidth = 2;
+            this.SaveAs.ButtonShape = Custom_Controls_in_CS.ButtonZ.ButtonsShapes.RoundRect;
+            this.SaveAs.ButtonText = "Додати";
+            this.SaveAs.EndColor = System.Drawing.Color.White;
+            this.SaveAs.FlatAppearance.BorderSize = 0;
+            this.SaveAs.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.SaveAs.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.SaveAs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SaveAs.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.SaveAs.ForeColor = System.Drawing.Color.Black;
+            this.SaveAs.GradientAngle = 90;
+            this.SaveAs.Location = new System.Drawing.Point(232, 0);
+            this.SaveAs.MouseClickColor1 = System.Drawing.Color.Yellow;
+            this.SaveAs.MouseClickColor2 = System.Drawing.Color.Red;
+            this.SaveAs.MouseHoverColor1 = System.Drawing.Color.Turquoise;
+            this.SaveAs.MouseHoverColor2 = System.Drawing.Color.DarkSlateGray;
+            this.SaveAs.Name = "SaveAs";
+            this.SaveAs.ShowButtontext = true;
+            this.SaveAs.Size = new System.Drawing.Size(100, 40);
+            this.SaveAs.StartColor = System.Drawing.Color.Black;
+            this.SaveAs.TabIndex = 322;
+            this.SaveAs.TextLocation_X = 22;
+            this.SaveAs.TextLocation_Y = 10;
+            this.SaveAs.Transparent1 = 50;
+            this.SaveAs.Transparent2 = 250;
+            this.SaveAs.UseVisualStyleBackColor = false;
+            this.SaveAs.Click += new System.EventHandler(this.SaveAs_Click);
+            // 
+            // txtGender
+            // 
+            this.txtGender.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txtGender.Location = new System.Drawing.Point(183, 207);
+            this.txtGender.Mask = "(0)";
+            this.txtGender.Name = "txtGender";
+            this.txtGender.Size = new System.Drawing.Size(28, 26);
+            this.txtGender.TabIndex = 324;
+            this.txtGender.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lblName
+            // 
+            this.lblName.BackColor = System.Drawing.Color.Transparent;
+            this.lblName.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblName.Location = new System.Drawing.Point(41, 45);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(47, 20);
+            this.lblName.TabIndex = 328;
+            this.lblName.Text = "П.І.Б";
+            // 
+            // button2
+            // 
+            this.button2.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.button2.BackColor = System.Drawing.Color.Transparent;
+            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button2.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.button2.Enabled = false;
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Location = new System.Drawing.Point(15, 45);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(20, 20);
+            this.button2.TabIndex = 333;
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // lblGender
+            // 
+            this.lblGender.BackColor = System.Drawing.Color.Transparent;
+            this.lblGender.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblGender.Location = new System.Drawing.Point(41, 210);
+            this.lblGender.Name = "lblGender";
+            this.lblGender.Size = new System.Drawing.Size(58, 20);
+            this.lblGender.TabIndex = 338;
+            this.lblGender.Text = "Стать:";
+            // 
+            // lblGenderType
+            // 
+            this.lblGenderType.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblGenderType.Location = new System.Drawing.Point(217, 210);
+            this.lblGenderType.Name = "lblGenderType";
+            this.lblGenderType.Size = new System.Drawing.Size(185, 20);
+            this.lblGenderType.TabIndex = 336;
+            this.lblGenderType.Text = "чоловіча – 1; жіноча – 2";
+            // 
+            // lblBirthday
+            // 
+            this.lblBirthday.BackColor = System.Drawing.Color.Transparent;
+            this.lblBirthday.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblBirthday.Location = new System.Drawing.Point(41, 79);
+            this.lblBirthday.Name = "lblBirthday";
+            this.lblBirthday.Size = new System.Drawing.Size(129, 20);
+            this.lblBirthday.TabIndex = 329;
+            this.lblBirthday.Text = "Рік народження:";
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.Transparent;
+            this.button6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button6.BackgroundImage")));
+            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button6.Enabled = false;
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Location = new System.Drawing.Point(15, 207);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(20, 20);
+            this.button6.TabIndex = 337;
+            this.button6.UseVisualStyleBackColor = false;
+            // 
+            // lblDate
+            // 
+            this.lblDate.AutoSize = true;
+            this.lblDate.BackColor = System.Drawing.Color.Transparent;
+            this.lblDate.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblDate.Location = new System.Drawing.Point(41, 184);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(44, 19);
+            this.lblDate.TabIndex = 325;
+            this.lblDate.Text = "Дата:";
+            // 
+            // lblPhoneNumber
+            // 
+            this.lblPhoneNumber.BackColor = System.Drawing.Color.Transparent;
+            this.lblPhoneNumber.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblPhoneNumber.Location = new System.Drawing.Point(41, 114);
+            this.lblPhoneNumber.Name = "lblPhoneNumber";
+            this.lblPhoneNumber.Size = new System.Drawing.Size(137, 20);
+            this.lblPhoneNumber.TabIndex = 330;
+            this.lblPhoneNumber.Text = "Номер телефону:";
+            // 
+            // lblAddress
+            // 
+            this.lblAddress.BackColor = System.Drawing.Color.Transparent;
+            this.lblAddress.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblAddress.Location = new System.Drawing.Point(41, 149);
+            this.lblAddress.Name = "lblAddress";
+            this.lblAddress.Size = new System.Drawing.Size(137, 20);
+            this.lblAddress.TabIndex = 331;
+            this.lblAddress.Text = "Адреса:";
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tbInfo);
+            this.tabControl1.Controls.Add(this.tbTeeth);
+            this.tabControl1.Controls.Add(this.tpSurvayPlan);
+            this.tabControl1.Controls.Add(this.tpTreatmentPlan);
+            this.tabControl1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tabControl1.Location = new System.Drawing.Point(13, 245);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(546, 450);
+            this.tabControl1.TabIndex = 327;
+            // 
+            // tbInfo
+            // 
+            this.tbInfo.Controls.Add(this.panel1);
+            this.tbInfo.Location = new System.Drawing.Point(4, 28);
+            this.tbInfo.Name = "tbInfo";
+            this.tbInfo.Padding = new System.Windows.Forms.Padding(3);
+            this.tbInfo.Size = new System.Drawing.Size(538, 418);
+            this.tbInfo.TabIndex = 0;
+            this.tbInfo.Text = "Інформація";
+            this.tbInfo.UseVisualStyleBackColor = true;
             // 
             // panel1
             // 
@@ -402,196 +629,6 @@
             this.label3.Size = new System.Drawing.Size(62, 19);
             this.label3.TabIndex = 5;
             this.label3.Text = "Діагноз:";
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.Transparent;
-            this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button4.Enabled = false;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(14, 183);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(20, 20);
-            this.button4.TabIndex = 109;
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // txtDateOfBirthday
-            // 
-            this.txtDateOfBirthday.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.txtDateOfBirthday.Location = new System.Drawing.Point(182, 75);
-            this.txtDateOfBirthday.Name = "txtDateOfBirthday";
-            this.txtDateOfBirthday.Size = new System.Drawing.Size(311, 26);
-            this.txtDateOfBirthday.TabIndex = 2;
-            // 
-            // txtNumber
-            // 
-            this.txtNumber.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.txtNumber.Location = new System.Drawing.Point(182, 108);
-            this.txtNumber.Mask = "моб +38 (999) 000-0000, дом 0-00-00";
-            this.txtNumber.Name = "txtNumber";
-            this.txtNumber.Size = new System.Drawing.Size(312, 26);
-            this.txtNumber.TabIndex = 3;
-            // 
-            // button1
-            // 
-            this.button1.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.button1.Enabled = false;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(14, 78);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(20, 20);
-            this.button1.TabIndex = 128;
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // button5
-            // 
-            this.button5.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.button5.BackColor = System.Drawing.Color.Transparent;
-            this.button5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button5.BackgroundImage")));
-            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button5.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.button5.Enabled = false;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Location = new System.Drawing.Point(14, 148);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(20, 20);
-            this.button5.TabIndex = 127;
-            this.button5.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.button2.Enabled = false;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Red;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(14, 44);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(20, 20);
-            this.button2.TabIndex = 126;
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            this.button3.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button3.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.button3.Enabled = false;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(14, 111);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(20, 20);
-            this.button3.TabIndex = 125;
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // txtAddress
-            // 
-            this.txtAddress.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.txtAddress.Location = new System.Drawing.Point(182, 145);
-            this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(311, 26);
-            this.txtAddress.TabIndex = 4;
-            this.txtAddress.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAddress_KeyPress);
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(40, 148);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(137, 20);
-            this.label1.TabIndex = 124;
-            this.label1.Text = "Адреса:";
-            // 
-            // label48
-            // 
-            this.label48.BackColor = System.Drawing.Color.Transparent;
-            this.label48.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label48.Location = new System.Drawing.Point(40, 113);
-            this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(137, 20);
-            this.label48.TabIndex = 122;
-            this.label48.Text = "Номер телефону:";
-            // 
-            // label49
-            // 
-            this.label49.BackColor = System.Drawing.Color.Transparent;
-            this.label49.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label49.Location = new System.Drawing.Point(40, 78);
-            this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(129, 20);
-            this.label49.TabIndex = 121;
-            this.label49.Text = "Рік народження:";
-            // 
-            // label50
-            // 
-            this.label50.BackColor = System.Drawing.Color.Transparent;
-            this.label50.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label50.Location = new System.Drawing.Point(40, 44);
-            this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(47, 20);
-            this.label50.TabIndex = 118;
-            this.label50.Text = "П.І.Б";
-            // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // txtTreatmentPlan
-            // 
-            this.txtTreatmentPlan.Location = new System.Drawing.Point(0, 0);
-            this.txtTreatmentPlan.Multiline = true;
-            this.txtTreatmentPlan.Name = "txtTreatmentPlan";
-            this.txtTreatmentPlan.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtTreatmentPlan.Size = new System.Drawing.Size(538, 426);
-            this.txtTreatmentPlan.TabIndex = 0;
-            // 
-            // tpTreatmentPlan
-            // 
-            this.tpTreatmentPlan.Controls.Add(this.txtTreatmentPlan);
-            this.tpTreatmentPlan.Location = new System.Drawing.Point(4, 28);
-            this.tpTreatmentPlan.Name = "tpTreatmentPlan";
-            this.tpTreatmentPlan.Padding = new System.Windows.Forms.Padding(3);
-            this.tpTreatmentPlan.Size = new System.Drawing.Size(538, 418);
-            this.tpTreatmentPlan.TabIndex = 3;
-            this.tpTreatmentPlan.Text = "План лікування";
-            this.tpTreatmentPlan.UseVisualStyleBackColor = true;
-            // 
-            // txtSurvayPlan
-            // 
-            this.txtSurvayPlan.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.txtSurvayPlan.Location = new System.Drawing.Point(0, 0);
-            this.txtSurvayPlan.Multiline = true;
-            this.txtSurvayPlan.Name = "txtSurvayPlan";
-            this.txtSurvayPlan.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtSurvayPlan.Size = new System.Drawing.Size(538, 426);
-            this.txtSurvayPlan.TabIndex = 0;
-            // 
-            // tbInfo
-            // 
-            this.tbInfo.Controls.Add(this.panel1);
-            this.tbInfo.Location = new System.Drawing.Point(4, 28);
-            this.tbInfo.Name = "tbInfo";
-            this.tbInfo.Padding = new System.Windows.Forms.Padding(3);
-            this.tbInfo.Size = new System.Drawing.Size(538, 418);
-            this.tbInfo.TabIndex = 0;
-            this.tbInfo.Text = "Інформація";
-            this.tbInfo.UseVisualStyleBackColor = true;
             // 
             // tbTeeth
             // 
@@ -1264,232 +1301,190 @@
             this.tpSurvayPlan.Text = "План обстеження";
             this.tpSurvayPlan.UseVisualStyleBackColor = true;
             // 
-            // tabControl1
+            // txtSurvayPlan
             // 
-            this.tabControl1.Controls.Add(this.tbInfo);
-            this.tabControl1.Controls.Add(this.tbTeeth);
-            this.tabControl1.Controls.Add(this.tpSurvayPlan);
-            this.tabControl1.Controls.Add(this.tpTreatmentPlan);
-            this.tabControl1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tabControl1.Location = new System.Drawing.Point(12, 244);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(546, 450);
-            this.tabControl1.TabIndex = 116;
+            this.txtSurvayPlan.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txtSurvayPlan.Location = new System.Drawing.Point(0, 0);
+            this.txtSurvayPlan.Multiline = true;
+            this.txtSurvayPlan.Name = "txtSurvayPlan";
+            this.txtSurvayPlan.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtSurvayPlan.Size = new System.Drawing.Size(538, 426);
+            this.txtSurvayPlan.TabIndex = 0;
             // 
-            // label2
+            // tpTreatmentPlan
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(40, 183);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 19);
-            this.label2.TabIndex = 105;
-            this.label2.Text = "Дата:";
+            this.tpTreatmentPlan.Controls.Add(this.txtTreatmentPlan);
+            this.tpTreatmentPlan.Location = new System.Drawing.Point(4, 28);
+            this.tpTreatmentPlan.Name = "tpTreatmentPlan";
+            this.tpTreatmentPlan.Padding = new System.Windows.Forms.Padding(3);
+            this.tpTreatmentPlan.Size = new System.Drawing.Size(538, 418);
+            this.tpTreatmentPlan.TabIndex = 3;
+            this.tpTreatmentPlan.Text = "План лікування";
+            this.tpTreatmentPlan.UseVisualStyleBackColor = true;
             // 
-            // dtpDateOfCreating
+            // txtTreatmentPlan
             // 
-            this.dtpDateOfCreating.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.dtpDateOfCreating.Location = new System.Drawing.Point(182, 177);
-            this.dtpDateOfCreating.Name = "dtpDateOfCreating";
-            this.dtpDateOfCreating.Size = new System.Drawing.Size(173, 26);
-            this.dtpDateOfCreating.TabIndex = 5;
+            this.txtTreatmentPlan.Location = new System.Drawing.Point(0, 0);
+            this.txtTreatmentPlan.Multiline = true;
+            this.txtTreatmentPlan.Name = "txtTreatmentPlan";
+            this.txtTreatmentPlan.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtTreatmentPlan.Size = new System.Drawing.Size(538, 426);
+            this.txtTreatmentPlan.TabIndex = 0;
             // 
-            // label52
+            // button4
             // 
-            this.label52.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label52.Location = new System.Drawing.Point(179, 209);
-            this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(185, 20);
-            this.label52.TabIndex = 132;
-            this.label52.Text = "чоловіча – 1; жіноча – 2";
+            this.button4.BackColor = System.Drawing.Color.Transparent;
+            this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
+            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button4.Enabled = false;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Location = new System.Drawing.Point(15, 184);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(20, 20);
+            this.button4.TabIndex = 326;
+            this.button4.UseVisualStyleBackColor = false;
             // 
-            // txtName
+            // button3
             // 
-            this.txtName.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.txtName.Location = new System.Drawing.Point(182, 41);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(311, 26);
-            this.txtName.TabIndex = 1;
-            this.txtName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtName_KeyPress);
+            this.button3.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.button3.BackColor = System.Drawing.Color.Transparent;
+            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button3.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.button3.Enabled = false;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Location = new System.Drawing.Point(15, 112);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(20, 20);
+            this.button3.TabIndex = 332;
+            this.button3.UseVisualStyleBackColor = false;
             // 
-            // txtGender
+            // button5
             // 
-            this.txtGender.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.txtGender.Location = new System.Drawing.Point(466, 206);
-            this.txtGender.Mask = "(0)";
-            this.txtGender.Name = "txtGender";
-            this.txtGender.Size = new System.Drawing.Size(28, 26);
-            this.txtGender.TabIndex = 6;
-            this.txtGender.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.button5.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.button5.BackColor = System.Drawing.Color.Transparent;
+            this.button5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button5.BackgroundImage")));
+            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button5.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.button5.Enabled = false;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Location = new System.Drawing.Point(15, 149);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(20, 20);
+            this.button5.TabIndex = 334;
+            this.button5.UseVisualStyleBackColor = false;
             // 
-            // button6
+            // button1
             // 
-            this.button6.BackColor = System.Drawing.Color.Transparent;
-            this.button6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button6.BackgroundImage")));
-            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button6.Enabled = false;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Location = new System.Drawing.Point(14, 206);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(20, 20);
-            this.button6.TabIndex = 134;
-            this.button6.UseVisualStyleBackColor = false;
-            // 
-            // label36
-            // 
-            this.label36.BackColor = System.Drawing.Color.Transparent;
-            this.label36.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label36.Location = new System.Drawing.Point(40, 209);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(58, 20);
-            this.label36.TabIndex = 135;
-            this.label36.Text = "Стать:";
-            // 
-            // panelZ1
-            // 
-            this.panelZ1.BackColor = System.Drawing.Color.Transparent;
-            this.panelZ1.Controls.Add(this.SaveAs);
-            this.panelZ1.Controls.Add(this.panelZ2);
-            this.panelZ1.Controls.Add(this.label50);
-            this.panelZ1.Controls.Add(this.button2);
-            this.panelZ1.Controls.Add(this.label36);
-            this.panelZ1.Controls.Add(this.label52);
-            this.panelZ1.Controls.Add(this.label49);
-            this.panelZ1.Controls.Add(this.button6);
-            this.panelZ1.Controls.Add(this.label2);
-            this.panelZ1.Controls.Add(this.label48);
-            this.panelZ1.Controls.Add(this.label1);
-            this.panelZ1.Controls.Add(this.tabControl1);
-            this.panelZ1.Controls.Add(this.button4);
-            this.panelZ1.Controls.Add(this.button3);
-            this.panelZ1.Controls.Add(this.button5);
-            this.panelZ1.Controls.Add(this.button1);
-            this.panelZ1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelZ1.EndColor = System.Drawing.Color.Black;
-            this.panelZ1.GradientAngle = 90;
-            this.panelZ1.Location = new System.Drawing.Point(0, 0);
-            this.panelZ1.MaximumSize = new System.Drawing.Size(573, 742);
-            this.panelZ1.MinimumSize = new System.Drawing.Size(573, 742);
-            this.panelZ1.Name = "panelZ1";
-            this.panelZ1.Size = new System.Drawing.Size(573, 742);
-            this.panelZ1.StartColor = System.Drawing.Color.White;
-            this.panelZ1.TabIndex = 136;
-            this.panelZ1.Transparent1 = 150;
-            this.panelZ1.Transparent2 = 150;
+            this.button1.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.button1.Enabled = false;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(15, 79);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(20, 20);
+            this.button1.TabIndex = 335;
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // panelZ2
             // 
-            this.panelZ2.Controls.Add(this.buttonZ1);
+            this.panelZ2.Controls.Add(this.btnExit);
             this.panelZ2.EndColor = System.Drawing.Color.White;
             this.panelZ2.GradientAngle = 90;
-            this.panelZ2.Location = new System.Drawing.Point(0, 0);
+            this.panelZ2.Location = new System.Drawing.Point(-1, 0);
             this.panelZ2.Name = "panelZ2";
-            this.panelZ2.Size = new System.Drawing.Size(573, 35);
+            this.panelZ2.Size = new System.Drawing.Size(581, 35);
             this.panelZ2.StartColor = System.Drawing.Color.Black;
-            this.panelZ2.TabIndex = 136;
-            this.panelZ2.Transparent1 = 255;
-            this.panelZ2.Transparent2 = 50;
+            this.panelZ2.TabIndex = 340;
+            this.panelZ2.Transparent1 = 150;
+            this.panelZ2.Transparent2 = 150;
             // 
-            // SaveAs
+            // btnExit
             // 
-            this.SaveAs.BackColor = System.Drawing.Color.Transparent;
-            this.SaveAs.BorderColor = System.Drawing.Color.Transparent;
-            this.SaveAs.BorderWidth = 2;
-            this.SaveAs.ButtonShape = Custom_Controls_in_CS.ButtonZ.ButtonsShapes.RoundRect;
-            this.SaveAs.ButtonText = "Додати";
-            this.SaveAs.EndColor = System.Drawing.Color.White;
-            this.SaveAs.FlatAppearance.BorderSize = 0;
-            this.SaveAs.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.SaveAs.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.SaveAs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SaveAs.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.SaveAs.ForeColor = System.Drawing.Color.Black;
-            this.SaveAs.GradientAngle = 90;
-            this.SaveAs.Location = new System.Drawing.Point(229, 696);
-            this.SaveAs.MouseClickColor1 = System.Drawing.Color.Yellow;
-            this.SaveAs.MouseClickColor2 = System.Drawing.Color.Red;
-            this.SaveAs.MouseHoverColor1 = System.Drawing.Color.Turquoise;
-            this.SaveAs.MouseHoverColor2 = System.Drawing.Color.DarkSlateGray;
-            this.SaveAs.Name = "SaveAs";
-            this.SaveAs.ShowButtontext = true;
-            this.SaveAs.Size = new System.Drawing.Size(100, 40);
-            this.SaveAs.StartColor = System.Drawing.Color.Black;
-            this.SaveAs.TabIndex = 322;
-            this.SaveAs.TextLocation_X = 22;
-            this.SaveAs.TextLocation_Y = 10;
-            this.SaveAs.Transparent1 = 50;
-            this.SaveAs.Transparent2 = 250;
-            this.SaveAs.UseVisualStyleBackColor = false;
-            this.SaveAs.Click += new System.EventHandler(this.SaveAs_Click);
-            // 
-            // buttonZ1
-            // 
-            this.buttonZ1.BackColor = System.Drawing.Color.Transparent;
-            this.buttonZ1.BorderColor = System.Drawing.Color.Transparent;
-            this.buttonZ1.BorderWidth = 1;
-            this.buttonZ1.ButtonShape = Custom_Controls_in_CS.ButtonZ.ButtonsShapes.Rect;
-            this.buttonZ1.ButtonText = "X";
-            this.buttonZ1.EndColor = System.Drawing.Color.Black;
-            this.buttonZ1.FlatAppearance.BorderSize = 0;
-            this.buttonZ1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.buttonZ1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.buttonZ1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonZ1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonZ1.ForeColor = System.Drawing.Color.White;
-            this.buttonZ1.GradientAngle = 90;
-            this.buttonZ1.Location = new System.Drawing.Point(535, 3);
-            this.buttonZ1.MouseClickColor1 = System.Drawing.Color.Red;
-            this.buttonZ1.MouseClickColor2 = System.Drawing.Color.Red;
-            this.buttonZ1.MouseHoverColor1 = System.Drawing.Color.Black;
-            this.buttonZ1.MouseHoverColor2 = System.Drawing.Color.Black;
-            this.buttonZ1.Name = "buttonZ1";
-            this.buttonZ1.ShowButtontext = true;
-            this.buttonZ1.Size = new System.Drawing.Size(35, 25);
-            this.buttonZ1.StartColor = System.Drawing.Color.Black;
-            this.buttonZ1.TabIndex = 2;
-            this.buttonZ1.Text = "X";
-            this.buttonZ1.TextLocation_X = 10;
-            this.buttonZ1.TextLocation_Y = 4;
-            this.buttonZ1.Transparent1 = 250;
-            this.buttonZ1.Transparent2 = 250;
-            this.buttonZ1.UseVisualStyleBackColor = false;
-            this.buttonZ1.Click += new System.EventHandler(this.buttonZ1_Click);
+            this.btnExit.BackColor = System.Drawing.Color.Transparent;
+            this.btnExit.BorderColor = System.Drawing.Color.Transparent;
+            this.btnExit.BorderWidth = 1;
+            this.btnExit.ButtonShape = Custom_Controls_in_CS.ButtonZ.ButtonsShapes.Rect;
+            this.btnExit.ButtonText = "X";
+            this.btnExit.EndColor = System.Drawing.Color.Black;
+            this.btnExit.FlatAppearance.BorderSize = 0;
+            this.btnExit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnExit.ForeColor = System.Drawing.Color.White;
+            this.btnExit.GradientAngle = 90;
+            this.btnExit.Location = new System.Drawing.Point(535, 3);
+            this.btnExit.MouseClickColor1 = System.Drawing.Color.Red;
+            this.btnExit.MouseClickColor2 = System.Drawing.Color.Red;
+            this.btnExit.MouseHoverColor1 = System.Drawing.Color.Black;
+            this.btnExit.MouseHoverColor2 = System.Drawing.Color.Black;
+            this.btnExit.Name = "btnExit";
+            this.btnExit.ShowButtontext = true;
+            this.btnExit.Size = new System.Drawing.Size(35, 25);
+            this.btnExit.StartColor = System.Drawing.Color.Black;
+            this.btnExit.TabIndex = 1;
+            this.btnExit.Text = "X";
+            this.btnExit.TextLocation_X = 10;
+            this.btnExit.TextLocation_Y = 4;
+            this.btnExit.Transparent1 = 250;
+            this.btnExit.Transparent2 = 250;
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.buttonZ1_Click);
             // 
             // NewMedCard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(573, 742);
+            this.Controls.Add(this.panelZ2);
+            this.Controls.Add(this.pnlBot);
             this.Controls.Add(this.txtGender);
+            this.Controls.Add(this.lblName);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.lblGender);
+            this.Controls.Add(this.lblGenderType);
+            this.Controls.Add(this.lblBirthday);
+            this.Controls.Add(this.button6);
+            this.Controls.Add(this.lblDate);
+            this.Controls.Add(this.lblPhoneNumber);
+            this.Controls.Add(this.lblAddress);
+            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.txtDateOfBirthday);
             this.Controls.Add(this.txtNumber);
             this.Controls.Add(this.txtAddress);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.dtpDateOfCreating);
-            this.Controls.Add(this.panelZ1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "NewMedCard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Створення нової медичної картки";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.NewMedCard_FormClosing);
+            this.pnlBot.ResumeLayout(false);
+            this.tabControl1.ResumeLayout(false);
+            this.tbInfo.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.tpTreatmentPlan.ResumeLayout(false);
-            this.tpTreatmentPlan.PerformLayout();
-            this.tbInfo.ResumeLayout(false);
             this.tbTeeth.ResumeLayout(false);
             this.tbTeeth.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tpSurvayPlan.ResumeLayout(false);
             this.tpSurvayPlan.PerformLayout();
-            this.tabControl1.ResumeLayout(false);
-            this.panelZ1.ResumeLayout(false);
-            this.panelZ1.PerformLayout();
+            this.tpTreatmentPlan.ResumeLayout(false);
+            this.tpTreatmentPlan.PerformLayout();
             this.panelZ2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -1497,7 +1492,29 @@
         }
 
         #endregion
+        private System.Windows.Forms.TextBox txtDateOfBirthday;
+        private System.Windows.Forms.MaskedTextBox txtNumber;
+        private System.Windows.Forms.TextBox txtAddress;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.DateTimePicker dtpDateOfCreating;
+        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private PanelZ.PanelZ pnlBot;
+        private Custom_Controls_in_CS.ButtonZ SaveAs;
+        private System.Windows.Forms.MaskedTextBox txtGender;
+        private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label lblGender;
+        private System.Windows.Forms.Label lblGenderType;
+        private System.Windows.Forms.Label lblBirthday;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Label lblDate;
+        private System.Windows.Forms.Label lblPhoneNumber;
+        private System.Windows.Forms.Label lblAddress;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tbInfo;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox txtDiagnosis;
         private System.Windows.Forms.TextBox txtControlDate;
         private System.Windows.Forms.Label label46;
         private System.Windows.Forms.TextBox txtDateOfLessons;
@@ -1519,23 +1536,6 @@
         private System.Windows.Forms.TextBox txtComplaints;
         private System.Windows.Forms.Label label38;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.TextBox txtDateOfBirthday;
-        private System.Windows.Forms.MaskedTextBox txtNumber;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox txtAddress;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label48;
-        private System.Windows.Forms.Label label49;
-        private System.Windows.Forms.Label label50;
-        private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.TextBox txtTreatmentPlan;
-        private System.Windows.Forms.TabPage tpTreatmentPlan;
-        private System.Windows.Forms.TextBox txtSurvayPlan;
-        private System.Windows.Forms.TabPage tbInfo;
         private System.Windows.Forms.TabPage tbTeeth;
         private System.Windows.Forms.TextBox TopLeftTextBox_7;
         private System.Windows.Forms.Label label4;
@@ -1603,20 +1603,15 @@
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TabPage tpSurvayPlan;
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DateTimePicker dtpDateOfCreating;
-        private System.Windows.Forms.Label label52;
-        private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.MaskedTextBox txtGender;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
-        private System.Windows.Forms.TextBox txtDiagnosis;
-        private PanelZ.PanelZ panelZ1;
+        private System.Windows.Forms.TextBox txtSurvayPlan;
+        private System.Windows.Forms.TabPage tpTreatmentPlan;
+        private System.Windows.Forms.TextBox txtTreatmentPlan;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button1;
         private PanelZ.PanelZ panelZ2;
-        private Custom_Controls_in_CS.ButtonZ SaveAs;
-        private Custom_Controls_in_CS.ButtonZ buttonZ1;
+        private Custom_Controls_in_CS.ButtonZ btnExit;
         //private CustomWindowsForm.ButtonZ _CloseButton;
     }
 

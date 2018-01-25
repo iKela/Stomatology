@@ -30,8 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NewAppoinment));
             this.dtpDate = new System.Windows.Forms.DateTimePicker();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -99,17 +97,9 @@
             this.BotLeftTextBox_2 = new System.Windows.Forms.TextBox();
             this.BotLeftTextBox_1 = new System.Windows.Forms.TextBox();
             this.txtMoney = new System.Windows.Forms.TextBox();
-            this.label36 = new System.Windows.Forms.Label();
-            this.UAHLabel = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
             this.cmbPatient = new System.Windows.Forms.ComboBox();
             this.cmbDoctor = new System.Windows.Forms.ComboBox();
-            this.button8 = new System.Windows.Forms.Button();
-            this.label37 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.BotRightTextBox8 = new System.Windows.Forms.TextBox();
             this.BotRightTextBox7 = new System.Windows.Forms.TextBox();
             this.BotRightTextBox6 = new System.Windows.Forms.TextBox();
@@ -174,19 +164,29 @@
             this.TopLeftTextBox1 = new System.Windows.Forms.TextBox();
             this.label68 = new System.Windows.Forms.Label();
             this.label69 = new System.Windows.Forms.Label();
-            this.TeethPanel = new System.Windows.Forms.PictureBox();
-            this.label70 = new System.Windows.Forms.Label();
             this.txtDescription = new System.Windows.Forms.TextBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.chbArrears = new System.Windows.Forms.CheckBox();
-            this.panelZ1 = new PanelZ.PanelZ();
-            this.panelZ2 = new PanelZ.PanelZ();
-            this.buttonZ1 = new Custom_Controls_in_CS.ButtonZ();
             this.btnAdd = new Custom_Controls_in_CS.ButtonZ();
+            this.pnlTop = new PanelZ.PanelZ();
+            this.btnExit = new Custom_Controls_in_CS.ButtonZ();
+            this.chbArrears = new System.Windows.Forms.CheckBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.lbl5 = new System.Windows.Forms.Label();
+            this.lbl2 = new System.Windows.Forms.Label();
+            this.lbl3 = new System.Windows.Forms.Label();
+            this.lbl4 = new System.Windows.Forms.Label();
+            this.lbl6 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.lbl1 = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
+            this.panelZ1 = new PanelZ.PanelZ();
+            this.TeethPanel = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TeethPanel)).BeginInit();
+            this.pnlTop.SuspendLayout();
             this.panelZ1.SuspendLayout();
-            this.panelZ2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TeethPanel)).BeginInit();
             this.SuspendLayout();
             // 
             // dtpDate
@@ -197,28 +197,6 @@
             this.dtpDate.Size = new System.Drawing.Size(145, 26);
             this.dtpDate.TabIndex = 0;
             this.dtpDate.Value = new System.DateTime(2017, 11, 29, 0, 0, 0, 0);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(38, 86);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 19);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Паціент:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(38, 121);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 19);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Дата:";
             // 
             // label3
             // 
@@ -887,82 +865,18 @@
             this.txtMoney.Size = new System.Drawing.Size(137, 26);
             this.txtMoney.TabIndex = 73;
             // 
-            // label36
-            // 
-            this.label36.AutoSize = true;
-            this.label36.BackColor = System.Drawing.Color.Transparent;
-            this.label36.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label36.Location = new System.Drawing.Point(38, 149);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(42, 19);
-            this.label36.TabIndex = 74;
-            this.label36.Text = "Ціна:";
-            // 
-            // UAHLabel
-            // 
-            this.UAHLabel.AutoSize = true;
-            this.UAHLabel.BackColor = System.Drawing.Color.Transparent;
-            this.UAHLabel.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.UAHLabel.Location = new System.Drawing.Point(259, 147);
-            this.UAHLabel.Name = "UAHLabel";
-            this.UAHLabel.Size = new System.Drawing.Size(35, 18);
-            this.UAHLabel.TabIndex = 76;
-            this.UAHLabel.Text = "грн.";
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button3.Enabled = false;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(12, 86);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(20, 20);
-            this.button3.TabIndex = 77;
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.Transparent;
-            this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button4.Enabled = false;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(12, 121);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(20, 20);
-            this.button4.TabIndex = 78;
-            this.button4.UseVisualStyleBackColor = false;
-            // 
             // button6
             // 
-            this.button6.BackColor = System.Drawing.Color.Transparent;
             this.button6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button6.BackgroundImage")));
             this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button6.Enabled = false;
             this.button6.FlatAppearance.BorderSize = 0;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Location = new System.Drawing.Point(12, 147);
+            this.button6.Location = new System.Drawing.Point(295, 146);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(20, 20);
-            this.button6.TabIndex = 80;
-            this.button6.UseVisualStyleBackColor = false;
-            // 
-            // button7
-            // 
-            this.button7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button7.BackgroundImage")));
-            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Location = new System.Drawing.Point(295, 146);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(20, 20);
-            this.button7.TabIndex = 81;
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.button6.TabIndex = 81;
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button7_Click);
             // 
             // cmbPatient
             // 
@@ -981,46 +895,6 @@
             this.cmbDoctor.Name = "cmbDoctor";
             this.cmbDoctor.Size = new System.Drawing.Size(402, 27);
             this.cmbDoctor.TabIndex = 82;
-            // 
-            // button8
-            // 
-            this.button8.BackColor = System.Drawing.Color.Transparent;
-            this.button8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button8.BackgroundImage")));
-            this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button8.Enabled = false;
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Location = new System.Drawing.Point(12, 49);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(20, 20);
-            this.button8.TabIndex = 84;
-            this.button8.UseVisualStyleBackColor = false;
-            // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.label37.BackColor = System.Drawing.Color.Transparent;
-            this.label37.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label37.Location = new System.Drawing.Point(38, 49);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(48, 19);
-            this.label37.TabIndex = 83;
-            this.label37.Text = "Лікар:";
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.Enabled = false;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button1.Location = new System.Drawing.Point(12, 177);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(20, 23);
-            this.button1.TabIndex = 312;
-            this.button1.UseVisualStyleBackColor = false;
             // 
             // BotRightTextBox8
             // 
@@ -1181,6 +1055,7 @@
             // label38
             // 
             this.label38.AutoSize = true;
+            this.label38.BackColor = System.Drawing.Color.Transparent;
             this.label38.Font = new System.Drawing.Font("Arial", 12F);
             this.label38.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label38.Location = new System.Drawing.Point(524, 470);
@@ -1192,6 +1067,7 @@
             // label39
             // 
             this.label39.AutoSize = true;
+            this.label39.BackColor = System.Drawing.Color.Transparent;
             this.label39.Font = new System.Drawing.Font("Arial", 12F);
             this.label39.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label39.Location = new System.Drawing.Point(486, 470);
@@ -1203,6 +1079,7 @@
             // label40
             // 
             this.label40.AutoSize = true;
+            this.label40.BackColor = System.Drawing.Color.Transparent;
             this.label40.Font = new System.Drawing.Font("Arial", 12F);
             this.label40.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label40.Location = new System.Drawing.Point(443, 470);
@@ -1214,6 +1091,7 @@
             // label41
             // 
             this.label41.AutoSize = true;
+            this.label41.BackColor = System.Drawing.Color.Transparent;
             this.label41.Font = new System.Drawing.Font("Arial", 12F);
             this.label41.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label41.Location = new System.Drawing.Point(407, 470);
@@ -1225,6 +1103,7 @@
             // label42
             // 
             this.label42.AutoSize = true;
+            this.label42.BackColor = System.Drawing.Color.Transparent;
             this.label42.Font = new System.Drawing.Font("Arial", 12F);
             this.label42.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label42.Location = new System.Drawing.Point(377, 470);
@@ -1236,6 +1115,7 @@
             // label43
             // 
             this.label43.AutoSize = true;
+            this.label43.BackColor = System.Drawing.Color.Transparent;
             this.label43.Font = new System.Drawing.Font("Arial", 12F);
             this.label43.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label43.Location = new System.Drawing.Point(349, 470);
@@ -1247,6 +1127,7 @@
             // label44
             // 
             this.label44.AutoSize = true;
+            this.label44.BackColor = System.Drawing.Color.Transparent;
             this.label44.Font = new System.Drawing.Font("Arial", 12F);
             this.label44.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label44.Location = new System.Drawing.Point(320, 470);
@@ -1258,6 +1139,7 @@
             // label45
             // 
             this.label45.AutoSize = true;
+            this.label45.BackColor = System.Drawing.Color.Transparent;
             this.label45.Font = new System.Drawing.Font("Arial", 12F);
             this.label45.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label45.Location = new System.Drawing.Point(22, 470);
@@ -1269,6 +1151,7 @@
             // label46
             // 
             this.label46.AutoSize = true;
+            this.label46.BackColor = System.Drawing.Color.Transparent;
             this.label46.Font = new System.Drawing.Font("Arial", 12F);
             this.label46.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label46.Location = new System.Drawing.Point(63, 470);
@@ -1280,6 +1163,7 @@
             // label47
             // 
             this.label47.AutoSize = true;
+            this.label47.BackColor = System.Drawing.Color.Transparent;
             this.label47.Font = new System.Drawing.Font("Arial", 12F);
             this.label47.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label47.Location = new System.Drawing.Point(105, 470);
@@ -1291,6 +1175,7 @@
             // label48
             // 
             this.label48.AutoSize = true;
+            this.label48.BackColor = System.Drawing.Color.Transparent;
             this.label48.Font = new System.Drawing.Font("Arial", 12F);
             this.label48.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label48.Location = new System.Drawing.Point(141, 470);
@@ -1302,6 +1187,7 @@
             // label49
             // 
             this.label49.AutoSize = true;
+            this.label49.BackColor = System.Drawing.Color.Transparent;
             this.label49.Font = new System.Drawing.Font("Arial", 12F);
             this.label49.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label49.Location = new System.Drawing.Point(168, 470);
@@ -1313,6 +1199,7 @@
             // label50
             // 
             this.label50.AutoSize = true;
+            this.label50.BackColor = System.Drawing.Color.Transparent;
             this.label50.Font = new System.Drawing.Font("Arial", 12F);
             this.label50.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label50.Location = new System.Drawing.Point(195, 470);
@@ -1324,6 +1211,7 @@
             // label51
             // 
             this.label51.AutoSize = true;
+            this.label51.BackColor = System.Drawing.Color.Transparent;
             this.label51.Font = new System.Drawing.Font("Arial", 12F);
             this.label51.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label51.Location = new System.Drawing.Point(222, 470);
@@ -1335,6 +1223,7 @@
             // label52
             // 
             this.label52.AutoSize = true;
+            this.label52.BackColor = System.Drawing.Color.Transparent;
             this.label52.Font = new System.Drawing.Font("Arial", 12F);
             this.label52.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label52.Location = new System.Drawing.Point(293, 470);
@@ -1346,6 +1235,7 @@
             // label53
             // 
             this.label53.AutoSize = true;
+            this.label53.BackColor = System.Drawing.Color.Transparent;
             this.label53.Font = new System.Drawing.Font("Arial", 12F);
             this.label53.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label53.Location = new System.Drawing.Point(249, 470);
@@ -1357,6 +1247,7 @@
             // label54
             // 
             this.label54.AutoSize = true;
+            this.label54.BackColor = System.Drawing.Color.Transparent;
             this.label54.Font = new System.Drawing.Font("Arial", 12F);
             this.label54.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label54.Location = new System.Drawing.Point(524, 448);
@@ -1368,6 +1259,7 @@
             // label55
             // 
             this.label55.AutoSize = true;
+            this.label55.BackColor = System.Drawing.Color.Transparent;
             this.label55.Font = new System.Drawing.Font("Arial", 12F);
             this.label55.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label55.Location = new System.Drawing.Point(486, 448);
@@ -1379,6 +1271,7 @@
             // label56
             // 
             this.label56.AutoSize = true;
+            this.label56.BackColor = System.Drawing.Color.Transparent;
             this.label56.Font = new System.Drawing.Font("Arial", 12F);
             this.label56.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label56.Location = new System.Drawing.Point(443, 448);
@@ -1390,6 +1283,7 @@
             // label57
             // 
             this.label57.AutoSize = true;
+            this.label57.BackColor = System.Drawing.Color.Transparent;
             this.label57.Font = new System.Drawing.Font("Arial", 12F);
             this.label57.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label57.Location = new System.Drawing.Point(407, 448);
@@ -1401,6 +1295,7 @@
             // label58
             // 
             this.label58.AutoSize = true;
+            this.label58.BackColor = System.Drawing.Color.Transparent;
             this.label58.Font = new System.Drawing.Font("Arial", 12F);
             this.label58.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label58.Location = new System.Drawing.Point(377, 448);
@@ -1412,6 +1307,7 @@
             // label59
             // 
             this.label59.AutoSize = true;
+            this.label59.BackColor = System.Drawing.Color.Transparent;
             this.label59.Font = new System.Drawing.Font("Arial", 12F);
             this.label59.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label59.Location = new System.Drawing.Point(349, 448);
@@ -1423,6 +1319,7 @@
             // label60
             // 
             this.label60.AutoSize = true;
+            this.label60.BackColor = System.Drawing.Color.Transparent;
             this.label60.Font = new System.Drawing.Font("Arial", 12F);
             this.label60.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label60.Location = new System.Drawing.Point(320, 448);
@@ -1434,6 +1331,7 @@
             // label61
             // 
             this.label61.AutoSize = true;
+            this.label61.BackColor = System.Drawing.Color.Transparent;
             this.label61.Font = new System.Drawing.Font("Arial", 12F);
             this.label61.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label61.Location = new System.Drawing.Point(22, 448);
@@ -1445,6 +1343,7 @@
             // label62
             // 
             this.label62.AutoSize = true;
+            this.label62.BackColor = System.Drawing.Color.Transparent;
             this.label62.Font = new System.Drawing.Font("Arial", 12F);
             this.label62.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label62.Location = new System.Drawing.Point(63, 448);
@@ -1456,6 +1355,7 @@
             // label63
             // 
             this.label63.AutoSize = true;
+            this.label63.BackColor = System.Drawing.Color.Transparent;
             this.label63.Font = new System.Drawing.Font("Arial", 12F);
             this.label63.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label63.Location = new System.Drawing.Point(105, 448);
@@ -1467,6 +1367,7 @@
             // label64
             // 
             this.label64.AutoSize = true;
+            this.label64.BackColor = System.Drawing.Color.Transparent;
             this.label64.Font = new System.Drawing.Font("Arial", 12F);
             this.label64.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label64.Location = new System.Drawing.Point(141, 448);
@@ -1478,6 +1379,7 @@
             // label65
             // 
             this.label65.AutoSize = true;
+            this.label65.BackColor = System.Drawing.Color.Transparent;
             this.label65.Font = new System.Drawing.Font("Arial", 12F);
             this.label65.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label65.Location = new System.Drawing.Point(168, 448);
@@ -1489,6 +1391,7 @@
             // label66
             // 
             this.label66.AutoSize = true;
+            this.label66.BackColor = System.Drawing.Color.Transparent;
             this.label66.Font = new System.Drawing.Font("Arial", 12F);
             this.label66.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label66.Location = new System.Drawing.Point(195, 448);
@@ -1500,6 +1403,7 @@
             // label67
             // 
             this.label67.AutoSize = true;
+            this.label67.BackColor = System.Drawing.Color.Transparent;
             this.label67.Font = new System.Drawing.Font("Arial", 12F);
             this.label67.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label67.Location = new System.Drawing.Point(222, 448);
@@ -1673,6 +1577,7 @@
             // label68
             // 
             this.label68.AutoSize = true;
+            this.label68.BackColor = System.Drawing.Color.Transparent;
             this.label68.Font = new System.Drawing.Font("Arial", 12F);
             this.label68.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label68.Location = new System.Drawing.Point(293, 448);
@@ -1684,6 +1589,7 @@
             // label69
             // 
             this.label69.AutoSize = true;
+            this.label69.BackColor = System.Drawing.Color.Transparent;
             this.label69.Font = new System.Drawing.Font("Arial", 12F);
             this.label69.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label69.Location = new System.Drawing.Point(249, 448);
@@ -1691,29 +1597,6 @@
             this.label69.Size = new System.Drawing.Size(25, 18);
             this.label69.TabIndex = 249;
             this.label69.Text = "11";
-            // 
-            // TeethPanel
-            // 
-            this.TeethPanel.BackColor = System.Drawing.Color.Transparent;
-            this.TeethPanel.Image = ((System.Drawing.Image)(resources.GetObject("TeethPanel.Image")));
-            this.TeethPanel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.TeethPanel.Location = new System.Drawing.Point(12, 327);
-            this.TeethPanel.Name = "TeethPanel";
-            this.TeethPanel.Size = new System.Drawing.Size(545, 275);
-            this.TeethPanel.TabIndex = 248;
-            this.TeethPanel.TabStop = false;
-            // 
-            // label70
-            // 
-            this.label70.AutoSize = true;
-            this.label70.BackColor = System.Drawing.Color.Transparent;
-            this.label70.Font = new System.Drawing.Font("Arial", 12F);
-            this.label70.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label70.Location = new System.Drawing.Point(39, 178);
-            this.label70.Name = "label70";
-            this.label70.Size = new System.Drawing.Size(48, 18);
-            this.label70.TabIndex = 247;
-            this.label70.Text = "Опис:";
             // 
             // txtDescription
             // 
@@ -1727,93 +1610,6 @@
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // chbArrears
-            // 
-            this.chbArrears.AutoSize = true;
-            this.chbArrears.BackColor = System.Drawing.Color.Transparent;
-            this.chbArrears.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.chbArrears.Location = new System.Drawing.Point(321, 145);
-            this.chbArrears.Name = "chbArrears";
-            this.chbArrears.Size = new System.Drawing.Size(59, 23);
-            this.chbArrears.TabIndex = 319;
-            this.chbArrears.Text = "Борг";
-            this.chbArrears.UseVisualStyleBackColor = false;
-            this.chbArrears.CheckedChanged += new System.EventHandler(this.chbArrears_CheckedChanged);
-            // 
-            // panelZ1
-            // 
-            this.panelZ1.Controls.Add(this.btnAdd);
-            this.panelZ1.Controls.Add(this.panelZ2);
-            this.panelZ1.Controls.Add(this.chbArrears);
-            this.panelZ1.Controls.Add(this.TeethPanel);
-            this.panelZ1.Controls.Add(this.button1);
-            this.panelZ1.Controls.Add(this.label70);
-            this.panelZ1.Controls.Add(this.label1);
-            this.panelZ1.Controls.Add(this.label2);
-            this.panelZ1.Controls.Add(this.label36);
-            this.panelZ1.Controls.Add(this.UAHLabel);
-            this.panelZ1.Controls.Add(this.button3);
-            this.panelZ1.Controls.Add(this.button4);
-            this.panelZ1.Controls.Add(this.button6);
-            this.panelZ1.Controls.Add(this.label37);
-            this.panelZ1.Controls.Add(this.button8);
-            this.panelZ1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelZ1.EndColor = System.Drawing.Color.Black;
-            this.panelZ1.GradientAngle = 90;
-            this.panelZ1.Location = new System.Drawing.Point(0, 0);
-            this.panelZ1.Name = "panelZ1";
-            this.panelZ1.Size = new System.Drawing.Size(572, 644);
-            this.panelZ1.StartColor = System.Drawing.Color.White;
-            this.panelZ1.TabIndex = 323;
-            this.panelZ1.Transparent1 = 150;
-            this.panelZ1.Transparent2 = 150;
-            // 
-            // panelZ2
-            // 
-            this.panelZ2.Controls.Add(this.buttonZ1);
-            this.panelZ2.EndColor = System.Drawing.Color.White;
-            this.panelZ2.GradientAngle = 90;
-            this.panelZ2.Location = new System.Drawing.Point(0, 0);
-            this.panelZ2.Name = "panelZ2";
-            this.panelZ2.Size = new System.Drawing.Size(572, 41);
-            this.panelZ2.StartColor = System.Drawing.Color.Black;
-            this.panelZ2.TabIndex = 0;
-            this.panelZ2.Transparent1 = 255;
-            this.panelZ2.Transparent2 = 50;
-            // 
-            // buttonZ1
-            // 
-            this.buttonZ1.BackColor = System.Drawing.Color.Transparent;
-            this.buttonZ1.BorderColor = System.Drawing.Color.Transparent;
-            this.buttonZ1.BorderWidth = 1;
-            this.buttonZ1.ButtonShape = Custom_Controls_in_CS.ButtonZ.ButtonsShapes.Rect;
-            this.buttonZ1.ButtonText = "X";
-            this.buttonZ1.EndColor = System.Drawing.Color.Black;
-            this.buttonZ1.FlatAppearance.BorderSize = 0;
-            this.buttonZ1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.buttonZ1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.buttonZ1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonZ1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonZ1.ForeColor = System.Drawing.Color.White;
-            this.buttonZ1.GradientAngle = 90;
-            this.buttonZ1.Location = new System.Drawing.Point(527, 3);
-            this.buttonZ1.MouseClickColor1 = System.Drawing.Color.Red;
-            this.buttonZ1.MouseClickColor2 = System.Drawing.Color.Red;
-            this.buttonZ1.MouseHoverColor1 = System.Drawing.Color.Black;
-            this.buttonZ1.MouseHoverColor2 = System.Drawing.Color.Black;
-            this.buttonZ1.Name = "buttonZ1";
-            this.buttonZ1.ShowButtontext = true;
-            this.buttonZ1.Size = new System.Drawing.Size(35, 25);
-            this.buttonZ1.StartColor = System.Drawing.Color.Black;
-            this.buttonZ1.TabIndex = 0;
-            this.buttonZ1.Text = "X";
-            this.buttonZ1.TextLocation_X = 10;
-            this.buttonZ1.TextLocation_Y = 4;
-            this.buttonZ1.Transparent1 = 250;
-            this.buttonZ1.Transparent2 = 250;
-            this.buttonZ1.UseVisualStyleBackColor = false;
-            this.buttonZ1.Click += new System.EventHandler(this.buttonZ1_Click);
             // 
             // btnAdd
             // 
@@ -1829,7 +1625,7 @@
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnAdd.GradientAngle = 90;
-            this.btnAdd.Location = new System.Drawing.Point(235, 601);
+            this.btnAdd.Location = new System.Drawing.Point(234, 0);
             this.btnAdd.MouseClickColor1 = System.Drawing.Color.Yellow;
             this.btnAdd.MouseClickColor2 = System.Drawing.Color.Red;
             this.btnAdd.MouseHoverColor1 = System.Drawing.Color.Turquoise;
@@ -1838,7 +1634,7 @@
             this.btnAdd.ShowButtontext = true;
             this.btnAdd.Size = new System.Drawing.Size(100, 40);
             this.btnAdd.StartColor = System.Drawing.Color.Black;
-            this.btnAdd.TabIndex = 320;
+            this.btnAdd.TabIndex = 335;
             this.btnAdd.TextLocation_X = 22;
             this.btnAdd.TextLocation_Y = 10;
             this.btnAdd.Transparent1 = 50;
@@ -1846,28 +1642,232 @@
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
+            // pnlTop
+            // 
+            this.pnlTop.Controls.Add(this.btnExit);
+            this.pnlTop.EndColor = System.Drawing.Color.White;
+            this.pnlTop.GradientAngle = 90;
+            this.pnlTop.Location = new System.Drawing.Point(0, 0);
+            this.pnlTop.Name = "pnlTop";
+            this.pnlTop.Size = new System.Drawing.Size(572, 41);
+            this.pnlTop.StartColor = System.Drawing.Color.Black;
+            this.pnlTop.TabIndex = 321;
+            this.pnlTop.Transparent1 = 150;
+            this.pnlTop.Transparent2 = 150;
+            // 
+            // btnExit
+            // 
+            this.btnExit.BackColor = System.Drawing.Color.Transparent;
+            this.btnExit.BorderColor = System.Drawing.Color.Transparent;
+            this.btnExit.BorderWidth = 1;
+            this.btnExit.ButtonShape = Custom_Controls_in_CS.ButtonZ.ButtonsShapes.Rect;
+            this.btnExit.ButtonText = "X";
+            this.btnExit.EndColor = System.Drawing.Color.Black;
+            this.btnExit.FlatAppearance.BorderSize = 0;
+            this.btnExit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnExit.ForeColor = System.Drawing.Color.White;
+            this.btnExit.GradientAngle = 90;
+            this.btnExit.Location = new System.Drawing.Point(527, 3);
+            this.btnExit.MouseClickColor1 = System.Drawing.Color.Red;
+            this.btnExit.MouseClickColor2 = System.Drawing.Color.Red;
+            this.btnExit.MouseHoverColor1 = System.Drawing.Color.Black;
+            this.btnExit.MouseHoverColor2 = System.Drawing.Color.Black;
+            this.btnExit.Name = "btnExit";
+            this.btnExit.ShowButtontext = true;
+            this.btnExit.Size = new System.Drawing.Size(35, 25);
+            this.btnExit.StartColor = System.Drawing.Color.Black;
+            this.btnExit.TabIndex = 0;
+            this.btnExit.Text = "X";
+            this.btnExit.TextLocation_X = 10;
+            this.btnExit.TextLocation_Y = 4;
+            this.btnExit.Transparent1 = 250;
+            this.btnExit.Transparent2 = 250;
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // chbArrears
+            // 
+            this.chbArrears.AutoSize = true;
+            this.chbArrears.BackColor = System.Drawing.Color.Transparent;
+            this.chbArrears.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.chbArrears.Location = new System.Drawing.Point(321, 145);
+            this.chbArrears.Name = "chbArrears";
+            this.chbArrears.Size = new System.Drawing.Size(59, 23);
+            this.chbArrears.TabIndex = 334;
+            this.chbArrears.Text = "Борг";
+            this.chbArrears.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.Enabled = false;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.button1.Location = new System.Drawing.Point(12, 177);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(20, 23);
+            this.button1.TabIndex = 333;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // lbl5
+            // 
+            this.lbl5.AutoSize = true;
+            this.lbl5.BackColor = System.Drawing.Color.Transparent;
+            this.lbl5.Font = new System.Drawing.Font("Arial", 12F);
+            this.lbl5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lbl5.Location = new System.Drawing.Point(39, 178);
+            this.lbl5.Name = "lbl5";
+            this.lbl5.Size = new System.Drawing.Size(48, 18);
+            this.lbl5.TabIndex = 331;
+            this.lbl5.Text = "Опис:";
+            // 
+            // lbl2
+            // 
+            this.lbl2.AutoSize = true;
+            this.lbl2.BackColor = System.Drawing.Color.Transparent;
+            this.lbl2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lbl2.Location = new System.Drawing.Point(38, 86);
+            this.lbl2.Name = "lbl2";
+            this.lbl2.Size = new System.Drawing.Size(65, 19);
+            this.lbl2.TabIndex = 322;
+            this.lbl2.Text = "Паціент:";
+            // 
+            // lbl3
+            // 
+            this.lbl3.AutoSize = true;
+            this.lbl3.BackColor = System.Drawing.Color.Transparent;
+            this.lbl3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lbl3.Location = new System.Drawing.Point(38, 121);
+            this.lbl3.Name = "lbl3";
+            this.lbl3.Size = new System.Drawing.Size(44, 19);
+            this.lbl3.TabIndex = 323;
+            this.lbl3.Text = "Дата:";
+            // 
+            // lbl4
+            // 
+            this.lbl4.AutoSize = true;
+            this.lbl4.BackColor = System.Drawing.Color.Transparent;
+            this.lbl4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lbl4.Location = new System.Drawing.Point(38, 149);
+            this.lbl4.Name = "lbl4";
+            this.lbl4.Size = new System.Drawing.Size(42, 19);
+            this.lbl4.TabIndex = 324;
+            this.lbl4.Text = "Ціна:";
+            // 
+            // lbl6
+            // 
+            this.lbl6.AutoSize = true;
+            this.lbl6.BackColor = System.Drawing.Color.Transparent;
+            this.lbl6.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lbl6.Location = new System.Drawing.Point(259, 147);
+            this.lbl6.Name = "lbl6";
+            this.lbl6.Size = new System.Drawing.Size(35, 18);
+            this.lbl6.TabIndex = 325;
+            this.lbl6.Text = "грн.";
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Transparent;
+            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button3.Enabled = false;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Location = new System.Drawing.Point(12, 86);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(20, 20);
+            this.button3.TabIndex = 326;
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.Transparent;
+            this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
+            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button4.Enabled = false;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Location = new System.Drawing.Point(12, 121);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(20, 20);
+            this.button4.TabIndex = 327;
+            this.button4.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Transparent;
+            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button2.Enabled = false;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Location = new System.Drawing.Point(12, 147);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(20, 20);
+            this.button2.TabIndex = 328;
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // lbl1
+            // 
+            this.lbl1.AutoSize = true;
+            this.lbl1.BackColor = System.Drawing.Color.Transparent;
+            this.lbl1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lbl1.Location = new System.Drawing.Point(38, 49);
+            this.lbl1.Name = "lbl1";
+            this.lbl1.Size = new System.Drawing.Size(48, 19);
+            this.lbl1.TabIndex = 329;
+            this.lbl1.Text = "Лікар:";
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.Transparent;
+            this.button5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button5.BackgroundImage")));
+            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button5.Enabled = false;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Location = new System.Drawing.Point(12, 49);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(20, 20);
+            this.button5.TabIndex = 330;
+            this.button5.UseVisualStyleBackColor = false;
+            // 
+            // panelZ1
+            // 
+            this.panelZ1.Controls.Add(this.btnAdd);
+            this.panelZ1.EndColor = System.Drawing.Color.Black;
+            this.panelZ1.GradientAngle = 90;
+            this.panelZ1.Location = new System.Drawing.Point(0, 604);
+            this.panelZ1.Name = "panelZ1";
+            this.panelZ1.Size = new System.Drawing.Size(572, 40);
+            this.panelZ1.StartColor = System.Drawing.Color.White;
+            this.panelZ1.TabIndex = 336;
+            this.panelZ1.Transparent1 = 150;
+            this.panelZ1.Transparent2 = 150;
+            // 
+            // TeethPanel
+            // 
+            this.TeethPanel.BackColor = System.Drawing.Color.Transparent;
+            this.TeethPanel.Image = ((System.Drawing.Image)(resources.GetObject("TeethPanel.Image")));
+            this.TeethPanel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.TeethPanel.Location = new System.Drawing.Point(12, 327);
+            this.TeethPanel.Name = "TeethPanel";
+            this.TeethPanel.Size = new System.Drawing.Size(545, 275);
+            this.TeethPanel.TabIndex = 332;
+            this.TeethPanel.TabStop = false;
+            // 
             // NewAppoinment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(572, 644);
-            this.Controls.Add(this.BotRightTextBox8);
-            this.Controls.Add(this.BotRightTextBox7);
-            this.Controls.Add(this.BotRightTextBox6);
-            this.Controls.Add(this.BotRightTextBox5);
-            this.Controls.Add(this.BotRightTextBox4);
-            this.Controls.Add(this.BotRightTextBox3);
-            this.Controls.Add(this.BotRightTextBox2);
-            this.Controls.Add(this.BotRightTextBox1);
-            this.Controls.Add(this.BotLeftTextBox8);
-            this.Controls.Add(this.BotLeftTextBox7);
-            this.Controls.Add(this.BotLeftTextBox6);
-            this.Controls.Add(this.BotLeftTextBox5);
-            this.Controls.Add(this.BotLeftTextBox4);
-            this.Controls.Add(this.BotLeftTextBox3);
-            this.Controls.Add(this.BotLeftTextBox2);
-            this.Controls.Add(this.BotLeftTextBox1);
             this.Controls.Add(this.label38);
             this.Controls.Add(this.label39);
             this.Controls.Add(this.label40);
@@ -1898,6 +1898,25 @@
             this.Controls.Add(this.label65);
             this.Controls.Add(this.label66);
             this.Controls.Add(this.label67);
+            this.Controls.Add(this.label68);
+            this.Controls.Add(this.label69);
+            this.Controls.Add(this.panelZ1);
+            this.Controls.Add(this.BotRightTextBox8);
+            this.Controls.Add(this.BotRightTextBox7);
+            this.Controls.Add(this.BotRightTextBox6);
+            this.Controls.Add(this.BotRightTextBox5);
+            this.Controls.Add(this.BotRightTextBox4);
+            this.Controls.Add(this.BotRightTextBox3);
+            this.Controls.Add(this.BotRightTextBox2);
+            this.Controls.Add(this.BotRightTextBox1);
+            this.Controls.Add(this.BotLeftTextBox8);
+            this.Controls.Add(this.BotLeftTextBox7);
+            this.Controls.Add(this.BotLeftTextBox6);
+            this.Controls.Add(this.BotLeftTextBox5);
+            this.Controls.Add(this.BotLeftTextBox4);
+            this.Controls.Add(this.BotLeftTextBox3);
+            this.Controls.Add(this.BotLeftTextBox2);
+            this.Controls.Add(this.BotLeftTextBox1);
             this.Controls.Add(this.TopRightTextBox8);
             this.Controls.Add(this.TopRightTextBox7);
             this.Controls.Add(this.TopRightTextBox6);
@@ -1914,15 +1933,26 @@
             this.Controls.Add(this.TopLeftTextBox3);
             this.Controls.Add(this.TopLeftTextBox2);
             this.Controls.Add(this.TopLeftTextBox1);
-            this.Controls.Add(this.label68);
-            this.Controls.Add(this.label69);
             this.Controls.Add(this.txtDescription);
             this.Controls.Add(this.cmbDoctor);
-            this.Controls.Add(this.button7);
+            this.Controls.Add(this.button6);
             this.Controls.Add(this.txtMoney);
             this.Controls.Add(this.cmbPatient);
             this.Controls.Add(this.dtpDate);
-            this.Controls.Add(this.panelZ1);
+            this.Controls.Add(this.pnlTop);
+            this.Controls.Add(this.chbArrears);
+            this.Controls.Add(this.TeethPanel);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.lbl5);
+            this.Controls.Add(this.lbl2);
+            this.Controls.Add(this.lbl3);
+            this.Controls.Add(this.lbl4);
+            this.Controls.Add(this.lbl6);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.lbl1);
+            this.Controls.Add(this.button5);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "NewAppoinment";
@@ -1930,10 +1960,9 @@
             this.Text = "Новий прийом";
             this.Load += new System.EventHandler(this.NewAppoinment_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TeethPanel)).EndInit();
+            this.pnlTop.ResumeLayout(false);
             this.panelZ1.ResumeLayout(false);
-            this.panelZ1.PerformLayout();
-            this.panelZ2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.TeethPanel)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1942,8 +1971,6 @@
         #endregion
 
         private System.Windows.Forms.DateTimePicker dtpDate;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label4;
@@ -2011,17 +2038,9 @@
         private System.Windows.Forms.TextBox BotLeftTextBox_2;
         private System.Windows.Forms.TextBox BotLeftTextBox_1;
         private System.Windows.Forms.TextBox txtMoney;
-        private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.Label UAHLabel;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
         private System.Windows.Forms.ComboBox cmbPatient;
         private System.Windows.Forms.ComboBox cmbDoctor;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Label label37;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox BotRightTextBox8;
         private System.Windows.Forms.TextBox BotRightTextBox7;
         private System.Windows.Forms.TextBox BotRightTextBox6;
@@ -2086,14 +2105,24 @@
         private System.Windows.Forms.TextBox TopLeftTextBox1;
         private System.Windows.Forms.Label label68;
         private System.Windows.Forms.Label label69;
-        private System.Windows.Forms.PictureBox TeethPanel;
-        private System.Windows.Forms.Label label70;
         private System.Windows.Forms.TextBox txtDescription;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.CheckBox chbArrears;
-        private PanelZ.PanelZ panelZ1;
-        private PanelZ.PanelZ panelZ2;
-        private Custom_Controls_in_CS.ButtonZ buttonZ1;
         private Custom_Controls_in_CS.ButtonZ btnAdd;
+        private PanelZ.PanelZ pnlTop;
+        private Custom_Controls_in_CS.ButtonZ btnExit;
+        private System.Windows.Forms.CheckBox chbArrears;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label lbl5;
+        private System.Windows.Forms.Label lbl2;
+        private System.Windows.Forms.Label lbl3;
+        private System.Windows.Forms.Label lbl4;
+        private System.Windows.Forms.Label lbl6;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label lbl1;
+        private System.Windows.Forms.Button button5;
+        private PanelZ.PanelZ panelZ1;
+        private System.Windows.Forms.PictureBox TeethPanel;
     }
 }

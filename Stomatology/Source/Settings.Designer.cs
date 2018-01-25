@@ -34,7 +34,7 @@
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.btnAccept = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.panelZ4 = new PanelZ.PanelZ();
+            this.pnlButtons = new PanelZ.PanelZ();
             this.buttonZ6 = new Custom_Controls_in_CS.ButtonZ();
             this.buttonZ5 = new Custom_Controls_in_CS.ButtonZ();
             this.buttonZ4 = new Custom_Controls_in_CS.ButtonZ();
@@ -46,24 +46,24 @@
             this.button1 = new System.Windows.Forms.Button();
             this.panelZ1 = new PanelZ.PanelZ();
             this.pnlGeneral = new PanelZ.PanelZ();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.gboxAppearance = new System.Windows.Forms.GroupBox();
             this.cmbThemes = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblTheme = new System.Windows.Forms.Label();
             this.pnlPaths = new PanelZ.PanelZ();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.gboxTVPath = new System.Windows.Forms.GroupBox();
+            this.lblTVPath = new System.Windows.Forms.Label();
             this.txtTVWay = new System.Windows.Forms.TextBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.gboxDBPath = new System.Windows.Forms.GroupBox();
+            this.lblDBPath = new System.Windows.Forms.Label();
             this.txtBDWay = new System.Windows.Forms.TextBox();
-            this.panelZ4.SuspendLayout();
+            this.pnlButtons.SuspendLayout();
             this.panelZ3.SuspendLayout();
             this.panelZ1.SuspendLayout();
             this.pnlGeneral.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.gboxAppearance.SuspendLayout();
             this.pnlPaths.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.gboxTVPath.SuspendLayout();
+            this.gboxDBPath.SuspendLayout();
             this.SuspendLayout();
             // 
             // openFileDialog1
@@ -74,7 +74,7 @@
             // 
             this.btnAccept.BackColor = System.Drawing.Color.Transparent;
             this.btnAccept.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnAccept.FlatAppearance.BorderSize = 0;
+            this.btnAccept.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnAccept.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAccept.Location = new System.Drawing.Point(348, 6);
             this.btnAccept.Name = "btnAccept";
@@ -101,25 +101,26 @@
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.button2_Click);
             // 
-            // panelZ4
+            // pnlButtons
             // 
-            this.panelZ4.Controls.Add(this.buttonZ6);
-            this.panelZ4.Controls.Add(this.buttonZ5);
-            this.panelZ4.Controls.Add(this.buttonZ4);
-            this.panelZ4.Controls.Add(this.buttonZ3);
-            this.panelZ4.Controls.Add(this.buttonZ2);
-            this.panelZ4.Controls.Add(this.btnPaths);
-            this.panelZ4.Controls.Add(this.btnGeneral);
-            this.panelZ4.EndColor = System.Drawing.Color.Black;
-            this.panelZ4.ForeColor = System.Drawing.Color.White;
-            this.panelZ4.GradientAngle = 90;
-            this.panelZ4.Location = new System.Drawing.Point(-1, 40);
-            this.panelZ4.Name = "panelZ4";
-            this.panelZ4.Size = new System.Drawing.Size(428, 52);
-            this.panelZ4.StartColor = System.Drawing.Color.Black;
-            this.panelZ4.TabIndex = 9;
-            this.panelZ4.Transparent1 = 200;
-            this.panelZ4.Transparent2 = 200;
+            this.pnlButtons.BackColor = System.Drawing.Color.Transparent;
+            this.pnlButtons.Controls.Add(this.buttonZ6);
+            this.pnlButtons.Controls.Add(this.buttonZ5);
+            this.pnlButtons.Controls.Add(this.buttonZ4);
+            this.pnlButtons.Controls.Add(this.buttonZ3);
+            this.pnlButtons.Controls.Add(this.buttonZ2);
+            this.pnlButtons.Controls.Add(this.btnPaths);
+            this.pnlButtons.Controls.Add(this.btnGeneral);
+            this.pnlButtons.EndColor = System.Drawing.Color.LightGray;
+            this.pnlButtons.ForeColor = System.Drawing.Color.White;
+            this.pnlButtons.GradientAngle = 90;
+            this.pnlButtons.Location = new System.Drawing.Point(-1, 40);
+            this.pnlButtons.Name = "pnlButtons";
+            this.pnlButtons.Size = new System.Drawing.Size(428, 52);
+            this.pnlButtons.StartColor = System.Drawing.Color.LightGray;
+            this.pnlButtons.TabIndex = 9;
+            this.pnlButtons.Transparent1 = 200;
+            this.pnlButtons.Transparent2 = 200;
             // 
             // buttonZ6
             // 
@@ -364,12 +365,12 @@
             // 
             this.panelZ3.Controls.Add(this.button1);
             this.panelZ3.Controls.Add(this.btnAccept);
-            this.panelZ3.EndColor = System.Drawing.Color.White;
+            this.panelZ3.EndColor = System.Drawing.Color.Black;
             this.panelZ3.GradientAngle = 90;
             this.panelZ3.Location = new System.Drawing.Point(-1, 476);
             this.panelZ3.Name = "panelZ3";
             this.panelZ3.Size = new System.Drawing.Size(427, 40);
-            this.panelZ3.StartColor = System.Drawing.Color.Black;
+            this.panelZ3.StartColor = System.Drawing.Color.White;
             this.panelZ3.TabIndex = 8;
             this.panelZ3.Transparent1 = 150;
             this.panelZ3.Transparent2 = 150;
@@ -378,7 +379,6 @@
             // 
             this.button1.BackColor = System.Drawing.Color.Transparent;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Location = new System.Drawing.Point(252, 6);
             this.button1.Name = "button1";
@@ -404,7 +404,7 @@
             // pnlGeneral
             // 
             this.pnlGeneral.BackColor = System.Drawing.Color.Transparent;
-            this.pnlGeneral.Controls.Add(this.groupBox1);
+            this.pnlGeneral.Controls.Add(this.gboxAppearance);
             this.pnlGeneral.EndColor = System.Drawing.Color.Black;
             this.pnlGeneral.GradientAngle = 90;
             this.pnlGeneral.Location = new System.Drawing.Point(0, 90);
@@ -415,18 +415,18 @@
             this.pnlGeneral.Transparent1 = 200;
             this.pnlGeneral.Transparent2 = 200;
             // 
-            // groupBox1
+            // gboxAppearance
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Controls.Add(this.cmbThemes);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(3, 3);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(421, 85);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Зовнішній вигляд";
+            this.gboxAppearance.BackColor = System.Drawing.Color.Transparent;
+            this.gboxAppearance.Controls.Add(this.cmbThemes);
+            this.gboxAppearance.Controls.Add(this.lblTheme);
+            this.gboxAppearance.ForeColor = System.Drawing.Color.White;
+            this.gboxAppearance.Location = new System.Drawing.Point(3, 3);
+            this.gboxAppearance.Name = "gboxAppearance";
+            this.gboxAppearance.Size = new System.Drawing.Size(421, 85);
+            this.gboxAppearance.TabIndex = 0;
+            this.gboxAppearance.TabStop = false;
+            this.gboxAppearance.Text = "Зовнішній вигляд";
             // 
             // cmbThemes
             // 
@@ -440,54 +440,55 @@
             this.cmbThemes.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.cmbTheme_DrawItem);
             this.cmbThemes.SelectedIndexChanged += new System.EventHandler(this.cmbThemes_SelectedIndexChanged);
             // 
-            // label3
+            // lblTheme
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(121, 34);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 19);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Тема:";
+            this.lblTheme.AutoSize = true;
+            this.lblTheme.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblTheme.Location = new System.Drawing.Point(121, 34);
+            this.lblTheme.Name = "lblTheme";
+            this.lblTheme.Size = new System.Drawing.Size(44, 19);
+            this.lblTheme.TabIndex = 0;
+            this.lblTheme.Text = "Тема:";
             // 
             // pnlPaths
             // 
-            this.pnlPaths.Controls.Add(this.groupBox3);
-            this.pnlPaths.Controls.Add(this.groupBox2);
-            this.pnlPaths.EndColor = System.Drawing.Color.DarkBlue;
+            this.pnlPaths.BackColor = System.Drawing.Color.White;
+            this.pnlPaths.Controls.Add(this.gboxTVPath);
+            this.pnlPaths.Controls.Add(this.gboxDBPath);
+            this.pnlPaths.EndColor = System.Drawing.Color.LightGray;
             this.pnlPaths.GradientAngle = 90;
             this.pnlPaths.Location = new System.Drawing.Point(0, 90);
             this.pnlPaths.Name = "pnlPaths";
             this.pnlPaths.Size = new System.Drawing.Size(427, 386);
-            this.pnlPaths.StartColor = System.Drawing.Color.SteelBlue;
+            this.pnlPaths.StartColor = System.Drawing.Color.LightGray;
             this.pnlPaths.TabIndex = 7;
             this.pnlPaths.Transparent1 = 150;
             this.pnlPaths.Transparent2 = 150;
             this.pnlPaths.Visible = false;
             // 
-            // groupBox3
+            // gboxTVPath
             // 
-            this.groupBox3.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox3.Controls.Add(this.label2);
-            this.groupBox3.Controls.Add(this.txtTVWay);
-            this.groupBox3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.groupBox3.Location = new System.Drawing.Point(9, 94);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(409, 80);
-            this.groupBox3.TabIndex = 5;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Шлях до программи голосового зв\'язку TeamViewer";
+            this.gboxTVPath.BackColor = System.Drawing.Color.Transparent;
+            this.gboxTVPath.Controls.Add(this.lblTVPath);
+            this.gboxTVPath.Controls.Add(this.txtTVWay);
+            this.gboxTVPath.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.gboxTVPath.Location = new System.Drawing.Point(9, 94);
+            this.gboxTVPath.Name = "gboxTVPath";
+            this.gboxTVPath.Size = new System.Drawing.Size(409, 80);
+            this.gboxTVPath.TabIndex = 5;
+            this.gboxTVPath.TabStop = false;
+            this.gboxTVPath.Text = "Шлях до программи голосового зв\'язку TeamViewer";
             // 
-            // label2
+            // lblTVPath
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.label2.Location = new System.Drawing.Point(21, 37);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(92, 19);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Шлях до TV:";
+            this.lblTVPath.AutoSize = true;
+            this.lblTVPath.BackColor = System.Drawing.Color.Transparent;
+            this.lblTVPath.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.lblTVPath.Location = new System.Drawing.Point(21, 37);
+            this.lblTVPath.Name = "lblTVPath";
+            this.lblTVPath.Size = new System.Drawing.Size(92, 19);
+            this.lblTVPath.TabIndex = 2;
+            this.lblTVPath.Text = "Шлях до TV:";
             // 
             // txtTVWay
             // 
@@ -499,29 +500,30 @@
             this.txtTVWay.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             this.txtTVWay.DoubleClick += new System.EventHandler(this.textBox2_DoubleClick);
             // 
-            // groupBox2
+            // gboxDBPath
             // 
-            this.groupBox2.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Controls.Add(this.txtBDWay);
-            this.groupBox2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.groupBox2.Location = new System.Drawing.Point(9, 8);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(409, 80);
-            this.groupBox2.TabIndex = 4;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Шлях до бази даних";
+            this.gboxDBPath.BackColor = System.Drawing.Color.Transparent;
+            this.gboxDBPath.Controls.Add(this.lblDBPath);
+            this.gboxDBPath.Controls.Add(this.txtBDWay);
+            this.gboxDBPath.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.gboxDBPath.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.gboxDBPath.Location = new System.Drawing.Point(9, 8);
+            this.gboxDBPath.Name = "gboxDBPath";
+            this.gboxDBPath.Size = new System.Drawing.Size(409, 80);
+            this.gboxDBPath.TabIndex = 4;
+            this.gboxDBPath.TabStop = false;
+            this.gboxDBPath.Text = "Шлях до бази даних";
             // 
-            // label1
+            // lblDBPath
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.label1.Location = new System.Drawing.Point(21, 34);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(92, 19);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Шлях до БД:";
+            this.lblDBPath.AutoSize = true;
+            this.lblDBPath.BackColor = System.Drawing.Color.Transparent;
+            this.lblDBPath.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.lblDBPath.Location = new System.Drawing.Point(21, 34);
+            this.lblDBPath.Name = "lblDBPath";
+            this.lblDBPath.Size = new System.Drawing.Size(92, 19);
+            this.lblDBPath.TabIndex = 0;
+            this.lblDBPath.Text = "Шлях до БД:";
             // 
             // txtBDWay
             // 
@@ -538,40 +540,40 @@
             this.AcceptButton = this.btnAccept;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Black;
+            this.BackColor = System.Drawing.Color.White;
             this.CancelButton = this.btnCancel;
             this.ClientSize = new System.Drawing.Size(426, 515);
-            this.Controls.Add(this.panelZ4);
+            this.Controls.Add(this.pnlButtons);
             this.Controls.Add(this.panelZ3);
             this.Controls.Add(this.panelZ1);
-            this.Controls.Add(this.pnlGeneral);
             this.Controls.Add(this.pnlPaths);
+            this.Controls.Add(this.pnlGeneral);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Settings";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Налаштування";
             this.Load += new System.EventHandler(this.Settings_Load);
-            this.panelZ4.ResumeLayout(false);
+            this.pnlButtons.ResumeLayout(false);
             this.panelZ3.ResumeLayout(false);
             this.panelZ1.ResumeLayout(false);
             this.pnlGeneral.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.gboxAppearance.ResumeLayout(false);
+            this.gboxAppearance.PerformLayout();
             this.pnlPaths.ResumeLayout(false);
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.gboxTVPath.ResumeLayout(false);
+            this.gboxTVPath.PerformLayout();
+            this.gboxDBPath.ResumeLayout(false);
+            this.gboxDBPath.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblDBPath;
         private System.Windows.Forms.TextBox txtBDWay;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblTVPath;
         private System.Windows.Forms.TextBox txtTVWay;
         private System.Windows.Forms.Button btnAccept;
         private System.Windows.Forms.Button btnCancel;
@@ -581,11 +583,11 @@
         private PanelZ.PanelZ pnlPaths;
         private PanelZ.PanelZ panelZ3;
         private System.Windows.Forms.Button button1;
-        private PanelZ.PanelZ panelZ4;
+        private PanelZ.PanelZ pnlButtons;
         private Custom_Controls_in_CS.ButtonZ btnGeneral;
         private PanelZ.PanelZ pnlGeneral;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.GroupBox gboxAppearance;
+        private System.Windows.Forms.Label lblTheme;
         private System.Windows.Forms.ComboBox cmbThemes;
         private Custom_Controls_in_CS.ButtonZ buttonZ6;
         private Custom_Controls_in_CS.ButtonZ buttonZ5;
@@ -593,7 +595,7 @@
         private Custom_Controls_in_CS.ButtonZ buttonZ3;
         private Custom_Controls_in_CS.ButtonZ buttonZ2;
         private Custom_Controls_in_CS.ButtonZ btnPaths;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox gboxTVPath;
+        private System.Windows.Forms.GroupBox gboxDBPath;
     }
 }

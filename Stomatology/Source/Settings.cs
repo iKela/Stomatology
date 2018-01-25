@@ -12,12 +12,12 @@ namespace Stomatology
 
         public Settings()
         {
-                InitializeComponent();
+            InitializeComponent();
+            setTheme();
         }
 
         private void Settings_Load(object sender, EventArgs e)
         {
-            setTheme();
             cmbThemes.Items.AddRange(colorsNames);
 
             cmbThemes.SelectedIndex = Properties.Settings.Default.Theme;
@@ -34,25 +34,64 @@ namespace Stomatology
             {
                 case 0:
                     {
-                        if (Properties.Settings.Default.Theme != 0)
+                        if (this.BackColor != Color.Black)
                         {
                             this.BackColor = Color.Black;
+
+                            pnlGeneral.EndColor = Color.Black;
+                            pnlGeneral.StartColor = Color.Black;
+                            pnlPaths.EndColor = Color.Black;
+                            pnlPaths.StartColor = Color.Black;
+                            pnlButtons.EndColor = Color.Black;
+                            pnlButtons.StartColor = Color.Black;
+                            lblTheme.ForeColor = Color.White;
+                            gboxAppearance.ForeColor = Color.White;
+                            gboxDBPath.ForeColor = Color.White;
+                            gboxTVPath.ForeColor = Color.White;
+                            lblDBPath.ForeColor = Color.White;
+                            lblTVPath.ForeColor = Color.White;
                         }
                         break;
                     }
                 case 1:
                     {
-                        if (Properties.Settings.Default.Theme != 1)
+                        if (pnlGeneral.EndColor != Color.RoyalBlue)
                         {
                             this.BackColor = Color.RoyalBlue;
+
+                            pnlGeneral.EndColor = Color.RoyalBlue;
+                            pnlGeneral.StartColor = Color.RoyalBlue;
+                            pnlPaths.EndColor = Color.RoyalBlue;
+                            pnlPaths.StartColor = Color.RoyalBlue;
+                            pnlButtons.EndColor = Color.RoyalBlue;
+                            pnlButtons.StartColor = Color.RoyalBlue;
+                            lblTheme.ForeColor = Color.Black;
+                            gboxAppearance.ForeColor = Color.Black;
+                            gboxDBPath.ForeColor = Color.Black;
+                            gboxTVPath.ForeColor = Color.Black;
+                            lblDBPath.ForeColor = Color.Black;
+                            lblTVPath.ForeColor = Color.Black;
                         }
                         break;
                     }
                 case 2:
                     {
-                        if (Properties.Settings.Default.Theme != 2)
+                        if (pnlGeneral.EndColor != Color.LightGray)
                         {
                             this.BackColor = Color.LightGray;
+
+                            pnlGeneral.EndColor = Color.LightGray;
+                            pnlGeneral.StartColor = Color.LightGray;
+                            pnlPaths.EndColor = Color.LightGray;
+                            pnlPaths.StartColor = Color.LightGray;
+                            pnlButtons.EndColor = Color.LightGray;
+                            pnlButtons.StartColor = Color.LightGray;
+                            lblTheme.ForeColor = Color.Black;
+                            gboxAppearance.ForeColor = Color.Black;
+                            gboxDBPath.ForeColor = Color.Black;
+                            gboxTVPath.ForeColor = Color.Black;
+                            lblDBPath.ForeColor = Color.Black;
+                            lblTVPath.ForeColor = Color.Black;
                         }
                         break;
                     }
