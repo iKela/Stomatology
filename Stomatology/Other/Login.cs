@@ -17,26 +17,38 @@ namespace Stomatology
     public partial class Login : Form
     {
         SqlConnection testCon = new SqlConnection(@"Data Source=insopdentistry.cywgv3xkqj2b.eu-west-3.rds.amazonaws.com;Initial Catalog=Dentistry;Persist Security Info=True;User ID=iKela;Password=6621Nazar");
-        string login;
-        string password;
+        
         private void Autauthorization()
         {
             if (txtUsername.TextLength < 8 || txtPassword.TextLength < 8)
             {
                 txtError.Text = "Помилка: мінімальна кількість символів повинна дорівнювати або перевишати 8.";
             }
+            int count = 0;
 
+            SqlCommand command = new SqlCommand($"select * from Users  where Login = '{txtUsername.Text}' and Password ='{txtPassword.Text}'", testCon);
+            {
+                //123' OR 1=1-- инекция
 
-            //if (txtUsername.Text == login && txtPassword.Text == password)
-            //{
+                testCon.Open();
+                SqlDataReader reader = command.ExecuteReader();
+                {
+                    while (reader.Read())
+                        count += 1;
+                }
+                testCon.Close();
+            }
+            if (count > 0)
+            {
+                this.Hide();
                 MainMenu newForm = new MainMenu();
                 newForm.Show();
-            this.Close();
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Перевірьте правильність введення Логіну!");
-            //}
+            }
+            else if (count == 0)
+            {
+                MessageBox.Show("Перевірьте правильність введення Логіну!");
+                return;
+            }
         }
 
         public Login()
@@ -56,17 +68,17 @@ namespace Stomatology
 
         private void Login_Load(object sender, EventArgs e)
         {
-            string query1 = $"SELECT Login, Password From Users";
-            testCon.Open();
-            SqlDataReader sqlReader = null;
-            SqlCommand command = new SqlCommand(query1, testCon);
-            sqlReader = command.ExecuteReader();
-            while (sqlReader.Read())
-            {
-                login = sqlReader["Login"].ToString();
-                password = sqlReader["Password"].ToString();
-            }
-            // MessageBox.Show("IP: " + GetUserIpByIp("")+ "\nHostname: " + GetUserHostnameByIp("") + "\nCity: " + GetUserCityByIp("") + "\nRegion: " + GetUserRegionByIp("") + "\nCountry: " + GetUserCountryByIp("") + "\nLocation: " + GetUserLocByIp("") + "\nOrganization: " + GetUserOrgByIp("") + "\nPostal: " + GetUserPostalByIp("") + "\nTime: " + DateTime.Now);
+            //string query1 = $"SELECT Login, Password From Users";
+            //testCon.Open();
+            //SqlDataReader sqlReader = null;
+            //SqlCommand command = new SqlCommand(query1, testCon);
+            //sqlReader = command.ExecuteReader();
+            //while (sqlReader.Read())
+            //{
+            //    login = sqlReader["Login"].ToString();
+            //    password = sqlReader["Password"].ToString();
+            //}
+           // MessageBox.Show("IP: " + GetUserIpByIp("")+ "\nHostname: " + GetUserHostnameByIp("") + "\nCity: " + GetUserCityByIp("") + "\nRegion: " + GetUserRegionByIp("") + "\nCountry: " + GetUserCountryByIp("") + "\nLocation: " + GetUserLocByIp("") + "\nOrganization: " + GetUserOrgByIp("") + "\nPostal: " + GetUserPostalByIp("") + "\nTime: " + DateTime.Now);
         }
 
         private void onlyCyrillic(object sender, KeyPressEventArgs e)

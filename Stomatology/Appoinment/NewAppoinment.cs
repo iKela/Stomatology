@@ -18,7 +18,7 @@ namespace Stomatology
 
 
         int Arrears;
-        string Doctor;
+       // string Doctor;
         string MedCardId = "";
         string query;
 
@@ -120,7 +120,7 @@ namespace Stomatology
 
             testCon.Open();
             SqlDataReader sqlReader = null;
-            SqlCommand command = new SqlCommand("SELECT Name, Doctor FROM MedCard", testCon);
+            SqlCommand command = new SqlCommand("SELECT m.Name, r.Doctor from Reception", testCon);
             try
             {
                 sqlReader = command.ExecuteReader();
