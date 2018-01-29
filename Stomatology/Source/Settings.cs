@@ -14,17 +14,18 @@ namespace Stomatology
         private void Settings_Load(object sender, EventArgs e)
         {
             this.txtTVWay.Text = Properties.Settings.Default.TeamViewerDirection;
-            this.txtBDWay.Text = Properties.Settings.Default.DateBaseDirection;
+          //  this.txtBDWay.Text = Properties.Settings.Default.DateBaseDirection;
             toolTip();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (txtBDWay.Text == string.Empty)
-            {
-                MessageBox.Show("Задайте шлях до бази даних!");
-            }
-            else if (txtTVWay.Text == string.Empty)
+            //if (txtBDWay.Text == string.Empty)
+            //{
+            //    MessageBox.Show("Задайте шлях до бази даних!");
+            //}
+            //else 
+            if (txtTVWay.Text == string.Empty)
             {
                 MessageBox.Show("Задайте шлях до TeamViewer!");
             }
@@ -79,8 +80,8 @@ namespace Stomatology
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            Properties.Settings.Default.DateBaseDirection = txtBDWay.Text;
-            Properties.Settings.Default.Save();
+            //Properties.Settings.Default.DateBaseDirection = txtBDWay.Text;
+            //Properties.Settings.Default.Save();
         }
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
@@ -111,11 +112,11 @@ namespace Stomatology
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            if (txtBDWay.Text == string.Empty)
-            {
-                MessageBox.Show("Задайте шлях до бази даних!");
-            }
-            else
+            //if (txtBDWay.Text == string.Empty)
+            //{
+            //    MessageBox.Show("Задайте шлях до бази даних!");
+            //}
+            //else
             {
                 foreach (Form Main in Application.OpenForms)
                 {

@@ -14,10 +14,7 @@ namespace Stomatology
 {
     public partial class NewMedCard : Form
     {
-        SqlConnection testCon = new SqlConnection
-        (@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + Properties.Settings.Default.DateBaseDirection);
-
-
+        SqlConnection testCon = new SqlConnection(@"Data Source=insopdentistry.cywgv3xkqj2b.eu-west-3.rds.amazonaws.com;Initial Catalog=Dentistry;Persist Security Info=True;User ID=iKela;Password=6621Nazar");
 
         public NewMedCard()
         {
@@ -209,11 +206,11 @@ namespace Stomatology
                     testCon.Open();
                     SqlCommand cmd = testCon.CreateCommand();
                     cmd.CommandType = CommandType.Text;
-                    cmd.CommandText = $"INSERT INTO MedCard ( DateMC, Name, State, Birthday, Number, Adress, Diagnos, Scarg, PereneseniTaSuputniZahvor, " +
+                    cmd.CommandText = $"INSERT INTO MedCard ( Name, State, Birthday, Number, Adress, DateMC, Diagnos, Scarg, PereneseniTaSuputniZahvor, " +
                         $"RozvutokTeperishnogoZahvor, DaniObjektDoslidjennya, Prikus, StanGigiyenuRota, xRayData, ColorVita, DateOfLessons, ControlDate, " +
                         $"SurvayPlan, TreatmentPlan) " +
-                        $"values ( N'{dtpDateOfCreating.Value.Date.ToString("dd/MM/yyyy")}', N'{txtName.Text}',  N'{txtGender.Text}', N'{txtDateOfBirthday.Text}', " +
-                        $" N'{txtNumber.Text}', N'{txtAddress.Text}', N'{txtDiagnosis.Text}', N'{txtComplaints.Text}', N'{txtDoneDiseases.Text}', N'{txtCurrentDisease.Text}', " +
+                        $"values ( N'{txtName.Text}',  N'{txtGender.Text}', N'{txtDateOfBirthday.Text}', " +
+                        $" N'{txtNumber.Text}', N'{txtAddress.Text}',  N'{dtpDateOfCreating.Value.Date.ToString("dd/MM/yyyy")}', N'{txtDiagnosis.Text}', N'{txtComplaints.Text}', N'{txtDoneDiseases.Text}', N'{txtCurrentDisease.Text}', " +
                         $" N'{txtSurvayData.Text}', N'{txtBite.Text}', N'{txtMouthState.Text}', N'{txtXReyData.Text}', N'{txtDateOfLessons.Text}', N'{txtControlDate.Text}', " +
                         $" N'{txtSurvayData.Text}', N'{txtSurvayPlan.Text}', N'{txtTreatmentPlan.Text}')";
                     cmd.ExecuteNonQuery();

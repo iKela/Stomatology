@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -156,20 +156,20 @@
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.pnlTop = new PanelZ.PanelZ();
-            this.miniToolStrip = new System.Windows.Forms.MenuStrip();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.справкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiUserInfo = new System.Windows.Forms.ToolStripMenuItem();
             this.проПрограммуToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.допомогаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiContacts = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiRemoteControl = new System.Windows.Forms.ToolStripMenuItem();
-            this.pnlBot = new PanelZ.PanelZ();
             this.btnMainMenu = new System.Windows.Forms.Button();
+            this.miniToolStrip = new System.Windows.Forms.MenuStrip();
+            this.pnlBot = new PanelZ.PanelZ();
             this.btnExit = new System.Windows.Forms.Button();
             this.panelZ1 = new PanelZ.PanelZ();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
             this.tabPage1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -181,9 +181,9 @@
             this.tabFinance.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView2)).BeginInit();
             this.pnlTop.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.pnlBot.SuspendLayout();
             this.panelZ1.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // imageList1
@@ -232,15 +232,15 @@
             this.name,
             this.birthday,
             this.number});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Times New Roman", 12F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.NullValue = null;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 12F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.NullValue = null;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
             resources.ApplyResources(this.dataGridView1, "dataGridView1");
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -1114,12 +1114,32 @@
             this.pnlTop.Transparent1 = 50;
             this.pnlTop.Transparent2 = 250;
             // 
-            // miniToolStrip
+            // button10
             // 
-            this.miniToolStrip.AccessibleRole = System.Windows.Forms.AccessibleRole.ComboBox;
-            this.miniToolStrip.BackColor = System.Drawing.Color.White;
-            resources.ApplyResources(this.miniToolStrip, "miniToolStrip");
-            this.miniToolStrip.Name = "miniToolStrip";
+            resources.ApplyResources(this.button10, "button10");
+            this.button10.BackColor = System.Drawing.Color.Transparent;
+            this.button10.FlatAppearance.BorderSize = 0;
+            this.button10.Name = "button10";
+            this.button10.UseVisualStyleBackColor = false;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
+            // button11
+            // 
+            resources.ApplyResources(this.button11, "button11");
+            this.button11.BackColor = System.Drawing.Color.Transparent;
+            this.button11.FlatAppearance.BorderSize = 0;
+            this.button11.Name = "button11";
+            this.button11.UseVisualStyleBackColor = false;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.menuStrip1, "menuStrip1");
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.справкаToolStripMenuItem,
+            this.допомогаToolStripMenuItem});
+            this.menuStrip1.Name = "menuStrip1";
             // 
             // справкаToolStripMenuItem
             // 
@@ -1161,6 +1181,22 @@
             this.tsmiRemoteControl.Name = "tsmiRemoteControl";
             this.tsmiRemoteControl.Click += new System.EventHandler(this.tsmiRemoteControl_Click);
             // 
+            // btnMainMenu
+            // 
+            this.btnMainMenu.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.btnMainMenu, "btnMainMenu");
+            this.btnMainMenu.FlatAppearance.BorderSize = 0;
+            this.btnMainMenu.Name = "btnMainMenu";
+            this.btnMainMenu.UseVisualStyleBackColor = false;
+            this.btnMainMenu.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // miniToolStrip
+            // 
+            this.miniToolStrip.AccessibleRole = System.Windows.Forms.AccessibleRole.ComboBox;
+            this.miniToolStrip.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.miniToolStrip, "miniToolStrip");
+            this.miniToolStrip.Name = "miniToolStrip";
+            // 
             // pnlBot
             // 
             this.pnlBot.Controls.Add(this.btnExit);
@@ -1171,15 +1207,6 @@
             this.pnlBot.StartColor = System.Drawing.Color.White;
             this.pnlBot.Transparent1 = 150;
             this.pnlBot.Transparent2 = 150;
-            // 
-            // btnMainMenu
-            // 
-            this.btnMainMenu.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.btnMainMenu, "btnMainMenu");
-            this.btnMainMenu.FlatAppearance.BorderSize = 0;
-            this.btnMainMenu.Name = "btnMainMenu";
-            this.btnMainMenu.UseVisualStyleBackColor = false;
-            this.btnMainMenu.Click += new System.EventHandler(this.button5_Click);
             // 
             // btnExit
             // 
@@ -1202,33 +1229,6 @@
             this.panelZ1.StartColor = System.Drawing.Color.Black;
             this.panelZ1.Transparent1 = 255;
             this.panelZ1.Transparent2 = 150;
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.BackColor = System.Drawing.Color.White;
-            resources.ApplyResources(this.menuStrip1, "menuStrip1");
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.справкаToolStripMenuItem,
-            this.допомогаToolStripMenuItem});
-            this.menuStrip1.Name = "menuStrip1";
-            // 
-            // button10
-            // 
-            resources.ApplyResources(this.button10, "button10");
-            this.button10.BackColor = System.Drawing.Color.Transparent;
-            this.button10.FlatAppearance.BorderSize = 0;
-            this.button10.Name = "button10";
-            this.button10.UseVisualStyleBackColor = false;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
-            // 
-            // button11
-            // 
-            resources.ApplyResources(this.button11, "button11");
-            this.button11.BackColor = System.Drawing.Color.Transparent;
-            this.button11.FlatAppearance.BorderSize = 0;
-            this.button11.Name = "button11";
-            this.button11.UseVisualStyleBackColor = false;
-            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // Main
             // 
@@ -1258,10 +1258,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView2)).EndInit();
             this.pnlTop.ResumeLayout(false);
             this.pnlTop.PerformLayout();
-            this.pnlBot.ResumeLayout(false);
-            this.panelZ1.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.pnlBot.ResumeLayout(false);
+            this.panelZ1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
