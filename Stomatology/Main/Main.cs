@@ -12,6 +12,16 @@ namespace Stomatology
     {
         SqlConnection testCon = new SqlConnection(@"Data Source=insopdentistry.cywgv3xkqj2b.eu-west-3.rds.amazonaws.com;Initial Catalog=Dentistry;Persist Security Info=True;User ID=iKela;Password=6621Nazar");
 
+        NewMedCard newMedCard;
+        EditMedCard editMedCard;
+        NewAppoinment newAppoinment;
+        AboutSoft aboutSoft;
+        Calculator calculator;
+        Settings settings;
+        UserInfo userInfo;
+        Account account;
+        HelpContacts helpContacts;
+
         int MHIndex;
         int MLIndex;
         string MedCardId;
@@ -167,20 +177,41 @@ namespace Stomatology
 
         private void AddNewAppoinment_Click(object sender, EventArgs e)
         {
-            NewAppoinment newForm = new NewAppoinment();
-            newForm.Show();
+            if (newAppoinment == null || newAppoinment.IsDisposed)
+            {
+                newAppoinment = new NewAppoinment();
+                newAppoinment.Show();
+            }
+            else
+            {
+                newAppoinment.Focus();
+            }
         }
 
         private void EditPatient_Click(object sender, EventArgs e)
         {
-            EditMedCard newForm = new EditMedCard();
-            newForm.Show();
+            if (editMedCard == null || editMedCard.IsDisposed)
+            {
+                editMedCard = new EditMedCard();
+                editMedCard.Show();
+            }
+            else
+            {
+                newMedCard.Focus();
+            }
         }
 
         private void AddNewPatient_Click(object sender, EventArgs e)
         {
-            NewMedCard newForm = new NewMedCard();
-            newForm.Show();
+            if (newMedCard == null || newMedCard.IsDisposed)
+            {
+                newMedCard = new NewMedCard();
+                newMedCard.Show();
+            }
+            else
+            {
+                newMedCard.Focus();
+            }
         }
 
         private void вихідToolStripMenuItem_Click(object sender, EventArgs e)
@@ -195,8 +226,15 @@ namespace Stomatology
 
         private void проПрограммуToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AboutSoft newForm = new AboutSoft();
-            newForm.Show();
+            if (aboutSoft == null || aboutSoft.IsDisposed)
+            {
+                aboutSoft = new AboutSoft();
+                aboutSoft.Show();
+            }
+            else
+            {
+                aboutSoft.Focus();
+            }
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -211,26 +249,54 @@ namespace Stomatology
 
         private void btnCalculator_Click(object sender, EventArgs e)
         {
-            Calculator newForm = new Calculator(this);
-            newForm.Show();
+            if (calculator == null || calculator.IsDisposed)
+            {
+                calculator = new Calculator(this);
+                calculator.Show();
+            }
+            else
+            {
+                calculator.Focus();
+            }
         }
 
         private void tsmiSettings_Click(object sender, EventArgs e)
         {
-            Settings newForm = new Settings();
-            newForm.Show();
+            if (settings == null || settings.IsDisposed)
+            {
+                settings = new Settings();
+                settings.Show();
+            }
+            else
+            {
+                settings.Focus();
+            }
         }
 
         private void tsmiContacts_Click(object sender, EventArgs e)
         {
-            HelpContacts newForm = new HelpContacts();
-            newForm.Show();
+            if (helpContacts == null || helpContacts.IsDisposed)
+            {
+                helpContacts = new HelpContacts();
+                helpContacts.Show();
+            }
+            else
+            {
+                helpContacts.Focus();
+            }
         }
 
         private void tsmiUserInfo_Click(object sender, EventArgs e)
         {
-            UserInfo newForm = new UserInfo();
-            newForm.Show();
+            if (userInfo == null || userInfo.IsDisposed)
+            {
+                userInfo = new UserInfo();
+                userInfo.Show();
+            }
+            else
+            {
+                userInfo.Focus();
+            }
         }
 
         private void tsmiRemoteControl_Click(object sender, EventArgs e)
@@ -1523,8 +1589,15 @@ namespace Stomatology
         }
         private void showAccount()
         {
-            Account newForm = new Account();
-            newForm.Show();
+            if (account == null || account.IsDisposed)
+            {
+                account = new Account();
+                account.Show();
+            }
+            else
+            {
+                account.Focus();
+            }
         }
     }
 }
