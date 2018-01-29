@@ -69,6 +69,16 @@ namespace Stomatology
             // MessageBox.Show("IP: " + GetUserIpByIp("")+ "\nHostname: " + GetUserHostnameByIp("") + "\nCity: " + GetUserCityByIp("") + "\nRegion: " + GetUserRegionByIp("") + "\nCountry: " + GetUserCountryByIp("") + "\nLocation: " + GetUserLocByIp("") + "\nOrganization: " + GetUserOrgByIp("") + "\nPostal: " + GetUserPostalByIp("") + "\nTime: " + DateTime.Now);
         }
 
+        private void onlyCyrillic(object sender, KeyPressEventArgs e)
+        {
+            char letter = e.KeyChar;
+            if ((letter < 'A' || letter > 'Z') && letter != '\b' && letter != '.' && letter != ' ')
+            {
+                e.Handled = true;
+            }
+
+        }
+
         public static string GetUserIpByIp(string ip)
         {
             IpInfo ipInfo = new IpInfo();
@@ -229,6 +239,11 @@ namespace Stomatology
         {
             btnExit.Size = new Size(79, 29);
             btnExit.Location = new Point(460, 313);
+        }
+
+        private void txtPassword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            onlyCyrillic(sender, e);
         }
     }
 }

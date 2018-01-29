@@ -5850,7 +5850,7 @@
     <value>NoControl</value>
   </data>
   <data name="button2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>195, 810</value>
+    <value>195, 808</value>
   </data>
   <data name="button2.Size" type="System.Drawing.Size, System.Drawing">
     <value>141, 23</value>
@@ -5880,7 +5880,7 @@
     <value>NoControl</value>
   </data>
   <data name="button3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>460, 798</value>
+    <value>460, 796</value>
   </data>
   <data name="button3.Size" type="System.Drawing.Size, System.Drawing">
     <value>141, 23</value>
@@ -5913,7 +5913,7 @@
     <value>NoControl</value>
   </data>
   <data name="button4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>607, 810</value>
+    <value>607, 808</value>
   </data>
   <data name="button4.Size" type="System.Drawing.Size, System.Drawing">
     <value>141, 23</value>
@@ -19065,9 +19065,6 @@
         AD/+AAAAAAAAf/8AAAAAAAD//4AAAAAAAf//4AAAAAAH///4AAGAAB////8AH/gA//8=
 </value>
   </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="$this.MaximumSize" type="System.Drawing.Size, System.Drawing">
     <value>1376, 726</value>
   </data>
@@ -19113,48 +19110,6 @@
   <data name="&gt;&gt;number.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;toolTip1.Name" xml:space="preserve">
-    <value>toolTip1</value>
-  </data>
-  <data name="&gt;&gt;toolTip1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;справкаToolStripMenuItem.Name" xml:space="preserve">
-    <value>справкаToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;справкаToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tsmiUserInfo.Name" xml:space="preserve">
-    <value>tsmiUserInfo</value>
-  </data>
-  <data name="&gt;&gt;tsmiUserInfo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;проПрограммуToolStripMenuItem.Name" xml:space="preserve">
-    <value>проПрограммуToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;проПрограммуToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;допомогаToolStripMenuItem.Name" xml:space="preserve">
-    <value>допомогаToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;допомогаToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tsmiContacts.Name" xml:space="preserve">
-    <value>tsmiContacts</value>
-  </data>
-  <data name="&gt;&gt;tsmiContacts.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tsmiRemoteControl.Name" xml:space="preserve">
-    <value>tsmiRemoteControl</value>
-  </data>
-  <data name="&gt;&gt;tsmiRemoteControl.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;Id_reception.Name" xml:space="preserve">
     <value>Id_reception</value>
   </data>
@@ -19196,6 +19151,48 @@
   </data>
   <data name="&gt;&gt;price.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolTip1.Name" xml:space="preserve">
+    <value>toolTip1</value>
+  </data>
+  <data name="&gt;&gt;toolTip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;справкаToolStripMenuItem.Name" xml:space="preserve">
+    <value>справкаToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;справкаToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tsmiUserInfo.Name" xml:space="preserve">
+    <value>tsmiUserInfo</value>
+  </data>
+  <data name="&gt;&gt;tsmiUserInfo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;проПрограммуToolStripMenuItem.Name" xml:space="preserve">
+    <value>проПрограммуToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;проПрограммуToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;допомогаToolStripMenuItem.Name" xml:space="preserve">
+    <value>допомогаToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;допомогаToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tsmiContacts.Name" xml:space="preserve">
+    <value>tsmiContacts</value>
+  </data>
+  <data name="&gt;&gt;tsmiContacts.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tsmiRemoteControl.Name" xml:space="preserve">
+    <value>tsmiRemoteControl</value>
+  </data>
+  <data name="&gt;&gt;tsmiRemoteControl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>Main</value>

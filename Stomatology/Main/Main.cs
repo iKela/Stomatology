@@ -169,7 +169,7 @@ namespace Stomatology
         private void Form1_Load(object sender, EventArgs e)
         {
             toolTip(); 
-            //updateTable();
+            updateTable();
             btnAccount.FlatAppearance.MouseOverBackColor = Color.Transparent;
             btnAccountPhoto.FlatAppearance.MouseOverBackColor = Color.Transparent;
             btnExit.FlatAppearance.MouseOverBackColor = Color.Transparent;

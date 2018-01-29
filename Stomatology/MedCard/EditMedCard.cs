@@ -488,7 +488,7 @@ namespace Stomatology
         private void onlyCyrillic(object sender, KeyPressEventArgs e)
         {
             char letter = e.KeyChar;
-            if ((letter < 'А' || letter > 'я') && letter != '\b' && letter != '.')
+            if ((letter < 'А' || letter > 'я') && letter != '.')
             {
                 e.Handled = true;
             }
