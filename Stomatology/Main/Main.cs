@@ -10,8 +10,7 @@ namespace Stomatology
 {
     public partial class Main : Form
     {
-        SqlConnection testCon = new SqlConnection
-        (@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + Properties.Settings.Default.DateBaseDirection);
+        SqlConnection testCon = new SqlConnection(@"Data Source=insopdentistry.cywgv3xkqj2b.eu-west-3.rds.amazonaws.com;Initial Catalog=Dentistry;Persist Security Info=True;User ID=iKela;Password=6621Nazar");
 
         int MHIndex;
         int MLIndex;
@@ -20,7 +19,8 @@ namespace Stomatology
         string text;
         bool numberisthere = false;
 
-        public void PassValue(string strValue)//Calculator
+        public void PassValue(string strValue)
+            //Calculator
         {
             txtMoney.Text = strValue;
         }
@@ -361,7 +361,7 @@ namespace Stomatology
         #region Main----function
         private void Data_function()
         {
-            string query1 = $"SELECT * From Reception where  Date = '{comboBox1.Text}'  and MedCard_Id = '{MedCardId}'";
+            string query1 = $"SELECT * From Reception where  Date = '{comboBox1.Text}'  and IdMedCard = '{MedCardId}'";
 
             testCon.Open();
             SqlDataReader sqlReader = null;
@@ -369,11 +369,11 @@ namespace Stomatology
             sqlReader = command.ExecuteReader();
             while (sqlReader.Read())
             {
-                lblDoctor.Text = sqlReader["Doctor"].ToString();
-                txtBDate.Text = sqlReader["Date"].ToString();
+                lblDoctor.Text =    sqlReader["Doctor"].ToString();
+                txtBDate.Text =     sqlReader["Date"].ToString();
                 txtDescription.Text = sqlReader["info"].ToString();
                 txtMoney.Text = sqlReader["Money"].ToString();
-                arrears = sqlReader["Arrears"].GetHashCode();
+                arrears =       sqlReader["Arrears"].GetHashCode();
 
                 TopLeftTextBox_1.Text = sqlReader["tlt1"].ToString();
                 TopLeftTextBox_2.Text = sqlReader["tlt2"].ToString();
@@ -440,12 +440,12 @@ namespace Stomatology
                 {
                     testCon.Open();
                     string ReceptionId = "";
-                    string query = $"select Reception_Id from Reception where [Date] = N'{comboBox1.Text}'";
+                    string query = $"select Id from Reception where [Date] = N'{comboBox1.Text}'";
                     SqlCommand cmd1 = new SqlCommand(query, testCon);
                     SqlDataReader reader = cmd1.ExecuteReader();
                     if (reader.Read())
                     {
-                        ReceptionId = reader["Reception_Id"].ToString();
+                        ReceptionId = reader["Id"].ToString();
                     }
                     else
                     {
@@ -499,7 +499,7 @@ namespace Stomatology
                 Buttonclear();
                 testCon.Open();
                 SqlDataReader sqlReader = null;
-                string qwery = $"SELECT Date FROM [Reception] where MedCard_Id = N'{MedCardId}'";
+                string qwery = $"SELECT Date FROM [Reception] where IdMedCard = N'{MedCardId}'";
                 SqlCommand command = new SqlCommand(qwery, testCon);
 
                 sqlReader = command.ExecuteReader();
@@ -517,7 +517,7 @@ namespace Stomatology
         {
             dataGridView1.Rows.Clear();
             testCon.Open();
-            string upqwery = "select MedCard_Id, Name, Birthday, Number from MedCard";
+            string upqwery = "select Id, Name, Birthday, Number from MedCard";
             SqlCommand sqlComm = new SqlCommand(upqwery, testCon);
             SqlDataReader sqlDR;
             sqlDR = sqlComm.ExecuteReader();

@@ -9,11 +9,11 @@ namespace Stomatology
 {
     public partial class EditMedCard : Form
     {
-        SqlConnection testCon = new SqlConnection
-       (@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + Properties.Settings.Default.DateBaseDirection);
+        SqlConnection testCon = new SqlConnection(@"Data Source=insopdentistry.cywgv3xkqj2b.eu-west-3.rds.amazonaws.com;Initial Catalog=Dentistry;Persist Security Info=True;User ID=iKela;Password=6621Nazar");
 
         ArrayList DateList = new ArrayList();
         ArrayList InfoList = new ArrayList();
+        string MedCardId = "";
 
         public EditMedCard()
         {
@@ -441,25 +441,25 @@ namespace Stomatology
                 else
                 {
                     testCon.Open();
-                    string MedCardId = "";
-                    string query = $"select * from MedCard where [Name] = N'{cmbPacient.Text}'";
+                    
+                    string query = $"select I from MedCard where [Name] = N'{cmbPacient.Text}'";
                     SqlCommand cmd1 = new SqlCommand(query, testCon);
                     SqlDataReader reader = cmd1.ExecuteReader();
                     if (reader.Read())
                     {
-                        MedCardId = reader["MedCard_Id"].ToString();
+                        MedCardId = reader["Id"].ToString();
                     }
                     else
                     {
-                        throw new Exception("Не вибрана дата прийому, перевірте ще раз!");
+                        throw new Exception("Помилка!");
                     }
                     testCon.Close();
 
                     string qweryn = 
                         " UPDATE MedCard " + 
-                        $" set DateMC = N'{dtpDateOfCreating.Value.Date.ToString("dd/MM/yyyy")}', " +
+                        $" set Adress = N'{txtAddress.Text}', " +
                     $" Name = N'{cmbPacient.Text}', " + $"State = N'{txtGender.Text}', " + $"Birthday = N'{txtDateOfBirthday.Text}', " +
-                    $"Number = N'{txtNumber.Text}', " + $"Adress = N'{txtAddress.Text}', " + $"Diagnos = N'{txtDiagnosis.Text}', " +
+                    $"Number = N'{txtNumber.Text}', " + $"DateMC = N'{dtpDateOfCreating.Value.Date.ToString("dd/MM/yyyy")}', " +  $"Diagnos = N'{txtDiagnosis.Text}', " +
                     $"Scarg = N'{txtComplaints.Text}', " + $"PereneseniTaSuputniZahvor =  N'{txtDoneDiseases.Text}', " +
                     $"RozvutokTeperishnogoZahvor = N'{txtCurrentDisease.Text}', " + $"DaniObjektDoslidjennya = N'{txtSurvayData.Text}', " +
                     $"Prikus =  N'{txtBite.Text}', " + $"StanGigiyenuRota = N'{txtMouthState.Text}', " + $"xRayData = N'{txtXReyData.Text}', " +
@@ -482,7 +482,7 @@ namespace Stomatology
             finally
             {
                 //cmbPacient.Text = "";
-               // cmbPacient.Items.Clear();
+                
             }
         }
         private void onlyCyrillic(object sender, KeyPressEventArgs e)

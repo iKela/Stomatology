@@ -14,12 +14,13 @@ namespace Stomatology
 {
     public partial class NewAppoinment : Form
     {
-        SqlConnection testCon = new SqlConnection
-        (@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + Properties.Settings.Default.DateBaseDirection);
+        SqlConnection testCon = new SqlConnection(@"Data Source=insopdentistry.cywgv3xkqj2b.eu-west-3.rds.amazonaws.com;Initial Catalog=Dentistry;Persist Security Info=True;User ID=iKela;Password=6621Nazar");
+
 
         int Arrears;
-
-        string[] Doctor = { "Кричильський Леонід Ростиславович", " Кричильська Тетяна Георгієвна", "Яскал Зоряна Миколаївна" };
+        string Doctor;
+        string MedCardId = "";
+        string query;
 
         public void PassValue(string strValue)
         {
@@ -119,13 +120,14 @@ namespace Stomatology
 
             testCon.Open();
             SqlDataReader sqlReader = null;
-            SqlCommand command = new SqlCommand("SELECT Name FROM [MedCard]", testCon);
+            SqlCommand command = new SqlCommand("SELECT Name, Doctor FROM MedCard", testCon);
             try
             {
                 sqlReader = command.ExecuteReader();
                 while (sqlReader.Read())
                 {
                     cmbPatient.Items.Add(Convert.ToString(sqlReader["Name"]));
+                    cmbDoctor.Items.Add(Convert.ToString(sqlReader["Doctor"]));
                 }
             }
             catch (Exception ex)
@@ -137,7 +139,7 @@ namespace Stomatology
                 if (sqlReader != null) sqlReader.Close();
             }
             testCon.Close();
-            cmbDoctor.Items.AddRange(Doctor);
+           
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -947,28 +949,27 @@ namespace Stomatology
                 {
                     if (string.IsNullOrEmpty(cmbPatient.Text)) throw new Exception("Виберіть  Паціента!");
                     testCon.Open();
-                    string MedCardId = "";
-                    string query = $"select MedCard_Id from MedCard where [Name] = N'{cmbPatient.Text}'";
+                    query = $"select Id from MedCard where [Name] = N'{cmbPatient.Text}'";
                     SqlCommand cmd1 = new SqlCommand(query, testCon);
                     SqlDataReader reader = cmd1.ExecuteReader();
                     if (reader.Read())
                     {
-                        MedCardId = reader["MedCard_Id"].ToString();
+                        MedCardId = reader["Id"].ToString();
                     }
                     else
                     {
                         throw new Exception("Не вибраний паціент, перевірте ще раз!");
                     }
                     testCon.Close();
-                    // ----------------------------------------------------------------------------------------------------------------------------------------------------------
+ // ----------------------------------------------------------------------------------------------------------------------------------------------------------
                     testCon.Open();
                     SqlCommand cmd = testCon.CreateCommand();
                     cmd.CommandType = CommandType.Text;
-                    cmd.CommandText = $"INSERT INTO Reception (Date, Doctor, MedCard_Id, Info, Money, Arrears, tlt1, tlt2, tlt3, tlt4, tlt5, tlt6, tlt7, tlt8, " +
+                    cmd.CommandText = $"INSERT INTO Reception (IdMedCard, Date, Doctor, Info, Money, Arrears, tlt1, tlt2, tlt3, tlt4, tlt5, tlt6, tlt7, tlt8, " +
                         $"trt1, trt2, trt3, trt4, trt5, trt6, trt7, trt8, " +
                         $"brt1, brt2, brt3, brt4, brt5, brt6, brt7, brt8, " +
                         $"blt1, blt2, blt3, blt4, blt5, blt6, blt7, blt8)" +
-                        $"values (N'{dtpDate.Value.Date.ToString("yyyy/MM/dd")}', N'{cmbDoctor.SelectedItem}', '{MedCardId}', N'{txtDescription.Text}', N'{txtMoney.Text}', '{Arrears}', " +
+                        $"values ('{MedCardId}', '{dtpDate.Value.Date.ToString("yyyy/MM/dd")}', N'{cmbDoctor.SelectedItem}', N'{txtDescription.Text}', N'{txtMoney.Text}', '{Arrears}', " +
 
                         $" N'{TopLeftTextBox_1.Text}',  N'{TopLeftTextBox_2.Text}',  N'{TopLeftTextBox_3.Text}',  N'{TopLeftTextBox_4.Text}',  N'{TopLeftTextBox_5.Text}',  N'{TopLeftTextBox_6.Text}',  N'{TopLeftTextBox_7.Text}',  N'{TopLeftTextBox_8.Text}'," +
                         $" N'{TopRightTextBox_1.Text}', N'{TopRightTextBox_2.Text}', N'{TopRightTextBox_3.Text}', N'{TopRightTextBox_4.Text}', N'{TopRightTextBox_5.Text}', N'{TopRightTextBox_6.Text}', N'{TopRightTextBox_7.Text}', N'{TopRightTextBox_8.Text}'," +
@@ -1033,7 +1034,7 @@ namespace Stomatology
             var range = wordDocument.Content;
             range.Find.ClearFormatting();
             range.Find.Execute(FindText: stubToReplace, ReplaceWith: text);
-            //range.Font.ColorIndex = Word.WdColorIndex.wdBlack; Color
+            range.Font.ColorIndex = Word.WdColorIndex.wdBlack; 
         }
 
         private void replaceDateWord(string stubToReplace, string replaceDate,Word.Document wordDocument)

@@ -17,8 +17,8 @@ namespace Stomatology
             Application.Run(new StartingForm());
             
             try
-            {
-                SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + Properties.Settings.Default.DateBaseDirection);
+            {     
+            SqlConnection conn = new SqlConnection(@"Data Source = insopdentistry.cywgv3xkqj2b.eu - west - 3.rds.amazonaws.com; Initial Catalog = Dentistry; Persist Security Info = True; User ID = iKela; Password = 6621Nazar");
                 conn.Open();
                 conn.Close();
             }

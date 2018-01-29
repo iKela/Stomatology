@@ -18,6 +18,8 @@ namespace Stomatology
 
         private void Settings_Load(object sender, EventArgs e)
         {
+            this.txtTVWay.Text = Properties.Settings.Default.TeamViewerDirection;
+          //  this.txtBDWay.Text = Properties.Settings.Default.DateBaseDirection;
             cmbThemes.Items.AddRange(colorsNames);
 
             cmbThemes.SelectedIndex = Properties.Settings.Default.Theme;
@@ -162,8 +164,8 @@ namespace Stomatology
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            Properties.Settings.Default.DateBaseDirection = txtBDWay.Text;
-            Properties.Settings.Default.Save();
+            //Properties.Settings.Default.DateBaseDirection = txtBDWay.Text;
+            //Properties.Settings.Default.Save();
         }
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
