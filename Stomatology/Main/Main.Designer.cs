@@ -129,35 +129,14 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.panelZ2 = new PanelZ.PanelZ();
-            this.EditPatient = new System.Windows.Forms.Button();
-            this.AddNewPatient = new System.Windows.Forms.Button();
-            this.AddNewAppoinment = new System.Windows.Forms.Button();
             this.TabControl = new System.Windows.Forms.TabControl();
             this.tabFinance = new System.Windows.Forms.TabPage();
-            this.button9 = new System.Windows.Forms.Button();
-            this.label42 = new System.Windows.Forms.Label();
-            this.label41 = new System.Windows.Forms.Label();
-            this.label40 = new System.Windows.Forms.Label();
-            this.label39 = new System.Windows.Forms.Label();
-            this.DatetextboxTo = new System.Windows.Forms.TextBox();
-            this.DatetextBoxFrom = new System.Windows.Forms.TextBox();
-            this.DoctortextBox = new System.Windows.Forms.TextBox();
-            this.PIBTextBox = new System.Windows.Forms.TextBox();
-            this.Updatebtn = new System.Windows.Forms.Button();
-            this.DataGridView2 = new System.Windows.Forms.DataGridView();
-            this.Id_reception = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PIB = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pacientbrth = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pacientnmb = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Doctor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateApp = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.miniToolStrip = new System.Windows.Forms.MenuStrip();
             this.pnlTop = new PanelZ.PanelZ();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
+            this.btnAccount = new System.Windows.Forms.Button();
+            this.btnAccountPhoto = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.справкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiUserInfo = new System.Windows.Forms.ToolStripMenuItem();
@@ -166,24 +145,53 @@
             this.tsmiContacts = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiRemoteControl = new System.Windows.Forms.ToolStripMenuItem();
             this.btnMainMenu = new System.Windows.Forms.Button();
-            this.miniToolStrip = new System.Windows.Forms.MenuStrip();
             this.pnlBot = new PanelZ.PanelZ();
             this.btnExit = new System.Windows.Forms.Button();
-            this.panelZ1 = new PanelZ.PanelZ();
+            this.pnlRegistry = new PanelZ.PanelZ();
+            this.EditPatient = new System.Windows.Forms.Button();
+            this.AddNewPatient = new System.Windows.Forms.Button();
+            this.AddNewAppoinment = new System.Windows.Forms.Button();
+            this.pnlButtons = new PanelZ.PanelZ();
+            this.btn6 = new Custom_Controls_in_CS.ButtonZ();
+            this.btn5 = new Custom_Controls_in_CS.ButtonZ();
+            this.btn4 = new Custom_Controls_in_CS.ButtonZ();
+            this.btn3 = new Custom_Controls_in_CS.ButtonZ();
+            this.btn2 = new Custom_Controls_in_CS.ButtonZ();
+            this.btn1 = new Custom_Controls_in_CS.ButtonZ();
+            this.pnlDataGrid = new PanelZ.PanelZ();
+            this.DataGridView2 = new System.Windows.Forms.DataGridView();
+            this.Id_reception = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PIB = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pacientbrth = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pacientnmb = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Doctor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateApp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblDoc = new System.Windows.Forms.Label();
+            this.button9 = new System.Windows.Forms.Button();
+            this.lblDateFrom = new System.Windows.Forms.Label();
+            this.lblDateTo = new System.Windows.Forms.Label();
+            this.Updatebtn = new System.Windows.Forms.Button();
+            this.lblName = new System.Windows.Forms.Label();
+            this.PIBTextBox = new System.Windows.Forms.TextBox();
+            this.DatetextboxTo = new System.Windows.Forms.TextBox();
+            this.DoctortextBox = new System.Windows.Forms.TextBox();
+            this.DatetextBoxFrom = new System.Windows.Forms.TextBox();
             this.tabPage1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TeethPanel)).BeginInit();
-            this.panelZ2.SuspendLayout();
             this.TabControl.SuspendLayout();
             this.tabFinance.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DataGridView2)).BeginInit();
             this.pnlTop.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.pnlBot.SuspendLayout();
-            this.panelZ1.SuspendLayout();
+            this.pnlRegistry.SuspendLayout();
+            this.pnlButtons.SuspendLayout();
+            this.pnlDataGrid.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // imageList1
@@ -207,7 +215,7 @@
             this.tabPage1.Controls.Add(this.button2);
             this.tabPage1.Controls.Add(this.button3);
             this.tabPage1.Controls.Add(this.button4);
-            this.tabPage1.Controls.Add(this.panelZ2);
+            this.tabPage1.Controls.Add(this.pnlRegistry);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
@@ -906,18 +914,161 @@
             this.button4.Name = "button4";
             this.button4.UseVisualStyleBackColor = false;
             // 
-            // panelZ2
+            // TabControl
             // 
-            this.panelZ2.Controls.Add(this.EditPatient);
-            this.panelZ2.Controls.Add(this.AddNewPatient);
-            this.panelZ2.Controls.Add(this.AddNewAppoinment);
-            resources.ApplyResources(this.panelZ2, "panelZ2");
-            this.panelZ2.EndColor = System.Drawing.Color.Black;
-            this.panelZ2.GradientAngle = 90;
-            this.panelZ2.Name = "panelZ2";
-            this.panelZ2.StartColor = System.Drawing.Color.White;
-            this.panelZ2.Transparent1 = 150;
-            this.panelZ2.Transparent2 = 150;
+            resources.ApplyResources(this.TabControl, "TabControl");
+            this.TabControl.Controls.Add(this.tabPage1);
+            this.TabControl.Controls.Add(this.tabFinance);
+            this.TabControl.ImageList = this.imageList1;
+            this.TabControl.Multiline = true;
+            this.TabControl.Name = "TabControl";
+            this.TabControl.SelectedIndex = 0;
+            // 
+            // tabFinance
+            // 
+            this.tabFinance.Controls.Add(this.pnlButtons);
+            this.tabFinance.Controls.Add(this.pnlDataGrid);
+            resources.ApplyResources(this.tabFinance, "tabFinance");
+            this.tabFinance.Name = "tabFinance";
+            this.tabFinance.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tabPage2.ForeColor = System.Drawing.SystemColors.ControlText;
+            resources.ApplyResources(this.tabPage2, "tabPage2");
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // miniToolStrip
+            // 
+            this.miniToolStrip.AccessibleRole = System.Windows.Forms.AccessibleRole.ComboBox;
+            this.miniToolStrip.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.miniToolStrip, "miniToolStrip");
+            this.miniToolStrip.Name = "miniToolStrip";
+            // 
+            // pnlTop
+            // 
+            this.pnlTop.Controls.Add(this.btnAccount);
+            this.pnlTop.Controls.Add(this.btnAccountPhoto);
+            this.pnlTop.Controls.Add(this.menuStrip1);
+            this.pnlTop.Controls.Add(this.btnMainMenu);
+            resources.ApplyResources(this.pnlTop, "pnlTop");
+            this.pnlTop.EndColor = System.Drawing.Color.White;
+            this.pnlTop.GradientAngle = 90;
+            this.pnlTop.Name = "pnlTop";
+            this.pnlTop.StartColor = System.Drawing.Color.Black;
+            this.pnlTop.Transparent1 = 50;
+            this.pnlTop.Transparent2 = 250;
+            // 
+            // btnAccount
+            // 
+            resources.ApplyResources(this.btnAccount, "btnAccount");
+            this.btnAccount.BackColor = System.Drawing.Color.Transparent;
+            this.btnAccount.FlatAppearance.BorderSize = 0;
+            this.btnAccount.Name = "btnAccount";
+            this.btnAccount.UseVisualStyleBackColor = false;
+            this.btnAccount.Click += new System.EventHandler(this.button10_Click);
+            // 
+            // btnAccountPhoto
+            // 
+            resources.ApplyResources(this.btnAccountPhoto, "btnAccountPhoto");
+            this.btnAccountPhoto.BackColor = System.Drawing.Color.Transparent;
+            this.btnAccountPhoto.FlatAppearance.BorderSize = 0;
+            this.btnAccountPhoto.Name = "btnAccountPhoto";
+            this.btnAccountPhoto.UseVisualStyleBackColor = false;
+            this.btnAccountPhoto.Click += new System.EventHandler(this.button11_Click);
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.menuStrip1, "menuStrip1");
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.справкаToolStripMenuItem,
+            this.допомогаToolStripMenuItem});
+            this.menuStrip1.Name = "menuStrip1";
+            // 
+            // справкаToolStripMenuItem
+            // 
+            this.справкаToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiUserInfo,
+            this.проПрограммуToolStripMenuItem});
+            resources.ApplyResources(this.справкаToolStripMenuItem, "справкаToolStripMenuItem");
+            this.справкаToolStripMenuItem.Name = "справкаToolStripMenuItem";
+            // 
+            // tsmiUserInfo
+            // 
+            resources.ApplyResources(this.tsmiUserInfo, "tsmiUserInfo");
+            this.tsmiUserInfo.Name = "tsmiUserInfo";
+            this.tsmiUserInfo.Click += new System.EventHandler(this.tsmiUserInfo_Click);
+            // 
+            // проПрограммуToolStripMenuItem
+            // 
+            resources.ApplyResources(this.проПрограммуToolStripMenuItem, "проПрограммуToolStripMenuItem");
+            this.проПрограммуToolStripMenuItem.Name = "проПрограммуToolStripMenuItem";
+            this.проПрограммуToolStripMenuItem.Click += new System.EventHandler(this.проПрограммуToolStripMenuItem_Click);
+            // 
+            // допомогаToolStripMenuItem
+            // 
+            this.допомогаToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiContacts,
+            this.tsmiRemoteControl});
+            resources.ApplyResources(this.допомогаToolStripMenuItem, "допомогаToolStripMenuItem");
+            this.допомогаToolStripMenuItem.Name = "допомогаToolStripMenuItem";
+            // 
+            // tsmiContacts
+            // 
+            resources.ApplyResources(this.tsmiContacts, "tsmiContacts");
+            this.tsmiContacts.Name = "tsmiContacts";
+            this.tsmiContacts.Click += new System.EventHandler(this.tsmiContacts_Click);
+            // 
+            // tsmiRemoteControl
+            // 
+            resources.ApplyResources(this.tsmiRemoteControl, "tsmiRemoteControl");
+            this.tsmiRemoteControl.Name = "tsmiRemoteControl";
+            this.tsmiRemoteControl.Click += new System.EventHandler(this.tsmiRemoteControl_Click);
+            // 
+            // btnMainMenu
+            // 
+            this.btnMainMenu.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.btnMainMenu, "btnMainMenu");
+            this.btnMainMenu.FlatAppearance.BorderSize = 0;
+            this.btnMainMenu.Name = "btnMainMenu";
+            this.btnMainMenu.UseVisualStyleBackColor = false;
+            this.btnMainMenu.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // pnlBot
+            // 
+            this.pnlBot.Controls.Add(this.btnExit);
+            resources.ApplyResources(this.pnlBot, "pnlBot");
+            this.pnlBot.EndColor = System.Drawing.Color.Black;
+            this.pnlBot.GradientAngle = 90;
+            this.pnlBot.Name = "pnlBot";
+            this.pnlBot.StartColor = System.Drawing.Color.White;
+            this.pnlBot.Transparent1 = 150;
+            this.pnlBot.Transparent2 = 150;
+            // 
+            // btnExit
+            // 
+            resources.ApplyResources(this.btnExit, "btnExit");
+            this.btnExit.BackColor = System.Drawing.Color.Transparent;
+            this.btnExit.FlatAppearance.BorderSize = 0;
+            this.btnExit.Name = "btnExit";
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.buttonZ1_Click);
+            // 
+            // pnlRegistry
+            // 
+            this.pnlRegistry.Controls.Add(this.EditPatient);
+            this.pnlRegistry.Controls.Add(this.AddNewPatient);
+            this.pnlRegistry.Controls.Add(this.AddNewAppoinment);
+            resources.ApplyResources(this.pnlRegistry, "pnlRegistry");
+            this.pnlRegistry.EndColor = System.Drawing.Color.DarkGray;
+            this.pnlRegistry.GradientAngle = 90;
+            this.pnlRegistry.Name = "pnlRegistry";
+            this.pnlRegistry.StartColor = System.Drawing.Color.White;
+            this.pnlRegistry.Transparent1 = 150;
+            this.pnlRegistry.Transparent2 = 150;
             // 
             // EditPatient
             // 
@@ -946,86 +1097,200 @@
             this.AddNewAppoinment.UseVisualStyleBackColor = false;
             this.AddNewAppoinment.Click += new System.EventHandler(this.AddNewAppoinment_Click);
             // 
-            // TabControl
+            // pnlButtons
             // 
-            resources.ApplyResources(this.TabControl, "TabControl");
-            this.TabControl.Controls.Add(this.tabPage1);
-            this.TabControl.Controls.Add(this.tabFinance);
-            this.TabControl.ImageList = this.imageList1;
-            this.TabControl.Multiline = true;
-            this.TabControl.Name = "TabControl";
-            this.TabControl.SelectedIndex = 0;
+            this.pnlButtons.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnlButtons.Controls.Add(this.btn6);
+            this.pnlButtons.Controls.Add(this.btn5);
+            this.pnlButtons.Controls.Add(this.btn4);
+            this.pnlButtons.Controls.Add(this.btn3);
+            this.pnlButtons.Controls.Add(this.btn2);
+            this.pnlButtons.Controls.Add(this.btn1);
+            this.pnlButtons.EndColor = System.Drawing.Color.CornflowerBlue;
+            this.pnlButtons.GradientAngle = 90;
+            resources.ApplyResources(this.pnlButtons, "pnlButtons");
+            this.pnlButtons.Name = "pnlButtons";
+            this.pnlButtons.StartColor = System.Drawing.Color.CornflowerBlue;
+            this.pnlButtons.Transparent1 = 250;
+            this.pnlButtons.Transparent2 = 250;
             // 
-            // tabFinance
+            // btn6
             // 
-            this.tabFinance.Controls.Add(this.button9);
-            this.tabFinance.Controls.Add(this.label42);
-            this.tabFinance.Controls.Add(this.label41);
-            this.tabFinance.Controls.Add(this.label40);
-            this.tabFinance.Controls.Add(this.label39);
-            this.tabFinance.Controls.Add(this.DatetextboxTo);
-            this.tabFinance.Controls.Add(this.DatetextBoxFrom);
-            this.tabFinance.Controls.Add(this.DoctortextBox);
-            this.tabFinance.Controls.Add(this.PIBTextBox);
-            this.tabFinance.Controls.Add(this.Updatebtn);
-            this.tabFinance.Controls.Add(this.DataGridView2);
-            resources.ApplyResources(this.tabFinance, "tabFinance");
-            this.tabFinance.Name = "tabFinance";
-            this.tabFinance.UseVisualStyleBackColor = true;
+            this.btn6.BackColor = System.Drawing.Color.Transparent;
+            this.btn6.BorderColor = System.Drawing.Color.Transparent;
+            this.btn6.BorderWidth = 2;
+            this.btn6.ButtonShape = Custom_Controls_in_CS.ButtonZ.ButtonsShapes.Rect;
+            this.btn6.ButtonText = "";
+            this.btn6.EndColor = System.Drawing.Color.MidnightBlue;
+            this.btn6.FlatAppearance.BorderSize = 0;
+            this.btn6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.btn6, "btn6");
+            this.btn6.GradientAngle = 90;
+            this.btn6.MouseClickColor1 = System.Drawing.Color.Yellow;
+            this.btn6.MouseClickColor2 = System.Drawing.Color.Red;
+            this.btn6.MouseHoverColor1 = System.Drawing.Color.Turquoise;
+            this.btn6.MouseHoverColor2 = System.Drawing.Color.DarkSlateGray;
+            this.btn6.Name = "btn6";
+            this.btn6.ShowButtontext = true;
+            this.btn6.StartColor = System.Drawing.Color.DodgerBlue;
+            this.btn6.TextLocation_X = 81;
+            this.btn6.TextLocation_Y = 19;
+            this.btn6.Transparent1 = 250;
+            this.btn6.Transparent2 = 250;
+            this.btn6.UseVisualStyleBackColor = false;
             // 
-            // button9
+            // btn5
             // 
-            resources.ApplyResources(this.button9, "button9");
-            this.button9.Name = "button9";
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
+            this.btn5.BackColor = System.Drawing.Color.Transparent;
+            this.btn5.BorderColor = System.Drawing.Color.Transparent;
+            this.btn5.BorderWidth = 2;
+            this.btn5.ButtonShape = Custom_Controls_in_CS.ButtonZ.ButtonsShapes.Rect;
+            this.btn5.ButtonText = "";
+            this.btn5.EndColor = System.Drawing.Color.MidnightBlue;
+            this.btn5.FlatAppearance.BorderSize = 0;
+            this.btn5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.btn5, "btn5");
+            this.btn5.GradientAngle = 90;
+            this.btn5.MouseClickColor1 = System.Drawing.Color.Yellow;
+            this.btn5.MouseClickColor2 = System.Drawing.Color.Red;
+            this.btn5.MouseHoverColor1 = System.Drawing.Color.Turquoise;
+            this.btn5.MouseHoverColor2 = System.Drawing.Color.DarkSlateGray;
+            this.btn5.Name = "btn5";
+            this.btn5.ShowButtontext = true;
+            this.btn5.StartColor = System.Drawing.Color.DodgerBlue;
+            this.btn5.TextLocation_X = 81;
+            this.btn5.TextLocation_Y = 19;
+            this.btn5.Transparent1 = 250;
+            this.btn5.Transparent2 = 250;
+            this.btn5.UseVisualStyleBackColor = false;
             // 
-            // label42
+            // btn4
             // 
-            resources.ApplyResources(this.label42, "label42");
-            this.label42.Name = "label42";
+            this.btn4.BackColor = System.Drawing.Color.Transparent;
+            this.btn4.BorderColor = System.Drawing.Color.Transparent;
+            this.btn4.BorderWidth = 2;
+            this.btn4.ButtonShape = Custom_Controls_in_CS.ButtonZ.ButtonsShapes.Rect;
+            this.btn4.ButtonText = "";
+            this.btn4.EndColor = System.Drawing.Color.MidnightBlue;
+            this.btn4.FlatAppearance.BorderSize = 0;
+            this.btn4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.btn4, "btn4");
+            this.btn4.GradientAngle = 90;
+            this.btn4.MouseClickColor1 = System.Drawing.Color.Yellow;
+            this.btn4.MouseClickColor2 = System.Drawing.Color.Red;
+            this.btn4.MouseHoverColor1 = System.Drawing.Color.Turquoise;
+            this.btn4.MouseHoverColor2 = System.Drawing.Color.DarkSlateGray;
+            this.btn4.Name = "btn4";
+            this.btn4.ShowButtontext = true;
+            this.btn4.StartColor = System.Drawing.Color.DodgerBlue;
+            this.btn4.TextLocation_X = 81;
+            this.btn4.TextLocation_Y = 19;
+            this.btn4.Transparent1 = 250;
+            this.btn4.Transparent2 = 250;
+            this.btn4.UseVisualStyleBackColor = false;
             // 
-            // label41
+            // btn3
             // 
-            resources.ApplyResources(this.label41, "label41");
-            this.label41.Name = "label41";
+            this.btn3.BackColor = System.Drawing.Color.Transparent;
+            this.btn3.BorderColor = System.Drawing.Color.Transparent;
+            this.btn3.BorderWidth = 2;
+            this.btn3.ButtonShape = Custom_Controls_in_CS.ButtonZ.ButtonsShapes.Rect;
+            this.btn3.ButtonText = "";
+            this.btn3.EndColor = System.Drawing.Color.MidnightBlue;
+            this.btn3.FlatAppearance.BorderSize = 0;
+            this.btn3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.btn3, "btn3");
+            this.btn3.GradientAngle = 90;
+            this.btn3.MouseClickColor1 = System.Drawing.Color.Yellow;
+            this.btn3.MouseClickColor2 = System.Drawing.Color.Red;
+            this.btn3.MouseHoverColor1 = System.Drawing.Color.Turquoise;
+            this.btn3.MouseHoverColor2 = System.Drawing.Color.DarkSlateGray;
+            this.btn3.Name = "btn3";
+            this.btn3.ShowButtontext = true;
+            this.btn3.StartColor = System.Drawing.Color.DodgerBlue;
+            this.btn3.TextLocation_X = 81;
+            this.btn3.TextLocation_Y = 19;
+            this.btn3.Transparent1 = 250;
+            this.btn3.Transparent2 = 250;
+            this.btn3.UseVisualStyleBackColor = false;
             // 
-            // label40
+            // btn2
             // 
-            resources.ApplyResources(this.label40, "label40");
-            this.label40.Name = "label40";
+            this.btn2.BackColor = System.Drawing.Color.Transparent;
+            this.btn2.BorderColor = System.Drawing.Color.Transparent;
+            this.btn2.BorderWidth = 2;
+            this.btn2.ButtonShape = Custom_Controls_in_CS.ButtonZ.ButtonsShapes.Rect;
+            this.btn2.ButtonText = "";
+            this.btn2.EndColor = System.Drawing.Color.MidnightBlue;
+            this.btn2.FlatAppearance.BorderSize = 0;
+            this.btn2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.btn2, "btn2");
+            this.btn2.GradientAngle = 90;
+            this.btn2.MouseClickColor1 = System.Drawing.Color.Yellow;
+            this.btn2.MouseClickColor2 = System.Drawing.Color.Red;
+            this.btn2.MouseHoverColor1 = System.Drawing.Color.Turquoise;
+            this.btn2.MouseHoverColor2 = System.Drawing.Color.DarkSlateGray;
+            this.btn2.Name = "btn2";
+            this.btn2.ShowButtontext = true;
+            this.btn2.StartColor = System.Drawing.Color.DodgerBlue;
+            this.btn2.TextLocation_X = 81;
+            this.btn2.TextLocation_Y = 19;
+            this.btn2.Transparent1 = 250;
+            this.btn2.Transparent2 = 250;
+            this.btn2.UseVisualStyleBackColor = false;
             // 
-            // label39
+            // btn1
             // 
-            resources.ApplyResources(this.label39, "label39");
-            this.label39.Name = "label39";
+            this.btn1.BackColor = System.Drawing.Color.Transparent;
+            this.btn1.BorderColor = System.Drawing.Color.Transparent;
+            this.btn1.BorderWidth = 2;
+            this.btn1.ButtonShape = Custom_Controls_in_CS.ButtonZ.ButtonsShapes.Rect;
+            this.btn1.ButtonText = "";
+            this.btn1.EndColor = System.Drawing.Color.DarkGray;
+            this.btn1.FlatAppearance.BorderSize = 0;
+            this.btn1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.btn1, "btn1");
+            this.btn1.GradientAngle = 90;
+            this.btn1.MouseClickColor1 = System.Drawing.Color.Yellow;
+            this.btn1.MouseClickColor2 = System.Drawing.Color.Red;
+            this.btn1.MouseHoverColor1 = System.Drawing.Color.Turquoise;
+            this.btn1.MouseHoverColor2 = System.Drawing.Color.DarkSlateGray;
+            this.btn1.Name = "btn1";
+            this.btn1.ShowButtontext = true;
+            this.btn1.StartColor = System.Drawing.Color.White;
+            this.btn1.TextLocation_X = 81;
+            this.btn1.TextLocation_Y = 19;
+            this.btn1.Transparent1 = 250;
+            this.btn1.Transparent2 = 250;
+            this.btn1.UseVisualStyleBackColor = false;
             // 
-            // DatetextboxTo
+            // pnlDataGrid
             // 
-            resources.ApplyResources(this.DatetextboxTo, "DatetextboxTo");
-            this.DatetextboxTo.Name = "DatetextboxTo";
-            // 
-            // DatetextBoxFrom
-            // 
-            resources.ApplyResources(this.DatetextBoxFrom, "DatetextBoxFrom");
-            this.DatetextBoxFrom.Name = "DatetextBoxFrom";
-            // 
-            // DoctortextBox
-            // 
-            resources.ApplyResources(this.DoctortextBox, "DoctortextBox");
-            this.DoctortextBox.Name = "DoctortextBox";
-            // 
-            // PIBTextBox
-            // 
-            resources.ApplyResources(this.PIBTextBox, "PIBTextBox");
-            this.PIBTextBox.Name = "PIBTextBox";
-            // 
-            // Updatebtn
-            // 
-            resources.ApplyResources(this.Updatebtn, "Updatebtn");
-            this.Updatebtn.Name = "Updatebtn";
-            this.Updatebtn.UseVisualStyleBackColor = true;
-            this.Updatebtn.Click += new System.EventHandler(this.Updatebtn_Click);
+            this.pnlDataGrid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnlDataGrid.Controls.Add(this.DataGridView2);
+            this.pnlDataGrid.Controls.Add(this.lblDoc);
+            this.pnlDataGrid.Controls.Add(this.button9);
+            this.pnlDataGrid.Controls.Add(this.lblDateFrom);
+            this.pnlDataGrid.Controls.Add(this.lblDateTo);
+            this.pnlDataGrid.Controls.Add(this.Updatebtn);
+            this.pnlDataGrid.Controls.Add(this.lblName);
+            this.pnlDataGrid.Controls.Add(this.PIBTextBox);
+            this.pnlDataGrid.Controls.Add(this.DatetextboxTo);
+            this.pnlDataGrid.Controls.Add(this.DoctortextBox);
+            this.pnlDataGrid.Controls.Add(this.DatetextBoxFrom);
+            this.pnlDataGrid.EndColor = System.Drawing.Color.CornflowerBlue;
+            this.pnlDataGrid.GradientAngle = 90;
+            resources.ApplyResources(this.pnlDataGrid, "pnlDataGrid");
+            this.pnlDataGrid.Name = "pnlDataGrid";
+            this.pnlDataGrid.StartColor = System.Drawing.Color.CornflowerBlue;
+            this.pnlDataGrid.Transparent1 = 250;
+            this.pnlDataGrid.Transparent2 = 250;
             // 
             // DataGridView2
             // 
@@ -1092,151 +1357,72 @@
             this.price.Name = "price";
             this.price.ReadOnly = true;
             // 
-            // tabPage2
+            // lblDoc
             // 
-            this.tabPage2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tabPage2.ForeColor = System.Drawing.SystemColors.ControlText;
-            resources.ApplyResources(this.tabPage2, "tabPage2");
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.lblDoc, "lblDoc");
+            this.lblDoc.ForeColor = System.Drawing.Color.White;
+            this.lblDoc.Name = "lblDoc";
             // 
-            // pnlTop
+            // button9
             // 
-            this.pnlTop.Controls.Add(this.button10);
-            this.pnlTop.Controls.Add(this.button11);
-            this.pnlTop.Controls.Add(this.menuStrip1);
-            this.pnlTop.Controls.Add(this.btnMainMenu);
-            resources.ApplyResources(this.pnlTop, "pnlTop");
-            this.pnlTop.EndColor = System.Drawing.Color.White;
-            this.pnlTop.GradientAngle = 90;
-            this.pnlTop.Name = "pnlTop";
-            this.pnlTop.StartColor = System.Drawing.Color.Black;
-            this.pnlTop.Transparent1 = 50;
-            this.pnlTop.Transparent2 = 250;
+            resources.ApplyResources(this.button9, "button9");
+            this.button9.Name = "button9";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
-            // button10
+            // lblDateFrom
             // 
-            resources.ApplyResources(this.button10, "button10");
-            this.button10.BackColor = System.Drawing.Color.Transparent;
-            this.button10.FlatAppearance.BorderSize = 0;
-            this.button10.Name = "button10";
-            this.button10.UseVisualStyleBackColor = false;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
+            resources.ApplyResources(this.lblDateFrom, "lblDateFrom");
+            this.lblDateFrom.ForeColor = System.Drawing.Color.White;
+            this.lblDateFrom.Name = "lblDateFrom";
             // 
-            // button11
+            // lblDateTo
             // 
-            resources.ApplyResources(this.button11, "button11");
-            this.button11.BackColor = System.Drawing.Color.Transparent;
-            this.button11.FlatAppearance.BorderSize = 0;
-            this.button11.Name = "button11";
-            this.button11.UseVisualStyleBackColor = false;
-            this.button11.Click += new System.EventHandler(this.button11_Click);
+            resources.ApplyResources(this.lblDateTo, "lblDateTo");
+            this.lblDateTo.ForeColor = System.Drawing.Color.White;
+            this.lblDateTo.Name = "lblDateTo";
             // 
-            // menuStrip1
+            // Updatebtn
             // 
-            this.menuStrip1.BackColor = System.Drawing.Color.White;
-            resources.ApplyResources(this.menuStrip1, "menuStrip1");
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.справкаToolStripMenuItem,
-            this.допомогаToolStripMenuItem});
-            this.menuStrip1.Name = "menuStrip1";
+            resources.ApplyResources(this.Updatebtn, "Updatebtn");
+            this.Updatebtn.Name = "Updatebtn";
+            this.Updatebtn.UseVisualStyleBackColor = true;
+            this.Updatebtn.Click += new System.EventHandler(this.Updatebtn_Click);
             // 
-            // справкаToolStripMenuItem
+            // lblName
             // 
-            this.справкаToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmiUserInfo,
-            this.проПрограммуToolStripMenuItem});
-            resources.ApplyResources(this.справкаToolStripMenuItem, "справкаToolStripMenuItem");
-            this.справкаToolStripMenuItem.Name = "справкаToolStripMenuItem";
+            resources.ApplyResources(this.lblName, "lblName");
+            this.lblName.ForeColor = System.Drawing.Color.White;
+            this.lblName.Name = "lblName";
             // 
-            // tsmiUserInfo
+            // PIBTextBox
             // 
-            resources.ApplyResources(this.tsmiUserInfo, "tsmiUserInfo");
-            this.tsmiUserInfo.Name = "tsmiUserInfo";
-            this.tsmiUserInfo.Click += new System.EventHandler(this.tsmiUserInfo_Click);
+            resources.ApplyResources(this.PIBTextBox, "PIBTextBox");
+            this.PIBTextBox.Name = "PIBTextBox";
             // 
-            // проПрограммуToolStripMenuItem
+            // DatetextboxTo
             // 
-            resources.ApplyResources(this.проПрограммуToolStripMenuItem, "проПрограммуToolStripMenuItem");
-            this.проПрограммуToolStripMenuItem.Name = "проПрограммуToolStripMenuItem";
-            this.проПрограммуToolStripMenuItem.Click += new System.EventHandler(this.проПрограммуToolStripMenuItem_Click);
+            resources.ApplyResources(this.DatetextboxTo, "DatetextboxTo");
+            this.DatetextboxTo.Name = "DatetextboxTo";
             // 
-            // допомогаToolStripMenuItem
+            // DoctortextBox
             // 
-            this.допомогаToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmiContacts,
-            this.tsmiRemoteControl});
-            resources.ApplyResources(this.допомогаToolStripMenuItem, "допомогаToolStripMenuItem");
-            this.допомогаToolStripMenuItem.Name = "допомогаToolStripMenuItem";
+            resources.ApplyResources(this.DoctortextBox, "DoctortextBox");
+            this.DoctortextBox.Name = "DoctortextBox";
             // 
-            // tsmiContacts
+            // DatetextBoxFrom
             // 
-            resources.ApplyResources(this.tsmiContacts, "tsmiContacts");
-            this.tsmiContacts.Name = "tsmiContacts";
-            this.tsmiContacts.Click += new System.EventHandler(this.tsmiContacts_Click);
-            // 
-            // tsmiRemoteControl
-            // 
-            resources.ApplyResources(this.tsmiRemoteControl, "tsmiRemoteControl");
-            this.tsmiRemoteControl.Name = "tsmiRemoteControl";
-            this.tsmiRemoteControl.Click += new System.EventHandler(this.tsmiRemoteControl_Click);
-            // 
-            // btnMainMenu
-            // 
-            this.btnMainMenu.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.btnMainMenu, "btnMainMenu");
-            this.btnMainMenu.FlatAppearance.BorderSize = 0;
-            this.btnMainMenu.Name = "btnMainMenu";
-            this.btnMainMenu.UseVisualStyleBackColor = false;
-            this.btnMainMenu.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // miniToolStrip
-            // 
-            this.miniToolStrip.AccessibleRole = System.Windows.Forms.AccessibleRole.ComboBox;
-            this.miniToolStrip.BackColor = System.Drawing.Color.White;
-            resources.ApplyResources(this.miniToolStrip, "miniToolStrip");
-            this.miniToolStrip.Name = "miniToolStrip";
-            // 
-            // pnlBot
-            // 
-            this.pnlBot.Controls.Add(this.btnExit);
-            resources.ApplyResources(this.pnlBot, "pnlBot");
-            this.pnlBot.EndColor = System.Drawing.Color.Black;
-            this.pnlBot.GradientAngle = 90;
-            this.pnlBot.Name = "pnlBot";
-            this.pnlBot.StartColor = System.Drawing.Color.White;
-            this.pnlBot.Transparent1 = 150;
-            this.pnlBot.Transparent2 = 150;
-            // 
-            // btnExit
-            // 
-            resources.ApplyResources(this.btnExit, "btnExit");
-            this.btnExit.BackColor = System.Drawing.Color.Transparent;
-            this.btnExit.FlatAppearance.BorderSize = 0;
-            this.btnExit.Name = "btnExit";
-            this.btnExit.UseVisualStyleBackColor = false;
-            this.btnExit.Click += new System.EventHandler(this.buttonZ1_Click);
-            // 
-            // panelZ1
-            // 
-            this.panelZ1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panelZ1.Controls.Add(this.pnlBot);
-            this.panelZ1.Controls.Add(this.pnlTop);
-            this.panelZ1.EndColor = System.Drawing.Color.Black;
-            this.panelZ1.GradientAngle = 90;
-            resources.ApplyResources(this.panelZ1, "panelZ1");
-            this.panelZ1.Name = "panelZ1";
-            this.panelZ1.StartColor = System.Drawing.Color.Black;
-            this.panelZ1.Transparent1 = 255;
-            this.panelZ1.Transparent2 = 150;
+            resources.ApplyResources(this.DatetextBoxFrom, "DatetextBoxFrom");
+            this.DatetextBoxFrom.Name = "DatetextBoxFrom";
             // 
             // Main
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.BackColor = System.Drawing.Color.Black;
             resources.ApplyResources(this, "$this");
+            this.Controls.Add(this.pnlTop);
+            this.Controls.Add(this.pnlBot);
             this.Controls.Add(this.TabControl);
-            this.Controls.Add(this.panelZ1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.HelpButton = true;
             this.MainMenuStrip = this.miniToolStrip;
@@ -1251,17 +1437,14 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TeethPanel)).EndInit();
-            this.panelZ2.ResumeLayout(false);
             this.TabControl.ResumeLayout(false);
             this.tabFinance.ResumeLayout(false);
-            this.tabFinance.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DataGridView2)).EndInit();
             this.pnlTop.ResumeLayout(false);
             this.pnlTop.PerformLayout();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.pnlBot.ResumeLayout(false);
             this.panelZ1.ResumeLayout(false);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1378,10 +1561,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Doctor;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateApp;
         private System.Windows.Forms.DataGridViewTextBoxColumn price;
-        private System.Windows.Forms.Label label42;
-        private System.Windows.Forms.Label label41;
-        private System.Windows.Forms.Label label40;
-        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.Label lblDoc;
+        private System.Windows.Forms.Label lblDateFrom;
+        private System.Windows.Forms.Label lblDateTo;
+        private System.Windows.Forms.Label lblName;
         public System.Windows.Forms.Button button9;
         private System.Windows.Forms.CheckBox cbArrears;
         private System.Windows.Forms.ListBox lbChanels;
@@ -1392,8 +1575,19 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn number;
        // private CustomWindowsForm.ButtonZ _CloseButton;
         private System.Windows.Forms.TabPage tabPage2;
-        private PanelZ.PanelZ panelZ2;
+        private PanelZ.PanelZ pnlRegistry;
+        private System.Windows.Forms.MenuStrip miniToolStrip;
+        private PanelZ.PanelZ pnlButtons;
+        private Custom_Controls_in_CS.ButtonZ btn6;
+        private Custom_Controls_in_CS.ButtonZ btn5;
+        private Custom_Controls_in_CS.ButtonZ btn4;
+        private Custom_Controls_in_CS.ButtonZ btn3;
+        private Custom_Controls_in_CS.ButtonZ btn2;
+        private Custom_Controls_in_CS.ButtonZ btn1;
+        private PanelZ.PanelZ pnlDataGrid;
         private PanelZ.PanelZ pnlTop;
+        private System.Windows.Forms.Button btnAccount;
+        private System.Windows.Forms.Button btnAccountPhoto;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem справкаToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tsmiUserInfo;
@@ -1402,12 +1596,8 @@
         private System.Windows.Forms.ToolStripMenuItem tsmiContacts;
         private System.Windows.Forms.ToolStripMenuItem tsmiRemoteControl;
         private System.Windows.Forms.Button btnMainMenu;
-        private System.Windows.Forms.MenuStrip miniToolStrip;
         private PanelZ.PanelZ pnlBot;
         private System.Windows.Forms.Button btnExit;
-        private PanelZ.PanelZ panelZ1;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button11;
     }
 }
 

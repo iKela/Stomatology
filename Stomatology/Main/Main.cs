@@ -28,12 +28,112 @@ namespace Stomatology
         public Main()
         {
             InitializeComponent();
+            setTheme();
+        }
+
+        private void setTheme()
+        {
+            switch (Properties.Settings.Default.Theme)
+            {
+                case 0:
+                    {
+                        if (this.BackColor != Color.Black)
+                        {
+                            this.BackColor = Color.Black;
+                            pnlRegistry.EndColor = Color.Black;
+                            pnlButtons.EndColor = Color.Black;
+                            pnlButtons.StartColor = Color.Black;
+                            pnlDataGrid.EndColor = Color.Black;
+                            pnlDataGrid.StartColor = Color.Black;
+                            btn1.EndColor = Color.Black;
+                            btn2.EndColor = Color.Black;
+                            btn3.EndColor = Color.Black;
+                            btn4.EndColor = Color.Black;
+                            btn5.EndColor = Color.Black;
+                            btn6.EndColor = Color.Black;
+                            btn1.StartColor = Color.White;
+                            btn2.StartColor = Color.White;
+                            btn3.StartColor = Color.White;
+                            btn4.StartColor = Color.White;
+                            btn5.StartColor = Color.White;
+                            btn6.StartColor = Color.White;
+                            lblName.ForeColor = Color.White;
+                            lblDoc.ForeColor = Color.White;
+                            lblDateFrom.ForeColor = Color.White;
+                            lblDateTo.ForeColor = Color.White;
+                        }
+
+                        break;
+                    }
+                case 1:
+                    {
+                        if (this.BackColor != Color.CornflowerBlue)
+                        {
+                            this.BackColor = Color.CornflowerBlue;
+                            pnlRegistry.EndColor = Color.CornflowerBlue;
+                            pnlButtons.EndColor = Color.CornflowerBlue;
+                            pnlButtons.StartColor = Color.CornflowerBlue;
+                            pnlDataGrid.EndColor = Color.CornflowerBlue;
+                            pnlDataGrid.StartColor = Color.CornflowerBlue;
+                            btn1.EndColor = Color.CornflowerBlue;
+                            btn2.EndColor = Color.CornflowerBlue;
+                            btn3.EndColor = Color.CornflowerBlue;
+                            btn4.EndColor = Color.CornflowerBlue;
+                            btn5.EndColor = Color.CornflowerBlue;
+                            btn6.EndColor = Color.CornflowerBlue;
+                            btn1.StartColor = Color.White;
+                            btn2.StartColor = Color.White;
+                            btn3.StartColor = Color.White;
+                            btn4.StartColor = Color.White;
+                            btn5.StartColor = Color.White;
+                            btn6.StartColor = Color.White;
+                            lblName.ForeColor = Color.Black;
+                            lblDoc.ForeColor = Color.Black;
+                            lblDateFrom.ForeColor = Color.Black;
+                            lblDateTo.ForeColor = Color.Black;
+                        }
+                        break;
+                    }
+                case 2:
+                    {
+                        if (this.BackColor != Color.LightGray)
+                        {
+                            this.BackColor = Color.LightGray;
+                            pnlRegistry.EndColor = Color.DarkGray;
+                            pnlButtons.EndColor = Color.LightGray;
+                            pnlButtons.StartColor = Color.LightGray;
+                            pnlDataGrid.EndColor = Color.LightGray;
+                            pnlDataGrid.StartColor = Color.LightGray;
+                            btn1.EndColor = Color.DarkGray;
+                            btn2.EndColor = Color.DarkGray;
+                            btn3.EndColor = Color.DarkGray;
+                            btn4.EndColor = Color.DarkGray;
+                            btn5.EndColor = Color.DarkGray;
+                            btn6.EndColor = Color.DarkGray;
+                            btn1.StartColor = Color.White;
+                            btn2.StartColor = Color.White;
+                            btn3.StartColor = Color.White;
+                            btn4.StartColor = Color.White;
+                            btn5.StartColor = Color.White;
+                            btn6.StartColor = Color.White;
+                            lblName.ForeColor = Color.Black;
+                            lblDoc.ForeColor = Color.Black;
+                            lblDateFrom.ForeColor = Color.Black;
+                            lblDateTo.ForeColor = Color.Black;
+                        }
+
+                        break;
+                    }
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             toolTip(); 
-            updateTable();
+            //updateTable();
+            btnAccount.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            btnAccountPhoto.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            btnExit.FlatAppearance.MouseOverBackColor = Color.Transparent;
         }
 
         private void AddNewAppoinment_Click(object sender, EventArgs e)
@@ -1380,7 +1480,7 @@ namespace Stomatology
         {
             MainMenu newForm = new MainMenu();
             newForm.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void button10_Click(object sender, EventArgs e)

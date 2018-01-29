@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using Word = Microsoft.Office.Interop.Word;
@@ -10,7 +11,6 @@ namespace Stomatology
     {
         SqlConnection testCon = new SqlConnection(@"Data Source=insopdentistry.cywgv3xkqj2b.eu-west-3.rds.amazonaws.com;Initial Catalog=Dentistry;Persist Security Info=True;User ID=iKela;Password=6621Nazar");
 
-        Main ownerForm = null;
         ArrayList DateList = new ArrayList();
         ArrayList InfoList = new ArrayList();
         string MedCardId = "";
@@ -22,29 +22,111 @@ namespace Stomatology
 
         private void EditPatient_Load(object sender, EventArgs e)
         {
-            cmbPacient.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-            cmbPacient.AutoCompleteSource = AutoCompleteSource.ListItems;
+            setTheme();
+            //cmbPacient.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            //cmbPacient.AutoCompleteSource = AutoCompleteSource.ListItems;
+            //
+            //testCon.Open();
+            //SqlDataReader sqlReader = null;
+            //SqlCommand command = new SqlCommand("SELECT Name FROM [MedCard]", testCon);
+            //try
+            //{
+            //    sqlReader = command.ExecuteReader();
+            //    while (sqlReader.Read())
+            //    {
+            //        cmbPacient.Items.Add(Convert.ToString(sqlReader["Name"]));
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message.ToString(), ex.Source.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
+            //finally
+            //{
+            //    if (sqlReader != null) sqlReader.Close();
+            //}
+            //testCon.Close();
+        }
 
-            testCon.Open();
-            SqlDataReader sqlReader = null;
-            SqlCommand command = new SqlCommand("SELECT Name FROM [MedCard]", testCon);
-            try
+        private void setTheme()
+        {
+            switch (Properties.Settings.Default.Theme)
             {
-                sqlReader = command.ExecuteReader();
-                while (sqlReader.Read())
-                {
-                    cmbPacient.Items.Add(Convert.ToString(sqlReader["Name"]));
-                }
+                case 0:
+                    {
+                        if (this.BackColor != Color.Black)
+                        {
+                            this.BackColor = Color.Black;
+
+                            button1.BackColor = Color.White;
+                            button2.BackColor = Color.White;
+                            button3.BackColor = Color.White;
+                            button4.BackColor = Color.White;
+                            button5.BackColor = Color.White;
+                            button6.BackColor = Color.White;
+                            lblNum.ForeColor = Color.White;
+                            lblNumberCard.ForeColor = Color.White;
+                            lblName.ForeColor = Color.White;
+                            lblBirthday.ForeColor = Color.White;
+                            lblPhoneNumber.ForeColor = Color.White;
+                            lblAddress.ForeColor = Color.White;
+                            lblDate.ForeColor = Color.White;
+                            lblGender.ForeColor = Color.White;
+                            lblGenderType.ForeColor = Color.White;
+                        }
+                        
+                        break;
+                    }
+                case 1:
+                    {
+                        if (this.BackColor != Color.CornflowerBlue)
+                        {
+                            this.BackColor = Color.CornflowerBlue;
+
+                            button1.BackColor = Color.Transparent;
+                            button2.BackColor = Color.Transparent;
+                            button3.BackColor = Color.Transparent;
+                            button4.BackColor = Color.Transparent;
+                            button5.BackColor = Color.Transparent;
+                            button6.BackColor = Color.Transparent;
+                            lblNum.ForeColor = Color.Black;
+                            lblNumberCard.ForeColor = Color.Black;
+                            lblName.ForeColor = Color.Black;
+                            lblBirthday.ForeColor = Color.Black;
+                            lblPhoneNumber.ForeColor = Color.Black;
+                            lblAddress.ForeColor = Color.Black;
+                            lblDate.ForeColor = Color.Black;
+                            lblGender.ForeColor = Color.Black;
+                            lblGenderType.ForeColor = Color.Black;
+                        }
+                        break;
+                    }
+                case 2:
+                    {
+                        if (this.BackColor != Color.LightGray)
+                        {
+                            this.BackColor = Color.LightGray;
+
+                            button1.BackColor = Color.Transparent;
+                            button2.BackColor = Color.Transparent;
+                            button3.BackColor = Color.Transparent;
+                            button4.BackColor = Color.Transparent;
+                            button5.BackColor = Color.Transparent;
+                            button6.BackColor = Color.Transparent;
+                            lblNum.ForeColor = Color.Black;
+                            lblNumberCard.ForeColor = Color.Black;
+                            lblName.ForeColor = Color.Black;
+                            lblBirthday.ForeColor = Color.Black;
+                            lblPhoneNumber.ForeColor = Color.Black;
+                            lblAddress.ForeColor = Color.Black;
+                            lblDate.ForeColor = Color.Black;
+                            lblGender.ForeColor = Color.Black;
+                            lblGenderType.ForeColor = Color.Black;
+                        }
+                        
+                        break;
+                    }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message.ToString(), ex.Source.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                if (sqlReader != null) sqlReader.Close();
-            }
-            testCon.Close();
         }
 
         private void saveToWordFile()

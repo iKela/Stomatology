@@ -19,13 +19,87 @@ namespace Stomatology
         public NewMedCard()
         {
             InitializeComponent();
+            setTheme();
         }
 
         private void NewPatient_Load(object sender, EventArgs e)
         {
 
         }
+        private void setTheme()
+        {
+            switch (Properties.Settings.Default.Theme)
+            {
+                case 0:
+                    {
+                        if (this.BackColor != Color.Black)
+                        {
+                            this.BackColor = Color.Black;
 
+                            button1.BackColor = Color.White;
+                            button2.BackColor = Color.White;
+                            button3.BackColor = Color.White;
+                            button4.BackColor = Color.White;
+                            button5.BackColor = Color.White;
+                            button6.BackColor = Color.White;
+                            lblName.ForeColor = Color.White;
+                            lblBirthday.ForeColor = Color.White;
+                            lblPhoneNumber.ForeColor = Color.White;
+                            lblAddress.ForeColor = Color.White;
+                            lblDate.ForeColor = Color.White;
+                            lblGender.ForeColor = Color.White;
+                            lblGenderType.ForeColor = Color.White;
+                        }
+
+                        break;
+                    }
+                case 1:
+                    {
+                        if (this.BackColor != Color.CornflowerBlue)
+                        {
+                            this.BackColor = Color.CornflowerBlue;
+
+                            button1.BackColor = Color.Transparent;
+                            button2.BackColor = Color.Transparent;
+                            button3.BackColor = Color.Transparent;
+                            button4.BackColor = Color.Transparent;
+                            button5.BackColor = Color.Transparent;
+                            button6.BackColor = Color.Transparent;
+                            lblName.ForeColor = Color.Black;
+                            lblBirthday.ForeColor = Color.Black;
+                            lblPhoneNumber.ForeColor = Color.Black;
+                            lblAddress.ForeColor = Color.Black;
+                            lblDate.ForeColor = Color.Black;
+                            lblGender.ForeColor = Color.Black;
+                            lblGenderType.ForeColor = Color.Black;
+                        }
+                        break;
+                    }
+                case 2:
+                    {
+                        if (this.BackColor != Color.LightGray)
+                        {
+                            this.BackColor = Color.LightGray;
+
+                            button1.BackColor = Color.Transparent;
+                            button2.BackColor = Color.Transparent;
+                            button3.BackColor = Color.Transparent;
+                            button4.BackColor = Color.Transparent;
+                            button5.BackColor = Color.Transparent;
+                            button6.BackColor = Color.Transparent;
+                            lblName.ForeColor = Color.Black;
+                            lblBirthday.ForeColor = Color.Black;
+                            lblPhoneNumber.ForeColor = Color.Black;
+                            lblAddress.ForeColor = Color.Black;
+                            lblDate.ForeColor = Color.Black;
+                            lblGender.ForeColor = Color.Black;
+                            lblGenderType.ForeColor = Color.Black;
+                        }
+
+                        break;
+                    }
+            }
+        }
         #region Buttonclear
         public void Buttonclear()
         {
