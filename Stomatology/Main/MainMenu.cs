@@ -12,6 +12,17 @@ namespace Stomatology
 {
     public partial class MainMenu : Form
     {
+        Main main;
+        NewMedCard newMedCard;
+        EditMedCard editMedCard;
+        NewAppoinment newAppoinment;
+        AboutSoft aboutSoft;
+        Calculator calculator;
+        Settings settings;
+        UserInfo userInfo;
+        Account account;
+        HelpContacts helpContacts;
+
         public MainMenu()
         {
             InitializeComponent();
@@ -71,51 +82,108 @@ namespace Stomatology
         }
 
         private void btnRegistry_Click(object sender, EventArgs e)
-        {          
-            Main newForm = new Main();
-            newForm.Show();
-            this.Hide();      
+        {
+            if (main == null || main.IsDisposed)
+            {
+                main = new Main();
+                main.Show();
+                this.Hide();
+            } 
+            else
+            {
+                main.Focus();
+            }
         }
 
         private void btnNewAppoinment_Click(object sender, EventArgs e)
         {
-            NewAppoinment newForm = new NewAppoinment();
-            newForm.Show();
+            if (newAppoinment == null || newAppoinment.IsDisposed)
+            {
+                newAppoinment = new NewAppoinment();
+                newAppoinment.Show();
+            }
+            else
+            {
+                newAppoinment.Focus();
+            }
         }
 
         private void btnReporting_Click(object sender, EventArgs e)
         {
-
+            if (helpContacts == null || helpContacts.IsDisposed)
+            {
+                helpContacts = new HelpContacts();
+                helpContacts.Show();
+            }
+            else
+            {
+                helpContacts.Focus();
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            HelpContacts newForm = new HelpContacts();
-            newForm.Show();
+            if (helpContacts == null || helpContacts.IsDisposed)
+            {
+                helpContacts = new HelpContacts();
+                helpContacts.Show();
+            }
+            else
+            {
+                helpContacts.Focus();
+            }
         }
 
         private void btnNewPatient_Click(object sender, EventArgs e)
         {
-            NewMedCard newForm = new NewMedCard();
-            newForm.Show();
+            if (newMedCard == null || newMedCard.IsDisposed)
+            {
+                newMedCard = new NewMedCard();
+                newMedCard.Show();
+            }
+            else
+            {
+                newMedCard.Focus();
+            }
         }
 
         private void btnEditPatient_Click(object sender, EventArgs e)
         {
-            EditMedCard newForm = new EditMedCard();
-            newForm.Show();
+            if (editMedCard == null || editMedCard.IsDisposed)
+            {
+                editMedCard = new EditMedCard();
+                editMedCard.Show();
+            }
+            else
+            {
+                editMedCard.Focus();
+            }
         }
 
         private void btnSettings_Click(object sender, EventArgs e)
         {
-            Settings newForm = new Settings();
-            newForm.Show();
+            if (settings == null || settings.IsDisposed)
+            {
+                settings = new Settings();
+                settings.Show();
+            }
+            else
+            {
+                settings.Focus();
+            }
         }
 
         private void showAccount()
         {
-            Account newForm = new Account();
-            newForm.Show();
+            if (account == null || account.IsDisposed)
+            {
+                account = new Account();
+                account.Show();
+            }
+            else
+            {
+                account.Focus();
+            }
         }
 
         private void btnUsername_Click(object sender, EventArgs e)
