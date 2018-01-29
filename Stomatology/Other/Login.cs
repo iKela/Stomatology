@@ -55,7 +55,17 @@ namespace Stomatology
 
         private void Login_Load(object sender, EventArgs e)
         {
-           // MessageBox.Show("IP: " + GetUserIpByIp("")+ "\nHostname: " + GetUserHostnameByIp("") + "\nCity: " + GetUserCityByIp("") + "\nRegion: " + GetUserRegionByIp("") + "\nCountry: " + GetUserCountryByIp("") + "\nLocation: " + GetUserLocByIp("") + "\nOrganization: " + GetUserOrgByIp("") + "\nPostal: " + GetUserPostalByIp("") + "\nTime: " + DateTime.Now);
+            string query1 = $"SELECT Login, Password From Users";
+            testCon.Open();
+            SqlDataReader sqlReader = null;
+            SqlCommand command = new SqlCommand(query1, testCon);
+            sqlReader = command.ExecuteReader();
+            while (sqlReader.Read())
+            {
+                login = sqlReader["Login"].ToString();
+                password = sqlReader["Password"].ToString();
+            }
+            // MessageBox.Show("IP: " + GetUserIpByIp("")+ "\nHostname: " + GetUserHostnameByIp("") + "\nCity: " + GetUserCityByIp("") + "\nRegion: " + GetUserRegionByIp("") + "\nCountry: " + GetUserCountryByIp("") + "\nLocation: " + GetUserLocByIp("") + "\nOrganization: " + GetUserOrgByIp("") + "\nPostal: " + GetUserPostalByIp("") + "\nTime: " + DateTime.Now);
         }
 
         public static string GetUserIpByIp(string ip)
@@ -158,20 +168,9 @@ namespace Stomatology
             {
                 ipInfo.Loc = null;
             }
-            string query1 = $"SELECT Login, Password From Users";
-            testCon.Open();
-            SqlDataReader sqlReader = null;
-            SqlCommand command = new SqlCommand(query1, testCon);
-            sqlReader = command.ExecuteReader();
-            while (sqlReader.Read())
-            {
-                login = sqlReader["Login"].ToString();
-                password = sqlReader["Password"].ToString();
-            }
-        }
-
             return ipInfo.Loc;
         }
+
         public static string GetUserOrgByIp(string ip)
         {
             IpInfo ipInfo = new IpInfo();
