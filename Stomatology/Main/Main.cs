@@ -159,7 +159,7 @@ namespace Stomatology
         private void Form1_Load(object sender, EventArgs e)
         {
             toolTip(); 
-            //updateTable();
+            updateTable();
             btnAccount.FlatAppearance.MouseOverBackColor = Color.Transparent;
             btnAccountPhoto.FlatAppearance.MouseOverBackColor = Color.Transparent;
             btnExit.FlatAppearance.MouseOverBackColor = Color.Transparent;
@@ -260,14 +260,6 @@ namespace Stomatology
             {
                 toolTip1.SetToolTip(lblDoctor, "На полі вказано лікаря, який приймав паціента.");
             }
-            //if (textBox2.Text == string.Empty)
-            //{
-            //    toolTip1.SetToolTip(textBox2, "Поле, де вказуэться паціент при перегляді або редагуванні прийому.");
-            //}
-            //else
-            //{
-               // toolTip1.SetToolTip(textBox2, "На полі вказано паціента який був на прийомі.\nВи маэте можливість редагувати це поле.");
-           // }
             toolTip1.SetToolTip(btnCalculator, "Калькулятор.\nСкористайтесь калькулятором, для точного підрахунку ціни наданих послуг.");
             toolTip1.SetToolTip(txtDescription, "Поле для додаткової інформації.");
             toolTip1.SetToolTip(btnUpdate, "Оновити інформацію про паціента.");
@@ -538,7 +530,7 @@ namespace Stomatology
         {
             lblDoctor.Text = "";
             txtBDate.Text = "";
-            // textBox2.Text = "";
+          
             txtDescription.Text = "";
             txtMoney.Text = "";
             TopLeftTextBox_1.Text = "";

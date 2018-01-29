@@ -180,7 +180,7 @@
             this.btnUsername.Name = "btnUsername";
             this.btnUsername.Size = new System.Drawing.Size(220, 29);
             this.btnUsername.TabIndex = 3;
-            this.btnUsername.Text = "nazar1997";
+            this.btnUsername.Text = "user";
             this.btnUsername.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnUsername.UseVisualStyleBackColor = false;
             this.btnUsername.Click += new System.EventHandler(this.btnUsername_Click);
