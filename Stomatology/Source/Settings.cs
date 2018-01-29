@@ -55,16 +55,16 @@ namespace Stomatology
                     }
                 case 1:
                     {
-                        if (pnlGeneral.EndColor != Color.RoyalBlue)
+                        if (pnlGeneral.EndColor != Color.CornflowerBlue)
                         {
-                            this.BackColor = Color.RoyalBlue;
+                            this.BackColor = Color.CornflowerBlue;
 
-                            pnlGeneral.EndColor = Color.RoyalBlue;
-                            pnlGeneral.StartColor = Color.RoyalBlue;
-                            pnlPaths.EndColor = Color.RoyalBlue;
-                            pnlPaths.StartColor = Color.RoyalBlue;
-                            pnlButtons.EndColor = Color.RoyalBlue;
-                            pnlButtons.StartColor = Color.RoyalBlue;
+                            pnlGeneral.EndColor = Color.CornflowerBlue;
+                            pnlGeneral.StartColor = Color.CornflowerBlue;
+                            pnlPaths.EndColor = Color.CornflowerBlue;
+                            pnlPaths.StartColor = Color.CornflowerBlue;
+                            pnlButtons.EndColor = Color.CornflowerBlue;
+                            pnlButtons.StartColor = Color.CornflowerBlue;
                             lblTheme.ForeColor = Color.Black;
                             gboxAppearance.ForeColor = Color.Black;
                             gboxDBPath.ForeColor = Color.Black;

@@ -19,6 +19,40 @@ namespace Stomatology
         public Account()
         {
             InitializeComponent();
+            setTheme();
+        }
+
+        private void setTheme()
+        {
+            switch (Properties.Settings.Default.Theme)
+            {
+                case 0:
+                    {
+                        if (this.BackColor != Color.Black)
+                        {
+                            this.BackColor = Color.Black;
+                        }
+
+                        break;
+                    }
+                case 1:
+                    {
+                        if (this.BackColor != Color.CornflowerBlue)
+                        {
+                            this.BackColor = Color.CornflowerBlue;
+                        }
+                        break;
+                    }
+                case 2:
+                    {
+                        if (this.BackColor != Color.LightGray)
+                        {
+                            this.BackColor = Color.LightGray;
+                        }
+
+                        break;
+                    }
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)

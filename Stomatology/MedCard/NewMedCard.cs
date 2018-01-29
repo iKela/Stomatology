@@ -58,9 +58,9 @@ namespace Stomatology
                     }
                 case 1:
                     {
-                        if (this.BackColor != Color.RoyalBlue)
+                        if (this.BackColor != Color.CornflowerBlue)
                         {
-                            this.BackColor = Color.RoyalBlue;
+                            this.BackColor = Color.CornflowerBlue;
 
                             button1.BackColor = Color.Transparent;
                             button2.BackColor = Color.Transparent;

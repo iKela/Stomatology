@@ -34,6 +34,7 @@
             this.btnMainMenu = new System.Windows.Forms.Button();
             this.panelZ3 = new PanelZ.PanelZ();
             this.panelZ2 = new PanelZ.PanelZ();
+            this.pnlPolicySettings = new System.Windows.Forms.Panel();
             this.pnlSecuritySettings = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pnlAuthorization = new System.Windows.Forms.Panel();
@@ -63,7 +64,6 @@
             this.lblFatherName = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
             this.txtFatherName = new System.Windows.Forms.TextBox();
-            this.pnlPolicySettings = new System.Windows.Forms.Panel();
             this.panelZ1 = new PanelZ.PanelZ();
             this.panelZ5 = new PanelZ.PanelZ();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
@@ -166,6 +166,15 @@
             this.panelZ2.TabIndex = 1;
             this.panelZ2.Transparent1 = 150;
             this.panelZ2.Transparent2 = 150;
+            // 
+            // pnlPolicySettings
+            // 
+            this.pnlPolicySettings.BackColor = System.Drawing.Color.White;
+            this.pnlPolicySettings.Location = new System.Drawing.Point(3, 3);
+            this.pnlPolicySettings.Name = "pnlPolicySettings";
+            this.pnlPolicySettings.Size = new System.Drawing.Size(506, 443);
+            this.pnlPolicySettings.TabIndex = 1;
+            this.pnlPolicySettings.Visible = false;
             // 
             // pnlSecuritySettings
             // 
@@ -473,15 +482,6 @@
             this.txtFatherName.Size = new System.Drawing.Size(279, 26);
             this.txtFatherName.TabIndex = 5;
             // 
-            // pnlPolicySettings
-            // 
-            this.pnlPolicySettings.BackColor = System.Drawing.Color.White;
-            this.pnlPolicySettings.Location = new System.Drawing.Point(3, 3);
-            this.pnlPolicySettings.Name = "pnlPolicySettings";
-            this.pnlPolicySettings.Size = new System.Drawing.Size(506, 443);
-            this.pnlPolicySettings.TabIndex = 1;
-            this.pnlPolicySettings.Visible = false;
-            // 
             // panelZ1
             // 
             this.panelZ1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -596,7 +596,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Black;
+            this.BackColor = System.Drawing.Color.CornflowerBlue;
             this.ClientSize = new System.Drawing.Size(742, 543);
             this.Controls.Add(this.panelZ4);
             this.Controls.Add(this.panelZ3);

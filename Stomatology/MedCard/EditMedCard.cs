@@ -12,8 +12,6 @@ namespace Stomatology
         SqlConnection testCon = new SqlConnection
        (@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + Properties.Settings.Default.DateBaseDirection);
 
-        Main ownerForm = null;
-
         ArrayList DateList = new ArrayList();
         ArrayList InfoList = new ArrayList();
 
@@ -81,9 +79,9 @@ namespace Stomatology
                     }
                 case 1:
                     {
-                        if (this.BackColor != Color.RoyalBlue)
+                        if (this.BackColor != Color.CornflowerBlue)
                         {
-                            this.BackColor = Color.RoyalBlue;
+                            this.BackColor = Color.CornflowerBlue;
 
                             button1.BackColor = Color.Transparent;
                             button2.BackColor = Color.Transparent;

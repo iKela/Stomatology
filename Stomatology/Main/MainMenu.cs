@@ -40,9 +40,9 @@ namespace Stomatology
                     }
                 case 1:
                     {
-                        if (BackColor != Color.RoyalBlue)
+                        if (BackColor != Color.CornflowerBlue)
                         {
-                            this.BackColor = Color.RoyalBlue;
+                            this.BackColor = Color.CornflowerBlue;
                         }
                         
                         break;
@@ -66,7 +66,7 @@ namespace Stomatology
         {          
             Main newForm = new Main();
             newForm.Show();
-            this.Close();      
+            this.Hide();      
         }
 
         private void btnNewAppoinment_Click(object sender, EventArgs e)

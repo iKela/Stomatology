@@ -1055,7 +1055,7 @@
             // label38
             // 
             this.label38.AutoSize = true;
-            this.label38.BackColor = System.Drawing.Color.Transparent;
+            this.label38.BackColor = System.Drawing.Color.White;
             this.label38.Font = new System.Drawing.Font("Arial", 12F);
             this.label38.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label38.Location = new System.Drawing.Point(524, 470);
@@ -1067,7 +1067,7 @@
             // label39
             // 
             this.label39.AutoSize = true;
-            this.label39.BackColor = System.Drawing.Color.Transparent;
+            this.label39.BackColor = System.Drawing.Color.White;
             this.label39.Font = new System.Drawing.Font("Arial", 12F);
             this.label39.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label39.Location = new System.Drawing.Point(486, 470);
@@ -1079,7 +1079,7 @@
             // label40
             // 
             this.label40.AutoSize = true;
-            this.label40.BackColor = System.Drawing.Color.Transparent;
+            this.label40.BackColor = System.Drawing.Color.White;
             this.label40.Font = new System.Drawing.Font("Arial", 12F);
             this.label40.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label40.Location = new System.Drawing.Point(443, 470);
@@ -1091,7 +1091,7 @@
             // label41
             // 
             this.label41.AutoSize = true;
-            this.label41.BackColor = System.Drawing.Color.Transparent;
+            this.label41.BackColor = System.Drawing.Color.White;
             this.label41.Font = new System.Drawing.Font("Arial", 12F);
             this.label41.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label41.Location = new System.Drawing.Point(407, 470);
@@ -1103,7 +1103,7 @@
             // label42
             // 
             this.label42.AutoSize = true;
-            this.label42.BackColor = System.Drawing.Color.Transparent;
+            this.label42.BackColor = System.Drawing.Color.White;
             this.label42.Font = new System.Drawing.Font("Arial", 12F);
             this.label42.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label42.Location = new System.Drawing.Point(377, 470);
@@ -1115,7 +1115,7 @@
             // label43
             // 
             this.label43.AutoSize = true;
-            this.label43.BackColor = System.Drawing.Color.Transparent;
+            this.label43.BackColor = System.Drawing.Color.White;
             this.label43.Font = new System.Drawing.Font("Arial", 12F);
             this.label43.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label43.Location = new System.Drawing.Point(349, 470);
@@ -1127,7 +1127,7 @@
             // label44
             // 
             this.label44.AutoSize = true;
-            this.label44.BackColor = System.Drawing.Color.Transparent;
+            this.label44.BackColor = System.Drawing.Color.White;
             this.label44.Font = new System.Drawing.Font("Arial", 12F);
             this.label44.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label44.Location = new System.Drawing.Point(320, 470);
@@ -1139,7 +1139,7 @@
             // label45
             // 
             this.label45.AutoSize = true;
-            this.label45.BackColor = System.Drawing.Color.Transparent;
+            this.label45.BackColor = System.Drawing.Color.White;
             this.label45.Font = new System.Drawing.Font("Arial", 12F);
             this.label45.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label45.Location = new System.Drawing.Point(22, 470);
@@ -1151,7 +1151,7 @@
             // label46
             // 
             this.label46.AutoSize = true;
-            this.label46.BackColor = System.Drawing.Color.Transparent;
+            this.label46.BackColor = System.Drawing.Color.White;
             this.label46.Font = new System.Drawing.Font("Arial", 12F);
             this.label46.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label46.Location = new System.Drawing.Point(63, 470);
@@ -1163,7 +1163,7 @@
             // label47
             // 
             this.label47.AutoSize = true;
-            this.label47.BackColor = System.Drawing.Color.Transparent;
+            this.label47.BackColor = System.Drawing.Color.White;
             this.label47.Font = new System.Drawing.Font("Arial", 12F);
             this.label47.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label47.Location = new System.Drawing.Point(105, 470);
@@ -1175,7 +1175,7 @@
             // label48
             // 
             this.label48.AutoSize = true;
-            this.label48.BackColor = System.Drawing.Color.Transparent;
+            this.label48.BackColor = System.Drawing.Color.White;
             this.label48.Font = new System.Drawing.Font("Arial", 12F);
             this.label48.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label48.Location = new System.Drawing.Point(141, 470);
@@ -1187,7 +1187,7 @@
             // label49
             // 
             this.label49.AutoSize = true;
-            this.label49.BackColor = System.Drawing.Color.Transparent;
+            this.label49.BackColor = System.Drawing.Color.White;
             this.label49.Font = new System.Drawing.Font("Arial", 12F);
             this.label49.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label49.Location = new System.Drawing.Point(168, 470);
@@ -1199,7 +1199,7 @@
             // label50
             // 
             this.label50.AutoSize = true;
-            this.label50.BackColor = System.Drawing.Color.Transparent;
+            this.label50.BackColor = System.Drawing.Color.White;
             this.label50.Font = new System.Drawing.Font("Arial", 12F);
             this.label50.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label50.Location = new System.Drawing.Point(195, 470);
@@ -1211,7 +1211,7 @@
             // label51
             // 
             this.label51.AutoSize = true;
-            this.label51.BackColor = System.Drawing.Color.Transparent;
+            this.label51.BackColor = System.Drawing.Color.White;
             this.label51.Font = new System.Drawing.Font("Arial", 12F);
             this.label51.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label51.Location = new System.Drawing.Point(222, 470);
@@ -1223,7 +1223,7 @@
             // label52
             // 
             this.label52.AutoSize = true;
-            this.label52.BackColor = System.Drawing.Color.Transparent;
+            this.label52.BackColor = System.Drawing.Color.White;
             this.label52.Font = new System.Drawing.Font("Arial", 12F);
             this.label52.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label52.Location = new System.Drawing.Point(293, 470);
@@ -1235,7 +1235,7 @@
             // label53
             // 
             this.label53.AutoSize = true;
-            this.label53.BackColor = System.Drawing.Color.Transparent;
+            this.label53.BackColor = System.Drawing.Color.White;
             this.label53.Font = new System.Drawing.Font("Arial", 12F);
             this.label53.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label53.Location = new System.Drawing.Point(249, 470);
@@ -1247,7 +1247,7 @@
             // label54
             // 
             this.label54.AutoSize = true;
-            this.label54.BackColor = System.Drawing.Color.Transparent;
+            this.label54.BackColor = System.Drawing.Color.White;
             this.label54.Font = new System.Drawing.Font("Arial", 12F);
             this.label54.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label54.Location = new System.Drawing.Point(524, 448);
@@ -1259,7 +1259,7 @@
             // label55
             // 
             this.label55.AutoSize = true;
-            this.label55.BackColor = System.Drawing.Color.Transparent;
+            this.label55.BackColor = System.Drawing.Color.White;
             this.label55.Font = new System.Drawing.Font("Arial", 12F);
             this.label55.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label55.Location = new System.Drawing.Point(486, 448);
@@ -1271,7 +1271,7 @@
             // label56
             // 
             this.label56.AutoSize = true;
-            this.label56.BackColor = System.Drawing.Color.Transparent;
+            this.label56.BackColor = System.Drawing.Color.White;
             this.label56.Font = new System.Drawing.Font("Arial", 12F);
             this.label56.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label56.Location = new System.Drawing.Point(443, 448);
@@ -1283,7 +1283,7 @@
             // label57
             // 
             this.label57.AutoSize = true;
-            this.label57.BackColor = System.Drawing.Color.Transparent;
+            this.label57.BackColor = System.Drawing.Color.White;
             this.label57.Font = new System.Drawing.Font("Arial", 12F);
             this.label57.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label57.Location = new System.Drawing.Point(407, 448);
@@ -1295,7 +1295,7 @@
             // label58
             // 
             this.label58.AutoSize = true;
-            this.label58.BackColor = System.Drawing.Color.Transparent;
+            this.label58.BackColor = System.Drawing.Color.White;
             this.label58.Font = new System.Drawing.Font("Arial", 12F);
             this.label58.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label58.Location = new System.Drawing.Point(377, 448);
@@ -1307,7 +1307,7 @@
             // label59
             // 
             this.label59.AutoSize = true;
-            this.label59.BackColor = System.Drawing.Color.Transparent;
+            this.label59.BackColor = System.Drawing.Color.White;
             this.label59.Font = new System.Drawing.Font("Arial", 12F);
             this.label59.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label59.Location = new System.Drawing.Point(349, 448);
@@ -1319,7 +1319,7 @@
             // label60
             // 
             this.label60.AutoSize = true;
-            this.label60.BackColor = System.Drawing.Color.Transparent;
+            this.label60.BackColor = System.Drawing.Color.White;
             this.label60.Font = new System.Drawing.Font("Arial", 12F);
             this.label60.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label60.Location = new System.Drawing.Point(320, 448);
@@ -1331,7 +1331,7 @@
             // label61
             // 
             this.label61.AutoSize = true;
-            this.label61.BackColor = System.Drawing.Color.Transparent;
+            this.label61.BackColor = System.Drawing.Color.White;
             this.label61.Font = new System.Drawing.Font("Arial", 12F);
             this.label61.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label61.Location = new System.Drawing.Point(22, 448);
@@ -1343,7 +1343,7 @@
             // label62
             // 
             this.label62.AutoSize = true;
-            this.label62.BackColor = System.Drawing.Color.Transparent;
+            this.label62.BackColor = System.Drawing.Color.White;
             this.label62.Font = new System.Drawing.Font("Arial", 12F);
             this.label62.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label62.Location = new System.Drawing.Point(63, 448);
@@ -1355,7 +1355,7 @@
             // label63
             // 
             this.label63.AutoSize = true;
-            this.label63.BackColor = System.Drawing.Color.Transparent;
+            this.label63.BackColor = System.Drawing.Color.White;
             this.label63.Font = new System.Drawing.Font("Arial", 12F);
             this.label63.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label63.Location = new System.Drawing.Point(105, 448);
@@ -1367,7 +1367,7 @@
             // label64
             // 
             this.label64.AutoSize = true;
-            this.label64.BackColor = System.Drawing.Color.Transparent;
+            this.label64.BackColor = System.Drawing.Color.White;
             this.label64.Font = new System.Drawing.Font("Arial", 12F);
             this.label64.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label64.Location = new System.Drawing.Point(141, 448);
@@ -1379,7 +1379,7 @@
             // label65
             // 
             this.label65.AutoSize = true;
-            this.label65.BackColor = System.Drawing.Color.Transparent;
+            this.label65.BackColor = System.Drawing.Color.White;
             this.label65.Font = new System.Drawing.Font("Arial", 12F);
             this.label65.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label65.Location = new System.Drawing.Point(168, 448);
@@ -1391,7 +1391,7 @@
             // label66
             // 
             this.label66.AutoSize = true;
-            this.label66.BackColor = System.Drawing.Color.Transparent;
+            this.label66.BackColor = System.Drawing.Color.White;
             this.label66.Font = new System.Drawing.Font("Arial", 12F);
             this.label66.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label66.Location = new System.Drawing.Point(195, 448);
@@ -1403,7 +1403,7 @@
             // label67
             // 
             this.label67.AutoSize = true;
-            this.label67.BackColor = System.Drawing.Color.Transparent;
+            this.label67.BackColor = System.Drawing.Color.White;
             this.label67.Font = new System.Drawing.Font("Arial", 12F);
             this.label67.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label67.Location = new System.Drawing.Point(222, 448);
@@ -1577,7 +1577,7 @@
             // label68
             // 
             this.label68.AutoSize = true;
-            this.label68.BackColor = System.Drawing.Color.Transparent;
+            this.label68.BackColor = System.Drawing.Color.White;
             this.label68.Font = new System.Drawing.Font("Arial", 12F);
             this.label68.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label68.Location = new System.Drawing.Point(293, 448);
@@ -1589,7 +1589,7 @@
             // label69
             // 
             this.label69.AutoSize = true;
-            this.label69.BackColor = System.Drawing.Color.Transparent;
+            this.label69.BackColor = System.Drawing.Color.White;
             this.label69.Font = new System.Drawing.Font("Arial", 12F);
             this.label69.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label69.Location = new System.Drawing.Point(249, 448);
@@ -1853,7 +1853,7 @@
             // 
             // TeethPanel
             // 
-            this.TeethPanel.BackColor = System.Drawing.Color.Transparent;
+            this.TeethPanel.BackColor = System.Drawing.Color.White;
             this.TeethPanel.Image = ((System.Drawing.Image)(resources.GetObject("TeethPanel.Image")));
             this.TeethPanel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.TeethPanel.Location = new System.Drawing.Point(12, 327);
@@ -1866,7 +1866,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightGray;
+            this.BackColor = System.Drawing.Color.CornflowerBlue;
             this.ClientSize = new System.Drawing.Size(572, 644);
             this.Controls.Add(this.label38);
             this.Controls.Add(this.label39);

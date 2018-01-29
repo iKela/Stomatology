@@ -95,10 +95,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Account.cs">
+    <Compile Include="Main\Account.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Account.Designer.cs">
+    <Compile Include="Main\Account.Designer.cs">
       <DependentUpon>Account.cs</DependentUpon>
     </Compile>
     <Compile Include="Graphic\ButtonZ.cs">
@@ -191,7 +191,7 @@
     <Compile Include="Other\StartingForm.Designer.cs">
       <DependentUpon>StartingForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Account.resx">
+    <EmbeddedResource Include="Main\Account.resx">
       <DependentUpon>Account.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main\MainMenu.resx">

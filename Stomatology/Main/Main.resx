@@ -5850,7 +5850,7 @@
     <value>NoControl</value>
   </data>
   <data name="button2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>195, 816</value>
+    <value>195, 814</value>
   </data>
   <data name="button2.Size" type="System.Drawing.Size, System.Drawing">
     <value>141, 23</value>
@@ -5880,7 +5880,7 @@
     <value>NoControl</value>
   </data>
   <data name="button3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>460, 804</value>
+    <value>460, 802</value>
   </data>
   <data name="button3.Size" type="System.Drawing.Size, System.Drawing">
     <value>141, 23</value>
@@ -5913,7 +5913,7 @@
     <value>NoControl</value>
   </data>
   <data name="button4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>607, 816</value>
+    <value>607, 814</value>
   </data>
   <data name="button4.Size" type="System.Drawing.Size, System.Drawing">
     <value>141, 23</value>
@@ -6202,7 +6202,7 @@
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;EditPatient.Parent" xml:space="preserve">
-    <value>panelZ2</value>
+    <value>pnlRegistry</value>
   </data>
   <data name="&gt;&gt;EditPatient.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -6763,7 +6763,7 @@
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;AddNewPatient.Parent" xml:space="preserve">
-    <value>panelZ2</value>
+    <value>pnlRegistry</value>
   </data>
   <data name="&gt;&gt;AddNewPatient.ZOrder" xml:space="preserve">
     <value>1</value>
@@ -7355,33 +7355,33 @@
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;AddNewAppoinment.Parent" xml:space="preserve">
-    <value>panelZ2</value>
+    <value>pnlRegistry</value>
   </data>
   <data name="&gt;&gt;AddNewAppoinment.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="panelZ2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+  <data name="pnlRegistry.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
-  <data name="panelZ2.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="pnlRegistry.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 3</value>
   </data>
-  <data name="panelZ2.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="pnlRegistry.Size" type="System.Drawing.Size, System.Drawing">
     <value>1311, 619</value>
   </data>
-  <data name="panelZ2.TabIndex" type="System.Int32, mscorlib">
+  <data name="pnlRegistry.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
   </data>
-  <data name="&gt;&gt;panelZ2.Name" xml:space="preserve">
-    <value>panelZ2</value>
+  <data name="&gt;&gt;pnlRegistry.Name" xml:space="preserve">
+    <value>pnlRegistry</value>
   </data>
-  <data name="&gt;&gt;panelZ2.Type" xml:space="preserve">
+  <data name="&gt;&gt;pnlRegistry.Type" xml:space="preserve">
     <value>PanelZ.PanelZ, Stomatology, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;panelZ2.Parent" xml:space="preserve">
+  <data name="&gt;&gt;pnlRegistry.Parent" xml:space="preserve">
     <value>tabPage1</value>
   </data>
-  <data name="&gt;&gt;panelZ2.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;pnlRegistry.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
   <data name="tabPage1.Font" type="System.Drawing.Font, System.Drawing">
@@ -7417,262 +7417,205 @@
   <data name="TabControl.Alignment" type="System.Windows.Forms.TabAlignment, System.Windows.Forms">
     <value>Left</value>
   </data>
-  <data name="buttonZ7.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+  <data name="btn6.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
-  <data name="buttonZ7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="btn6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="buttonZ7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 347</value>
-  </data>
-  <data name="buttonZ7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>248, 43</value>
-  </data>
-  <data name="buttonZ7.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="buttonZ7.Text" xml:space="preserve">
-    <value>buttonZ7</value>
-  </data>
-  <data name="&gt;&gt;buttonZ7.Name" xml:space="preserve">
-    <value>buttonZ7</value>
-  </data>
-  <data name="&gt;&gt;buttonZ7.Type" xml:space="preserve">
-    <value>Custom_Controls_in_CS.ButtonZ, Stomatology, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;buttonZ7.Parent" xml:space="preserve">
-    <value>panelZ4</value>
-  </data>
-  <data name="&gt;&gt;buttonZ7.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="buttonZ8.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="buttonZ8.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="buttonZ8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 298</value>
-  </data>
-  <data name="buttonZ8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>248, 43</value>
-  </data>
-  <data name="buttonZ8.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="buttonZ8.Text" xml:space="preserve">
-    <value>buttonZ8</value>
-  </data>
-  <data name="&gt;&gt;buttonZ8.Name" xml:space="preserve">
-    <value>buttonZ8</value>
-  </data>
-  <data name="&gt;&gt;buttonZ8.Type" xml:space="preserve">
-    <value>Custom_Controls_in_CS.ButtonZ, Stomatology, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;buttonZ8.Parent" xml:space="preserve">
-    <value>panelZ4</value>
-  </data>
-  <data name="&gt;&gt;buttonZ8.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="buttonZ5.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="buttonZ5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="buttonZ5.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="btn6.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 249</value>
   </data>
-  <data name="buttonZ5.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="btn6.Size" type="System.Drawing.Size, System.Drawing">
     <value>248, 43</value>
   </data>
-  <data name="buttonZ5.TabIndex" type="System.Int32, mscorlib">
+  <data name="btn6.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
-  <data name="buttonZ5.Text" xml:space="preserve">
+  <data name="btn6.Text" xml:space="preserve">
     <value>buttonZ5</value>
   </data>
-  <data name="&gt;&gt;buttonZ5.Name" xml:space="preserve">
-    <value>buttonZ5</value>
+  <data name="&gt;&gt;btn6.Name" xml:space="preserve">
+    <value>btn6</value>
   </data>
-  <data name="&gt;&gt;buttonZ5.Type" xml:space="preserve">
+  <data name="&gt;&gt;btn6.Type" xml:space="preserve">
     <value>Custom_Controls_in_CS.ButtonZ, Stomatology, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;buttonZ5.Parent" xml:space="preserve">
-    <value>panelZ4</value>
+  <data name="&gt;&gt;btn6.Parent" xml:space="preserve">
+    <value>pnlButtons</value>
   </data>
-  <data name="&gt;&gt;buttonZ5.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="buttonZ6.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="buttonZ6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="buttonZ6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 200</value>
-  </data>
-  <data name="buttonZ6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>248, 43</value>
-  </data>
-  <data name="buttonZ6.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="buttonZ6.Text" xml:space="preserve">
-    <value>buttonZ6</value>
-  </data>
-  <data name="&gt;&gt;buttonZ6.Name" xml:space="preserve">
-    <value>buttonZ6</value>
-  </data>
-  <data name="&gt;&gt;buttonZ6.Type" xml:space="preserve">
-    <value>Custom_Controls_in_CS.ButtonZ, Stomatology, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;buttonZ6.Parent" xml:space="preserve">
-    <value>panelZ4</value>
-  </data>
-  <data name="&gt;&gt;buttonZ6.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="buttonZ3.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="buttonZ3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="buttonZ3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 151</value>
-  </data>
-  <data name="buttonZ3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>248, 43</value>
-  </data>
-  <data name="buttonZ3.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="buttonZ3.Text" xml:space="preserve">
-    <value>buttonZ3</value>
-  </data>
-  <data name="&gt;&gt;buttonZ3.Name" xml:space="preserve">
-    <value>buttonZ3</value>
-  </data>
-  <data name="&gt;&gt;buttonZ3.Type" xml:space="preserve">
-    <value>Custom_Controls_in_CS.ButtonZ, Stomatology, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;buttonZ3.Parent" xml:space="preserve">
-    <value>panelZ4</value>
-  </data>
-  <data name="&gt;&gt;buttonZ3.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="buttonZ4.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="buttonZ4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="buttonZ4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 102</value>
-  </data>
-  <data name="buttonZ4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>248, 43</value>
-  </data>
-  <data name="buttonZ4.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="buttonZ4.Text" xml:space="preserve">
-    <value>buttonZ4</value>
-  </data>
-  <data name="&gt;&gt;buttonZ4.Name" xml:space="preserve">
-    <value>buttonZ4</value>
-  </data>
-  <data name="&gt;&gt;buttonZ4.Type" xml:space="preserve">
-    <value>Custom_Controls_in_CS.ButtonZ, Stomatology, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;buttonZ4.Parent" xml:space="preserve">
-    <value>panelZ4</value>
-  </data>
-  <data name="&gt;&gt;buttonZ4.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="buttonZ2.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="buttonZ2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="buttonZ2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 53</value>
-  </data>
-  <data name="buttonZ2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>248, 43</value>
-  </data>
-  <data name="buttonZ2.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="buttonZ2.Text" xml:space="preserve">
-    <value>buttonZ2</value>
-  </data>
-  <data name="&gt;&gt;buttonZ2.Name" xml:space="preserve">
-    <value>buttonZ2</value>
-  </data>
-  <data name="&gt;&gt;buttonZ2.Type" xml:space="preserve">
-    <value>Custom_Controls_in_CS.ButtonZ, Stomatology, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;buttonZ2.Parent" xml:space="preserve">
-    <value>panelZ4</value>
-  </data>
-  <data name="&gt;&gt;buttonZ2.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="buttonZ1.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="buttonZ1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 4</value>
-  </data>
-  <data name="buttonZ1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>248, 43</value>
-  </data>
-  <data name="buttonZ1.TabIndex" type="System.Int32, mscorlib">
+  <data name="&gt;&gt;btn6.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="buttonZ1.Text" xml:space="preserve">
-    <value>buttonZ1</value>
+  <data name="btn5.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
   </data>
-  <data name="&gt;&gt;buttonZ1.Name" xml:space="preserve">
-    <value>buttonZ1</value>
+  <data name="btn5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="&gt;&gt;buttonZ1.Type" xml:space="preserve">
+  <data name="btn5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 200</value>
+  </data>
+  <data name="btn5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>248, 43</value>
+  </data>
+  <data name="btn5.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="btn5.Text" xml:space="preserve">
+    <value>buttonZ6</value>
+  </data>
+  <data name="&gt;&gt;btn5.Name" xml:space="preserve">
+    <value>btn5</value>
+  </data>
+  <data name="&gt;&gt;btn5.Type" xml:space="preserve">
     <value>Custom_Controls_in_CS.ButtonZ, Stomatology, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;buttonZ1.Parent" xml:space="preserve">
-    <value>panelZ4</value>
+  <data name="&gt;&gt;btn5.Parent" xml:space="preserve">
+    <value>pnlButtons</value>
   </data>
-  <data name="&gt;&gt;buttonZ1.ZOrder" xml:space="preserve">
-    <value>7</value>
+  <data name="&gt;&gt;btn5.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
-  <data name="panelZ4.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="btn4.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btn4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btn4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 151</value>
+  </data>
+  <data name="btn4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>248, 43</value>
+  </data>
+  <data name="btn4.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="btn4.Text" xml:space="preserve">
+    <value>buttonZ3</value>
+  </data>
+  <data name="&gt;&gt;btn4.Name" xml:space="preserve">
+    <value>btn4</value>
+  </data>
+  <data name="&gt;&gt;btn4.Type" xml:space="preserve">
+    <value>Custom_Controls_in_CS.ButtonZ, Stomatology, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btn4.Parent" xml:space="preserve">
+    <value>pnlButtons</value>
+  </data>
+  <data name="&gt;&gt;btn4.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="btn3.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btn3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btn3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 102</value>
+  </data>
+  <data name="btn3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>248, 43</value>
+  </data>
+  <data name="btn3.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="btn3.Text" xml:space="preserve">
+    <value>buttonZ4</value>
+  </data>
+  <data name="&gt;&gt;btn3.Name" xml:space="preserve">
+    <value>btn3</value>
+  </data>
+  <data name="&gt;&gt;btn3.Type" xml:space="preserve">
+    <value>Custom_Controls_in_CS.ButtonZ, Stomatology, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btn3.Parent" xml:space="preserve">
+    <value>pnlButtons</value>
+  </data>
+  <data name="&gt;&gt;btn3.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="btn2.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btn2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btn2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 53</value>
+  </data>
+  <data name="btn2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>248, 43</value>
+  </data>
+  <data name="btn2.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="btn2.Text" xml:space="preserve">
+    <value>buttonZ2</value>
+  </data>
+  <data name="&gt;&gt;btn2.Name" xml:space="preserve">
+    <value>btn2</value>
+  </data>
+  <data name="&gt;&gt;btn2.Type" xml:space="preserve">
+    <value>Custom_Controls_in_CS.ButtonZ, Stomatology, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btn2.Parent" xml:space="preserve">
+    <value>pnlButtons</value>
+  </data>
+  <data name="&gt;&gt;btn2.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="btn1.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btn1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btn1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 4</value>
+  </data>
+  <data name="btn1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>248, 43</value>
+  </data>
+  <data name="btn1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btn1.Text" xml:space="preserve">
+    <value>buttonZ1</value>
+  </data>
+  <data name="&gt;&gt;btn1.Name" xml:space="preserve">
+    <value>btn1</value>
+  </data>
+  <data name="&gt;&gt;btn1.Type" xml:space="preserve">
+    <value>Custom_Controls_in_CS.ButtonZ, Stomatology, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btn1.Parent" xml:space="preserve">
+    <value>pnlButtons</value>
+  </data>
+  <data name="&gt;&gt;btn1.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="pnlButtons.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 6</value>
   </data>
-  <data name="panelZ4.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="pnlButtons.Size" type="System.Drawing.Size, System.Drawing">
     <value>258, 610</value>
   </data>
-  <data name="panelZ4.TabIndex" type="System.Int32, mscorlib">
+  <data name="pnlButtons.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
   </data>
-  <data name="&gt;&gt;panelZ4.Name" xml:space="preserve">
-    <value>panelZ4</value>
+  <data name="&gt;&gt;pnlButtons.Name" xml:space="preserve">
+    <value>pnlButtons</value>
   </data>
-  <data name="&gt;&gt;panelZ4.Type" xml:space="preserve">
+  <data name="&gt;&gt;pnlButtons.Type" xml:space="preserve">
     <value>PanelZ.PanelZ, Stomatology, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;panelZ4.Parent" xml:space="preserve">
+  <data name="&gt;&gt;pnlButtons.Parent" xml:space="preserve">
     <value>tabFinance</value>
   </data>
-  <data name="&gt;&gt;panelZ4.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;pnlButtons.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="Id_reception.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -7745,39 +7688,39 @@
     <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;DataGridView2.Parent" xml:space="preserve">
-    <value>panelZ3</value>
+    <value>pnlDataGrid</value>
   </data>
   <data name="&gt;&gt;DataGridView2.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="label42.AutoSize" type="System.Boolean, mscorlib">
+  <data name="lblDoc.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label42.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="lblDoc.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="label42.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="lblDoc.Location" type="System.Drawing.Point, System.Drawing">
     <value>210, 7</value>
   </data>
-  <data name="label42.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="lblDoc.Size" type="System.Drawing.Size, System.Drawing">
     <value>45, 19</value>
   </data>
-  <data name="label42.TabIndex" type="System.Int32, mscorlib">
+  <data name="lblDoc.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
   </data>
-  <data name="label42.Text" xml:space="preserve">
+  <data name="lblDoc.Text" xml:space="preserve">
     <value>Лікар</value>
   </data>
-  <data name="&gt;&gt;label42.Name" xml:space="preserve">
-    <value>label42</value>
+  <data name="&gt;&gt;lblDoc.Name" xml:space="preserve">
+    <value>lblDoc</value>
   </data>
-  <data name="&gt;&gt;label42.Type" xml:space="preserve">
+  <data name="&gt;&gt;lblDoc.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label42.Parent" xml:space="preserve">
-    <value>panelZ3</value>
+  <data name="&gt;&gt;lblDoc.Parent" xml:space="preserve">
+    <value>pnlDataGrid</value>
   </data>
-  <data name="&gt;&gt;label42.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;lblDoc.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="button9.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
@@ -7805,69 +7748,69 @@
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;button9.Parent" xml:space="preserve">
-    <value>panelZ3</value>
+    <value>pnlDataGrid</value>
   </data>
   <data name="&gt;&gt;button9.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="label41.AutoSize" type="System.Boolean, mscorlib">
+  <data name="lblDateFrom.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label41.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="lblDateFrom.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="label41.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="lblDateFrom.Location" type="System.Drawing.Point, System.Drawing">
     <value>437, 7</value>
   </data>
-  <data name="label41.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="lblDateFrom.Size" type="System.Drawing.Size, System.Drawing">
     <value>122, 19</value>
   </data>
-  <data name="label41.TabIndex" type="System.Int32, mscorlib">
+  <data name="lblDateFrom.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
   </data>
-  <data name="label41.Text" xml:space="preserve">
+  <data name="lblDateFrom.Text" xml:space="preserve">
     <value>Дата прийому з :</value>
   </data>
-  <data name="&gt;&gt;label41.Name" xml:space="preserve">
-    <value>label41</value>
+  <data name="&gt;&gt;lblDateFrom.Name" xml:space="preserve">
+    <value>lblDateFrom</value>
   </data>
-  <data name="&gt;&gt;label41.Type" xml:space="preserve">
+  <data name="&gt;&gt;lblDateFrom.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label41.Parent" xml:space="preserve">
-    <value>panelZ3</value>
+  <data name="&gt;&gt;lblDateFrom.Parent" xml:space="preserve">
+    <value>pnlDataGrid</value>
   </data>
-  <data name="&gt;&gt;label41.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;lblDateFrom.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="label40.AutoSize" type="System.Boolean, mscorlib">
+  <data name="lblDateTo.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label40.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="lblDateTo.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="label40.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="lblDateTo.Location" type="System.Drawing.Point, System.Drawing">
     <value>688, 7</value>
   </data>
-  <data name="label40.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="lblDateTo.Size" type="System.Drawing.Size, System.Drawing">
     <value>33, 19</value>
   </data>
-  <data name="label40.TabIndex" type="System.Int32, mscorlib">
+  <data name="lblDateTo.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
   </data>
-  <data name="label40.Text" xml:space="preserve">
+  <data name="lblDateTo.Text" xml:space="preserve">
     <value>по :</value>
   </data>
-  <data name="&gt;&gt;label40.Name" xml:space="preserve">
-    <value>label40</value>
+  <data name="&gt;&gt;lblDateTo.Name" xml:space="preserve">
+    <value>lblDateTo</value>
   </data>
-  <data name="&gt;&gt;label40.Type" xml:space="preserve">
+  <data name="&gt;&gt;lblDateTo.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label40.Parent" xml:space="preserve">
-    <value>panelZ3</value>
+  <data name="&gt;&gt;lblDateTo.Parent" xml:space="preserve">
+    <value>pnlDataGrid</value>
   </data>
-  <data name="&gt;&gt;label40.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;lblDateTo.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
   <data name="Updatebtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
@@ -7895,39 +7838,39 @@
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;Updatebtn.Parent" xml:space="preserve">
-    <value>panelZ3</value>
+    <value>pnlDataGrid</value>
   </data>
   <data name="&gt;&gt;Updatebtn.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="label39.AutoSize" type="System.Boolean, mscorlib">
+  <data name="lblName.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label39.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="lblName.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="label39.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="lblName.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 7</value>
   </data>
-  <data name="label39.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="lblName.Size" type="System.Drawing.Size, System.Drawing">
     <value>46, 19</value>
   </data>
-  <data name="label39.TabIndex" type="System.Int32, mscorlib">
+  <data name="lblName.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
   </data>
-  <data name="label39.Text" xml:space="preserve">
+  <data name="lblName.Text" xml:space="preserve">
     <value>П.І.Б.</value>
   </data>
-  <data name="&gt;&gt;label39.Name" xml:space="preserve">
-    <value>label39</value>
+  <data name="&gt;&gt;lblName.Name" xml:space="preserve">
+    <value>lblName</value>
   </data>
-  <data name="&gt;&gt;label39.Type" xml:space="preserve">
+  <data name="&gt;&gt;lblName.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label39.Parent" xml:space="preserve">
-    <value>panelZ3</value>
+  <data name="&gt;&gt;lblName.Parent" xml:space="preserve">
+    <value>pnlDataGrid</value>
   </data>
-  <data name="&gt;&gt;label39.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;lblName.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
   <data name="PIBTextBox.Location" type="System.Drawing.Point, System.Drawing">
@@ -7946,7 +7889,7 @@
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;PIBTextBox.Parent" xml:space="preserve">
-    <value>panelZ3</value>
+    <value>pnlDataGrid</value>
   </data>
   <data name="&gt;&gt;PIBTextBox.ZOrder" xml:space="preserve">
     <value>7</value>
@@ -7967,7 +7910,7 @@
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;DatetextboxTo.Parent" xml:space="preserve">
-    <value>panelZ3</value>
+    <value>pnlDataGrid</value>
   </data>
   <data name="&gt;&gt;DatetextboxTo.ZOrder" xml:space="preserve">
     <value>8</value>
@@ -7988,7 +7931,7 @@
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;DoctortextBox.Parent" xml:space="preserve">
-    <value>panelZ3</value>
+    <value>pnlDataGrid</value>
   </data>
   <data name="&gt;&gt;DoctortextBox.ZOrder" xml:space="preserve">
     <value>9</value>
@@ -8009,30 +7952,30 @@
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;DatetextBoxFrom.Parent" xml:space="preserve">
-    <value>panelZ3</value>
+    <value>pnlDataGrid</value>
   </data>
   <data name="&gt;&gt;DatetextBoxFrom.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
-  <data name="panelZ3.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="pnlDataGrid.Location" type="System.Drawing.Point, System.Drawing">
     <value>270, 6</value>
   </data>
-  <data name="panelZ3.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="pnlDataGrid.Size" type="System.Drawing.Size, System.Drawing">
     <value>1043, 615</value>
   </data>
-  <data name="panelZ3.TabIndex" type="System.Int32, mscorlib">
+  <data name="pnlDataGrid.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
   </data>
-  <data name="&gt;&gt;panelZ3.Name" xml:space="preserve">
-    <value>panelZ3</value>
+  <data name="&gt;&gt;pnlDataGrid.Name" xml:space="preserve">
+    <value>pnlDataGrid</value>
   </data>
-  <data name="&gt;&gt;panelZ3.Type" xml:space="preserve">
+  <data name="&gt;&gt;pnlDataGrid.Type" xml:space="preserve">
     <value>PanelZ.PanelZ, Stomatology, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;panelZ3.Parent" xml:space="preserve">
+  <data name="&gt;&gt;pnlDataGrid.Parent" xml:space="preserve">
     <value>tabFinance</value>
   </data>
-  <data name="&gt;&gt;panelZ3.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;pnlDataGrid.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="tabFinance.Location" type="System.Drawing.Point, System.Drawing">
@@ -8090,7 +8033,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;TabControl.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>382, 17</value>
@@ -8116,6 +8059,30 @@
   <data name="&gt;&gt;tabPage2.Type" xml:space="preserve">
     <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <metadata name="miniToolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>479, 17</value>
+  </metadata>
+  <data name="miniToolStrip.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="miniToolStrip.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 12pt</value>
+  </data>
+  <data name="miniToolStrip.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 10</value>
+  </data>
+  <data name="miniToolStrip.Size" type="System.Drawing.Size, System.Drawing">
+    <value>206, 27</value>
+  </data>
+  <data name="miniToolStrip.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;miniToolStrip.Name" xml:space="preserve">
+    <value>miniToolStrip</value>
+  </data>
+  <data name="&gt;&gt;miniToolStrip.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="btnAccount.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
@@ -8124,6 +8091,9 @@
   </data>
   <data name="btnAccount.Font" type="System.Drawing.Font, System.Drawing">
     <value>Times New Roman, 11.25pt, style=Underline</value>
+  </data>
+  <data name="btnAccount.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="btnAccount.Location" type="System.Drawing.Point, System.Drawing">
     <value>1105, 11</value>
@@ -18612,6 +18582,9 @@
   <data name="btnAccountPhoto.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
+  <data name="btnAccountPhoto.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="btnAccountPhoto.Location" type="System.Drawing.Point, System.Drawing">
     <value>1322, 9</value>
   </data>
@@ -22827,34 +22800,10 @@
     <value>PanelZ.PanelZ, Stomatology, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;pnlTop.Parent" xml:space="preserve">
-    <value>panelZ1</value>
+    <value>$this</value>
   </data>
   <data name="&gt;&gt;pnlTop.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <metadata name="miniToolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>479, 17</value>
-  </metadata>
-  <data name="miniToolStrip.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="miniToolStrip.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Times New Roman, 12pt</value>
-  </data>
-  <data name="miniToolStrip.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 10</value>
-  </data>
-  <data name="miniToolStrip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>206, 27</value>
-  </data>
-  <data name="miniToolStrip.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;miniToolStrip.Name" xml:space="preserve">
-    <value>miniToolStrip</value>
-  </data>
-  <data name="&gt;&gt;miniToolStrip.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>0</value>
   </data>
   <data name="btnExit.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Right</value>
@@ -23247,33 +23196,9 @@
     <value>PanelZ.PanelZ, Stomatology, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;pnlBot.Parent" xml:space="preserve">
-    <value>panelZ1</value>
-  </data>
-  <data name="&gt;&gt;pnlBot.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="panelZ1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="panelZ1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="panelZ1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1376, 726</value>
-  </data>
-  <data name="panelZ1.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;panelZ1.Name" xml:space="preserve">
-    <value>panelZ1</value>
-  </data>
-  <data name="&gt;&gt;panelZ1.Type" xml:space="preserve">
-    <value>PanelZ.PanelZ, Stomatology, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;panelZ1.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;panelZ1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;pnlBot.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -29460,6 +29385,9 @@
         AD/+AAAAAAAAf/8AAAAAAAD//4AAAAAAAf//4AAAAAAH///4AAGAAB////8AH/gA//8=
 </value>
   </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="$this.MaximumSize" type="System.Drawing.Size, System.Drawing">
     <value>1376, 726</value>
   </data>
@@ -29505,48 +29433,6 @@
   <data name="&gt;&gt;number.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;Id_reception.Name" xml:space="preserve">
-    <value>Id_reception</value>
-  </data>
-  <data name="&gt;&gt;Id_reception.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;PIB.Name" xml:space="preserve">
-    <value>PIB</value>
-  </data>
-  <data name="&gt;&gt;PIB.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pacientbrth.Name" xml:space="preserve">
-    <value>pacientbrth</value>
-  </data>
-  <data name="&gt;&gt;pacientbrth.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pacientnmb.Name" xml:space="preserve">
-    <value>pacientnmb</value>
-  </data>
-  <data name="&gt;&gt;pacientnmb.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Doctor.Name" xml:space="preserve">
-    <value>Doctor</value>
-  </data>
-  <data name="&gt;&gt;Doctor.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dateApp.Name" xml:space="preserve">
-    <value>dateApp</value>
-  </data>
-  <data name="&gt;&gt;dateApp.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;price.Name" xml:space="preserve">
-    <value>price</value>
-  </data>
-  <data name="&gt;&gt;price.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;toolTip1.Name" xml:space="preserve">
     <value>toolTip1</value>
   </data>
@@ -29588,6 +29474,48 @@
   </data>
   <data name="&gt;&gt;tsmiRemoteControl.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Id_reception.Name" xml:space="preserve">
+    <value>Id_reception</value>
+  </data>
+  <data name="&gt;&gt;Id_reception.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PIB.Name" xml:space="preserve">
+    <value>PIB</value>
+  </data>
+  <data name="&gt;&gt;PIB.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pacientbrth.Name" xml:space="preserve">
+    <value>pacientbrth</value>
+  </data>
+  <data name="&gt;&gt;pacientbrth.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pacientnmb.Name" xml:space="preserve">
+    <value>pacientnmb</value>
+  </data>
+  <data name="&gt;&gt;pacientnmb.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Doctor.Name" xml:space="preserve">
+    <value>Doctor</value>
+  </data>
+  <data name="&gt;&gt;Doctor.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dateApp.Name" xml:space="preserve">
+    <value>dateApp</value>
+  </data>
+  <data name="&gt;&gt;dateApp.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;price.Name" xml:space="preserve">
+    <value>price</value>
+  </data>
+  <data name="&gt;&gt;price.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>Main</value>

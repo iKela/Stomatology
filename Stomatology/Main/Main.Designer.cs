@@ -129,42 +129,11 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.panelZ2 = new PanelZ.PanelZ();
-            this.EditPatient = new System.Windows.Forms.Button();
-            this.AddNewPatient = new System.Windows.Forms.Button();
-            this.AddNewAppoinment = new System.Windows.Forms.Button();
             this.TabControl = new System.Windows.Forms.TabControl();
             this.tabFinance = new System.Windows.Forms.TabPage();
-            this.panelZ4 = new PanelZ.PanelZ();
-            this.buttonZ7 = new Custom_Controls_in_CS.ButtonZ();
-            this.buttonZ8 = new Custom_Controls_in_CS.ButtonZ();
-            this.buttonZ5 = new Custom_Controls_in_CS.ButtonZ();
-            this.buttonZ6 = new Custom_Controls_in_CS.ButtonZ();
-            this.buttonZ3 = new Custom_Controls_in_CS.ButtonZ();
-            this.buttonZ4 = new Custom_Controls_in_CS.ButtonZ();
-            this.buttonZ2 = new Custom_Controls_in_CS.ButtonZ();
-            this.buttonZ1 = new Custom_Controls_in_CS.ButtonZ();
-            this.panelZ3 = new PanelZ.PanelZ();
-            this.DataGridView2 = new System.Windows.Forms.DataGridView();
-            this.Id_reception = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PIB = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pacientbrth = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pacientnmb = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Doctor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateApp = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.price = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label42 = new System.Windows.Forms.Label();
-            this.button9 = new System.Windows.Forms.Button();
-            this.label41 = new System.Windows.Forms.Label();
-            this.label40 = new System.Windows.Forms.Label();
-            this.Updatebtn = new System.Windows.Forms.Button();
-            this.label39 = new System.Windows.Forms.Label();
-            this.PIBTextBox = new System.Windows.Forms.TextBox();
-            this.DatetextboxTo = new System.Windows.Forms.TextBox();
-            this.DoctortextBox = new System.Windows.Forms.TextBox();
-            this.DatetextBoxFrom = new System.Windows.Forms.TextBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.miniToolStrip = new System.Windows.Forms.MenuStrip();
             this.pnlTop = new PanelZ.PanelZ();
             this.btnAccount = new System.Windows.Forms.Button();
             this.btnAccountPhoto = new System.Windows.Forms.Button();
@@ -176,26 +145,53 @@
             this.tsmiContacts = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiRemoteControl = new System.Windows.Forms.ToolStripMenuItem();
             this.btnMainMenu = new System.Windows.Forms.Button();
-            this.miniToolStrip = new System.Windows.Forms.MenuStrip();
             this.pnlBot = new PanelZ.PanelZ();
             this.btnExit = new System.Windows.Forms.Button();
-            this.panelZ1 = new PanelZ.PanelZ();
+            this.pnlRegistry = new PanelZ.PanelZ();
+            this.EditPatient = new System.Windows.Forms.Button();
+            this.AddNewPatient = new System.Windows.Forms.Button();
+            this.AddNewAppoinment = new System.Windows.Forms.Button();
+            this.pnlButtons = new PanelZ.PanelZ();
+            this.btn6 = new Custom_Controls_in_CS.ButtonZ();
+            this.btn5 = new Custom_Controls_in_CS.ButtonZ();
+            this.btn4 = new Custom_Controls_in_CS.ButtonZ();
+            this.btn3 = new Custom_Controls_in_CS.ButtonZ();
+            this.btn2 = new Custom_Controls_in_CS.ButtonZ();
+            this.btn1 = new Custom_Controls_in_CS.ButtonZ();
+            this.pnlDataGrid = new PanelZ.PanelZ();
+            this.DataGridView2 = new System.Windows.Forms.DataGridView();
+            this.Id_reception = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PIB = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pacientbrth = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pacientnmb = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Doctor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateApp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblDoc = new System.Windows.Forms.Label();
+            this.button9 = new System.Windows.Forms.Button();
+            this.lblDateFrom = new System.Windows.Forms.Label();
+            this.lblDateTo = new System.Windows.Forms.Label();
+            this.Updatebtn = new System.Windows.Forms.Button();
+            this.lblName = new System.Windows.Forms.Label();
+            this.PIBTextBox = new System.Windows.Forms.TextBox();
+            this.DatetextboxTo = new System.Windows.Forms.TextBox();
+            this.DoctortextBox = new System.Windows.Forms.TextBox();
+            this.DatetextBoxFrom = new System.Windows.Forms.TextBox();
             this.tabPage1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TeethPanel)).BeginInit();
-            this.panelZ2.SuspendLayout();
             this.TabControl.SuspendLayout();
             this.tabFinance.SuspendLayout();
-            this.panelZ4.SuspendLayout();
-            this.panelZ3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DataGridView2)).BeginInit();
             this.pnlTop.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.pnlBot.SuspendLayout();
-            this.panelZ1.SuspendLayout();
+            this.pnlRegistry.SuspendLayout();
+            this.pnlButtons.SuspendLayout();
+            this.pnlDataGrid.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // imageList1
@@ -219,7 +215,7 @@
             this.tabPage1.Controls.Add(this.button2);
             this.tabPage1.Controls.Add(this.button3);
             this.tabPage1.Controls.Add(this.button4);
-            this.tabPage1.Controls.Add(this.panelZ2);
+            this.tabPage1.Controls.Add(this.pnlRegistry);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
@@ -918,46 +914,6 @@
             this.button4.Name = "button4";
             this.button4.UseVisualStyleBackColor = false;
             // 
-            // panelZ2
-            // 
-            this.panelZ2.Controls.Add(this.EditPatient);
-            this.panelZ2.Controls.Add(this.AddNewPatient);
-            this.panelZ2.Controls.Add(this.AddNewAppoinment);
-            resources.ApplyResources(this.panelZ2, "panelZ2");
-            this.panelZ2.EndColor = System.Drawing.Color.Black;
-            this.panelZ2.GradientAngle = 90;
-            this.panelZ2.Name = "panelZ2";
-            this.panelZ2.StartColor = System.Drawing.Color.White;
-            this.panelZ2.Transparent1 = 150;
-            this.panelZ2.Transparent2 = 150;
-            // 
-            // EditPatient
-            // 
-            this.EditPatient.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            resources.ApplyResources(this.EditPatient, "EditPatient");
-            this.EditPatient.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.EditPatient.Name = "EditPatient";
-            this.EditPatient.UseVisualStyleBackColor = false;
-            this.EditPatient.Click += new System.EventHandler(this.EditPatient_Click);
-            // 
-            // AddNewPatient
-            // 
-            resources.ApplyResources(this.AddNewPatient, "AddNewPatient");
-            this.AddNewPatient.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.AddNewPatient.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.AddNewPatient.Name = "AddNewPatient";
-            this.AddNewPatient.UseVisualStyleBackColor = false;
-            this.AddNewPatient.Click += new System.EventHandler(this.AddNewPatient_Click);
-            // 
-            // AddNewAppoinment
-            // 
-            this.AddNewAppoinment.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            resources.ApplyResources(this.AddNewAppoinment, "AddNewAppoinment");
-            this.AddNewAppoinment.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.AddNewAppoinment.Name = "AddNewAppoinment";
-            this.AddNewAppoinment.UseVisualStyleBackColor = false;
-            this.AddNewAppoinment.Click += new System.EventHandler(this.AddNewAppoinment_Click);
-            // 
             // TabControl
             // 
             resources.ApplyResources(this.TabControl, "TabControl");
@@ -970,379 +926,11 @@
             // 
             // tabFinance
             // 
-            this.tabFinance.Controls.Add(this.panelZ4);
-            this.tabFinance.Controls.Add(this.panelZ3);
+            this.tabFinance.Controls.Add(this.pnlButtons);
+            this.tabFinance.Controls.Add(this.pnlDataGrid);
             resources.ApplyResources(this.tabFinance, "tabFinance");
             this.tabFinance.Name = "tabFinance";
             this.tabFinance.UseVisualStyleBackColor = true;
-            // 
-            // panelZ4
-            // 
-            this.panelZ4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panelZ4.Controls.Add(this.buttonZ7);
-            this.panelZ4.Controls.Add(this.buttonZ8);
-            this.panelZ4.Controls.Add(this.buttonZ5);
-            this.panelZ4.Controls.Add(this.buttonZ6);
-            this.panelZ4.Controls.Add(this.buttonZ3);
-            this.panelZ4.Controls.Add(this.buttonZ4);
-            this.panelZ4.Controls.Add(this.buttonZ2);
-            this.panelZ4.Controls.Add(this.buttonZ1);
-            this.panelZ4.EndColor = System.Drawing.Color.DarkBlue;
-            this.panelZ4.GradientAngle = 90;
-            resources.ApplyResources(this.panelZ4, "panelZ4");
-            this.panelZ4.Name = "panelZ4";
-            this.panelZ4.StartColor = System.Drawing.Color.SteelBlue;
-            this.panelZ4.Transparent1 = 150;
-            this.panelZ4.Transparent2 = 150;
-            // 
-            // buttonZ7
-            // 
-            this.buttonZ7.BackColor = System.Drawing.Color.Transparent;
-            this.buttonZ7.BorderColor = System.Drawing.Color.Transparent;
-            this.buttonZ7.BorderWidth = 2;
-            this.buttonZ7.ButtonShape = Custom_Controls_in_CS.ButtonZ.ButtonsShapes.Rect;
-            this.buttonZ7.ButtonText = "";
-            this.buttonZ7.EndColor = System.Drawing.Color.MidnightBlue;
-            this.buttonZ7.FlatAppearance.BorderSize = 0;
-            this.buttonZ7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.buttonZ7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.buttonZ7, "buttonZ7");
-            this.buttonZ7.GradientAngle = 90;
-            this.buttonZ7.MouseClickColor1 = System.Drawing.Color.Yellow;
-            this.buttonZ7.MouseClickColor2 = System.Drawing.Color.Red;
-            this.buttonZ7.MouseHoverColor1 = System.Drawing.Color.Turquoise;
-            this.buttonZ7.MouseHoverColor2 = System.Drawing.Color.DarkSlateGray;
-            this.buttonZ7.Name = "buttonZ7";
-            this.buttonZ7.ShowButtontext = true;
-            this.buttonZ7.StartColor = System.Drawing.Color.DodgerBlue;
-            this.buttonZ7.TextLocation_X = 81;
-            this.buttonZ7.TextLocation_Y = 19;
-            this.buttonZ7.Transparent1 = 250;
-            this.buttonZ7.Transparent2 = 250;
-            this.buttonZ7.UseVisualStyleBackColor = false;
-            // 
-            // buttonZ8
-            // 
-            this.buttonZ8.BackColor = System.Drawing.Color.Transparent;
-            this.buttonZ8.BorderColor = System.Drawing.Color.Transparent;
-            this.buttonZ8.BorderWidth = 2;
-            this.buttonZ8.ButtonShape = Custom_Controls_in_CS.ButtonZ.ButtonsShapes.Rect;
-            this.buttonZ8.ButtonText = "";
-            this.buttonZ8.EndColor = System.Drawing.Color.MidnightBlue;
-            this.buttonZ8.FlatAppearance.BorderSize = 0;
-            this.buttonZ8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.buttonZ8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.buttonZ8, "buttonZ8");
-            this.buttonZ8.GradientAngle = 90;
-            this.buttonZ8.MouseClickColor1 = System.Drawing.Color.Yellow;
-            this.buttonZ8.MouseClickColor2 = System.Drawing.Color.Red;
-            this.buttonZ8.MouseHoverColor1 = System.Drawing.Color.Turquoise;
-            this.buttonZ8.MouseHoverColor2 = System.Drawing.Color.DarkSlateGray;
-            this.buttonZ8.Name = "buttonZ8";
-            this.buttonZ8.ShowButtontext = true;
-            this.buttonZ8.StartColor = System.Drawing.Color.DodgerBlue;
-            this.buttonZ8.TextLocation_X = 81;
-            this.buttonZ8.TextLocation_Y = 19;
-            this.buttonZ8.Transparent1 = 250;
-            this.buttonZ8.Transparent2 = 250;
-            this.buttonZ8.UseVisualStyleBackColor = false;
-            // 
-            // buttonZ5
-            // 
-            this.buttonZ5.BackColor = System.Drawing.Color.Transparent;
-            this.buttonZ5.BorderColor = System.Drawing.Color.Transparent;
-            this.buttonZ5.BorderWidth = 2;
-            this.buttonZ5.ButtonShape = Custom_Controls_in_CS.ButtonZ.ButtonsShapes.Rect;
-            this.buttonZ5.ButtonText = "";
-            this.buttonZ5.EndColor = System.Drawing.Color.MidnightBlue;
-            this.buttonZ5.FlatAppearance.BorderSize = 0;
-            this.buttonZ5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.buttonZ5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.buttonZ5, "buttonZ5");
-            this.buttonZ5.GradientAngle = 90;
-            this.buttonZ5.MouseClickColor1 = System.Drawing.Color.Yellow;
-            this.buttonZ5.MouseClickColor2 = System.Drawing.Color.Red;
-            this.buttonZ5.MouseHoverColor1 = System.Drawing.Color.Turquoise;
-            this.buttonZ5.MouseHoverColor2 = System.Drawing.Color.DarkSlateGray;
-            this.buttonZ5.Name = "buttonZ5";
-            this.buttonZ5.ShowButtontext = true;
-            this.buttonZ5.StartColor = System.Drawing.Color.DodgerBlue;
-            this.buttonZ5.TextLocation_X = 81;
-            this.buttonZ5.TextLocation_Y = 19;
-            this.buttonZ5.Transparent1 = 250;
-            this.buttonZ5.Transparent2 = 250;
-            this.buttonZ5.UseVisualStyleBackColor = false;
-            // 
-            // buttonZ6
-            // 
-            this.buttonZ6.BackColor = System.Drawing.Color.Transparent;
-            this.buttonZ6.BorderColor = System.Drawing.Color.Transparent;
-            this.buttonZ6.BorderWidth = 2;
-            this.buttonZ6.ButtonShape = Custom_Controls_in_CS.ButtonZ.ButtonsShapes.Rect;
-            this.buttonZ6.ButtonText = "";
-            this.buttonZ6.EndColor = System.Drawing.Color.MidnightBlue;
-            this.buttonZ6.FlatAppearance.BorderSize = 0;
-            this.buttonZ6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.buttonZ6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.buttonZ6, "buttonZ6");
-            this.buttonZ6.GradientAngle = 90;
-            this.buttonZ6.MouseClickColor1 = System.Drawing.Color.Yellow;
-            this.buttonZ6.MouseClickColor2 = System.Drawing.Color.Red;
-            this.buttonZ6.MouseHoverColor1 = System.Drawing.Color.Turquoise;
-            this.buttonZ6.MouseHoverColor2 = System.Drawing.Color.DarkSlateGray;
-            this.buttonZ6.Name = "buttonZ6";
-            this.buttonZ6.ShowButtontext = true;
-            this.buttonZ6.StartColor = System.Drawing.Color.DodgerBlue;
-            this.buttonZ6.TextLocation_X = 81;
-            this.buttonZ6.TextLocation_Y = 19;
-            this.buttonZ6.Transparent1 = 250;
-            this.buttonZ6.Transparent2 = 250;
-            this.buttonZ6.UseVisualStyleBackColor = false;
-            // 
-            // buttonZ3
-            // 
-            this.buttonZ3.BackColor = System.Drawing.Color.Transparent;
-            this.buttonZ3.BorderColor = System.Drawing.Color.Transparent;
-            this.buttonZ3.BorderWidth = 2;
-            this.buttonZ3.ButtonShape = Custom_Controls_in_CS.ButtonZ.ButtonsShapes.Rect;
-            this.buttonZ3.ButtonText = "";
-            this.buttonZ3.EndColor = System.Drawing.Color.MidnightBlue;
-            this.buttonZ3.FlatAppearance.BorderSize = 0;
-            this.buttonZ3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.buttonZ3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.buttonZ3, "buttonZ3");
-            this.buttonZ3.GradientAngle = 90;
-            this.buttonZ3.MouseClickColor1 = System.Drawing.Color.Yellow;
-            this.buttonZ3.MouseClickColor2 = System.Drawing.Color.Red;
-            this.buttonZ3.MouseHoverColor1 = System.Drawing.Color.Turquoise;
-            this.buttonZ3.MouseHoverColor2 = System.Drawing.Color.DarkSlateGray;
-            this.buttonZ3.Name = "buttonZ3";
-            this.buttonZ3.ShowButtontext = true;
-            this.buttonZ3.StartColor = System.Drawing.Color.DodgerBlue;
-            this.buttonZ3.TextLocation_X = 81;
-            this.buttonZ3.TextLocation_Y = 19;
-            this.buttonZ3.Transparent1 = 250;
-            this.buttonZ3.Transparent2 = 250;
-            this.buttonZ3.UseVisualStyleBackColor = false;
-            // 
-            // buttonZ4
-            // 
-            this.buttonZ4.BackColor = System.Drawing.Color.Transparent;
-            this.buttonZ4.BorderColor = System.Drawing.Color.Transparent;
-            this.buttonZ4.BorderWidth = 2;
-            this.buttonZ4.ButtonShape = Custom_Controls_in_CS.ButtonZ.ButtonsShapes.Rect;
-            this.buttonZ4.ButtonText = "";
-            this.buttonZ4.EndColor = System.Drawing.Color.MidnightBlue;
-            this.buttonZ4.FlatAppearance.BorderSize = 0;
-            this.buttonZ4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.buttonZ4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.buttonZ4, "buttonZ4");
-            this.buttonZ4.GradientAngle = 90;
-            this.buttonZ4.MouseClickColor1 = System.Drawing.Color.Yellow;
-            this.buttonZ4.MouseClickColor2 = System.Drawing.Color.Red;
-            this.buttonZ4.MouseHoverColor1 = System.Drawing.Color.Turquoise;
-            this.buttonZ4.MouseHoverColor2 = System.Drawing.Color.DarkSlateGray;
-            this.buttonZ4.Name = "buttonZ4";
-            this.buttonZ4.ShowButtontext = true;
-            this.buttonZ4.StartColor = System.Drawing.Color.DodgerBlue;
-            this.buttonZ4.TextLocation_X = 81;
-            this.buttonZ4.TextLocation_Y = 19;
-            this.buttonZ4.Transparent1 = 250;
-            this.buttonZ4.Transparent2 = 250;
-            this.buttonZ4.UseVisualStyleBackColor = false;
-            // 
-            // buttonZ2
-            // 
-            this.buttonZ2.BackColor = System.Drawing.Color.Transparent;
-            this.buttonZ2.BorderColor = System.Drawing.Color.Transparent;
-            this.buttonZ2.BorderWidth = 2;
-            this.buttonZ2.ButtonShape = Custom_Controls_in_CS.ButtonZ.ButtonsShapes.Rect;
-            this.buttonZ2.ButtonText = "";
-            this.buttonZ2.EndColor = System.Drawing.Color.MidnightBlue;
-            this.buttonZ2.FlatAppearance.BorderSize = 0;
-            this.buttonZ2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.buttonZ2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.buttonZ2, "buttonZ2");
-            this.buttonZ2.GradientAngle = 90;
-            this.buttonZ2.MouseClickColor1 = System.Drawing.Color.Yellow;
-            this.buttonZ2.MouseClickColor2 = System.Drawing.Color.Red;
-            this.buttonZ2.MouseHoverColor1 = System.Drawing.Color.Turquoise;
-            this.buttonZ2.MouseHoverColor2 = System.Drawing.Color.DarkSlateGray;
-            this.buttonZ2.Name = "buttonZ2";
-            this.buttonZ2.ShowButtontext = true;
-            this.buttonZ2.StartColor = System.Drawing.Color.DodgerBlue;
-            this.buttonZ2.TextLocation_X = 81;
-            this.buttonZ2.TextLocation_Y = 19;
-            this.buttonZ2.Transparent1 = 250;
-            this.buttonZ2.Transparent2 = 250;
-            this.buttonZ2.UseVisualStyleBackColor = false;
-            // 
-            // buttonZ1
-            // 
-            this.buttonZ1.BackColor = System.Drawing.Color.Transparent;
-            this.buttonZ1.BorderColor = System.Drawing.Color.Transparent;
-            this.buttonZ1.BorderWidth = 2;
-            this.buttonZ1.ButtonShape = Custom_Controls_in_CS.ButtonZ.ButtonsShapes.Rect;
-            this.buttonZ1.ButtonText = "";
-            this.buttonZ1.EndColor = System.Drawing.Color.MidnightBlue;
-            this.buttonZ1.FlatAppearance.BorderSize = 0;
-            this.buttonZ1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.buttonZ1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.buttonZ1, "buttonZ1");
-            this.buttonZ1.GradientAngle = 90;
-            this.buttonZ1.MouseClickColor1 = System.Drawing.Color.Yellow;
-            this.buttonZ1.MouseClickColor2 = System.Drawing.Color.Red;
-            this.buttonZ1.MouseHoverColor1 = System.Drawing.Color.Turquoise;
-            this.buttonZ1.MouseHoverColor2 = System.Drawing.Color.DarkSlateGray;
-            this.buttonZ1.Name = "buttonZ1";
-            this.buttonZ1.ShowButtontext = true;
-            this.buttonZ1.StartColor = System.Drawing.Color.DodgerBlue;
-            this.buttonZ1.TextLocation_X = 81;
-            this.buttonZ1.TextLocation_Y = 19;
-            this.buttonZ1.Transparent1 = 250;
-            this.buttonZ1.Transparent2 = 250;
-            this.buttonZ1.UseVisualStyleBackColor = false;
-            // 
-            // panelZ3
-            // 
-            this.panelZ3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panelZ3.Controls.Add(this.DataGridView2);
-            this.panelZ3.Controls.Add(this.label42);
-            this.panelZ3.Controls.Add(this.button9);
-            this.panelZ3.Controls.Add(this.label41);
-            this.panelZ3.Controls.Add(this.label40);
-            this.panelZ3.Controls.Add(this.Updatebtn);
-            this.panelZ3.Controls.Add(this.label39);
-            this.panelZ3.Controls.Add(this.PIBTextBox);
-            this.panelZ3.Controls.Add(this.DatetextboxTo);
-            this.panelZ3.Controls.Add(this.DoctortextBox);
-            this.panelZ3.Controls.Add(this.DatetextBoxFrom);
-            this.panelZ3.EndColor = System.Drawing.Color.DarkBlue;
-            this.panelZ3.GradientAngle = 90;
-            resources.ApplyResources(this.panelZ3, "panelZ3");
-            this.panelZ3.Name = "panelZ3";
-            this.panelZ3.StartColor = System.Drawing.Color.SteelBlue;
-            this.panelZ3.Transparent1 = 150;
-            this.panelZ3.Transparent2 = 150;
-            // 
-            // DataGridView2
-            // 
-            this.DataGridView2.AllowUserToAddRows = false;
-            this.DataGridView2.AllowUserToDeleteRows = false;
-            this.DataGridView2.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Id_reception,
-            this.PIB,
-            this.pacientbrth,
-            this.pacientnmb,
-            this.Doctor,
-            this.dateApp,
-            this.price});
-            resources.ApplyResources(this.DataGridView2, "DataGridView2");
-            this.DataGridView2.Name = "DataGridView2";
-            this.DataGridView2.ReadOnly = true;
-            // 
-            // Id_reception
-            // 
-            resources.ApplyResources(this.Id_reception, "Id_reception");
-            this.Id_reception.Name = "Id_reception";
-            this.Id_reception.ReadOnly = true;
-            // 
-            // PIB
-            // 
-            this.PIB.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            resources.ApplyResources(this.PIB, "PIB");
-            this.PIB.Name = "PIB";
-            this.PIB.ReadOnly = true;
-            // 
-            // pacientbrth
-            // 
-            this.pacientbrth.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            resources.ApplyResources(this.pacientbrth, "pacientbrth");
-            this.pacientbrth.Name = "pacientbrth";
-            this.pacientbrth.ReadOnly = true;
-            // 
-            // pacientnmb
-            // 
-            resources.ApplyResources(this.pacientnmb, "pacientnmb");
-            this.pacientnmb.Name = "pacientnmb";
-            this.pacientnmb.ReadOnly = true;
-            // 
-            // Doctor
-            // 
-            this.Doctor.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            resources.ApplyResources(this.Doctor, "Doctor");
-            this.Doctor.Name = "Doctor";
-            this.Doctor.ReadOnly = true;
-            // 
-            // dateApp
-            // 
-            this.dateApp.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            resources.ApplyResources(this.dateApp, "dateApp");
-            this.dateApp.Name = "dateApp";
-            this.dateApp.ReadOnly = true;
-            // 
-            // price
-            // 
-            this.price.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            resources.ApplyResources(this.price, "price");
-            this.price.Name = "price";
-            this.price.ReadOnly = true;
-            // 
-            // label42
-            // 
-            resources.ApplyResources(this.label42, "label42");
-            this.label42.Name = "label42";
-            // 
-            // button9
-            // 
-            resources.ApplyResources(this.button9, "button9");
-            this.button9.Name = "button9";
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
-            // 
-            // label41
-            // 
-            resources.ApplyResources(this.label41, "label41");
-            this.label41.Name = "label41";
-            // 
-            // label40
-            // 
-            resources.ApplyResources(this.label40, "label40");
-            this.label40.Name = "label40";
-            // 
-            // Updatebtn
-            // 
-            resources.ApplyResources(this.Updatebtn, "Updatebtn");
-            this.Updatebtn.Name = "Updatebtn";
-            this.Updatebtn.UseVisualStyleBackColor = true;
-            this.Updatebtn.Click += new System.EventHandler(this.Updatebtn_Click);
-            // 
-            // label39
-            // 
-            resources.ApplyResources(this.label39, "label39");
-            this.label39.Name = "label39";
-            // 
-            // PIBTextBox
-            // 
-            resources.ApplyResources(this.PIBTextBox, "PIBTextBox");
-            this.PIBTextBox.Name = "PIBTextBox";
-            // 
-            // DatetextboxTo
-            // 
-            resources.ApplyResources(this.DatetextboxTo, "DatetextboxTo");
-            this.DatetextboxTo.Name = "DatetextboxTo";
-            // 
-            // DoctortextBox
-            // 
-            resources.ApplyResources(this.DoctortextBox, "DoctortextBox");
-            this.DoctortextBox.Name = "DoctortextBox";
-            // 
-            // DatetextBoxFrom
-            // 
-            resources.ApplyResources(this.DatetextBoxFrom, "DatetextBoxFrom");
-            this.DatetextBoxFrom.Name = "DatetextBoxFrom";
             // 
             // tabPage2
             // 
@@ -1351,6 +939,13 @@
             resources.ApplyResources(this.tabPage2, "tabPage2");
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // miniToolStrip
+            // 
+            this.miniToolStrip.AccessibleRole = System.Windows.Forms.AccessibleRole.ComboBox;
+            this.miniToolStrip.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.miniToolStrip, "miniToolStrip");
+            this.miniToolStrip.Name = "miniToolStrip";
             // 
             // pnlTop
             // 
@@ -1442,13 +1037,6 @@
             this.btnMainMenu.UseVisualStyleBackColor = false;
             this.btnMainMenu.Click += new System.EventHandler(this.button5_Click);
             // 
-            // miniToolStrip
-            // 
-            this.miniToolStrip.AccessibleRole = System.Windows.Forms.AccessibleRole.ComboBox;
-            this.miniToolStrip.BackColor = System.Drawing.Color.White;
-            resources.ApplyResources(this.miniToolStrip, "miniToolStrip");
-            this.miniToolStrip.Name = "miniToolStrip";
-            // 
             // pnlBot
             // 
             this.pnlBot.Controls.Add(this.btnExit);
@@ -1469,26 +1057,372 @@
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.buttonZ1_Click);
             // 
-            // panelZ1
+            // pnlRegistry
             // 
-            this.panelZ1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panelZ1.Controls.Add(this.pnlBot);
-            this.panelZ1.Controls.Add(this.pnlTop);
-            resources.ApplyResources(this.panelZ1, "panelZ1");
-            this.panelZ1.EndColor = System.Drawing.Color.Black;
-            this.panelZ1.GradientAngle = 90;
-            this.panelZ1.Name = "panelZ1";
-            this.panelZ1.StartColor = System.Drawing.Color.Black;
-            this.panelZ1.Transparent1 = 255;
-            this.panelZ1.Transparent2 = 150;
+            this.pnlRegistry.Controls.Add(this.EditPatient);
+            this.pnlRegistry.Controls.Add(this.AddNewPatient);
+            this.pnlRegistry.Controls.Add(this.AddNewAppoinment);
+            resources.ApplyResources(this.pnlRegistry, "pnlRegistry");
+            this.pnlRegistry.EndColor = System.Drawing.Color.DarkGray;
+            this.pnlRegistry.GradientAngle = 90;
+            this.pnlRegistry.Name = "pnlRegistry";
+            this.pnlRegistry.StartColor = System.Drawing.Color.White;
+            this.pnlRegistry.Transparent1 = 150;
+            this.pnlRegistry.Transparent2 = 150;
+            // 
+            // EditPatient
+            // 
+            this.EditPatient.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            resources.ApplyResources(this.EditPatient, "EditPatient");
+            this.EditPatient.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.EditPatient.Name = "EditPatient";
+            this.EditPatient.UseVisualStyleBackColor = false;
+            this.EditPatient.Click += new System.EventHandler(this.EditPatient_Click);
+            // 
+            // AddNewPatient
+            // 
+            resources.ApplyResources(this.AddNewPatient, "AddNewPatient");
+            this.AddNewPatient.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.AddNewPatient.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.AddNewPatient.Name = "AddNewPatient";
+            this.AddNewPatient.UseVisualStyleBackColor = false;
+            this.AddNewPatient.Click += new System.EventHandler(this.AddNewPatient_Click);
+            // 
+            // AddNewAppoinment
+            // 
+            this.AddNewAppoinment.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            resources.ApplyResources(this.AddNewAppoinment, "AddNewAppoinment");
+            this.AddNewAppoinment.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.AddNewAppoinment.Name = "AddNewAppoinment";
+            this.AddNewAppoinment.UseVisualStyleBackColor = false;
+            this.AddNewAppoinment.Click += new System.EventHandler(this.AddNewAppoinment_Click);
+            // 
+            // pnlButtons
+            // 
+            this.pnlButtons.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnlButtons.Controls.Add(this.btn6);
+            this.pnlButtons.Controls.Add(this.btn5);
+            this.pnlButtons.Controls.Add(this.btn4);
+            this.pnlButtons.Controls.Add(this.btn3);
+            this.pnlButtons.Controls.Add(this.btn2);
+            this.pnlButtons.Controls.Add(this.btn1);
+            this.pnlButtons.EndColor = System.Drawing.Color.CornflowerBlue;
+            this.pnlButtons.GradientAngle = 90;
+            resources.ApplyResources(this.pnlButtons, "pnlButtons");
+            this.pnlButtons.Name = "pnlButtons";
+            this.pnlButtons.StartColor = System.Drawing.Color.CornflowerBlue;
+            this.pnlButtons.Transparent1 = 250;
+            this.pnlButtons.Transparent2 = 250;
+            // 
+            // btn6
+            // 
+            this.btn6.BackColor = System.Drawing.Color.Transparent;
+            this.btn6.BorderColor = System.Drawing.Color.Transparent;
+            this.btn6.BorderWidth = 2;
+            this.btn6.ButtonShape = Custom_Controls_in_CS.ButtonZ.ButtonsShapes.Rect;
+            this.btn6.ButtonText = "";
+            this.btn6.EndColor = System.Drawing.Color.MidnightBlue;
+            this.btn6.FlatAppearance.BorderSize = 0;
+            this.btn6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.btn6, "btn6");
+            this.btn6.GradientAngle = 90;
+            this.btn6.MouseClickColor1 = System.Drawing.Color.Yellow;
+            this.btn6.MouseClickColor2 = System.Drawing.Color.Red;
+            this.btn6.MouseHoverColor1 = System.Drawing.Color.Turquoise;
+            this.btn6.MouseHoverColor2 = System.Drawing.Color.DarkSlateGray;
+            this.btn6.Name = "btn6";
+            this.btn6.ShowButtontext = true;
+            this.btn6.StartColor = System.Drawing.Color.DodgerBlue;
+            this.btn6.TextLocation_X = 81;
+            this.btn6.TextLocation_Y = 19;
+            this.btn6.Transparent1 = 250;
+            this.btn6.Transparent2 = 250;
+            this.btn6.UseVisualStyleBackColor = false;
+            // 
+            // btn5
+            // 
+            this.btn5.BackColor = System.Drawing.Color.Transparent;
+            this.btn5.BorderColor = System.Drawing.Color.Transparent;
+            this.btn5.BorderWidth = 2;
+            this.btn5.ButtonShape = Custom_Controls_in_CS.ButtonZ.ButtonsShapes.Rect;
+            this.btn5.ButtonText = "";
+            this.btn5.EndColor = System.Drawing.Color.MidnightBlue;
+            this.btn5.FlatAppearance.BorderSize = 0;
+            this.btn5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.btn5, "btn5");
+            this.btn5.GradientAngle = 90;
+            this.btn5.MouseClickColor1 = System.Drawing.Color.Yellow;
+            this.btn5.MouseClickColor2 = System.Drawing.Color.Red;
+            this.btn5.MouseHoverColor1 = System.Drawing.Color.Turquoise;
+            this.btn5.MouseHoverColor2 = System.Drawing.Color.DarkSlateGray;
+            this.btn5.Name = "btn5";
+            this.btn5.ShowButtontext = true;
+            this.btn5.StartColor = System.Drawing.Color.DodgerBlue;
+            this.btn5.TextLocation_X = 81;
+            this.btn5.TextLocation_Y = 19;
+            this.btn5.Transparent1 = 250;
+            this.btn5.Transparent2 = 250;
+            this.btn5.UseVisualStyleBackColor = false;
+            // 
+            // btn4
+            // 
+            this.btn4.BackColor = System.Drawing.Color.Transparent;
+            this.btn4.BorderColor = System.Drawing.Color.Transparent;
+            this.btn4.BorderWidth = 2;
+            this.btn4.ButtonShape = Custom_Controls_in_CS.ButtonZ.ButtonsShapes.Rect;
+            this.btn4.ButtonText = "";
+            this.btn4.EndColor = System.Drawing.Color.MidnightBlue;
+            this.btn4.FlatAppearance.BorderSize = 0;
+            this.btn4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.btn4, "btn4");
+            this.btn4.GradientAngle = 90;
+            this.btn4.MouseClickColor1 = System.Drawing.Color.Yellow;
+            this.btn4.MouseClickColor2 = System.Drawing.Color.Red;
+            this.btn4.MouseHoverColor1 = System.Drawing.Color.Turquoise;
+            this.btn4.MouseHoverColor2 = System.Drawing.Color.DarkSlateGray;
+            this.btn4.Name = "btn4";
+            this.btn4.ShowButtontext = true;
+            this.btn4.StartColor = System.Drawing.Color.DodgerBlue;
+            this.btn4.TextLocation_X = 81;
+            this.btn4.TextLocation_Y = 19;
+            this.btn4.Transparent1 = 250;
+            this.btn4.Transparent2 = 250;
+            this.btn4.UseVisualStyleBackColor = false;
+            // 
+            // btn3
+            // 
+            this.btn3.BackColor = System.Drawing.Color.Transparent;
+            this.btn3.BorderColor = System.Drawing.Color.Transparent;
+            this.btn3.BorderWidth = 2;
+            this.btn3.ButtonShape = Custom_Controls_in_CS.ButtonZ.ButtonsShapes.Rect;
+            this.btn3.ButtonText = "";
+            this.btn3.EndColor = System.Drawing.Color.MidnightBlue;
+            this.btn3.FlatAppearance.BorderSize = 0;
+            this.btn3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.btn3, "btn3");
+            this.btn3.GradientAngle = 90;
+            this.btn3.MouseClickColor1 = System.Drawing.Color.Yellow;
+            this.btn3.MouseClickColor2 = System.Drawing.Color.Red;
+            this.btn3.MouseHoverColor1 = System.Drawing.Color.Turquoise;
+            this.btn3.MouseHoverColor2 = System.Drawing.Color.DarkSlateGray;
+            this.btn3.Name = "btn3";
+            this.btn3.ShowButtontext = true;
+            this.btn3.StartColor = System.Drawing.Color.DodgerBlue;
+            this.btn3.TextLocation_X = 81;
+            this.btn3.TextLocation_Y = 19;
+            this.btn3.Transparent1 = 250;
+            this.btn3.Transparent2 = 250;
+            this.btn3.UseVisualStyleBackColor = false;
+            // 
+            // btn2
+            // 
+            this.btn2.BackColor = System.Drawing.Color.Transparent;
+            this.btn2.BorderColor = System.Drawing.Color.Transparent;
+            this.btn2.BorderWidth = 2;
+            this.btn2.ButtonShape = Custom_Controls_in_CS.ButtonZ.ButtonsShapes.Rect;
+            this.btn2.ButtonText = "";
+            this.btn2.EndColor = System.Drawing.Color.MidnightBlue;
+            this.btn2.FlatAppearance.BorderSize = 0;
+            this.btn2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.btn2, "btn2");
+            this.btn2.GradientAngle = 90;
+            this.btn2.MouseClickColor1 = System.Drawing.Color.Yellow;
+            this.btn2.MouseClickColor2 = System.Drawing.Color.Red;
+            this.btn2.MouseHoverColor1 = System.Drawing.Color.Turquoise;
+            this.btn2.MouseHoverColor2 = System.Drawing.Color.DarkSlateGray;
+            this.btn2.Name = "btn2";
+            this.btn2.ShowButtontext = true;
+            this.btn2.StartColor = System.Drawing.Color.DodgerBlue;
+            this.btn2.TextLocation_X = 81;
+            this.btn2.TextLocation_Y = 19;
+            this.btn2.Transparent1 = 250;
+            this.btn2.Transparent2 = 250;
+            this.btn2.UseVisualStyleBackColor = false;
+            // 
+            // btn1
+            // 
+            this.btn1.BackColor = System.Drawing.Color.Transparent;
+            this.btn1.BorderColor = System.Drawing.Color.Transparent;
+            this.btn1.BorderWidth = 2;
+            this.btn1.ButtonShape = Custom_Controls_in_CS.ButtonZ.ButtonsShapes.Rect;
+            this.btn1.ButtonText = "";
+            this.btn1.EndColor = System.Drawing.Color.DarkGray;
+            this.btn1.FlatAppearance.BorderSize = 0;
+            this.btn1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.btn1, "btn1");
+            this.btn1.GradientAngle = 90;
+            this.btn1.MouseClickColor1 = System.Drawing.Color.Yellow;
+            this.btn1.MouseClickColor2 = System.Drawing.Color.Red;
+            this.btn1.MouseHoverColor1 = System.Drawing.Color.Turquoise;
+            this.btn1.MouseHoverColor2 = System.Drawing.Color.DarkSlateGray;
+            this.btn1.Name = "btn1";
+            this.btn1.ShowButtontext = true;
+            this.btn1.StartColor = System.Drawing.Color.White;
+            this.btn1.TextLocation_X = 81;
+            this.btn1.TextLocation_Y = 19;
+            this.btn1.Transparent1 = 250;
+            this.btn1.Transparent2 = 250;
+            this.btn1.UseVisualStyleBackColor = false;
+            // 
+            // pnlDataGrid
+            // 
+            this.pnlDataGrid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnlDataGrid.Controls.Add(this.DataGridView2);
+            this.pnlDataGrid.Controls.Add(this.lblDoc);
+            this.pnlDataGrid.Controls.Add(this.button9);
+            this.pnlDataGrid.Controls.Add(this.lblDateFrom);
+            this.pnlDataGrid.Controls.Add(this.lblDateTo);
+            this.pnlDataGrid.Controls.Add(this.Updatebtn);
+            this.pnlDataGrid.Controls.Add(this.lblName);
+            this.pnlDataGrid.Controls.Add(this.PIBTextBox);
+            this.pnlDataGrid.Controls.Add(this.DatetextboxTo);
+            this.pnlDataGrid.Controls.Add(this.DoctortextBox);
+            this.pnlDataGrid.Controls.Add(this.DatetextBoxFrom);
+            this.pnlDataGrid.EndColor = System.Drawing.Color.CornflowerBlue;
+            this.pnlDataGrid.GradientAngle = 90;
+            resources.ApplyResources(this.pnlDataGrid, "pnlDataGrid");
+            this.pnlDataGrid.Name = "pnlDataGrid";
+            this.pnlDataGrid.StartColor = System.Drawing.Color.CornflowerBlue;
+            this.pnlDataGrid.Transparent1 = 250;
+            this.pnlDataGrid.Transparent2 = 250;
+            // 
+            // DataGridView2
+            // 
+            this.DataGridView2.AllowUserToAddRows = false;
+            this.DataGridView2.AllowUserToDeleteRows = false;
+            this.DataGridView2.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Id_reception,
+            this.PIB,
+            this.pacientbrth,
+            this.pacientnmb,
+            this.Doctor,
+            this.dateApp,
+            this.price});
+            resources.ApplyResources(this.DataGridView2, "DataGridView2");
+            this.DataGridView2.Name = "DataGridView2";
+            this.DataGridView2.ReadOnly = true;
+            // 
+            // Id_reception
+            // 
+            resources.ApplyResources(this.Id_reception, "Id_reception");
+            this.Id_reception.Name = "Id_reception";
+            this.Id_reception.ReadOnly = true;
+            // 
+            // PIB
+            // 
+            this.PIB.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            resources.ApplyResources(this.PIB, "PIB");
+            this.PIB.Name = "PIB";
+            this.PIB.ReadOnly = true;
+            // 
+            // pacientbrth
+            // 
+            this.pacientbrth.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            resources.ApplyResources(this.pacientbrth, "pacientbrth");
+            this.pacientbrth.Name = "pacientbrth";
+            this.pacientbrth.ReadOnly = true;
+            // 
+            // pacientnmb
+            // 
+            resources.ApplyResources(this.pacientnmb, "pacientnmb");
+            this.pacientnmb.Name = "pacientnmb";
+            this.pacientnmb.ReadOnly = true;
+            // 
+            // Doctor
+            // 
+            this.Doctor.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            resources.ApplyResources(this.Doctor, "Doctor");
+            this.Doctor.Name = "Doctor";
+            this.Doctor.ReadOnly = true;
+            // 
+            // dateApp
+            // 
+            this.dateApp.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            resources.ApplyResources(this.dateApp, "dateApp");
+            this.dateApp.Name = "dateApp";
+            this.dateApp.ReadOnly = true;
+            // 
+            // price
+            // 
+            this.price.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            resources.ApplyResources(this.price, "price");
+            this.price.Name = "price";
+            this.price.ReadOnly = true;
+            // 
+            // lblDoc
+            // 
+            resources.ApplyResources(this.lblDoc, "lblDoc");
+            this.lblDoc.ForeColor = System.Drawing.Color.White;
+            this.lblDoc.Name = "lblDoc";
+            // 
+            // button9
+            // 
+            resources.ApplyResources(this.button9, "button9");
+            this.button9.Name = "button9";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // lblDateFrom
+            // 
+            resources.ApplyResources(this.lblDateFrom, "lblDateFrom");
+            this.lblDateFrom.ForeColor = System.Drawing.Color.White;
+            this.lblDateFrom.Name = "lblDateFrom";
+            // 
+            // lblDateTo
+            // 
+            resources.ApplyResources(this.lblDateTo, "lblDateTo");
+            this.lblDateTo.ForeColor = System.Drawing.Color.White;
+            this.lblDateTo.Name = "lblDateTo";
+            // 
+            // Updatebtn
+            // 
+            resources.ApplyResources(this.Updatebtn, "Updatebtn");
+            this.Updatebtn.Name = "Updatebtn";
+            this.Updatebtn.UseVisualStyleBackColor = true;
+            this.Updatebtn.Click += new System.EventHandler(this.Updatebtn_Click);
+            // 
+            // lblName
+            // 
+            resources.ApplyResources(this.lblName, "lblName");
+            this.lblName.ForeColor = System.Drawing.Color.White;
+            this.lblName.Name = "lblName";
+            // 
+            // PIBTextBox
+            // 
+            resources.ApplyResources(this.PIBTextBox, "PIBTextBox");
+            this.PIBTextBox.Name = "PIBTextBox";
+            // 
+            // DatetextboxTo
+            // 
+            resources.ApplyResources(this.DatetextboxTo, "DatetextboxTo");
+            this.DatetextboxTo.Name = "DatetextboxTo";
+            // 
+            // DoctortextBox
+            // 
+            resources.ApplyResources(this.DoctortextBox, "DoctortextBox");
+            this.DoctortextBox.Name = "DoctortextBox";
+            // 
+            // DatetextBoxFrom
+            // 
+            resources.ApplyResources(this.DatetextBoxFrom, "DatetextBoxFrom");
+            this.DatetextBoxFrom.Name = "DatetextBoxFrom";
             // 
             // Main
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.BackColor = System.Drawing.Color.Black;
             resources.ApplyResources(this, "$this");
+            this.Controls.Add(this.pnlTop);
+            this.Controls.Add(this.pnlBot);
             this.Controls.Add(this.TabControl);
-            this.Controls.Add(this.panelZ1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.HelpButton = true;
             this.MainMenuStrip = this.miniToolStrip;
@@ -1503,19 +1437,18 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TeethPanel)).EndInit();
-            this.panelZ2.ResumeLayout(false);
             this.TabControl.ResumeLayout(false);
             this.tabFinance.ResumeLayout(false);
-            this.panelZ4.ResumeLayout(false);
-            this.panelZ3.ResumeLayout(false);
-            this.panelZ3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DataGridView2)).EndInit();
             this.pnlTop.ResumeLayout(false);
             this.pnlTop.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.pnlBot.ResumeLayout(false);
-            this.panelZ1.ResumeLayout(false);
+            this.pnlRegistry.ResumeLayout(false);
+            this.pnlButtons.ResumeLayout(false);
+            this.pnlDataGrid.ResumeLayout(false);
+            this.pnlDataGrid.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridView2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1632,10 +1565,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Doctor;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateApp;
         private System.Windows.Forms.DataGridViewTextBoxColumn price;
-        private System.Windows.Forms.Label label42;
-        private System.Windows.Forms.Label label41;
-        private System.Windows.Forms.Label label40;
-        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.Label lblDoc;
+        private System.Windows.Forms.Label lblDateFrom;
+        private System.Windows.Forms.Label lblDateTo;
+        private System.Windows.Forms.Label lblName;
         public System.Windows.Forms.Button button9;
         private System.Windows.Forms.CheckBox cbArrears;
         private System.Windows.Forms.ListBox lbChanels;
@@ -1646,8 +1579,19 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn number;
        // private CustomWindowsForm.ButtonZ _CloseButton;
         private System.Windows.Forms.TabPage tabPage2;
-        private PanelZ.PanelZ panelZ2;
+        private PanelZ.PanelZ pnlRegistry;
+        private System.Windows.Forms.MenuStrip miniToolStrip;
+        private PanelZ.PanelZ pnlButtons;
+        private Custom_Controls_in_CS.ButtonZ btn6;
+        private Custom_Controls_in_CS.ButtonZ btn5;
+        private Custom_Controls_in_CS.ButtonZ btn4;
+        private Custom_Controls_in_CS.ButtonZ btn3;
+        private Custom_Controls_in_CS.ButtonZ btn2;
+        private Custom_Controls_in_CS.ButtonZ btn1;
+        private PanelZ.PanelZ pnlDataGrid;
         private PanelZ.PanelZ pnlTop;
+        private System.Windows.Forms.Button btnAccount;
+        private System.Windows.Forms.Button btnAccountPhoto;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem справкаToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tsmiUserInfo;
@@ -1656,22 +1600,8 @@
         private System.Windows.Forms.ToolStripMenuItem tsmiContacts;
         private System.Windows.Forms.ToolStripMenuItem tsmiRemoteControl;
         private System.Windows.Forms.Button btnMainMenu;
-        private System.Windows.Forms.MenuStrip miniToolStrip;
         private PanelZ.PanelZ pnlBot;
         private System.Windows.Forms.Button btnExit;
-        private PanelZ.PanelZ panelZ1;
-        private System.Windows.Forms.Button btnAccount;
-        private System.Windows.Forms.Button btnAccountPhoto;
-        private PanelZ.PanelZ panelZ4;
-        private Custom_Controls_in_CS.ButtonZ buttonZ7;
-        private Custom_Controls_in_CS.ButtonZ buttonZ8;
-        private Custom_Controls_in_CS.ButtonZ buttonZ5;
-        private Custom_Controls_in_CS.ButtonZ buttonZ6;
-        private Custom_Controls_in_CS.ButtonZ buttonZ3;
-        private Custom_Controls_in_CS.ButtonZ buttonZ4;
-        private Custom_Controls_in_CS.ButtonZ buttonZ2;
-        private Custom_Controls_in_CS.ButtonZ buttonZ1;
-        private PanelZ.PanelZ panelZ3;
     }
 }
 
