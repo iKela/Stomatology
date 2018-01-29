@@ -72,7 +72,7 @@ namespace Stomatology
         private void onlyCyrillic(object sender, KeyPressEventArgs e)
         {
             char letter = e.KeyChar;
-            if ((letter < 'A' || letter > 'Z') && letter != '\b' && letter != '.' && letter != ' ')
+            if ((letter < 'A' || letter > 'z') && letter != '\b' && !Char.IsDigit(letter))
             {
                 e.Handled = true;
             }
