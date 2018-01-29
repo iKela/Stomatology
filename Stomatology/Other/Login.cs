@@ -68,23 +68,13 @@ namespace Stomatology
 
         private void Login_Load(object sender, EventArgs e)
         {
-            //string query1 = $"SELECT Login, Password From Users";
-            //testCon.Open();
-            //SqlDataReader sqlReader = null;
-            //SqlCommand command = new SqlCommand(query1, testCon);
-            //sqlReader = command.ExecuteReader();
-            //while (sqlReader.Read())
-            //{
-            //    login = sqlReader["Login"].ToString();
-            //    password = sqlReader["Password"].ToString();
-            //}
            // MessageBox.Show("IP: " + GetUserIpByIp("")+ "\nHostname: " + GetUserHostnameByIp("") + "\nCity: " + GetUserCityByIp("") + "\nRegion: " + GetUserRegionByIp("") + "\nCountry: " + GetUserCountryByIp("") + "\nLocation: " + GetUserLocByIp("") + "\nOrganization: " + GetUserOrgByIp("") + "\nPostal: " + GetUserPostalByIp("") + "\nTime: " + DateTime.Now);
         }
 
         private void onlyCyrillic(object sender, KeyPressEventArgs e)
         {
             char letter = e.KeyChar;
-            if ((letter < 'A' || letter > 'Z') && letter != '\b' && letter != '.' && letter != ' ')
+            if ((letter < 'A' || letter > 'z') && letter != '\b')
             {
                 e.Handled = true;
             }
