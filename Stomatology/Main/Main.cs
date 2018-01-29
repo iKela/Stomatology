@@ -124,6 +124,35 @@ namespace Stomatology
 
                         break;
                     }
+                default:
+                    {
+                        if (this.BackColor != Color.CornflowerBlue)
+                        {
+                            this.BackColor = Color.CornflowerBlue;
+                            pnlRegistry.EndColor = Color.CornflowerBlue;
+                            pnlButtons.EndColor = Color.CornflowerBlue;
+                            pnlButtons.StartColor = Color.CornflowerBlue;
+                            pnlDataGrid.EndColor = Color.CornflowerBlue;
+                            pnlDataGrid.StartColor = Color.CornflowerBlue;
+                            btn1.EndColor = Color.CornflowerBlue;
+                            btn2.EndColor = Color.CornflowerBlue;
+                            btn3.EndColor = Color.CornflowerBlue;
+                            btn4.EndColor = Color.CornflowerBlue;
+                            btn5.EndColor = Color.CornflowerBlue;
+                            btn6.EndColor = Color.CornflowerBlue;
+                            btn1.StartColor = Color.White;
+                            btn2.StartColor = Color.White;
+                            btn3.StartColor = Color.White;
+                            btn4.StartColor = Color.White;
+                            btn5.StartColor = Color.White;
+                            btn6.StartColor = Color.White;
+                            lblName.ForeColor = Color.Black;
+                            lblDoc.ForeColor = Color.Black;
+                            lblDateFrom.ForeColor = Color.Black;
+                            lblDateTo.ForeColor = Color.Black;
+                        }
+                        break;
+                    }
             }
         }
 

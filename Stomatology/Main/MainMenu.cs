@@ -55,6 +55,14 @@ namespace Stomatology
                         }
                         break;
                     }
+                default:
+                    {
+                        if (BackColor != Color.CornflowerBlue)
+                        {
+                            this.BackColor = Color.CornflowerBlue;
+                        }
+                        break;
+                    }
             }
         }
         private void button9_Click(object sender, EventArgs e)

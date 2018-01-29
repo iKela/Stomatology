@@ -126,6 +126,30 @@ namespace Stomatology
                         
                         break;
                     }
+                default:
+                    {
+                        if (this.BackColor != Color.CornflowerBlue)
+                        {
+                            this.BackColor = Color.CornflowerBlue;
+
+                            button1.BackColor = Color.Transparent;
+                            button2.BackColor = Color.Transparent;
+                            button3.BackColor = Color.Transparent;
+                            button4.BackColor = Color.Transparent;
+                            button5.BackColor = Color.Transparent;
+                            button6.BackColor = Color.Transparent;
+                            lblNum.ForeColor = Color.Black;
+                            lblNumberCard.ForeColor = Color.Black;
+                            lblName.ForeColor = Color.Black;
+                            lblBirthday.ForeColor = Color.Black;
+                            lblPhoneNumber.ForeColor = Color.Black;
+                            lblAddress.ForeColor = Color.Black;
+                            lblDate.ForeColor = Color.Black;
+                            lblGender.ForeColor = Color.Black;
+                            lblGenderType.ForeColor = Color.Black;
+                        }
+                        break;
+                    }
             }
         }
 
