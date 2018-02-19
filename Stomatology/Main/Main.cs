@@ -967,67 +967,67 @@ namespace Stomatology
             {
                 case 1:
                     {
-                        this.TopLeftTextBox_8.Size = new System.Drawing.Size(21, 21);
+                        this.TopLeftTextBox_8.Size = new Size(21, 21);
                         break;
                     }
                 case 2:
                     {
-                        this.TopLeftTextBox_7.Size = new System.Drawing.Size(21, 21);
+                        this.TopLeftTextBox_7.Size = new Size(21, 21);
                         break;
                     }
                 case 3:
                     {
-                        this.TopLeftTextBox_6.Size = new System.Drawing.Size(21, 21);
+                        this.TopLeftTextBox_6.Size = new Size(21, 21);
                         break;
                     }
                 case 4:
                     {
-                        this.TopLeftTextBox_5.Size = new System.Drawing.Size(21, 21);
+                        this.TopLeftTextBox_5.Size = new Size(21, 21);
                         break;
                     }
                 case 5:
                     {
-                        this.TopLeftTextBox_4.Size = new System.Drawing.Size(21, 21);
+                        this.TopLeftTextBox_4.Size = new Size(21, 21);
                         break;
                     }
                 case 6:
                     {
-                        this.TopLeftTextBox_3.Size = new System.Drawing.Size(21, 21);
+                        this.TopLeftTextBox_3.Size = new Size(21, 21);
                         break;
                     }
                 case 7:
                     {
-                        this.TopLeftTextBox_2.Size = new System.Drawing.Size(21, 21);
+                        this.TopLeftTextBox_2.Size = new Size(21, 21);
                         break;
                     }
                 case 8:
                     {
-                        this.TopLeftTextBox_1.Size = new System.Drawing.Size(21, 21);
+                        this.TopLeftTextBox_1.Size = new Size(21, 21);
                         break;
                     }
                 case 9:
                     {
-                        this.TopRightTextBox_1.Size = new System.Drawing.Size(21, 21);
-                        break;
-                    }
-                case 10:
-                    {
-                        this.TopRightTextBox_2.Size = new System.Drawing.Size(21, 21);
-                        break;
-                    }
-                case 11:
-                    {
-                        this.TopRightTextBox_3.Size = new System.Drawing.Size(21, 21);
-                        break;
-                    }
-                case 12:
-                    {
-                        this.TopRightTextBox_4.Size = new System.Drawing.Size(21, 21);
-                        break;
-                    }
-                case 13:
-                    {
-                        this.TopRightTextBox_5.Size = new System.Drawing.Size(21, 21);
+                        this.TopRightTextBox_1.Size = new Size(21, 21);
+                        break;                            
+                    }                                     
+                case 10:                                  
+                    {                                     
+                        this.TopRightTextBox_2.Size = new Size(21, 21);
+                        break;                            
+                    }                                     
+                case 11:                                  
+                    {                                     
+                        this.TopRightTextBox_3.Size = new Size(21, 21);
+                        break;                            
+                    }                                     
+                case 12:                                  
+                    {                                     
+                        this.TopRightTextBox_4.Size = new Size(21, 21);
+                        break;                            
+                    }                                     
+                case 13:                                  
+                    {                                     
+                        this.TopRightTextBox_5.Size = new Size(21, 21);
                         break;
                     }
                 case 14:
@@ -1142,7 +1142,6 @@ namespace Stomatology
 
             MHIndex = 1;
             txtBoxMouseHover();
-
         }
 
         public void TopLeftTextBox_8_MouseLeave(object sender, EventArgs e)

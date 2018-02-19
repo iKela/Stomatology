@@ -287,10 +287,6 @@ namespace Stomatology
             DateUpdate();
             saveToWordFile();
         }
-        private void button7_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
         public void Buttonclear()
         {
             txtDiagnosis.Text = "";
@@ -488,7 +484,7 @@ namespace Stomatology
         private void onlyCyrillic(object sender, KeyPressEventArgs e)
         {
             char letter = e.KeyChar;
-            if ((letter < 'А' || letter > 'я') && letter != '.')
+            if ((letter < 'А' || letter > 'я') && letter != '.' && letter == '\b' && letter == (char)8)
             {
                 e.Handled = true;
             }
@@ -509,7 +505,20 @@ namespace Stomatology
         {
         }
 
-        private void buttonZ1_Click(object sender, EventArgs e)
+        private void cmbPacient_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbPacient_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Back && cmbPacient != null)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
         }

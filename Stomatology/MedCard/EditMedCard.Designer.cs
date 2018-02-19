@@ -36,10 +36,9 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.cmbPacient = new System.Windows.Forms.ComboBox();
             this.panelZ3 = new PanelZ.PanelZ();
-            this.btnSaveAs = new Custom_Controls_in_CS.ButtonZ();
             this.txtGender = new System.Windows.Forms.MaskedTextBox();
             this.panelZ2 = new PanelZ.PanelZ();
-            this.btnExit = new Custom_Controls_in_CS.ButtonZ();
+            this.btnClose = new Custom_Controls_in_CS.ButtonZ();
             this.lblNum = new System.Windows.Forms.Label();
             this.lblNumberCard = new System.Windows.Forms.Label();
             this.lblPhoneNumber = new System.Windows.Forms.Label();
@@ -150,6 +149,9 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.btnSaveAs = new Custom_Controls_in_CS.ButtonZ();
+            this.btnExit = new Custom_Controls_in_CS.ButtonZ();
+            this.SaveAs = new Custom_Controls_in_CS.ButtonZ();
             this.panelZ3.SuspendLayout();
             this.panelZ2.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -206,12 +208,14 @@
             this.cmbPacient.Name = "cmbPacient";
             this.cmbPacient.Size = new System.Drawing.Size(310, 21);
             this.cmbPacient.TabIndex = 1;
+            this.cmbPacient.SelectedIndexChanged += new System.EventHandler(this.cmbPacient_SelectedIndexChanged);
             this.cmbPacient.SelectedValueChanged += new System.EventHandler(this.cmbPacient_SelectedValueChanged);
+            this.cmbPacient.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cmbPacient_KeyDown);
             this.cmbPacient.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbPacient_KeyPress);
             // 
             // panelZ3
             // 
-            this.panelZ3.Controls.Add(this.btnSaveAs);
+            this.panelZ3.Controls.Add(this.SaveAs);
             this.panelZ3.EndColor = System.Drawing.Color.Black;
             this.panelZ3.GradientAngle = 90;
             this.panelZ3.Location = new System.Drawing.Point(0, 655);
@@ -221,38 +225,6 @@
             this.panelZ3.TabIndex = 341;
             this.panelZ3.Transparent1 = 150;
             this.panelZ3.Transparent2 = 150;
-            // 
-            // btnSaveAs
-            // 
-            this.btnSaveAs.BackColor = System.Drawing.Color.Transparent;
-            this.btnSaveAs.BorderColor = System.Drawing.Color.Transparent;
-            this.btnSaveAs.BorderWidth = 2;
-            this.btnSaveAs.ButtonShape = Custom_Controls_in_CS.ButtonZ.ButtonsShapes.RoundRect;
-            this.btnSaveAs.ButtonText = "Зберегти";
-            this.btnSaveAs.EndColor = System.Drawing.Color.White;
-            this.btnSaveAs.FlatAppearance.BorderSize = 0;
-            this.btnSaveAs.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnSaveAs.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnSaveAs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSaveAs.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnSaveAs.ForeColor = System.Drawing.Color.Black;
-            this.btnSaveAs.GradientAngle = 90;
-            this.btnSaveAs.Location = new System.Drawing.Point(232, 0);
-            this.btnSaveAs.MouseClickColor1 = System.Drawing.Color.Yellow;
-            this.btnSaveAs.MouseClickColor2 = System.Drawing.Color.Red;
-            this.btnSaveAs.MouseHoverColor1 = System.Drawing.Color.Turquoise;
-            this.btnSaveAs.MouseHoverColor2 = System.Drawing.Color.DarkSlateGray;
-            this.btnSaveAs.Name = "btnSaveAs";
-            this.btnSaveAs.ShowButtontext = true;
-            this.btnSaveAs.Size = new System.Drawing.Size(100, 40);
-            this.btnSaveAs.StartColor = System.Drawing.Color.Black;
-            this.btnSaveAs.TabIndex = 321;
-            this.btnSaveAs.TextLocation_X = 18;
-            this.btnSaveAs.TextLocation_Y = 10;
-            this.btnSaveAs.Transparent1 = 50;
-            this.btnSaveAs.Transparent2 = 250;
-            this.btnSaveAs.UseVisualStyleBackColor = false;
-            this.btnSaveAs.Click += new System.EventHandler(this.SaveAs_Click);
             // 
             // txtGender
             // 
@@ -266,7 +238,7 @@
             // 
             // panelZ2
             // 
-            this.panelZ2.Controls.Add(this.btnExit);
+            this.panelZ2.Controls.Add(this.btnClose);
             this.panelZ2.EndColor = System.Drawing.Color.White;
             this.panelZ2.GradientAngle = 90;
             this.panelZ2.Location = new System.Drawing.Point(0, 0);
@@ -277,38 +249,38 @@
             this.panelZ2.Transparent1 = 150;
             this.panelZ2.Transparent2 = 150;
             // 
-            // btnExit
+            // btnClose
             // 
-            this.btnExit.BackColor = System.Drawing.Color.Transparent;
-            this.btnExit.BorderColor = System.Drawing.Color.Transparent;
-            this.btnExit.BorderWidth = 1;
-            this.btnExit.ButtonShape = Custom_Controls_in_CS.ButtonZ.ButtonsShapes.Rect;
-            this.btnExit.ButtonText = "X";
-            this.btnExit.EndColor = System.Drawing.Color.Black;
-            this.btnExit.FlatAppearance.BorderSize = 0;
-            this.btnExit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.GradientAngle = 90;
-            this.btnExit.Location = new System.Drawing.Point(535, 3);
-            this.btnExit.MouseClickColor1 = System.Drawing.Color.Red;
-            this.btnExit.MouseClickColor2 = System.Drawing.Color.Red;
-            this.btnExit.MouseHoverColor1 = System.Drawing.Color.Black;
-            this.btnExit.MouseHoverColor2 = System.Drawing.Color.Black;
-            this.btnExit.Name = "btnExit";
-            this.btnExit.ShowButtontext = true;
-            this.btnExit.Size = new System.Drawing.Size(35, 25);
-            this.btnExit.StartColor = System.Drawing.Color.Black;
-            this.btnExit.TabIndex = 1;
-            this.btnExit.Text = "X";
-            this.btnExit.TextLocation_X = 10;
-            this.btnExit.TextLocation_Y = 4;
-            this.btnExit.Transparent1 = 250;
-            this.btnExit.Transparent2 = 250;
-            this.btnExit.UseVisualStyleBackColor = false;
-            this.btnExit.Click += new System.EventHandler(this.buttonZ1_Click);
+            this.btnClose.BackColor = System.Drawing.Color.Transparent;
+            this.btnClose.BorderColor = System.Drawing.Color.Transparent;
+            this.btnClose.BorderWidth = 1;
+            this.btnClose.ButtonShape = Custom_Controls_in_CS.ButtonZ.ButtonsShapes.Rect;
+            this.btnClose.ButtonText = "X";
+            this.btnClose.EndColor = System.Drawing.Color.Black;
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnClose.ForeColor = System.Drawing.Color.White;
+            this.btnClose.GradientAngle = 90;
+            this.btnClose.Location = new System.Drawing.Point(535, 3);
+            this.btnClose.MouseClickColor1 = System.Drawing.Color.Red;
+            this.btnClose.MouseClickColor2 = System.Drawing.Color.Red;
+            this.btnClose.MouseHoverColor1 = System.Drawing.Color.Black;
+            this.btnClose.MouseHoverColor2 = System.Drawing.Color.Black;
+            this.btnClose.Name = "btnClose";
+            this.btnClose.ShowButtontext = true;
+            this.btnClose.Size = new System.Drawing.Size(35, 25);
+            this.btnClose.StartColor = System.Drawing.Color.Black;
+            this.btnClose.TabIndex = 2;
+            this.btnClose.Text = "X";
+            this.btnClose.TextLocation_X = 10;
+            this.btnClose.TextLocation_Y = 4;
+            this.btnClose.Transparent1 = 250;
+            this.btnClose.Transparent2 = 250;
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // lblNum
             // 
@@ -1476,6 +1448,102 @@
             this.button1.TabIndex = 335;
             this.button1.UseVisualStyleBackColor = false;
             // 
+            // btnSaveAs
+            // 
+            this.btnSaveAs.BackColor = System.Drawing.Color.Transparent;
+            this.btnSaveAs.BorderColor = System.Drawing.Color.Transparent;
+            this.btnSaveAs.BorderWidth = 2;
+            this.btnSaveAs.ButtonShape = Custom_Controls_in_CS.ButtonZ.ButtonsShapes.RoundRect;
+            this.btnSaveAs.ButtonText = "Зберегти";
+            this.btnSaveAs.EndColor = System.Drawing.Color.White;
+            this.btnSaveAs.FlatAppearance.BorderSize = 0;
+            this.btnSaveAs.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnSaveAs.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnSaveAs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSaveAs.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnSaveAs.ForeColor = System.Drawing.Color.Black;
+            this.btnSaveAs.GradientAngle = 90;
+            this.btnSaveAs.Location = new System.Drawing.Point(232, 0);
+            this.btnSaveAs.MouseClickColor1 = System.Drawing.Color.Yellow;
+            this.btnSaveAs.MouseClickColor2 = System.Drawing.Color.Red;
+            this.btnSaveAs.MouseHoverColor1 = System.Drawing.Color.Turquoise;
+            this.btnSaveAs.MouseHoverColor2 = System.Drawing.Color.DarkSlateGray;
+            this.btnSaveAs.Name = "btnSaveAs";
+            this.btnSaveAs.ShowButtontext = true;
+            this.btnSaveAs.Size = new System.Drawing.Size(100, 40);
+            this.btnSaveAs.StartColor = System.Drawing.Color.Black;
+            this.btnSaveAs.TabIndex = 321;
+            this.btnSaveAs.TextLocation_X = 18;
+            this.btnSaveAs.TextLocation_Y = 10;
+            this.btnSaveAs.Transparent1 = 50;
+            this.btnSaveAs.Transparent2 = 250;
+            this.btnSaveAs.UseVisualStyleBackColor = false;
+            this.btnSaveAs.Click += new System.EventHandler(this.SaveAs_Click);
+            // 
+            // btnExit
+            // 
+            this.btnExit.BackColor = System.Drawing.Color.Transparent;
+            this.btnExit.BorderColor = System.Drawing.Color.Transparent;
+            this.btnExit.BorderWidth = 1;
+            this.btnExit.ButtonShape = Custom_Controls_in_CS.ButtonZ.ButtonsShapes.Rect;
+            this.btnExit.ButtonText = "X";
+            this.btnExit.EndColor = System.Drawing.Color.Black;
+            this.btnExit.FlatAppearance.BorderSize = 0;
+            this.btnExit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnExit.ForeColor = System.Drawing.Color.White;
+            this.btnExit.GradientAngle = 90;
+            this.btnExit.Location = new System.Drawing.Point(535, 3);
+            this.btnExit.MouseClickColor1 = System.Drawing.Color.Red;
+            this.btnExit.MouseClickColor2 = System.Drawing.Color.Red;
+            this.btnExit.MouseHoverColor1 = System.Drawing.Color.Black;
+            this.btnExit.MouseHoverColor2 = System.Drawing.Color.Black;
+            this.btnExit.Name = "btnExit";
+            this.btnExit.ShowButtontext = true;
+            this.btnExit.Size = new System.Drawing.Size(35, 25);
+            this.btnExit.StartColor = System.Drawing.Color.Black;
+            this.btnExit.TabIndex = 1;
+            this.btnExit.Text = "X";
+            this.btnExit.TextLocation_X = 10;
+            this.btnExit.TextLocation_Y = 4;
+            this.btnExit.Transparent1 = 250;
+            this.btnExit.Transparent2 = 250;
+            this.btnExit.UseVisualStyleBackColor = false;
+            // 
+            // SaveAs
+            // 
+            this.SaveAs.BackColor = System.Drawing.Color.Transparent;
+            this.SaveAs.BorderColor = System.Drawing.Color.Transparent;
+            this.SaveAs.BorderWidth = 2;
+            this.SaveAs.ButtonShape = Custom_Controls_in_CS.ButtonZ.ButtonsShapes.RoundRect;
+            this.SaveAs.ButtonText = "Редагувати";
+            this.SaveAs.EndColor = System.Drawing.Color.White;
+            this.SaveAs.FlatAppearance.BorderSize = 0;
+            this.SaveAs.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.SaveAs.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.SaveAs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SaveAs.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.SaveAs.ForeColor = System.Drawing.Color.Black;
+            this.SaveAs.GradientAngle = 90;
+            this.SaveAs.Location = new System.Drawing.Point(236, 0);
+            this.SaveAs.MouseClickColor1 = System.Drawing.Color.Yellow;
+            this.SaveAs.MouseClickColor2 = System.Drawing.Color.Red;
+            this.SaveAs.MouseHoverColor1 = System.Drawing.Color.Turquoise;
+            this.SaveAs.MouseHoverColor2 = System.Drawing.Color.DarkSlateGray;
+            this.SaveAs.Name = "SaveAs";
+            this.SaveAs.ShowButtontext = true;
+            this.SaveAs.Size = new System.Drawing.Size(100, 40);
+            this.SaveAs.StartColor = System.Drawing.Color.Black;
+            this.SaveAs.TabIndex = 323;
+            this.SaveAs.TextLocation_X = 10;
+            this.SaveAs.TextLocation_Y = 10;
+            this.SaveAs.Transparent1 = 50;
+            this.SaveAs.Transparent2 = 250;
+            this.SaveAs.UseVisualStyleBackColor = false;
+            this.SaveAs.Click += new System.EventHandler(this.SaveAs_Click);
+            // 
             // EditMedCard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1653,6 +1721,8 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button1;
+        private Custom_Controls_in_CS.ButtonZ btnClose;
+        private Custom_Controls_in_CS.ButtonZ SaveAs;
         //private CustomWindowsForm.ButtonZ _CloseButton;
     }
 }
