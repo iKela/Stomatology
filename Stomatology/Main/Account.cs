@@ -10,11 +10,15 @@ using System.Windows.Forms;
 using Newtonsoft.Json;
 using System.Net;
 using System.Globalization;
+using System.Data.SqlClient;
 
 namespace Stomatology
 {
     public partial class Account : Form
     {
+
+        SqlConnection testCon = new SqlConnection(@"Data Source=insopdentistry.cywgv3xkqj2b.eu-west-3.rds.amazonaws.com;Initial Catalog=Dentistry;Persist Security Info=True;User ID=iKela;Password=6621Nazar");
+
         int number;
         public Account()
         {
@@ -128,14 +132,45 @@ namespace Stomatology
                 }
             }
         }
-
+        //============
+        string user;
+        int[] arrears = { 0, 0, 0};
+        
+        //============
         private void Account_Load(object sender, EventArgs e)
         {
             btnAccountExit.FlatAppearance.MouseOverBackColor = Color.Transparent;
-            btnMainMenu.FlatAppearance.MouseOverBackColor = Color.Transparent;          
-        }
+            btnMainMenu.FlatAppearance.MouseOverBackColor = Color.Transparent;
 
-        private void btnAccountExit_MouseHover(object sender, EventArgs e)
+            string query1 = $"SELECT * From Policy  where  IdUser = '{5}'";
+            int i = 0;
+            testCon.Open();
+            SqlDataReader sqlReader = null;
+            SqlCommand command = new SqlCommand(query1, testCon);
+            sqlReader = command.ExecuteReader();
+            while (sqlReader.Read())
+            {
+               
+                arrears[i] = sqlReader["Allow"].GetHashCode();
+                
+                i++;
+            }
+            if (arrears[0] == 1)
+            { checkBox1.Checked = true; }
+            else { checkBox1.Checked = false; }
+
+            if (arrears[1] == 1)
+            { checkBox2.Checked = true; }
+            else { checkBox2.Checked = false; }
+
+            if (arrears[2] == 1)
+            { checkBox3.Checked = true; }
+            else { checkBox3.Checked = false; }
+
+            testCon.Close();
+            sqlReader.Close();
+        }
+            private void btnAccountExit_MouseHover(object sender, EventArgs e)
         {
             btnAccountExit.Font = new Font("Times New Roman", 12, FontStyle.Underline);
         }
@@ -152,6 +187,11 @@ namespace Stomatology
         private void btnMainMenu_MouseLeave(object sender, EventArgs e)
         {
             btnMainMenu.Size = new Size(35, 35);
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
