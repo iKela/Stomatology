@@ -5850,7 +5850,7 @@
     <value>NoControl</value>
   </data>
   <data name="button2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>195, 812</value>
+    <value>195, 808</value>
   </data>
   <data name="button2.Size" type="System.Drawing.Size, System.Drawing">
     <value>141, 23</value>
@@ -5880,7 +5880,7 @@
     <value>NoControl</value>
   </data>
   <data name="button3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>460, 796</value>
+    <value>460, 792</value>
   </data>
   <data name="button3.Size" type="System.Drawing.Size, System.Drawing">
     <value>141, 23</value>
@@ -5913,7 +5913,7 @@
     <value>NoControl</value>
   </data>
   <data name="button4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>607, 808</value>
+    <value>607, 804</value>
   </data>
   <data name="button4.Size" type="System.Drawing.Size, System.Drawing">
     <value>141, 23</value>
@@ -7639,6 +7639,9 @@
   <data name="pacientbrth.HeaderText" xml:space="preserve">
     <value>Дата народження </value>
   </data>
+  <data name="pacientbrth.Width" type="System.Int32, mscorlib">
+    <value>143</value>
+  </data>
   <metadata name="pacientnmb.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -7657,11 +7660,17 @@
   <data name="dateApp.HeaderText" xml:space="preserve">
     <value>Дата прийому</value>
   </data>
+  <data name="dateApp.Width" type="System.Int32, mscorlib">
+    <value>119</value>
+  </data>
   <metadata name="price.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="price.HeaderText" xml:space="preserve">
     <value>Ціна</value>
+  </data>
+  <data name="price.Width" type="System.Int32, mscorlib">
+    <value>64</value>
   </data>
   <data name="DataGridView2.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 36</value>

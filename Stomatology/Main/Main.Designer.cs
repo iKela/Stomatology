@@ -919,9 +919,9 @@
             this.pnlRegistry.Controls.Add(this.EditPatient);
             this.pnlRegistry.Controls.Add(this.AddNewPatient);
             this.pnlRegistry.Controls.Add(this.AddNewAppoinment);
+            resources.ApplyResources(this.pnlRegistry, "pnlRegistry");
             this.pnlRegistry.EndColor = System.Drawing.Color.DarkGray;
             this.pnlRegistry.GradientAngle = 90;
-            resources.ApplyResources(this.pnlRegistry, "pnlRegistry");
             this.pnlRegistry.Name = "pnlRegistry";
             this.pnlRegistry.StartColor = System.Drawing.Color.White;
             this.pnlRegistry.Transparent1 = 150;
