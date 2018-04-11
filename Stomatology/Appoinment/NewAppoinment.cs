@@ -18,7 +18,6 @@ namespace Stomatology
 
 
         int Arrears;
-       // string Doctor;
         string MedCardId = "";
         string query;
 
