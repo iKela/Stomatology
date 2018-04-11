@@ -78,7 +78,6 @@ namespace Stomatology
             {
                 e.Handled = true;
             }
-
         }
 
         public static string GetUserIpByIp(string ip)
